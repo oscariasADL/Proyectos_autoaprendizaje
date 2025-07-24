@@ -1,0 +1,364 @@
+:root{
+    --color-primary: #4a90e2;
+    --color-secondary: #50e3c2;
+    --color-tertiary: #978b78;
+    --color-text: #333;
+    --color-background: #f0f0f0;
+    --bg-layout: #ffffff;
+    --color-link: #ffffff;
+    --color--collapse--header: #f6f6f6
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../images/cielo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.layout{
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "slider slider"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 70% 30%;
+    max-width: 128rem;
+    background-color: var(--bg-layout);
+    padding: 3rem;
+    margin: 2rem auto;
+}
+
+.layout__header{
+    grid-area: header;
+    margin-bottom: 2rem;
+}
+
+.header__logo{
+    display: inline-block;
+    margin-bottom: 2rem;
+    max-width: 120px;
+}
+
+.header__nav{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-text);
+    padding: 0 2rem;
+}
+
+.nav__list{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.list__link{
+    height: 100%;
+    color: var(--color-link);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.list__link:hover{
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+@media(max-width: 768px){
+    .header__nav{
+        height: auto;
+    }
+    .nav__list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.layout__slider{
+    grid-area: slider;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.slider__btn-next, .slider__btn-prev{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: calc(50% - 2.5rem);
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    font-size: 4rem;
+    border-radius: 100%;
+}
+
+.slides__item{
+    position: absolute;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.slides__item--active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider__btn-next{
+    right: 1rem;
+}
+.slider__btn-prev{
+    left: 1rem;
+}
+
+.layout__articles, .layout__main{
+    grid-area: main;
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.articles_article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.article__title{
+    font-size: 3rem;
+    color: var(--color-text);
+}
+
+.article__date{
+    font-size: 1.4rem;
+    color: var(--color-tertiary);
+}
+
+.article__btn{
+    width: 12rem;
+    height: 4rem;
+    background-color: var(--color-primary);
+    color: var(--color-link);
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.layout__aside{
+    grid-area: aside;
+}
+
+.aside__header{
+    margin-bottom: 2rem;
+}
+
+.header__title, .login__title{
+    text-align: center;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aside__login{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__form--group{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    gap: 0;;
+}
+
+.login__input{
+    padding: 1rem;
+    height: 40px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+}
+
+.article__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+   max-width: 128rem;
+   margin: 0 auto;
+   margin-top: 5rem;
+   margin-bottom: 1rem;
+   padding: 2rem;
+   background-color: var(--color-text);
+   color: var(--bg-layout);
+   opacity: 0.8;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.footer__top{
+    cursor: pointer;
+}
+
+.aside__data--hide{
+    display: none;
+}
+
+.aside__login--hide{
+    display: none;
+}
+
+/* Estilos para el acordeon */
+.main__title{
+    font-size: 3rem;
+}
+
+.main__accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.collapse__header{
+    position: relative;
+    background-color: var(--color--collapse--header);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.collapse__icon > .fa-solid{
+    font-size: 2rem;
+    color: var(--color-text);
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.collapse__icon > .fa-solid.fa-chevron-up{
+    display: none;
+}
+
+.collapse__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.collapse__body{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.collapse__text{
+    padding: 2rem;
+}
+
+.accordion__collapse--open .collapse__body{
+    height: auto;
+}
+
+.accordion__collapse--open .collapse__icon > .fa-solid.fa-chevron-down{
+    display: none;
+}
+
+.accordion__collapse--open .collapse__icon > .fa-solid.fa-chevron-up{
+    display: block;
+}
+
+
+.main__clock{
+    width: 100%;
+    border: 5px dashed var(--color-primary);
+    font-weight: 700;
+    text-align: center;
+    font-size: 8rem;
+}
+
+
+/*Estilos para el formulario de contacto*/
+.main__contact {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact_group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__input,
+.contact__select {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.contact__input:focus,
+.contact__select:focus {
+  border-color: #4d90fe;
+  outline: none;
+}
+
+.select__option {
+  font-size: 0.95rem;
+}
+
+.contact__submit {
+  margin-top: 1rem;
+  padding: 1.5rem 5rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__submit:hover {
+  background-color: #333333;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/reset.css" rel="stylesheet">
+    <link href="./assets/fonts/fontawesome/fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet">
+
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/slider.js" defer></script>
+    <script src="./assets/js/articles.js" defer></script>
+    <script src="./assets/js/login.js" defer></script>
+    <title>Proyecto JS udemy</title>
+</head>
+<body>
+
+<div class="layout">
+
+    <header class="layout__header">
+        <div class="header__logo">
+            <img src="./assets/images/logo.png" alt="Logo de la web">
+        </div>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="list__item"><a href="index.html" class="list__link">Inicio</a></li>
+                <li class="list__item"><a href="reloj.html" class="list__link">Reloj</a></li>
+                <li class="list__item"><a href="sobre-mi.html" class="list__link">Sobre mí</a></li>
+                <li class="list__item"><a href="contacto.html" class="list__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="layout__slider">
+        <button title="Siguiente Slide" class="slider__btn-prev">
+            <i class="slider__icon fa-solid fa-caret-left"></i>
+        </button>
+        
+        <div class="slider__slides">
+            <article class="slides__item slides__item--active">
+                <img class="slides__img" src="./assets/images/hojas.jpg" alt="Slider 1">
+            </article>
+            <article class="slides__item">
+                <img class="slides__img" src="./assets/images/cielo.jpg" alt="Slider 2">
+            </article>
+            <article class="slides__item">
+                <img class="slides__img" src="./assets/images/rojo.jpg" alt="Slider 3">
+            </article>
+        </div>
+
+        <button title="Siguiente Slide" class="slider__btn-next">
+            <i class="slider__icon fa-solid fa-caret-right"></i>
+        </button>
+
+    </section>
+
+    <main class="layout__articles"> 
+
+    </main>
+
+    <aside class="layout__aside">
+        <header class="aside__header">
+            <div class="header__container--title">
+                <h3 class="header__title">
+                    <span class="title__span">¿Quién soy?</span>
+                </h3>
+            </div>
+
+            <div class="header__container--img">
+                <img class="header__img" src="./assets/images/caracol.jpg" alt="Foto de Oscar Arias">
+            </div>
+
+            <div class="header__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perferendis minus in provident illo neque facere modi, eum eius commodi inventore fugiat aut amet maiores ut possimus nulla aperiam iusto.
+            </div>
+        </header>
+        <form class="aside__login">
+            <div class="login__container--title">
+                <h3 class="login__title">
+                    <span class="title__span">Identificate</span>
+                </h3>
+            </div>
+            <div class="login__form--group">
+                <label for="name" class="login__label">Nombre:</label>
+                <input type="text" id="name" name="name" class="login__input" placeholder="Introduce tu nombre" required>
+            </div>
+            <div class="login__form--group">
+                <label for="email" class="login__label">Correo:</label>
+                <input type="email" id="email" name="email" class="login__input" placeholder="Introduce tu correo" required>
+            </div>
+            <div class="login__form--group">
+                <label for="password" class="login__label">Contraseña:</label>
+                <input type="password" id="password" name="password" class="login__input" placeholder="Introduce tu contraseña" required>
+            </div>
+            <button type="submit" class="login__submit">Enviar</button>
+        </form>
+
+        <div class="aside__data aside__data--hide">
+            <p class="data__text">
+                Bienvenido, <span class="data__name"></span>
+            </p>
+            <button class="data__logout">Cerrar sesión</button>
+        </div>
+
+    </aside>
+
+</div>
+
+<footer class="footer">
+    <p class="footer__text">Desarrollado por <a href="" target="_blank">Oscar Arias</a></p>
+    <p class="footer__top">Ir arriba</p>
+</footer>
+
+<div class="themes">
+    <div class="theme__green"> </div>
+    <div class="theme__red"> </div>
+    <div class="theme__blue"> </div>
+</div>
+
+</body>
+</html>

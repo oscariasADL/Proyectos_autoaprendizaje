@@ -1,0 +1,17 @@
+.caja_normal {
+  background-color: white;
+  border: 4px solid #000;
+  box-shadow: 0px 0px 2px #000;
+  color: #000;
+  margin: 20px;
+  width: 500px;
+}
+
+.caja_secundaria {
+  background-color: red;
+  border: 4px solid #000;
+  box-shadow: 0px 0px 2px #000;
+  color: blue;
+  margin: 20px;
+  width: 500px;
+}/*# sourceMappingURL=main.css.map */

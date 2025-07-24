@@ -1,0 +1,13 @@
+.cajaPorScript{
+    background-color : blue;
+    color : white;
+    font-size : 30px; 
+    padding : 20px;
+    max-width : 500px; 
+    margin : 0 auto;
+    text-align : center; 
+}
+.articulosPorScript{
+    border: 4px solid green;
+    border-radius: 24px;
+}

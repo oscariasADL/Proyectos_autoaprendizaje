@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="ejercicio38.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+
+    <title>Ejercicios Javascript 38 / Bloque 4</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript 38 / Bloque 4</h1>
+
+    <form method="post" id="formularioEnvio">
+        <label>Nombres</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombres" />
+        <p id="errorNombre"></p>
+        <label>Apellidos</label>
+        <input type="text" id="apellido" name="apellido" required placeholder="Apellidos" />
+        <p id="errorApellido"></p>
+        <label>Edad</label>
+        <input type="number" id="edad" name="edad" required placeholder="Edad" />
+        <p id="errorEdad"></p>
+        <input type="submit" value="Enviar" id="botonEnviar">
+
+    </form>
+
+    <div class="info">
+        <h3>Información del usuario</h3>
+
+        <p id="info_nombre">Nombres: <strong></strong></p>
+        <p id="info_apellido">Apellidos: <strong></strong></p>
+        <p id="info_edad">Edad: <strong></strong></p>
+
+    </div>
+
+</body>
+</html>
