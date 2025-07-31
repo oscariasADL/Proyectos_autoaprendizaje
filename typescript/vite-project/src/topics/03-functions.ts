@@ -31,7 +31,7 @@ interface Personaje {
 
 const saludPersonaje = ( personaje: Personaje, cantidad: number ) => {
 
-    personaje.hp += amount;
+    personaje.hp += cantidad;
 
 }
 
@@ -42,5 +42,9 @@ const trancos: Personaje = {
         console.log(`Puntos de vida: ${this.hp}`);
     }
 }
+
+saludPersonaje( trancos, 20 );
+
+trancos.showHp();
 
 export{};
