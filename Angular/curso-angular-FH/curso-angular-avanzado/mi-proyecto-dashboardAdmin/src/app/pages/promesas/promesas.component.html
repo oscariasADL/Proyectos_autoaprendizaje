@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Página de promesas</h5>
+                <p class="card-text">Refuerzo de promesas</p>
+                <ul class="list-group">
+                    <li *ngFor="let usuario of listaUsuarios" class="list-group-item d-flex align-items-center">
+                        <img [src]="usuario.avatar" alt="avatar" class="me-3" style="width: 50px; border-radius: 50%;">
+                        <div>
+                            <h6 class="mb-1">{{ usuario.first_name }} {{ usuario.last_name }}</h6>
+                            <small class="text-muted">{{ usuario.email }}</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
