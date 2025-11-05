@@ -1,0 +1,31 @@
+<div class="row text-center">
+  <div class="col-12">
+    <h1 class="text-center my-4">Contador</h1>
+    <h2>{{ contador }}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 d-flex justify-content-center gap-3">
+    <button class="btn btn-primary" (click)="incrementar()" >Incrementar</button>
+    <button class="btn btn-danger" (click)="decrementar()" >Decrementar</button>
+  </div>
+</div>
+
+
+<!--
+<div class="row">
+  <div class="col-12 d-flex justify-content-center gap-3">
+    <button class="btn btn-primary" (click)="incrementar(1)" >Incrementar</button>
+    <button class="btn btn-danger" (click)="decrementar(1)" >Decrementar</button>
+    <button class="btn btn-warning">Reset</button>
+  </div>
+</div>
+
+
+<div class="row text-center">
+  <div class="col">
+    <app-hijo [contador]="contador" (cambioContador)=" contador = $event " ></app-hijo>
+  </div>
+</div>
+-->

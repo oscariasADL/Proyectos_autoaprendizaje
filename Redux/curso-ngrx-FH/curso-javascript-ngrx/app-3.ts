@@ -1,0 +1,30 @@
+import { createStore } from 'redux';
+import { contadorReducer } from './contador/contador.reducer.ts';
+import { Action, Reducer } from './ngrx-fake/ngrx.ts';
+import { incrementadorAction, multiplicarAction } from './contador/contador.actions.ts';
+
+class Store<T> {
+    //private state: T;
+
+    constructor(
+        private reducer: Reducer<T>,
+        private state: T
+    ){}
+
+    getState() {
+        return this.state;
+    }
+    
+    dispatch( action: Action ) {
+        this.state = this.reducer( this.state, action );
+    }
+}
+
+const store = new Store( contadorReducer, 10 );
+console.log( store.getState() );
+
+store.dispatch( incrementadorAction );
+console.log( store.getState() );
+
+store.dispatch( multiplicarAction );
+console.log( store.getState() );
