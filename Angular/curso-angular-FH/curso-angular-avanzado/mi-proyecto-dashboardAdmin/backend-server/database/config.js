@@ -26,6 +26,7 @@ const dbConnection = async () => {
         await mongoose.connect('mongodb+srv://oscarArias:ADLab2025*-+10@cluster0.leeg2ir.mongodb.net/hospitaldb', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true
         });
         console.log('BD Online');
     } catch (error) {

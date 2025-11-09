@@ -7,16 +7,20 @@ export class Usuario{
     public email: string,
     public password?: string,
     public img?: string,
-    public role?: string,
+    public role?: 'ADMIN_ROLE' | 'USER_ROLE',
     public uid?: string,
   ) {}
 
   get imagenUrl(){
-    if( this.img ){
-      return `${ base_url }/upload/usuarios/${ this.img }`;
-    } else {
-      return `${ base_url }/upload/usuarios/no-image`;
-    }
+      if ( !this.img ) {
+          return `${ base_url }/upload/usuarios/no-image`;
+      } else if ( this.img.includes('https') ) {
+          return this.img;
+      } else if ( this.img ) {
+          return `${ base_url }/upload/usuarios/${ this.img }`;
+      } else {
+          return `${ base_url }/upload/usuarios/no-image`;
+      }
   }
 
 }

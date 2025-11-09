@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { UsuarioService } from 'src/app/services/usuario.service';
-import { Usuario } from 'src/app/models/usuario.models';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../models/usuario.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,18 +11,24 @@ import { Usuario } from 'src/app/models/usuario.models';
 })
 export class HeaderComponent {
 
-  //public imgURL:String =""
-  public usuariotraeInfo!: Usuario;
+  public usuario: Usuario;
 
-  constructor(
-    private usuarioService: UsuarioService,
-  ){
-    //this.imgURL = this.usuarioService.usuario.imagenUrl;
-    this.usuariotraeInfo = this.usuarioService.usuario;
+  constructor( private usuarioService: UsuarioService,
+               private router: Router ) {
+    this.usuario = usuarioService.usuario;
   }
 
-  logout(){
+  logout() {
     this.usuarioService.logout();
+  }
+
+  buscar( termino: string ) {
+
+    if ( termino.length === 0  ) {
+      return;
+    }
+
+    this.router.navigateByUrl(`/dashboard/buscar/${ termino }`);
   }
 
 }

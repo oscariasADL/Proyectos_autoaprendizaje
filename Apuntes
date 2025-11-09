@@ -1,0 +1,576 @@
+shopify login --store=TU-DOMINIO.myshopify.com
+shopify theme init --name="mi-carrito-personalizado"
+cd mi-carrito-personalizado
+shopify theme serve
+
+
+FUNCIONO:
+CMD
+npm install -g @shopify/cli}
+
+
+VISUAL CARPETA BASE
+shopify auth login
+shopify theme init mi-carrito-shopify
+cd mi-carrito-shopify
+shopify theme dev --store=test-reto.myshopify.com --port=9293 --force --verbose
+
+
+PARA INICIAR SHOPIFY
+shopify auth login
+shopify theme dev --store=test-reto.myshopify.com --port=9293 --force
+
+
+
+****OTROS***
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+npm create vite@latest mi-app-react -- --template react
+rm -rf .git //CERRAR REPOSITORIO
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+
+
+
+
+
+****REACT****
+cd mi-app-react
+npm install
+npm run dev
+http://localhost:5173/
+
+
+
+
+
+
+
+****GIT****
+Sube el código de la rama dev:
+
+
+git add .
+git commit -m "Desarrollo inicial del plugin y widget"
+git commit -m "chore: Configurar Pruebas unicas para HttpClient "
+git push origin dev4
+
+
+Realiza commits frecuentes a medida que vayas haciendo cambios importantes en el código.
+
+
+
+Realiza un merge de dev a test, y de test a main:
+
+git checkout test
+git merge dev
+git push origin test
+
+git checkout main
+git merge test
+git push origin main
+
+
+
+
+
+
+
+****BD XAMPP****
+CMD 1
+cd C:\xampp\mysql\bin
+mysqld --skip-grant-tables
+
+CMD 2
+cd C:\xampp\mysql\bin
+mysql -u root
+USE mysql;
+
+
+
+
+
+
+
+****ANGULAR****
+
+npm install -g npm@latest
+
+npm cache clean --force //Limpiar cache de npm
+
+npm set audit false // Para desactivar errores tipicos y fallos al instalar angular
+
+npm uninstall -g angular-cli //Desinstalar cualquier version anterior de angular
+npm uninstall -g @angular/cli //Desinstalar cualquier paquete anterior de angular
+
+npm cache clean --force
+
+
+##Instalar angular CLI
+
+npm install -g @angular/cli@19.0.6
+npm install -g @angular/cli@17.1
+npx @angular/cli@17 new mi-proyecto-angular17 //Instalar y crear proyecto
+
+ng new aprender-angular //Crear proyecto
+ng new curso-angular-ngrx --standalone false //Crear proyecto sin standalone
+
+
+ng generate component components/colores --standalone -> para generar un componente basado en standalone
+
+npm install -g npm@latest (Actualizar NPM)
+
+npm -> Gestor de dependencias de node
+
+
+***PIPES***
+Un pipe sirve para transformar la forma visual de como recibo la informacion, no modifican la referencia ni el objeto
+
+
+
+
+****TYPESCRIPT****
+npm install -g npm@latest (Actualizar NPM)
+
+npm -> Gestor de dependencias de node
+tsc -v ---> Ver version global de Typescript
+npx tsc -v ---> Ver version local de Typescript
+npx tsc --init ---> Inicializar archivo de configuracion  de Typescript (CREA tsconfig.json)
+npx tsc main.ts ---> Compilar Typescript a Javascript
+npx tsc -w ---> Compilacion automatica de todos los ts para no esta rcompilando
+
+para modifircar rutas de Typescript (tsconfig.json)
+
+rootDir -> Carpeta Base
+outDir -> Carpeta Destino
+
+
+
+
+
+
+
+
+
+🎓 ¿Qué es Angular?
+Angular es un framework de desarrollo para construir aplicaciones web modernas de una sola página (SPA) usando HTML, CSS y TypeScript.
+
+👉 Fue creado por Google y está pensado para construir apps escalables, rápidas y bien organizadas.
+
+🧠 ¿Qué es una SPA (Single Page Application)?
+Una SPA es una aplicación web que carga una sola página HTML y luego actualiza dinámicamente el contenido sin recargar toda la página cada vez que el usuario interactúa.
+
+🎯 Ejemplo:
+Cuando navegas en Gmail, no se recarga toda la página cada vez que abres un correo.
+
+Solo cambia una parte específica del contenido → eso es una SPA.
+
+
+
+💡 ¿Qué ventajas tiene Angular?
+
+Ventaja	¿Qué significa?
+🔄 SPA	Rápido, sin recargas de página
+🔧 Componentes reutilizables	Puedes dividir tu app en bloques reutilizables
+🧱 Modularidad	Se organiza en módulos y servicios → escalabilidad
+🚀 CLI poderosa	Herramienta de línea de comandos para crear y mantener el proyecto
+🔐 Seguridad integrada	Tiene buenas prácticas para proteger datos y estructuras
+📦 Ecosistema completo	Routing, formularios, servicios HTTP, pipes, testing, todo incluido
+
+
+
+
+
+🏗️ Arquitectura de Angular (visión general)
+Angular se basa en componentes, módulos y servicios.
+
+1️⃣ Componentes
+Son las piezas básicas de UI. Cada componente tiene:
+
+Un HTML
+
+Un CSS
+
+Un archivo TypeScript
+
+📦 Ejemplo: Un componente TarjetaProducto podría tener su propia vista, lógica y estilos.
+
+2️⃣ Módulos
+Son contenedores que agrupan componentes, directivas, servicios, etc.
+
+El módulo principal se llama AppModule
+
+Puedes crear módulos para funcionalidades específicas (UserModule, AdminModule, etc.)
+
+3️⃣ Servicios
+Son clases que contienen lógica reutilizable (como acceder a una API o manejar datos).
+
+Se inyectan en los componentes con inyección de dependencias.
+
+4️⃣ Routing
+Angular tiene su propio sistema de rutas para navegar entre vistas sin recargar la página.
+
+
+
+✅ ¿Qué es TypeScript? – Resumen para entrevista
+TypeScript es un superset de JavaScript desarrollado por Microsoft que:
+
+Agrega tipado estático opcional
+
+Permite detectar errores en tiempo de desarrollo
+
+Compila a JavaScript estándar
+
+Fue creado para hacer que JavaScript sea escalable y mantenible
+
+🎯 ¿Para qué sirve?
+Para desarrollar proyectos grandes con mejor estructura
+
+Para evitar bugs comunes al usar tipos mal definidos
+
+Para tener autocompletado, validación y ayuda del IDE
+
+
+✅ ¿Qué es tipado estático?
+Es la capacidad del lenguaje de revisar los tipos de datos durante la compilación, antes de ejecutar el programa.
+
+
+
+
+
+
+
+
+🧠 ¿Qué es un componente standalone?
+Un componente standalone en Angular es un componente auto-contenido, es decir, no necesita estar declarado dentro de un NgModule (como AppModule) para funcionar.
+
+Se define con la propiedad standalone: true en su decorador @Component:
+
+📦 ¿Para qué sirve y cómo se usa?
+Los componentes standalone te permiten:
+
+Importarlos directamente donde se usan, sin necesidad de módulos.
+
+Hacer tu aplicación más modular, ligera y fácil de testear.
+
+Reducir el número de archivos y capas de configuración.
+
+
+
+✅ Beneficios de usar componentes standalone
+
+Beneficio	¿Por qué es útil?
+Simplicidad	Ya no necesitas declarar el componente en un NgModule.
+Encapsulamiento	Cada componente importa lo que necesita (como React o Vue).
+Mejor rendimiento	Angular puede hacer tree-shaking más fácilmente.
+Escalabilidad	Ideal para apps grandes con muchas features.
+Migración progresiva	Puedes ir migrando tu app poco a poco a standalone sin romper nada.
+Ideal para librerías de componentes	Puedes crear componentes reutilizables sin necesidad de módulos extra.
+
+
+
+
+
+
+
+
+
+
+
+Angular no reconoce *ngFor todavía.
+
+✅ Solución: importar CommonModule o BrowserModule
+En una aplicación Angular recién creada, necesitas asegurarte de que el módulo donde estás trabajando (normalmente AppModule) tiene importado el BrowserModule, que a su vez incluye CommonModule (donde vive *ngFor).
+
+
+
+✨ Paso 1: Revisa app.module.ts
+Abre el archivo:
+
+ts
+Copiar
+Editar
+src/app/app.module.ts
+Asegúrate de que tiene este import al inicio:
+
+
+import { CommonModule } from '@angular/common'; // 👈 necesario para *ngFor, *ngIf
+Y en la sección de imports dentro del decorador @NgModule, asegúrate de que esté así:
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule], // 👈 esto habilita *ngFor
+  templateUrl: './app.component.html'
+})
+
+
+⚙️ ¿Por qué es necesario?
+Angular separa las funcionalidades por módulos. El *ngFor no viene "gratis" en todos lados, sino que está definido dentro de CommonModule, y BrowserModule lo importa por ti en apps de navegador.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PASOS REALIZADOS
+
+***************
+1. Definición del Modelo de Datos (Post)
+Objetivo: Crear una interfaz TypeScript que represente los datos de la API (JSONPlaceholder - Posts).
+
+Paso 1: Estructura del Modelo
+En src/app/core/models/post.model.ts:
+
+
+¿Por qué una interface y no una class?
+
+TypeScript usa interfaces para definir la forma de los datos (sin lógica).
+
+Si necesitáramos métodos (ej: serialize()), usaríamos una clase.
+
+
+
+***************
+2. Implementación del Servicio (PostService)
+Objetivo: Crear un servicio Angular que consuma la API usando HttpClient y maneje datos reactivamente con RxJS.
+
+Paso 1: Configuración Básica del Servicio
+En src/app/core/services/post.service.ts:
+
+
+
+***************
+3. Testing del Servicio (Pruebas Unitarias)
+Objetivo: Verificar que el servicio funciona correctamente con HttpClient mockeado.
+
+Paso 1: Configuración del TestBed
+En src/app/core/services/post.service.spec.ts:
+
+
+¿Qué hace esto?
+✅ HttpClientTestingModule:
+
+Simula llamadas HTTP reales (no necesitas un backend real).
+
+Permite controlar qué respuesta devuelve el servidor.
+
+✅ HttpTestingController:
+
+Te permite "atrapar" peticiones HTTP y decidir qué responder.
+
+Ejemplo: Si el servicio hace GET /posts, tú defines si devuelve datos correctos o un error.
+
+✅ afterEach(httpMock.verify()):
+
+Asegura que no hay peticiones HTTP pendientes después de cada prueba.
+
+Si olvidas mockear una petición, el test fallará.
+
+
+
+***************
+1. PostListComponent (Lista de Posts)
+Objetivo: Mostrar los posts en una tabla con manejo de estados (loading/error).
+
+Paso 1: Actualizar el Template (HTML)
+Archivo: src/app/features/posts/post-list/post-list.component.html
+
+
+
+
+
+
+Orden de archivos
+
+1 
+**post.mode.ts**
+“Definí una interfaz Post para modelar exactamente los datos que recibimos de la API pública.
+Cada propiedad (userId, id, title, body) tiene su tipo específico para asegurar que trabajamos siempre con datos válidos.
+Esto me permite tener mejor control en el servicio, los componentes y en las pruebas unitarias, además de aprovechar el tipado fuerte de TypeScript que es fundamental en Angular 19."
+
+
+
+2
+**post.service.ts**
+
+"Centralicé toda la comunicación con la API en el servicio PostService, separando responsabilidades.
+Cada método devuelve observables, permitiendo manejar flujos reactivos y errores de manera segura.
+Además, el uso de la interfaz Post permite tipar las respuestas, haciendo más robusto el desarrollo.
+En caso de fallos de red, el sistema muestra mensajes amigables al usuario y no errores técnicos."
+
+
+
+3
+**post.service.spect.ts**
+
+"Construí pruebas unitarias para asegurar el correcto funcionamiento del servicio, tanto en casos exitosos como de error.
+Utilicé HttpTestingController para simular peticiones HTTP de manera segura y rápida, permitiéndome validar el flujo completo de consumo de API sin depender de servidores reales."
+
+"Cada prueba sigue un patrón: preparar datos simulados → llamar método → interceptar petición → validar respuesta o error."
+
+
+
+4
+**post-list.component.ts**
+**post-list-component.html**
+**post-list.component.scss**
+
+"PostListComponent implementa el patrón de arquitectura limpia en frontend:
+Se encarga solo de la presentación y delega el consumo de API al servicio PostService.
+Además, manejamos estados visuales (loading, error) para mejorar la experiencia de usuario,
+y usamos standalone components de Angular 19 para un desarrollo más modular y moderno."
+
+"Diseñé la UI de PostListComponent considerando tres estados principales: carga, error y éxito,
+mostrando dinámicamente cada sección según el estado de la API.
+La tabla lista los posts y permite navegar a su detalle de manera reactiva y eficiente usando trackBy para optimizar el renderizado.
+Esto mejora el rendimiento y la experiencia de usuario en dispositivos móviles y escritorio."
+
+"Definí los estilos en SCSS para lograr una interfaz moderna, responsiva y visualmente clara.
+Utilicé variables de color para mantener coherencia y facilidad de mantenimiento,
+y apliqué media queries para adaptar la vista a dispositivos móviles,
+asegurando que la experiencia de usuario sea fluida en cualquier dispositivo."
+
+
+
+5
+**post-detail.component.ts**
+**post-detail-component.html**
+**post-detail.component.scss**
+
+"Este componente maneja el flujo completo de cargar un recurso individual usando ActivatedRoute para obtener el id de la URL, y PostService para consumir la API.
+Manejo de estados (loading, error) garantiza buena experiencia de usuario y evita pantallas vacías o bloqueadas.
+También ofrezco una función de navegación para mejorar la fluidez de la aplicación."
+
+"En el template de detalle implementé un flujo basado en estados: carga, error y éxito.
+Cada estado es controlado dinámicamente usando *ngIf para mostrar al usuario el contenido adecuado en cada momento.
+El botón de volver refuerza la navegación fluida, mientras que el botón de reintentar ante errores mejora la resiliencia de la aplicación."
+
+
+
+6
+**app.routes.ts**
+"Definí las rutas de la aplicación usando Routes, permitiendo la navegación entre la lista de posts (/posts) y el detalle de cada post (/posts/:id).
+Configuré una redirección automática de / a /posts para mejorar la navegación inicial.
+Usé parámetros dinámicos (:id) para capturar el identificador del post directamente desde la URL y pasarlo al componente de detalle."
+
+
+
+7
+**app.config.ts**
+En Angular 19 utilicé configuración standalone en app.config.ts,
+registrando globalmente las rutas (provideRouter) y el cliente HTTP (provideHttpClient),
+lo cual elimina la necesidad de un AppModule clásico y permite una aplicación más ligera, modular y escalable."
+
+
+
+8
+**app.component.html**
+
+
+post-list.component.spec.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ##ANGULAR
+
+ La forma mas optima para usar formularios reactivos es con FormBuilder de angular
+
+ En el modulo principal del componente importar -> ReactiveFormsModule,
+
+ Y en el componente mismo:
+
+ import { FormBuilder } from '@angular/forms';
+
+ constructor (
+    private fb: FormBuilder
+ ) {}
+
+public reigsterForm = this.fb.group({
+   nombre: [ 'Test 1' ],
+   email: [ ];
+   password: [ ]
+});
+
+
+Validators -> Para hacer validaciones
+
+En el HTML
+<form  class="form-horizontal form-material" id="loginform" autocomplete="off" [formGroup]="reigsterForm" (ngSubmit)="crearUsuario()" >
+
+<input class="form-control" type="text" placeholder="Name" formControlName="nombre">
+
+
+
+
+Para peticiones HTTP, es mas recomendable dar uno al propio paquete de angular httpCLient
+
+Modulo principal -> HttpClientModule
+
+.subscribe(
+next?: ((value: Object) => void) | null | undefined, 
+error?: ((error: any) => void) | null | undefined, 
+complete?: (() => void) | null | undefined): Subscription (+1 overload)
+
+
+
+
+
+
+
+
+
+Javascript
+
+Poo
+Clases
+Alcance de las funciones
+Event loop
+Clases
+Diferencia principal entre clases y funciones
+
+
+
+
+
+Terminar seccion Typescript OK
+Hacer curso de stencil YOUTUBE OK
+Curso Typescript Fernando Herrera
+Terminar master javascript y angular (Seccion Angular)
+Hacer cursos
+https://www.udemy.com/course/git-github/
+https://www.udemy.com/course/javascript-moderno-guia-definitiva-construye-10-proyectos/
+https://www.udemy.com/course/patrones-diseno/
+https://www.udemy.com/course/angular-fernando-herrera/
+
+Terminar master javascript y angular (Completo)
+
+Crusos de programacion con ia integrada
+
+Cursos de copilot e IA generativa

@@ -70,7 +70,7 @@ export class UsuariosComponent implements OnInit {
     }
     this.busquedaService.buscar( 'usuarios', termino )
       .subscribe( resp => {
-        this.usuarios = resp;
+        this.usuarios = resp as Usuario[];
       });
     /*
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BaseChartDirective } from 'ng2-charts';
@@ -11,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
+import { PipesModule } from '../pipes/pipes.module';
+
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
@@ -18,7 +21,8 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
 import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
 import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
-
+import { MedicoComponent } from './mantenimientos/medicos/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 @NgModule({
@@ -33,7 +37,9 @@ import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
     PerfilComponent,
     UsuariosComponent,
     HospitalesComponent,
-    MedicosComponent
+    MedicosComponent,
+    MedicoComponent,
+    BusquedaComponent
   ],
   exports: [
     DashboardComponent,
@@ -48,7 +54,9 @@ import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
     ReactiveFormsModule,
     ComponentsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    PipesModule
   ]
 })
 export class PagesModule { }
