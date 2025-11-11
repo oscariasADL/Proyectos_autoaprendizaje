@@ -1,0 +1,32 @@
+<div class="social-security-value-container">
+  <p class="social-security-value-title semi-bold">Mis aportantes</p>
+
+  <div class="social-security-value-panel">
+    <div class="social-security-value-data">
+      <p class="small semi-bold social-security-value-name">
+        {{ contributor?.fullName | titlecase }}
+      </p>
+      <p class="small">
+        {{ (contributor?.documentType | uppercase) + ' ' + contributor?.documentId }}
+      </p>
+      <p class="small">
+        {{ worksheet | titlecase }}
+      </p>
+      
+      <p class="small">
+        Planilla {{ worksheetNumber ? (("No. " + worksheetNumber) | titlecase) : (worksheetDate?.month + ' ' + worksheetDate?.year) }}
+      </p>
+
+      <div class="social-security-value-amount">
+        <p class="small">Valor a pagar</p>
+        <p class="small" [innerHTML]="amount | currencyFormat"></p>
+      </div>
+    </div>
+
+    <button class="avv-btn-primary"
+            id="social-security-value-btn"
+            (click)="continue.emit()">
+      {{ 'ACTIONS.CONFIRM' | translate | uppercase }}
+    </button>
+  </div>
+</div>

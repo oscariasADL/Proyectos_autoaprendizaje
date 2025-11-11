@@ -1,0 +1,47 @@
+@import 'utils'
+.credit-products-error
+  margin: 0 0 12px
+  padding: 12px
+  +flex(center)
+  +shadow(var(--white), 4px, 0 2px 4px 0 rgba(65, 74, 83, 0.3) )
+
+  .product-info
+    width: 100%
+    +flex(center)
+
+    .icon-container
+      float: left
+      width: 60px
+
+    .info-container
+      float: right
+      width: calc(100% - 61px)
+      .retry-request
+        text-decoration-line: underline
+        color: #0523ac
+        font-weight: 600
+        &.disabled
+          color: #9DA6AF
+      .content-validate-info
+        +flex(center)
+        .validate-info
+          display: block
+          height: 18px
+          margin-left: 4px
+      .description
+        color: #252B31
+
+    p,i
+      color: var(--gray-1)
+    p
+      padding-top: 3px
+
+  &>i
+    font-size: 24px
+    color: var(--blue-1)
+
+.product-info-title
+  font-size: 12px
+  font-weight: normal
+  line-height: 1.33
+  margin: 16px 0 8px 0

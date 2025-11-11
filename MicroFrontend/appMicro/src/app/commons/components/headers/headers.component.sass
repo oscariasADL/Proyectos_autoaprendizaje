@@ -1,0 +1,87 @@
+@import 'utils'
+
+.header-container
+  +flex(center, space-between)
+  position: relative
+  z-index: 2
+  padding: calc(16px + var(--safe-area-inset-top)) 2px $spacer-2 0
+  height: calc(56px + var(--safe-area-inset-top))
+  font-size: 0
+
+  .start-slot
+    +flex(center)
+
+    .header-logo
+      margin: 0 -24px 0 16px
+
+    .header-back-btn
+      font-size: 24px
+      padding: $spacer-2
+      margin-right: -$spacer-3
+
+    .header-title
+      line-height: 1.2
+      display: inline-block
+      margin-left: $spacer-4
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      max-width: calc(100vw - 118px)
+
+  .end-slot
+    +flex(center)
+
+    i
+      display: inline-block
+      font-size: 24px
+      padding: $spacer-2 14px
+      color: var(--white)
+
+    button
+      padding: $spacer-2
+      background-color: transparent
+
+      i
+        padding: 0
+
+      .icon-notificaciones
+        position: relative
+
+      .notification-number
+        display: inline-block
+        position: absolute
+        right: -0.6em
+        top: -0.4em
+        min-width: 1.8em
+        height: 1.8em
+        border: solid 2px var(--red-1)
+        background-color: var(--blue-3)
+        font-size: 0.625rem
+        font-weight: bold
+        letter-spacing: normal
+        color: var(--white)
+        border-radius: 50%
+        padding: 0.3em
+
+  &.red
+    color: var(--white)
+    background-color: var(--red-1)
+    box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+    .start-slot
+      .header-title
+        color: var(--white)
+        font-weight: bold
+
+  &.show-notification
+    .start-slot
+      .header-title
+        max-width: calc(100vw - 178px)
+
+  &.white
+    background-color: var(--white)
+    color: var(--gray-1)
+
+    .end-slot
+      i
+        color: var(--gray-1)

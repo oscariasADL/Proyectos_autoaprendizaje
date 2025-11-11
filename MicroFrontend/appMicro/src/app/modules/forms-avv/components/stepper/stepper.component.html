@@ -1,0 +1,25 @@
+<div class="stepper-container">
+  <ul class="stepper-list">
+    <span class="stepper-line"
+          aria-hidden="true"
+          [style.max-width.%]="100 - (100 / (steps.length * 2) * 2)"
+          [style.width.%]="(currentStep * 100) / steps.length"
+          [style.left.%]="100 / (steps.length * 2)">
+    </span>
+    <li *ngFor="let step of steps"
+        [attr.aria-hidden]="!isCurrentStep(step)"
+        role="button"
+        [attr.aria-label]="(step.label | translate)"
+        (click)="click(step)"
+        [style.width.%]="100 / steps.length"
+        [ngClass]="{
+          'active': isCurrentStep(step),
+          'completed': isCompletedStep(step)
+        }">
+      <div class="stepper-point" aria-hidden="true" [ngClass]="{'icon-check': isCompletedStep(step)}"></div>
+      <p class="stepper-label">
+        {{ step.label | translate }}
+      </p>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<div class="movements-date-picker">
+  <div class="avv-calendar-item" id="start-date"
+       (click)="openCalendar(calendarTypes.from)">
+    <small>{{ 'CALENDAR.FROM' | translate }}</small>
+    <p>{{ formatDateToShow(startDate) || 'DD/MM/AAAA' }}</p>
+    <i class="icon-editar"></i>
+  </div>
+  <div class="avv-calendar-item" id="end-date"
+       (click)="openCalendar(calendarTypes.to)">
+    <small>{{ 'CALENDAR.TO' | translate }}</small>
+    <p>{{ formatDateToShow(endDate) || 'DD/MM/AAAA' }}</p>
+    <i class="icon-editar"></i>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="payment-tax-step-city">
+  <p class="title semi-bold">Escanea el código de barras</p>
+  <button
+    (click)="scanBarcode2()"
+    class="avv-btn-secondary btn-codebar mb-4"
+    id="pay-taxes-step-citycodebar-scanner-btn">
+    ESCANEAR CÓDIGO
+  </button>
+  <p class="avv-generic-step-description pb-4">O busca el impuesto de forma manual</p>
+  <app-search-list
+    [inputLabel]="'Ciudad'"
+    [searchList]="cities$ | async"
+    [working]="workingCities$ | async"
+    [showError]="(errorCities$ | async) ? 'Tenemos problemas para cargar las ciudades. <br> Inténtalo más tarde' : false"
+    (selectItem)="onSelectCity($event.item)"></app-search-list>
+</div>

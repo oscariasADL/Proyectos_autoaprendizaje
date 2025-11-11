@@ -1,0 +1,39 @@
+<article class="pocket-create-voucher">
+  <app-headers #header [title]="'POCKETS.HEADER' | translate"
+               [type]="header?.headerType?.whitePrimary"
+               (closeAction)="closeModal()">
+  </app-headers>
+  <section class="pocket-create-voucher__header">
+    <h2 class="pocket-create-voucher__header-title">{{ title | translate }}</h2>
+    <p class="pocket-create-voucher__header-description">{{ description | translate }}</p>
+  </section>
+  <section class="pocket-create-voucher__body avv-ticket">
+    <div class="avv-ticket-border"></div>
+    <div class="pocket-create-voucher__body-content avv-ticket-content">
+      <div class="avv-ticket-header">
+        <img [src]="'illustrations/success.svg' | imageUrl" alt="ícono de aprobado">
+        <div class="avv-ticket-header-content">
+          <p class="avv-ticket-header-content-title">{{ 'COMMON_LABELS.NUMBER_APPROVAL'|translate }}</p>
+          <p class="avv-ticket-header-content-subtitle">{{ approvalId }}</p>
+        </div>
+      </div>
+      <app-voucher-list
+        [items]="voucherItems"
+        [className]="'no-end-line no-padding-right'"
+      >
+      </app-voucher-list>
+    </div>
+    <div class="avv-ticket-border"></div>
+  </section>
+  <section class="pocket-create-voucher__notification">
+    <app-notification icon="icon-info"
+                      *ngIf="noticeMessage"
+                      [description]="noticeMessage | translate">
+    </app-notification>
+  </section>
+  <footer class="pocket-create-voucher__footer">
+    <button type="button" class="avv-btn-primary" (click)="closeModal()">
+      {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+    </button>
+  </footer>
+</article>

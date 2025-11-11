@@ -1,0 +1,38 @@
+<div class="social-security-contributor-container">
+  <p class="semi-bold">Mis aportantes</p>
+  <ng-container
+          *ngTemplateOutlet="workingContributors ? working : contributors.length > 0 ? content : empty"></ng-container>
+</div>
+
+<ng-template #working>
+  <div class="social-security-contributor-list-working">
+    <ion-skeleton-text *ngFor="let i of [1, 2, 3, 4]" animated></ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="social-security-contributor-list">
+    <div *ngFor="let contributor of contributors"
+         (click)="setContributor(contributor)"
+         class="avv-contact-card item">
+      <div class="contact-info">
+        <p class="name small" [innerHTML]="contributor.fullName"></p>
+        <small class="nickname" [innerHTML]="contributor.documentType + ' ' + contributor.documentId"></small>
+      </div>
+      <span class="contact-icon icon-next"></span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <div class="social-security-contributor-list-empty">
+    <img [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" class="icon" alt="sin-resultados">
+
+    <small class="my-4">Aún no tienes aportantes inscritos, te invitamos a inscribirlos desde la página web.</small>
+    <button class="avv-btn-secondary"
+            [id]="'social-security-contributor-exit-btn'"
+            (click)="closeStepper()">
+      {{ 'Salir del proceso' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>

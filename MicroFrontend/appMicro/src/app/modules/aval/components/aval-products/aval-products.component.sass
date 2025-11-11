@@ -1,0 +1,52 @@
+@import 'utils'
+
+.aval-products
+  &-container
+    position: relative
+    min-height: 100vh
+
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 112px
+      background-color: var(--gray-4)
+
+  &-header
+    +flex(flex-start, space-between)
+    position: relative
+    padding: $spacer-2
+
+    p
+      padding-top: $spacer
+
+    img
+      width: 40px
+      height: 40px
+
+  &-content
+    position: relative
+    padding: 0 $spacer-2
+
+  &-working-cards
+    padding: $spacer-2
+    position: relative
+
+    &-title
+      width: 129px
+      height: 24px
+      margin: $spacer 0 $spacer-3
+
+    &-icon
+      width: 40px
+      height: 40px
+      position: absolute
+      top: $spacer-2
+      right: $spacer-2
+
+    &-item
+      width: 100%
+      height: 80px
+      border-radius: 4px
+
+

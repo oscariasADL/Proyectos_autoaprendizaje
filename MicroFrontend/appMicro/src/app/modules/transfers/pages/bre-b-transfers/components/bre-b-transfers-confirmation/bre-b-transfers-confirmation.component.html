@@ -1,0 +1,69 @@
+<div class="confirm-bre-b-transfer" *ngIf="breBTransfers">
+  <div class="confirm-bre-b-transfer__header">
+    <h2 class="confirm-bre-b-transfer__title">
+      {{ 'TRANSFERS.BRE_B.STEPS.CONFIRMATION.TITLE' | translate}}
+    </h2>
+    <p class="confirm-bre-b-transfer__subtitle">
+      {{firstName | titlecase}}{{ 'TRANSFERS.BRE_B.STEPS.CONFIRMATION.SUBTITLE' | translate }}
+    </p>
+  </div>
+  <div class="confirm-bre-b-transfer__info">
+    <ul class="confirm-bre-b-transfer__list">
+      <li class="confirm-bre-b-transfer__item">
+        <span class="confirm-bre-b-transfer__key">{{
+          'TRANSFERS.BRE_B.STEPS.CONFIRMATION.AMOUNT' | translate}}</span>
+        <span class="confirm-bre-b-transfer__value">
+          <p class="confirm-bre-b-transfer__value"
+            [innerHTML]="sanitizeCurrency(breBTransfers.amount) | currencyFormat"> </p>
+          <p class="confirm-bre-b-transfer__value" *ngIf="this.form.value.gmfData && this.form.value.gmfData.costGmf"
+            [innerHTML]="gmfInfoSanitized(this.form.value.gmfData.costGmf.toString())">
+          </p>
+        </span>
+      </li>
+      <li class="confirm-bre-b-transfer__item">
+        <span class="confirm-bre-b-transfer__key">{{
+          'TRANSFERS.BRE_B.STEPS.CONFIRMATION.TOWARD'
+          | translate}}</span>
+        <span class="confirm-bre-b-transfer__value">
+          <p class="confirm-bre-b-transfer__value"> {{breBTransfers.contactName}}</p>
+          <p class="confirm-bre-b-transfer__value"> {{breBTransfers.towardAvalKey}}</p>
+          <p class="confirm-bre-b-transfer__value"> {{breBTransfers.towardProduct.bankName}}</p>
+        </span>
+      </li>
+      <li class="confirm-bre-b-transfer__item">
+        <span class="confirm-bre-b-transfer__key">{{
+          'TRANSFERS.BRE_B.STEPS.CONFIRMATION.FROM' |
+          translate}}</span>
+        <span class="confirm-bre-b-transfer__value">
+
+          {{ getProductType(breBTransfers.fromProduct)+ ' No. ' +
+          breBTransfers.fromProduct.numberProduct }}
+        </span>
+      </li>
+      <li class="confirm-bre-b-transfer__item">
+        <span class="confirm-bre-b-transfer__key">{{
+          'TRANSFERS.BRE_B.STEPS.CONFIRMATION.COST' |
+          translate}}</span>
+        <span class="confirm-bre-b-transfer__value"> Gratis</span>
+      </li>
+      <li class="confirm-bre-b-transfer__item" *ngIf="breBTransfers?.addenda?.note">
+        <span class="confirm-bre-b-transfer__key">{{
+          'TRANSFERS.BRE_B.STEPS.CONFIRMATION.MESSAGE' |
+          translate}}</span>
+        <span class="confirm-bre-b-transfer__value">{{breBTransfers.addenda.note}} </span>
+      </li>
+    </ul>
+  </div>
+  <app-notification icon="icon-alerta" [type]="notificationType.error"
+    *ngIf="this.form.value.gmfData && this.form.value.gmfData.allowTransaction === gmfTransactionIsNotAllowed"
+    [description]="'GMF.INSUFFICIENT_FUNDS' | translate"></app-notification>
+  <div class="confirm-bre-b-transfer__actions">
+    <button class="avv-btn-primary" type="submit" [id]="'breb-send-transfer-btn'" (click)="continue()"
+      [disabled]="this.form.value.gmfData && this.form.value.gmfData.allowTransaction === gmfTransactionIsNotAllowed">
+      {{ 'TRANSFERS.BRE_B.STEPS.CONFIRMATION.ACTIONS_BUTTONS.SEND' | translate | uppercase }}
+    </button>
+    <button class="avv-btn-secondary" type="submit" [id]="'breb-edit-btn'" (click)="modify()">
+      {{ 'TRANSFERS.BRE_B.STEPS.CONFIRMATION.ACTIONS_BUTTONS.MODIFY' | translate | uppercase }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+.product-detail-movements
+
+  &-loading
+    &-title
+      margin: 0 16px 20px
+      width: 206px
+      height: 21px
+      display: inline-block
+
+    &-card
+      margin: 20px 16px 0
+
+      ion-skeleton-text
+        &:nth-child(1)
+          width: 206px
+          height: 16px
+
+        &:nth-child(2)
+          width: 94px
+          height: 13px
+          margin-top: 2px
+
+        &:nth-child(3)
+          width: 141px
+          height: 14px
+          margin-top: 5px
+
+  &-list
+    padding: 16px
+    border: solid 1px var(--gray-4)
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+  &-title
+    font-size: 4.267vw
+    font-weight: 600
+    line-height: 2
+    color: var(--gray-1)
+    padding: 0 16px 8px
+
+  &-empty
+    width: 100%
+    padding: 40px 0 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    p
+      margin-top: 24px
+      text-align: center
+      max-width: 278px
+      color: var(--gray-1)
+
+  .redirect-more-movements
+    margin-top: 11px
+    width: 100%
+    font-size: 14px
+    line-height: 1.57
+    text-transform: none
+
+    > i
+      font-size: 24px
+      top: 6px
+      position: relative

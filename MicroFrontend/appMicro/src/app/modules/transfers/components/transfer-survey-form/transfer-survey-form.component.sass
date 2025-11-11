@@ -1,0 +1,46 @@
+.survey-container
+  width: calc(100% - 24px)
+  text-align: left
+.question-option-container
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .question-title
+    font-size: 16px
+    font-weight: 400
+  .question-options
+    display: flex
+    .question-option
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 12px
+      gap: 10px
+      width: 48px
+      height: 48px
+      background: #FFFFFF
+      border: 1px solid #EBEDEF
+      box-shadow: 0px 4px 4px rgba(37, 43, 49, 0.08)
+      border-radius: 4px
+      flex: none
+      order: 0
+      flex-grow: 1
+      margin: 7px
+      &.selected
+        background: #E7E9FB
+        border: 1px solid #0048DB
+        box-shadow: 0px 4px 4px rgba(37, 43, 49, 0.08)
+        border-radius: 4px
+  .question-options-help
+    display: flex
+    flex-direction: row
+    font-size: 14px
+    .item-left
+      width: 50%
+      text-align: left
+    .item-right
+      width: 50%
+      text-align: right

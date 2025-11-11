@@ -1,0 +1,105 @@
+<app-headers
+  #header
+  [backUrl]="backUrl"
+  [title]="'HEADER.MOVEMENTS_DETAIL' | translate"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content class="movements-detail"
+             [forceOverscroll]="false"
+             (ionScroll)="scrolling($event)">
+
+  <div class="controls" *ngIf="payload$ | async as payload">
+    <p class="title">{{ titleMovements | translate }}</p>
+    <div class="dates-form">
+      <app-movements-date-picker
+        [date]="date"
+        [params]="payload.params"
+        [calendarDescription]='titleMovements'
+        [monthsBackward]="monthsBackward"
+        (changeEvent)="fetchMovementsWithFilters($event)">
+      </app-movements-date-picker>
+    </div>
+
+    <div class="download-controls" id="download-movements" *ngIf="(movements$ | async)?.length > 0 && false">
+      <div>
+        <p>{{ 'MOVEMENTS.DOWNLOAD_MOVEMENTS' | translate }}</p>
+        <i class="icon icon-descarga"></i>
+      </div>
+    </div>
+
+    <ul class="avv-tabs" *ngIf="!credit">
+      <li *ngFor="let item of movementsFilters"
+          [id]="item.id"
+          (click)="fetchMovementsWithFilters({ state: item.filter })"
+          class="avv-tabs-item"
+          [ngClass]="{'active': payload.params.state === item.filter}">
+        <small>{{ item.label | translate }}</small>
+      </li>
+    </ul>
+  </div>
+
+  <div class="movements">
+    <ng-container
+      *ngTemplateOutlet="(((working$ | async) && (completed$ | async) === false) || (pfmCategoriesOfMovementsWorking) && !(pfmCategoriesOfMovementsCompleted))
+                         ? loading
+                         : (areTherePFMMovements$ | async)
+                         ? pfmMovementList
+                         : (areTherePFMMovements$ | async) === false && (movements$ | async).length > 0
+                         ? productMovementList
+                         : noMovements">
+    </ng-container>
+  </div>
+
+  <ng-template #loading>
+    <div class="movements-loading" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]">
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+  </ng-template>
+
+  <ng-template #pfmMovementList>
+    <app-pfm-product-detail-movement-list
+      [accountType]="accountType"
+      [filters]="payload$ | async"
+      [groupedIncomeCategories]="groupedIncomeCategories$ | async"
+      [groupedExpenseCategories]="groupedExpenseCategories$ | async"
+      [categoriesOfMovementsWorking]="pfmCategoriesOfMovementsWorking | async"
+      [categoriesOfMovementsCompleted]="pfmCategoriesOfMovementsCompleted | async"
+      [allMovementsByCategory]="allMovementsByCategory$ | async"
+      (fetchMovementsByCategoryFn)="fetchPFMMovementsByCategory($event)"
+      (changeCategoryFn)="changePFMCategory($event)">
+    </app-pfm-product-detail-movement-list>
+  </ng-template>
+
+  <ng-template #productMovementList>
+    <div *ngFor="let group of (movements$ | async); let i = index">
+      <span class="movement-date">{{ group.date }}</span>
+    <app-movement-item
+      *ngFor="let movement of group.movements; let i = index;"
+      [id]="'movement-'+(i+1)"
+      [movement]="movement">
+    </app-movement-item>
+  </div>
+  </ng-template>
+  <ng-template #noMovements>
+    <div class="movements-empty">
+      <div></div>
+      <p>No tienes movimientos en este rango de tiempo.</p>
+    </div>
+  </ng-template>
+
+  <ion-infinite-scroll
+    threshold="200px"
+    (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content loadingSpinner="lines">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="showFab">
+    <button class="avv-fab-btn" (click)="scrollToTop()">
+      <i class="icon-flecha_arriba"></i>
+    </button>
+  </ion-fab>
+</ion-content>

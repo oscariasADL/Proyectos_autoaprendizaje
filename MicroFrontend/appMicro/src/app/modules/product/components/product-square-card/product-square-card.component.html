@@ -1,0 +1,47 @@
+<div class="product-square-card" [ngSwitch]="product.balanceTypeProduct">
+  <div class="product-content" (click)="redirectDetail.emit()">
+    <div class="product-header">
+      <div class="product-name">
+        <img class="product-franchise" alt="icon" #img
+             *ngIf="product.franchise"
+             [src]="product.franchise | franchiseImage"
+             (error)="img.className = 'display-none'">
+        <p>{{ product.typeName }}</p>
+      </div>
+      <p class="product-number">No. {{ product.numberProduct }}</p>
+    </div>
+
+    <div class="product-body">
+      <div class="product-body-available" *ngIf="product.productBodyType === productBodyType.available">
+        <p class="product-label">{{ product.bodyFirstText }}</p>
+        <p class="product-value" [innerHTML]="product.bodyAvailableBalance | currencyFormat"></p>
+      </div>
+      <div class="product-body-information" *ngIf="product.productBodyType === productBodyType.information">
+        <div>
+          <p class="product-label">{{ product.bodyFirstText }}</p>
+          <p class="product-value" [innerHTML]="product.bodyFirstValue | currencyFormat"></p>
+        </div>
+        <div>
+          <p class="product-label">{{ product.bodySecondText }}</p>
+          <p class="product-label">{{ product.bodySecondValue }}</p>
+        </div>
+      </div>
+      <div class="product-body-information" *ngIf="product.productBodyType === productBodyType.progress">
+        <div>
+          <p class="product-label">{{ product.bodyFirstText }}</p>
+          <p class="product-value" [innerHTML]="product.bodyFirstValue | currencyFormat"></p>
+        </div>
+        <div class="progress">
+          <span [style.width.%]="100 - product.bodySecondValue"></span>
+        </div>
+        <p class="expense">{{ product.bodySecondText }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-footer"
+       *ngIf="product.productAction"
+       (click)="redirectAction.emit()">
+    <p>{{ product.productAction }}</p>
+  </div>
+</div>

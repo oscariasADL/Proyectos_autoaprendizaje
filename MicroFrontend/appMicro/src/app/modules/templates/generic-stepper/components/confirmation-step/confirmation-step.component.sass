@@ -1,0 +1,91 @@
+@import 'utils'
+
+.confirmation-step
+  text-align: left
+  padding: 16px 16px 0
+
+  &-title
+    padding: 16px 0 16px
+    font-size: 16px
+    font-weight: 600
+    line-height: 1.5
+    text-align: center
+    color: var(--gray-1)
+
+  &-description
+    font-size: 14px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.43
+    letter-spacing: normal
+    text-align: center
+    color: #87909d
+    margin-top: 16px
+
+  &-advertisement
+    margin-top: 26px
+    font-size: 12px
+    line-height: 1.33
+    text-align: left
+    color: var(--gray-1)
+
+  &-message
+    display: flex
+    align-items: flex-start
+    border-radius: 4px
+    background-color: var(--info-bg)
+    padding: 8px 16px 8px 8px
+    margin-top: 8px
+
+    i, p
+      color: #4a86d4
+
+    p
+      font-size: 12px
+      line-height: 1.33
+      padding-left: 8px
+
+  &-notice
+    margin-top: 16px
+
+    &.info
+      margin-top: 8px
+
+    &.error
+      margin-bottom: 16px
+
+  &-icon
+    img
+      display: block
+      margin: 0 auto
+
+  &-list
+    margin-top: 16px
+
+  &-btn
+    margin-top: 32px
+
+  &-btn-link
+    text-align: center
+    margin-bottom: 16px
+
+    button
+      margin-top: 28px
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      width: inherit
+
+      i
+        font-size: 24px
+        margin-left: $spacer
+
+  ::ng-deep
+    .avv-voucher-list li
+      &:last-child
+        border-bottom: none
+
+.list-data
+  font-size: 12px
+  line-height: 16px

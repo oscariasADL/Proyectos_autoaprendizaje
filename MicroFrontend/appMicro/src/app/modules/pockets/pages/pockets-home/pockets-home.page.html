@@ -1,0 +1,155 @@
+<app-headers #header [closeUrl]="'/'" [title]="'POCKETS.HEADER' | translate" [type]="header?.headerType?.redTertiary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="pockets-container">
+    <ng-container *ngTemplateOutlet="
+          (working$ | async) ? working :
+          ((completed$ | async) ? ((ifPocketsExist$ | async) ? content : onboarding) : error)">
+    </ng-container>
+  </article>
+
+  <ng-container *ngTemplateOutlet="pocketCreateFloatingBtn"></ng-container>
+</ion-content>
+
+<ng-template #working>
+  <div class="pockets-loading pockets-container-padding">
+    <ion-skeleton-text class="pockets-loading-title"></ion-skeleton-text>
+    <ion-skeleton-text class="pockets-loading-card" animated *ngFor="let i of [1, 2, 3, 4, 5, 6]"></ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="pockets-content pockets-container-padding">
+    <ng-template [appFeatureToggle]="featureFlagsKey.PocketsWithReturns">
+      <div class="pockets-content-promotion mb-4">
+        <figure class="pockets-content-promotion__image">
+          <img [src]="'illustrations/wallet-without-bg.svg' | imageUrl" alt=""/>
+        </figure>
+        <div class="pockets-content-promotion__content">
+          <div class="pockets-content-promotion__content__title"
+              [innerHTML]="'POCKETS.HOME.PROMOTION.TITLE' | translate"></div>
+          <div class="pockets-content-promotion__content__link">
+            <a href="javascript:void(0)" class="avv-link-underline" routerLink="/pockets/create-with-returns">
+              {{ 'POCKETS.HOME.PROMOTION.LINK_TEXT' | translate }}
+            </a>
+          </div>
+        </div>
+        <span class="avv-icons-btn-list-item-new">Nuevo</span>
+      </div>
+    </ng-template>
+    <app-balance-info [title]="'POCKETS.TITLE' | translate" [balanceInfo]="balanceInfo$ | async"
+                      [totalText]="'POCKETS.BALANCE_INFO.TITLE' | translate ">
+    </app-balance-info>
+
+    <app-notification icon="icon-bolsillos" [title]="'POCKETS.NOTIFICATION_ALERT.TITLE' | translate "
+                      [description]="'POCKETS.NOTIFICATION_ALERT.DESCRIPTION'| translate">
+    </app-notification>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.PocketsWithReturns">
+      <a href="javascript:void(0);" class="avv-link-underline display-block mt-4"
+         (click)="showFinancialEducationModal()">
+        {{ 'POCKETS.HOME.FINANCIAL_EDUCATION_LINK' | translate }}
+      </a>
+    </ng-template>
+
+    <div class="pocket-content-filter">
+      <span class="pocket-content-filter__title">{{ 'POCKETS.HOME.FILTER.FILTER_TITLE' | translate }}</span>
+      <div class="pocket-content-filter__filters">
+        <avv-dropdown-modal [control]="pocketCategorySelected" [isTypeRadioButton]="true" class="form-dropdown"
+                            [id]="'pocket-category-filter'"
+                            [items]="pocketsCategories" [isSmall]="true"
+                            [modalTitle]="'POCKETS.HOME.FILTER.POCKET_CATEGORY.MODAL_TITLE' | translate">
+        </avv-dropdown-modal>
+        <ng-template [appFeatureToggle]="featureFlagsKey.PocketsWithReturns">
+          <avv-dropdown-modal [control]="pocketTypeSelected" [isTypeRadioButton]="true" class="form-dropdown"
+                              [id]="'pocket-type-filter'"
+                              [label]="'POCKETS.HOME.FILTER.POCKET_TYPE.INPUT_LABEL' | translate"
+                              [items]="pocketTypes" [isSmall]="true"
+                              [modalTitle]="'POCKETS.HOME.FILTER.POCKET_TYPE.MODAL_TITLE' | translate">
+          </avv-dropdown-modal>
+        </ng-template>
+      </div>
+    </div>
+
+    <ng-container *ngFor="let group of (groupedPockets | async); index as ig">
+      <p class="pocket-type mb-4">{{ POCKET_TYPE_LABEL[group.pocketType] | translate }}</p>
+      <ul class="pockets-list">
+        <li *ngFor="let pocket of group.pockets; index as i;" role="button"
+            [attr.aria-label]="pocket.description" [id]="'pocket-' + i" (click)="navigateToDetail(pocket)"
+            [utag]="selectPocketTag.event_label"
+            [utagCategory]="selectPocketTag.event_category"
+        >
+
+          <p
+            class="pocket-status semi-bold {{ pocket.statusClass }}">{{ 'POCKETS.STATES.' + pocket.statusName | translate }}</p>
+
+          <div class="pocket-item-info-container">
+            <div class="pocket-item-info">
+              <i class="icon {{ (pocket.pocketCategory | pocketCategory).icon }}"></i>
+              <p>{{ pocket.description | capitalize }}</p>
+              <i class="icon-next pocket-icon-next"></i>
+            </div>
+
+            <div class="pocket-item-progress-container">
+              <div class="pocket-item-progress">
+                <div class="progress-line"></div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                     [style.width.%]="pocket.progress">
+                </div>
+              </div>
+              <span class="semi-bold">{{ pocket.progress }}%</span>
+            </div>
+
+            <div class="pocket-values">
+              <p class="pocket-amount">Ahorro: <span [innerHTML]="pocket.amountSaved | currencyFormat"></span></p>
+              <p class="pocket-goal">Meta: <span [innerHTML]="pocket.goal | currencyFormat"></span></p>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <section class="pockets-error pockets-container-padding">
+    <div class="pockets-error__content">
+      <figure>
+        <img [src]="'illustrations/error-browser-phone.svg'| imageUrl" alt="Icono de error">
+      </figure>
+      <p>
+        {{ "POCKETS.HOME.ERROR_MESSAGE" | translate }}
+      </p>
+    </div>
+    <button type="button" class="avv-btn-secondary" (click)="closePage()">
+      {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+    </button>
+  </section>
+</ng-template>
+
+<ng-template #onboarding>
+  <app-pockets-onboarding [withHeader]="false"></app-pockets-onboarding>
+</ng-template>
+
+<ng-template #pocketCreateFloatingBtn>
+  <ng-container *ngIf="(working$ | async) === false && (completed$ | async) && (ifPocketsExist$ | async)">
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="pockets-add">
+      <ng-template [appFeatureToggle]="featureFlagsKey.PocketsCreate">
+        <ng-container *ngTemplateOutlet="pocketCreateBtn"></ng-container>
+      </ng-template>
+    </ion-fab>
+  </ng-container>
+</ng-template>
+
+<ng-template #pocketCreateBtn>
+  <button *ngIf="(ifPocketsExist$ | async) === false || !showNotification"
+          [utag]="createPocketTag.event_label"
+          [utagCategory]="createPocketTag.event_category"
+          [ngClass]="{'avv-btn-primary': !showNotification, 'avv-btn-secondary': showNotification}"
+          id="create-pocket-btn" [routerLink]="showNotification ? homePage: pocketsCreatePage">
+    <i class="icon-bolsillos" *ngIf="!showNotification"></i>
+    {{ (showNotification ? 'POCKETS.BACK_BTN' : 'POCKETS.CREATE_POCKET_BTN') | translate | uppercase }}
+  </button>
+</ng-template>

@@ -1,0 +1,24 @@
+<div class="home-alert-content">
+    <div
+        [id]="alerts[0].id"
+        class="home-alert-content-alert avv-alert-{{ alerts[0].type }}">
+        <i class="avv-alert-icon {{ alerts[0].icon }}"></i>
+        <div
+            *ngIf="!!!alerts[0].action; else alertAction"
+            class="avv-alert-text-action">
+            {{ alerts[0].description | translate }}
+        </div>
+    </div>
+</div>
+
+<ng-template #alertAction>
+    <div class="avv-alert-text-action">
+        {{ alerts[0].description | translate }}
+        <span
+            (click)="onAction(alerts[0].id)"
+            [routerLink]="alerts[0].action.url"
+            class="action">
+            {{ alerts[0].action.text | translate }}
+        </span>
+    </div>
+</ng-template>

@@ -1,0 +1,77 @@
+<app-contact-book 
+  *ngIf="!selectedContact"
+  [contacts]="contacts$ | async" 
+  [filter]="filter$ |async" 
+  (setFilter)="setContactFilter($event)"
+  (clicked)="getContactInfo($event)"
+  [utag]="utagForContacts.event_label"
+  [utagCategory]="utagForContacts.event_category"
+  [showSearch]="true"
+  [hideList]="hideContactList">
+</app-contact-book>
+
+<div class="contact-product-container" *ngIf="contact">
+  <div class="owner-profile" *ngIf="!selectedContact">
+    <i class="icon-usuario"></i>
+    <div class="separator"></div>
+    <div class="owner-data">
+
+      <div class="owner-id-container">
+        <h3 class="owner-title">{{contact.name}}</h3>
+        <h4 class="owner-id">{{contact.identificationData.idType}} {{contact.identificationData.id}}</h4>
+      </div>
+
+      <div class="owner-phone-container">
+        <p class="owner-phone-title">{{'FAVORITES_CONTACTS_PAGE.PHONE_NUMBER'|translate}}</p>
+        <h4 class="owner-phone">{{contact.phoneNumber}}</h4>
+      </div>
+
+
+    </div>
+
+  </div>
+  <ng-container *ngIf="!selectedContact">
+  <div class="detail"  *ngFor="let contactProducts of contactProducts$ |async ">
+
+
+    <div class="favorite-data"  >
+
+      <div class="contact-account">
+        <div class="account-container">
+          <h3 class="contact-title">{{contactProducts.type.name}}</h3>
+          <h4 class="contact-nickname">{{contactProducts.alias}}</h4>
+        </div>
+        <div class="bank-container">
+
+          <h4 class="bank">{{'FAVORITES.CONTACTS_PAGE.BANK' | translate}} {{contactProducts.bank.name}}</h4>
+          <h4 class="account-number">{{contactProducts.number}}</h4>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="select" (click)="setFavorite(contactProducts)">{{'FAVORITES.CONTACTS_PAGE.SELECT_CONTACT' | translate}}</button>
+  </div>
+  </ng-container>
+   <div class="favorite-data"  >
+
+  <div class="detail" *ngIf="selectedContact">
+
+
+    <div class="favorite-data"  >
+
+      <div class="contact-account">
+        <div class="account-container">
+          <h3 class="contact-title">{{selectedContact.type.name}}</h3>
+          <h4 class="contact-nickname">{{selectedContact.alias}}</h4>
+        </div>
+        <div class="bank-container">
+
+          <h4 class="bank">{{'FAVORITES.CONTACTS_PAGE.BANK' | translate}} {{selectedContact.bank.name}}</h4>
+          <h4 class="account-number">{{selectedContact.type.name}} {{selectedContact.number}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+</div>

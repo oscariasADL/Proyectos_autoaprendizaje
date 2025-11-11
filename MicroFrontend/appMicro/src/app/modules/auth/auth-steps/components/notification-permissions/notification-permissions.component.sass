@@ -1,0 +1,26 @@
+@import 'utils'
+
+.notification-permissions-container
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  @include before-width-and-height-100()
+    bottom: 0
+    top: initial
+    background-color: var(--red-1)
+    height: 8px
+
+  > *
+    text-align: center
+
+  .loader
+    margin: 55px auto
+    width: 240px
+    height: 6px
+
+  .icon
+    width: 112px
+    height: 112px
+    margin: 0 auto

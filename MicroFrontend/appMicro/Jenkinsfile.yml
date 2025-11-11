@@ -1,0 +1,44 @@
+version: "1"
+
+app:
+
+  sensitive-files: #(optional)path donde se encuentra el archivo sensible dentro del repositorio que tiene placeholders para ser reemplazados
+    - 'android/app/google-services.json'
+    - 'android/app/agconnect-services.json'
+    - 'ios/App/App/GoogleService-Info.plist'
+    - 'project-config/android/google-services-pre.json'
+    - 'project-config/android/google-services-pro.json'
+    - 'project-config/ios/GoogleService-Info-pre.plist'
+    - 'project-config/ios/GoogleService-Info-pro.plist'
+
+  stacks:
+
+    - stack: 'dev'
+      ios:
+        bundleId: 'co.com.adl.mb.test.avvillas'
+        compilationModeRelease: false
+        exportOptionsFile: 'exportOptionsDEV.plist'
+        entitlementsFile: 'entitlementsDEV.plist'
+      android:
+        bundleId: 'com.grupoavalav1.bancamovil'
+        compilationModeRelease: false
+
+    - stack: 'stg'
+      ios:
+        bundleId: 'co.com.adl.mb.test.avvillas'
+        compilationModeRelease: false
+        exportOptionsFile: 'exportOptionsSTG.plist'
+        entitlementsFile: 'entitlementsSTG.plist'
+      android:
+        bundleId: 'com.grupoavalav1.bancamovil'
+        compilationModeRelease: false
+
+    - stack: 'pro'
+      ios:
+        bundleId: 'com.grupoavalav.bancamovil'
+        compilationModeRelease: false
+        exportOptionsFile: 'exportOptionsPRO.plist'
+        entitlementsFile: 'entitlementsPRO.plist'
+      android:
+        bundleId: 'com.grupoavalav1.bancamovil'
+        compilationModeRelease: false

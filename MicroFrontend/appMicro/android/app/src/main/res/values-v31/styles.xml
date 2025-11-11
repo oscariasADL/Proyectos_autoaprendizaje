@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:background">@null</item>
+  </style>
+
+  <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+    <item name="android:forceDarkAllowed">false</item>
+    <item name="android:isLightTheme">true</item>
+    <item name="android:windowLightStatusBar">true</item>
+    <item name="android:windowSplashScreenBackground">#ffffff</item>
+    <item name="android:windowSplashScreenAnimatedIcon">@drawable/av_villas_logo</item>
+    <item name="android:windowSplashScreenBrandingImage">@drawable/aval_logo</item>
+    <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+  </style>
+</resources>

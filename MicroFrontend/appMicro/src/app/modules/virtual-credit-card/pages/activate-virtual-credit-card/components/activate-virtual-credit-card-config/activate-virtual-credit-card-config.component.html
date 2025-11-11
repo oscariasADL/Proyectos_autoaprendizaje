@@ -1,0 +1,26 @@
+<article class="activate-virtual-credit-card-config">
+  <h2
+    class="activate-virtual-credit-card-config-title">
+    {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.CONFIG.TITLE' | translate }}
+  </h2>
+  <p
+    class="activate-virtual-credit-card-config-description">
+    {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.CONFIG.DESCRIPTION' | translate }}
+  </p>
+  <div class="form-control">
+    <avv-input
+      [type]="'currency'"
+      [id]="'digital-debit-card-configuration-amount'"
+      [label]="'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.AMOUNT_FIELD' | translate"
+      [control]="amount">
+    </avv-input>
+  </div>
+  <button type="button"
+          class="avv-btn avv-btn-primary"
+          [disabled]="amount.invalid"
+          (click)="continue.emit()"
+          [utag]="ACTIVATE_TCV_CONFIG.event_label"
+          [utagCategory]="ACTIVATE_TCV_CONFIG.event_category"
+          >{{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+  </button>
+</article>

@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[29],{10029:(i,t,s)=>{s.r(t),s.d(t,{pzl_item_description:()=>c});var e=s(940);const c=class{constructor(d){(0,e.r)(this,d)}render(){return(0,e.h)(e.H,{key:"b498e2e568388c7e1dde8bc0f9dd190b700d7966",slot:"item-description"},(0,e.h)("slot",{key:"54042700da48cf186606ae3ef77c11da44370959"}))}};c.style=":host{display:block}"}}]);

@@ -1,0 +1,58 @@
+<div class="header-container {{ backgroundColor }}" [ngClass]="{'show-notification' : showNotificationIcon}">
+
+  <div class="start-slot">
+    <img *ngIf="showLogoIcon"
+         [src]="'logo-blanco.svg' | imageUrl"
+         height="40"
+         width="40"
+         class="header-logo"
+         alt="Logo AV Villas"
+         draggable="false">
+
+    <i *ngIf="showBackIcon"
+       (click)="goBack()"
+       role="button"
+       [attr.aria-label]="'Volver'"
+       class="icon-back header-back-btn">
+    </i>
+
+    <h5 *ngIf="showLogoIcon" [attr.role]="'content'" class="header-title"
+        [attr.aria-label]="'Hola ' + ((basicData$ | async)?.clientName ? (((basicData$ | async)?.clientName) | firstWord) : '')">
+      <span aria-hidden="true">¡Hola</span> <span
+      aria-hidden="true"
+      *ngIf="(basicData$ | async)?.clientName">{{ ' ' + (((basicData$ | async)?.clientName) | firstWord) }}</span>!
+    </h5>
+    <h5 *ngIf="!showLogoIcon"
+        [innerHTML]="title" class="header-title"></h5>
+    <span *ngIf="showLogoIcon">{{ title }}</span>
+  </div>
+
+  <div class="end-slot">
+    <i *ngIf="showCloseIcon"
+       (click)="close()"
+       [attr.aria-label]="'Cerrar'"
+       role="button"
+       class="icon-salir">
+    </i>
+
+    <button *ngIf="showNotificationIcon"
+            id="hamburger-notification-icon"
+            [attr.aria-label]="'Notificaciones'"
+            role="button"
+            (click)="openMenu('notifications')">
+      <i class="icon-notificaciones" aria-hidden="true">
+        <span
+          *ngIf="(totalNotifications$ | async) > 0"
+          class="notification-number">{{ totalNotifications$ | async }}</span>
+      </i>
+    </button>
+
+    <button *ngIf="showMenuIcon"
+            id="hamburger-menu-icon"
+            [attr.aria-label]="'Menú'"
+            role="button"
+            (click)="openMenu('side-menu')">
+      <i class="icon-menu"></i>
+    </button>
+  </div>
+</div>

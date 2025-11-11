@@ -1,0 +1,99 @@
+<article class="directed-payment-list">
+  <section class="directed-payment-header">
+    <p class="directed-payment-title">{{ 'DIRECTED_PAYMENTS.MOVEMENT_STEP.DESCRIPTION' | translate }}</p>
+
+    <div class="avv-alert-info">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text-action">
+        {{ 'DIRECTED_PAYMENTS.MOVEMENT_STEP.NOTICE_INFORMATION' | translate }}
+        <ng-container *ngIf="(hasSavingsAccounts | async) === false">
+          <a href="javascript:void(0);" class="avv-link-underline" (click)="openExternalLink()">
+            {{ 'DIRECTED_PAYMENTS.MOVEMENT_STEP.OPEN_ACCOUNT' | translate }}
+          </a>
+        </ng-container>
+      </div>
+    </div>
+
+    <div *ngIf="informationText" (click)="showInformation.emit()" class="avv-information-link">
+      <i class="icon-informacion"></i>
+      <small [innerHTML]="informationText"></small>
+    </div>
+  </section>
+  <section class="directed-payment-list-items">
+    <form [formGroup]="form">
+      <ng-container formArrayName="paymentsArray" *ngIf="paymentsArray.controls.length > 0">
+        <ng-container *ngFor="let group of paymentsArray.controls; let indexGroup = index;">
+          <div class="items-grouped" [formGroupName]="indexGroup">
+            <p>{{ movements[indexGroup].date | capitalize }}</p>
+            <div formArrayName="values">
+              <ng-container *ngFor="let value of getValuesArray(indexGroup).controls; let indexValue = index;">
+                <div class="directed-payment-card"
+                     [ngClass]="{'selected': getControl(indexGroup, indexValue).value, 'disabled': getControl(indexGroup, indexValue).disabled}">
+                  <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" [formControlName]="indexValue"
+                             (change)="checkPayment()"/>
+                    </label>
+                  </div>
+                  <div class="container-info">
+                    <div class="container-info-header">
+                      <div class="abbreviation-date">
+                        <span>{{ this.movements[indexGroup].values[indexValue].purchaseDate | date: 'd' }}</span>
+                        <span>{{ this.movements[indexGroup].values[indexValue].purchaseDate | monthAbbreviation }}</span>
+                      </div>
+                      <div class="separator"></div>
+                      <div class="description-content">
+                        <p>{{ this.movements[indexGroup].values[indexValue].purchaseDescription }}</p>
+                        <small>{{ this.movements[indexGroup].values[indexValue].companyDescription }}</small>
+                      </div>
+                    </div>
+                    <div class="container-info-body">
+                      <ul>
+                        <li>
+                          <div>
+                            <span>{{ 'DIRECTED_PAYMENTS.FIELDS.VALUE' | translate }}:</span>
+                            <span
+                              [innerHtml]="this.movements[indexGroup].values[indexValue].purchaseValue | currencyFormat"></span>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div>
+                            <span>{{ 'DIRECTED_PAYMENTS.FIELDS.RATE' | translate }}:</span>
+                            <span>{{ this.movements[indexGroup].values[indexValue].rate }} %</span>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div>
+                            <span>{{ 'DIRECTED_PAYMENTS.FIELDS.INSTALLMENTS' | translate }}</span>
+                            <span>{{ this.movements[indexGroup].values[indexValue]?.installments - this.movements[indexGroup].values[indexValue]?.pendingInstallments }}
+                              {{ 'OF' | translate }} {{ this.movements[indexGroup].values[indexValue].installments }}</span>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div>
+                            <span>{{ 'DIRECTED_PAYMENTS.FIELDS.BALANCE' | translate }}</span>
+                            <span
+                              [innerHtml]="this.movements[indexGroup].values[indexValue].balance | currencyFormat"></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+      <div class="action">
+        <button type="button" class="avv-btn-primary"
+                (click)="continueAction()"
+                [disabled]="!(this.checkedCount.value > 0)">{{ 'ACTIONS.PAYMENT' | translate | uppercase }}
+        </button>
+      </div>
+    </form>
+  </section>
+</article>

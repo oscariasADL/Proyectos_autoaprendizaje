@@ -1,0 +1,32 @@
+<form *ngIf="documentForm"
+      [formGroup]="documentForm"
+      class="login-form login-document-container">
+
+  <avv-dropdown class="form-dropdown"
+                [id]="'user-type-document'"
+                [items]="documentTypes"
+                [loading]="workingParameters$ | async"
+                [label]="'LOGIN.FIELDS.DOCUMENT_TYPE' | translate"
+                [control]="typeDocument">
+  </avv-dropdown>
+
+  <avv-input
+    [type]="'document'"
+    [id]="'login-document'"
+    [label]="'LOGIN.FIELDS.NUMBER' | translate"
+    [control]="document">
+  </avv-input>
+
+  <button class="avv-btn-primary login-form-button"
+          type="button"
+          (click)="loginDocument()"
+          [id]="'login-document-button'"
+          [disabled]="!documentForm.valid || (working$ | async)"
+          [attr.aria-disabled]="!documentForm.valid || (working$ | async)">
+    {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+  </button>
+</form>
+
+<p id="login-problems" class="login-problems-link" (click)="openPopUpErrorLogin()">
+  {{ 'LOGIN.ERROR_LOGIN' | translate }}
+</p>

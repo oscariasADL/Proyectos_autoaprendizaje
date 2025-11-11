@@ -1,0 +1,177 @@
+<div class="payments-taxes-step-reference">
+  <p
+    *ngIf="!((completed$ | async) && (agreementDetail$ | async) === null)"
+    class="title semi-bold">
+    {{ isBarcode ? 'Referencia para pago' : 'Ingresa el número de referencia del impuesto para pago' }}
+  </p>
+  <div
+    *ngIf="(working$ | async); else formContent"
+    class="contacts-loading">
+    <div *ngFor="let item of [1, 2, 3]">
+      <ion-skeleton-text
+        animated
+        class="avv-skeleton"></ion-skeleton-text>
+    </div>
+  </div>
+  <ng-template #formContent>
+    <form *ngIf="!isBarcode">
+      <div class="avv-alert-info mb-2">
+        <i class="avv-alert-icon icon-info"></i>
+        <div class="avv-alert-text">
+          Son los números que identifican tu impuesto y sirven para pagar en internet o bancos.
+        </div>
+      </div>
+      <avv-input
+        type="number"
+        [id]="'input-payments-taxes-step-reference'"
+        (keyup)="searchReference($event.key)"
+        [label]="'Referencia de pago' | translate"
+        [control]="reference">
+      </avv-input>
+      <button
+        (click)="searchReference('Enter')"
+        [disabled]="!reference.valid || (agreementDetail$ | async)"
+        type="button"
+        class="avv-btn-secondary sm btn-continue"
+        id="payments-taxes-step-reference-search-btn">
+        BUSCAR
+      </button>
+    </form>
+  </ng-template>
+
+  <ng-container *ngIf="(agreementDetail$ | async) as detail">
+    <div
+      *ngIf="fromProduct.value.availableBalance < detail.amount"
+      class="avv-alert-error {{isBarcode ? 'mt-2' : 'mt-5'}}">
+      <i class="avv-alert-icon icon-alerta"></i>
+      <div
+        *ngIf="(isOnlyOneAccount$ | async) === false; else isOnlyOneAccount"
+        class="avv-alert-text">
+        {{
+        'No tienes plata suficiente en la cuenta para hacer el pago de este impuesto.'
+        }}
+        <button
+          (click)="this.selectAccount.emit()"
+          type="button"
+          class="avv-btn-link">
+          Cambiar cuenta origen
+        </button>
+      </div>
+      <ng-template #isOnlyOneAccount>
+        <div class="avv-alert-text">
+          {{
+          'No tienes saldo disponible para hacer este pago'
+          }}
+          <button
+            (click)="this.exit.emit()"
+            type="button"
+            class="avv-btn-link">
+            Salir del proceso
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </ng-container>
+</div>
+<!-- SHOW PREVIEW -->
+<div
+  *ngIf="(agreementDetail$ | async) as referenceInfo; else !!(agreementDetailNotFound$ | async) ? notFound : showError"
+  class="avv-preview-selected bg-gray">
+  <p class="small avv-title-semibold">{{ agreement.value.name | titlecase }}</p>
+  <p class="small avv-title-semibold">{{ city.value.name | titlecase }}</p>
+  <p class="small">Ref de pago: {{ reference.value }}</p>
+  <div class="pay-info">
+    <div class="row">
+      <p class="small">Valor a pagar</p>
+      <p
+        class="small"
+        [innerHTML]="referenceInfo.amount | currencyFormat"></p>
+    </div>
+  </div>
+  <button
+    *ngIf="fromProduct.value.availableBalance >= referenceInfo.amount"
+    (click)="onContinue(referenceInfo)"
+    type="button"
+    class="avv-btn-primary"
+    id="pay-unregistered-service-btn"
+    [disabled]="!form.valid">
+    CONFIRMAR
+  </button>
+</div>
+
+<ng-template #showError>
+  <div
+    *ngIf="(completed$ | async)"
+    class="avv-content-empty mt-1">
+    <div class="avv-content-empty-image">
+      <img
+        class="icon"
+        [src]="'errorde-carga.svg' | imageUrl"
+        alt="sin-resultados">
+    </div>
+    <ng-container *ngIf="agreementDetailMessage$ | async as errorMessage; else elseMessage">
+      <p class="semi-bold avv-content-empty-text">{{ errorMessage }}</p>
+    </ng-container>
+    <ng-template #elseMessage>
+      <p class="semi-bold avv-content-empty-text">No pudimos cargar la referencia de pago</p>
+    </ng-template>
+    <button
+      (click)="tryAgain()"
+      class="avv-btn-link">
+      Intentar de nuevo
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #notFound>
+  <ng-container *ngIf="(completed$ | async)">
+    <div
+      *ngIf="!isBarcode; else notFoundBarcode"
+      class="avv-content-empty mt-1">
+      <ng-container *ngIf="agreementDetailMessage$ | async as errorMessage; else elseMessageNotFound">
+        <p class="semi-bold avv-content-empty-text">
+          {{ errorMessage }}
+        </p>
+      </ng-container>
+      <div class="avv-content-empty-image">
+        <img
+          class="icon"
+          [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+          alt="sin-resultados">
+      </div>
+      <small class="avv-content-empty-message">
+        Ingresa una diferente e intenta de nuevo.
+      </small>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #notFoundBarcode>
+  <div class="avv-content-empty">
+    <div class="avv-content-empty-image">
+      <img
+        class="icon"
+        [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+        alt="sin-resultados">
+    </div>
+    <ng-container *ngIf="agreementDetailMessage$ | async as errorMessage; else elseMessageNotFound">
+      <p class="semi-bold avv-content-empty-text">
+        {{ errorMessage }}
+      </p>
+    </ng-container>
+    <button
+      (click)="tryAgain()"
+      class="avv-btn-link">
+      Intentar de nuevo
+      <i
+        class="icon icon-camara"
+        title="icon-camara"></i>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #elseMessageNotFound>
+  <p class="semi-bold avv-content-empty-text">
+    No encontramos un impuesto con esta referencia.
+  </p>
+</ng-template>

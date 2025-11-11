@@ -1,0 +1,117 @@
+<div
+    class="avv-generic-step field-step"
+    *ngIf="data.control">
+    <p
+        class="avv-generic-step-title"
+        [ngClass]="{'with-description': data.description}">
+        {{ data.title | translate }}
+    </p>
+
+    <div
+        *ngIf="!!data.phoneNumber"
+        class="avv-contact-card">
+        <ng-container *ngIf="data.displayName.value as nickname; else withoutName">
+            <span class="contact-image">
+                #
+                <!-- {{ (nickname + '') | slice : 0 : 1 | uppercase }} -->
+            </span>
+            <div class="contact-info with-name">
+                <h6 class="name">{{ nickname }}</h6>
+                <p class="nickname">{{ data.phoneNumber.value }}</p>
+                <!-- <i class="icon icon-back"></i> -->
+            </div>
+        </ng-container>
+        <ng-template #withoutName>
+            <span class="contact-image">#</span>
+            <div class="contact-info">{{ data.phoneNumber.value }}</div>
+        </ng-template>
+    </div>
+
+    <p
+        class="avv-generic-step-description"
+        *ngIf="data.description"
+        [innerHTML]="data.description | translate">
+    </p>
+    <form
+        [formGroup]="form"
+        (ngSubmit)="setNextStep()"
+        class="content">
+        <avv-input
+            #inputField
+            [type]="data.type"
+            [id]="data.type + '-value'"
+            [autoFocus]="false"
+            [allowCopy]="data?.allowInputOperations"
+            [allowPaste]="data?.allowInputOperations"
+            [allowCut]="data?.allowInputOperations"
+            [label]="data.label | translate"
+            [control]="data.control">
+        </avv-input>
+
+        <div
+                *ngIf="data?.noticeInfo"
+                class="avv-alert-info field-step-notice">
+            <i class="avv-alert-icon icon-info"></i>
+            <div
+                    class="avv-alert-text"
+                    [innerHTML]="data?.noticeInfo | translate">
+            </div>
+        </div>
+
+        <div
+            *ngIf="data.showAccordionSourceDataStep"
+            class="avv-generic-accordion mt-4"
+            [ngClass]="{'active': activeAccordion}">
+            <p
+                class="avv-generic-accordion-title"
+                (click)="toggleAccordion()">
+                <i class="icon-down"></i>
+                <span>Datos opcionales</span>
+            </p>
+
+            <div class="avv-generic-accordion-content">
+                <p class="small mt-1">Esta información le llegará a la persona que le transfieras.</p>
+                <avv-field
+                    [id]="'transfer-note'"
+                    [type]="'text'"
+                    [label]="'Mensaje' | translate"
+                    [control]="note">
+                </avv-field>
+                <small class="example-text">Ejemplo: pago del arriendo</small>
+
+                <avv-field
+                    [id]="'transfer-reference'"
+                    [type]="'text'"
+                    [label]="'Datos adicionales' | translate"
+                    [control]="referenceId">
+                </avv-field>
+                <small class="example-text">Ejemplo: mes 12 2020</small>
+            </div>
+
+        </div>
+
+        <button
+            *ngIf="data.selectCellPhoneContacts"
+            (click)="onSelectCellPhoneContacts()"
+            type="button"
+            class="avv-btn-link semi-bold"
+            id="select-contact-book-btn">
+            Seleccionar un contacto de mi agenda
+            <span class="icon icon-agregar"></span>
+        </button>
+
+        <p
+            *ngIf="data.message"
+            class="avv-generic-step-message"
+            [innerHTML]="data.message | translate">
+        </p>
+
+        <button
+            class="avv-btn-primary mt-5"
+            type="submit"
+            [id]="data.id + '-btn'"
+            [disabled]="!formValid">
+            {{ data.buttonText | translate | uppercase }}
+        </button>
+    </form>
+</div>

@@ -1,0 +1,140 @@
+<div class="product-detail-card">
+  <div class="product-detail-card-image" [ngClass]="{'no-image': !!!data.image}">
+    <img [src]="data.image | imageUrl" alt="Product Image" draggable="false" aria-hidden="true"
+      (error)="cromalineLoadingError($event)">
+    <div class="detail">
+      <p [id]="'product-number'" [attr.role]="'text'" [attr.aria-label]="product.nickname + ' ' + data.number">
+        <i class="icon-logo-avvillas"></i>
+        No.{{ data.number }}
+      </p>
+      <img *ngIf="data.franchise" [src]="data.franchise | imageUrl" alt="">
+    </div>
+  </div>
+  <div class="product-detail-card-content">
+    <ul>
+      <div *ngIf="hasAvalTag() && isSDAOrDDAAccount()">
+        
+        <div *ngFor="let item of (filteredSpiKeys$ | async).slice(0, 1)">
+          <ng-container *ngIf="item.keyId">
+            <app-aval-key-details [item]="item" (copyKey)="copySpiUserKey(item.keyId)"
+              (showTagAvalPopover)="showTagAvalPopover($event, 'product-spi-user-key', item)"></app-aval-key-details>
+
+          </ng-container>
+        </div>
+      </div>
+      <div *ngIf="!hasAvalTag() && hasBreBKeys() && isSDAOrDDAAccount()">
+        <div *ngFor="let item of product.breBUserKeys | slice:0:1">
+          <app-bre-b-key-details [item]="item" (copyKey)="copySpiUserKey(item.keyId)"
+            (showTagAvalPopover)="showTagAvalPopover($event, 'bre-b-user-key',item)"></app-bre-b-key-details>
+        </div>
+
+      </div>
+      <div *ngIf="((
+        !hasAvalTag() 
+        && !hasBreBKeys() 
+        && isSPIEnabled() 
+         ||(filteredSpiKeys$ | async).length===0) && isSDAOrDDAAccount()
+       ) 
+        ">
+        <app-register-breb-key (goToLink)="goToBreB()"></app-register-breb-key>
+      </div>
+      <div *ngIf=" isSPIEnabled() &&  (hasMoreKeys$| async) &&  nonRegisteredKeys().length===1 && isSDAOrDDAAccount()" >
+        <app-view-more-keys-button 
+        [type]="viewMoreKeysType.secondary"       
+        (goToBreB)="goToBreB()">
+        </app-view-more-keys-button>
+
+      </div>
+         <div *ngIf=" isSPIEnabled() &&  (hasMoreKeys$| async) && nonRegisteredKeys().length>1 && isSDAOrDDAAccount()">
+        <app-view-more-keys-button 
+        [type]="viewMoreKeysType.secondary"
+        [buttonLabel]="'BRE_B.UNREGISTERED_KEYS'"
+        [translateParams]="{keys: nonRegisteredKeys().length}"
+        (goToBreB)="goToBreB()">
+        </app-view-more-keys-button>
+
+      </div>
+      <div >
+        <app-single-unregistered-key-button
+        *ngIf="nonRegisteredKeys().length===1 && isSPIEnabled() && isSDAOrDDAAccount()"
+          [isWhite]="true"
+          [buttonLabel]="'BRE_B.UNREGISTERED_KEY'"
+          [avalTag]="nonRegisteredKeys()[0].keyId"
+        ></app-single-unregistered-key-button>
+      </div>
+      <li *ngFor="let item of data.list" class="{{ item.type }}" [id]="item.id"
+        [ngClass]="{'has-divider': item.hasDivider}">
+        <p>
+          <span [attr.role]="'text'"
+            [attr.aria-label]="item.label + ' ' + (!item.text ? (item.value | numberFormat) + ' ' + ('CURRENCIES.' + (product?.currency ? product?.currency : 'COP') | translate) : item.text)">{{
+            item.label }}</span>
+          <ng-container *ngIf="item.info as info">
+            <i class="icon-info" (click)="showPopover($event, info, item.id)" role="button"
+              [attr.aria-label]="'Más información'"></i>
+          </ng-container>
+        </p>
+        <p *ngIf="!item.text" [innerHTML]="item.value | currencyFormat" [attr.aria-hidden]="true"></p>
+        <p *ngIf="item.text" [innerHTML]="item.text" [attr.aria-hidden]="true"></p>
+      </li>
+    </ul>
+    <ul *ngIf="data.quickList" class="product-detail-card-quick-list">
+      <ng-container *ngFor="let item of data.quickList;let i = index">
+        <li *ngIf="item.hasDivider">
+          <div class="divider"></div>
+        </li>
+        <ng-container *ngIf="item.type !== productDetailItemType.Button">
+          <li class="{{ item.type }}" [id]="item.id">
+            <p [attr.role]="'text'"
+              [attr.aria-label]="item.label + ' ' + (!item.text ? (item.value | numberFormat) + ' ' + ('CURRENCIES.' + (product?.currency ? product?.currency : 'COP') | translate) : item.text)">
+              <span>{{ item.label }}</span>
+              <ng-container *ngIf="item.info as info">
+                <i class="icon-info" (click)="showPopover($event, info, item.id)" role="button"
+                  [attr.aria-label]="'Más información'"></i>
+              </ng-container>
+            </p>
+            <p *ngIf="item.value >= 0" [innerHTML]="item.value | currencyFormat" [attr.aria-hidden]="true"></p>
+            <p *ngIf="item.text" [innerHTML]="item.text" [attr.aria-hidden]="true"></p>
+          </li>
+        </ng-container>
+      </ng-container>
+    </ul>
+    <section class="product-detail-card-dropdown-list" [class.open]="isDropdownOpen" *ngIf="data?.dropdownList"
+      (click)="isDropdownOpen = !isDropdownOpen">
+      <div class="dropdown-list-header">
+        <h4>{{ data.dropdownList.title }}</h4>
+        <span>
+          <i class="icon icon-down"></i>
+        </span>
+      </div>
+      <div class="dropdown-list-container">
+        <ul>
+          <ng-container *ngFor="let item of data?.dropdownList?.list; let i = index">
+            <li [class]="item.type">
+              <p [class]="item?.labelClass" [attr.role]="'text'"
+                [attr.aria-label]="item.label + ' ' + (!item.text ? (item.value | numberFormat) + ' ' + ('CURRENCIES.' + (product?.currency ? product?.currency : 'COP') | translate) : item.text)">
+                {{ item.label }}</p>
+              <p *ngIf="item.value >= 0" [class]="item?.valueClass" [innerHTML]="item.value | currencyFormat"
+                [attr.aria-hidden]="true"></p>
+              <p *ngIf="item.text" [class]="item?.valueClass" [innerHTML]="item.text" [attr.aria-hidden]="true"></p>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="product-detail-card-actions">
+    <ng-container *ngIf="buttonActions.length > 0">
+      <button class="avv-btn-primary sm" *ngFor="let button of buttonActions" (click)="action.emit()" [id]="button.id">
+        {{ button.label | uppercase }}
+      </button>
+    </ng-container>
+  </div>
+
+  <div *ngIf="data.infoText" class="avv-alert-info avv-alert-info-product" id="alert-product">
+    <i class="avv-alert-icon icon-info" [attr.aria-hidden]="true"></i>
+    <div class="avv-alert-text-action">
+      {{ data.infoText }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<app-headers
+  [backUrl]="'/'"
+  [title]="'PAYMENTS.TITLE' | translate">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+
+  <div class="payments-container">
+    <div class="avv-icons-btn-list">
+      <ng-template *ngFor="let item of paymentList" [appFeatureToggle]="item.featureFlagKey">
+        <div
+          role="button"
+          [attr.aria-label]="(item.label | translate)"
+
+          (click)="!item.disabled ? navigateTo(item) : null"
+          [id]="item.id"
+          [ngClass]="{'disabled': item.disabled}"
+          class="avv-icons-btn-list-item {{ item.className }}  ion-activatable ripple-parent">
+          <ion-ripple-effect></ion-ripple-effect>
+          <div class="avv-icons-btn-list-item-icon">
+            <img
+              [src]="item.image | imageUrl"
+              alt>
+          </div>
+          <p
+            class="avv-icons-btn-list-item-label small"
+            [innerHTML]="item.label | translate">
+          </p>
+        </div>
+      </ng-template>
+    </div>
+
+    <app-find-other-features
+      #findOtherFeatures
+      [type]="findOtherFeatures?.findOtherFeaturesType?.payments">
+    </app-find-other-features>
+  </div>
+
+</ion-content>

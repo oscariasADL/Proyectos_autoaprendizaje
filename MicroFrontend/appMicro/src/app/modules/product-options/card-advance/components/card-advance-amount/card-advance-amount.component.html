@@ -1,0 +1,33 @@
+<div class="avv-generic-step field-step card-advance-amount-container">
+  <p class="avv-generic-step-title card-advance-amount-title">
+    {{ 'CARD_ADVANCE.AMOUNT_STEP.TITLE' | translate }}
+  </p>
+
+  <form [formGroup]="formGroup" (submit)="continue.emit()" class="content">
+
+    <avv-input
+            [type]="'currency'"
+            [label]="'CARD_ADVANCE.AMOUNT_STEP.FIELD' | translate"
+            [control]="amount"
+            class="card-advance-amount-input">
+    </avv-input>
+
+    <app-range
+            [min]="6"
+            [max]="24"
+            [step]="6"
+            [title]="'CARD_ADVANCE.AMOUNT_STEP.INSTALLMENTS' | translate"
+            [control]="installments"
+            class="card-advance-amount-range">
+    </app-range>
+
+    <div class="card-advance-amount-button">
+      <button class="avv-btn-primary amount-step-btn"
+              type="submit"
+              [id]="'card-advance-amount-btn'"
+              [disabled]="!formGroup.valid">
+        {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+      </button>
+    </div>
+  </form>
+</div>

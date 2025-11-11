@@ -1,0 +1,12 @@
+<main class="select-product-container">
+  <p class="semi-bold">{{ typeProductCategoriesTitles[params.typeProduct] | translate }}</p>
+  <app-product-card-item
+    #productCardItem
+    *ngFor="let product of (products$ | async)"
+    [productDetail]="{ product: product }"
+    [style]="productCardItem.productStyleType.selectable"
+    [showSubtitle]="false"
+    [routerLink]="['/extracts/selected-product/'+product.type+'/'+product.id]"
+  >
+  </app-product-card-item>
+</main>

@@ -1,0 +1,21 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'Notificaciones'"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <app-security-notifications-confirm
+    (back)="backSecurity()"
+    (disableNotifications)="disableNotifications()"
+    *ngIf="(securityNotificationsStep$ | async) === securityNotificationsStep.confirm">
+  </app-security-notifications-confirm>
+
+  <app-security-notifications-result
+    [data]="securityNotificationsResponse$ | async"
+    (closeEvent)="close()"
+    *ngIf="(securityNotificationsStep$ | async) === securityNotificationsStep.result">
+  </app-security-notifications-result>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<article class="digital-debit-card-information-container">
+  <div class="digital-debit-card-information-container-cover text-center">
+    <h6 class="semi-bold">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.TITLE' | translate }}</h6>
+    <img [src]="'digital-debit-card.svg' | imageUrl" class="digital-debit-card-image mt-5 mb-5" alt="">
+  </div>
+
+  <div class="digital-debit-card-information-container-info">
+    <p class="semi-bold mb-3">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.DESCRIPTION' | translate }}</p>
+    <ul class="digital-debit-card-information-list mb-5">
+      <li>
+        <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LIST_1' | translate }}</p>
+      </li>
+      <li>
+        <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LIST_2' | translate }}</p>
+      </li>
+      <li>
+        <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LIST_3' | translate }}</p>
+      </li>
+      <li>
+        <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LIST_4' | translate }}</p>
+      </li>
+      <li>
+        <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LIST_5' | translate }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <button type="button" id="digital-debit-card-information-btn" class="avv-btn-primary mb-3" (click)="continue.emit()">
+    {{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.ACTION' | translate | uppercase }}
+  </button>
+
+  <div class="digital-debit-card-information-link mb-3">
+    <i class="icon-info mr-1"></i>
+    <button class="avv-link-underline"
+            [id]="'digital-debit-card-detail-instructions-btn'"
+            (click)="showFrequentQuestions.emit()">
+      {{ 'DIGITAL_DEBIT_CARD.ACTIVATE.INFO.LINK' | translate }}
+    </button>
+  </div>
+</article>

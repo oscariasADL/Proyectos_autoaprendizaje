@@ -1,0 +1,62 @@
+<app-headers #header
+             [title]="'VIRTUAL_CREDIT_CARD.ACTIVATE.HEADER_TITLE' | translate"
+             [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="onboarding-activate-virtual-credit-card-container">
+    <div class="onboarding-activate-virtual-credit-card-container-cover text-center">
+      <h6 class="semi-bold px-3">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.TITLE' | translate }}</h6>
+      <figure *ngIf="franchiseCardImage$ | async as franchiseCardImage">
+        <img appPreloadImage
+             [preload]="skeleton"
+             [src]="franchiseCardImage | imageUrl"
+             class="virtual-credit-card-image mt-5 mb-5" alt="">
+        <ion-skeleton-text
+          #skeleton
+          class="avv-skeleton virtual-credit-card-cromaline-skeleton mt-5 mb-5"
+          animated></ion-skeleton-text>
+      </figure>
+    </div>
+
+    <div class="onboarding-activate-virtual-credit-card-container-info">
+      <p class="semi-bold text-center mb-3">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.DESCRIPTION' | translate }}</p>
+      <ul class="onboarding-activate-virtual-credit-card-list mb-5">
+        <li>
+          <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+          <p class="small">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.LIST_1' | translate }}</p>
+        </li>
+        <li>
+          <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+          <p class="small">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.LIST_2' | translate }}</p>
+        </li>
+        <li>
+          <img [src]="'icons/check-list.svg' | imageUrl" class="check-list" alt="">
+          <p class="small">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.LIST_3' | translate }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <a href="javascript:void(0)"
+       type="button"
+       id="onboarding-activate-virtual-credit-card-btn"
+       class="avv-btn-primary mb-3"
+       [routerLink]="['/virtual-credit-card/activate']"
+       [utag]="activeTCVUtag.event_label"
+       [utagCategory]="activeTCVUtag.event_category"
+    >
+      {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.ACTION' | translate | uppercase }}
+    </a>
+
+    <div class="onboarding-activate-virtual-credit-card-link mb-3">
+      <i class="icon-info mr-1"></i>
+      <button class="avv-link-underline"
+              [id]="'virtual-credit-card-detail-instructions-btn'"
+              (click)="showFrequentQuestions()">
+        {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.INFO.LINK' | translate }}
+      </button>
+    </div>
+  </article>
+</ion-content>
+
+

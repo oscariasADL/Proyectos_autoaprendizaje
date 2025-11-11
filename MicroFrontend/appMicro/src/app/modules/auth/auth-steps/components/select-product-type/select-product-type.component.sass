@@ -1,0 +1,52 @@
+@import "utils"
+
+.select-product-type-container
+  overflow-y: auto
+  height: 100vh
+
+  .auth-steps-body
+    padding-top: $spacer-3
+
+    .logo-container > img
+      min-width: 192px
+
+    .title-content
+      margin-top: $spacer-4
+
+      h2
+        padding-bottom: $spacer
+        font-size: 16px
+        font-weight: 600
+        line-height: 24px
+        color: var(--gray-8)
+      h3
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+
+    .products-content
+      margin-top: $spacer-4
+
+      .product-card
+        width: 100%
+        margin: 12px 0
+        padding: $spacer-2 $spacer-1
+        +flex(center)
+        +shadow(var(--white), 4px, 0 2px 4px 0 rgba(65, 74, 83, 0.3) )
+
+        .product-info
+          width: 100%
+          +flex(center)
+
+          i
+            font-size: 20px
+            margin-right: $spacer-2
+
+          p,i
+            color: var(--gray-1)
+          p
+            padding-top: 3px
+
+        &>i
+          font-size: 32px
+          color: var(--blue-1)

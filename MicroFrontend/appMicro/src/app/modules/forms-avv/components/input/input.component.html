@@ -1,0 +1,42 @@
+<div class="form-input" [ngClass]="{'currency-not-empty': isCurrencyNotEmpty, 'keep-icon': keepIcon}">
+  <label [for]="id">
+    <span class="currency-icon">{{ prefix }}</span>
+    <img *ngIf="franchiseIcon && srcImgFranchise" alt="icon" class="franchise-img" [src]="srcImgFranchise">
+    <input type="text"
+           #avvInput
+           (keyup)="keyUp($event)"
+           (copy)="!allowCopy ? $event.preventDefault(): null"
+           (paste)="!allowPaste ? $event.preventDefault(): null"
+           (cut)="!allowCut ? $event.preventDefault(): null"
+           (focus)="focusEvent.emit()"
+           (blur)="blurEvent.emit()"
+           [id]="id"
+           [type]="inputType"
+           [formControl]="control"
+           [autocomplete]="autocomplete"
+           [ngClass]="{'pl-8': franchiseIcon && srcImgFranchise}"
+           [mask]="mask"
+           [thousandSeparator]="'.'"           
+            [decimalMarker]="','"   
+            [specialCharacters]="maskConfig.specialCharacters"
+           [allowNegativeNumbers]="maskConfig.allowNegativeNumbers"
+           [prefix]="maskConfig.prefix"
+           [suffix]="maskConfig.suffix"
+           [dropSpecialCharacters]="dropSpecialCharacters"
+           [showMaskTyped]="showMaskTyped"
+           [placeHolderCharacter]="placeHolderCharacter"
+           [shownMaskExpression]="shownMaskExpression"
+           [clearIfNotMatch]="clearIfNotMatch"
+           [validation]="validation"
+           [attr.aria-required]="control.hasError('required')"
+           [attr.aria-invalid]="control.invalid"
+           placeholder="&nbsp;">
+    <span class="label" [innerHTML]="label"></span>
+    <span class="form-border"></span>
+    <span class="alert-icon icon-alerta" *ngIf="isErrorMessage"></span>
+    <span class="form-icon {{ icon }}" [ngClass]="{'preserve': preserveIcon}"
+          *ngIf="keepIcon || (!!icon && !isErrorMessage)"></span>
+  </label>
+  <avv-validation-messages [control]="control" *ngIf="showValidations"></avv-validation-messages>
+  <span *ngIf="hint" class="hint">{{hint | translate}}</span>
+</div>

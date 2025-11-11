@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Hogar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -0.000000)">
+            <g id="1-IconBasic/24/home" transform="translate(0.000000, -0.000000)">
+                <rect id="fondo" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+                <path d="M21.6,8.56072645 L12.6,2.20431328 C12.2,1.93189557 11.7,1.93189557 11.4,2.20431328 L2.4,8.56072645 C2.1,8.74233825 2,9.01475596 2,9.28717367 L2,19.2758229 C2,20.8195233 3.3,22 5,22 L19,22 C20.7,22 22,20.8195233 22,19.2758229 L22,9.28717367 C22,9.01475596 21.9,8.74233825 21.6,8.56072645 Z M14,20 L10,20 L10,12 L14,12 L14,20 Z M20,19.0960452 C20,19.6384181 19.6,20 19,20 L16,20 L16,11 C16,10.4576271 15.6,10 15,10 L9,10 C8.4,10 8,10.4576271 8,11 L8,20 L5,20 C4.4,20 4,19.6384181 4,19.0960452 L4,9.60451977 L12,4 L20,9.60451977 L20,19.0960452 Z" id="Mask" fill="currentColor"></path>
+            </g>
+        </g>
+    </g>
+</svg>

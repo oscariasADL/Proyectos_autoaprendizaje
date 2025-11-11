@@ -1,0 +1,58 @@
+@import 'utils'
+
+.activate-token-container
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 10% 70% 20%
+  width: 100%
+  min-height: 100vh
+  padding: var(--safe-area-inset-top) $spacer-2 var(--safe-area-inset-bottom)
+  background: var(--white)
+  background-size: cover
+
+  .activate-token-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: $spacer-2
+
+    img
+      max-height: 40px
+
+  .activate-token-content
+    align-self: center
+
+    &-loading
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .at-loading-icon
+        width: 80px
+        height: 80px
+        margin: 0 auto $spacer-4
+        border-radius: 50%
+
+      .at-loading-title
+        width: 40%
+        margin: 0 auto $spacer-2
+        height: 30px
+
+    &-content
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .at-content-icon
+        margin-bottom: $spacer-4
+
+      .at-content-title
+        font-size: 24px
+        font-weight: 600
+
+      .at-content-description
+        text-align: center
+
+  .activate-token-footer
+    align-self: center
+

@@ -1,0 +1,103 @@
+<app-headers
+  #header
+  [title]="'TRANSFERS.TRUST_RELATION.HEADER' | translate"
+  [closeUrl]="'/'"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <ng-container *ngTemplateOutlet="(hasValidProducts$ | async) ? container : info"></ng-container>
+</ion-content>
+
+<ng-template #container>
+  <div class="transfers-trust-relation-container">
+    <p class="small text-center mb-4" [innerHTML]="'TRANSFERS.TRANSFIYA.TRUST_RELATION.DESCRIPTION' | translate"></p>
+
+    <avv-dropdown
+            class="extracts-period"
+            [id]="'extracts-product'"
+            [items]="products$ | async"
+            [label]="'TRANSFERS.TRANSFIYA.TRUST_RELATION.SELECT_PRODUCT' | translate"
+            [control]="product"
+            [loading]="working$ | async"
+            [disabled]="working$ | async"
+            (valueOutput)="fetchTrustRelations($event)"
+            [template]="account">
+
+      <ng-template
+        #account
+        let-account="data"
+        let-className="class">
+        <div class="avv-item-account {{ className }}">
+          <p class="name">{{ account.typeName }}</p>
+          <p class="number">No. {{ account.numberProduct }}</p>
+        </div>
+      </ng-template>
+    </avv-dropdown>
+
+    <ng-container *ngIf="!!product?.value">
+      <ng-container
+              *ngTemplateOutlet="(working$ | async) ? working : ((completed$ | async) && (trustRelations$ | async).length > 0) ? content : empty">
+      </ng-container>
+    </ng-container>
+
+    <div (click)="showInformation()" class="avv-information-link p-0 mt-4">
+      <i class="icon-info"></i>
+      <small [innerHTML]="'TRANSFERS.TRUST_RELATION.INFO_ALERT.MESSAGE' | translate"></small>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #info>
+  <div class="transfers-trust-relation-empty">
+    <p class="semi-bold">{{ 'TRANSFERS.TRANSFIYA.TRUST_RELATION.EMPTY_TITLE' | translate }}</p>
+    <img class="my-4" [src]="'icons/transfers-trust-relation.svg' | imageUrl" alt="trust-relation-empty">
+    <p class="small text-center">{{ 'TRANSFERS.TRANSFIYA.TRUST_RELATION.EMPTY_DESCRIPTION_ALT' | translate }}</p>
+    <p class="small text-center mt-2">{{ 'TRANSFERS.TRANSFIYA.TRUST_RELATION.EMPTY_DESCRIPTION' | translate }}</p>
+  </div>
+</ng-template>
+
+<ng-template #working>
+  <div class="transfers-trust-relation-working-cards">
+    <ion-skeleton-text
+            *ngFor="let item of [1, 2, 3]; let i = index"
+            class="avv-skeleton transfers-trust-relation-working-cards-item"
+            animated>
+    </ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <div class="avv-alert-info mt-5">
+    <i class="avv-alert-icon icon-info"></i>
+    <div class="avv-alert-text">{{ 'TRANSFERS.TRANSFIYA.TRUST_RELATION.EMPTY' | translate }}</div>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="transfers-trust-relation-content">
+
+    <div class="avv-alert-warning mb-3">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text"
+           [innerHTML]="'TRANSFERS.TRANSFIYA.TRUST_RELATION.ALERT_NAME' | translate">
+      </div>
+    </div>
+
+    <div *ngFor="let relation of trustRelations$ | async"
+         [ngClass]="{'one-item': !relation?.nickname || !relation?.phone}"
+         class="avv-contact-card contact-item mb-3">
+      <span class="contact-image">
+        <span *ngIf="relation?.nickname">{{ (relation?.nickname + '') | slice : 0 : 1 | uppercase }}</span>
+        <i *ngIf="!relation?.nickname" class="icon-celular"></i>
+      </span>
+      <div class="contact-info">
+        <h6 class="name" *ngIf="relation?.nickname">{{ relation.nickname }}</h6>
+        <p class="nickname" *ngIf="relation?.phone">{{ relation?.phone }}</p>
+      </div>
+      <span class="contact-icon icon-basura" (click)="removeTrustRelation(relation)"></span>
+    </div>
+
+  </div>
+</ng-template>
+

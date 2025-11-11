@@ -1,0 +1,158 @@
+<app-headers
+  [backUrl]="'/'"
+  [title]="(completed$ | async) ? (productDetail$ | async)?.nickname : 'Detalle del producto'">
+</app-headers>
+
+<ion-content [forceOverscroll]="false" #detailContainer>
+  <div class="product-detail-container">
+    <ng-container *ngIf="viewSlider$ && productDetail$ | async as productDetail">
+      <app-slider-campaign [idProduct]="productDetail.id" [accountType]="accountType"
+                           (click)="setProductSelected(productDetail)"></app-slider-campaign>
+    </ng-container>
+    <ng-container
+      *ngTemplateOutlet="(working$ | async) ? working : (completed$ | async) ? content : error">
+    </ng-container>
+
+    <app-product-detail-movements
+      *ngIf="(working$ | async) === false && (hasMovements$ | async)"
+      [working]="workingMovements$ | async"
+      [completed]="completedMovements$ | async"
+      [movements]="productMovements$ | async"
+      [typeProduct]="tempProduct.type"
+      (moreMovements)="redirectToMovementsDetail()">
+    </app-product-detail-movements>
+  </div>
+</ion-content>
+
+<ng-template #working>
+  <div class="product-detail-container-loading">
+    <div class="loading-card-1">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="loading-card-2">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="loading-card-3">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="loading-card-4">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="loading-card-5">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="loading-card-6">
+      <ul>
+        <li *ngFor="let item of [1, 2, 3, 4]">
+          <ion-skeleton-text animated></ion-skeleton-text>
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="product-detail-item" *ngIf="productDetail$ | async as productDetail">
+
+    <app-product-detail-card
+      (action)="actionPay(productDetail)"
+      [product]="productDetail">
+    </app-product-detail-card>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.CdtRenewal">
+      <app-cdt-renewal-notice
+        [product]="productDetail">
+      </app-cdt-renewal-notice>
+    </ng-template>
+
+    <button
+      *ngIf="showPayrollAdvanceBtn()"
+      class="avv-btn-primary payroll-advance-btn"
+      [routerLink]="['/payroll-advance']"
+      >
+      {{ 'PAYROLL_ADVANCE.PAGE.INVITE' | translate }}
+    </button>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.BlockCardTemporarilyPanelFromT2">
+      <div class="block-card-temporarily-panel mb-4"
+           *ngIf="accountTypesToBlockTemporarily.includes(accountType)"
+           [routerLink]="'/block-card-temporarily/'+params.id">
+        <i class="icon icon-seguridad2"></i>
+        <p>Bloquear tarjeta temporalmente</p>
+        <i class="icon icon-next"></i>
+      </div>
+    </ng-template>
+
+    <!-- ToDo: create feature flag for this -->
+    <app-wallet-product-detail-panel
+      [typeAccount]="accountType"
+      [id]="productDetail.id">
+    </app-wallet-product-detail-panel>
+
+    <app-digital-debit-card-panel
+      [product]="productDetail"
+      [currentRoute]="currentRouteUrl">
+    </app-digital-debit-card-panel>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.VirtualCreditCard">
+      <app-virtual-credit-card-panel
+        *ngIf="accountTypesToVirtualCreditCard.includes(accountType)"
+        [product]="productDetail"
+        [currentRoute]="currentRouteUrl">
+      </app-virtual-credit-card-panel>
+    </ng-template>
+
+    <app-product-actions
+      [product]="productDetail"
+      [productTypeDetailKey]="product?.productTypeDetailKey"
+      [detailContainer]="detailContainer"
+      (actionSelected)="actionSelected(productDetail, $event)">
+    </app-product-actions>
+
+    <ng-container *ngIf="showPFM">
+      <app-product-detail-summary
+        [accountType]="accountType"
+        [balancesSummary]="balancesSummary$ | async"
+        [balancesWorking]="balancesSummaryWorking$ | async"
+        [balancesCompleted]="balancesSummaryCompleted$ | async"></app-product-detail-summary>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template #error>
+
+  <div class="avv-content-empty p-3 mt-5">
+    <div class="avv-content-empty-image">
+      <img class="icon"
+           [src]="'errorde-carga.svg' | imageUrl"
+           alt="sin-resultados">
+    </div>
+    <p class="semi-bold avv-content-empty-text">
+      En este momento <span class="bold">no fue posible cargar la información de tu producto.</span>
+    </p>
+    <button (click)="fetchProductDetail()" class="avv-btn-secondary">
+      REINTENTAR
+    </button>
+  </div>
+
+  <ng-template [appFeatureToggle]="featureFlagsKey.BlockCardTemporarilyPanelFromT2">
+    <div class="block-card-temporarily-panel error mb-4"
+         *ngIf="accountTypesToBlockTemporarily.includes(accountType)"
+         [routerLink]="'/block-card-temporarily/'+params.id">
+      <i class="icon icon-seguridad2"></i>
+      <p>Bloquear tarjeta temporalmente</p>
+      <i class="icon icon-next"></i>
+    </div>
+  </ng-template>
+
+  <div class="product-detail-item">
+    <app-product-actions
+      [product]="tempProduct"
+      [productTypeDetailKey]="product?.productTypeDetailKey"
+      [detailContainer]="detailContainer"
+      (actionSelected)="actionSelected(tempProduct, $event)">
+    </app-product-actions>
+  </div>
+
+</ng-template>

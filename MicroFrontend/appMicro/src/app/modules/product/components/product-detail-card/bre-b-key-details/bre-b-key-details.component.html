@@ -1,0 +1,17 @@
+<div class="bre-b-key-details" id="bre-b-key-details">
+  <div class="bre-b-key-details__label">
+    <div class="bre-b-key-details__logo">
+      <i class="icon icon-info" (click)="onShowTagAvalPopover($event)"></i>
+      <img [src]="'aval-icons/bre-b.svg' | imageUrl" alt="">
+    </div>
+  </div>
+  <div class="bre-b-key-details__content">
+    <span class="bre-b-key-details__value">
+      {{ item.keyId }}
+    </span>
+    <span class="divider"></span>
+    <p class="bre-b-key-details__actions" role="button">
+      <i class="icon icon-agrupar" (click)="onCopy()"></i>
+    </p>
+  </div>
+</div>

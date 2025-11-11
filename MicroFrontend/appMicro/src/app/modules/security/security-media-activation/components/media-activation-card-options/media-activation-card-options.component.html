@@ -1,0 +1,13 @@
+<div class="media-activation-card-options-container">
+    <p class="semi-bold">Configuraciones de producto</p>
+    <i class="media-activation-card-options-close icon-salir" (click)="closeModal()"></i>
+
+    <div class="media-activation-card-options-list">
+        <div class="item" *ngFor="let option of optionsFiltered"
+             [id]="option.id"
+             (click)="selectType(option.type)">
+            <i class="{{ option.icon }}"></i>
+            <p class="small">{{ option.label | translate }}</p>
+        </div>
+    </div>
+</div>

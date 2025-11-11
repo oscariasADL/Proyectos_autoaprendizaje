@@ -1,0 +1,47 @@
+<article class="start-wallet-modal">
+  <header class="start-wallet-modal-header">
+    <img [src]="startWalletModalProps.icon | imageUrl" alt="">
+    <h2>{{ startWalletModalProps.title | translate }}</h2>
+  </header>
+  <section class="start-wallet-modal-container">
+    <ng-container *ngFor="let itemInfo of startWalletModalProps.items">
+      <div class="item-info">
+        <div class="info-icon">
+          <i [class]="itemInfo.icon"></i>
+        </div>
+        <div class="info-content" [innerHtml]="itemInfo.description | translate"></div>
+      </div>
+    </ng-container>
+    <div class="form-terms">
+      <label>
+        <input type="checkbox" class="input-checkbox" [(ngModel)]="acceptConditions"/>
+      </label>
+      <span>
+        {{ 'WALLETS.TERMS_AND_CONDITIONS.TEXT1' | translate }}
+        <a href="javascript:void(0);" (click)="showTermsAndConditions()">
+          {{ 'WALLETS.TERMS_AND_CONDITIONS.TEXT2' | translate }}
+        </a>
+      </span>
+    </div>
+  </section>
+  <footer class="start-wallet-modal-actions">
+    <ng-container [ngSwitch]="startWalletModalProps.platform.toString()">
+      <button type="button" class="avv-btn btn-apple" *ngSwitchCase="platform.IOS"
+              (click)="closeModal(acceptConditions)" [disabled]="!acceptConditions">
+        {{ startWalletModalProps.actionButton | translate }}
+        <span>
+          <i class="icon icon-apple"></i>
+          {{ 'WALLETS.APPLE_PAY.START_WALLET_ALERT_MODAL.ACTION_BUTTON_EXTEND' | translate }}
+        </span>
+      </button>
+      <button type="button" class="avv-btn btn-google-wallet" *ngSwitchCase="platform.ANDROID"
+              (click)="closeModal(acceptConditions)" [disabled]="!acceptConditions">
+        <img [src]="'wallets/google-wallet-icon.svg' | imageUrl" alt="">
+        {{ startWalletModalProps.actionButton | translate }}
+      </button>
+    </ng-container>
+    <button type="button" class="avv-btn-link" (click)="closeModal()">
+      {{ startWalletModalProps.cancelButton | translate | uppercase }}
+    </button>
+  </footer>
+</article>

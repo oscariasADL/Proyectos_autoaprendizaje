@@ -1,0 +1,42 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'AVAL.STOCKS.TITLE' | translate"
+    [type]="header?.headerType?.whiteSecondary">
+  </app-headers>
+
+  <div class="stocks-container">
+    <ng-container *ngIf="shouldChooseStockType$ | async">
+      <p class="stocks-title semi-bold">
+        {{ 'AVAL.STOCKS.DATA.TYPE' | translate }}
+      </p>
+
+      <div class="stocks-type-panel">
+        <p *ngFor="let item of (stocks$ | async)?.stockType"
+           (click)="setStockType(item)"
+           [innerHTML]="stockTypesList[item] | translate"
+           [ngClass]="{'active': item === stockTypeActive}">
+        </p>
+      </div>
+    </ng-container>
+
+    <p class="stocks-title py-5 semi-bold">
+      {{ 'AVAL.STOCKS.DATA.MONTH' | translate }}
+    </p>
+
+    <div class="stocks-months-panel">
+
+      <div *ngFor="let period of periods"
+           (click)="setPeriod(period.value)"
+           class="avv-contact-card single-icon">
+        <span class="contact-image-icon icon-calendario"></span>
+        <div class="contact-info">
+          <h6 class="name" [innerHTML]="period.label"></h6>
+        </div>
+        <span class="contact-icon icon-next"></span>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

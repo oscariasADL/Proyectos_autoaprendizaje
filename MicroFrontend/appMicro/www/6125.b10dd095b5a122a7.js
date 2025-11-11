@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[6125],{66125:(d,t,s)=>{s.r(t),s.d(t,{pzl_tfoot:()=>c});var o=s(940);const c=class{constructor(a){(0,o.r)(this,a)}render(){return(0,o.h)(o.H,{key:"ecf01a3e822ad943a09f24fc8c8adb46c2203e3d",slot:"foot"},(0,o.h)("slot",{key:"2b4d16426451859acba804bbda7c8ccdb825a34f"}))}};c.style=":host{display:block}"}}]);

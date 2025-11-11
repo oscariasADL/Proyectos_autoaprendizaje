@@ -1,0 +1,17 @@
+<div class="security-biometrics-error-container">
+  <img [src]="'icons/datos-no-coinciden.svg' | imageUrl" alt="" class="security-biometrics-error-image">
+
+  <p class="semi-bold security-biometrics-error-title">
+    {{ 'BIOMETRICS.ERROR.TITLE' | translate: {type: (biometricText | translate)} }}
+  </p>
+
+  <p class="security-biometrics-error-description">
+    {{ 'BIOMETRICS.ERROR.DESCRIPTION' | translate }}
+  </p>
+
+  <button class="avv-btn-primary security-biometrics-error-btn"
+          [id]="'biometric-error-btn'"
+          (click)="closeEvent.emit()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+</div>

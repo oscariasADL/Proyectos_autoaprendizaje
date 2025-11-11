@@ -1,0 +1,39 @@
+<div class="avv-generic-step transfer-contacts-own-products-step">
+  <div class="avv-generic-step-content">
+    <div class="avv-contact-card transfer-contacts-own-products-step-card" *ngIf="clientName">
+      <span class="contact-image" aria-hidden="true">
+        <img [src]="'bavv-logo.svg' | imageUrl" alt="no-contacts">
+      </span>
+      <div class="contact-info">
+        <h6 class="name">{{ 'TRANSFERS.CONTACTS.FAKE_CONTACT' | translate }}</h6>
+      </div>
+    </div>
+    <div>
+      <p class="avv-generic-step-title title-space">{{ 'TRANSFERS.CONTACTS.PRODUCTS.TITLE' | translate }}</p>
+    </div>
+
+    <ul class="transfer-contacts-own-products-step-list">
+      <li *ngFor="let product of products$ | async">
+        <div class="avv-contact-card transfer-contacts-own-products-step-item" role="button"
+          [attr.aria-label]="product?.nickname ? product?.nickname : product?.typeName + ' ' + ('ACCOUNT_NUMBER' | translate) + ' ' + product.numberProduct"
+          (click)="selectOwnProduct(product)">
+          <span class="contact-image">
+            <i class="icon-salario"></i>
+          </span>
+          <div class="contact-info">
+            <h6 class="name" [innerHTML]="product?.nickname ? product?.nickname : product?.typeName"></h6>
+            <p class="nickname">
+              {{ ('ACCOUNT_NUMBER' | translate) + ' ' + product.numberProduct}}
+            </p>
+          </div>
+          <span class="contact-icon icon-next"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="avv-alert-info mt-3">
+    <i class="avv-alert-icon icon-info"></i>
+    <div class="avv-alert-text" [innerHtml]="'TRANSFERS.CONTACTS.PRODUCTS.ACCOUNT_NOT_FOUND' | translate">
+    </div>
+  </div>
+</div>

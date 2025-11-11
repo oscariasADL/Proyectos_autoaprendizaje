@@ -1,0 +1,102 @@
+<app-headers
+        [backUrl]="'/payments'"
+        [title]="'PAYMENTS.CREDITS_AND_CARDS.HEADER' | translate">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="payment-credits-container">
+
+    <div class="payment-credits-content">
+      <div class="payment-credits-header">
+        <p class="semi-bold payment-credits-header-title">{{ 'PAYMENTS.CREDITS_AND_CARDS.TITLE' | translate }}</p>
+        <div class="avv-tabs middle-width">
+          <div class="avv-tabs-item"
+               id="payment-credits-own-tab"
+               (click)="activateTab(paymentFetchFilter.OWN)"
+               [ngClass]="{'active': (filterSelected$ | async) === paymentFetchFilter.OWN}">
+            <small>{{ 'PAYMENTS.CREDITS_AND_CARDS.TABS.OWN' | translate }}</small>
+          </div>
+          <div class="avv-tabs-item"
+               id="payment-credits-contacts-tab"
+               (click)="activateTab(paymentFetchFilter.CONTACTS)"
+               [ngClass]="{'active': (filterSelected$ | async) === paymentFetchFilter.CONTACTS}">
+            <small>{{ 'PAYMENTS.CREDITS_AND_CARDS.TABS.CONTACTS' | translate }}</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-credits-body">
+        <ng-container
+                *ngTemplateOutlet="(paymentsWorking$ | async) ? working : (paymentsCompleted$ | async) ? content : error">
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+
+<ng-template #working>
+  <ion-skeleton-text class="avv-skeleton payment-credits-working-title" animated></ion-skeleton-text>
+  <ion-skeleton-text
+          *ngFor="let item of [1, 2, 3]; let i = index"
+          class="avv-skeleton payment-credits-working-card" animated>
+  </ion-skeleton-text>
+</ng-template>
+
+<ng-template #empty>
+  <div class="payment-credits-empty">
+    <p class="semi-bold payment-credits-empty-title">{{ 'PAYMENTS.CREDITS_AND_CARDS.EMPTY.TITLE' | translate }}</p>
+    <img class="payment-credits-empty-image" [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" alt="">
+    <small class="payment-credits-empty-text">{{ 'PAYMENTS.CREDITS_AND_CARDS.EMPTY.TEXT' | translate }}</small>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="payment-credits-error">
+    <img class="payment-credits-error-image" [src]="'icons/recargar-celular-cancelar.svg' | imageUrl" alt="">
+    <p class="payment-credits-error-text">{{ 'PAYMENTS.CREDITS_AND_CARDS.ERROR' | translate }}</p>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="filterSelected$ | async as filter">
+    <ng-container *ngIf="payments$ | async as payments">
+      <ng-container
+              *ngIf="payments?.loansVillas?.length > 0 || payments?.loansOtherBanks?.length > 0 || payments?.loansContacts?.length > 0; else empty">
+
+        <div class="payment-credits-panel" *ngIf="payments?.loansVillas?.length > 0">
+          <small class="payment-credits-panel-title">
+            {{ ('PAYMENTS.CREDITS_AND_CARDS.DESCRIPTIONS.VILLAS.' + (filter === paymentFetchFilter.OWN ? 'CREDIT_CARDS' : 'CREDITS')) | translate }}
+          </small>
+          <app-payment-card
+                  *ngFor="let card of payments?.loansVillas"
+                  [card]="card | paymentCreditCard"
+                  (pay)="payCard(card)">
+          </app-payment-card>
+        </div>
+
+        <div class="payment-credits-panel" *ngIf="payments?.loansOtherBanks?.length > 0">
+          <small class="payment-credits-panel-title">
+            {{ ('PAYMENTS.CREDITS_AND_CARDS.DESCRIPTIONS.OTHER.' + (filter === paymentFetchFilter.OWN ? 'CREDIT_CARDS' : 'CREDITS')) | translate }}
+          </small>
+          <app-payment-card
+                  *ngFor="let card of payments?.loansOtherBanks"
+                  [card]="card | paymentCreditCard"
+                  (pay)="payCard(card)">
+          </app-payment-card>
+        </div>
+
+        <div class="payment-credits-panel" *ngIf="payments?.loansContacts?.length > 0">
+          <small class="payment-credits-panel-title">
+            {{ ('PAYMENTS.CREDITS_AND_CARDS.DESCRIPTIONS.CONTACTS.' + (filter === paymentFetchFilter.OWN ? 'CREDIT_CARDS' : 'CREDITS')) | translate }}
+          </small>
+          <app-payment-card
+                  *ngFor="let card of payments?.loansContacts"
+                  [card]="card | paymentCreditCard"
+                  (pay)="payCard(card)">
+          </app-payment-card>
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-template>

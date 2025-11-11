@@ -1,0 +1,22 @@
+@import 'utils'
+
+.notification-alert
+  &-container
+    position: relative
+    background-color: var(--white)
+    padding: 40px $spacer-2 calc(#{$spacer-3} + var(--safe-area-inset-bottom))
+
+  &-header
+    +flex(center, space-between)
+
+  &-title
+    font-weight: 600
+
+  &-date
+    position: relative
+    color: var(--gray-7)
+
+  &-message
+    font-size: 14px
+    line-height: 1.71
+    margin: $spacer 0 $spacer-3

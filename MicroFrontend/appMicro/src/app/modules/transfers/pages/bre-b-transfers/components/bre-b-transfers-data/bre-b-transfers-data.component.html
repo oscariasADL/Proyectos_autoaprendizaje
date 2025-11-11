@@ -1,0 +1,82 @@
+<section class="bre-b-transfers-data">
+  <h2 class="bre-b-transfers-data__title">
+    {{ 'TRANSFERS.BRE_B.STEPS.DATA.TITLE' | translate }}
+  </h2>
+  <div class="bre-b-transfers-data__spi-key-data-card" *ngIf="towardProduct.value as spiKey">
+    <div class="spi-key-data-card__content">
+      <h3>{{ 'TRANSFERS.BRE_B.STEPS.DATA.CARD_TITLE' | translate }}</h3>
+      <p class="spi-key-data-card__content-spi-key">{{ spiKey.key }}</p>
+      <p class="spi-key-data-card__content-bank">{{ spiKey.bankName }}</p>
+      <p class="spi-key-data-card__content-name">{{ spiKey.name }}</p>
+    </div>
+    <div class="spi-key-data-card__footer">
+      <button type="button" class="avv-btn-secondary sm width-auto" (click)="modifySpiKey.emit()">
+        {{ 'TRANSFERS.BRE_B.STEPS.DATA.CHANGE_KEY' | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="bre-b-transfers-data__content">
+    <div class="input-with-help-text">
+      <avv-input
+        [id]="'bre-b-transfers-amount'"
+        [type]="'currency'"
+        [allowPaste]="true"
+        [label]="'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.AMOUNT' | translate"
+        [control]="amount"
+        [hint]="( 'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.MAX_AMOUNT' | translate ) + ' ' + ( amountMax | numberFormat ) + ' ' + ( 'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.PER_DAY' | translate )"
+        [utagCategory]="amountUtagEvent.event_category" [utag]="amountUtagEvent.event_label"></avv-input>
+    </div>
+
+    <div class="single-account" *ngIf="singleProduct; else dropdown">
+      <i [class]="singleProduct.icon" class="icon"></i>
+      <div>
+        <h6 class="title">{{ singleProduct.title }} </h6>
+        <p class="description" [innerHTML]="singleProduct.value | currencyFormat"></p>
+      </div>
+    </div>
+    <ng-template #dropdown>
+      <div class="bre-b-transfers__products">
+        <app-dropdown-modal-products
+          [label]="'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.FROM_PRODUCT'"
+          [modalTitle]="'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.MODAL_TITLE' | translate"
+          [control]="fromProduct"
+          [products]="modalProducts" [showGroupLabel]="false" [amountToPay]="amount.currencyValue()"
+          (selectedProductFn)="selectedProduct($event)">
+        </app-dropdown-modal-products>
+
+      </div>
+    </ng-template>
+
+    <div class="bre-b-transfers__warning">
+      <avv-input
+        [type]="'text'"
+        [id]="'bre-b-transfers-message'"
+        [label]="'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.MESSAGE' | translate"
+        [control]="note"
+        [hint]="'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.WARNING' | translate"
+        [utag]="messageUtagEvent.event_label"
+        [utagCategory]="messageUtagEvent.event_category">
+      </avv-input>
+    </div>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.SPIContactBook">
+      <ng-container *ngIf="canSaveContact()">
+        <div class="bre-b-transfers-data__content-save-contact">
+          <label>
+            <input type="checkbox" class="input-checkbox" [formControl]="shouldSaveSpiContactControl"/>
+          </label>
+          <p>{{ 'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.SAVE_CONTACT' | translate }}</p>
+          <span (click)="showPopoverSpiContactInfo($event)">
+          <i class="icon icon-info"></i>
+        </span>
+        </div>
+      </ng-container>
+    </ng-template>
+
+    <button type="button" class="avv-btn-primary bre-b-transfers__continue"
+            [utagCategory]="continueButtonUtagEvent.event_category" [utag]="continueButtonUtagEvent.event_label"
+            [id]="'transfer-tag-aval-btn'" [disabled]="form.invalid" (click)="continueAction()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </div>
+</section>

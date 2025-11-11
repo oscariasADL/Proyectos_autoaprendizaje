@@ -1,0 +1,65 @@
+<div class="notifications-menu-container">
+
+  <div class="notifications-menu-header">
+    <p>{{ 'NOTIFICATION.MENU.HEADER' | translate }}</p>
+    <i class="icon-salir" (click)="closeMenu()" aria-label="Salir" role="button"></i>
+  </div>
+  <div class="notifications-menu-content">
+    <ion-content>
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh()">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+      <ng-container *ngIf="workingNotifications$ | async, else content">
+        <div class="notifications-menu-working">
+          <div *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+            <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+          </div>
+        </div>
+      </ng-container>
+    </ion-content>
+  </div>
+
+</div>
+
+<ng-template #content>
+  <ng-container *ngIf="(notificationsState$ | async) === false">
+    <app-enable-notifications (notificationsEnabled)="enableNotifications()"></app-enable-notifications>
+  </ng-container>
+
+  <ng-container *ngIf="(notificationsState$ | async)">
+    <ng-container *ngIf="(isEmpty$ | async) === false; else ( noContent)" class="notifications-menu-content-scroll">
+      <app-notifications-transfiya *ngIf="!showItemSelection" [transfiyaList]="transfiyaList$ | async"
+        (redirect)="goToTransfiyaAuthorization($event)">
+      </app-notifications-transfiya>
+
+      <app-notifications-mailbox #notificationsMailbox [showItemSelection]="showItemSelection"
+        (updateShowItemSelection)="changeShowItemSelection($event)" [mailboxList]="notificationsList$ | async"
+        [notificationsState]="notificationsState$ | async" (redirectNotifications)="redirectNotifications()"
+        (showItem)="fetchNotificationItem($event); readNotificationsItem($event)"
+        (deleteItem)="deleteNotificationsItem($event)" (readSelectedItems)="readSelectedNotificationItems($event)"
+        (deleteSelectedItems)="deleteSelectedNotificationItems($event)">
+      </app-notifications-mailbox>
+
+      <ng-container *ngIf="showItemSelection">
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <div class="notifications-menu-fab-icons">
+            <button (click)="notificationsMailbox.readSelectedNotificationItems()" class="success">
+              <img [src]="'icons/double-check-icon.svg' | imageUrl" alt="double-check-icon">
+            </button>
+
+            <button (click)="notificationsMailbox.deleteSelectedNotificationItems()">
+              <img [src]="'icons/trash-icon.svg' | imageUrl" alt="trash-icon">
+            </button>
+          </div>
+        </ion-fab>
+      </ng-container>
+
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #noContent>
+  <app-notifications-empty-state (notificationsUpdated)="doRefresh()"
+    (navigateBack)="closeMenu()"></app-notifications-empty-state>
+</ng-template>

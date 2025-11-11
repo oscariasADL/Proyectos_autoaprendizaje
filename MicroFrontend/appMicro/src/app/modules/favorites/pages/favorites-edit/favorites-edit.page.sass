@@ -1,0 +1,72 @@
+@import 'utils'
+
+.favorites-edit-container
+  margin-top: 10px
+  padding: 32px 16px calc(80px + var(--safe-area-inset-bottom))
+
+  .favorites-edit-loading
+    .title
+      width: 50%
+      height: 16px
+      margin: 0 auto
+
+    .items
+      height: 32px
+      margin-top: $spacer-2
+
+    .action
+      height: 48px
+      margin-top: $spacer-2
+      border-radius: 24px
+
+  h2
+    +flex(center, center)
+    gap: $spacer
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
+    text-align: center
+    margin-bottom: 32px
+
+    .avatar
+      width: 32px
+      height: 32px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      font-size: 16px
+
+
+  section > ul
+    .avv-voucher-label
+      color: #252B31
+
+    .avv-voucher-item.insufficient-balance
+      background-color: #FFEAED
+
+      p
+        color: var(--gray-7)
+
+      .avv-voucher-fields
+        p.insufficient-balance
+          color: #cb3a28
+
+      .avv-voucher-fields
+        .avv-btn-secondary
+          height: 32px
+          margin-top: $spacer-2
+          padding: 0px 13px
+          background-color: white
+          font-size: 12px
+          vertical-align: baseline
+          line-height: $spacer-2
+
+    .avv-voucher-item.additional-data
+      border-bottom: 1px solid var(--gray-3)
+      padding-bottom: $spacer-2
+
+    .avv-voucher-item:last-child
+      border-bottom: none
+
+

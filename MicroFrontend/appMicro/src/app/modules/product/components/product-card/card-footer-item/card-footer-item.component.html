@@ -1,0 +1,25 @@
+<div class="product-card-footer">
+  <div class="product-card__tag-icon">
+    <i class="icon icon-info" (click)="onShowTagAvalPopover($event)"></i>
+    <img [src]="getIcon()" alt="">
+  </div>
+  <div class="product-card__detail" *ngIf="item">
+    <span class="copy-tag-container" (click)="onCopyKey()" [utagCategory]="utagForCopyKey.event_category"
+      [utag]="utagForCopyKey.event_label">
+      <p class="tag" [ngClass]="{'mr-2': isModificationEnabled()}">{{ item?.keyId }}</p>
+      <span class="divider" *ngIf="!isModificationEnabled()"></span>
+      <i class="icon icon-agrupar"></i>
+    </span>
+    <ng-template [appFeatureToggle]="featureFlagsKey.CustomizationTagAval">
+
+      <span class="divider" *ngIf="isModificationEnabled()"></span>
+    </ng-template>
+    <ng-template  [appFeatureToggle]="featureFlagsKey.CustomizationTagAval">
+    <span class="product-card__edit" *ngIf="isModificationEnabled()" (click)="onModifyKey()"
+      [utagCategory]="utagForModifyKey.event_category" [utag]="utagForModifyKey.event_label"
+     >
+      <i class="icon icon-editar"></i>
+    </span>
+    </ng-template>
+  </div>
+</div>

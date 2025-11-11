@@ -1,0 +1,14 @@
+<div class="transfer-survey-container"
+     style="">
+  <div class="header">
+    <h3 style="font-size: 20px; font-weight: 400;">Encuesta de satisfacción</h3>
+    <i class="icon-salir"
+       [utag]="'encuesta de satisfaccion - cerrar'"
+       [utagCategory]="'encuesta de satisfaccion - cel2cel'"
+       style="font-size: 22px;"
+       (click)="closeModal()"></i>
+  </div>
+
+    <app-transfer-survey-form [questions]="questions$ | async"></app-transfer-survey-form>
+
+</div>

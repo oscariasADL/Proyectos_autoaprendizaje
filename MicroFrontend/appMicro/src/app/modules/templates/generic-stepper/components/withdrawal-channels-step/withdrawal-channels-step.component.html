@@ -1,0 +1,22 @@
+<div class="avv-generic-step withdrawal-channels-step">
+  <p class="avv-generic-step-title">{{ data.title | translate }}</p>
+  <div class="withdrawal-channels-step-list">
+    <ul>
+      <li *ngFor="let channel of withdrawalChannels$ | async"
+          role="button"
+          [attr.aria-label]="(channel.label | stripTags)"
+          (click)="setWithdrawalChannel(channel.value)"
+          [id]="'withdrawal-channel-'+channel.value.toLocaleLowerCase()">
+        <div class="avv-contact-card one-item">
+          <span class="contact-image">
+            <i class="{{ channel.icon }}"></i>
+          </span>
+          <div class="contact-info">
+            <h6 class="name" [innerHTML]="channel.label | capitalize: true"></h6>
+          </div>
+          <span class="contact-icon icon-next"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

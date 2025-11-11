@@ -1,0 +1,19 @@
+<ion-content [forceOverscroll]="false">
+    <div class="enable-notifications-container">
+        <div class="enable-notifications-detail">
+            <img class="enable-notifications-image" [src]="'illustrationsV2/otp-regular.svg' | imageUrl"
+                alt="imagen-activar-notificaciones" draggable="false">
+            <h6 class="enable-notifications-title">
+                {{ 'NOTIFICATION.ENABLE_NOTIFICATIONS.TITLE' | translate }}
+            </h6>
+            <p class="enable-notifications-description">
+                {{ 'NOTIFICATION.ENABLE_NOTIFICATIONS.DESCRIPTION' | translate }}
+            </p>
+        </div>
+        <div class="enable-notifications-actions">
+            <button class="avv-btn-primary" (click)="enableNotifications()" id="enable-notifications-button">
+                {{ 'NOTIFICATION.ENABLE_NOTIFICATIONS.BUTTON' | translate }}
+            </button>
+        </div>
+    </div>
+</ion-content>

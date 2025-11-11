@@ -1,0 +1,117 @@
+@import 'utils'
+
+.card-list-container
+  padding: $spacer-3 $spacer-2
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.card-list-working
+  &-title
+    width: 50%
+    height: 24px
+    margin-bottom: 48px
+
+  &-card
+    margin-bottom: $spacer
+
+.card-list-content
+  width: 100%
+
+  h2
+    margin-bottom: 32px
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+
+  .wallet-card-type
+    font-size: 14px
+    font-weight: 700
+    margin-bottom: 8px
+    display: block
+
+  .wallet-cards-container
+    margin-bottom: $spacer-2
+
+  .wallet-card
+    padding: 16px 14px
+    margin-bottom: $spacer
+    border: 1px solid #DEE1E4
+    border-radius: 4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: $spacer
+
+    &:focus-within, &:active, &:focus
+      border: 1px solid var(--blue-1)
+      background-color: var(--blue-5)
+
+    &-detail
+      font-size: 12px
+      font-weight: 600
+
+    &-action-apple
+      display: flex
+      justify-content: end
+      flex-grow: 2
+      gap: 4px
+      align-items: center
+      font-size: 12px
+
+      i
+        font-size: 24px
+        color: var(--blue-1)
+
+      span
+        color: #5C6B7A
+
+    &-action-google
+      display: flex
+      justify-content: end
+      flex-grow: 2
+      gap: 4px
+      align-items: center
+      font-size: 12px
+
+      i
+        font-size: 24px
+        color: var(--blue-1)
+
+      span
+        color: #5C6B7A
+
+    &.provisioned
+      background-color: #DFDFDF
+
+      &:focus-within, &:active, &:focus
+        border: inherit
+
+      .wallet-card-icon > .franchise-img
+        filter: grayscale(0.9)
+
+      .wallet-card-detail
+        color: #727272
+
+      .wallet-card-action-apple, .wallet-card-action-google
+        span
+          color: #727272
+
+.card-list-empty
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+  &-icon
+    display: grid
+    place-items: center
+
+  h2
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+
+  p
+    font-size: 14px
+
+

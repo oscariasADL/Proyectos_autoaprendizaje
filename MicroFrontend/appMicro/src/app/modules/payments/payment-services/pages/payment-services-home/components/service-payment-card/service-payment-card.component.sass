@@ -1,0 +1,132 @@
+@import "utils"
+
+@mixin description-list()
+  font-size: 12px
+  dt
+    font-weight: 400
+
+  dd
+    font-weight: 600
+
+.service-payment-card
+  display: flex
+  flex-direction: column
+  margin-bottom: $spacer-2
+  border: 1px solid var(--gray-avv)
+  border-radius: 4px
+
+  .avv-btn-primary.sm, .avv-btn-secondary.sm
+    margin: inherit
+
+    i
+      font-size: 16px
+
+  .avv-btn-secondary.sm
+    background-color: var(--white)
+
+  &-status
+    width: 100%
+
+    span
+      display: inline-block
+      padding: 4px $spacer-1
+      border-bottom-right-radius: 4px
+      font-weight: 600
+      font-size: 12px
+
+      &.success
+        background-color: var(--success-bg)
+        color: #115337
+
+      &.info
+        background-color: var(--info-bg)
+        color: #192899
+
+      &.warning
+        background-color: var(--warning-bg)
+        color: #594600
+
+  &-content
+    padding: $spacer-2
+
+    .content-header
+      display: flex
+      flex-direction: column
+      margin-bottom: $spacer-2
+
+      p
+        font-size: 14px
+        font-weight: 700
+
+      small
+        font-weight: 100
+
+    .content-info-items
+      @include description-list
+
+      p
+        font-size: 14px
+        font-weight: 600
+
+
+  hr
+    border-top: 1px solid #EBEDEF
+    margin: 0 16px
+
+  &-footer:not(:has(button))
+    display: none
+
+  &-footer
+    padding: $spacer-2
+    display: flex
+    flex-direction: column
+    gap: $spacer
+
+  &-schedule-actions
+    padding: $spacer-2 $spacer-2 $spacer-3
+    background-color: #F8F9FA
+    border-top: 1px solid #DEE1E4
+
+    &.closed
+      max-height: 0
+      padding: 0
+      border: 0
+      overflow: hidden
+
+    .content-info-items
+      dl
+        @include description-list
+
+        dt, dd
+          display: inline
+
+        dd
+          margin: 0
+
+          &::after
+            content: ""
+            display: block
+            margin-top: $spacer
+
+    .schedule-actions
+      display: flex
+      flex-direction: column
+      gap: $spacer-2
+
+  &-schedule-actions-collapsible
+    display: flex
+    justify-content: center
+    padding: $spacer $spacer-4
+    background-color: #F8F9FA
+    border-top: 1px solid #DEE1E4
+
+    span
+
+      &.closed
+        transform: rotate(180deg)
+
+    i
+      font-size: 24px
+      color: var(--blue-2)
+
+

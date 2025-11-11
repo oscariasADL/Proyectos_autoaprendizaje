@@ -1,0 +1,11 @@
+<div class="container-adviser" [class]="{'isNotVisible': !viewAdviser}">
+  <adl-consejero-aval
+    id="adviser-aval"
+    [entity]="bankID"
+    [environment]="adviserENV"
+    [channel]="channel"
+    [startConversation]="this.startConversation.bind(this)"
+    [getInternalURL]="this.adviserNavigate.bind(this)"
+  >
+  </adl-consejero-aval>
+</div>

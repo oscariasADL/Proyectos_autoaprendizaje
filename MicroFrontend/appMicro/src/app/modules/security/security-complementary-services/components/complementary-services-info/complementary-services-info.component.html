@@ -1,0 +1,44 @@
+<div class="complementary-services-info-container">
+  <div class="complementary-services-info-inner-container">
+    <img src="assets/img/illustrations/woman-computer.svg" width="113" height="112" draggable="false">
+    <p class="semi-bold complementary-services-info-title">
+      {{ 'SECURITY.COMPLEMENTARY_SERVICES.INFO.TITLE' | translate }}
+    </p>
+    <p class="small semi-bold complementary-services-info-subtitle">
+      {{ 'SECURITY.COMPLEMENTARY_SERVICES.INFO.SUBTITLE' | translate }}
+    </p>
+
+    <ul class="avv-list-blue-point complementary-services-info-list">
+      <li class="small">
+        <b>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_1' | translate}}</b>
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_1_B' | translate}}</p>
+      </li>
+
+      <li class="small">
+        <b>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_2' | translate}}</b>
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_2_B' | translate}}</p>
+      </li>
+
+      <li class="small">
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_3' | translate}}</p>
+        <b>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_3_B' | translate}}</b>
+      </li>
+
+      <li class="small">
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_4' | translate}}</p>
+        <b>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_4_B' | translate}}</b>
+      </li>
+
+      <li class="small">
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_5' | translate}}</p>
+        <b>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_5_B' | translate}}</b>
+        <p>{{'SECURITY.COMPLEMENTARY_SERVICES.INFO.FEATURES.FEATURE_5_C' | translate}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <button class="avv-btn-primary" (click)="nextStep()">
+    {{ 'ACTIONS.' + (state ? 'DEACTIVATE' : 'CONTINUE') | translate | uppercase }}
+  </button>
+
+</div>

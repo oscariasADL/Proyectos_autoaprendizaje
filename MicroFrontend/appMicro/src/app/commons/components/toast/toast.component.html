@@ -1,0 +1,30 @@
+<div class="avv-toast" [style.display]="state.value === 'inactive' ? 'none' : ''"
+     [ngClass]="{'close-button': options.closeButton}">
+  <i class="avv-toast-icon success icon-check"></i>
+  <i class="avv-toast-icon error icon-info"></i>
+  <i class="avv-toast-icon info icon-info"></i>
+  <i class="avv-toast-icon warning icon-alerta"></i>
+  <div>
+    <small *ngIf="title"
+           [class]="options.titleClass"
+           [attr.aria-label]="title"
+           [innerHTML]="title"
+           class="avv-toast-title">
+    </small>
+    <div *ngIf="message && options.enableHtml" role="alert" aria-live="polite"
+         [class]="options.messageClass" [innerHTML]="message">
+    </div>
+    <div *ngIf="message && !options.enableHtml" role="alert" aria-live="polite"
+         [class]="options.messageClass" [attr.aria-label]="message">
+      {{ message }}
+    </div>
+  </div>
+  <a *ngIf="!options.closeButton" (click)="action($event)" style="display: none;">
+    {{ undoString }}
+  </a>
+  <i *ngIf="options.closeButton" (click)="remove()" class="avv-toast-close icon-salir"></i>
+</div>
+
+<div *ngIf="options.progressBar">
+  <div class="toast-progress" [style.width]="width + '%'"></div>
+</div>

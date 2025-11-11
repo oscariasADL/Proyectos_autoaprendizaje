@@ -1,0 +1,22 @@
+@import 'utils'
+
+.block-account-info
+  &-container
+    +flex(center, center, column)
+    padding: $spacer-4 $spacer-2
+
+  &-title
+    margin-bottom: $spacer-2
+    text-align: center
+    max-width: 300px
+    font-size: 16px
+    font-weight: bold
+
+  &-subtitle
+    margin: $spacer-2 0 $spacer-2
+    font-size: 14px
+    font-weight: 400
+
+  &-list
+    li:before
+      background-color: var(--red-1)

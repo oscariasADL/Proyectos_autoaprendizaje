@@ -1,0 +1,25 @@
+<div class="toggle-terms-container">
+  <div [ngClass]="{'active': acceptTerms}">
+    <i class="icon-check" (click)="toggleAcceptTerms()"></i>
+    <p class="small">
+      <span (click)="toggleAcceptTerms()">
+      {{ 'AUTH.STEP.TERMS.ACCEPT' | translate }}
+      </span>
+      <a [href]="linkTermsOfUse" target="_blank">
+        {{ 'AUTH.STEP.TERMS.LINK' | translate }}
+      </a>
+    </p>
+  </div>
+
+  <div class="mt-3" [ngClass]="{'active': authorizeTerms}">
+    <i class="icon-check" (click)="toggleAuthorizeTerms()"></i>
+    <p class="small">
+      <span (click)="toggleAuthorizeTerms()">
+        {{ 'AUTH.STEP.TERMS.TEXT' | translate }}
+      </span>
+      <a (click)="showTermsDetail()" target="_blank">
+        {{ 'AUTH.STEP.TERMS.SHOW_MORE' | translate }}
+      </a>
+    </p>
+  </div>
+</div>

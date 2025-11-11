@@ -1,0 +1,51 @@
+<ion-content
+    [forceOverscroll]="false"
+    class="content-generic-stepper">
+    <app-generic-stepper
+        [form]="form"
+        [data]="data"
+        [steps]="steps"
+        [title]="'TRANSFERS.CONTACTS.TITLE' | translate"
+        [backUrl]="backUrl"
+        [exitData]="exitData"
+        [currentSlide]="currentSlide"
+        (nextStep)="setNextStep($event)"
+        (stepSelected)="stepSelected($event)"
+        (slideSelected)="slideSelected($event)"
+        [template]="template">
+    </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep"
+  let-runSlideSelected="slideSelected">
+    <div [ngSwitch]="screen">
+        <app-transfer-contacts-toward
+                *ngSwitchCase="'toward'"
+                [form]="form"
+                (continueSlide)="runSlideSelected($event)">
+        </app-transfer-contacts-toward>
+
+        <app-transfer-contacts-own
+                *ngSwitchCase="'own'"
+                [form]="form"
+                (continue)="runNextStep(key)">
+        </app-transfer-contacts-own>
+
+        <app-transfer-contacts-products
+                *ngSwitchCase="'contact-products'"
+                [form]="form"
+                (continue)="runNextStep(key)"
+                (continueSlide)="runSlideSelected($event)">
+        </app-transfer-contacts-products>
+
+        <app-transfer-contacts-product-type
+                *ngSwitchCase="'contact-product-type'"
+                [form]="form"
+                (continue)="runNextStep(key)">
+        </app-transfer-contacts-product-type>
+    </div>
+</ng-template>

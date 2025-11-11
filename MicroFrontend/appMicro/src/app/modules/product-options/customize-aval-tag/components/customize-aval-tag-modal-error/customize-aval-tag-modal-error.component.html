@@ -1,0 +1,26 @@
+<section class="customize-aval-tag-modal-error">
+  <div class="customize-aval-tag-modal-error__close_icon">
+    <i class="icon icon-salir" (click)="closeModal()"></i>
+  </div>
+  <figure class="customize-aval-tag-modal-error__icon">
+    <img [src]="'illustrations/error-browser-phone.svg' | imageUrl" alt="">
+  </figure>
+  <h2 class="customize-aval-tag-modal-error__title">
+    {{ 'CUSTOMIZE_AVAL_TAG.RESPONSE.MODAL_ERROR.TITLE' | translate }}
+  </h2>
+  <p class="customize-aval-tag-modal-error__message">
+    {{ 'CUSTOMIZE_AVAL_TAG.RESPONSE.MODAL_ERROR.MESSAGE' | translate }}
+  </p>
+  <p class="customize-aval-tag-modal-error__aval-tag">
+    <i class="icon icon-aval-tag"></i>
+    <span>{{ avalTag }}</span>
+  </p>
+  <div class="customize-aval-tag-modal-error__button-container">
+    <button type="button" class="avv-btn-primary" (click)="closeModal()">
+      {{ 'CUSTOMIZE_AVAL_TAG.RESPONSE.MODAL_ERROR.CONFIRM_BUTTON_TEXT' | translate }}
+    </button>
+    <button type="button" class="avv-btn-link" (click)="closeModal()">
+      {{ 'ACTIONS.CANCEL' | translate }}
+    </button>
+  </div>
+</section>

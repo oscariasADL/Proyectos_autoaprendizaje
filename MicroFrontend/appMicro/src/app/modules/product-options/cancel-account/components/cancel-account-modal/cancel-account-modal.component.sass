@@ -1,0 +1,44 @@
+@import 'utils'
+
+.cancel-account-modal
+  &-container
+    position: relative
+    background-color: var(--white)
+    height: 100%
+    overflow: auto
+    padding: 24px $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+  &-close
+    display: block
+    font-size: 24px
+    text-align: right
+
+  &-panel
+    h2, h3
+      font-size: 16px
+      font-weight: 600
+      text-align: center
+
+    &-icon
+      display: grid
+      place-items: center
+      margin-top: $spacer-2
+
+      img
+        width: 80px
+
+    &-content
+      margin-top: $spacer-2
+
+      h3
+        margin-bottom: calc(#{$spacer} / 2)
+
+      p
+        text-align: center
+
+      .avv-alert-info
+        margin: $spacer-2 0 $spacer-3
+
+      button:last-child
+        margin-top: $spacer
+

@@ -1,0 +1,35 @@
+@import 'utils'
+
+.payment-services-create-scheduling-confirm
+  padding: calc(#{$spacer-1} + var(--safe-area-inset-top)) $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+  height: 100%
+  display: flex
+  flex-direction: column
+
+  h2
+    margin-bottom: $spacer-3
+    padding: 0 $spacer-3
+    font-size: $font-size-base
+    font-weight: 600
+    text-align: center
+
+  section
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
+
+    .summary p
+      padding-top: $spacer-2
+      border-top: 1px solid var(--gray-3)
+      text-align: center
+      color: var(--gray-7)
+
+    .actions
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: $spacer-2
+
+      a > i
+        font-size: 16px

@@ -1,0 +1,9 @@
+<div class="container-preferred-customer">
+  <div class="container-preferred-customer pf-client">
+    <img [src]="'care-channels/preferent-customer.svg' | imageUrl" alt="">
+    <H4>{{'CARE_CHANNELS.PREFERENT_CUSTOMER.TITLE' | translate}}</H4>
+  </div>
+  <p
+    [innerHTML]="'CARE_CHANNELS.PREFERENT_CUSTOMER.DESCRIPTION' | translate:{ name: adviser?.contactName | titlecase }">
+  </p>
+</div>

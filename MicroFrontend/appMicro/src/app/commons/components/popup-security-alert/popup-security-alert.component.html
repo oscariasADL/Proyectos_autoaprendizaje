@@ -1,0 +1,30 @@
+<section class="popup-security-alert">
+  <div class="header">
+    <i class="icon-salir" (click)="closeModal()"></i>
+    <h3 *ngIf="!isTitleBottom">{{ title | translate }}</h3>
+  </div>
+  <figure>
+    <img appPreloadImage [preload]="skeleton" [ngClass]="{'big-img': isImgBig}" [src]="imageAlt | imageUrlAlt" alt="">
+    <ion-skeleton-text #skeleton class="popup-skeleton" animated></ion-skeleton-text>
+  </figure>
+  <div class="body">
+    <p *ngIf="isTitleBottom" class="semi-bold bottom-title" [innerHTML]="title | translate">
+    </p>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p [innerHTML]="paragraph | translate"></p>
+    </ng-container>
+    <p *ngIf="listTitle" class="semi-bold list-title" [innerHTML]="listTitle | translate"></p>
+    <ul *ngIf="itemList" class="order-list">
+      <li *ngFor="let item of itemList">
+        <span [innerHTML]="item | translate"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+    <button type="button" class="avv-btn-primary" (click)="onClick()">{{ okButtonText | translate }}</button>
+    <button type="button" class="avv-btn-link mt-4" style="text-decoration: underline;" *ngIf="closeButtonText"
+            (click)="closeModal()">
+      {{ closeButtonText | translate }}
+    </button>
+  </div>
+</section>

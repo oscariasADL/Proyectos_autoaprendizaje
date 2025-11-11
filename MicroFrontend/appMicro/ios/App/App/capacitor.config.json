@@ -1,0 +1,52 @@
+{
+	"appId": "com.grupoavalav.bancamovil",
+	"appName": "AV Villas",
+	"bundledWebRuntime": false,
+	"webDir": "www",
+	"cordova": {},
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": false,
+			"launchShowDuration": 5000,
+			"androidScaleType": "CENTER_CROP",
+			"splashFullScreen": true
+		},
+		"PushNotifications": {
+			"presentationOptions": [
+				"alert",
+				"sound"
+			]
+		},
+		"Keyboard": {
+			"resizeOnFullScreen": true
+		}
+	},
+	"android": {
+		"adjustMarginsForEdgeToEdge": "force"
+	},
+	"packageClassList": [
+		"SSLCertificateCheckerPlugin",
+		"LifecycleEvents",
+		"OnespanBinding",
+		"OneSpanDigipass",
+		"OneSpanSecureMessaging",
+		"OneSpanSecureStorage",
+		"FirebaseCrashlyticsPlugin",
+		"AppPlugin",
+		"CAPCameraPlugin",
+		"ClipboardPlugin",
+		"DevicePlugin",
+		"FilesystemPlugin",
+		"GeolocationPlugin",
+		"KeyboardPlugin",
+		"CAPNetworkPlugin",
+		"PreferencesPlugin",
+		"PushNotificationsPlugin",
+		"SharePlugin",
+		"SplashScreenPlugin",
+		"StatusBarPlugin",
+		"FileOpenerPlugin",
+		"NewRelicCapacitorPluginPlugin",
+		"CDVPlugin"
+	]
+}

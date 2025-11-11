@@ -1,0 +1,263 @@
+$text-color: var(--gray-1)
+$error-color: var(--red-2)
+$primary-color: var(--blue-1)
+$label-default-color: var(--gray-2)
+$label-active-color: var(--blue-1)
+$border-color: var(--gray-3)
+$label-transition-time: 200ms
+
+@keyframes spinner-border
+  to
+    transform: rotate(360deg)
+
+.spinner-border
+  display: inline-block
+  width: 40px
+  height: 40px
+  vertical-align: text-bottom
+  border: 2px solid var(--gray-3)
+  border-right-color: transparent
+  border-radius: 50%
+  animation: spinner-border .75s linear infinite
+
+.form-input
+  position: relative
+  font-size: 16px
+  padding: 12px 0
+  .hint
+    margin-top:0.5rem
+    color: #727272
+    font-size: 12px
+    font-weight: 400
+    line-height: 16px
+    text-align: left
+    text-underline-position: from-font
+    text-decoration-skip-ink: none
+
+  label
+    position: relative
+    margin: auto
+    display: flex
+    width: 100%
+    height: 3.5rem
+    user-select: none
+    border-radius: 5px
+    border: solid 1px $border-color
+
+    .label
+      position: absolute
+      top: 1.125rem
+      left: 1rem
+      font-size: 1rem
+      overflow: hidden
+      color: $label-default-color
+      transform-origin: 0 0
+      transition: transform $label-transition-time ease
+
+    .form-border
+      position: absolute
+      bottom: -1px
+      left: 0
+      height: 2px
+      border-radius: 0 0 4px 4px
+      width: 100%
+      background: $primary-color
+      transform: scaleX(0)
+      transform-origin: 0 0
+      transition: all .15s ease
+
+    .form-icon,
+    .alert-icon
+      font-size: 1.5rem
+      top: 14px
+      right: 16px
+      margin: 0
+      padding: 0
+      position: absolute
+      color: $label-default-color
+      opacity: 0
+      visibility: hidden
+      transition: .15s
+      z-index: -1
+
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+    input[type="number"]
+      -moz-appearance: textfield
+
+    input
+      -webkit-appearance: none
+      width: 100%
+      border: 0
+      font-family: inherit
+      padding: 26px 48px 6px 16px
+      height: 3.375rem
+      font-size: 1rem
+      background: none
+      border-radius: 4px
+      color: $text-color
+      transition: none
+
+      &.ng-touched
+        &.ng-invalid
+          + .label
+            color: $error-color
+            transform: translateY(-12px) scale(.75)
+
+            + .form-border
+              transform: scaleX(1)
+              background: $error-color
+
+              + .alert-icon
+                color: $error-color
+                opacity: 1
+                visibility: visible
+
+                + .form-icon
+                  color: $error-color
+                  opacity: 1
+                  visibility: visible
+
+      &:not(:placeholder-shown)
+        + .label
+          color: $primary-color
+          transform: translateY(-12px) scale(.75)
+
+          + .form-border
+            + .form-icon
+              opacity: 1
+              visibility: visible
+
+  &.dropdown
+    z-index: 0
+    padding: 0
+    display: inline-flex
+    flex-direction: column
+    width: 100%
+
+    &:focus
+      outline: none
+      cursor: pointer
+
+    .form-icon
+      position: absolute
+      right: 0
+      top: 10px
+      font-size: 16px
+      transition: .2s
+
+    label
+      .form-icon
+        opacity: 1
+        visibility: visible
+
+    &.is_open
+      z-index: 1
+
+      .form-icon
+        transform: rotate(180deg)
+
+      label
+        border-radius: 5px 5px 0 0
+
+      input
+        border-radius: 4px 4px 0 0
+
+    &.is_template
+      input
+        color: var(--white)
+
+    .dropdown-list
+      list-style: none
+      border-radius: 0 0 4px 4px
+      text-align: left
+      padding: 0
+      box-shadow: 0 5px 10px 0 #acbac9
+      position: absolute
+      width: 100%
+      top: 55px
+      background-color: var(--white)
+      z-index: 1
+      max-height: 320px
+      overflow-y: auto
+
+      > li
+        border-top: 1px solid $border-color
+        min-height: 3.5rem
+        color: var(--gray-1)
+
+        &:last-child
+          border-bottom: none
+
+        &.active
+          background-color: rgba(0, 128, 239, 0.36)
+
+        > span
+          font-size: 16px
+          padding: 16px 24px 8px
+          color: $text-color
+          display: inline-block
+          width: 100%
+
+  &.loading
+    cursor: inherit
+
+    &::after
+      @extend .spinner-border
+      content: ''
+      width: 20px
+      height: 20px
+      border-width: 2px
+      position: absolute
+      right: 16px
+      top: 16px
+      color: $border-color
+
+    label
+      color: $border-color !important
+
+      input
+        &:focus
+          + span
+            color: $border-color
+            transform: inherit
+
+            + .form-border
+              display: none
+
+    &.dropdown
+      .form-icon
+        display: none
+
+.form-input.sm
+  label
+    width: initial
+    height: 32px
+    .label
+      display: none
+    input
+      font-size: 12px
+      width: initial
+      height: initial
+      padding: 8px 16px
+    .form
+      &-border
+        position: initial
+      &-icon
+        font-size: 20px
+        top: 4px
+        right: 8px
+
+  .dropdown-list
+    width: 110%
+    top: 31px
+    border-radius: 4px
+
+    > li
+      padding: 8px 8px 8px 16px
+      min-height: 40px
+      > span
+        font-size: 14px
+        padding: 0

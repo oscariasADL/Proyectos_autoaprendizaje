@@ -1,0 +1,72 @@
+<div style="height: 100vh; background-color: white; overflow-y: auto;">
+  <div class="block-account-form">
+    <div style="padding: 24px 16px;">
+      <div style="width: 50%; float: left; text-align: left">
+        <span style="font-size: 16px; font-weight: bold; line-height: 24px;"
+              *ngIf="selectedProduct?.productType === 'DDA'">{{"BLOCK_ACCOUNT.FORM_DDA_TEXT"| translate}}</span>
+        <span style="font-size: 16px; font-weight: bold; line-height: 24px;"
+              *ngIf="selectedProduct?.productType === 'SDA'">{{"BLOCK_ACCOUNT.FORM_SDA_TEXT"| translate}}</span>
+      </div>
+      <div style="width: 50%; float: left; text-align: right">
+        <span
+          style="font-size: 16px; font-weight: 400; line-height: 24px; color: rgba(92, 107, 122, 1);">No.{{selectedProduct?.numberProduct}}</span>
+      </div>
+    </div>
+    <div style="width: 100%;" class="mx-3" *ngIf="selectedProduct?.productType === 'DDA'">
+      <form #blockAccountForm="ngForm">
+        <div class="mt-3">{{"BLOCK_ACCOUNT.FORM_REASON_TEXT"| translate}}</div>
+        <div class="mt-3">
+          <label>
+            <input type="radio" class="option-input radio mr-2" value="01" name="blockOption"
+                   id="block-account-form-opt-lost"
+                   (change)="setBlockOption($event)"/>
+            <span>{{"BLOCK_ACCOUNT.FORM_LOST_TEXT"| translate}}</span>
+          </label>
+          <label class="mr-4">
+            <input type="radio" class="option-input radio mr-2 ml-4" value="04" name="blockOption"
+                   id="block-account-form-opt-stole"
+                   (change)="setBlockOption($event)" checked/>
+            <span>{{"BLOCK_ACCOUNT.FORM_STOLE_TEXT"| translate}}</span>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div style="width: calc(100% - 32px);" class="text-center">
+      <button class="avv-btn-secondary sm my-4" style="width: 50%; background-color: white;"
+              id="block-account-form-continue"
+              (click)="navigate()">
+        <i class="icon-no_se_puede" title="icon-transfer"></i>
+        {{"BLOCK_ACCOUNT.FORM_BTN_TEXT"| translate}}
+      </button>
+    </div>
+  </div>
+
+  <div style="background-color: white; width: 100%;" class="pt-3">
+    <ng-container
+      *ngTemplateOutlet="(working$ | async) ? working : (productMedias$ | async)?.length ? content : contentError"></ng-container>
+    <ng-template #content>
+      <div style="width: 100%;" class="mx-3 my-2">
+        {{"BLOCK_ACCOUNT.FORM_MEDIA_LIST_TEXT"| translate}}
+      </div>
+      <app-block-account-media-card *ngFor="let card of productMedias$.currentValue()"
+                                    [product]="card"></app-block-account-media-card>
+    </ng-template>
+    <ng-template #working>
+      <div class="m-3">
+        <ion-skeleton-text *ngFor="let item of [1, 2, 3, 4]" class="avv-skeleton" animated></ion-skeleton-text>
+      </div>
+    </ng-template>
+    <ng-template #contentError>
+      <div class="avv-panel-empty">
+        <div class="avv-panel-empty-image">
+          <img
+            [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+            alt="sin-resultados">
+        </div>
+        <p class="avv-list-panel-title avv-title-semibold">
+          {{"BLOCK_ACCOUNT.FORM_MEDIA_LIST_TEXT_ERROR"| translate}}
+        </p>
+      </div>
+    </ng-template>
+  </div>
+</div>

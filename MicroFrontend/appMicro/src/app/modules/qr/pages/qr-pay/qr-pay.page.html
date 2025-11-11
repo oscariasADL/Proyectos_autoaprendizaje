@@ -1,0 +1,43 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'Pago con QR' | translate"
+    [backUrl]="backUrl"
+    [exitData]="exitData"
+    [showSteps]="false"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-qr-pay-data
+      *ngSwitchCase="'data'"
+      [form]="form"
+      [date]="date$ | async"
+      [paymentMethod]="qrPaymentMethods$ | async"
+      [products]="products$ | async"
+      [spiUserKey]="spiUserKey$ | async"
+      (reScanQR)="reScanQR()"
+      (continue)="runNextStep(key)">
+    </app-qr-pay-data>
+
+    <app-qr-pay-installments
+      *ngSwitchCase="'installments'"
+      [form]="form"
+      (continue)="runNextStep(key)">
+    </app-qr-pay-installments>
+  </div>
+
+</ng-template>

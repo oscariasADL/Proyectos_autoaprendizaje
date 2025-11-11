@@ -1,0 +1,18 @@
+<article class="favorites-account-input-container">
+  <div class="header">
+    <h3>{{ 'FAVORITES.TRANSFER.ACCOUNT_MODAL.TITLE' | translate }}</h3>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="accounts-container">
+    <ng-container *ngIf="products">
+      <app-product-card-item
+        #productCardItem
+        *ngFor="let product of availableProducts"
+        (click)="selectProduct(product)"
+        [productDetail]="{ product: product }"
+        [disabled]="amount > product.availableBalance"
+        [style]="productCardItem.productStyleType.selectable"
+      ></app-product-card-item>
+    </ng-container>
+  </div>
+</article>

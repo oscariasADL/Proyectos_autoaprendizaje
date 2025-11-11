@@ -1,0 +1,24 @@
+@import "utils"
+
+.favorites-target-input-container
+  position: relative
+  background-color: var(--white)
+  padding: $spacer-2 $spacer-2 calc(#{$spacer-2} + var(--safe-area-inset-bottom))
+
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    i
+      font-size: 20px
+
+    h3
+      color: var(--gray-8)
+      font-weight: 600
+      font-size: 16px
+
+  .input-container
+    .avv-alert-info
+      margin-top: 16px
+      transition: all ease-in .5s

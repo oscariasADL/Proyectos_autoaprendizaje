@@ -1,0 +1,82 @@
+@import 'utils'
+
+.transfiya-info
+  &-container
+    +flex(flex-start, space-between, column)
+    height: 100%
+    overflow: auto
+    padding: calc(#{$spacer-1} + var(--safe-area-inset-top)) $spacer-3 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+  &-title
+    margin-bottom: 44px
+
+  &-panel
+    +flex(inherit, space-between, column)
+    & .small
+      padding: 0 35px
+
+  &-icons
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: $spacer
+    width: 100%
+    height: 72px
+    margin-top: $spacer-3
+    min-width: 60px
+    width: 100%
+    &.list
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+    & .aval
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      gap: 6px
+      margin-top: 0
+      border: 1px solid #DEE1E4
+      border-radius: 4px
+      p
+        font-size: 10px
+        color: var(--black)
+        text-align: center
+        width: 90%
+
+  &-list
+    &.bankName
+      font-size: 12px
+      font-weight: 500
+      margin-top: $spacer-3
+      color: var(--black, #252B31)
+      text-align: center
+
+    &.others
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: $spacer-2
+      margin-top: $spacer-2
+
+      &-content
+        display: flex
+        align-items: baseline
+        gap: $spacer
+        & span
+          width: 4px
+          height: 4px
+          background-color: var(--blue-1, linear-gradient(73deg, #0014A2 0.92%, #0048DB 100%))
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: $spacer-1
+          border-radius: 50%
+        & .bank
+          font-size: 12px
+          width: 80%
+
+      img
+        max-width: 140px
+
+  &-actions
+    width: 100%

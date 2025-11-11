@@ -1,0 +1,48 @@
+<ion-content [forceOverscroll]="false">
+  <div class="auth-steps-container">
+    <div class="auth-steps-header">
+      <h5>{{ title | translate }}</h5>
+      <i class="icon-salir" (click)="showExitModal()"></i>
+    </div>
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="run()">
+      <div class="auth-steps-body fill-otp__container">
+
+        <div class="fill-otp__detail">
+          <div class="fill-otp__header">
+            <img class="fill-otp__img" [src]="'illustrationsV2/otp-regular.svg' | imageUrl" alt draggable="false">
+            <small class="fill-otp__description" [innerHTML]="'AUTH.STEP.FILL_OTP.DESCRIPTION' | translate | safeHtml">
+              {{ 'AUTH.STEP.FILL_OTP.DESCRIPTION' | translate }}
+            </small>
+          </div>
+          <small class="fill-otp__subtitle">
+            {{ 'AUTH.STEP.FILL_OTP.TITLE' | translate }}
+          </small>
+
+
+          <avv-password class="auth-steps-otp" [control]="otp" [hideCharacters]="false" [autoFocus]="false"
+            [showEye]="false" [numCharacters]="8" [hasError]="!data?.success" [errorMessage]="data.errorMessage">
+          </avv-password>
+
+          <div class="auth-step-info avv-alert-info fill-otp__alert">
+            <i class="avv-alert-icon icon-info"></i>
+            <div class="avv-alert-text">
+              <b>{{ 'AUTH.STEP.FILL_OTP.INFO.TITLE' | translate }}</b><br> {{
+              'AUTH.STEP.FILL_OTP.INFO.DESCRIPTION' | translate }}
+            </div>
+          </div>
+
+          <app-toggle-terms [control]="terms">
+          </app-toggle-terms>
+        </div>
+
+        <div class="fill-otp__actions">
+          <button class="avv-btn-primary fill-otp__continue" type="submit" [disabled]="!form.valid">
+            {{ 'ACTIONS.CONTINUE' | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="auth-steps-footer"></div>
+  </div>
+</ion-content>

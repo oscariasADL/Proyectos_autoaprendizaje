@@ -1,0 +1,28 @@
+<div class="radio-container">
+  <p>{{ label }}</p>
+  <div class="radio-container-list">
+    <div *ngFor="let item of items; index as i">
+      <input
+        [value]="item.value"
+        [name]="id"
+        [disabled]="!!item.disabled"
+        [checked]="item?.value?.toString() === control?.value?.toString()"
+        (change)="updateControl($event.target['value'])"
+        type="radio"
+        id="{{id}}-{{i}}">
+      <label
+        class="form-check-label"
+        [class.isPFM]="isPFM"
+        for="{{id}}-{{i}}">
+        <ng-container *ngIf="isPFM">
+          <pzl-category-icon
+            [category]="{'code': item.index, 'name': '','color': item.pfmCategoryColor}"
+            [type]="item.pfmCategoryType === pfmCategoryType.INCOME ? 'incomes' : 'expenses'"
+            [size]="24">
+          </pzl-category-icon>
+        </ng-container>
+        {{ item.label | translate }}
+      </label>
+    </div>
+  </div>
+</div>

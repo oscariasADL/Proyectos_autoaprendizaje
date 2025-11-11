@@ -1,0 +1,29 @@
+<div class="avv-generic-step telephone-companies-step">
+  <p class="avv-generic-step-title">{{ data?.title | translate }}</p>
+  <div class="telephone-companies-step-list">
+    <ul>
+      <li
+        role="button"
+        [attr.aria-label]="company.value"
+        *ngFor="let company of mobileOperators$ | async"
+        (click)="setMobileOperator(company.value)">
+        <div class="avv-contact-card one-item"
+             [id]="company.value + '-btn'">
+                    <span class="contact-image" [ngClass]="'bg-' + company.value.toString().toLowerCase()">
+                        <img
+                          class="img-operator"
+                          [src]="'mobile-icons/' + company.value + '.png' | imageUrl"
+                          [alt]="company.value"
+                          draggable="false">
+                    </span>
+          <div class="contact-info">
+            <h6
+              class="name"
+              [innerHTML]="company.label | capitalize: true"></h6>
+          </div>
+          <span class="contact-icon icon-next"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

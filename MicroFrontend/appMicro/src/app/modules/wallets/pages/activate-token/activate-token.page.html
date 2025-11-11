@@ -1,0 +1,45 @@
+<ion-content [forceOverscroll]="false">
+  <main class="activate-token-container">
+    <header class="activate-token-header">
+      <img [src]="'av-villas-logo.svg' | imageUrl"
+           [alt]="'ACCESSIBILITY.LOGO' | translate"
+           draggable="false">
+    </header>
+    <article class="activate-token-content">
+      <ng-container
+        *ngTemplateOutlet="(working$ | async) && (completed$ | async) === false ? loading : content"></ng-container>
+    </article>
+    <footer class="activate-token-footer">
+      <button type="button"
+              class="bg-white"
+              *ngIf="(working$ | async) === false"
+              [class]="(isActivated$ | async) ? 'avv-btn-primary' : 'avv-btn-secondary'"
+              (click)="closeAction()">
+        {{ 'ACTIONS.CLOSE' | translate| uppercase }}
+      </button>
+    </footer>
+  </main>
+</ion-content>
+
+<ng-template #loading>
+  <section class="activate-token-content-loading">
+    <ion-skeleton-text class="at-loading-icon" animated></ion-skeleton-text>
+    <ion-skeleton-text class="at-loading-title" animated></ion-skeleton-text>
+    <ion-skeleton-text class="at-loading-text" animated></ion-skeleton-text>
+    <ion-skeleton-text class="at-loading-text" animated></ion-skeleton-text>
+  </section>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="infoActivationData$ | async as infoActivationData">
+    <section class="activate-token-content-content">
+      <img class="at-content-icon" [src]="infoActivationData.icon | imageUrl" alt="">
+      <h2 class="at-content-title">
+        {{ infoActivationData.title | translate }}
+      </h2>
+      <p class="at-content-description">
+        {{ infoActivationData.description | translate }}
+      </p>
+    </section>
+  </ng-container>
+</ng-template>

@@ -1,0 +1,17 @@
+<div class="security-biometrics-finished-container">
+  <img [src]="biometricFinishedIcon | imageUrl" alt="" class="security-biometrics-finished-image">
+
+  <p class="semi-bold security-biometrics-finished-title">
+    {{ ('BIOMETRICS.FINISHED.TITLE.' + (hasBiometric ? 'ACTIVATE' : 'DEACTIVATE')) | translate: {type: (biometricText | translate)} }}
+  </p>
+
+  <p class="security-biometrics-finished-description">
+    {{ ('BIOMETRICS.FINISHED.DESCRIPTION.' + (hasBiometric ? 'ACTIVATE' : 'DEACTIVATE')) | translate: {type: (biometricText | translate)} }}
+  </p>
+
+  <button class="avv-btn-primary security-biometrics-finished-btn"
+          [id]="'biometric-finished-btn'"
+          (click)="closeEvent.emit()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+</div>

@@ -1,0 +1,78 @@
+<div class="avv-generic-step transfer-avv-phone">
+  <p class="avv-generic-step-title pb-4">{{ 'Ingresa los datos de tu contacto' | translate }}</p>
+
+  <form [formGroup]="formGroup" (submit)="confirmationToward()" class="avv-generic-step-content">
+
+    <avv-input
+      *ngIf="!contactData?.value"
+      [utag]="'enviar plata - ingresa los datos de tu contacto - numero de celular'"
+      [utagCategory]="utagCategory"
+      [id]="'transfer-phone-number'"
+      [type]="'phone'"
+      [allowCut]="true"
+      [allowCopy]="true"
+      [allowPaste]="true"
+      [label]="'TRANSFERS.REQUEST_MONEY.TOWARD.FIELD' | translate"
+      [control]="phoneNumber">
+    </avv-input>
+
+    <div *ngIf="!!contactData?.value"
+         class="avv-contact-card transfer-avv-phone-contact-card mb-2">
+      <span class="contact-image">{{ (contactData?.value?.displayName + '') | slice : 0 : 1 | uppercase }}</span>
+      <div class="contact-info">
+        <h6 class="name" [innerHTML]="contactData?.value?.displayName | capitalize: true"></h6>
+        <p class="nickname" [innerHTML]="contactData?.value?.phoneNumber | capitalize"></p>
+        <i class="icon icon-basura"
+           [utag]="'enviar plata - ingresa los datos de tu contacto - eliminar contacto'"
+           [utagCategory]="utagCategory"
+           (click)="removeCellNumberContact()"></i>
+      </div>
+    </div>
+
+    <div (click)="setCellPhoneContact()"
+         [utag]="'enviar plata - ingresa los datos de tu contacto - elegir de mis contactos de celular'"
+         [utagCategory]="utagCategory"
+         [id]="'transfer-phone-number-btn-contacts'"
+         class="avv-information-link mt-0 mb-4 pl-0">
+      <i class="icon-contacts"></i>
+      <small>{{ 'Elegir de mis contactos de celular' | translate }}</small>
+    </div>
+
+    <div class="mt-3 mb-0">
+      <avv-input
+        [utag]="'enviar plata - ingresa los datos de tu contacto - valor a transferir'"
+        [utagCategory]="utagCategory"
+        [type]="'currency'"
+        [id]="'amount-value'"
+        [autoFocus]="false"
+        [allowCopy]="true"
+        [allowPaste]="true"
+        [allowCut]="true"
+        [label]="'TRANSFERS.CEL2CEL.SEND.TOWARD_AMOUNT_FIELD_LABEL' | translate"
+        [control]="amount">
+      </avv-input>
+      <small>Máximo ${{ amountMax | numberFormat }} por día.</small>
+    </div>
+
+    <div class="mt-3 mb-0">
+      <avv-field
+        [utag]="'enviar plata - ingresa los datos de tu contacto - mensaje'"
+        [utagCategory]="utagCategory"
+        [id]="'transfer-note'"
+        [type]="'text'"
+        [label]="'TRANSFERS.CEL2CEL.SEND.TOWARD_NOTE_FIELD_LABEL' | translate"
+        [control]="note">
+      </avv-field>
+      <small class="example-text">Esta información le llegará a la persona que le transfieras.</small>
+    </div>
+
+    <button type="submit"
+            class="avv-btn-primary mt-3"
+            [utag]="'enviar plata - ingresa los datos de tu contacto - continuar'"
+            [utagCategory]="utagCategory"
+            [id]="'cel2cel-transfer-account-btn'"
+            [disabled]="!formGroup.valid || (working$ | async)">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+</div>

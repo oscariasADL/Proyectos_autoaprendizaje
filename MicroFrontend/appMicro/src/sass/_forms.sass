@@ -1,0 +1,381 @@
+.generic-form
+  position: relative
+
+  .generic-form-container
+    padding: 28px 15px
+    max-width: 370px
+    margin: 0 auto
+    position: relative
+
+    .generic-form-title
+      margin-bottom: 4px
+      line-height: 1.5
+      text-align: center
+
+    .generic-form-description
+      line-height: 1.43
+      margin-bottom: 8px
+      text-align: center
+
+    .generic-form-origin-account-panel
+      border-radius: 4px
+      background-color: var(--gray-4)
+      padding: 10px 16px
+      margin-bottom: 24px
+
+      p
+        margin-bottom: 0
+
+      img
+        height: 12px
+        margin-top: -3px
+        margin-right: 4px
+
+      .account-type
+        margin: 0 8px 0 0
+
+    .generic-form-sub-description
+      text-align: center
+      margin: 0 0 16px
+
+    ::ng-deep
+      .form-input
+        margin-bottom: 24px
+
+        label
+          img
+            margin-right: 6px
+
+      .form-installments
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+
+        .form-input
+          max-width: 144px
+
+        .installments-description
+          font-size: 12px
+          line-height: 1.33
+          max-width: 105px
+          margin: 14px 0 0 16px
+
+        .generic-form-installments-description
+          font-size: 12px
+          line-height: 1.67
+          text-align: center
+          color: var(--gray-1)
+          margin-bottom: 32px
+
+          span:first-child
+            margin-right: 6px
+
+  .btn-debt-cancel
+    position: absolute
+    top: -36px
+    right: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: var(--white)
+
+    i
+      font-size: 20px
+      margin-right: 2px
+      margin-top: -5px
+      transition: .3s
+
+    p
+      line-height: 1.71
+      margin: 0
+      color: var(--blue-1)
+      font-weight: 600
+      transition: .3s
+
+    &:hover
+      cursor: pointer
+
+      i
+        color: var(--blue-1)
+
+  .generic-form-panel
+    padding: 28px 15px
+    max-width: 370px
+    margin: 0 auto
+    position: relative
+    text-align: center
+
+    .generic-form-panel-img
+      width: 76px
+      margin-bottom: 9px
+
+    .generic-form-panel-title
+      line-height: 1.5
+      margin-bottom: 0
+
+    .generic-form-panel-description
+      line-height: 1.43
+      margin-bottom: 0
+
+    .generic-form-panel-list
+      list-style: none
+      padding: 0
+      margin: 5px 0 0
+
+      > li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid var(--gray-3)
+        padding: 15px 0
+
+        &:last-child
+          border-bottom: none
+          margin-bottom: 17px
+
+        p,
+        small
+          margin: 0
+
+        p
+          line-height: 1.43
+
+        small
+          font-size: 12px
+
+        div
+          text-align: right
+
+          p
+            color: var(--gray-1)
+
+            &.main-value
+              font-size: 16px
+              font-weight: 600
+              line-height: 1.13
+              color: var(--blue-1)
+
+        &.card-list-item
+          div
+            p
+              .franchise-image
+                height: 12px
+                margin-right: 4px
+                margin-top: -2px
+
+              .account-type
+                margin-right: 8px
+
+    .generic-form-panel-sub-description
+      font-size: 14px
+      line-height: 1.43
+      color: var(--gray-1)
+      margin-top: 23px
+      margin-bottom: 24px
+
+    .generic-form-edit
+      font-weight: 600
+      line-height: 1.57
+      text-align: center
+      color: var(--blue-1)
+      margin-top: 32px
+      display: inline-block
+
+      i
+        font-size: 20px
+        color: var(--gray-1)
+        top: 3px
+        position: relative
+        margin-right: 6px
+        transition: .3s
+
+      &:hover
+        cursor: pointer
+
+        i
+          color: var(--blue-1)
+
+.avv-form
+  padding: 30px 15px
+
+  .avv-form-image
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    margin-bottom: 20px
+
+  .avv-form-title
+    font-size: 1rem
+    font-weight: 600
+    line-height: 1.25
+    text-align: center
+    color: var(--gray-1)
+    margin-bottom: 5px
+
+  .avv-form-sub-title
+    font-size: 0.875rem
+    line-height: 1.43
+    text-align: center
+    color: var(--gray-1)
+    margin-bottom: 12px
+
+  .avv-form-account
+    border-radius: 4px
+    background-color: var(--gray-4)
+    padding: 10px 16px
+    margin-bottom: 24px
+
+    p
+      font-size: 0.875rem
+      line-height: 1.43
+
+      &:last-child
+        margin-top: 4px
+
+    .franchise-image
+      height: 12px
+      margin-top: -3px
+      margin-right: 4px
+
+    .account-type
+      margin: 0 8px 0 0
+      font-weight: 600
+
+  .avv-form-note
+    font-size: 0.875rem
+    margin-top: 10px
+    color: var(--gray-1)
+
+  .avv-form-btn
+    @extend .avv-btn-primary
+    margin-top: 20px
+
+
+.avv-item
+  &-account
+    padding: 10px 15px
+
+    p
+      margin: 0
+      display: inline-block
+      color: var(--gray-1)
+
+    .number
+      margin-left: 5px
+
+    .franchise-image
+      margin-right: 6px
+      max-width: 42px
+      max-height: 18px
+      position: relative
+      top: -2px
+
+    .available
+      margin-top: 3px
+      color: var(--gray-1)
+      display: block
+
+    &.item-selected
+      padding: 0
+      position: absolute
+      top: 26px
+      left: 16px
+
+      .name, .number
+        font-weight: normal
+
+      .available
+        display: none
+
+  &-operator-company
+    padding: 10px 15px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    height: 3.5rem
+
+    .name
+      margin-left: 8px
+      display: inline-block
+
+    .img-operator
+      width: 24px
+      margin-top: -2px
+
+    &.item-selected
+      height: initial
+      padding: 0
+      position: absolute
+      top: 26px
+      left: 16px
+
+      .name, .number
+        font-weight: normal
+
+      .available
+        display: none
+
+  &-image
+    padding: 15px 17px 12px
+
+    span
+      font-size: 16px
+      margin-right: 17px
+      vertical-align: top
+
+    p
+      font-size: 15px
+      margin: 0
+      display: inline-block
+      vertical-align: top
+
+    &.item-selected
+      padding: 0
+      position: absolute
+      top: 10px
+
+      span
+        margin-right: 10px
+
+  &-contact
+    padding: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .contact-image
+      width: 40px
+      height: 40px
+      min-width: 40px
+      background-color: var(--gray-4)
+      vertical-align: top
+      border-radius: 50%
+      color: var(--white)
+      font-size: 24px
+      margin-right: 15px
+      display: inline-flex
+      justify-content: center
+      align-items: flex-end
+      transition: .3s
+      user-select: none
+
+    .contact-info
+      display: inline-flex
+      justify-content: flex-start
+      align-items: flex-start
+      flex-direction: column
+      width: 100%
+
+      .name
+        font-size: 14px
+        color: var(--gray-1)
+        margin: 0
+        width: 95%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+      .nickname
+        font-size: 12px
+        color: var(--gray-1)
+        margin: 0

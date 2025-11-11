@@ -1,0 +1,16 @@
+<div class="security-notifications-result-container">
+  <div class="security-notifications-result-detail">
+    <img class="security-notifications-result-image" *ngIf="data?.icon" [src]="data?.icon | imageUrl"
+      alt="imagen-activar-notificaciones" draggable="false">
+    <h6 class="security-notifications-result-title" [innerHTML]="data?.title | translate">
+    </h6>
+    <p class="security-notifications-result-description" *ngIf="data?.subtitle">
+      {{ data?.subtitle | translate }}
+    </p>
+  </div>
+  <div class="security-notifications-result-actions">
+    <button class="avv-btn-primary" (click)="closeEvent.emit()" id="security-notifications-result-button">
+      {{ 'ACTIONS.COPY_THAT' | translate }}
+    </button>
+  </div>
+</div>

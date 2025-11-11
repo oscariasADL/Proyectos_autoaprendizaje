@@ -1,0 +1,111 @@
+<div class="virtual-credit-card-detail-container">
+  <i class="virtual-credit-card-detail-close icon-salir"
+     role="button"
+     [attr.aria-label]="'Cerrar'"
+     (click)="closeModal()"></i>
+
+  <div class="virtual-credit-card-detail-panel">
+    <!--<h6 class="semi-bold mb-2 text-center">{{ virtualCreditCard?.name }}</h6>-->
+    <h6
+      class="semi-bold mb-2 text-center">{{ virtualCreditCardDetail?.nickname || 'VIRTUAL_CREDIT_CARD.DETAIL.TITLE' | translate }}</h6>
+
+    <div class="virtual-credit-card-detail-panel-cromalite">
+      <img appPreloadImage
+           [preload]="skeleton"
+           [src]="franchiseImage | imageUrl"
+           class="alert-info-icon"
+           alt="Cromilina de la tarjeta virtual de crédito"
+           aria-hidden="true">
+      <ion-skeleton-text
+        #skeleton
+        class="avv-skeleton virtual-credit-card-cromaline-skeleton mt-5 mb-5"
+        animated></ion-skeleton-text>
+    </div>
+
+    <div class="virtual-credit-card-detail-panel-number"
+         *ngIf="virtualCreditCardDetail?.numberProductTCV as numberVirtualCard"
+    >
+      <h6 class="bold">{{ numberVirtualCard | creditCardNumberFormat }}</h6>
+      <i *ngIf="isPossibleCopyToClipboard"
+         (click)="copyNumberToClipboard()"
+         aria-hidden="true"
+         class="icon icon-agrupar">
+      </i>
+    </div>
+
+    <div class="virtual-credit-card-detail-panel-data">
+      <div *ngIf="virtualCreditCardDetail?.expDateTCV as expDateTCV">
+        <small>
+          {{ 'VIRTUAL_CREDIT_CARD.DETAIL.DATE' | translate }}
+        </small>
+        <h6 class="bold">{{ expDateTCV | creditCardDateFormat }}</h6>
+      </div>
+      <div *ngIf="virtualCreditCardDetail?.cvcTCV as cvc">
+        <small>
+          {{ 'VIRTUAL_CREDIT_CARD.DETAIL.CVC' | translate }}
+        </small>
+        <h6 class="bold">{{ cvc }}</h6>
+      </div>
+      <div>
+        <small>{{ 'VIRTUAL_CREDIT_CARD.DETAIL.MAX_AMOUNT' | translate }}</small>
+        <h6
+          class="bold"
+          [attr.aria-label]="(virtualCreditCardDetail?.maxAmtTCV | numberFormat:'COP')"
+          [innerHtml]="(virtualCreditCardDetail?.maxAmtTCV | currencyFormat)"></h6>
+      </div>
+      <div>
+        <small>{{ 'VIRTUAL_CREDIT_CARD.DETAIL.CARDS_QUANTITY' | translate }}</small>
+        <h6 class="bold">
+          {{ totalCardsCreated$ | async }}/{{ maxCardsLimit$ | async }}
+        </h6>
+      </div>
+    </div>
+
+    <div class="virtual-credit-card-detail-panel-divider"></div>
+
+    <div class="virtual-credit-card-detail-panel-actions-list">
+      <div class="actions-list-header">
+        <p class="actions-list-title">{{ 'VIRTUAL_CREDIT_CARD.DETAIL.ACTIONS_TITLE' | translate }}</p>
+      </div>
+      <ul class="actions-list-items">
+        <li *ngFor="let action of actions">
+          <app-product-action-item
+            [id]="action.id"
+            [action]="action"
+            (clicked)="actionSelected(action)"
+          ></app-product-action-item>
+        </li>
+      </ul>
+    </div>
+
+    <div class="virtual-credit-card-detail-panel-divider"></div>
+
+    <ng-template [appFeatureToggle]="featureFlagsKey.ShowApplePayOptionOnTCV">
+      <div class="virtual-credit-card-detail-panel-wallet-panel">
+        <app-wallet-product-detail-panel
+          [typeAccount]="accountType"
+          [id]="virtualCreditCardDetail?.numberProductTCV"
+          [isVirtualCard]="true">
+          Añadir a
+        </app-wallet-product-detail-panel>
+      </div>
+    </ng-template>
+
+    <div class="virtual-credit-card-detail-panel-links">
+      <div class="virtual-credit-card-detail-link" (click)="showUse()">
+        <i class="icon-informacion_2 mr-1" aria-hidden="true"></i>
+        <button class="avv-link-underline virtual-credit-card-detail-btn"
+                [id]="'virtual-credit-card-detail-instructions-btn'">
+          {{ 'VIRTUAL_CREDIT_CARD.DETAIL.USE' | translate }}
+        </button>
+      </div>
+      <div class="virtual-credit-card-detail-link" (click)="showFrequentQuestions()">
+        <i class="icon-informacion mr-1" aria-hidden="true"></i>
+        <button class="avv-link-underline virtual-credit-card-detail-btn"
+                [id]="'virtual-credit-card-detail-instructions-btn'">
+          {{ 'VIRTUAL_CREDIT_CARD.DETAIL.QUESTIONS' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

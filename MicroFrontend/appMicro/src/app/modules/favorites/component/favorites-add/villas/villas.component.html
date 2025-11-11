@@ -1,0 +1,16 @@
+<avv-radio
+  class="avv-radio-input"
+  [id]="'favorites-avv-account-type'"
+  [items]="toggleValues"
+  [control]="toggleValue">
+</avv-radio>
+
+<avv-input
+  type="numeric"
+  [id]="'input-account-number'"
+  [label]="'FAVORITES.ADD_PAGE.FIELDS.ACCOUNT_NUMBER' | translate"
+  [control]="accountNumber"
+  [utagCategory]="utagEvent.event_category"
+  [utag]="utagEvent.event_label">
+
+  </avv-input>

@@ -1,0 +1,46 @@
+<app-headers [backUrl]="'/'" [title]="'Mis Productos'">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div [ngClass]="{'avv-pb-with-footer': (showAvalProducts$ | async) === false}">
+    <div *ngIf="balances$ | async as balances" class="products-container avv-padding">
+
+      <div class="products-container-header">
+        <avv-dropdown-modal class="form-dropdown" [id]="'product-category-filter'"
+                            [items]="productTypeCategories$ | async"
+                            [label]="'Filtra por categoría'" [control]="productCategory" [isSmall]="true"
+                            [modalTitle]="'Selecciona el tipo de producto'"
+                            [template]="item"
+                            (valueOutput)="setProductFilter($event.value)">
+          <ng-template #item let-item="data" let-className="class">
+            <div class="avv-item-account {{ className }}">
+              <i class="icon {{ item.icon }}"></i>
+              <p class="name">{{ item.label }}</p>
+            </div>
+          </ng-template>
+        </avv-dropdown-modal>
+
+        <app-product-toggle-balances></app-product-toggle-balances>
+
+      </div>
+
+      <div *ngFor="let balance of balances">
+        <ng-template [appFeatureToggle]="balance?.flag">
+          <p *ngIf="balances.length > 1 && balance.products.length > 0" class="products-container-item-title">
+            {{ balance.name }}
+          </p>
+
+          <app-product-card *ngFor="let product of balance.products; let i = index" [index]="i"
+                            (clickAction)="productDetail(product)"
+                            [productDetail]="{ product: product }"
+                            [balanceTypeProduct]="balance?.typeProduct"
+                            [style]="product?.style ? product.style : productStyleType.standard">
+          </app-product-card>
+        </ng-template>
+      </div>
+    </div>
+
+    <app-aval-products-panel *ngIf="showAvalProducts$ | async" [forceView]="forceViewAvalProducts$ | async">
+    </app-aval-products-panel>
+  </div>
+</ion-content>

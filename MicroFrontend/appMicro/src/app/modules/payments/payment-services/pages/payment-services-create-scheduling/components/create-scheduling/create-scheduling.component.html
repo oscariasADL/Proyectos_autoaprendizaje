@@ -1,0 +1,55 @@
+<article class="payment-services-create-scheduling">
+  <h2>{{ (!isEdit ? 'PAYMENTS.SERVICES.SCHEDULING.CREATE.TITLE' : 'PAYMENTS.SERVICES.SCHEDULING.EDIT.TITLE') | translate }}</h2>
+  <form [formGroup]="form" (submit)="continue()">
+    <section>
+      <div class="form-product-field">
+        <ng-container *ngIf="products$ | async as products">
+          <avv-dropdown
+            [id]="'payment-services-create-scheduling-product'"
+            [items]="products"
+            [label]="'PAYMENTS.SERVICES.SCHEDULING.CREATE.FIELDS.SELECT_PRODUCT' | translate"
+            [control]="productId"
+            (valueOutput)="selectProduct($event)"
+            [template]="accountTemplate">
+
+            <ng-template
+              #accountTemplate
+              let-account="data"
+              let-className="class">
+              <div class="avv-item-account {{ className }}">
+                <p
+                  class="name avv-title-bold">{{ account?.nickname ? account?.nickname : (account.typeName | lastWord) }}</p>
+                <p class="number avv-title-bold">No. {{ account.numberProduct }}</p>
+                <p class="available"
+                   [innerHTML]="('AVAILABLE' | translate) + ' ' + (account.availableBalance | currencyFormat)"></p>
+              </div>
+            </ng-template>
+          </avv-dropdown>
+        </ng-container>
+      </div>
+      <div class="form-schedule-type-field">
+        <p class="mb-1">{{ 'PAYMENTS.SERVICES.SCHEDULING.CREATE.FIELDS.SCHEDULE_TYPE_LABEL' | translate }}</p>
+        <avv-radio
+          class="avv-radio-input full"
+          [id]="'payment-services-create-scheduling-schedule-type'"
+          [items]="scheduleTypesOptions"
+          [control]="scheduleType">
+        </avv-radio>
+      </div>
+      <div class="form-amount-field">
+        <p>{{ 'PAYMENTS.SERVICES.SCHEDULING.CREATE.FIELDS.MAX_AMOUNT_RECURRING_LABEL' | translate }}</p>
+        <avv-input
+          [type]="'currency'"
+          [id]="'payment-services-create-scheduling-max-amount-recurring'"
+          [label]="'PAYMENTS.SERVICES.SCHEDULING.CREATE.FIELDS.MAX_AMOUNT_RECURRING_PLACEHOLDER' | translate"
+          [control]="maxAmountRecurring"
+        ></avv-input>
+      </div>
+    </section>
+    <section>
+      <button type="submit" class="avv-btn-primary" [disabled]="!form.valid">
+        {{ 'ACTIONS.CONTINUE' | translate }}
+      </button>
+    </section>
+  </form>
+</article>

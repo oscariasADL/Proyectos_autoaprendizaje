@@ -1,0 +1,107 @@
+@import 'utils'
+
+.wrapper-slider
+  width: 100%
+  height: 125px
+  background-color: #F7EFFF
+
+  .swiper-slide-active
+    z-index: 4
+    width: 92% !important
+    padding: 15px !important
+
+    &-only, &-is-end
+      width: 100% !important
+
+  .sliders-content
+    width: 100%
+    height: 100%
+    display: flex
+
+    .slide-item
+      position: relative
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: space-between
+      box-shadow: 4px 0 4px 0 #252B3114
+      padding: $spacer-2 $spacer-1
+
+      .request-products-item-img
+        margin: auto 0
+
+        img
+          max-width: 87px
+
+      .slide-data
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        text-align: left
+        margin-left: 8px
+
+        .title
+          font-size: 16px
+          line-height: 20px
+          font-weight: 500
+          color: #000000
+
+        .content
+          font-size: 14px
+          line-height: 16px
+          color: #000000
+
+        .campaign-action
+          background-color: var(--blue-1)
+          font-size: 12px
+          line-height: 16px
+          color: var(--white)
+          text-align: center
+          margin-top: 10px
+          width: fit-content
+          padding: 8px 24px
+          border-radius: 24px
+
+  .slide
+    &-bo
+      background-color: #ECF7F9
+
+    &-cdt
+      background-color: #F7EFFF
+
+    &-tdd
+      background-color: #EAF0FC
+
+    &-cci
+      background-color: #FCEFDE
+
+    &-tcv
+      background-color: #F5F9FF
+
+    &-content
+      text-align: center
+      margin-bottom: 10px
+
+      p
+        color: #000000
+
+  .slide-nav
+    font-size: 12px
+    position: absolute
+    bottom: 8px
+    right: 8px
+    color: #5C6B7A
+    display: flex
+    align-content: center
+    align-items: center
+    justify-content: center
+    z-index: 2
+
+    .position
+      font-size: 12px
+      line-height: 12px
+      height: 12px
+      margin: 3px 8px 0
+
+    .slides-button
+      background-color: transparent

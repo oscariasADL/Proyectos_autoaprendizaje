@@ -1,0 +1,18 @@
+<section class="payroll-advance-terms-modal">
+  <figure class="payroll-advance-terms-modal__image mb-3">
+    <img [src]="'illustrationsV2/retiro-dinero-regular.svg' | imageUrl" alt="">
+  </figure>
+  <h3 class="payroll-advance-terms-modal__title my-1">
+    {{ 'PAYROLL_ADVANCE.TERMS_AND_CONDITIONS.TITLE' | translate }}
+  </h3>
+  <div class="payroll-advance-terms-modal__description mb-4 mt-1">
+    <p *ngFor="let textNumber of textTerms">
+      {{ 'PAYROLL_ADVANCE.TERMS_AND_CONDITIONS.DESCRIPTION_' + textNumber | translate }}
+    </p>
+  </div>
+  <div class="payroll-advance-terms-modal__buttons mb-5">
+    <button type="button" class="avv-btn-primary" (click)="closeModal(true)">
+      {{ 'PAYROLL_ADVANCE.TERMS_AND_CONDITIONS.CONFIRM' | translate }}
+    </button>
+  </div>
+</section>

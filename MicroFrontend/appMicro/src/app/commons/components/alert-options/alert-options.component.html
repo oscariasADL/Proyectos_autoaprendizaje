@@ -1,0 +1,17 @@
+<div class="alert-options-container">
+  <div class="close">
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="options">
+    <ng-container *ngFor="let button of props?.buttons; let i = index">
+      <button
+        type="button"
+        class="avv-btn alert-options-btn"
+        [id]="props.id + '-btn-menu-option' + i"
+        (click)="props.buttonsAction[i]()">
+        <i [class]="props.iconButtons[i]"></i>
+        {{ button | translate }}
+      </button>
+    </ng-container>
+  </div>
+</div>

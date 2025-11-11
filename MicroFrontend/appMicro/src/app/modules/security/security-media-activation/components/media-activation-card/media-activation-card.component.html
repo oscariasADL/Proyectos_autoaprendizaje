@@ -1,0 +1,19 @@
+<div class="media-activation-card" *ngIf="product && !isDigitalDebitCard(product.cardId)" (click)="allowCardClick ? options.emit() : null">
+  <div class="content-left">
+    <span class="title">{{ product.name }}</span>
+    <div class="product-number">
+      <img
+        #img
+        class="franchise-img"
+        [src]="(!!product.cardFranchise ? product.cardFranchise : 'DEBIT') | franchiseImage"
+        (error)="img.className = 'display-none'"
+        alt="franchise">
+      No. {{ product.cardId }}
+    </div>
+  </div>
+  <div class="content-right">
+    <i *ngIf="icon" class="content-right-icon {{ icon }}" id="configure-cards-options-btn"
+       (click)="!allowCardClick ? options.emit() : null"></i>
+    <span class="content-right-status {{ statusClass }}">{{ statusLabel | translate | capitalize }}</span>
+  </div>
+</div>

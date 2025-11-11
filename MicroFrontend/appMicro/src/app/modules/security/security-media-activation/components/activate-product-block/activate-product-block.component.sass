@@ -1,0 +1,18 @@
+@import 'utils'
+
+.active-product-block
+  &-container
+    padding: $spacer-4 $spacer-2
+
+  &-header
+    text-align: center
+
+  &-body
+    > div
+      display: flex
+      justify-content: space-between
+
+    div:first-child
+      border-bottom: solid 1px var(--gray-6)
+      margin-bottom: $spacer-2
+      padding-bottom: $spacer-2

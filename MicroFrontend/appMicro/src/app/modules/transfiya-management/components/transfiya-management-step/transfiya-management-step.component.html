@@ -1,0 +1,116 @@
+<div class="avv-generic-step field-step transfiya-management-step-container">
+
+  <p class="avv-generic-step-title transfiya-management-step-title">
+    El No. de celular {{ notification?.targetNumber }} {{ isDispatch ? 'te pidió' : 'te envio' }} una transferencia por
+    <b [innerHTML]="notification?.amount | currencyFormat"></b>
+    <ng-container *ngIf="!!notification?.note">. Nota: <b>{{ notification?.note }}</b></ng-container>
+  </p>
+
+  <form [formGroup]="form" (submit)="continue.emit()">
+
+    <ng-container
+      *ngTemplateOutlet="products.length > 1 ? productsDropdown : (products.length === 1 ? productPanel : productPanel)">
+    </ng-container>
+
+    <ng-container *ngIf="!isDispatch">
+      <ng-container *ngTemplateOutlet="trustRelationPanel"></ng-container>
+    </ng-container>
+
+    <div class="mt-5">
+      <button type="submit"
+              class="avv-btn-primary"
+              [id]="'target-account-step-btn-continue'"
+              [disabled]="!form.valid">
+        {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+      </button>
+
+      <button type="button"
+              class="avv-btn-link mt-4 reject-transfer-btn"
+              [id]="'target-account-step-btn-reject'"
+              (click)="rejectTransfiya()">
+        Rechazar {{ !!isDispatch ? 'pedido' : 'transferencia' }}
+        <i class="icon icon-next"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<ng-template #productsDropdown>
+  <small class="avv-text-secondary mb-2">
+    {{
+      !!isDispatch
+        ? 'Selecciona una cuenta para hacer la transferencia'
+        : 'Selecciona una cuenta destino para abonar la transferencia'
+    }}
+  </small>
+
+  <avv-dropdown
+    [id]="'target-account-step-account'"
+    [label]="(isDispatch ? 'Cuenta origen' : 'Selecciona el producto') | translate"
+    [items]="products"
+    [control]="productSelected"
+    [template]="accountTemplate">
+
+    <ng-template
+      #accountTemplate
+      let-account="data"
+      let-className="class">
+      <div class="avv-item-account {{ className }}">
+        <p class="name avv-title-bold">{{ account?.nickname ? account?.nickname : (account.typeName | lastWord) }}</p>
+        <p class="number avv-title-bold">No. {{ account.numberProduct }}</p>
+        <p class="available"
+           [innerHTML]="('AVAILABLE' | translate) + ' ' + (account.availableBalance | currencyFormat)"></p>
+      </div>
+    </ng-template>
+  </avv-dropdown>
+</ng-template>
+
+<ng-template #productPanel>
+  <div *ngIf="products[0] as product" class="transfiya-management-step-product-panel">
+    <div class="avv-item-account">
+      <p class="name avv-title-bold">
+        {{ product?.nickname ? product?.nickname : (product.typeName | lastWord) }}
+      </p>
+      <p class="name avv-title-bold">{{ product.typeName | lastWord }}</p>
+      <p class="number avv-title-bold">No. {{ product.numberProduct }}</p>
+      <p class="available"
+         [innerHTML]="('AVAILABLE' | translate) + ' ' + (product.availableBalance | currencyFormat)"></p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #trustRelationPanel>
+  <div class="transfiya-management-step-trust-relation mt-5">
+    <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celDefaultAccount">
+      <div class="avv-toggle-text"
+           id="default-account-panel-btn"
+           [ngClass]="{'active': isDefaultAccount.value}">
+      <span
+        class="avv-toggle-label">{{ 'TRANSFERS.TRANSFIYA.MANAGEMENT.ACCOUNT_DEFAULT.PANEL.TITLE' | translate }}</span>
+        <span class="icon-info-tooltip" (click)="showPopoverInfo($event, TRANSFIYA_MANAGEMENT_TOOLTIP_DEFAULT_ACCOUNT)">
+        <i class="icon icon-informacion"></i>
+      </span>
+        <p class="small transfiya-management-step-default-account-text" (click)="toggleDefaultAccount()"></p>
+      </div>
+    </ng-template>
+
+    <div class="avv-toggle-text"
+         id="trust-relation-panel-btn"
+         [ngClass]="{'active': showTrustRelation}">
+      <span class="avv-toggle-label"
+            style="width: 57vw">{{ 'TRANSFERS.TRANSFIYA.TRUST_RELATION_PANEL.TITLE' | translate }}</span>
+      <span class="icon-info-tooltip" (click)="showPopoverInfo($event, TRANSFIYA_MANAGEMENT_TOOLTIP_TRUST_RELATION)">
+        <i class="icon icon-informacion"></i>
+      </span>
+      <p class="small transfiya-management-step-trust-relation-text" (click)="toggleTrustRelation()"></p>
+    </div>
+
+    <avv-field
+      *ngIf="showTrustRelation"
+      [type]="'text'"
+      [id]="'trust-relation-panel-name'"
+      [label]="'TRANSFERS.TRANSFIYA.TRUST_RELATION_PANEL.FIELD' | translate"
+      [control]="nickname">
+    </avv-field>
+  </div>
+</ng-template>

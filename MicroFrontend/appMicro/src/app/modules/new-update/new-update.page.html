@@ -1,0 +1,84 @@
+<ion-content [forceOverscroll]="false">
+    <div class="new-update-container">
+        <div class="new-update-container-header">
+            <h5 class="title">{{ 'NEW_UPDATE.TITLE' | translate }}</h5>
+            <i
+                *ngIf="!isRequiredUpdate"
+                (click)="closeModal()"
+                class="close-btn icon-salir"></i>
+        </div>
+        <div class="new-update-container-logo">
+            <img
+                [src]="'av-villas-logo.svg' | imageUrl"
+                alt="Logo"
+                draggable="false">
+        </div>
+        <div class="new-update-container-description">
+            <h4 class="title mb-5">{{ 'NEW_UPDATE.HI' | translate }}</h4>
+            <p
+                *ngIf="isRequiredUpdate"
+                class="mb-1" [innerHTML]="'NEW_UPDATE.DESCRIPTION' | translate">
+            </p>
+            <p
+                *ngIf="!isRequiredUpdate"
+                class="mb-1" [innerHTML]="'NEW_UPDATE.MESSAGE' | translate">
+            </p>
+
+            <h6 class="semi-bold">{{ 'NEW_UPDATE.DOWNLOAD_BUTTON' | translate }}</h6>
+        </div>
+        <div class="new-update-container-content">
+            <div class="contacts-content-list">
+                <ng-container *ngIf="isIOS; else androidItems">
+                    <div
+                        (click)="goToAppStore('IOS')"
+                        id="ios-app-store"
+                        class="avv-contact-card item">
+                        <div class="left-content">
+                            <img
+                                [src]="'ios-store.svg' | imageUrl"
+                                alt="Logo"
+                                draggable="false">
+                            <h6>{{ 'NEW_UPDATE.IOS_STORE' | translate }}</h6>
+                        </div>
+                        <span class="contact-icon icon-next"></span>
+                    </div>
+                </ng-container>
+            </div>
+            <button
+                *ngIf="!isRequiredUpdate"
+                (click)="closeModal()"
+                class="avv-btn-link">
+                {{ 'NEW_UPDATE.SKIP' | translate }}
+            </button>
+        </div>
+    </div>
+</ion-content>
+
+<ng-template #androidItems>
+    <div
+        (click)="goToAppStore('ANDROID')"
+        id="play-store"
+        class="avv-contact-card item">
+        <div class="left-content">
+            <img
+                [src]="'android-store.svg' | imageUrl"
+                alt="Logo"
+                draggable="false">
+            <h6>{{ 'NEW_UPDATE.ANDROID_STORE' | translate }}</h6>
+        </div>
+        <span class="contact-icon icon-next"></span>
+    </div>
+    <div
+        (click)="goToAppStore('HUAWEI')"
+        id="app-galery"
+        class="avv-contact-card item">
+        <div class="left-content">
+            <img
+                [src]="'huawei-store.svg' | imageUrl"
+                alt="Logo"
+                draggable="false">
+            <h6>{{ 'NEW_UPDATE.HUAWEI_STORE' | translate }}</h6>
+        </div>
+        <span class="contact-icon icon-next"></span>
+    </div>
+</ng-template>

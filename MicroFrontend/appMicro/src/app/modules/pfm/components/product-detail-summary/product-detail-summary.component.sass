@@ -1,0 +1,40 @@
+@import 'utils'
+
+.pfm-product-detail-summary
+  max-height: 56px
+  margin-bottom: $spacer-3
+  padding: $spacer-2
+  border-radius: 4px
+  border: 1px solid var(--gray-6)
+  overflow-y: hidden
+  transition: max-height .5s linear
+
+  header
+    display: flex
+    justify-content: space-between
+
+    .title
+      font-size: 16px
+      line-height: 24px
+      font-weight: 400
+
+    .icon
+      transform: rotate(0)
+      transition: transform .3s linear
+      i
+        font-size: 24px
+        color: var(--blue-1)
+
+  &.opened
+    max-height: 500px
+    transition: max-height .5s linear
+    header
+      span.icon
+        transform: rotate(180deg)
+        transition: transform .3s linear
+
+
+.pfm-product-detail-summary-loading
+  ion-skeleton-text
+    height: 56px
+    border-radius: 4px

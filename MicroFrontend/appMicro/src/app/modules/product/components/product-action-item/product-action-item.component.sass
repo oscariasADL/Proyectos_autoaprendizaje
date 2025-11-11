@@ -1,0 +1,39 @@
+.product-action-item
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 100%
+
+  &-image
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 14.933vw
+    height: 14.933vw
+    border-radius: 50%
+    margin: 0 1.867vw 2.133vw
+    background: var(--white)
+    box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+    > img
+      padding: 1.25vw
+
+  &-description
+    font-size: 2.68vw
+    line-height: 1.2
+    color: var(--gray-1)
+    text-align: center
+    width: 18.667vw
+
+  &.border-solid
+    margin-bottom: 6.400vw
+
+    .product-action-item-image
+      box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+  .avv-icons-btn-list-item-new
+    position: relative
+    top: 8px
+
+

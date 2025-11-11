@@ -1,0 +1,6 @@
+<app-headers #header [closeUrl]="'/'" [title]="'REQUEST_PRODUCTS.HEADER' | translate"
+  [type]="header?.headerType?.whiteTertiary" (closeAction)="goBack()">
+</app-headers>
+<ion-content [forceOverscroll]="false">
+  <mft-wc-wrapper [options]="options"></mft-wc-wrapper>
+</ion-content>

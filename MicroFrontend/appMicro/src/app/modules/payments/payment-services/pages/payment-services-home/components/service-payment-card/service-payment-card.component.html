@@ -1,0 +1,64 @@
+<section class="service-payment-card">
+  <div class="service-payment-card-status">
+    <span [ngClass]="statusClass">{{ statusLabel | translate }}</span>
+  </div>
+  <div class="service-payment-card-content">
+    <div class="content-header">
+      <p>{{ paymentBill.organizationName | capitalize }}</p>
+      <small>{{ paymentBill.alias }}</small>
+    </div>
+    <div class="content-info-items">
+      <dl>
+        <ng-container *ngFor="let info of paymentBillInfoDefault">
+          <dt>{{ info.label | translate }}</dt>
+          <dd *ngIf="info.value; else valText" [innerHTML]="info.value | currencyFormat"></dd>
+          <ng-template #valText>
+            <dd>{{ info.valueText | translate }}</dd>
+          </ng-template>
+        </ng-container>
+      </dl>
+      <p
+        *ngIf="paymentBill.biller && paymentBill?.schedulePayment">{{ paymentBillInfoSchedulePay?.valueText | translate }}</p>
+    </div>
+  </div>
+  <hr/>
+  <div class="service-payment-card-footer">
+    <button type="button" class="avv-btn-primary sm" *ngIf="paymentBill.enablePaymentButton" (click)="pay.emit()">
+      {{ 'PAYMENTS.SERVICES.HOME.CARD.ACTIONS.PAY' | translate | uppercase }}
+    </button>
+    <ng-container *ngIf="paymentBill.biller && !paymentBill?.schedulePayment">
+      <button type="button" class="avv-btn-secondary sm" (click)="schedule.emit()">
+        <i class="icon-calendario"></i>
+        {{ 'PAYMENTS.SERVICES.HOME.CARD.ACTIONS.SCHEDULE' | translate | uppercase }}
+      </button>
+    </ng-container>
+  </div>
+  <ng-container *ngIf="paymentBill.biller && paymentBill?.schedulePayment">
+    <div class="service-payment-card-schedule-actions" [ngClass]="{'closed': isCollapsedCard}">
+      <div class="content-info-items">
+        <dl>
+          <ng-container *ngFor="let info of paymentBillInfoSchedule">
+            <dt>{{ info.label | translate }}: &nbsp;</dt>
+            <dd *ngIf="info.value; else valText" [innerHTML]="info.value | currencyFormat"></dd>
+            <ng-template #valText>
+              <dd>{{ info.valueText | translate }}</dd>
+            </ng-template>
+          </ng-container>
+        </dl>
+      </div>
+      <div class="schedule-actions">
+        <button type="button" class="avv-btn-secondary sm" (click)="removeScheduling.emit()">
+          {{ 'PAYMENTS.SERVICES.HOME.CARD.ACTIONS.DELETE_SCHEDULE' | translate | uppercase }}
+        </button>
+        <button type="button" class="avv-btn-secondary sm" (click)="editSchedule.emit()">
+          {{ 'PAYMENTS.SERVICES.HOME.CARD.ACTIONS.EDIT_SCHEDULE' | translate | uppercase }}
+        </button>
+      </div>
+    </div>
+    <div class="service-payment-card-schedule-actions-collapsible" (click)="isCollapsedCard = !isCollapsedCard">
+      <span [ngClass]="{'closed': isCollapsedCard}">
+        <i class="icon-up"></i>
+      </span>
+    </div>
+  </ng-container>
+</section>

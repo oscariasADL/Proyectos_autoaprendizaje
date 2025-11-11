@@ -1,0 +1,26 @@
+<ion-content [forceOverscroll]="false">
+    <div class="notifications-empty-state-container">
+        <div class="notifications-empty-state-detail">
+            <img class="notifications-empty-state-image"
+                [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" alt="sin-resultados"
+                draggable="false">
+            <h6 class="notifications-empty-state-title">
+                {{ 'NOTIFICATION.MENU.EMPTY.TITLE' | translate }}
+            </h6>
+            <p class="notifications-empty-state-description">
+                {{ 'NOTIFICATION.MENU.EMPTY.DESCRIPTION' | translate }}
+            </p>
+            <app-notification icon="icon-alerta"
+                [description]="'NOTIFICATION.MENU.EMPTY.MESSAGE' | translate"></app-notification>
+        </div>
+
+        <div class="notifications-empty-state-actions">
+            <button class="avv-btn-primary" (click)="updateNotifications()" id="update">
+                {{ 'NOTIFICATION.MENU.EMPTY.ACTIONS.UPDATE' | translate }}
+            </button>
+            <button (click)="goBack()" class="avv-link avv-alert-link">
+                {{ 'NOTIFICATION.MENU.EMPTY.ACTIONS.EXIT' | translate }}
+            </button>
+        </div>
+    </div>
+</ion-content>

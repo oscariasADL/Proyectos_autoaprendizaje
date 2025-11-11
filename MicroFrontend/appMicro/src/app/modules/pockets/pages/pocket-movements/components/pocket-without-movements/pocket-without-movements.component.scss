@@ -1,0 +1,25 @@
+.pocket-without-movements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    img {
+      width: 72px;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #252b31;
+      padding: 8px 0 4px 0;
+    }
+  
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #252b31;
+    }
+  }
+  

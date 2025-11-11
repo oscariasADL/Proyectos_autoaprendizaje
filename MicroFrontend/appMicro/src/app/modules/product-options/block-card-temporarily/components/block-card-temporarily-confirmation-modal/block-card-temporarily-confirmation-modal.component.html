@@ -1,0 +1,22 @@
+<section class="block-card-temporarily-confirmation-modal">
+  <div class="block-card-temporarily-confirmation-modal__close">
+    <i class="icon icon-salir" (click)="closeModal()"></i>
+  </div>
+  <figure class="block-card-temporarily-confirmation-modal__image mb-3">
+    <img [src]="confirmationModalContent.icon | imageUrl" alt="">
+  </figure>
+  <h3 class="block-card-temporarily-confirmation-modal__title my-1">
+    {{ confirmationModalContent.title | translate }}
+  </h3>
+  <p class="block-card-temporarily-confirmation-modal__description mb-3 mt-1">
+    {{ confirmationModalContent.description | translate }}
+  </p>
+  <div class="block-card-temporarily-confirmation-modal__buttons mb-5">
+    <button type="button" class="avv-btn-primary" (click)="closeModal(true)">
+      {{ confirmationModalContent.confirmButtonText | translate | uppercase }}
+    </button>
+    <button type="button" class="avv-btn-secondary" (click)="closeModal()">
+      {{ confirmationModalContent.cancelButtonText | translate | uppercase }}
+    </button>
+  </div>
+</section>

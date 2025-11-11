@@ -1,0 +1,27 @@
+<article class="cancel-account-modal-container">
+  <i class="cancel-account-modal-close icon-salir" (click)="closeModal()"></i>
+
+  <div class="cancel-account-modal-panel">
+    <h2>{{ 'CANCEL_ACCOUNT.MODAL.TITLE' | translate }}</h2>
+    <div class="cancel-account-modal-panel-icon">
+      <img [src]="'illustrationsV2/dinero-error-small.svg' | imageUrl" alt="">
+    </div>
+    <div class="cancel-account-modal-panel-content">
+      <h3>{{ 'CANCEL_ACCOUNT.MODAL.SUBTITLE' | translate }}</h3>
+      <p
+        [innerHtml]="(!hasDigitalDebitCard ? 'CANCEL_ACCOUNT.MODAL.DESCRIPTION' : 'CANCEL_ACCOUNT.MODAL.DESCRIPTION_ALT') | translate"></p>
+      <div
+        class="avv-alert-info">
+        <i class="avv-alert-icon icon-info"></i>
+        <div
+          class="avv-alert-text"
+          [innerHTML]="'CANCEL_ACCOUNT.MODAL.PANEL_INFO' | translate">
+        </div>
+      </div>
+      <button type="button" class="avv-btn-primary"
+              (click)="closeModal(true)">{{ 'CANCEL_ACCOUNT.MODAL.ACTION' | translate }}</button>
+      <button type="button" class="avv-btn-secondary"
+              (click)="closeModal()">{{ 'ACTIONS.NOT_BACK' | translate }}</button>
+    </div>
+  </div>
+</article>

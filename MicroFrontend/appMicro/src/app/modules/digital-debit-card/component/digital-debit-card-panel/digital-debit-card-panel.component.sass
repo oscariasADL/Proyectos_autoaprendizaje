@@ -1,0 +1,50 @@
+@import 'utils'
+
+.digital-debit-card
+  &-container
+    width: 100%
+    position: relative
+    border-radius: 4px
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+    margin-bottom: $spacer-1
+
+  &-create-panel
+    +flex(center, flex-start)
+    padding: $spacer-1
+    background: linear-gradient(175.91deg, #80A8CC 1.9%, #8CB5D5 95.23%)
+    border-radius: 4px
+
+    img
+      max-height: 89px
+      position: relative
+      bottom: -5px
+
+    &-content
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      p
+        padding-left: $spacer
+        color: #FFFFFF
+        font-size: 12px
+        line-height: 14px
+
+      button
+        width: inherit
+        margin: 0
+
+  &-detail
+    +flex(flex-start, space-between)
+    background: no-repeat white 50% center/165% url('/assets/img/digital-debil-card-background.svg')
+
+    &-left
+      +flex(flex-start, flex-start)
+      padding: $spacer-1
+
+      img
+        width: 16px
+        margin: 5px $spacer 0 0
+
+      button
+        font-size: 12px

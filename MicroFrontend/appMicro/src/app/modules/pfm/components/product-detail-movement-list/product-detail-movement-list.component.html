@@ -1,0 +1,119 @@
+<section class="pfm-product-detail-movement-list">
+  <ng-container *ngIf="categoriesOfMovementsWorking && !categoriesOfMovementsCompleted; else movementList">
+    <div class="loading">
+      <ion-skeleton-text animated *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]"></ion-skeleton-text>
+    </div>
+  </ng-container>
+
+  <ng-template #movementList>
+    <ng-container
+      *ngTemplateOutlet="filters.params.state === FilterMove.Down ? incomes : expenses"></ng-container>
+  </ng-template>
+
+  <ng-template #incomes>
+    <div *ngIf="groupedIncomeCategories.categories.length > 0; else noMovementsFound">
+      <label>
+        <p>{{ 'PFM.PRODUCT_DETAIL_MOVEMENT_LIST.TOTAL_INCOMES' | translate }}</p>
+        <p [innerHTML]="groupedIncomeCategories.total?.toString() | currencyFormat"></p>
+      </label>
+
+      <div
+        *ngFor="let incomeCategory of groupedIncomeCategories.categories"
+        class="category">
+        <pzl-category-item
+          [data]="incomeCategory"
+          [percentage]="getPercentage(incomeCategory.value, groupedIncomeCategories.total)"
+          [type]="'incomes'"
+          (openItem)="fetchMovementsByCategory($event)">
+
+          <div slot="content">
+            <ng-container
+              *ngTemplateOutlet="areMovementsWorking(incomeCategory.code)
+                                ? loadingMovements
+                                : totalMovementsByCategory(incomeCategory.code) === 0
+                                    ? noMovementsByCategoryFound
+                                    : incomeMovements;
+                                context: { incomeCategory: incomeCategory }"></ng-container>
+          </div>
+        </pzl-category-item>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #expenses>
+    <div *ngIf="groupedExpenseCategories.categories.length > 0; else noMovementsFound">
+      <label>
+        <p>{{ 'PFM.PRODUCT_DETAIL_MOVEMENT_LIST.TOTAL_EXPENSES' | translate }}</p>
+        <p [innerHTML]="groupedExpenseCategories.total?.toString() | currencyFormat"></p>
+      </label>
+
+      <div
+        *ngFor="let expenseCategory of groupedExpenseCategories.categories"
+        class="category">
+        <pzl-category-item
+          [data]="expenseCategory"
+          [percentage]="getPercentage(expenseCategory.value, groupedExpenseCategories.total)"
+          [type]="'expenses'"
+          (openItem)="fetchMovementsByCategory($event)">
+
+          <div slot="content">
+            <ng-container
+              *ngTemplateOutlet="areMovementsWorking(expenseCategory.code)
+                                ? loadingMovements
+                                : totalMovementsByCategory(expenseCategory.code) === 0
+                                    ? noMovementsByCategoryFound
+                                    : expenseMovements;
+                                context: { expenseCategory: expenseCategory }"></ng-container>
+          </div>
+        </pzl-category-item>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #incomeMovements let-incomeCategory="incomeCategory">
+    <pzl-movement-card-group
+      [data]="getMovementsByCategory(incomeCategory.code)"
+      [size]="pageSize"
+      (changeLabelClick)="openChangeCategoryModal($event, incomeCategory.code, PFMCategoryType.INCOME)">
+    </pzl-movement-card-group>
+  </ng-template>
+
+  <ng-template #expenseMovements let-expenseCategory="expenseCategory">
+    <pzl-movement-card-group
+      [data]="getMovementsByCategory(expenseCategory.code)"
+      [size]="pageSize"
+      (changeLabelClick)="openChangeCategoryModal($event, expenseCategory.code, PFMCategoryType.EXPENSE)">
+    </pzl-movement-card-group>
+  </ng-template>
+
+  <ng-template #loadingMovements>
+    <div class="loading-movements">
+      <ion-skeleton-text animated *ngFor="let i of [1, 2, 3, 4, 5]"></ion-skeleton-text>
+    </div>
+  </ng-template>
+
+  <ng-template #noMovementsFound>
+    <div class="no-movements-found">
+      <img
+        [src]="'scroll.png' | imageUrl"
+        alt="no-movements-found"
+        class="no-movements-found">
+      <div class="titles">
+        <h5>{{ filters?.params?.state === FilterMove.Down
+          ? ('MOVEMENTS.NOT_FOUND.COME_IN_TITLE' | translate)
+          : ('MOVEMENTS.NOT_FOUND.COME_OUT_TITLE' | translate) }}</h5>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #noMovementsByCategoryFound>
+    <div class="no-movements-by-category-found">
+      <img
+        [src]="'scroll.png' | imageUrl"
+        alt="no-movements-found"
+        class="no-movements-found">
+      <div class="titles">
+        <h5>{{ 'MOVEMENTS.NOT_FOUND.CATEGORY_TITLE' | translate }}</h5>
+      </div>
+    </div>
+  </ng-template>
+</section>

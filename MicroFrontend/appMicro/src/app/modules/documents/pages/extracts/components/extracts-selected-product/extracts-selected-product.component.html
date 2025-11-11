@@ -1,0 +1,77 @@
+<main class="extracts-selected-product-container">
+  <p class="semi-bold">{{ 'EXTRACTS.TITLE2' | translate }}</p>
+  <div class="extracts-detail">
+    <div class="detail-icon">
+      <i class="icon icon-retiro" [ngClass]="product.franchise ? 'icon-tarjeta' : 'icon-retiro'"></i>
+    </div>
+    <div class="detail-info">
+      <div class="detail-info-title">
+        {{ product.typeName }} {{ product.nickname ?? '' }}
+      </div>
+      <div class="detail-info-subtitle" *ngIf="product.franchise">
+        <img [src]="product.franchise | franchiseImage" alt="Ícono de franquicia">
+        <p>{{ product.cardType }}</p>
+      </div>
+      <div class="detail-info-description">
+        No. <span>{{ product.numberProduct }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="extracts-list">
+    <ng-container
+      *ngTemplateOutlet="(workingPeriods$ | async) ? working : (completedPeriods$ | async) ? (periods$ | async)?.length > 0 ? content : empty:  noContent">
+    </ng-container>
+
+    <ng-template #working>
+      <ion-skeleton-text *ngFor="let item of [1, 2, 3]" animated class="avv-skeleton"></ion-skeleton-text>
+    </ng-template>
+
+    <ng-template #noContent>
+      <div class="avv-content-empty">
+        <p class="semi-bold avv-content-empty-text">
+          {{ 'EXTRACTS.NO_CONTENT_TITLE' | translate }}
+        </p>
+        <div class="avv-content-empty-image">
+          <img
+            class="icon"
+            [src]="'errorde-carga.svg' | imageUrl"
+            alt="errorde-carga">
+        </div>
+        <small class="avv-content-empty-message">
+          {{ 'EXTRACTS.NO_CONTENT_MESSAGE' | translate }}
+        </small>
+      </div>
+    </ng-template>
+
+    <ng-template #empty>
+      <div class="avv-content-empty">
+        <p class="semi-bold avv-content-empty-text">
+          {{ 'EXTRACTS.EMPTY_TITLE' | translate }}
+        </p>
+        <div class="avv-content-empty-image">
+          <img
+            class="icon"
+            [src]="'sin-movimientos.svg' | imageUrl"
+            alt="sin-movimientos">
+        </div>
+        <small class="avv-content-empty-message">
+          {{ 'EXTRACTS.EMPTY_MESSAGE' | translate }}
+        </small>
+      </div>
+    </ng-template>
+
+    <ng-template #content>
+      <div *ngFor="let period of periods$ | async; index as i"
+           [id]="'extract-download-btn-' + i "
+           class="extract-download-btn"
+           [ngClass]="{'working': (isDownload$(period.fileDesc) | async), 'disabled': (isDownloadingSomeFile$ | async)}"
+           (click)="downloadExtract(period)">
+        <p>{{ period.fileDesc }}</p>
+        <div class="extracts-download-icon">
+          <i class="icon-descarga extract-icon"></i>
+          <i class="spinner extract-loader"></i>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</main>

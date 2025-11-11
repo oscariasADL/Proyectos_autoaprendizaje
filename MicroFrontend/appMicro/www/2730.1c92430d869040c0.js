@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[2730],{32730:(a,s,n)=>{n.r(s),n.d(s,{QuickActionsPluginWeb:()=>o});var _=n(10467),e=n(15083);class o extends e.E_{configureQuickActions(c){return(0,_.A)(function*(){return Promise.resolve()})()}}}}]);

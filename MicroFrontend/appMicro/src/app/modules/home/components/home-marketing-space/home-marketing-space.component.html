@@ -1,0 +1,58 @@
+<ng-template [appFeatureToggle]="featureFlagsKey.MathildeAds">
+  <article class="home-marketing-space">
+    <ng-template [appFeatureToggle]="featureFlagsKey.AppleWalletBanner"
+      *ngIf="currentPlatform === platforms.IOS">
+      <!--*ngIf="currentPlatform === platforms.IOS; else cdtPanel">-->
+      <section class="home-marketing-space-apple-pay" id="apple-pay-banner"
+        *ngIf="isEnableFeatureFlag(featureFlagsKey.AppleWalletBanner); else cdtPanel" [routerLink]="WALLET_CARD_LIST">
+        <figure class="cdt-panel-img">
+          <img [src]="'wallets/apple-pay-banner.svg' | imageUrl" alt="">
+        </figure>
+        <div class="apple-pay-panel-content">
+          <h2>{{ 'HOME.MARKETING.APPLE_PAY.TITLE' | translate }}</h2>
+          <p [innerHtml]="'HOME.MARKETING.APPLE_PAY.DESCRIPTION' | translate"></p>
+        </div>
+        <a href="javascript:void(0);" class="apple-pay-panel-action">
+          {{ 'HOME.MARKETING.APPLE_PAY.ACTION_LINK' | translate }}
+        </a>
+      </section>
+    </ng-template>
+    <ng-template [appFeatureToggle]="featureFlagsKey.GoogleWalletBanner" *ngIf="currentPlatform === platforms.ANDROID">
+      <section class="home-marketing-space-google-pay" id="google-pay-banner"
+        *ngIf="isEnableFeatureFlag(featureFlagsKey.GoogleWalletBanner); else cdtPanel" [routerLink]="WALLET_CARD_LIST">
+        <figure>
+          <img [src]="'wallets/request-google-pay.svg' | imageUrl" alt="">
+        </figure>
+        <div class="google-pay-content">
+          <h2>{{ 'HOME.MARKETING.GOOGLE_PAY.TITLE' | translate }}</h2>
+          <p [innerHtml]="'HOME.MARKETING.GOOGLE_PAY.DESCRIPTION' | translate"></p>
+        </div>
+        <a href="javascript:void(0);" class="google-pay-panel-action">
+          {{ 'HOME.MARKETING.GOOGLE_PAY.ACTION_LINK' | translate }}
+        </a>
+      </section>
+    </ng-template>
+    <section>
+      <div id="mathilde-ads" class="mathilde-ads-third" (click)="interceptMathildeAddsClick($event)">
+        <!--- FOR DEV -->
+        <!--<a href="https://google.com" target="_blank">Mathilde Add Box</a>
+        <input type="hidden" id="mth_url" value="https://www.avvillas.com.co/">-->
+      </div>
+    </section>
+  </article>
+</ng-template>
+
+<ng-template #cdtPanel>
+  <section class="home-marketing-space-cdt-panel" id="mathilde-ads-second">
+    <figure class="cdt-panel-img">
+      <img [src]="'marketing/cdt.png' | imageUrl" alt="">
+    </figure>
+    <div class="cdt-panel-content">
+      <h2>{{ 'HOME.MARKETING.CDT.TITLE' | translate }}</h2>
+      <p [innerHtml]="'HOME.MARKETING.CDT.DESCRIPTION' | translate"></p>
+    </div>
+    <a href="javascript:void(0);" class="cdt-panel-action" (click)="openExternalLinkClick(linkCdt)">
+      {{ 'HOME.MARKETING.CDT.ACTION_LINK' | translate }}
+    </a>
+  </section>
+</ng-template>

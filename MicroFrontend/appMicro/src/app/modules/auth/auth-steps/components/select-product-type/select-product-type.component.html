@@ -1,0 +1,33 @@
+<ion-content [forceOverscroll]="false">
+  <div class="auth-steps-container select-product-type-container">
+    <div class="auth-steps-header">
+      <h5>{{ title | translate }}</h5>
+      <i
+        class="icon-salir"
+        (click)="showExitModal()"></i>
+    </div>
+
+    <div class="auth-steps-body">
+      <div class="logo-container">
+        <img [src]="'av-villas-logo.svg' | imageUrl" [alt]="'AUTH.STEP.SELECT_PRODUCT_TYPE.ALT_LOGO' | translate" />
+      </div>
+      <div class="title-content">
+        <h2>{{ 'AUTH.STEP.SELECT_PRODUCT_TYPE.TITLE' | translate }}</h2>
+        <h3>{{ 'AUTH.STEP.SELECT_PRODUCT_TYPE.TITLE_2' | translate }}</h3>
+      </div>
+      <div class="products-content">
+        <ng-container *ngFor="let product of products">
+          <button type="button" class="product-card" (click)="run(product.typeDetail)">
+            <div class="product-info">
+              <i class="icon {{product.icon}}"></i>
+              <p>{{ product.title | translate }}</p>
+            </div>
+            <i class="icon icon-next"></i>
+          </button>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="auth-steps-footer"></div>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-card [button]="true" (click)="onCardClick()">  
+  <div class="card-container">
+  <div class="icon-container">
+    <i class="icon-arroba"></i>
+  </div>
+  <div class="text-container">
+  <ion-card-header>
+    
+    <ion-card-subtitle>{{subtitle | translate}}</ion-card-subtitle>
+    <ion-card-title>{{title | translate}}</ion-card-title>
+   
+ 
+     <div class="tag" *ngIf="tag">{{tag | translate}}</div>
+  </ion-card-header>
+
+</div>
+<ion-card-content>
+ 
+      <app-radio-btn 
+        #radioBtn
+        [value]="radioValue"
+        [name]="radioName"
+        [(ngModel)]="selectedValue"
+        (selectionChange)="onRadioChanged($event)">
+      </app-radio-btn></ion-card-content>
+     
+  </div>
+</ion-card>

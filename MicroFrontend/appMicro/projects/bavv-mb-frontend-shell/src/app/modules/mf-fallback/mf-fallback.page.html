@@ -1,0 +1,50 @@
+<app-headers 
+  #header 
+  [closeUrl]="'/'" 
+  [type]="headerType" 
+  (closeAction)="goBack()">
+</app-headers>
+
+<ion-content>
+  <div class="container">
+    <div class="container__header">
+      <img [src]="'sesion-finalizada.svg' | imageUrl" alt="Logo" draggable="false">
+      <div class="container__header__info">
+        <p class="semi-bold">
+          {{ isSPI 
+            ? ('MF_FALLBACK.TITLE' | translate: {siteName: label}) 
+            : ('MF_FALLBACK.TITLE_GENERIC' | translate) 
+          }}
+        </p>
+        <p>
+          {{ isSPI 
+            ? ('MF_FALLBACK.SUBTITLE' | translate) 
+            : ('MF_FALLBACK.SUBTITLE_GENERIC' | translate) 
+          }}
+        </p>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button 
+        class="avv-btn-primary" 
+        id="logout-retry-btn" 
+        (click)="isSPI ? onRetry() : goBack()">
+        {{ isSPI 
+          ? ('MF_FALLBACK.ACTIONS.RETRY' | translate | uppercase) 
+          : ('MF_FALLBACK.ACTIONS.GO_HOME' | translate | uppercase) 
+        }}
+      </button>
+      
+      <button 
+        class="avv-link btn" 
+        id="logout-secondary-btn" 
+        (click)="isSPI ? goBack() : openExternal()">
+        {{ isSPI 
+          ? ('MF_FALLBACK.ACTIONS.GO_BACK' | translate | uppercase) 
+          : ('MF_FALLBACK.ACTIONS.GO_TO_SITE' | translate | uppercase) 
+        }}
+      </button>
+    </div>
+  </div>
+</ion-content>

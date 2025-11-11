@@ -1,0 +1,86 @@
+@import 'utils'
+
+.unblock-product-password-container
+  padding: 42px $spacer-2 $spacer-4
+  text-align: center
+
+  &-header
+    .title
+      font-size: 16px
+      line-height: 1.5
+      margin-bottom: $spacer
+
+    .description
+      font-size: 14px
+      line-height: 1.71
+      max-width: 320px
+      margin: 0 auto $spacer-3
+
+  ::ng-deep
+    .input-password-container
+      margin: 0 0 $spacer-2 0
+      +flex(center, space-between)
+
+      fieldset
+        width: 100%
+
+        .password-input
+          +flex(center, space-between)
+
+        div
+          &:first-child
+            input
+              margin-left: 0
+
+          .password-bar
+            height: 3px
+            max-width: 56px
+
+          input
+            margin: 0 0 0 16px
+            width: 56px
+            height: 56px
+
+      &-eye
+        margin-left: 32px
+
+        .icon
+          color: var(--gray-2)
+          font-size: 24px
+          font-weight: bold
+          position: relative
+          top: 5px
+
+          &.hide
+            display: none
+
+      &.hide
+        fieldset
+          div
+            .password-char
+              right: 17px
+              top: 8px
+
+    .current-password-container-input
+      .input-password-container
+        margin: 0
+
+  .unblock-product-password-fields
+    width: 100%
+    text-align: left
+    margin-top: $spacer-4
+    padding: 0 $spacer
+
+  .unblock-product-password-label
+    color: var(--blue-1)
+    margin-bottom: 4px
+    line-height: 1.67
+
+  .new-password-container-error
+    color: var(--red-2)
+    margin-top: $spacer
+    line-height: 1.67
+
+  .unblock-product-password-btn
+    margin-top: $spacer-4 * 2
+

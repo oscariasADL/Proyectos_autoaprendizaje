@@ -1,0 +1,84 @@
+@import 'utils'
+
+.notifications-menu
+  &-container
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    height: 100vh
+
+    &-empty
+      display: flex
+      align-items: center
+      flex-direction: column
+      padding: 0 $spacer-2
+      background-color: var(--white)
+      height: calc(100vh - calc(56px + var(--safe-area-inset-bottom)))
+
+      > img
+        margin-top: 40px
+
+      .title
+        padding: $spacer-3 0
+        font-size: $spacer-2
+        font-weight: 600
+        line-height: 1.5
+        text-align: center
+        color: var(--gray-1)
+
+      .description
+        padding: 0 0 $spacer-4
+
+  &-header
+    position: absolute
+    z-index: 1
+    width: 100%
+    top: 0
+    left: 0
+    padding: calc(17px + var(--safe-area-inset-top)) $spacer-2 $spacer-2 $spacer-4
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: var(--red-1)
+    height: calc(56px + var(--safe-area-inset-top))
+
+    p
+      font-weight: bold
+      color: var(--white)
+      font-size: 20px
+      line-height: 1.2
+
+    i
+      font-size: $spacer-3
+      color: var(--white)
+
+  &-content
+    overflow-y: auto
+    position: relative
+    padding: 0
+    margin-top: calc(56px + var(--safe-area-inset-top))
+    height: calc(100vh - calc(56px + var(--safe-area-inset-bottom)))
+
+    &-scroll
+      position: relative
+      min-height: 500px
+      height: 100%
+
+  &-working
+    padding: $spacer-2
+
+  &-fab-icons
+    margin-right: 6px
+    margin-bottom: calc(20px +  var(--safe-area-inset-bottom))
+
+    button
+      display: inline-block
+      width: 56px
+      height: 56px
+      padding: 16px
+      border-radius: 50px
+      background-color: var(--red-1)
+
+      &.success
+        margin-right: $spacer
+        background-color: var(--success)

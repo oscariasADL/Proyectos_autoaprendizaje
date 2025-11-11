@@ -1,0 +1,30 @@
+<ion-content [forceOverscroll]="false">
+  <main class="auth-steps-container select-product-type-container">
+    <header class="auth-steps-header">
+      <h5>{{ title | translate }}</h5>
+      <i class="icon-salir" (click)="showExitModal()"></i>
+    </header>
+
+    <section class="auth-steps-body confirm-process-start__container">
+      <div class="confirm-process-start__detail">
+        <img class="mb-1" [src]="'illustrationsV2/navegador-contrasena-candado-regular.svg' | imageUrl" alt
+          draggable="false">
+        <h6 class="confirm-process-start__title">
+          {{ 'AUTH.STEP.CONFIRM_PROCESS_START.TITLE' | translate }} </h6>
+        <p class="confirm-process-start__description">
+          {{ 'AUTH.STEP.CONFIRM_PROCESS_START.DESCRIPTION' | translate }}
+        </p>
+      </div>
+      <div class="confirm-process-start__actions">
+        <button type="button" class="avv-btn-primary" (click)="run(true)" id="confirm">
+          {{ 'AUTH.STEP.CONFIRM_PROCESS_START.BUTTONS.CONFIRM' | translate }}
+        </button>
+        <button type="button" class="avv-link auth-steps-link" (click)="showExitModal()" id="cancel">
+          {{ 'AUTH.STEP.CONFIRM_PROCESS_START.BUTTONS.CANCEL' | translate }}
+        </button>
+      </div>
+    </section>
+
+    <footer class="auth-steps-footer"></footer>
+  </main>
+</ion-content>

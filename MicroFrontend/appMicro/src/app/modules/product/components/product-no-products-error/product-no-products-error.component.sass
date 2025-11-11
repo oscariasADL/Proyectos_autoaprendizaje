@@ -1,0 +1,71 @@
+@import 'utils'
+
+.no-products
+  &-container
+    overflow-y: auto
+    height: 100vh
+    display: grid
+    grid-template-rows: auto 1fr
+
+  &-header
+    text-align: end
+    padding: calc(16px + var(--safe-area-inset-top)) 16px 16px
+    font-size: 24px
+    color: #5C6B7A
+
+  &-content
+    padding: 0 50px
+    text-align: center
+    +flex(center, center, column)
+
+    h2
+      font-size: 16px
+      font-weight: 600
+      line-height: 1.5
+      color: #252B31
+      margin-bottom: 16px
+
+    button
+      display: flex
+      justify-content: center
+      align-items: end
+
+      i
+        font-size: 28px
+
+  &-logo
+    margin-bottom: 48px
+
+  &-icon
+    width: 112px
+    margin-bottom: 30px
+
+  &-title
+    margin-bottom: 56px
+    font-size: 14px
+    font-weight: 400
+
+  &-link
+    display: inline-block
+    font-size: 14px
+    font-weight: 600
+    line-height: 1.57
+    text-align: center
+    color: var(--blue-2)
+    margin-top: 20px
+
+    i
+      position: relative
+      top: 4px
+      left: 2px
+      font-size: 24px
+
+  @media(max-height: 624px)
+    &-content
+      padding: 30px
+
+    &-logo
+      margin-bottom: 30px
+
+    &-icon
+      margin-bottom: 30px

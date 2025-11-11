@@ -1,0 +1,56 @@
+@import 'utils'
+
+.cdt-renewal-notice
+  &-container
+    border-radius: 4px
+    border: solid 1px var(--gray-4)
+    box-shadow: 0 2px 4px 0 rgba(44, 44, 51, 0.24)
+
+    &.disabled
+      opacity: 0.5
+
+  &-active
+    +flex(flex-start, flex-start)
+    padding: $spacer-2 $spacer
+
+    i
+      font-size: 24px
+      color: var(--blue-1)
+
+    &-info
+      max-width: 200px
+
+    &-panel
+      +flex(center, flex-start)
+
+      small
+        font-size: 12px
+
+  &-inactive
+    +flex(center, space-between)
+    padding: $spacer-2 $spacer-1
+
+    i
+      font-size: 32px
+
+    &-panel
+      +flex(center, space-between)
+
+    &-next
+      color: var(--blue-1)
+
+  &-info
+    +flex(flex-start, flex-start)
+    margin: 16px 0
+    padding: 8px 10px 8px 8px
+    border-radius: 4px
+    border: solid 1px var(--gray-4)
+
+    &.last-day
+      background-color: var(--info-bg)
+
+    i
+      color: var(--blue-3)
+
+    small
+      color: var(--gray-8)

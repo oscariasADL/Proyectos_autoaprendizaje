@@ -1,0 +1,68 @@
+@import 'utils'
+
+.notification-transfiya
+  background-color: var(--gray-4)
+
+  &-title
+    font-size: 14px
+    font-weight: bold
+    padding: $spacer-2 0 $spacer $spacer-3
+    border-bottom: 1px solid var(--gray-6)
+
+  &-body
+    background-color: var(--white)
+
+    li
+      padding: $spacer-2 0
+      margin: 0 $spacer-2
+      border-bottom: 1px solid var(--gray-4)
+      position: relative
+
+      &:last-child
+        border-bottom: none
+
+      .label
+        font-size: 12px
+        line-height: 1.33
+        letter-spacing: normal
+        color: var(--gray-2)
+        padding-left: $spacer
+
+        i
+          position: relative
+          top: 5px
+          left: -#{$spacer}
+          font-size: $spacer-2
+
+          &.icon-subir_docs
+            color: var(--red-1)
+
+          &.icon-descargar
+            color: var(--success)
+
+      .amount
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.6
+        letter-spacing: normal
+        color: var(--gray-1)
+        margin-left: $spacer-3
+
+      .promo
+        display: flex
+
+        &-icon
+          color: var(--gray-2)
+          position: relative
+          top: 3px
+
+        &-info
+          color: var(--gray-1)
+          margin-left: $spacer
+
+      .arrow
+        color: var(--blue-1)
+        font-size: $spacer-4
+        position: absolute
+        top: $spacer-2
+        right: 0

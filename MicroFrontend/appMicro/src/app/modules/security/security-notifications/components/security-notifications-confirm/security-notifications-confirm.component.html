@@ -1,0 +1,22 @@
+<div class="security-notifications-confirm-container">
+
+  <img class="security-notifications-confirm-icon" [src]="'icons/icon-notificaciones.svg' | imageUrl" alt=""
+       draggable="false">
+
+  <p class="semi-bold security-notifications-confirm-title">
+    ¿Quieres desactivar el servicio de notificaciones de AV Villas App?
+  </p>
+
+  <p class="security-notifications-confirm-subtitle mb-5">
+    No recibirás mensajes en este buzón con beneficios, descuentos, alertas de compras o pagos que realices.
+  </p>
+
+  <button class="avv-btn-primary" (click)="disableNotifications.emit()">
+    {{ 'Sí, desactivar' | translate | uppercase }}
+  </button>
+
+  <button class="avv-btn-secondary mt-1" (click)="back.emit()">
+    {{ 'No, volver' | translate | uppercase }}
+  </button>
+
+</div>

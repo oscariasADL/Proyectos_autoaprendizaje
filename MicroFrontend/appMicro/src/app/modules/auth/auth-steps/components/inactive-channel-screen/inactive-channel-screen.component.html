@@ -1,0 +1,38 @@
+<ion-content [forceOverscroll]="false">
+  <div class="auth-steps-container">
+    <div class="auth-steps-header inactive-channel-header">
+      <h5></h5>
+      <i class="icon-salir" (click)="showExitModal()"></i>
+    </div>
+
+    <div class="auth-steps-body inactive-channel-body">
+      <div class="inactive-channel-container">
+        <div class="inactive-channel-content">
+          <img class="inactive-channel-logo" [src]="'av-villas-logo.svg' | imageUrl" alt="Logo" draggable="false">
+          <img class="inactive-channel-icon" [src]="'icons/datos-no-coinciden.svg' | imageUrl" alt="" draggable="false">
+          <p class="semi-bold inactive-channel-title">{{ 'INACTIVE_CHANNEL.TITLE' | translate }}</p>
+
+          <ul class="avv-list-red-point inactive-channel-list">
+            <li>
+              <p class="small">
+                {{ 'INACTIVE_CHANNEL.DESCRIPTION_1' | translate }}
+              </p>
+            </li>
+            <li>
+              <p class="small">
+                {{ 'INACTIVE_CHANNEL.DESCRIPTION_2' | translate }}
+              </p>
+            </li>
+          </ul>
+
+          <button class="avv-btn-primary" id="inactive-channel-button" (click)="redirectLink()">
+            {{ 'INACTIVE_CHANNEL.BUTTON' | translate | uppercase }}
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-steps-footer"></div>
+  </div>
+</ion-content>

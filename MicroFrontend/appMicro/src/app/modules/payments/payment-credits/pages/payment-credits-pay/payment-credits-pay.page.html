@@ -1,0 +1,39 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="'PAYMENTS.PAY_LOAN.TITLE' | translate"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)"
+          [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-pay-loan-amount
+            *ngSwitchCase="'amount'"
+            [form]="form"
+            [control]="amount"
+            (continue)="runNextStep(key)">
+    </app-pay-loan-amount>
+
+    <app-pay-loan-type
+            *ngSwitchCase="'paymentType'"
+            [form]="form"
+            [control]="paymentType"
+            (continue)="runNextStep(key)">
+    </app-pay-loan-type>
+  </div>
+
+</ng-template>

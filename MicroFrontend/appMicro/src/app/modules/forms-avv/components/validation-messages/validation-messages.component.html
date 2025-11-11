@@ -1,0 +1,5 @@
+<div class="validation-message" *ngIf="isErrorMessage">
+    <ng-container *ngFor="let msg of errorMessages; let count = count; let i = index">
+        <div *ngIf="i === (count - 1)">{{ msg }}</div>
+    </ng-container>
+</div>

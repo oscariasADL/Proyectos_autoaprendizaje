@@ -1,0 +1,65 @@
+<div class="social-security-worksheet-container">
+  <p class="semi-bold social-security-worksheet-title">Ingresa los datos de la planilla</p>
+
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="checkWorksheet()" class="social-security-contributor-list">
+
+    <avv-dropdown class="social-security-worksheet-operator"
+                  [id]="'social-security-worksheet-operator'"
+                  [items]="socialSecurityOperator"
+                  [label]="'Operador' | translate"
+                  [control]="worksheet">
+    </avv-dropdown>
+
+    <small class="social-security-worksheet-question">¿Tienes el número de planilla?</small>
+
+    <ul class="social-security-worksheet-options avv-option-select-options">
+      <li class="avv-option-select-option"
+          (click)="setActiveType(worksheetType.hasWorksheet)"
+          [ngClass]="{'active': isHasWorksheet}">
+
+        <div class="avv-option-select-item">
+          <p class="small">{{ 'Si lo tengo' | translate }}</p>
+        </div>
+
+        <ng-container *ngIf="isHasWorksheet">
+          <avv-input
+                  class="social-security-worksheet-option-input"
+                  [id]="'social-security-worksheet-number'"
+                  [type]="'numeric'"
+                  [label]="'Numero de planilla' | translate"
+                  [autoFocus]="true"
+                  [control]="worksheetNumber">
+          </avv-input>
+        </ng-container>
+
+      </li>
+
+      <li class="avv-option-select-option"
+          (click)="setActiveType(worksheetType.notWorksheet); openPicker()"
+          [ngClass]="{'active': isNotWorksheet}">
+        <div class="avv-option-select-item">
+          <p class="small">{{ 'No lo tengo' | translate }}</p>
+        </div>
+        <div class="avv-option-select-item-input-panel"
+             *ngIf="isNotWorksheet">
+          <div class="social-security-worksheet-option-datetime">
+            <small>Año - mes</small>
+            <input type="month" class="datetime" readonly="true" [formControl]="worksheetDate">
+          </div>
+
+        </div>
+      </li>
+    </ul>
+
+    <small class="social-security-worksheet-info">
+      Si tienes PIN único, elige año y mes para consultar el valor a pagar.
+    </small>
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [disabled]="!isValidForm">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+
+  </form>
+</div>

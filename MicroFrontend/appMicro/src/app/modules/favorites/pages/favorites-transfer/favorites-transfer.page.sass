@@ -1,0 +1,76 @@
+@import 'utils'
+
+.favorites-transfer-container, .favorites-transfer-no-content
+  margin-top: 40px
+  padding: 32px 16px calc(80px + var(--safe-area-inset-bottom))
+
+.favorites-transfer-container
+  margin-top: 10px
+  h2
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
+    text-align: center
+
+  section > ul
+    .avv-voucher-label
+      color: #252B31
+    .avv-voucher-item.insufficient-balance
+      background-color: #FFEAED
+      p
+        color: var(--gray-7)
+      .avv-voucher-fields
+        p.insufficient-balance
+          color: #cb3a28
+      .avv-voucher-fields
+        .avv-btn-secondary
+          height: 32px
+          margin-top: $spacer-2
+          padding: 0px 13px
+          background-color: white
+          font-size: 12px
+          vertical-align: baseline
+          line-height: $spacer-2
+
+    .avv-voucher-item.additional-data
+      border-bottom: 1px solid var(--gray-3)
+      padding-bottom: $spacer-2
+
+    .avv-voucher-item:last-child
+      border-bottom: none
+
+
+
+.favorites-transfer-no-content
+  .no-content-image
+    width: 112px
+    height: 112px
+    margin: 0 auto
+
+  .no-content-title
+    margin-top: 20px
+
+    h2, p
+      text-align: center
+
+    h2
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+      color: var(--gray-8)
+
+    p
+      margin-top: 4px
+      font-size: 14px
+      font-weight: 400
+      line-height: 20px
+
+  .no-content-actions
+    margin-top: 50px
+    a
+      color: #0014A6
+    button
+      width: 100%
+      margin-top: 40px
+      padding: 4px 11px
+      text-align: center

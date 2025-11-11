@@ -1,0 +1,64 @@
+@import 'utils'
+
+.avv-icons-btn-list
+  +flex(center, space-between)
+  position: relative
+  flex-wrap: wrap
+
+  &-item
+    +flex(center, flex-start, column)
+    position: relative
+    flex-grow: 1
+    padding: $spacer
+    border-radius: 4px
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+    background-color: var(--white)
+    border: solid 1px var(--gray-4)
+    width: calc(50% - 16px)
+    max-width: calc(50% - 16px)
+    height: calc(45vw - 32px)
+    transition: .3s
+    margin-bottom: $spacer-4
+
+    &-new
+      position: absolute
+      top: 0
+      right: 0
+      padding: 4px 8px
+      background-color: #E2F9EF
+      border-radius: 0 3px 0 4px
+      font-size: 11px
+      font-weight: 600
+      color: #115337
+
+    &-label
+      margin: 0
+      display: inline-block
+      text-align: center
+      height: 10.67vw
+      font-size: 4vw !important
+      +flex(center, center, column)
+
+      @media(max-width: 320px)
+        font-size: 3.8vw !important
+
+    &-icon
+      +flex(center, center)
+      margin-bottom: 2.1332vw
+
+      img
+        max-height: 19.2vw
+        max-width: 19.2vw
+
+    &.active
+      border: solid 1px var(--blue-1)
+      cursor: pointer
+
+    &.active
+      border: solid 2px var(--blue-1)
+
+    &:focus
+      outline: none
+
+    &.disabled
+      opacity: 0.19

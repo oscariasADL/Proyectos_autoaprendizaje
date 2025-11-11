@@ -1,0 +1,49 @@
+<app-headers
+  [backUrl]="'/'"
+  [title]="'TRANSFERS.TITLE' | translate">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="transfers-container">
+    <div class="avv-icons-btn-list">
+      <ng-container *ngFor="let item of BUTTON_LIST">
+        <ng-container *appFeatureToggle="item.featureFlagKey">
+          <ng-container *appDenyAccounts="item.denyDocumentTypes">
+            <div
+              role="button"
+              [utag]="item.utag"
+              [utagCategory]="item.utagCategory"
+              [attr.aria-label]="(item.label | translate | stripTags)"
+              (click)="item.action && !item.disabled ? item.action() : null"
+              [id]="item.id"
+              [ngClass]="{ 'disabled': item.disabled }"
+              class="avv-icons-btn-list-item {{ item.className }} ion-activatable ripple-parent"
+            >
+              <ion-ripple-effect></ion-ripple-effect>
+              <span *ngIf="item.isNew" class="avv-icons-btn-list-item-new">
+          {{ 'COMMON_LABELS.IS_NEW' | translate }}
+        </span>
+              <div class="avv-icons-btn-list-item-icon">
+                <img [src]="item.image | imageUrl" height="72" alt/>
+              </div>
+              <p
+                class="avv-icons-btn-list-item-label small"
+                [innerHTML]="item.label | translate"
+              ></p>
+            </div>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+
+    </div>
+    <ng-template [appFeatureToggle]="featureFlagsKey.AddFavorite">
+      <div class="favorite-card">
+        <app-add-favorite-card (cardClicked)="goToCreateFavorite()"></app-add-favorite-card>
+      </div>
+    </ng-template>
+    <app-find-other-features
+      #findOtherFeatures
+      [type]="findOtherFeatures?.findOtherFeaturesType?.transfers">
+    </app-find-other-features>
+  </div>
+</ion-content>

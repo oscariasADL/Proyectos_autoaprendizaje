@@ -1,0 +1,58 @@
+@import 'utils'
+
+.transfiya-management-step
+  &-container
+    min-height: calc(100vh - 90px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+    padding: $spacer-3 $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+    .reject-transfer-btn
+      +flex(center, center)
+
+      i
+        font-size: 24px
+
+  &-title
+    font-weight: initial
+    margin-bottom: 40px
+    padding: 0
+
+    b
+      font-weight: initial
+
+  &-trust-relation
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: $spacer-3
+
+    &-text
+      color: var(--gray-7)
+
+    .avv-toggle-text
+      display: flex
+      align-items: start
+
+      .avv-toggle-label
+        color: var(--gray-7)
+
+      .icon-info-tooltip
+        flex-grow: 1
+        margin-left: $spacer
+        font-size: 20px
+        color: var(--blue-1)
+
+      .transfiya-management-step-default-account-text, .transfiya-management-step-trust-relation-text
+        flex-grow: 1
+
+
+  &-product-panel
+    background-color: var(--gray-4)
+    width: calc(100% + #{$spacer-4})
+    position: relative
+    left: -#{$spacer-2}
+    padding: $spacer-3 $spacer-2 $spacer-4
+    margin-bottom: $spacer-4
+
+    .avv-item-account
+      padding: 0
+      text-align: center

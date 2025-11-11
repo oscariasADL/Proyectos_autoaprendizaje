@@ -1,0 +1,29 @@
+<div role="button"
+     [attr.aria-label]="(contact?.isFake ? (contact?.name | translate) : (contact?.name | capitalize: true))"
+     id="contact-{{ myId }}" class="avv-contact-card contact-item"
+     [class.contact-block]="contact?.status === statusContact.BLOCK" [ngClass]="{'fake': contact?.isFake}">
+        <span class="contact-image">
+                <img *ngIf="contact?.isFake" [src]="'bavv-logo.svg' | imageUrl" alt="no-contacts">
+          {{ contact?.isFake ? '' : contactLetter }}
+        </span>
+  <div class="contact-info" [ngClass]="{'bigger-title': index === 0}">
+    <div class="contact-info-title">
+      <h6 class="name" *ngIf="!contact?.isFake"
+          [innerHTML]="(contact?.name | capitalize: true) | highlight: keyWord">
+      </h6>
+      <ng-container *ngIf="contact?.status === statusContact.BLOCK">
+        <i class="icon-informacion" (click)="showPopover($event)" role="button"
+           [attr.aria-label]="'Más información'"></i>
+      </ng-container>
+    </div>
+    <p class="nickname" [innerHTML]="
+                contact?.isFake ? (contact?.nickname | translate) : !!fieldToNickname && (contact[fieldToNickname]?.trim() | highlight: keyWord) ||
+                (contact?.nickname?.trim() | translate | highlight: keyWord) ||
+                (contact?.phoneNumber) ||
+                '-' | capitalize"></p>
+    <span *ngIf="contact?.status === statusContact.BLOCK" class="contact-tag">En proceso de inscripción</span>
+  </div>
+  <span *ngIf="viewArrow" class="contact-icon icon-next"></span>
+</div>
+<hr *ngIf="contact?.isFake">
+<p class="avv-contacts-title" *ngIf="showTitle && contact?.isFake">A contactos inscritos</p>

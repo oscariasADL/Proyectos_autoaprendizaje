@@ -1,0 +1,37 @@
+<section class="pockets-pay-step">
+  <figure class="pockets-pay-step__icon">
+    <img [src]="'illustrations/hand-with-money-bag.svg' | imageUrl" alt="Icono de abono de dinero"/>
+  </figure>
+  <h2 class="pockets-pay-step__title">{{ 'POCKETS.PAY.CONFIRM' | translate }}</h2>
+  <div class="pockets-pay-step_detail">
+    <app-voucher-list
+      [items]="detailItems"
+      [className]="'no-padding-right inverted-bold'"
+    >
+    </app-voucher-list>
+  </div>
+  <div class="pockets-pay-step__form">
+    <div class="pockets-pay-options-amount-input">
+      <avv-input
+        [type]="'currency'"
+        [id]="'pocket-pay-amount'"
+        [label]="'POCKETS.FIELDS.VALUE_TO_PAY' | translate"
+        [control]="amount">
+      </avv-input>
+    </div>
+  </div>
+  <div class="pockets-pay-step_bottom">
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'pocket-pay-btn'"
+            [disabled]="!form.valid"
+            (click)="continue.emit()"
+            [utag] ="utagEvent.event_label"
+            [utagCategory]="utagEvent.event_category">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+    <button class="avv-btn-link mt-5" (click)="backPage()">
+      {{ 'ACTIONS.CANCEL' | translate }}
+    </button>
+  </div>
+</section>

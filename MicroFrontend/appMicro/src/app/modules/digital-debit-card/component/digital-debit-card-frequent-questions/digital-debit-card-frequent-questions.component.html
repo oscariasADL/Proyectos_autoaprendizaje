@@ -1,0 +1,23 @@
+<div class="digital-debit-card-frequent-question-header">
+  <i class="icon-back digital-debit-card-frequent-question-header-back" (click)="closeModal()"></i>
+  <h5 class="digital-debit-card-frequent-question-header-title">
+    {{ 'DIGITAL_DEBIT_CARD.FREQUENT_QUESTIONS.HEADER_TITLE' | translate }}
+  </h5>
+</div>
+
+<div class="digital-debit-card-frequent-question-container">
+  <div class="digital-debit-card-frequent-question-img">
+    <img [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" class="icon" alt="sin-resultados">
+  </div>
+  <ul class="digital-debit-card-frequent-question-list">
+    <li *ngFor="let question of questions$ | async; let i = index" [ngClass]="{'active': isOpen(i)}">
+      <div (click)="toggleQuestion(i)" class="digital-debit-card-frequent-question-list-header">
+        <p class="small semi-bold">{{ question.question }}</p>
+        <i class="icon-down"></i>
+      </div>
+      <div class="digital-debit-card-frequent-question-list-content">
+        <p class="small" [innerHtml]="question.answer"></p>
+      </div>
+    </li>
+  </ul>
+</div>

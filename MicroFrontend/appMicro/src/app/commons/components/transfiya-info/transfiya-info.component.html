@@ -1,0 +1,36 @@
+<article class="transfiya-info-container">
+  <section class="transfiya-info-panel">
+    <h5 class="transfiya-info-title">
+      {{ 'TRANSFERS.TRANSFIYA.BANK_INFO.TITLE' | translate }}
+    </h5>
+    <div>
+      <p class="small text-center">
+        {{ 'TRANSFERS.TRANSFIYA.BANK_INFO.DESCRIPTION' | translate }}
+      </p>
+      <ul class="transfiya-info-icons list">
+        <li class="transfiya-info-icons aval" *ngFor="let data of banks">
+          <img [src]="data.icon | imageUrl" alt="{{ data.name }}">
+          <p [innerHTML]="data.name"></p>
+        </li>
+      </ul>
+      <div class="transfiya-info-list">
+          <p class="transfiya-info-list bankName">{{ 'TRANSFERS.TRANSFIYA.BANK_INFO.OTHERS_ENTITIES' | translate }}</p>
+          <ul class="transfiya-info-list others">
+            <li class="transfiya-info-list others-content" *ngFor="let others of otherBanks">
+              <span></span>
+              <p class="transfiya-info-list bank" >
+              {{ others | translate }}
+              </p>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </section>
+  <section class="transfiya-info-actions">
+    <button class="avv-btn-primary" [id]="'transfiya-info-close-btn'"
+      [utag]="'bancos aliados - transfiya - regresar a la transferencia'" [utagCategory]="'a un celular'"
+      (click)="closeModal()">
+      {{ 'TRANSFERS.TRANSFIYA.BANK_INFO.BUTTON' | translate | uppercase }}
+    </button>
+  </section>
+</article>

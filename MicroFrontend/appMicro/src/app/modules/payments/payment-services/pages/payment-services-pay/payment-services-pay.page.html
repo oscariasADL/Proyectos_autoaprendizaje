@@ -1,0 +1,15 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="'PAYMENTS.SERVICES.TITLE' | translate"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [showSteps]="!hasBillAmount"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)">
+  </app-generic-stepper>
+</ion-content>

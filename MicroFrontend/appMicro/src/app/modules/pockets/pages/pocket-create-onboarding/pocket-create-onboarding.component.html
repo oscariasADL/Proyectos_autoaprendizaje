@@ -1,0 +1,71 @@
+<ng-container *ngIf="withHeader">
+  <app-headers #header [closeUrl]="'/pockets'" [title]="'POCKETS.HEADER' | translate"
+               [type]="header?.headerType?.redTertiary">
+  </app-headers>
+</ng-container>
+<div class="onboarding">
+  <div class="onboarding-head">
+    <h1 class="avv-text__title">
+      {{ "POCKETS.HOME.ONBOARDING.TITLE" | translate }}
+    </h1>
+  </div>
+  <div class="onboarding__info">
+    <div class="onboarding__info-item">
+      <img [src]="'illustrations/savings-pig.svg'| imageUrl"
+           [alt]="'POCKETS.HOME.ONBOARDING.POCKET_TO_ORGANIZE.TITLE' | translate">
+      <div class="onboarding__info-description">
+        <h3 class="avv-text__subtitle">
+          {{ "POCKETS.HOME.ONBOARDING.POCKET_TO_ORGANIZE.TITLE" | translate }}
+        </h3>
+        <h6 class="avv-text__paragraph--first-level">
+          {{ "POCKETS.HOME.ONBOARDING.POCKET_TO_ORGANIZE.SUBTITLE" | translate }}
+        </h6>
+        <h6 class="avv-text__paragraph--small">
+          {{ "POCKETS.HOME.ONBOARDING.POCKET_TO_ORGANIZE.DESCRIPTION" | translate }}
+        </h6>
+        <a class="onboarding__info-item-link" routerLink="/pockets/create"
+           [utag]="redirectPocketTag.event_label"
+           [utagCategory]="redirectPocketTag.event_category"
+        >
+          <span>
+            {{ "POCKETS.HOME.ONBOARDING.POCKET_TO_ORGANIZE.BUTTON" | translate }}
+          </span>
+
+        </a>
+      </div>
+    </div>
+    <ng-template [appFeatureToggle]="featureFlagsKey.PocketsWithReturns">
+      <div class="onboarding__info-item">
+        <img [src]="'illustrations/wallet.svg' | imageUrl"
+             [alt]="'POCKETS.HOME.ONBOARDING.POCKET_WITH_RETURNS.TITLE' | translate">
+        <div class="onboarding__info-description">
+          <h3 class="avv-text__subtitle">
+            {{ "POCKETS.HOME.ONBOARDING.POCKET_WITH_RETURNS.TITLE" | translate }}
+          </h3>
+          <h6 class="avv-text__paragraph--first-level">
+            {{ "POCKETS.HOME.ONBOARDING.POCKET_WITH_RETURNS.SUBTITLE" | translate }}
+          </h6>
+          <h6 class="avv-text__paragraph--small">
+            {{ "POCKETS.HOME.ONBOARDING.POCKET_WITH_RETURNS.DESCRIPTION" | translate }}
+          </h6>
+          <a class="onboarding__info-item-link" routerLink="/pockets/create-with-returns"
+             [utag]="redirectReturnsPocketTag.event_label"
+             [utagCategory]="redirectReturnsPocketTag.event_category"
+             id="pocket-create-with-returns-link"
+          >
+          <span>
+            {{ "POCKETS.HOME.ONBOARDING.POCKET_WITH_RETURNS.BUTTON" | translate }}
+          </span>
+          </a>
+        </div>
+        <span class="avv-icons-btn-list-item-new">Nuevo</span>
+      </div>
+    </ng-template>
+  </div>
+  <div class="onboarding-warning">
+    <p class="avv-text__paragraph">{{ "POCKETS.HOME.ONBOARDING.DESCRIPTION" | translate }}</p>
+    <small (click)="openUrl(ratesURL)" class="consult-rate avv-link-underline avv-text__warning">
+      {{ "POCKETS.HOME.ONBOARDING.WARNING_MESSAGE" | translate }}
+    </small>
+  </div>
+</div>

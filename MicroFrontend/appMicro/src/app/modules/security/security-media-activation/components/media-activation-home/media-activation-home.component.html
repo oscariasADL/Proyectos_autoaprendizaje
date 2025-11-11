@@ -1,0 +1,66 @@
+<div class="media-activation-home-container media-activation-container">
+    <ng-container
+            *ngTemplateOutlet="(working$ | async) ? working : (productList$ | async)?.length > 0 ? content : contentError">
+    </ng-container>
+</div>
+
+<ng-template #working>
+    <div class="mt-4">
+        <ion-skeleton-text *ngFor="let item of [1, 2, 3, 4]" class="avv-skeleton" animated></ion-skeleton-text>
+    </div>
+</ng-template>
+
+<ng-template #content>
+    <div class="media-activation-home-header">
+        <p class="semi-bold">Productos</p>
+    </div>
+
+    <div *ngIf="(productToActivate$ | async)?.length > 0"
+         class="media-activation-home-to-activate">
+        <div *ngFor="let product of productToActivate$ | async; index as i" class="item">
+            <app-media-activation-card [product]="product"></app-media-activation-card>
+            <button (click)="activateProduct(product.id)" class="avv-btn-secondary sm" id="activate-product-btn">
+                ACTIVAR
+            </button>
+        </div>
+    </div>
+
+    <div class="media-activation-home-active-products">
+        <ng-container *ngIf="(otherProducts$ | async)?.length > 0">
+            <app-media-activation-card
+                    *ngFor="let product of otherProducts$ | async"
+                    [product]="product"
+                    [icon]="optionIcon(product)"
+                    [allowCardClick]="isProductForUnlock(product)"
+                    (options)="isProductForUnlock(product) ? unlockProduct(product) : showOptions(product)">
+            </app-media-activation-card>
+        </ng-container>
+
+        <div (click)="showInformation()"
+             class="avv-information-link p-0">
+            <i class="icon-info"></i>
+            <small>Que es configurar tarjetas</small>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #contentError>
+    <div class="media-activation-home-header">
+        <p>Productos</p>
+    </div>
+    <div class="avv-panel-empty">
+        <div class="avv-panel-empty-image">
+            <img
+                    [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+                    alt="sin-resultados">
+        </div>
+        <p class="avv-list-panel-title avv-title-semibold">
+            No tienes tarjetas débito o crédito para configurar
+        </p>
+        <button
+                class="avv-btn-secondary"
+                (click)="goHome()">
+            {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+        </button>
+    </div>
+</ng-template>

@@ -1,0 +1,56 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [title]="'FAVORITES.HEADER' | translate"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="favorites-edit-container">
+    <ng-container
+      *ngTemplateOutlet="(working$ | async) ? working :
+      ((completed$ | async) && (favorite$ | async)) ? content : undefined">
+
+    </ng-container>
+  </div>
+</ion-content>
+
+<ng-template #working>
+  <div class="favorites-edit-loading">
+    <ion-skeleton-text class="title" animated></ion-skeleton-text>
+    <ion-skeleton-text class="items" animated *ngFor="let i of [1,2,3,4,5]"></ion-skeleton-text>
+    <ion-skeleton-text class="action" animated></ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="(favorite$ | async) as favorite">
+    <h2>
+        <span class="avatar"
+              [style.background-color]="favoriteUiConfig[favorite.identificationFavoriteType].bgColor">
+          <i [class]="favoriteUiConfig[favorite.identificationFavoriteType].icon"
+             [style.color]="favoriteUiConfig[favorite.identificationFavoriteType].textColor"></i>
+        </span>
+      {{ favoriteTypesLabels[favorite.identificationFavoriteType] | translate }} {{ favorite.nameFavoriteTransaction }}
+    </h2>
+    <section>
+      <ul class="avv-voucher-list">
+        <li class="avv-voucher-item {{ item.type }}" *ngFor="let item of (itemsConfirm$ | async); let first = first"
+            [id]="item.id">
+          <p class="avv-voucher-label" *ngIf="item.label" [innerHTML]="item.label | translate"></p>
+          <div class="avv-voucher-description">
+            <div class="avv-voucher-fields">
+              <p *ngFor="let field of item.fields" [innerHTML]="field"></p>
+              <ng-container
+                *ngIf="editableFields.includes(item.id)">
+                <span class="icon-editar avv-voucher-edit" role="button" (click)="modifyField(item.id)"></span>
+              </ng-container>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button type="button" class="avv-btn-primary mt-5"
+              (click)="saveChanges()">{{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}</button>
+    </section>
+  </ng-container>
+</ng-template>

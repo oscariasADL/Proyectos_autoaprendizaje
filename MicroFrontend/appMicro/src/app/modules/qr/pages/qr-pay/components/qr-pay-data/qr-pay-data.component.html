@@ -1,0 +1,78 @@
+<article class="qr-pay-data-container">
+  <section class="qr-pay-data-dynamic" *ngIf="isQrDynamic; else qrStatic">
+    <h2>{{ 'QR.PAY.DATA_STEP.DYNAMIC.TITLE' | translate }}</h2>
+    <div class="qr-pay-data-dynamic-toward data-detail-record">
+      <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.TOWARD' | translate }}</p>
+      <p>{{ merchantName }}</p>
+    </div>
+    <hr>
+    <div class="qr-pay-data-dynamic-detail">
+      <ul>
+        <li class="data-detail-record" *ngIf="qrData?.netTrxAmount">
+          <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.VALUE' | translate }}</p>
+          <p [innerHtml]="qrData?.netTrxAmount | currencyFormat"></p>
+        </li>
+        <li class="data-detail-record" *ngIf="qrData?.ivaValue">
+          <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.IVA' | translate }}</p>
+          <p [innerHtml]="qrData?.ivaValue | currencyFormat"></p>
+        </li>
+        <li class="data-detail-record" *ngIf="qrData?.incValue">
+          <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.INC' | translate }}</p>
+          <p [innerHtml]="qrData?.incValue | currencyFormat"></p>
+        </li>
+        <li class="data-detail-record" *ngIf="qrData?.tipValue">
+          <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.TIP' | translate }}</p>
+          <p [innerHtml]="qrData?.tipValue | currencyFormat"></p>
+        </li>
+        <li class="qr-pay-data-dynamic-detail-total data-detail-record" *ngIf="qrData?.totalTrxAmount">
+          <p>{{ 'QR.PAY.DATA_STEP.DYNAMIC.DETAIL.TOTAL_VALUE' | translate }}</p>
+          <p [innerHtml]="qrData?.totalTrxAmount | currencyFormat"></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <ng-template #qrStatic>
+    <section class="qr-pay-data-static">
+      <h2>{{ 'QR.PAY.DATA_STEP.STATIC.TITLE' | translate }}</h2>
+      <div class="qr-pay-data-static-toward">
+        <p>{{ merchantName }}</p>
+      </div>
+      <form [formGroup]="form" class="qr-pay-data-static-amount">
+        <div class="qr-pay-data-static-amount-field">
+          <avv-input
+            #qrPayDaleAmount
+            [id]="'qr-pay-amount'"
+            [type]="qrPayDaleAmount?.inputTypes?.currency"
+            [label]="'QR.PAY.DATA_STEP.STATIC.LABEL_INPUT' | translate"
+            [autoFocus]="true"
+            [control]="amount"
+          ></avv-input>
+        </div>
+      </form>
+    </section>
+  </ng-template>
+  <div class="qr-pay-data-payment-method">
+    <app-dropdown-modal-products
+      [label]="'Método de pago'"
+      [control]="fromProduct"
+      [products]="modalProducts"
+      [amountToPay]="amount.currencyValue()"
+      (selectedProductFn)="selectedProduct($event)">
+    </app-dropdown-modal-products>
+  </div>
+  <div class="qr-pay-data-buttons">
+    <button class="avv-btn-primary"
+            [id]="'qr-pay-data-continue-btn'"
+            [disabled]="amount.invalid || !fromProduct.value || amount.currencyValue() > fromProduct.value.availableBalance"
+            (click)="continue.emit()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+
+    <button class="avv-btn-link qr-pay-data-rescan-btn"
+            [id]="'qr-pay-data-rescan-btn'"
+            (click)="reScanQR.emit()">
+      {{ 'Leer QR de nuevo' | translate }}
+      <i class="icon-qr"></i>
+    </button>
+  </div>
+</article>

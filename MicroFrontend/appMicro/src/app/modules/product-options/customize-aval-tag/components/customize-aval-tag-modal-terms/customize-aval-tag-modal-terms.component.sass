@@ -1,0 +1,77 @@
+@import 'utils'
+
+$padding-section-x: $spacer-2
+
+.customize-aval-tag-modal-terms
+  position: relative
+  background-color: var(--white)
+  padding: $spacer-3 $padding-section-x $spacer-4
+  max-height: 60vh
+  overflow-y: scroll
+
+  &__skeleton
+    border-radius: 50%
+    width: 80px
+    height: 80px
+    margin: 0 auto
+
+  &__figure
+    margin: $spacer-3 0
+
+    img
+      display: block
+      margin: 0 auto
+      max-width: 220px
+
+  &__body
+    margin-bottom: $spacer-3
+
+    .bottom-title
+      font-size: 16px
+      text-align: center
+      margin-bottom: 16px
+
+    p
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 16px
+
+  &__description
+    position: relative
+    max-height: 20vh
+    overflow-y: scroll
+
+    &::after
+      content: ""
+      position: sticky
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 40px
+      display: block
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent)
+
+    &-content
+      h2, h3
+        font-size: 18px
+        line-height: 28px
+
+      b, li
+        color: var(--gray-1)
+
+      h2, h3, b
+        font-weight: 600
+
+      h2, h3, p
+        margin-bottom: $spacer-3
+
+      ul
+        list-style: disc
+        padding-left: calc($padding-section-x + $spacer)
+
+        li
+          margin-bottom: $spacer-2
+
+        li::marker
+          font-size: 20px
+          color: red

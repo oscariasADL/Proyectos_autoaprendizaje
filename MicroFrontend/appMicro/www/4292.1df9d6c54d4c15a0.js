@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[4292],{24292:(r,e,n)=>{n.r(e),n.d(e,{SplashScreenWeb:()=>a});var _=n(10467),s=n(15083);class a extends s.E_{show(o){return(0,_.A)(function*(){})()}hide(o){return(0,_.A)(function*(){})()}}}}]);

@@ -1,0 +1,25 @@
+<ul class="avv-voucher-list {{ className }}">
+  <li *ngFor="let item of items"
+      class="avv-voucher-item {{ item.type }}" [id]="item.id">
+
+    <p class="avv-voucher-label" *ngIf="item.label" [innerHTML]="item.label | translate"></p>
+    <div class="avv-voucher-description">
+      <div class="avv-voucher-fields">
+        <p *ngFor="let field of item.fields"
+           role="text"
+           [attr.aria-label]="(field | stripTags)"
+           [innerHTML]="field | translate"></p>
+      </div>
+      <span *ngIf="item.edit"
+            role="button"
+            [attr.aria-label]="'Editar ' + (item.label | translate | stripTags)"
+            class="icon-editar avv-voucher-edit"
+            (click)="edit.emit(item.edit)"></span>
+      <span *ngIf="item.actionIcon"
+            role="button"
+            class="avv-voucher-action"
+            (click)="action.emit(item)"
+            [class]="item.actionIcon"></span>
+    </div>
+  </li>
+</ul>

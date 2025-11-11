@@ -1,0 +1,92 @@
+@import 'utils'
+
+.notification-mailbox
+  background-color: var(--gray-4)
+
+  &-header
+    padding: $spacer-2 $spacer-3 $spacer
+    border-bottom: 1px solid var(--gray-6)
+
+  .notification-header, .notification-options
+    +flex(center, space-between)
+
+  &-title
+    font-size: 14px
+    font-weight: bold
+
+  &-alert
+    padding: $spacer-2
+
+    &-text
+      font-size: 12px
+
+.input-checkbox:where([type="checkbox"])
+  -webkit-appearance : none
+  appearance         : none
+  width              : 18px
+  height             : 18px
+  margin             : calc(0.75em - 11px) 0.25rem 0 0
+  vertical-align     : top
+  border             : 1px solid #5c6b7a
+  border-radius      : 4px
+  background         : var(--white) no-repeat center center
+
+
+.input-checkbox:where([type="checkbox"]):where(:active:not(:disabled), :focus)
+  outline      : none
+
+.input-checkbox:where([type="checkbox"]):disabled
+  background : #eee
+
+.input-checkbox[type="checkbox"]:checked
+  background-image: url("/assets/img/icons/checkbox.svg")
+  background-color: var(--success)
+  border-color: transparent
+
+
+.notification-item
+  width: 100%
+  padding: $spacer-1 $spacer-2
+  display: flex
+  align-items: center
+  background-color: #f1f2ff
+  border-bottom: 1px solid #dbe2e8
+
+  &.read
+    background-color: var(--white)
+
+  &-checkbox
+    margin-right: $spacer-2
+
+  &-content
+    display: flex
+    align-items: center
+    width: 100%
+
+    .content-icon
+      margin-right: $spacer-2
+      i
+        font-size: 24px
+        color: #fcb039
+      i.money
+        color: #30c782
+
+    .content-panel
+      width: 100%
+
+      .content-title-container
+        display: flex
+        justify-content: space-between
+
+      .content-description
+        width: 80vw
+        display: flex
+        &.reduce
+          width: 70vw
+
+        & > small
+          display: block
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          color: var(--gray-7)

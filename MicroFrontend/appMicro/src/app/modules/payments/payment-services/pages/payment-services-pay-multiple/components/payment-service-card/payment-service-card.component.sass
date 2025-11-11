@@ -1,0 +1,72 @@
+@import 'utils'
+
+.service-card
+  display: flex
+  gap: 16px
+  margin-bottom: $spacer-2
+  padding: $spacer-2
+  border: 1px solid var(--gray-avv)
+  border-radius: 4px
+
+  &.selected
+    border: 1px solid #51DAA9
+
+  &.disabled
+    background-color: #F8F9FA
+    color: #5C6B7A
+
+  &-content
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+    .content-header
+      display: flex
+      flex-direction: column
+
+    p
+      font-size: 14px
+      font-weight: 700
+
+    small
+      font-weight: 100
+
+    .content-info-items
+      font-size: 12px
+
+      dl
+        margin-block-end: 0
+
+      dt
+        font-weight: 400
+
+      dd
+        font-weight: 600
+
+      p
+        font-size: 14px
+        font-weight: 600
+
+
+.input-checkbox:where([type="checkbox"])
+  -webkit-appearance: none
+  appearance: none
+  width: 24px
+  height: 24px
+  margin: calc(0.75em - 11px) 0.25rem 0 0
+  vertical-align: top
+  border: 1px solid #5c6b7a
+  border-radius: 4px
+  background: var(--white) no-repeat center center
+
+
+.input-checkbox:where([type="checkbox"]):where(:active:not(:disabled), :focus)
+  outline: none
+
+.input-checkbox:where([type="checkbox"]):disabled
+  background: #F8F9FA
+
+.input-checkbox[type="checkbox"]:checked
+  background-image: url("/assets/img/icons/checkbox.svg")
+  background-color: var(--success)
+  border-color: transparent

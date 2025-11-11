@@ -1,0 +1,37 @@
+@import 'utils'
+
+.media-activation-home
+  &-container
+    overflow: scroll
+    padding: 0 $spacer-2 40px
+    text-align: center
+    height: calc(100vh - (56px + var(--safe-area-inset-top)))
+
+  &-header
+    padding: $spacer-4 0 $spacer-2
+    text-align: center
+
+  &-to-activate
+    padding: $spacer-2 0 $spacer-3 0
+    margin-bottom: $spacer-2
+
+    @include before-width-and-height-100()
+      width: calc(100% + #{$spacer-4})
+      left: -#{$spacer-2}
+      background-color: var(--gray-4)
+      z-index: -1
+
+    ::ng-deep .media-activation-card
+      margin-bottom: $spacer-3
+
+    .item:not(:last-child)
+      border-bottom: 1px solid var(--gray-3)
+      margin-bottom: $spacer-3
+      padding-bottom: $spacer-3
+
+  &-active-products
+    padding-top: $spacer
+
+    ::ng-deep .media-activation-card
+      margin-bottom: $spacer-2
+

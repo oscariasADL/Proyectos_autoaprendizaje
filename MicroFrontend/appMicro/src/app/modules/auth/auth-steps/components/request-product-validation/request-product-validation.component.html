@@ -1,0 +1,29 @@
+<ion-content [forceOverscroll]="false">
+  <div class="auth-steps-container">
+    <div class="auth-steps-header">
+      <h5>{{ title | translate }}</h5>
+      <i class="icon-salir" (click)="showExitModal()"></i>
+    </div>
+
+    <div class="auth-steps-body">
+      <p class="semi-bold auth-steps-title">
+        {{ 'AUTH.STEP.REQUEST_PRODUCT_VALIDATION.TITLE' | translate }}
+      </p>
+      <small class="auth-steps-description">
+        {{ 'AUTH.STEP.REQUEST_PRODUCT_VALIDATION.DESCRIPTION' | translate }}
+      </small>
+
+      <button class="avv-btn-primary auth-steps-btn"
+              (click)="run(true)">
+        {{ 'AUTH.STEP.REQUEST_PRODUCT_VALIDATION.BUTTON' | translate | uppercase }}
+      </button>
+
+      <a class="avv-link auth-steps-link"
+         (click)="run(false)">
+        {{ 'AUTH.STEP.REQUEST_PRODUCT_VALIDATION.LINK' | translate }}
+      </a>
+    </div>
+
+    <div class="auth-steps-footer"></div>
+  </div>
+</ion-content>

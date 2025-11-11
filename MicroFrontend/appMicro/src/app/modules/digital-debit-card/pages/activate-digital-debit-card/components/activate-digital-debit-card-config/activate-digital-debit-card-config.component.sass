@@ -1,0 +1,36 @@
+@import 'utils'
+
+.digital-debit-card-configuration
+  &-container
+    text-align: start
+
+    +flex(inherit, start, column)
+    gap: $spacer-4
+    padding: $spacer-3 $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+    //min-height: calc(100vh - 56px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+    ::ng-deep .form-input
+      padding: 0
+
+  &-options
+    +flex(inherit, start, column)
+    gap: $spacer-2
+
+    p
+      font-size: 14px
+
+
+  &-list > .active
+    ::ng-deep .product-card-container
+      border-radius: 4px
+      border: solid 2px var(--blue-1)
+
+      .product-card-content
+        background-color: #f1f2ff
+
+  &-customization
+    +flex(inherit, start, column)
+    gap: $spacer-2
+
+    p
+      font-size: 14px

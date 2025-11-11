@@ -1,0 +1,76 @@
+@import 'utils'
+
+$transition-aval-card: .3s
+
+.aval-product-card
+  &-container
+    position: relative
+    font-size: 0
+    border-radius: 4px
+    background-color: var(--white)
+    border: solid 1px var(--pale-grey)
+    box-shadow: 0 2px 4px 0 rgba(44, 44, 51, 0.24)
+    margin-bottom: $spacer
+
+    &.active
+      .aval-product-card
+        &-panel
+          max-height: 4000px
+
+        &-arrow
+          transform: rotate(180deg)
+
+  &-icon
+    position: absolute
+    top: $spacer-1
+    left: 9px
+    font-size: 16px
+    color: var(--gray-8)
+
+  &-panel
+    position: relative
+    max-height: 0
+    transition: $transition-aval-card
+    overflow: hidden
+
+    ul
+      border-bottom: solid 1px var(--gray-4)
+      margin-bottom: $spacer-1
+      padding: $spacer-3 $spacer-2 $spacer $spacer-4
+
+      li
+        margin-bottom: $spacer
+
+        small
+          color: var(--gray-7)
+
+        hr
+          display: inline-block
+          background: var(--gray-4)
+          width: calc(100% + 48px)
+          height: 1px
+          margin-bottom: 8px
+          margin-left: -32px
+          margin-top: 8px
+
+  &-arrow
+    position: absolute
+    top: $spacer-1
+    right: $spacer-1
+    font-size: 24px
+    color: var(--blue-1)
+    transition: $transition-aval-card
+
+  &-header
+    padding: $spacer-1 36px 3px $spacer-4
+    color: var(--gray-8)
+
+  &-footer
+    padding: 3px $spacer-2 5px $spacer-4
+
+    small
+      color: var(--gray-7)
+      margin-bottom: -4px
+
+span.normal
+  font-weight: 400 !important

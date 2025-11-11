@@ -1,0 +1,4136 @@
+{
+  "ACCESSIBILITY": {
+    "LOGO": "Logotipo del banco Av Villas"
+  },
+  "OFFLINE": {
+    "TITLE": "Sin conexión a internet",
+    "SUBTITLE": "Verifica tu acceso a una red wifi o a los datos de tu operador."
+  },
+  "ACCOUNT_NUMBER": "No.",
+  "ACTIONS": {
+    "ACTIVATE": "Activar",
+    "BACK": "No, volver",
+    "BACK2": "Regresar",
+    "BACK3": "Volver",
+    "CANCEL": "Cancelar",
+    "CARD_ADVANCE": "Realizar avance",
+    "CONFIRM": "Confirmar",
+    "CONTINUE": "Continuar",
+    "COPY_THAT": "Entendido",
+    "CREATE": "Crear",
+    "DEACTIVATE": "Desactivar",
+    "DOWNLOAD": "Descargar",
+    "DOWNLOAD_VOUCHER": "Descargar comprobante",
+    "EXIT": "Salir",
+    "FINALIZE": "Finalizar",
+    "LEARN_MORE": "Conoce más",
+    "NO": "No",
+    "ORDER": "Hacer giro",
+    "PAY": "Abonar",
+    "PAYMENT": "Pagar",
+    "RECHARGE": "Recargar",
+    "SAVE": "Guardar",
+    "SEARCH": "Buscar",
+    "TRANSFER": "Transferir",
+    "USE_QUOTA": "Utilizar cupo",
+    "WITHDRAW": "Retirar",
+    "UNLOCK": "Desbloquear",
+    "YES": "Sí",
+    "SAVE_CHANGES": "Guardar cambios",
+    "NOT_CANCEL": "No, cancelar",
+    "YES_CANCEL": "Sí, cancelar",
+    "BACK_HOME": "Volver al home",
+    "NOT_BACK": "No, regresar",
+    "RETRY": "Intentar de nuevo",
+    "MODIFY": "Modificar",
+    "CLOSE": "Cerrar",
+    "APPROVE_TRANSACTION": "Utilizar código en la Banca virtual",
+    "RETURN_TO_LOGIN": "Ingresar de nuevo"
+  },
+  "STEP_LABELS": {
+    "AMOUNT": "Valor",
+    "TOWARD": "Hacia",
+    "FROM": "Desde",
+    "COST": "Costo"
+  },
+  "COMMON_LABELS": {
+    "IS_NEW": "Nuevo",
+    "NUMBER_APPROVAL": "No. de aprobación",
+    "NUMBER_AUTHORIZATION": "No. de autorización"
+  },
+  "AUTH": {
+    "ERROR": {
+      "OFFICE": "Debes acercarte a una de nuestras oficinas y actualizar tus datos."
+    },
+    "EXIT_DATA": {
+      "BUTTON": "Salir del proceso",
+      "TEXT": "¿Estás seguro de salir y cancelar el proceso?"
+    },
+    "FORGOT_PASSWORD": {
+      "ERROR": {
+        "TITLE": "Lo sentimos"
+      },
+      "TITLE": "Olvidé mi contraseña"
+    },
+    "NOTICES": {
+      "ERROR": {
+        "CHANGE_PASSWORD": "¡No fue posible cambiar tu contraseña!",
+        "CHANGE_UNIVERSAL": "Tu contraseña única no se pudo crear, pero en tu próximo ingreso podrás configurarla."
+      },
+      "SUCCESS": {
+        "CHANGE_PASSWORD": "¡Tu contraseña fue modificada con éxito!",
+        "CHANGE_UNIVERSAL": "¡Tu contraseña única fue creada con éxito!"
+      }
+    },
+    "REGISTER": {
+      "ERROR": {
+        "TITLE": "Lo sentimos",
+        "DEFAULT": "Los datos que ingresaste no son válidos"
+      },
+      "TITLE": "Registro"
+    },
+    "STEP": {
+      "COMPLETED": {
+        "ALERT": "Este celular fue registrado con éxito",
+        "BUTTON": "Ingresar",
+        "DESCRIPTION_1": "A partir de este momento puedes realizar tus pagos y transferencias de forma segura.",
+        "DESCRIPTION_2": "A partir de ahora puedes consultar la información de tus productos, realizar pagos y transferencias  inscritas desde tu Banca Virtual.",
+        "DESCRIPTION_3": "Por tu seguridad ahora podrás ingresar a tu AV Villas App desde un solo dispositivo.",
+        "DESCRIPTION_4": "Si cambias de celular deberás registrarte nuevamente en AV Villas App.",
+        "TITLE_1": "Bienvenido a AV Villas App",
+        "TITLE_2": "¡Te registraste exitosamente!",
+        "TITLE_3": "¡Tu contraseña fue actualizada!",
+        "WARNING": "Ten en cuenta:"
+      },
+      "CONFIRM_DEVICE_REGISTRATION": {
+        "CANCEL": "No, salir",
+        "DESCRIPTION": "<b>¿Deseas registrar este celular?</b> </br>Ten en cuenta que, si ya tienes la AV Villas app activa en otro dispositivo, la sesión en ese celular se cerrará automáticamente.",
+        "REGISTER": "Si, registrar este celular",
+        "TITLE": "Por tu seguridad, solo puedes ingresar a <br>AV Villas app desde un solo dispositivo.",
+        "FORGOT_PASSWORD_DESCRIPTION": "Al recuperar tu contraseña registrarás este celular. </br></br><b> ¿Deseas registrar este celular?</b>",
+        "FORGOT_PASSWORD_TITLE": "Sigue los pasos a continuación para cambiar y recuperar tu contraseña."
+      },
+      "FILL_CURRENT_PASSWORD": {
+        "ALERT": {
+          "ERROR": "Error inesperado",
+          "TITLE": "Lo sentimos"
+        },
+        "DESCRIPTION": "Ingresa la contraseña con la que entras a tu Banca Virtual.",
+        "ERROR_BUTTON": {
+          "CHANGE_PASSWORD": "Olvidé mi contraseña",
+          "OFFICE": "Entendido",
+          "RETRY": "Intentar de nuevo"
+        },
+        "ERROR_LINK": {
+          "CHANGE_PASSWORD": "Entendido",
+          "OFFICE": "Dónde encontrarnos",
+          "RETRY": "Olvidé mi contraseña"
+        },
+        "FORGOT_PASSWORD": "Olvidé mi contraseña",
+        "HI": "Hola"
+      },
+      "FILL_OTP": {
+        "DESCRIPTION": "Te enviamos un código de 8 dígitos por </br><b>mensaje de texto o correo electrónico.</b>",
+        "INFO": {
+          "DESCRIPTION": "Por seguridad nunca te pediremos esta información por llamada o chat.",
+          "TITLE": "Importante"
+        },
+        "REQUEST_NEW_KEY": "Solicitar de nuevo una clave",
+        "TITLE": "Ingresa el código"
+      },
+      "FILL_OTP_DATA": {
+        "DESCRIPTION": "Enviamos un código temporal por </br><b>mensaje de texto o correo electrónico </b> </br>para que continues con tu registro.",
+        "LINK": "Solicita uno nuevo",
+        "SUB_DESCRIPTION": "El envío puede tomar hasta 1 minuto.",
+        "INFO": {
+          "DESCRIPTION": "Por seguridad nunca te pediremos esta información por llamada o chat.",
+          "TITLE": "Importante"
+        },
+        "QUESTION": "¿No te ha llegado el código?",
+        "TITLE": "Ingresa el código",
+        "REQUEST_OTP": "Puedes solicitar un nuevo código en"
+      },
+      "FILL_SECURE_DATA": {
+        "CARD_FIELD": "Dígitos de tu tarjeta",
+        "INFO": "Por tu seguridad el Banco nunca te pedirá esta información por llamada o chat.",
+        "WARNING_PRE": "¡Cuidado!",
+        "WARNING": "Haz tenido muchos intentos fallidos y podrías bloquear tu registro en la app",
+        "PASSWORD_FIELD": "Clave",
+        "TITLE": "Verifiquemos tu {{type}}",
+        "TYPE": {
+          "CREDIT_CARD": "Tarjeta de Crédito",
+          "DEBIT_CARD": "Tarjeta Débito"
+        },
+        "QUESTIONS": {
+          "1": "Por favor ingresa la clave de alguna de tus Tarjetas Débito",
+          "2": "Ingresa los últimos 8 dígitos de alguna de tus Tarjetas Crédito Master",
+          "3": "Ingresa los últimos 8 dígitos de alguna de tus Tarjetas Crédito Visa"
+        }
+      },
+      "FILL_UNIVERSAL_PASSWORD": {
+        "CONFIRM_PASSWORD": "Confirma la contraseña",
+        "DESCRIPTION": "Para ingresar en AV Villas App y Banca Virtual.",
+        "NEW_PASSWORD": "Contraseña",
+        "TITLE": "Crea tu contraseña",
+        "CREATE": "Crear contraseña"
+      },
+      "REQUEST_PRODUCT_VALIDATION": {
+        "BUTTON": "Verificar productos",
+        "DESCRIPTION": "Ingresaste la clave de forma incorrecta. Intenta verificando uno de tus productos con el Banco.",
+        "LINK": "Intentar de nuevo con la misma clave",
+        "TITLE": "Lo sentimos"
+      },
+      "TERMS": {
+        "ACCEPT": "Acepta",
+        "LINK": "términos y condiciones",
+        "TEXT": "Autorizo a AV Villas para que consulte y reporte mi información en centrales de riesgo y realice el tratamiento de datos personales",
+        "SHOW_MORE": "ver más",
+        "TERMS_DETAIL": {
+          "TITLE": "Autorización para el tratamiento de datos personales",
+          "TEXT": "<p>Autorizo a AV Villas para recolectar, almacenar y tratar los datos personales suministrados a través de este canal, con la finalidad de recibir respuesta a las solicitudes de información presentadas y/o recibir información relacionada con los productos y/o servicios ofrecidos por AV Villas. Igualmente, autorizo la administración de mis datos personales en la base de datos de AV Villas, contactarme para el ofrecimiento de productos y servicios, y la realización de todas las actividades previas y necesarias para viabilizar el otorgamiento de un producto financiero, incluyendo, la consulta de información financiera y comercial ante operadores de información, así como aquella relacionada con mi estado laboral, ingresos y aportes al sistema general de seguridad social. Manifiesto que conozco los siguientes aspectos relacionados con el cumplimiento de la legislación de habeas data vigente: 1. Como titular de la información, me asisten los derechos previstos en las leyes 1266 de 2008, 1581 de 2012 y cualquier otra que la derogue, modifique o sustituya. En especial, me asiste el derecho a conocer, actualizar y rectificar y/o suprimir mis datos personales frente a los responsables del tratamiento o encargado del tratamiento, solicitar prueba de esta autorización, ser informado sobre su uso, presentar quejas ante la Superintendencia de Industria y Comercio, revocar esta autorización, solicitar la supresión de mis datos y consultar los mismos. 2. El carácter facultativo de dar respuesta a solicitudes de información sobre datos sensibles, entendiendo por datos sensibles aquellos que afectan mi intimidad.</p><p class=\"my-1\"></p><p>Declaro que el tratamiento de mis Datos Personales se efectuará de acuerdo con la política de la entidad en esta materia, la cual puede ser consultada en <a href=\"http://www.avvillas.com.co/\" target=\"_blank\" title=\"http://www.avvillas.com.co/\">www.avvillas.com.co</a>. Para el ejercicio de mis derechos, y la atención de consultas y reclamos, podré acercarme a las oficinas de AV Villas a nivel nacional o usar la línea de servicio al cliente 4441777 en Bogotá D.C., 3256000 en Medellín, 8859595 en Cali, 3304330 en Barranquilla, 6302980 en Bucaramanga y 018000-518000 en el resto del País.</p> <p><h6 class=\"semi-bold my-3\">Autorización para consulta, almacenamiento, reporte, intercambio, procesamiento y otros tratamientos de datos financieros, crediticios, comerciales, de servicios y provenientes de terceros países</h6></p> <p>En mi calidad de titular de mi información personal y en adición y complemento de las demás autorizaciones otorgadas, autorizo de manera expresa, irrevocable y permanente a AV Villas o a quien represente sus derechos u ostente en el futuro la calidad de acreedor, cesionario a cualquier título, o cualquier calidad frente a mí como titular de la información, en adelante Las Entidades Autorizadas para que: 1) Soliciten, consulten, compartan, intercambien, informen, reporten, procesen, modifiquen, actualicen, aclaren, retiren o divulguen, ante las entidades de consulta de bases de datos u Operadores de Información y Riesgo, incluyendo CIFIN y DATACREDITO, ante instituciones financieras y ante cualquier otra entidad pública o privada que maneje o administre bases de datos e información financiera, crediticia, comercial, de servicios y proveniente de terceros países, con los fines legalmente definidos para este tipo de entidades, todo lo referente a mi información financiera, comercial y crediticia (presente, pasada y futura), mi endeudamiento, y el nacimiento, modificación y extinción de mis derechos y obligaciones originados en virtud de cualquier contrato celebrado u operación realizada o que llegare a celebrar o realizar con cualquiera de Las Entidades Autorizadas. 2) Almacenen y conserven la información mencionada anteriormente, así como datos atinentes a mis relaciones comerciales, financieras y en general socioeconómicas que haya entregado o que consten en registros públicos, bases de datos públicas o documentos públicos. 3) El mismo tratamiento mencionado en los numerales anteriores, podrán dar las Entidades Autorizadas en relación con mis datos e información personal que haya suministrado a terceros con los que haya establecido un contrato o celebrado una operación, cuyos derechos hayan sido adquiridos por las Entidades Autorizadas a cualquier título. Las Entidades Autorizadas podrán dar a mi información y datos personales el tratamiento autorizado, con la finalidad de mantener actualizada mi información ante entidades de consulta de bases de datos u Operadores de Información y Riesgo, incluyendo CIFIN y DATACREDITO, ante instituciones financieras y ante cualquier otra entidad pública o privada que maneje o administre bases de datos; tomar decisiones en cuanto a otorgarme o no productos o servicios y mantener o terminar alguna relación comercial e informar al mercado sobre el estado de mis obligaciones financieras, comerciales, crediticias, de servicios y provenientes de terceros países. Así mismo, autorizo para que se transfiera a las autoridades y agencias nacionales y extranjeras tales como la IRS (Servicios de impuestos Internos de Estados Unidos) y autoridades competentes según la “Convención sobre Asistencia Administrativa Mutua en Materia Fiscal” aprobada por el Consejo de Europa y los países miembros de la OCDE, información y documentación sobre productos, estados de cuenta, saldos, movimientos, información financiera y comercial, comportamiento financiero y manejo de productos, ingresos, deducciones, origen de recursos, accionistas y personas relacionadas o suscritos por el Estado Colombiano o el Banco con otros estados o autoridades o agencias extranjeras. Declaro que conozco y acepto que los reportes negativos que las Entidades Autorizadas realicen, pueden generar consecuencias negativas en mi acceso al crédito y demás servicios financieros, y que la permanencia de mi información en los Operadores de Información y Riesgo y demás entidades que administren bases de datos corresponde a lo determinado por el ordenamiento jurídico. Conozco el derecho que me asiste de solicitar rectificación y actualización de la información cuando esta no corresponda con la realidad crediticia, sin que tal derecho implique revocatoria alguna de las autorizaciones que se confieren a AV VILLAS.</p>"
+        }
+      },
+      "USER_DOES_NOT_EXISTS": {
+        "CREDIT_CARD": "Tarjeta de Crédito",
+        "CREDIT_CARD_BUTTON": "Comienza Aquí",
+        "DEBIT_CARD": "Cuenta de Ahorro",
+        "DEBIT_CARD_BUTTON": "Próximamente",
+        "DESCRIPTION": "Pide tus productos y hazte cliente.",
+        "REQUEST": "Solicita en línea",
+        "TITLE": "Aún no tienes productos en AV Villas",
+        "YOUR": "tu"
+      },
+      "REGISTERING_DEVICE": {
+        "TITLE": "Estamos registrando tu celular",
+        "DESCRIPTION": "Solo unos segundos"
+      },
+      "NOTIFICATION_PERMISSIONS": {
+        "TITLE": "Estamos registrando tu celular",
+        "DESCRIPTION": "Esto tardará solo unos segundos"
+      },
+      "REGISTERING_DEVICE_ERROR": {
+        "TITLE": "Lo sentimos,<br> no fue posible hacer el registro.",
+        "DESCRIPTION": "Inténtalo más tarde",
+        "BANCA_VIRTUAL_INFO": "Para realizar consultas y transacciones ingresa a tu Banca Virtual avvillas.com.co",
+        "BANCA_VIRTUAL_BTN": "Ir a la Banca Virtual",
+        "HOME_BTN": "Volver al inicio",
+        "ALERT": {
+          "TITLE": "A continuación vas a salir de AV Villas App",
+          "DESCRIPTION": "Serás enviado al sitio web",
+          "BUTTON": "IR AL SITIO WEB",
+          "CANCEL": "Cancelar"
+        }
+      },
+      "SELECT_PRODUCT_TYPE": {
+        "TITLE": "Empieza tu registro",
+        "TITLE_2": "Selecciona el producto que tienes con el Banco",
+        "PRODUCTS": {
+          "SAVING_ACCOUNT": "Cuenta de ahorros",
+          "CREDIT_CARD": "Tarjeta de crédito"
+        },
+        "ALT_LOGO": "Logotipo del banco AV Villas"
+      },
+      "CONFIRM_PROCESS_START": {
+        "TITLE": "¿Olvidaste tu contraseña?",
+        "DESCRIPTION": "Recuerda que al continuar con este paso, recibirás un mensaje de verificación a tu celular.",
+        "ALT_ICON": "Ícono referente al cambio de contraseña",
+        "BUTTONS": {
+          "CONFIRM": "Sí quiero",
+          "CANCEL": "No, salir"
+        }
+      },
+      "BIOMETRIC_VERIFICATION_FAILED": {
+        "REGISTER_TITLE": "Para continuar con el registro.",
+        "FORGOT_PASSWORD_TITLE": "Para continuar con la recuperación de contraseña.",
+        "DESCRIPTION": "Es necesario que te acerques a un cajero o a una oficina AV Villas y solicites el código OTP.",
+        "REDIRECT_TO_OFFICE": "Encontrar una oficina o cajero",
+        "EXIT": "Salir"
+      }
+    },
+    "VALIDATORS": {
+      "PASSWORD_MAX": "Máximo 2 dígitos consecutivos",
+      "PASSWORD_NOT_MATCH": "Las contraseñas no coinciden",
+      "PASSWORD_NOT_REPEAT": "Repetiste un número más de 2 veces",
+      "PASSWORD_WRONG": "Las contraseña no es válida"
+    }
+  },
+  "AVAILABLE": "Disponible",
+  "AVAL": {
+    "PRODUCTS": {
+      "EMPTY": {
+        "MESSAGE": "No cuentas con productos en el",
+        "MESSAGE_SHORTED": "No cuentas con productos",
+        "TITLE": "No tienes productos"
+      },
+      "ERROR": {
+        "MESSAGE": "No fue posible cargar tus productos. <b> inténtalo más tarde</b>",
+        "TITLE": "Lo sentimos"
+      },
+      "FIELDS": {
+        "AVAILABLE": "Disponible",
+        "AVAILABLE_BALANCE": "Saldo disponible",
+        "AVAILABLE_FOR_HOUSING": "Disponible para vivienda",
+        "AVAILABLE_PURCHASES": "Disponible para compras",
+        "AVAILABLE_USE": "Disponible uso",
+        "BALANCE": "Saldo",
+        "TOTAL_PAY": "Total a pagar",
+        "VALUE": "Valor"
+      },
+      "TITLE": "Productos Aval"
+    },
+    "STOCKS": {
+      "CHANNEL": {
+        "1": "Abono a Cuenta",
+        "2": "Cobro por ventanilla",
+        "3": "Grandes accionistas",
+        "4": "Otros depositantes",
+        "5": "Embargos"
+      },
+      "DATA": {
+        "MONTH": "Elige el mes de consulta",
+        "TYPE": "Selecciona el tipo de acción a consultar"
+      },
+      "DESCRIPTION": "Selecciona el tipo de acción a consultar",
+      "ERROR": {
+        "BUTTON": "Salir del proceso",
+        "MESSAGE": "No fue posible cargar tus Acciones Aval.<br><b> inténtalo más tarde</b>",
+        "TITLE": "Lo sentimos"
+      },
+      "EMPTY": {
+        "BUTTON": "Regresar a tus productos",
+        "MESSAGE": "Aún no tienes información en tus acciones para consultar",
+        "TITLE": "Lo sentimos"
+      },
+      "FIELDS": {
+        "CHANNEL": "Canal de pago",
+        "DETAIL": "Detalle del pago",
+        "DIVIDENDS_PAID": "Dividendos pagados",
+        "QUERY": "Consulta Acciones"
+      },
+      "STOCK_TYPES_LIST": {
+        "ORDINARY": "Ordinaria",
+        "PREFERENTIAL": "Preferencial"
+      },
+      "STOCK_TYPES_PLURAL": {
+        "ORDINARY": "Ordinarias",
+        "PREFERENTIAL": "Preferenciales"
+      },
+      "TITLE": "Acciones AVAL"
+    },
+    "TUPLUS": {
+      "DESCRIPTION": "Estos son tus puntos acumulados en entidades Aval",
+      "EMPTY": {
+        "LINK": "Ingresa al portal tuplús",
+        "MESSAGE": "Entérate como acumularlos",
+        "TITLE": "Aún no tienes Puntos tuplús"
+      },
+      "HEADER": "tuplús",
+      "TOTAL_POINTS": "Total Puntos"
+    }
+  },
+  "PRODUCTS": {
+    "CANT_LOAD_PRODUCT": "No fue posible cargar la información de tu producto.<b>Intentalo de nuevo más tarde </b>",
+    "GO_TO_HOME": "Ir a inicio"
+  },
+  "AVAL_PRODUCTS": {
+    "AV_VILLAS": "AV Villas",
+    "BOGOTA_CODE": "Banco de Bogotá",
+    "FACILPASS_CODE": "FacilPass",
+    "OCCIDENTE_CODE": "Banco de Occidente",
+    "POPULAR_CODE": "Banco Popular",
+    "PORVENIR_CODE": "Porvenir"
+  },
+  "BACK": "Volver",
+  "BIOMETRICS": {
+    "ALERT": {
+      "ACTIVATE": "Sí, activar",
+      "BACK_BUTTON": "No, volver",
+      "DEACTIVATE": "Sí, desactivar",
+      "DESCRIPTION": {
+        "ACTIVATE": "Podrás ingresar de forma más fácil y segura la próxima vez",
+        "DEACTIVATE": "La próxima vez que intentes ingresar a AV Villas App lo tendrás que hacer con tu usuario y contraseña."
+      },
+      "TITLE": {
+        "ACTIVATE": "¿Deseas activar el {{type}} de este celular?",
+        "DEACTIVATE": "¿Deseas desactivar el {{type}} de este celular?"
+      }
+    },
+    "ERROR": {
+      "DESCRIPTION": "Por favor inténtalo en otro momento",
+      "TITLE": "No pudimos activar el {{type}}"
+    },
+    "FINISHED": {
+      "DESCRIPTION": {
+        "ACTIVATE": "¡Ahora podrás utilizar {{type}} para ingresar desde este celular!",
+        "DEACTIVATE": "¡No podrás utilizar {{type}} para ingresar desde este celular!"
+      },
+      "TITLE": {
+        "ACTIVATE": "{{type}} está activo",
+        "DEACTIVATE": "{{type}} está desactivado"
+      }
+    },
+    "MODAL": {
+      "BIOMETRIC_ERROR": {
+        "BLOCKED_ERROR": "Biométricos bloqueados. Por favor ingresa con tu clave.",
+        "CONTINUE": "Continuar",
+        "DESCRIPTION": "Ocurrió un error en el acceso por {{type}}",
+        "REGISTER_ERROR": "No pudimos continuar con {{type}} podrás intentarlo en otra oportunidad",
+        "TITLE": "{{type}} no reconocida",
+        "TITLE_CHANGES": "Actualización de FaceID - TouchID",
+        "CHANGES": "Hemos identificado que tuviste cambios en la configuración de tu (FaceID / TouchID), por seguridad deberás ingresar tu contraseña.",
+        "ACCEPT": "Aceptar"
+      },
+      "REGISTER_BIOMETRIC": {
+        "CONTINUE": "Continuar",
+        "DESCRIPTION": "Configura el acceso por {{type}} para ingresar fácilmente.",
+        "SET_UP_LATER": "Configurar más tarde",
+        "TITLE": "Autenticación rápida"
+      }
+    },
+    "TYPE": {
+      "FACE_ID": "Face ID",
+      "TOUCH_ID": "Touch ID"
+    },
+    "TYPE_NAME": {
+      "FACE_ID": "Cara",
+      "TOUCH_ID": "Huella"
+    },
+    "SECRET": "9cfb51308d0b8305"
+  },
+  "CALENDAR": {
+    "DAY": {
+      "FRIDAY": "Vie",
+      "MONDAY": "Lun",
+      "SATURDAY": "Sab",
+      "SUNDAY": "Dom",
+      "THURSDAY": "Jue",
+      "TUESDAY": "Mar",
+      "WEDNESDAY": "Mie"
+    },
+    "DESCRIPTION": "Podrás consultar hasta 3 meses atrás",
+    "FROM": "Desde",
+    "TITLE": "Selecciona las fechas",
+    "TO": "Hasta"
+  },
+  "CARD_ADVANCE": {
+    "AMOUNT": "Valor",
+    "AMOUNT_STEP": {
+      "FIELD": "Valor del avance",
+      "INSTALLMENTS": "Elige el número de cuotas",
+      "TITLE": "Ingresa estos datos para continuar"
+    },
+    "AMOUNT_TO_BUY": "Valor a transferir",
+    "AVAILABLE": "Disponible",
+    "CANCEL": "Cancelar",
+    "CARD_ADVANCE": "Realizar avance",
+    "CONFIRM_DESCRIPTION": "Confirma los datos de tu avance",
+    "COST": "Costo de transacción",
+    "DESCRIPTION": "Transfiere el saldo disponible de tu Tarjeta a tu Cuenta",
+    "DESTINATION_ACCOUNT": "Cuenta destino",
+    "EDIT_DATA": "Editar información",
+    "ERROR": "No fue posible realizar el avance",
+    "FROM": "Desde",
+    "INSTALLMENT": "cuotas",
+    "INSTALLMENTS_DESCRIPTION": "No. de cuotas",
+    "NUMBER": "No.",
+    "QUESTION": "¿Estás seguro de cancelar esta transacción?",
+    "QUESTION_DESCRIPTION": "La información que has ingresado hasta el momento se borrará.",
+    "QUOTA_FOR_ADVANCES": "Cupo para avances",
+    "SUB_DESCRIPTION": "Ingresa los datos para realizar el avance",
+    "SUCCESS": "El avance desde tu tarjeta fue realizado con éxito",
+    "TITLE": "Avance de Tarjeta de Crédito",
+    "TO": "Hacia",
+    "VOUCHER": {
+      "AUTHORIZATION": "No. de autorización",
+      "AVAILABLE": "Disponible",
+      "COST": "Costo de transacción",
+      "DATE_AND_TIME": "Fecha y hora",
+      "FROM": "Desde",
+      "INSTALLMENTS_NUMBER": "No. de cuotas",
+      "MESSAGE": "El avance se verá reflejado inmediatamente en tu Cuenta destino.",
+      "TITLE": "Detalle del avance",
+      "TO": "Hacia",
+      "VALUE": "Valor"
+    }
+  },
+  "CARE_CHANNELS": {
+    "DEFAULT_CUSTOMER": {
+      "DESCRIPTION": "Nuestros asesores y oficinas atenderán de manera personalizada tus dudas y requerimientos."
+    },
+    "PREFERENT_CUSTOMER": {
+      "TITLE": "Cliente preferente",
+      "DESCRIPTION": "<b>{{name}}</b>, Es tu gestor de relación asignado, atenderá de manera personalizada tus dudas y requerimientos."
+    },
+    "CONTACT_AND_BENEFITS": {
+      "TITLE": "Datos de contacto y beneficios"
+    },
+    "AUDIOVILLAS_LINES": {
+      "TITLE": "Líneas Audiovillas en el país"
+    },
+    "OFFICES_CASHIERS_AND_CORRESPONDENTS": {
+      "TITLE": "Oficinas, Cajeros y Corresponsales"
+    },
+    "FINANCIAL_CUSTOMER": {
+      "TITLE": "Defensor consumidor financiero"
+    },
+    "BUTTON": "LOCALÍZANOS",
+    "HEADER": "Canales de atención",
+    "HEADER_MAP": "Localízanos",
+    "HEADER_CHAT": "Chat",
+    "LABELS": {
+      "BARRANQUILLA": "Barranquilla",
+      "BOGOTA": "Bogotá",
+      "BUCARAMANGA": "Bucaramanga",
+      "CALI": "Cali",
+      "MEDELLIN": "Medellín",
+      "NATIONAL_LINE": "Línea Nacional"
+    },
+    "CHAT_ALERT": {
+      "TITLE": "Vas a salir de AV Vilas App",
+      "DESCRIPTION": "Serás enviado al chat Vibot",
+      "BUTTON": "Ir al chat Vibot",
+      "CANCEL": "Cancelar"
+    }
+  },
+  "CELL_PHONE_CONTACTS": {
+    "ERROR_LOADING": "No pudimos cargar tus contactos de AV Villas.",
+    "LIST": {
+      "EMPTY": "No hay resultados para tu búsqueda",
+      "ERROR": "No pudimos cargar los contactos de tu celular.",
+      "LABEL": "Buscar contacto",
+      "READ_ERROR": "Sin autorización para lectura de contactos",
+      "TITLE": "Estos son los contactos de tu celular"
+    },
+    "OPTION_1": "Contactos celular",
+    "OPTION_2": "Contactos AV Villas",
+    "SELECT_OPTION": "Selecciona a quién",
+    "TITLE": "Contactos",
+    "TITLE_CONTACTS_SAVED": "Estos son los contactos que tienes guardados en AV Villas"
+  },
+  "CDT_RENEWAL": {
+    "TITLE": "Renovación CDT Digital",
+    "LAST_DAY": "A partír de hoy no podrás modificar los parámetros de tu CDT en línea, podrás realizarlo después de la fecha de vencimiento o acercándote a una de nuestras oficinas.",
+    "INFO": "Para renovar este CDT puedes hacerlo hasta 1 día antes de la fecha de vencimiento.",
+    "NOTICE": {
+      "ACTIVE": {
+        "TITLE": "¿Quieres renovar tu CDT Digital?",
+        "DESCRIPTION": "Se renovará desde el {{ date }} ",
+        "STARTUP_VALUE": "Valor de inversión",
+        "TERM": "Plazo",
+        "LINK": "Ingresando aquí",
+        "OPTION_1": "<b>Tu CDT se reinvertirá automáticamente, los rendimientos se abonarán a tu Cuenta de Ahorros</b>. En caso de no tener una cuenta podrás retirar la plata en nuestras oficinas. O abre tu cuenta de ahorros digital",
+        "OPTION_2": "Se renovará bajo las mismas condiciones de monto y plazo que tienes en la actualidad.",
+        "OPTION_3": "Aplicará la tasa de política de renovación vigente, a la fecha de renovación.",
+        "ACTION_CONFIRM": "Si, renovar",
+        "ACTION_CANCEL": "No, volver al detalle",
+        "DESCRIPTION_NOTICE": "Tu CDT Digital se renovará el {{ date }} ",
+        "ACTION": "No quiero renovarlo"
+      },
+      "INACTIVE": {
+        "TITLE": "¿Quieres cancelar la renovación automática de tu CDT Digital?",
+        "DESCRIPTION": "La inversión y los rendimientos ganados serán abonados a tu Cuenta de Ahorros. En caso de no tener una cuenta podrás retirar la plata en nuestras oficinas.",
+        "ACTION_CONFIRM": "Si, cancelar renovación",
+        "ACTION_CANCEL": "No, volver al detalle",
+        "ACTION": "Renueva tu CDT digital automáticamente"
+      }
+    }
+  },
+  "CHANGE_PASSWORD": {
+    "COMPLETE_PASSWORD_BUTTON": "Ir al inicio",
+    "COMPLETE_PASSWORD_DESCRIPTION_1": "Por tu seguridad ahora podrás ingresar a tu AV Villas App desde un solo dispositivo.",
+    "COMPLETE_PASSWORD_DESCRIPTION_2": "Si cambias de celular deberás registrarte nuevamente en AV Villas App.",
+    "COMPLETE_PASSWORD_DESCRIPTION_3": "Con esta contraseña ingresas a tu Banca Virtual y AV Villas App.",
+    "COMPLETE_PASSWORD_SUB_TITLE": "Recuerda que:",
+    "COMPLETE_PASSWORD_TITLE": "¡Realizaste el cambio de contraseña con éxito!",
+    "CURRENT_PASSWORD_TITLE": "Ingresa tu actual contraseña",
+    "ERROR": {
+      "BUTTON": "Entendido",
+      "DESCRIPTION": "Lo sentimos",
+      "TITLE": "No fue posible realizar el cambio de tu contraseña"
+    },
+    "FIELDS": {
+      "CONFIRM_PASSWORD": "Repite la nueva contraseña",
+      "CURRENT_PASSWORD": "Contraseña actual",
+      "ENTER_CONFIRM_PASSWORD": "Confirma la contraseña",
+      "ENTER_CURRENT_PASSWORD": "Ingresa tu actual contraseña",
+      "ENTER_NEW_PASSWORD": "Crea tu nueva contraseña",
+      "NEW_PASSWORD": "Nueva contraseña"
+    },
+    "NEW_PASSWORD_DESCRIPTION": "Para ingresar a tu Banca Virtual y AV Villas App. Utiliza 4\n    números que no sean consecutivos.",
+    "NEW_PASSWORD_TITLE": "Crea tu nueva contraseña",
+    "TITLE": "Cambio de contraseña",
+    "TITLE_SUCCESS": "¡Tu contraseña fue Actualizada exitosamente!"
+  },
+  "CONTACTS": {
+    "CREATE": {
+      "CONTACT_PRODUCTS": "Productos del contacto",
+      "REQUIRED_FIELDS": "Para crear tu contacto es necesario ingresar el celular o inscribir al menos un producto.",
+      "RESPONSE": {
+        "ERROR": {
+          "CREATE": "¡No fue posible crear tu contacto!"
+        },
+        "SUCCESS": {
+          "TITLE": "¡Tu contacto fue creado con éxito!"
+        }
+      },
+      "TITLE": "Crear un contacto"
+    },
+    "DETAIL": {
+      "ACTIONS": {
+        "PAY": "Pagar",
+        "TRANSFER": "Transferir"
+      },
+      "ADD_PRODUCTS": "Inscribir productos"
+    },
+    "FIELDS": {
+      "ACCOUNT_NICKNAME": "Alias de la cuenta",
+      "ACCOUNT_NUMBER": "Número de cuenta",
+      "ACCOUNT_TYPE": "Tipo de cuenta",
+      "BANK": "Banco",
+      "CARD_NICKNAME": "Alias de la tarjeta",
+      "CARD_NUMBER": "Número de tarjeta",
+      "CREDIT_NICKNAME": "Alias del crédito",
+      "CREDIT_NUMBER": "Número de crédito",
+      "CREDIT_TYPE": "Tipo de crédito",
+      "DOCUMENT": "Número de documento",
+      "EMAIL": "Correo electrónico",
+      "NAME": "Nombre completo",
+      "NICKNAME": "Alias",
+      "PHONE": "Celular",
+      "TYPE": "Tipo de documento"
+    },
+    "LIST": {
+      "BUTTON_CREATE": "Crear contacto",
+      "EMPTY": "No hay resultados para tu búsqueda",
+      "INFO": {
+        "DESCRIPTION_1": "Mis contactos es la nueva forma de organizar las cuentas, tarjetas y obligaciones de las personas a las que necesites realizar transferencias o pagos.",
+        "DESCRIPTION_2": "Diligencia los datos básicos de tu contacto e inscribe los productos a los que quieres transferir o pagar",
+        "DESCRIPTION_3": "<b>Consulta y gestiona la información de tus contactos</b> fácilmente, así como lo haces en la agenda de tu celular.",
+        "DESCRIPTION_4": "Accede rápidamente a las opciones de <b>transferir o pagar para cada producto</b> de tu contacto en un solo lugar.",
+        "DESCRIPTION_CREATE": "Crea tu primer contacto",
+        "TITLE": "¿Qué son Mis contactos?"
+      },
+      "LEARN_MORE": "Conoce más",
+      "SEARCH": "Busca por nombre o alias"
+    },
+    "UPDATE": {
+      "RESPONSE": {
+        "ERROR": {
+          "ADD": "¡No se pudo agregar el producto de tu contacto!"
+        },
+        "SUCCESS": {
+          "ADD": "¡Agregaste con éxito un producto a tu contacto!"
+        }
+      }
+    },
+    "POPOVER": {
+      "BLOCK": "Recuerda que tu contacto estará disponible para hacer transferencias a partir de las siguientes 15 horas.",
+      "BLOCK_PRODUCT": "Recuerda que tu producto estará disponible para hacer transferencias a partir de las siguientes 15 horas."
+    }
+  },
+  "DATE_PICKER": {
+    "FROM": "Desde",
+    "TO": "Hasta"
+  },
+  "DEBT_PURCHASE": {
+    "AMOUNT": "Valor",
+    "AMOUNT_TO_BUY": "Valor a comprar",
+    "AVAILABLE": "Disponible",
+    "CANCEL": "Cancelar",
+    "CARD_NUMBER": " No. ",
+    "CONFIRM_DESCRIPTION": "Confirma los datos de la compra",
+    "COST": "Costo de transacción",
+    "DEBT_PURCHASE": "Compra de cartera",
+    "DESCRIPTION": "Unifica tus deudas en un solo Banco a una mejor tasa.",
+    "DESTINATION_BANK": "Banco destino",
+    "EDIT_DATA": "Editar información",
+    "ERROR": "No fue posible realizar tu compra de cartera",
+    "FROM": "Desde",
+    "INSTALLMENT": "cuotas",
+    "INSTALLMENTS_NUMBER": "No. de cuotas",
+    "NUMBER": "No.",
+    "NUMBER_PRODUCT": "No. de producto",
+    "QUESTION": "¿Estás seguro de cancelar esta transacción?",
+    "QUESTION_DESCRIPTION": "La información que ingresaste hasta el momento se borrará.",
+    "ROTATING_DESCRIPTION": "Al finalizar la compra de cartera podrás consultar el número de cuotas en tus movimientos",
+    "SUB_DESCRIPTION": "Ingresa los datos del producto a comprar",
+    "SUCCESS": "Tu compra de cartera fue realizada con éxito",
+    "TITLE": "Compra de cartera",
+    "TO": "Hacia",
+    "TOWARD_STEP": {
+      "BANK_LABEL": "Banco destino",
+      "DESCRIPTION": "Unifica tus deudas en un solo Banco a una mejor tasa.",
+      "PRODUCT_LABEL": "No. de producto",
+      "PRODUCT_RATE": "Tasa de compra {{ month }} % M.V. - {{ annual }} % E.A.",
+      "TITLE": "Ingresa los datos del producto a comprar"
+    },
+    "INSTALLMENTS_STEP": {
+      "MESSAGE": "Mínimo {{ debit_purchase_installments_min }}, máximo {{ debit_purchase_installments_max }} cuotas"
+    },
+    "VOUCHER": {
+      "AUTHORIZATION": "No. de autorización",
+      "AVAILABLE": "Disponible",
+      "COST": "Costo de transacción",
+      "DATE_AND_TIME": "Fecha y hora",
+      "FROM": "Desde",
+      "INSTALLMENTS_NUMBER": "No. de cuotas",
+      "MESSAGE": "La compra de cartera se verá reflejada en máximo 3 días hábiles en el banco destino.",
+      "TITLE": "Detalle de compra de cartera",
+      "TO": "Hacia",
+      "VALUE": "Valor"
+    }
+  },
+  "DIRECTED_PAYMENTS": {
+    "MOVEMENT_STEP": {
+      "DESCRIPTION": "Selecciona hasta 5 compras o avances por transacción y realiza el pago total o parcial.",
+      "INFORMATION_TEXT": "¿Qué es un pago dirigido?",
+      "NOTICE_INFORMATION": "Para realizar pagos dirigidos a una compra específica debes tener una Cuenta del Banco AV Villas.",
+      "OPEN_ACCOUNT": "Abrir Cuenta"
+    },
+    "ACCOUNTS_STEP": {
+      "EXCEPTION_DESCRIPTION": "Te invitamos a abrir una Cuenta desde tu Banca Virtual u oficina.",
+      "EXCEPTION_TITLE": "No tienes productos disponibles en el Banco para realizar pagos.",
+      "TITLE": "Elige la Cuenta de origen"
+    },
+    "AMOUNT_STEP": {
+      "TITLE": "Puedes hacer el pago total o parcial de esta compra o avance.",
+      "DESCRIPTION": "Selecciona el valor que deseas pagar.",
+      "TOTAL_PAYMENT": "Saldo total",
+      "FIELD_PLACEHOLDER": "Valor a pagar",
+      "OTHER_VALUE": "Otro valor",
+      "TOTAL_VALUE_TO_PAY": "Valor total a pagar:",
+      "DESCRIPTION_ACCOUNT": "Elige la cuenta de origen para realizar el pago.",
+      "OTHER_VALUE_NOTICE": "Si pagas un valor menor a tu pago mínimo, tu saldo se diferirá automáticamente a 36 cuotas"
+    },
+    "CONFIRMATION_STEP": {
+      "BUTTON": "Pagar",
+      "TITLE": "Vas a realizar un pago dirigido"
+    },
+    "EXIT_ALERT": {
+      "BUTTON": "Salir del proceso",
+      "TITLE": "¿Quieres cancelar el pago dirigido?"
+    },
+    "FIELDS": {
+      "BALANCE_TO_PAY": "Saldo a pagar",
+      "COST": "Costo",
+      "DATE": "Fecha",
+      "FROM": "Desde",
+      "TOTAL_BALANCE": "Saldo total",
+      "TOWARD": "Hacia",
+      "VALUE": "Valor",
+      "VALUE_TO_PAY": "Valor a pagar",
+      "TOTAL_VALUE": "Valor total",
+      "RATE": "Tasa",
+      "INSTALLMENTS": "Cuotas",
+      "BALANCE": "Saldo",
+      "TRANSACTION": "Transacción",
+      "TRANSACTIONS": "Transacciones",
+      "APPROVAL": "No. de aprobación"
+    },
+    "HEADER": "Pagos dirigidos",
+    "INFO_ALERT": {
+      "DESCRIPTION": "Te permite hacer <b>pagos parciales o totales de tus transacciones</b> que realizaste con Tarjeta de Crédito o Crédito Rotativo.",
+      "TITLE": "¿Qué es un pago dirigido?"
+    },
+    "RESPONSE": {
+      "MESSAGE": "Recuerda que el pago de tu compra lo verás reflejado al siguiente <b>día hábil.</b>",
+      "ERROR": {
+        "TITLE": "El pago no fue realizado",
+        "TITLE_FAILED": "No fue posible hacer los pagos dirigidos",
+        "BUTTON": "Volver a intentar"
+      },
+      "SUCCESS": {
+        "AUTHORIZATION": "No. de autorización",
+        "TITLE": "Pagos dirigidos exitosos",
+        "TITLE_ONE": "Pago dirigido exitoso",
+        "TITLE_ALT": "Pagos dirigidos",
+        "FINISHED": "Transacción finalizada"
+      }
+    },
+    "STEPS": {
+      "CONFIRM": "Confirma",
+      "FROM": "Desde",
+      "MOVEMENT": "Hacia",
+      "VALUE": "Valor"
+    }
+  },
+  "DIGITAL_DEBIT_CARD": {
+    "PANEL": {
+      "TITLE": "Ver detalles de tarjeta",
+      "NEW": "Nuevo",
+      "CREATE_TITLE": "<b>Tu Nueva Tarjeta Débito Digital espera por tí</b>, utilízala para comprar por Internet y pagar tus apps favoritas.",
+      "ACTIVATE_NOW": "Actívala sin costo aquí"
+    },
+    "ACTIVATE": {
+      "HEADER_TITLE": "Activar tarjeta",
+      "STEPS": {
+        "INFO": "Información",
+        "CONFIG": "Configuración"
+      },
+      "INFO": {
+        "TITLE": "Activa tu Tarjeta Débito Digital Mastercard en un solo paso",
+        "DESCRIPTION": "La Tarjeta que siempre estará a tu lado",
+        "LIST_1": "Costo $ 0",
+        "LIST_2": "Pagas tus aplicaciones favoritas de domicilios, series y música en línea.",
+        "LIST_3": "Compras por internet de manera práctica y segura.",
+        "LIST_4": "Puedes bloquear y desbloquear la Tarjeta cuando quieras.",
+        "LIST_5": "Realiza hasta {{ tdd_max_reissue }} reexpediciones al mes.",
+        "ACTION": "Activar tarjeta",
+        "LINK": "Preguntas Frecuentes"
+      },
+      "CONFIG": {
+        "TITLE": "Configura tu tarjeta",
+        "DESCRIPTION": "Selecciona una cuenta para asociar la tarjeta",
+        "CUSTOM": "Personalización",
+        "CUSTOM_FIELD": "Nombra tu tarjeta",
+        "CUSTOM_BOTTOM": "Es útil para encontrarla fácilmente",
+        "AMOUNT_FIELD": "Ingresa un monto máximo",
+        "AMOUNT_BOTTOM": "Puedes asignar un tope para hacer compras"
+      },
+      "SUCCESS_RESPONSE": "¡Tu Tarjeta Débito Digital fue activada con éxito! Encuéntrala en tus productos y/o en el detalle de tu cuenta asociada."
+    },
+    "FREQUENT_QUESTIONS": {
+      "HEADER_TITLE": "Preguntas frecuentes"
+    },
+    "USE": {
+      "TITLE": "¿Cómo usar la Tarjeta Débito Digital?",
+      "DESCRIPTION": {
+        "ITEM_1": "En el Comercio por internet o Aplicación ingresa el número de tu Tarjeta Débito Digital, fecha de vencimiento, el código de seguridad (CVV) y listo.",
+        "ITEM_2": "Los movimientos de tu tarjeta se verán reflejados en el detalle de tu cuenta de ahorros.",
+        "ITEM_3": "Tu tarjeta estará visible en el listado de tus productos y en el detalle de tu cuenta asociada para cuando la desees usar."
+      },
+      "MESSAGE": "Para consultar los movimientos de tu Tarjeta Débito Digital, ingresa a tu Banca Virtual o AV Villas App, opción detalle de la cuenta."
+    },
+    "DETAIL": {
+      "DATE": "Fecha de vencimiento",
+      "CVC": "CVC",
+      "USE": "¿Cómo funciona mi tarjeta?",
+      "QUESTIONS": "Preguntas frecuentes",
+      "MAX_AMOUNT": "Tope máximo para compras",
+      "ACTIONS_TITLE": "Estas son las opciones de tu tarjeta"
+    },
+    "EDIT": {
+      "HEADER_TITLE": "Editar tarjeta",
+      "TITLE": "Editar tu tarjeta",
+      "CUSTOM": "Personalización",
+      "CUSTOM_FIELD": "Nombra tu tarjeta",
+      "CUSTOM_BOTTOM": "Es útil para encontrarla fácilmente",
+      "AMOUNT_FIELD": "Ingresa un monto máximo",
+      "AMOUNT_BOTTOM": "Puedes asignar un tope para hacer compras",
+      "EDIT_SUCCESS": "Los cambios se guardaron con éxito."
+    },
+    "CANCEL": {
+      "HEADER_TITLE": "Eliminar tarjeta",
+      "TITLE": "Eliminar Tarjeta Débito Digital",
+      "DESCRIPTION_1": "Recuerda que",
+      "DESCRIPTION_2": "puedes adquirir una nueva Tarjeta Digital en el momento que quieras",
+      "DESCRIPTION_3": "y su activación será inmediata",
+      "APPROVAL": "No. de aprobación",
+      "LIST_1": "Esta tarjeta y su número se eliminarán, si la tienes inscrita en algún servicio como Netflix, Spotify u otros, los pagos automáticos quedarán anulados.",
+      "LIST_2": "Recuerda que puedes adquirir una nueva Tarjeta Débito Digital en el momento que quieras, su activación será inmediata y sin costo complementario.",
+      "CANCEL_BTN": "Eliminar tarjeta",
+      "CANCEL_SUCCESS": "Tu Tarjeta Débito Digital ha sido eliminada exitosamente"
+    },
+    "REISSUE": {
+      "HEADER_TITLE": "Reexpedir tarjeta",
+      "TITLE": "Reexpedir Tarjeta Débito Digital",
+      "LIST_1": "Se genera una nueva Tarjeta Digital con un nuevo número para realizar compras.",
+      "LIST_2": "Solo puedes realizar la reexpedición de tu tarjeta máximo {{ tdd_max_reissue }} veces al mes.",
+      "LIST_3": "Es un proceso inmediato, tu nueva tarjeta queda activa.",
+      "LIST_4": "Esta reexpedición de tarjeta tiene un costo de $0.",
+      "LIST_5": "Tu anterior tarjeta y su número se cancelan, si la inscribiste en un servicio prepago como Netflix, Spotify u otros, los pagos automáticos quedarán anulados.",
+      "REISSUE_BTN": "Reexpedir Tarjeta",
+      "REISSUE_SUCCESS": "Tu Tarjeta Débito Digital fue reexpedida exitosamente, es totalmente nueva y su número es diferente a la anterior"
+    },
+    "ALERT": {
+      "TITLE": "Te presentamos la nueva Tarjeta Débito Digital Mastercard",
+      "DESCRIPTION": "Pide tu Tarjeta Débito Digital SIN COSTO para que disfrutes de todos sus beneficios al comprar por internet sin tener una Tarjeta en tu mano."
+    },
+    "RESPONSE": {
+      "ERROR_DETAIL": {
+        "TITLE": "No es posible ver el detalle de la tarjeta"
+      },
+      "ERROR_CREATE": {
+        "TITLE": "No fue posible activar tu Tarjeta Débito Digital Mastercard"
+      },
+      "ERROR_EDIT": {
+        "TITLE": "No fue posible editar tu Tarjeta Débito Digital Mastercard"
+      },
+      "ERROR_CANCEL": {
+        "TITLE": "No fue posible eliminar tu Tarjeta Débito Digital Mastercard"
+      },
+      "ERROR_REISSUE": {
+        "TITLE": "No fue posible reexpedir tu Tarjeta Débito Digital Mastercard"
+      }
+    }
+  },
+  "DOCUMENTS": {
+    "HEADER": "Extractos y Certificados",
+    "ITEMS": {
+      "ANNUAL_REPORT": "Reporte anual",
+      "EXTRACTS": "Extractos",
+      "PRODUCT_CERTIFICATES": "Certificados de producto",
+      "TAX_CERTIFICATES": "Certificados tributarios"
+    },
+    "TITLE": "Selecciona el tipo de documento<br>que quieres descargar"
+  },
+  "ERRORS": {
+    "GENERIC": "Ha ocurrido un error",
+    "RETRY_AGAIN_LATER": "Intenta más tarde"
+  },
+  "EXTRACTS": {
+    "EMPTY_MESSAGE": "Podrás consultarlos al finalizar cada mes",
+    "EMPTY_TITLE": "No tienes extractos disponibles hasta el momento",
+    "ERROR_TITLE": "No fue posible realizar la descarga",
+    "HEADER": "Extractos",
+    "NO_CONTENT_MESSAGE": "Regresa más tarde",
+    "NO_CONTENT_TITLE": "Tenemos inconvenientes para cargar tus documentos",
+    "NO_PRODUCTS_MESSAGE": "Podrás consultarlos al finalizar cada mes",
+    "NO_PRODUCTS_TITLE": "Aún no tienes productos que generen extractos",
+    "SELECT_PRODUCT": "Selecciona un producto",
+    "SUCCESS_TITLE": "¡La descarga de tu archivo fue exitosa!",
+    "TITLE": "Selecciona el producto que quieres consultar",
+    "TITLE2": "Elige el mes que deseas consultar",
+    "CATEGORIES": {
+      "SAVING_ACCOUNT": "Cuentas",
+      "CREDIT_CARD": "Tarjetas de crédito",
+      "CREDITS": "Créditos",
+      "ROTATING_CREDITS": "Créditos rotativos"
+    }
+  },
+  "TAX": {
+    "HEADER": "Certificados tributarios",
+    "ALERT": "La descarga incluye la información de 4x1000 y Retención en la fuente de todos tus productos de AV Villas.",
+    "SUCCESS_TITLE": "¡La descarga de tu archivo fue exitosa!",
+    "ERROR_TITLE": "No fue posible realizar la descarga"
+  },
+  "FAVORITES": {
+    "LABEL": "Favorito",
+    "ADD": "Agregar más favoritos",
+    "ADD_PAGE": {
+      "TITLE": "Agrega tu favorito",
+      "FROM": "Desde",
+      "TO": "Hacia",
+      "REMINDER": "Recuerda que puedes agregar hasta 15 favoritos para tus operaciones frecuentes.",
+      "ADD": "Agregar",
+      "MODAL_TITLE": "Selecciona una Cuenta",
+      "FIELDS": {
+        "ORIGIN_ACCOUNT": "Cuenta de origen",
+        "TRANSFER_TYPE": "Tipo de transferencia",
+        "SELECT_ACCOUNT": "Selecciona una Cuenta",
+        "ACCOUNT_NUMBER": "Número de cuenta",
+        "FAVORITE_NAME": "Nombre de tu favorito",
+        "AVAL_KEY": "Tag o Llave",
+        "PHONE": "Celular"
+      },
+      "HINT": "Recuerda que puedes agregar hasta 15 favoritos para tus operaciones frecuentes."
+    },
+    "CONTACTS_PAGE": {
+      "PHONE_NUMBER": "Número celular:",
+      "SELECT_CONTACT": "seleccionar",
+      "BANK": "Banco"
+    },
+    "FAVORITES_TYPES": {
+      "TRANSFER": "Transferencia",
+      "RECHARGE": "Recarga",
+      "PAYMENT": "Pago",
+      "MONEY_ORDER": "Giro"
+    },
+    "HEADER": "Favoritos",
+    "ACTIONS": {
+      "BTN_SAVE": "Agregar favorito"
+    },
+    "CREATE": {
+      "NAME_FIELD": "Nombre del favorito",
+      "SUCCESS_TITLE": "Guardaste la transferencia como favorita",
+      "SUCCESS_TITLE_MONEY_ORDER": "Guardaste el giro como favorito",
+      "SUCCESS_TITLE_RECHARGE": "Guardaste la recarga como favorita"
+    },
+    "HOME": {
+      "TITLE": "Favoritos",
+      "ADD_FAVORITE_CARD": {
+        "TITLE": "Agrega favoritos",
+        "DESCRIPTION": "Realiza tus transacciones frecuentes más rápido."
+      },
+      "ALT_ICON": "Icono de favoritos",
+      "COUNTER_TITLE": "de {{ total }}",
+      "COUNTER_DESCRIPTION": "Favoritos",
+      "FOOTER": "Ver todos los favoritos",
+      "TEXT_INFO": "¿Cómo agregar un favorito?"
+    },
+    "DELETE": {
+      "TITLE": "¿Estás seguro de eliminar tu favorito?",
+      "DESCRIPTION": "Al eliminarlo deberás crearlo de nuevo",
+      "BUTTON": "Sí, eliminar"
+    },
+    "TRANSFER": {
+      "INSUFFICIENT_BALANCE": "Saldo insuficiente",
+      "CHOOSE_ACCOUNT": "Seleccionar otra cuenta",
+      "NO_CONTENT": {
+        "IMG_ALT": "Ícono referente a que no hay resultados",
+        "TITLE": "No tienes productos disponibles para realizar transferencias",
+        "DESCRIPTION": "Te invitamos a abrir una cuenta en avvillas.com.co para que puedas realizar esta transacción.",
+        "BUTTON": "Eliminar este favorito"
+      },
+      "CONTENT": {
+        "MONEY_ORDER": {
+          "FIELD_DOC": "Documento",
+          "FIELD_WHERE": "Dónde"
+        }
+      },
+      "AMOUNT_MODAL": {
+        "TRANSFER": {
+          "TITLE": "Ingresa el valor a transferir",
+          "INPUT_LABEL": "Valor a transferir"
+        },
+        "RECHARGES": {
+          "TITLE": "Ingresa el valor a recargar",
+          "INPUT_LABEL": "Valor a recargar"
+        },
+        "MONEY_ORDER": {
+          "TITLE": "Ingresa el valor a girar",
+          "INPUT_LABEL": "Valor a girar"
+        },
+        "SERVICE": {
+          "TITLE": "Ingresa el valor a pagar",
+          "INPUT_LABEL": "Valor a pagar"
+        }
+      },
+      "ACCOUNT_MODAL": {
+        "TITLE": "Elige la cuenta de origen"
+      }
+    },
+    "EDIT": {
+      "SUCCESS_TITLE": "Guardaste la transferencia como favorita",
+      "NAME_MODAL": {
+        "TITLE": "Ingresa el nombre del favorito"
+      },
+      "ADDENDA_MODAL": {
+        "TITLE_NOTE": "Ingresa un mensaje",
+        "TITLE_REFERENCE": "Ingresa datos adicionales",
+        "LABELS": {
+          "NOTE": "Mensaje",
+          "REFERENCE": "Datos adicionales"
+        },
+        "HELP_TEXT": "Ejemplo: pago del arriendo"
+      }
+    },
+    "ONBOARDING": {
+      "CONTINUE": "Crear favorito",
+      "SLIDES": {
+        "SLIDE1": {
+          "TITLE": "Agregar favoritos",
+          "DESCRIPTION": "Agrega hasta 15 <b>favoritos</b> de tus <b>transferencias frecuentes</b> y hazlas en segundos."
+        },
+        "SLIDE2": {
+          "TITLE": "Agregar favoritos",
+          "DESCRIPTION": "Al finalizar tu transacción, haz clic en <b>Guardar favorito</b> en el comprobante."
+        }
+      }
+    }
+  },
+  "FAVORITES_CONTACTS_PAGE": {
+    "PHONE_NUMBER": "Número celular:"
+  },
+  "FOOTER": {
+    "LINKS": {
+      "HOME": "Inicio",
+      "PAYMENTS": "Pagos",
+      "QR": "Qr",
+      "TRANSFERS": "Transferencias",
+      "WITHDRAW": "Giros / Recargas",
+      "SPI_KEYS": "Bre-B"
+    },
+    "OPTIONS": {
+      "ARIA_TITLE": "Opciones de QR",
+      "ARIA_DESC": "Modal que contiene las opciones de lectura de código QR"
+    }
+  },
+  "GENERIC_STEPPER": {
+    "ACCOUNTS_ERROR": {
+      "DESCRIPTION": "Selecciona una diferente e intenta de nuevo",
+      "TITLE": "No tienes saldo en tu Cuenta para esta transacción"
+    }
+  },
+  "HEADER": {
+    "ADD_PRODUCT": "Agregar productos",
+    "MOVEMENTS_DETAIL": "Movimientos",
+    "MY_PRODUCTS": "Mis productos"
+  },
+  "HOME": {
+    "NEW_FEATURES": {
+      "TITLE": "Descubre lo nuevo que tenemos para ti",
+      "BANNER": "Recibe plata desde el exterior"
+    },
+    "POCKETS": {
+      "PANEL": {
+        "TITLE": "Bolsillos",
+        "DESCRIPTION": "Crea un bolsillo y ahorra"
+      }
+    },
+    "AVAL_PRODUCTS": {
+      "BUTTON": "Ver todos mis productos"
+    },
+    "COMPLEMENTARY_SERVICES_ALERT": {
+      "BUTTON": "Activar",
+      "DESCRIPTION": "Activa tus servicios complementarios"
+    },
+    "COMPLEMENTARY_SERVICES_ERROR_ALERT": {
+      "TITLE": "Presentamos fallas al cargar tus servicios complementarios",
+      "MESSAGE": "Intenta más tarde",
+      "DESCRIPTION": "No pudimos cargar tus servicios complementarios"
+    },
+    "PROMOTION": {
+      "ALERT": {
+        "BUTTON": "Ir a déjate sorprender",
+        "CANCEL": "Cancelar",
+        "DESCRIPTION": "Serás enviado al sitio web de Déjate sorprender",
+        "TITLE": "A continuación vas a salir de AV Villas App"
+      },
+      "DESCRIPTION": "<b>Disfruta descuentos exclusivos</b> en tus tiendas favoritas, promociones y beneficios únicos, <b>diseñados solo para ti por tu banco AV Villas.</b>",
+      "TITLE": "¡Tu decides que plan quieres disfrutar hoy!",
+      "SECTION_TITLE": "ZONA PROMO",
+      "ACTION": "Descubre tus descuentos ahora"
+    },
+    "POPUP_SECURITY_ALERT": {
+      "TITLE": "¡Que no te engañen!",
+      "TEXT1": "Cuidado con <b>ciberdelicuentes</b> que se hacen pasar por el <b>Banco AV Villas</b> solicitando información financiera por supuestas campañas de devolución del IVA.",
+      "TEXT2": "Nunca compartas tus contraseñas, códigos que llegan al celular o números de tarjetas. Si te contactan no des información y comunícate con la línea AudioVillas.",
+      "TEXT3": "El Banco nunca solicita esta información por medio telefónico ni a través de mensajes de texto.",
+      "ACTION": "Más información"
+    },
+    "MARKETING": {
+      "CDT": {
+        "TITLE": "CDT Digital",
+        "DESCRIPTION": "Abre tu CDT desde $500 mil, y un plazo mínimo de 90 días.",
+        "ACTION_LINK": "Ábrelo aquí"
+      },
+      "APPLE_PAY": {
+        "TITLE": "Agrega tus tarjetas a Apple Pay",
+        "DESCRIPTION": "Paga usando solo tu celular",
+        "ACTION_LINK": "Conocer más"
+      },
+      "GOOGLE_PAY": {
+        "TITLE": "Agrega tus tarjetas a Google pay",
+        "DESCRIPTION": "Paga rápido, fácil y seguro usando solo tu celular",
+        "ACTION_LINK": "Agregar Tarjetas"
+      }
+    }
+  },
+  "CAMPAIGN": {
+    "SLIDES": {
+      "SLIDE_1": {
+        "TITLE": "Bolsillos",
+        "DESCRIPTION": "Crea tus bolsillos y define tus metas de ahorro.",
+        "BUTTON": "Abrir bolsillo"
+      },
+      "SLIDE_2": {
+        "TITLE": "Abre un CDT fácil",
+        "DESCRIPTION": "Invierte tu plata mientras haces lo que te gusta.",
+        "BUTTON": "Ábrelo aquí"
+      },
+      "SLIDE_3": {
+        "TITLE": "Activa tu Tarjeta Débito Digital",
+        "DESCRIPTION": "Úsala con un número y código diferentes a la tarjeta física.",
+        "BUTTON": "Activar ahora"
+      },
+      "SLIDE_4": {
+        "TITLE": "Compra de cartera 100% en línea",
+        "DESCRIPTION": "Puedes mejorar la tasa y/o el plazo de tus deudas.",
+        "BUTTON": "Solicítala aquí"
+      },
+      "SLIDE_5": {
+        "TITLE": "Activa tu Tarjeta Crédito Virtual",
+        "DESCRIPTION": "Úsala para realizar tus compras por internet.",
+        "BUTTON": "Activar"
+      }
+    }
+  },
+  "REQUEST_PRODUCTS": {
+    "HEADER": "Solicitud de productos",
+    "HOME": {
+      "TITLE": "Solicita tus productos digitalmente",
+      "BUTTON": "Conoce más"
+    },
+    "HELLO": {
+      "TITLE": "estos son los productos que tenemos para ti",
+      "SUB_TITLE": "Realiza la solicitud de productos desde la comodidad de tu casa"
+    },
+    "SLIDER": {
+      "BTN_AHORRO": "Comienza aquí",
+      "BTN_CREDITO": "Pide tu tarjeta",
+      "BTN_CDT": "Abre tu CDT Digital",
+      "BTN_DLA": "Solicita tu crédito",
+      "BTN_TDD": "Activa tu Tarjeta Débito digital",
+      "CONTENT": {
+        "SLIDER_1": "Solicita en línea la <b>Tarjeta de Crédito</b> del Banco AV Villas",
+        "SLIDER_2": "Abre tu <b>Cuenta de Ahorros</b> sin tanto papeleo ",
+        "SLIDER_3": "<b>CDT Digital</b>, invierte tu plata mientras haces lo que te gusta",
+        "SLIDER_4": "Con un <b>Crédito Libre Inversión</b>, tú decides cómo invertir",
+        "SLIDER_5": "Activa tu <b>Tarjeta Débito</b> Digital para hacer compras por internet",
+        "SLIDER_6": "Asegura tu bienestar y el de tus seres queridos",
+        "SLIDER_7": "Pide tu crédito para financiar tu <b>vivienda o comprar tu cartera hipotecaria</b>"
+      }
+    },
+    "ALERT": {
+      "TITLE": "A continuación vas a salir de AV Villas App",
+      "DESCRIPTION": "Serás enviado al sitio web",
+      "BUTTON": "IR AL SITIO WEB",
+      "CANCEL": "Cancelar"
+    }
+  },
+  "LOGIN": {
+    "MAIN_TEXT": "Registra tus llaves en",
+    "DOCUMENT_TYPES": {
+      "CC": "Cédula de ciudadanía",
+      "CE": "Cédula de extranjería",
+      "TI": "Tarjeta de identidad"
+    },
+    "ENTER": "INGRESAR",
+    "ERROR": {
+      "GENERAL": {
+        "BUTTON": "Intentar de nuevo",
+        "TITLE": "Error",
+        "UNKNOWN": "Lo sentimos",
+        "DESCRIP_UNKNOWN": "En este momento no pudimos procesar el ingreso a la aplicación",
+        "NO_PRODUCTS": {
+          "MESSAGE": "No fue posible completar tu login, por favor acércate a una oficina (404)",
+          "BUTTON_PRIMARY": "Salir de AV Villas App",
+          "BUTTON_SECONDARY": "Dónde encontrarnos"
+        }
+      },
+      "PASSWORD_EXPIRED": {
+        "ALTERNATIVE_BUTTON": "En otro momento",
+        "BUTTON": "Actualizar contraseña",
+        "DESCRIPTION": "Actualízala para continuar utilizando AV Villas App",
+        "TITLE": "Tu contraseña ha caducado"
+      },
+      "REGISTER_AGAIN": {
+        "BUTTON": "Registrar nuevamente",
+        "TITLE": "Error"
+      },
+      "PASSWORD_BIOMETRIC": {
+        "BUTTON": "Entendido",
+        "DESCRIPTION": "Si cambiaste tu contraseña recientemente deberás digitarla para continuar accediendo a través de tus biométricos",
+        "TITLE": "Actualización de contraseña"
+      }
+    },
+    "FIELDS": {
+      "DOCUMENT_TYPE": "Tipo de documento",
+      "NUMBER": "Número de documento",
+      "PASSWORD": "Ingresa tu contraseña"
+    },
+    "FOOTER": {
+      "CARE_CHANNELS": "Canales de atención",
+      "QR": "Qr",
+      "REQUEST_PRODUCTS": "Solicitar productos"
+    },
+    "FORGOT_PASSWORD": "Olvidé mi contraseña",
+    "ERROR_LOGIN": "¿Tienes problemas para ingresar?",
+    "HI": "Hola"
+  },
+  "INACTIVE_CHANNEL": {
+    "TITLE": "Tu canal digital está inactivo",
+    "DESCRIPTION_1": "Acércate a una oficina AV Villas para habilitar el canal.",
+    "DESCRIPTION_2": "O en un cajero automático de la Red Aval ingresa por la opción Banca Virtual y elige habilitar canal.",
+    "BUTTON": "¿Dónde encontrarnos?"
+  },
+  "LOGOUT": "Cerrar sesión",
+  "LOGOUT_BY_INACTIVITY": {
+    "BUTTON_CLOSE": "Ingresar de nuevo",
+    "TITLE": "Tu sesión se ha finalizado por inactividad"
+  },
+  "MODAL_CONFIRM_CANCEL_TRANSACTION": {
+    "BUTTON_CANCEL": "No, volver",
+    "BUTTON_OK": "Sí, cancelar",
+    "DESCRIPTION": "La información que has ingresado hasta el momento se borrará.",
+    "DESCRIPTION_CEL2CEL": "Recuerda que si deseas abandonar la transferencia se perderán los datos ingresados y tendrás que comenzar de nuevo."
+  },
+  "MONTHS": {
+    "APRIL": "Abril",
+    "AUGUST": "Agosto",
+    "DECEMBER": "Diciembre",
+    "FEBRUARY": "Febrero",
+    "JANUARY": "Enero",
+    "JULY": "Julio",
+    "JUNE": "Junio",
+    "MARCH": "Marzo",
+    "MAY": "Mayo",
+    "NOVEMBER": "Noviembre",
+    "OCTOBER": "Octubre",
+    "SEPTEMBER": "Septiembre"
+  },
+  "MOVEMENTS": {
+    "DOWNLOAD_MOVEMENTS": "Descargar movimientos",
+    "EA": "E.A.",
+    "FILTERS": {
+      "ALL": "Ver todo",
+      "DOWN": "Plata que entró",
+      "UP": "Plata que salió",
+      "CREDIT_CARD": {
+        "PURCHASES": "Compras/Avances",
+        "PAYMENTS": "Pagos tarjeta"
+      }
+    },
+    "INSTALLMENTS_PAID": "Cuotas pagadas",
+    "NOTICE_RANGE": "Consulta tus movimientos hasta 3 meses atrás",
+    "NOTICE_RANGE_YEAR": "Consulta tus movimientos hasta 1 año atrás.",
+    "RATE": "Tasa",
+    "NOT_FOUND": {
+      "MAIN_TITLE": "No tienes movimientos en este rango de tiempo.",
+      "COME_IN_TITLE": "No encontramos movimientos en plata que entró",
+      "COME_OUT_TITLE": "No encontramos movimientos en plata que salió",
+      "CATEGORY_TITLE": "No encontramos movimientos en esta categoría"
+    }
+  },
+  "MY_AVAILABLE_QUOTA": "Mi cupo disponible",
+  "MY_EXPENSES": "Mis gastos",
+  "MY_PRODUCTS": "Mis productos",
+  "MY_TOTAL_QUOTA": "Mi cupo total",
+  "NEW_UPDATE": {
+    "ANDROID_STORE": "Play Store",
+    "DESCRIPTION": "Para continuar utilizando los servicios de </br> AV Villas App debes tener la última </br> actualización de nuestra aplicación",
+    "DOWNLOAD_BUTTON": "Descárgala ahora en tu tienda",
+    "HI": "Hola",
+    "HUAWEI_STORE": "App Gallery",
+    "IOS_STORE": "App Store",
+    "MESSAGE": "¿Ya tienes la <b>última actualización</b> que tenemos<br>disponible para ti?",
+    "SKIP": "Omitir",
+    "TITLE": "Actualizar AV Villas App"
+  },
+  "NOTIFICATION": {
+    "MENU": {
+      "BODY": "El No. de celular {{number}} te {{type}}",
+      "BODY_TYPE": {
+        "ASKED": "pidió",
+        "SEND": "envió"
+      },
+      "EMPTY": {
+        "DESCRIPTION": "No tienes notificaciones",
+        "TITLE": "¡Excelente estás al día!",
+        "ACTIONS": {
+          "UPDATE": "Recargar",
+          "EXIT": "Volver"
+        },
+        "MESSAGE": "Si estás realizando una transacción y no te aparece, recargar la pantalla."
+      },
+      "ALERT": {
+        "DESCRIPTION": "No estarás recibiendo notificaciones ya que se encuentran desactivadas.",
+        "BUTTON": "Activar notificaciones"
+      },
+      "HEADER": "Notificaciones",
+      "PROMOTION": {
+        "DESCRIPTION": "Trae el crédito que tengas en otro banco, y obtén beneficios especiales en tasas de interés",
+        "TITLE": "Recientes"
+      },
+      "TITLE": "Transferencias a celular pendientes",
+      "MAILBOX": {
+        "TITLE": "Recientes",
+        "SELECT": "Seleccionar",
+        "SELECT_ALL": "Seleccionar todas",
+        "DELETE_ITEM": "ELIMINAR NOTIFICACIÓN",
+        "DELETE_ALL": "¿Estas seguro que quieres eliminar todas tus notificaciones?",
+        "REMOVE_SELECTION": "Quitar selección",
+        "SUCCESS": {
+          "DELETE_ITEM": "La notificación fue eliminada",
+          "DELETE_ALL": "Las notificaciones fueron eliminadas",
+          "READ_ALL": "Las notificaciones han sido marcadas como leídas"
+        },
+        "ERROR": {
+          "TITLE": "¡Algo salió mal!",
+          "DESCRIPTION": "Por favor, intenta de nuevo."
+        }
+      }
+    },
+    "ENABLE_NOTIFICATIONS": {
+      "TITLE": "¡Activa tus notificaciones!",
+      "DESCRIPTION": "Actualmente tienes las notificaciones desactivadas, por este motivo no podrás autorizar tus transacciones en Banca Virtual o PSE.",
+      "BUTTON": "Activar notificaciones"
+    },
+    "TRANSACTION_ATHORIZATION": {
+      "ALERT": {
+        "TITLE": "Confirma que quieres autorizar",
+        "DESCRIPTION": "Inscripción de tu contacto {{clientName}} {{accountType}} No. {{productNumber}} {{bankName}}",
+        "ACTIONS": {
+          "BUTTON": "AUTORIZAR",
+          "BUTTON_CANCEL": "RECHAZAR"
+        }
+      }
+    }
+  },
+  "OF": "de",
+  "ONBOARDING": {
+    "BUTTON": "Entendido",
+    "SLIDE_1": {
+      "TITLE": "Bre-B",
+      "SUBTITLE": "<b>Registra</b> tus llaves (alfanuméricas, número de celular, correo electrónico o número de identificación), <b>adminístralas</b> fácilmente y <b>transfiere</b> al instante a otras llaves."
+    },
+    "SLIDE_2": {
+      "TITLE": "Notificaciones Push o QR",
+      "SUBTITLE": "En <b>AV Villas App</b> puedes autorizar tus transacciones de PSE o Banca Virtual por medio de <b>notificaciones PUSH o QR.</b>"
+    },
+    "SLIDE_3": {
+      "TITLE": "Tarjeta de Crédito Virtual",
+      "SUBTITLE": "Activa Tarjetas de Crédito Virtual y realiza tus <b>compras en línea</b> de forma segura."
+    },
+    "SLIDE_4": {
+      "TITLE": "Bolsillos con Rentabilidad",
+      "SUBTITLE": "Crea bolsillos <b>desde $500.000</b> y gana rendimientos con una permanencia mínima de 31 días."
+    }
+  },
+  "PAYMENTS": {
+    "MAX_AMOUNT": {
+      "REGISTERED": "Paga tus servicios por un valor máximo de <b>${{ max_amount }}</b> o modifícalo a través de Banca Virtual en la sección de seguridad / topes por transacción.",
+      "UNREGISTERED": "Recuerda que para realizar pago por un valor superior a <b>${{ max_amount }}</b> debes inscribir el servicio o convenio a través de la Banca virtual."
+    },
+    "AVAL_CREDITS_LIST": {
+      "AV_VILLAS": {
+        "EMPTY": "¡Aquí podrás ver y administrar fácilmente todos tus Créditos AV Villas!",
+        "TABLE_HEADER": {
+          "MINIMUN_VALUE": "Valor mínimo",
+          "PAYDAY_LIMIT": "Límite de pago",
+          "PRODUCT_NAME": "Alias"
+        },
+        "TITLE": "Mis Créditos AV Villas"
+      },
+      "CONTACTS": {
+        "CREATE_CONTACT": "CREAR CONTACTO",
+        "TABLE_HEADER": {
+          "ALIAS_CARD": "Alias",
+          "CONTACT_NAME": "Nombre de contacto"
+        },
+        "TITLE": "Créditos de Mis Contactos"
+      },
+      "OTHER_BANKS": {
+        "REGISTER_AND_PAY": "INSCRIBIR Y PAGAR",
+        "TABLE_HEADER": {
+          "ALIAS": "Alias",
+          "BANK": "Banco"
+        },
+        "TITLE": "Mis Créditos AVAL"
+      },
+      "PAY": "PAGAR",
+      "PRODUCT_NUMBER": "No. de producto"
+    },
+    "CREDITS_AND_CARDS": {
+      "DESCRIPTIONS": {
+        "CONTACTS": {
+          "CREDIT_CARDS": "Créditos y Tarjetas de mis Contactos",
+          "CREDITS": "Créditos de Mis Contactos"
+        },
+        "OTHER": {
+          "CREDIT_CARDS": "Créditos y Tarjetas otros Bancos",
+          "CREDITS": "Mis Créditos AVAL"
+        },
+        "VILLAS": {
+          "CREDIT_CARDS": "Créditos y Tarjetas AV Villas",
+          "CREDITS": "Mis Créditos AV Villas"
+        }
+      },
+      "EMPTY": {
+        "TEXT": "Puedes inscribir Tarjetas Mastercard o Visa de otros bancos y Créditos de bancos del grupo Aval, desde nuestra Banca Virtual.",
+        "TITLE": "No tienes Créditos o Tarjetas por pagar"
+      },
+      "ERROR": "No pudimos mostrar los productos inscritos. Inténtalo más tarde",
+      "HEADER": "Créditos y Tarjetas",
+      "TABS": {
+        "CONTACTS": "De mis contactos",
+        "OWN": "Propios"
+      },
+      "TITLE": "Productos inscritos"
+    },
+    "ITEMS": {
+      "CREDITS_AND_CARDS": "Créditos y Tarjetas",
+      "SERVICES": "Servicios y Convenios",
+      "SOCIAL_SECURITY": "PILA Seguridad Social",
+      "TAXES": "Impuestos"
+    },
+    "PAY_LOAN": {
+      "ACCOUNTS_STEP": {
+        "EXCEPTION_DESCRIPTION": "Te invitamos a abrir una cuenta desde nuestra Banca Virtual u oficina.",
+        "EXCEPTION_TITLE": "No tienes productos disponibles en el Banco para realizar pagos.",
+        "TITLE": "Elige la Cuenta de origen o el método de pago"
+      },
+      "AMOUNT_STEP": {
+        "MINIMUM_PAYMENT": "Pago mínimo",
+        "MINIMUM_REDUCED_NOTICE": "Si pagas este valor, el saldo pendiente de cada transacción será diferido a 36 cuotas.",
+        "MINIMUM_REDUCED_PAYMENT": "Pago mínimo reducido",
+        "NEXT_INSTALLMENT": "Próxima cuota",
+        "OTHER_VALUE": "Otro valor",
+        "OTHER_VALUE_NOTICE": "Si pagas un valor menor a tu pago mínimo, tu saldo se diferirá automáticamente a 36 cuotas",
+        "TITLE_PRIMARY": "Selecciona el valor a pagar",
+        "TITLE_SECONDARY": "Ingresa el valor a pagar",
+        "TOTAL_PAYMENT": "Pago total",
+        "VALUE": "Valor",
+        "PAY_IN_COP": "Pago saldo en pesos",
+        "PAY_IN_DOLLAR": "Pago saldo en dólares (ingresar el valor a pagar en pesos)"
+      },
+      "TYPE_STEP": {
+        "TITLE": "Elige a que quieres aplicar este pago",
+        "SUB_TITLE": "Valor",
+        "MONTHLY_INSTALLMENT_PAYMENT": "Abono cuota del mes",
+        "EXTRAORDINARY_PAYMENT": "Pago extraordinario",
+        "CHOOSE_REDUCE": "Elige que quieres reducir"
+      },
+      "CONFIRMATION_STEP": {
+        "TITLE": "Vas a pagar"
+      },
+      "EXIT_DATA": "¿Quieres cancelar el pago?",
+      "FIELDS": {
+        "COST": "Costo",
+        "DUE_DATE": "Fecha límite pago",
+        "FROM": "Desde",
+        "MINIMUM_TO_PAY": "Mínimo a pagar",
+        "NEXT_INSTALLMENT": "Próxima cuota",
+        "TOWARD": "Hacia",
+        "TYPE": "Aplica el pago a",
+        "VALUE": "Valor",
+        "DOLLAR_PAY": "Pago saldo en dólares",
+        "MESSAGE": "(valor en pesos)"
+      },
+      "RESPONSE": {
+        "AUTHORIZATION": "No. de autorización",
+        "ERROR": "El pago no fue realizado",
+        "SUCCESS": "¡El pago fue realizado con éxito!",
+        "VOUCHER": {
+          "AUTHORIZATION": "No. de autorización",
+          "DATE_AND_TIME": "Fecha y hora",
+          "FROM": "Desde",
+          "MESSAGE": {
+            "CREDITS": "Los pagos de créditos AV Villas y Aval se reflejan al siguiente día hábil.",
+            "OTHERS": "Los pagos de Tarjetas de otros bancos tardan 2 días hábiles en reflejarse.",
+            "VILLAS": "Los pagos de Tarjetas AV Villas y Aval se reflejan al siguiente día hábil."
+          },
+          "ORIGIN": {
+            "SDA": "Ahorros"
+          },
+          "TITLE": "Detalle del pago",
+          "TO": "Hacia",
+          "VALUE": "Valor"
+        }
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "VALUE": "Valor"
+      },
+      "TITLE": "Pagar Créditos y Tarjetas",
+      "PAYMENT_TYPE_LIST": {
+        "QUOTA": "Cuota",
+        "TERM": "Plazo"
+      },
+      "PAYMENT_TYPE_TEXT": {
+        "MONTHLY_INSTALLMENT_PAYMENT": "Abono cuota del mes",
+        "EXTRAORDINARY_PAYMENT": "Pago extraordinario",
+        "REDUCE_QUOTA": "Para reducir la cuota",
+        "REDUCE_TERM": "Para reducir el plazo"
+      },
+      "CREDIT_CARD_LESS_THAN_MIN_REDUCE_PAY_NOTICE_WARNING": "Si pagas un valor menor al pago mínimo reducido entrarás en mora."
+    },
+    "SEARCH_LIST": {
+      "EMPTY": "No encontramos coincidencias con este nombre. Verifica e inténtalo de nuevo",
+      "TITLE": "Elige el servicio o convenio"
+    },
+    "SERVICES": {
+      "HOME": {
+        "CARD": {
+          "LABELS": {
+            "AVAILABLE": "Disponible",
+            "NOT_AVAILABLE": "Factura no disponible",
+            "SCHEDULE_PAYMENT": "Pago programado",
+            "PAYMENT_REFERENCE": "Ref pago",
+            "PAYMENT_AMOUNT": "Valor factura",
+            "PAYMENT_AMOUNT_MAX": "Valor máximo a pagar",
+            "PAYMENT_LIMIT": "Fecha límite de pago",
+            "FROM": "Desde",
+            "PAY": "Pago",
+            "SCHEDULE_TYPE_1": "Se pagará cuando el banco reciba la factura",
+            "SCHEDULE_TYPE_2": "Se pagará en la fecha de vencimiento"
+          },
+          "ACTIONS": {
+            "PAY": "Pagar",
+            "SCHEDULE": "Programar pago",
+            "EDIT_SCHEDULE": "Modificar programación",
+            "DELETE_SCHEDULE": "Eliminar programación"
+          }
+        }
+      },
+      "SERVICE_STEP": {
+        "TITLE": "Puedes pagar más servicios en una transacción o solo pagar el seleccionado.",
+        "SUBTITLE": "Selecciona hasta 5 facturas y realiza el pago total.",
+        "MAX_SERVICES_TEXT": "Selecciona máximo 5 servicios y realiza un solo pago",
+        "INFORMATION_TEXT": "¿Qué es pagos múltiples de servicios?",
+        "INFO_ALERT": {
+          "TITLE": "Paga todas tus facturas en una sola transacción",
+          "DESCRIPTION": "Ahora puedes pagar <b>hasta 5 servicios</b> registrados al mismo tiempo. Selecciona tus facturas, elige tu cuenta y listo. <br><br> Paga tus servicios por un valor máximo de <b>$3.000.000</b> o modificalo a través de Banca Virtual en la sección de seguridad / topes por transacción"
+        }
+      },
+      "ACCOUNTS_STEP": {
+        "EXCEPTION_DESCRIPTION": "Te invitamos a abrir una cuenta desde nuestra Banca Virtual u oficina.",
+        "EXCEPTION_TITLE": "No tienes productos disponibles en el Banco para realizar pagos.",
+        "TITLE": "Elige la Cuenta origen"
+      },
+      "AMOUNT_STEP": {
+        "LABEL": "Valor",
+        "TITLE": "Ingresa el valor a pagar"
+      },
+      "CONFIRMATION_STEP": {
+        "TITLE": "Vas a pagar",
+        "TITLE_MULTIPLE": "Vas a pagar tus servicios"
+      },
+      "CONTENT": {
+        "MESSAGE": "Paga o programa tus servicios o convenios",
+        "OTHERS": "Otros",
+        "PAY_NEW_SERVICE": "Pagar nuevo servicio",
+        "PUBLIC": "Públicos"
+      },
+      "EMPTY": {
+        "DESCRIPTION": "Servicios inscritos",
+        "TEXT": "Aún no tienes servicios inscritos, te invitamos a registrarlos desde nuestra Banca Virtual."
+      },
+      "ERROR": {
+        "BUTTON": "Volver al inicio",
+        "TEXT": "No pudimos cargar el pago de servicios. Inténtalo más tarde"
+      },
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Quieres cancelar el pago de servicios?",
+        "TITLE_UNREGISTERED": "¿Estás seguro salir y cancelar el pago del servicio?"
+      },
+      "FIELDS": {
+        "COST": "Costo",
+        "FROM": "Desde",
+        "NOT_AVAILABLE": "No disponible",
+        "PAYMENT_AMOUNT": "Valor a pagar",
+        "PAYMENT_LIMIT": "Fecha límite de pago",
+        "PAYMENT_REFERENCE": "Ref. de pago",
+        "TOWARD": "Hacia",
+        "VALUE": "Valor",
+        "TOTAL_VALUE": "Valor total",
+        "DATE": "Fecha"
+      },
+      "HEADER": "Servicios",
+      "RESPONSE": {
+        "MESSAGE": "Recuerda que el pago de tus servicios lo verás reflejado al siguiente <b>día hábil</b>.",
+        "ERROR": {
+          "TITLE": "El pago no fue realizado",
+          "TITLE_MULTIPLE": "No fue posible hacer los pagos",
+          "BUTTON": "Volver a intentar"
+        },
+        "SUCCESS": {
+          "AUTHORIZATION": "No. de autorización",
+          "TITLE": "¡El pago fue realizado con éxito!",
+          "TITLE_MULTIPLE": "Pagos realizados exitosamente",
+          "TITLE_MULTIPLE_ALT": "Servicios y convenios",
+          "FINISHED": "Transacción finalizada"
+        }
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "REFERENCE": "Referencia",
+        "SERVICE": "Servicio",
+        "VALUE": "Valor"
+      },
+      "TITLE": "Pagar servicios",
+      "TITLE_MULTIPLE": "Servicios y convenios",
+      "UNREGISTERED_STEP_REFERENCE": {
+        "HIDE_EXAMPLE": "Ocultar ejemplo de factura",
+        "LIMIT_DATE": "Fecha límite pago",
+        "MESSAGE": "Por tu seguridad para realizar este pago debes inscribir la factura. Te invitamos a hacerlo desde tu Banca Virtual.",
+        "NOT_FOUNDS": "No tienes saldo disponible para hacer este pago",
+        "NOTICE_1": "El valor de tu factura es superior a $ {{ payment_service_amount_max$ }}",
+        "NOTICE_2": "No encontramos una factura con esta referencia, intenta de nuevo.",
+        "PAY_REF": "Ref de pago",
+        "PAY_REFERENCE": "Referencia de pago",
+        "PAYMENT_VALUE": "Valor a pagar",
+        "SHOW_EXAMPLE": "Ver ejemplo de factura",
+        "TITLE": "Ingresa la referencia de pago",
+        "VALUE": "Valor"
+      },
+      "UNREGISTERED_STEP_SEARCH": {
+        "CHOOSE_SERVICE": "Elige el servicio o convenio",
+        "NOT_FOUND": "No encontramos coincidencias con este nombre. Verifica e inténtalo de nuevo",
+        "PROBLEMS": "Tenemos problemas para cargar los convenios",
+        "SEARCH_SERVICE": "Busca tu servicio",
+        "TITLE": "O busca tu servicio público, administración del edificio, colegios o universidades que tengan convenio.",
+        "TRY_AGAIN": "Intentar  de nuevo"
+      },
+      "UNREGISTERED_STEP_SERVICE": {
+        "BUTTON": "Escanear código",
+        "MESSAGE": "Escanea el código de barras",
+        "TRY_AGAIN": "No encontramos una factura con esta referencia, intenta de nuevo.",
+        "BARCODE_SCAN": {
+          "BARCODE_TITLE": "Escanea el código de barras de tu factura.",
+          "BARCODE_ERROR_SUPPORTED": "Al parecer tu celular no soporta el uso de tu cámara para lectura de códigos de barra",
+          "BARCODE_ERROR_PERMISSION": "Los permisos de cámara no fueron concedidos correctamente, debes concederlos desde la configuración de tu celular",
+          "BARCODE_ERROR": "Error escaneando código",
+          "BARCODE_BUTTON": "Intentar de nuevo"
+        }
+      },
+      "SCHEDULING": {
+        "HEADER": "Programar servicio",
+        "APPROVAL": "No. de aprobación",
+        "CREATE": {
+          "TITLE": "Programar el pago automático",
+          "FIELDS": {
+            "SELECT_PRODUCT": "Cuenta origen",
+            "SCHEDULE_TYPE_LABEL": "Define la fecha del pago",
+            "MAX_AMOUNT_RECURRING_PLACEHOLDER": "Valor",
+            "MAX_AMOUNT_RECURRING_LABEL": "Define el valor máximo de pago:",
+            "OPTIONS": {
+              "ON_INVOICE_DATE": "Cuando llegue la factura",
+              "ON_DUE_DATE": "Fecha de vencimiento"
+            }
+          },
+          "ALERTS": {
+            "SUCCESS": {
+              "TITLE": "Programación exitosa"
+            },
+            "ERROR": {
+              "TITLE": "No fue posible programar tu servicio"
+            }
+          }
+        },
+        "EDIT": {
+          "TITLE": "Modificar la programación del pago",
+          "ALERTS": {
+            "SUCCESS": {
+              "TITLE": "Modificación exitosa"
+            },
+            "ERROR": {
+              "TITLE": "No fue posible modificar la programación tu servicio"
+            }
+          }
+        },
+        "DELETE": {
+          "TITLE": "¿Estás seguro de eliminar la programación del servicio?",
+          "ACTIONS": {
+            "DELETE": "Sí, eliminar programación",
+            "CANCEL": "No, mantener la programación"
+          },
+          "ALERTS": {
+            "SUCCESS": {
+              "TITLE": "Eliminación exitosa",
+              "NOTE": "Recuerda que el servicio continuará en tu lista de servicios inscritos y tendrás que realiizar el pago manualmente."
+            },
+            "ERROR": {
+              "TITLE": "No fue posible eliminar la programación tu servicio"
+            }
+          }
+        },
+        "CONFIRM": {
+          "TITLE": "Vas a programar el pago tu servicio",
+          "TITLE_EDIT": "Vas a modificar la programación del pago de tu servicio",
+          "NOTE": "Si la factura de tu servicio es superior al valor máximo, no se realizará el pago automático.",
+          "ACTION": "Programar",
+          "ACTION_EDIT": "Editar información"
+        }
+      }
+    },
+    "TITLE": "Pagos"
+  },
+  "PAYROLL_ADVANCE": {
+    "TERMS_AND_CONDITIONS": {
+      "TITLE": "TÉRMINOS Y CONDICIONES ANTICIPO DE NÓMINA",
+      "DESCRIPTION_1": "Anticipo de Nómina es una línea de crédito rotativo, producto que previas validaciones, se otorga a los clientes que cumplan las políticas y condiciones internas del BANCO y que,  se  encuentren  vinculados  con  el  BANCO  en  virtud  de  un  Convenio  de  Nómina, previamente firmado por su Pagador con el BANCO.",
+      "DESCRIPTION_2": "EL BANCO podrá otorgar al CLIENTE, sin que sea obligatorio, un cupo revocable en cualquier tiempo y sin previo aviso, teniendo en cuenta que su salario u honorarios se depositan  en  una  cuenta  de  nómina  activa  en  EL  BANCO  y  que  el  solicitante  se encuentra vinculado a una empresa mediante relación laboral (contrato o acto administrativo), a término fijo o indefinido o por obra o labor contratada o a través de contrato de prestación de servicios. EL CLIENTE y la Empresa Pagadora deben cumplir con los requisitos establecidos por EL BANCO para este producto.",
+      "DESCRIPTION_3": "El valor del cupo aprobado para ésta línea de crédito estará entre $100.000 pesos hasta $1.000.000 millón de pesos. Dicho cupo de crédito estará  disponible  en la cuenta  de Nómina del CLIENTE.",
+      "DESCRIPTION_4": "Una vez el CLIENTE realice la aceptación del producto en los canales habilitados para el efecto, se realizará la activación de esta línea de crédito durante los 4 días hábiles siguientes,  para  el  efecto,  al  CLIENTE  le  llegará  un  mensaje  de  texto  informativo indicando  que  se  ha  iniciado  un  proceso  de  radicación  de  crédito,  la  activación  se realizará  siempre  y  cuando  posea  una  cuenta  de  nómina  activa  y  vigente  con  el BANCO,  que  se  encuentra  vinculada  a  una  empresa  mediante  Convenio  de  Nómina activo  y  no  presente  moras  con  el  Banco.  El  CLIENTE  solo  podrá  tener  una  cuenta habilitada con la línea de crédito de Anticipo de Nómina.",
+      "DESCRIPTION_5": "Para  Anticipo  de  Nómina  el  valor  de  los  intereses  remuneratorios  será  cero,  solo  se liquidarán  intereses  de  mora  en  caso  de  no  recibir  pago  de  Nómina  o  depósito  en  la Cuenta en el plazo acordado.",
+      "DESCRIPTION_6": "El cobro de uso por la utilización del cupo del Anticipo de Nómina, se realizará una vez al mes, de acuerdo con tarifa vigente, que se encuentra publicada en www.avvillas.com.co.",
+      "DESCRIPTION_7": "El Cliente debe pagar  el saldo adeudado  a más tardar 30  días vencidos calendarios, contados a partir de la primera utilización del período. Cada vez que ingresen recursos a  la  cuenta  de  nómina,  se  debita  el  valor  del  Anticipo  de  Nómina  utilizado  (total  o parcialmente) y se aplica inmediatamente a la cartera de esta línea de crédito. ",
+      "DESCRIPTION_8": "Si el Anticipo fue cubierto en forma total, al siguiente día hábil el cupo de Anticipo de Nómina  quedará  nuevamente  disponible  para  el  Cliente  de  manera  automática  sin necesidad de trámite alguno y el contador de los días iniciará en cero (0).",
+      "DESCRIPTION_9": "En el evento que ingresen los recursos a la cuenta de nómina y el mismo día se realice una  nueva  utilización  se  considerará  como  no  cubierto  el  Anticipo  y  por  lo  tanto  se mantendrá la continuidad en el contador de los días de utilización. En caso de que, al vencimiento del término establecido para el pago de esta línea de crédito, no existan recursos disponibles para el pago, el cliente debe pagar los valores adeudados por los canales que el Banco disponga, tales como pago en oficinas.",
+      "DESCRIPTION_10": "En  caso  de  mora,  el  Cliente  deberá  pagar  intereses  de  mora,  a  la  tasa  máxima legalmente autorizada, una vez haya una nota crédito y/o consignación en la Cuenta de nómina, el sistema aplicará los pagos primero a los intereses de mora causados, cuota de uso y posteriormente saldo de capital.",
+      "DESCRIPTION_11": "El reporte a las centrales de riesgo de esta línea de crédito, se realizará como un crédito rotativo  con  el  mismo  número  de  la  cuenta  móvil  del  cliente  y  el  reporte  negativo  se realizará  por  mora  superior  a  30  días.  El  Anticipo  de  Nómina  está  cubierto  por  la respectiva póliza del seguro de vida de deudores.",
+      "DESCRIPTION_12": "El cliente podrá utilizar el Anticipo de Nómina en oficinas, cajeros electrónicos, en los comercios con el uso de su tarjeta débito y canales digitales avvillas.com.co y AV Villas App.",
+      "DESCRIPTION_13": "EL BANCO podrá suspender el Anticipo de Nómina en cualquier tiempo caso en el cual, se  declarará  de  plazo  vencido  la  totalidad  de  las  deudas  a  cargo  del  CLIENTE, informando previamente al CLIENTE con cinco (5) días hábiles de anticipación cuando EL CLIENTE acumule 4 moras por 30 días o más en el último año corrido en el anticipo de nómina o mora en cualquiera de las obligaciones con EL BANCO.",
+      "DESCRIPTION_14": "EL BANCO podrá dar  por terminado en cualquier tiempo el  presente contrato por las siguientes causas: a) Si EL CLIENTE acumula 6 moras por 30 días o más en el último año  corrido  en  alguna  de  las  obligaciones  con  EL  BANCO;  b)  Por  cancelación  de  la cuenta de nómina. c) Por deasociación de la Cuenta de Nómina al convenio (eliminación cuenta matriz). D) Por las causales de terminación de Contratos previstas en la Parte General del Contrato Marco de Persona Natural que se encuentra a disposición de los Clientes en la página del Banco www.avvillas.com.co.",
+      "DESCRIPTION_15": "EL CLIENTE podrá dar por terminado el Producto de Anticipo de Nomina en cualquier tiempo,  a través de cualquiera de nuestras oficinas del BANCO, siempre y cuando no presente saldo que se adeude al BANCO.",
+      "DESCRIPTION_16": "La gestión de cobranza se realizará a partir del día 11 de entrar en mora el producto Anticipo  de  Nómina,  aplicando  las  mismas  políticas  que  se  manejan  para  créditos rotativos. El sistema no podrá aplicar al Anticipo de Nómina débitos automáticos para pago de obligaciones o cubrir cobros pendientes (cuotas de manejo, cobros transaccionales, etc.).",
+      "DESCRIPTION_17": "Cualquier  duda  o  inquietud  se  puede  comunicar  a  nuestras  líneas  de  contacto Audiovillas de tu ciudad, Bogotá (601) 444 1777, Medellín (604) 325 6000, Cali (602) 885 9595, Barranquilla (605) 330 4330, Bucaramanga (607) 630 2980 y Resto del país 01 8000 51 8000.",
+      "CONFIRM": "Entendido"
+    },
+    "PAGE": {
+      "HEADER": "Anticipo de nómina",
+      "INVITE": "¡Tienes un Anticipo de Nómina APROBADO! Acéptalo ahora",
+      "TITLE": "Tu Anticipo de Nómina está APROBADO por:",
+      "TEXT_1": "Al aceptarlo, verás la plata reflejada en el disponible de tu Cuenta.",
+      "TEXT_2": "Puedes usarlo para realizar compras, transferencias, retiros o lo que desees.",
+      "TEXT_3": "Luego de usarlo, tendrás un cobro único al mes por concepto de Cuota de Manejo.",
+      "TEXT_4": "El valor utilizado será descontado al recibir el pago de tu Nómina o cualquier consignación en tu Cuenta.",
+      "TEXT_5": "El cupo de tu Anticipo de Nómina estará nuevamente disponible el día hábil después de haber cubierto el monto que usaste.",
+      "TERMS_AND_CONDITIONS": "Conoce los Términos y Condiciones",
+      "CONFIRM": "Si, acepto",
+      "CANCEL": "No, regresar"
+    },
+    "VOUCHER": {
+      "SUCCESS_MESSAGE": "¡Disfruta de tu Anticipo de Nómina! La plata ya está disponible en tu Cuenta y tendrás 30 días para cubrir el monto solicitado sin que se generen intereses. <a href='https://www.avvillas.com.co/web/productos-en-oficina/prestamos/adelanto-nomina?p_l_back_url=%2Fbusqueda%3Fq%3Danticipo'>Conoce más</a>",
+      "TITLE_ERROR": "Lo sentimos tu anticipo de nómina no se pudo realizar",
+       "TRY_AGAIN": "Intentar de nuevo",
+       "GO_BACK": "Volver al inicio"
+    },
+    "ACTIONS": {
+      "TRY_AGAIN": "Intentar de nuevo",
+      "GO_BACK": "Volver al inicio"
+    }
+  },
+  "POCKETS": {
+    "NO_PRODUCTS": {
+      "TITLE": "No tienes cuenta de ahorros disponible",
+      "DESCRIPTION": "Abre tu cuenta de ahorros y haz crecer tu capital.Gestiona tus metas y gastos con Bolsillos, <b>ábrela ahora.</b>",
+      "OPEN_ACCOUNT": "Solicita tu cuenta",
+      "EXIT_FLOW": "Salir del proceso"
+    },
+    "HOME": {
+      "POCKETS_TYPE": {
+        "TRADITIONAL": "Bolsillos para organizar tu dinero",
+        "PROFITABILITY": "Bolsillos con rentabilidad"
+      },
+      "ERROR_MESSAGE": "Tenemos inconvenientes para cargar tus bolsillos, regresa más tarde.",
+      "ONBOARDING": {
+        "TITLE": "Crea el bolsillo que mejor se adapta a tus necesidades",
+        "DESCRIPTION": "El dinero que separes o ahorres aún seguirá siendo parte del saldo de tu cuenta de ahorros y del cual podrás hacer uso cuando lo necesites*.",
+        "POCKET_WITH_RETURNS": {
+          "TITLE": "Bolsillo con rentabilidad",
+          "SUBTITLE": "¡Crea un Bolsillo de Ahorro que te genera más rentabilidad!",
+          "DESCRIPTION": "Determina el plazo y al cumplirlo, recibirás los intereses que generó tu dinero.",
+          "BUTTON": "Crear Bolsillo con rentabilidad"
+        },
+        "POCKET_TO_ORGANIZE": {
+          "TITLE": "Bolsillo para organizar",
+          "SUBTITLE": "¡Crea un Bolsillo de Ahorro para organizar tu dinero!",
+          "DESCRIPTION": "Programa tu ahorro de acuerdo con tus necesidades o metas dentro de tu misma Cuenta.",
+          "BUTTON": "Crear Bolsillo"
+        },
+        "WARNING_MESSAGE": "*Aplican condiciones acordes al reglamento de los Bolsillos."
+      },
+      "FILTER": {
+        "FILTER_TITLE": "Filtrar bolsillos:",
+        "POCKET_CATEGORY": {
+          "MODAL_TITLE": "Selecciona el estado del bolsillo",
+          "ALL": "Todos los estados",
+          "ACTIVE": "Activos",
+          "PAUSED": "Pausados",
+          "COMPLETED": "Completados"
+        },
+        "POCKET_TYPE": {
+          "INPUT_LABEL": "Todos los tipos",
+          "MODAL_TITLE": "Selecciona el tipo de bolsillo",
+          "ALL": "Todos los tipos",
+          "WITH_RETURNS": "Con rentabilidad",
+          "TO_ORGANIZE": "Para organizar"
+        }
+      },
+      "FINANCIAL_EDUCATION_LINK": "¿Qué son bolsillos con rentabilidad?",
+      "PROMOTION": {
+        "TITLE": "Ahora podrás crear <b>Bolsillos con rentabilidad</b> y ganar intereses",
+        "LINK_TEXT": "Crea tu bolsillo aquí"
+      }
+    },
+    "NOTIFICATION": {
+      "DESCRIPTION": "No tienes productos disponibles para utilizar esta función. <strong>Te invitamos a abrir una cuenta desde la Banca Virtual u oficina.</strong>"
+    },
+    "ACTIVE_POCKETS": "Bolsillos activos",
+    "CATEGORY": {
+      "EDUCATION": "Educación",
+      "GIFTS": "Regalos",
+      "HEALTH": "Salud",
+      "HOLIDAYS_TRAVEL": "Vacaciones/Viaje",
+      "HOUSE_APARTMENT": "Casa/Apto",
+      "OTHER_EXPENSES": "Otros Gastos",
+      "SAVING": "Ahorro",
+      "SPECIAL_DATES": "Fechas Especiales",
+      "TAXES": "Impuestos",
+      "VEHICLES": "Vehículo"
+    },
+    "COMPLETED_POCKETS": "Bolsillos completados",
+    "CREATE": {
+      "AUTHORIZATION": "No. de autorización",
+      "CONFIRMATION_STEP": {
+        "BUTTON": "Crear bolsillo",
+        "TITLE": "Vas a crear tu bolsillo",
+        "FIELDS": {
+          "NAME": "Nombre del bolsillo",
+          "CATEGORY": "Categoría",
+          "ORIGIN_ACCOUNT": "Cuenta de origen",
+          "GOAL": "Meta de ahorro",
+          "QUOTA": "Valor cuota periódica",
+          "INSTALLMENTS": "Número de cuotas",
+          "PERIOD": "Periodicidad",
+          "OPEN_AMOUNT": "Aporte inicial"
+        }
+      },
+      "DATA_STEP": {
+        "TITLE": "Crea un bolsillo para organizar."
+      },
+      "ERROR": "No fue posible crear tu bolsillo",
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Estás seguro de salir y cancelar la creación del bolsillo?"
+      },
+      "SETTINGS_STEP": {
+        "TITLE": "Configura tu bolsillo"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirmación",
+        "DATA": "Personalización",
+        "SETTINGS": "Configuración"
+      },
+      "SUCCESS": "¡Tu bolsillo fue creado con éxito!",
+      "DESCRIPTIONS": {
+        "ORGANIZER": "",
+        "WITH_RETURNS": "Consulta los intereses e información relevante ingresando al detalle de tu bolsillo"
+      },
+      "NOTICE_MESSAGE": {
+        "ORGANIZER": "",
+        "WITH_RETURNS": "Recuerda revisar las tasas vigentes. Los intereses se calculan a diario, y se abonarán solo al cumplirse el plazo de permanencia."
+      },
+      "TITLE": "Bolsillos",
+      "HINT_ORIGIN_ACCOUNT": "El valor de la cuota será bloqueado de esta cuenta",
+      "HINT_QUOTA": "Ingresa el valor que quieres separar en cada débito."
+    },
+    "BACK_BTN": "Entendido",
+    "CREATE_POCKET_BTN": "Crear bolsillo",
+    "DELETE": {
+      "BUTTON": "Eliminar bolsillo",
+      "BUTTON_CANCEL": "Cancelar",
+      "DESCRIPTION": "Recuerda que la plata se moverá a tu Cuenta de Ahorros y el bolsillo se eliminará.",
+      "ERROR": "No fue posible eliminar tu bolsillo",
+      "SUCCESS": "¡Tu bolsillo fue eliminado!",
+      "TITLE": "Vas a eliminar tu bolsillo"
+    },
+    "DETAIL": {
+      "ACTIONS": {
+        "MODIFY": "Modificar"
+      },
+      "ACTIVATE": "Bolsillo Activo",
+      "DETAILS": "Detalles",
+      "ENDS": "Finaliza el",
+      "MONEY_SAVED": "Plata ahorrada:",
+      "NO_CONTENT": "No hay contenido",
+      "ORIGIN_ACCOUNT": "Cuenta de origen",
+      "PAUSE": "Bolsillo Pausado",
+      "PENDING_INSTALMENTS": "Cuotas pendientes",
+      "PERIODICITY": "Periodicidad",
+      "QUANTITY_OF_QUOTAS": "Cantidad de cuotas",
+      "QUOTA_VALUE": "Valor a separar",
+      "SAVINGS_GOAL": "Meta de ahorro",
+      "STARTED": "Fecha de inicio",
+      "TITLE": "Detalle de bolsillo",
+      "YOUR_PROGRESS": "Progreso"
+    },
+    "EDIT": {
+      "ERROR": "No fue posible modificar tu bolsillo",
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Estás seguro de salir y cancelar la modificación de tu bolsillo?"
+      },
+      "MODIFY_STEP": {
+        "BUTTON": "Continuar",
+        "TITLE": "Vas a modificar tu bolsillo"
+      },
+      "CONFIRM": {
+        "BUTTON": "Guardar cambios",
+        "TITLE": "Vas a modificar tu bolsillo"
+      },
+      "STEPS": {
+        "MODIFY": "Modificar",
+        "CONFIRM": "Confirmación"
+      },
+      "SUCCESS": "Modificaste tu bolsillo exitosamente.",
+      "TITLE": "Modificar",
+      "HINT_QUOTA": "Ingresa el valor que quieres separar en cada débito."
+    },
+    "EMPTY": {
+      "MESSAGE": "Tenemos inconvenientes para cargar tus bolsillos, intenta más tarde."
+    },
+    "FIELDS": {
+      "AMOUNT": "Valor de la cuota",
+      "AVAILABLE_BALANCE": "Disponible para abonar",
+      "CATEGORY": "Categoría",
+      "DATA": "Datos",
+      "FROM": "Desde",
+      "GOAL": "Meta de ahorro",
+      "INSTALLMENTS": "Número de cuotas",
+      "INSTALLMENTS_NUMBER": "Número de cuotas:",
+      "NAME": "Nombre",
+      "OPEN_AMOUNT": "Aporte inicial",
+      "OPEN_AMOUNT_OPTIONAL": "Aporte inicial (Opcional)",
+      "ORIGIN_ACCOUNT": "Cuenta de origen",
+      "PERIOD": "Periodicidad",
+      "PERIOD_INSTALLMENTS": "Periodicidad débito de la cuota",
+      "POCKET": "Bolsillo",
+      "POCKET_NAME": "Nombre del bolsillo",
+      "QUOTA": "Valor cuota periódica",
+      "SAVED": "Plata ahorrada",
+      "SAVINGS_ACCOUNT": "Cuenta de Ahorros",
+      "SELECT_ACCOUNT": "Selecciona una Cuenta",
+      "SELECT_CATEGORY": "Selecciona la categoría",
+      "SELECT_POCKET": "Selecciona un bolsillo",
+      "SETTINGS": "Ajustes",
+      "TO": "Hacia",
+      "TRANSACTION_COST": "Costo transacción",
+      "VALUE_TO_PAY": "Valor a abonar",
+      "VALUE_TO_TRANSFER": "Valor a transferir",
+      "DEADLINE": "Plazo"
+    },
+    "HEADER": "Bolsillos",
+    "INFO": {
+      "DESCRIPTION": "Mis bolsillos te ayudan a ahorrar para todo lo que quieras.",
+      "ITEM_ONE": "No tiene costos adicionales y con facilidad para modificarlos cuando quieras.",
+      "ITEM_TWO": "Por cada cuenta puedes crear hasta 15 bolsillos.",
+      "SUB_DESCRIPTION": "Elige un nombre, una meta de ahorro y define la periodicidad en la que vas a hacer ahorro.",
+      "TITLE": "¿Qué son mis bolsillos?"
+    },
+    "MONEY_SAVED": "Plata ahorrada",
+    "PAUSED_POCKETS": "Bolsillos pausados",
+    "PAY": {
+      "BUTTON": "Abonar",
+      "CONFIRM": "Vas a abonar dinero a tu bolsillo",
+      "ERROR": "No fue posible realizar tu abono",
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Estás seguro de salir y cancelar el abono a tu bolsillo?"
+      },
+      "NOTICE": "Con este abono vas a completar tu bolsillo.",
+      "PAY_STEP": {
+        "TITLE": "Vas a abonar a tu bolsillo"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "PAY": "Abonar"
+      },
+      "SUCCESS": "Abonaste a tu bolsillo exitosamente.",
+      "TITLE": "Abonar"
+    },
+    "PERIOD": {
+      "BIWEEKLY": "Tus cuotas serán bloqueadas los días 15 y 30 de cada mes.",
+      "MONTHLY": "Tus cuotas serán bloqueadas el primer día de cada mes.",
+      "WEEKLY": "Tus cuotas serán bloqueadas todos los lunes de cada semana."
+    },
+    "STATES": {
+      "ACTIVE": "Activo",
+      "CANCELLED": "Cancelado",
+      "COMPLETED": "Completado",
+      "INACTIVE": "Inactivo",
+      "PAUSED": "Pausado"
+    },
+    "STATUS": {
+      "ACTIVATE": {
+        "BUTTON": "Activar bolsillo",
+        "BUTTON_CANCEL": "Mantener pausado",
+        "DESCRIPTION": "Recuerda que la cuota establecida será debitada de nuevo.",
+        "TITLE": "¿Estás seguro de activar tu bolsillo?"
+      },
+      "PAUSE": {
+        "BUTTON": "Sí, pausar",
+        "BUTTON_CANCEL": "Mantener activo",
+        "DESCRIPTION": "Recuerda que no se bloqueará dinero de tu cuenta desde ahora.",
+        "TITLE": "¿Estás seguro de pausar tu bolsillo?"
+      },
+      "RESPONSE": {
+        "ERROR": {
+          "ACTIVATED": "No fue posible activar tu bolsillo",
+          "PAUSED": "No fue posible pausar tu bolsillo"
+        },
+        "SUCCESS": {
+          "ACTIVATED": "¡Tu bolsillo fue activado!",
+          "PAUSED": "¡Tu bolsillo fue pausado!"
+        }
+      }
+    },
+    "BALANCE_INFO": {
+      "TITLE": "Saldo total"
+    },
+    "NOTIFICATION_ALERT": {
+      "TITLE": "Ten en cuenta: ",
+      "DESCRIPTION": "Para revisar los movimientos de tus bolsillos, es necesario ingresar al detalle de cada uno de ellos. <br><br>Tendrás la opción de <strong>abonar</strong> dinero a tu bolsillo o <strong>transferir</strong> el dinero de tu bolsillo a tu cuenta cuando lo desees."
+    },
+    "TITLE": "Bolsillos de ahorro",
+    "TRANSFER": {
+      "BUTTON": "Transferir",
+      "CONFIRM": "Vas a transferir dinero de tu bolsillo",
+      "ERROR": "No fue posible realizar tu transferencia",
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Estás seguro de salir y cancelar la transferencia desde tu bolsillo?"
+      },
+      "REMEMBER": "Recuerda que al transferir toda la plata ahorrada tu bolsillo se eliminará.",
+      "WARNING_MESSAGE": "Al transferir dinero de tu Bolsillo sin cumplir el plazo pactado, no ganaras la rentabilidad esperada.",
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "TRANSFER": "Transferir"
+      },
+      "SUCCESS": "Transferiste dinero de tu bolsillo exitosamente.",
+      "TITLE": "Transferir",
+      "TYPES": {
+        "OWN_ACCOUNT": "Mi cuenta",
+        "POCKETS": "Bolsillo"
+      },
+      "CONFIRM_ALERT": {
+        "TITLE": "¿Quieres transferir dinero de tu bolsillo?",
+        "DESCRIPTION": "Al transferir dinero sin cumplir el plazo pactado, no ganarás los intereses adicionales del bolsillo y este se convertirá en bolsillo para organizar.",
+        "CANCEL_ACTION": "Cancelar transferencia",
+        "CONFIRM_ACTION": "Sí, transferir dinero"
+      }
+    },
+    "CREATE_WITH_RETURNS_DESCRIPTION": {
+      "TITLE": "Ahorra y gana intereses",
+      "ITEMS": {
+        "TEXT_1": "Crea un Bolsillo con Rentabilidad desde $500.000 y permanencia desde 31 días. ¡Entre más dinero y tiempo ahorres, mayor será la rentabilidad!",
+        "TEXT_2": "Puedes usar el dinero de tu Bolsillo cuando desees. Pero, recuerda que solo ganas intereses adicionales, si cumples con el plazo de permanencia.",
+        "TEXT_3": "Los intereses adicionales estarán disponibles cuando cumplas el plazo del ahorro que elegiste. Puedes seleccionar que sean abonados a tu Cuenta o que se renueven junto con el saldo de tu Bolsillo y el mismo plazo inicialmente pactado."
+      },
+      "BOTTOM_INFO": "Información de interés:",
+      "RATE_INFO": "Conoce las tasas. Aplican condiciones acordes al reglamento de los Bolsillos"
+    }
+  },
+  "PRODUCT": {
+    "AFC_DETAIL": {
+      "AVAILABLE_FOR_HOUSING": "Saldo disponible para vivienda",
+      "AVAILABLE_FOR_HOUSING_TOOLTIP": "Saldo para pagos o abonos al<br> Crédito Hipotecario o Cuota<br> inicial de tu vivienda.",
+      "AVAILABLE_FREE_DESTINATION": "Disponible libre destino",
+      "BALANCE_IN_EXCHANGE": "Saldo en canje",
+      "BALANCE_IN_EXCHANGE_TOOLTIP": "Por consignaciones hacia tu Cuenta<br> con cheques.",
+      "MONEY_THAT_CAME_OUT": "Plata que salió:",
+      "MONEY_THAT_ENTERED": "Plata que entró:",
+      "TOTAL_BALANCE": "Saldo total",
+      "WITHHOLDING_AT_SOURCE": "Retención en la fuente",
+      "YIELDS_GENERATED": "Rendimientos generados"
+    },
+    "CDT_DETAIL": {
+      "DUE_DATE": "Fecha de vencimiento",
+      "INTEREST_PAYMENT": "Pago de intereses",
+      "INTEREST_RATE": "Tasa de interés",
+      "INVESTMENT_VALUE": "Valor de inversión",
+      "OPENING_DATE": "Fecha de apertura",
+      "RETENTION_VALUE": "Valor de retención",
+      "TERM": "Plazo",
+      "TOTAL_BALANCE": "Inversión inicial",
+      "YIELDS": "Rendimientos"
+    },
+    "CREDIT_CARD_DETAIL": {
+      "PRODUCT_ERROR_CARD": {
+        "TITLE": "Tarjetas",
+        "DESCRIPTION": "En este momento no podemos mostrar tus tarjetas",
+        "TRY_AGAIN": "Intentar de nuevo",
+        "TRY_LATER": "Inténtalo más tarde",
+        "CHEKING_INFO_LOADER": "Validando información..."
+      },
+      "ACTIONS": {
+        "CARD_ADVANCE": "Realizar avance",
+        "DEBT_PURCHASE": "Compra de cartera"
+      },
+      "AVAILABLE_FOR_ADVANCES": "Disponible para avances",
+      "AVAILABLE_PURCHASES": "Cupo disponible para compras",
+      "AVAILABLE_QUOTA": "Cupo disponible",
+      "CUTOFF_DATE": "Fecha de corte",
+      "MINIMUM_VALUE_TO_PAY": "Valor mínimo a pagar",
+      "MY_EXPENSES": "Mis gastos",
+      "MY_TOTAL_QUOTA": "Mi cupo total",
+      "PAY_MY_CARD": "Pagar mi Tarjeta",
+      "PAYDAY_LIMIT": "Fecha límite de pago",
+      "PAYMENT_INFORMATION": "Información para pago",
+      "TOTAL_VALUE_TO_PAY": "Valor total a pagar"
+    },
+    "CREDIT_DETAIL": {
+      "BALANCE_IN_ARREARS": "Saldo en mora",
+      "CAPITAL_BALANCE": "Saldo capital",
+      "CAPITAL_BALANCE_TOOLTIP": "Plata sin intereses</br> que debes de tu</br>  préstamo total",
+      "CURRENT_DEBT": "Pago total",
+      "DAYS_IN_ARREARS": "{{days}} días en mora.",
+      "DISBURSEMENT_DATE": "Fecha de desembolso",
+      "NEXT_INSTALLMENT": "Próxima cuota",
+      "PAY_MY_CREDIT": "Pagar mi crédito",
+      "PAYDAY_LIMIT": "Fecha límite de pago",
+      "PAYMENT_INFORMATION": "Información para pago",
+      "TOTAL_DEBT_BALANCE": "Saldo total de la deuda",
+      "YOU_ARE_UP_TO_DATE": "¡Estás al día!"
+    },
+    "CURRENT_DETAIL": {
+      "AVAILABLE_BALANCE": "Saldo disponible",
+      "BALANCE_IN_EXCHANGE": "Saldo en canje",
+      "BALANCE_IN_EXCHANGE_TOOLTIP": "Por transacciones hacia tu<br> Cuenta con cheques y/o<br> remesas.",
+      "BLOCK_BALANCE": "Saldo bloqueado",
+      "BLOCK_BALANCE_TOOLTIP": "Saldo bloqueado por pagos<br> automáticos, embargos <br>o cobros pendientes.",
+      "MONEY_THAT_CAME_OUT": "Plata que salió:",
+      "MONEY_THAT_ENTERED": "Plata que entró:",
+      "OVERDRAFT_AVAILABLE": "Disponible de sobregiro",
+      "OVERDRAFT_FEE": "Cupo de sobregiro",
+      "OVERDRAFT_FEE_TOOLTIP": "Plata que puedes gastar y<br>pagar en un plazo máximo de<br> 15 días.",
+      "TOTAL_BALANCE": "Saldo total",
+      "TOTAL_BALANCE_TOOLTIP": "Este es tu saldo disponible<br> incluyendo el sobregiro."
+    },
+    "DESCRIPTION": {
+      "AVAILABLE": "Saldo disponible",
+      "AVAILABLE_FOR_HOUSING": "Disponible vivienda",
+      "AVAILABLE_PURCHASES": "Cupo compras",
+      "QUOTA": "Cupo",
+      "QUOTA_FOR_ADVANCES": "Cupo avances"
+    },
+    "FIELDS": {
+      "AVAILABLE": "Disponible",
+      "AVAILABLE_HOUSING": "Disponible vivienda",
+      "AVAILABLE_PURCHASES": "Disponible",
+      "BALANCE": "Saldo",
+      "CAPITAL_BALANCE": "Saldo capital",
+      "ENDING": "Finalización",
+      "GOAL": "Meta",
+      "IN_POCKETS": "En Bolsillos",
+      "INTEREST_EARNED": "Intereses ganados",
+      "INTEREST_RATE": "Tasa",
+      "MINIMUM_PAYMENT": "Pago mínimo",
+      "MY_EXPENSES": "Mis gastos",
+      "NEXT_INSTALLMENT": "Próxima cuota",
+      "NEXT_PAYMENT": "Próximo pago",
+      "OTHERS": "Otros",
+      "OVERDRAFT_FEE": "Cupo de sobregiro",
+      "PAYMENT_DATE": "Fecha de pago",
+      "PROGRESS": "Progreso",
+      "TIME_ELAPSED": "Tiempo transcurrido",
+      "TOTAL_DEBT": "Deuda total",
+      "TOTAL_POINTS_UNTIL_TODAY": "Total puntos hasta hoy",
+      "USED_QUOTA": "Cupo utilizado",
+      "VALUE": "Valor"
+    },
+    "INSUFFICIENT_BALANCE": "Saldo insuficiente",
+    "MY_ACCOUNT_DETAIL": {
+      "AVAILABLE_BALANCE": "Saldo disponible",
+      "BALANCE_IN_EXCHANGE": "Saldo en canje",
+      "BALANCE_IN_POCKETS": "Saldo en bolsillos",
+      "BLOCK_BALANCE": "Saldo bloqueado",
+      "BLOCK_BALANCE_TOOLTIP": "Saldo bloqueado por pagos<br> automáticos, embargos, pasajes<br> del transporte masivo <br>o cobros pendientes.",
+      "INSUFFICIENT_BALANCE": "Saldo insuficiente para esta transacción",
+      "MONEY_THAT_CAME_OUT": "Plata que salió:",
+      "MONEY_THAT_ENTERED": "Plata que entró:",
+      "TOTAL_BALANCE": "Saldo total"
+    },
+    "NAME": {
+      "ACCOUNT": "Cta.",
+      "AFC": "AFC",
+      "CDT": "CDT",
+      "CREDIT": "Crédito",
+      "CREDIT_CARD": "Tarjeta Crédito",
+      "CURRENT_ACCOUNT": "Cta. Corriente",
+      "MORTGAGE_CREDIT": "Hipotecario",
+      "ROTATING_CREDIT": "Rotativo",
+      "SAVING_ACCOUNT": "Cta. Ahorros"
+    },
+    "ROTATING_CREDITS": {
+      "ACTIONS": {
+        "DEBT_PURCHASE": "Compra de cartera",
+        "EXTRACTS": "Extractos",
+        "USE_QUOTA": "Uso de cupo"
+      },
+      "AVAILABLE_QUOTA": "Cupo disponible",
+      "CUTOFF_DATE": "Fecha de corte",
+      "MINIMUM_VALUE_TO_PAY": "Valor mínimo a pagar",
+      "MY_EXPENSES": "Mis gastos",
+      "MY_TOTAL_QUOTA": "Mi cupo total",
+      "PAY_MY_CARD": "Pagar mi crédito",
+      "PAYDAY_LIMIT": "Fecha límite de pago",
+      "PAYMENT_INFORMATION": "Información para pago",
+      "ROTATING_CREDIT": "Crédito Rotativo",
+      "TITLE": "Crédito rotativo",
+      "TOTAL_VALUE_TO_PAY": "Valor total a pagar"
+    },
+    "TITLES": {
+      "ACCOUNT_DETAIL": "Detalle de la Cuenta",
+      "AFC_DETAIL": "Cuenta AFC",
+      "CONFIGURATION_ACCOUNT_SECURITY": "Configuración y seguridad de cuentas",
+      "CREDIT_CARD_DETAIL": "Detalle",
+      "CREDIT_DETAIL": "Crédito",
+      "CURRENT_DETAIL": "Cuenta corriente",
+      "EXTRACTS": "Extractos",
+      "MAKE_PROGRESS": "Realizar avances",
+      "REALIZE_ADVANCES": "Realizar avances",
+      "ROTATING_CREDITS": "Detalle",
+      "SECURITY_CREDIT_CARD": "Seguridad tarjeta de crédito",
+      "SECURITY_DEBIT_CARD": "Seguridad tarjeta débito"
+    },
+    "TYPES": {
+      "DDA": "Corriente",
+      "SDA": "Ahorros"
+    },
+    "DETAIL": {
+      "CANCEL_ACCOUNT": {
+        "ALERT_BALANCE_ERROR": {
+          "TITLE": "No es posible cancelar tu cuenta",
+          "DESCRIPTION": "Para hacerlo, tu saldo tiene que estar en $0."
+        }
+      }
+    },
+    "SPI_KEYS": {
+      "DETAIL_LABEL": "Tag Aval",
+      "HOME_HELP_TEXT_TITLE": "Este es tu Tag Aval",
+      "HOME_HELP_TEXT": "Cópialo con un clic y compártelo para recibir transferencias.",
+      "HOME_COPIED_TEXT": "Llave copiada con éxito.",
+      "WHAT_IS_TAG_TITLE": "¿Qué es Tag?",
+      "TAG_AVAL_DESCRIPTION": "Tag Aval es un código único que te permite recibir plata de otros bancos.",
+      "CUSTOMATIZATION_TITLE": "Personalización:",
+      "CUSTOMATIZATION_DESCRIPTION": "y ponle el nombre que quieras a tu Tag Aval.",
+      "MODIFY_LINK": "Haz clic aquí"
+    }
+  },
+  "QR": {
+    "OPTIONS": {
+      "AUTHORIZATION": {
+        "TITLE": "<b>Autoriza tus transacciones en la Banca Virtual</b>",
+        "TITLE_DETAIL": "Autoriza tus transacciones",
+        "DESCRIPTION_DETAIL": "Esta opción te permite autorizar tus transacciones escaneando el QR en la pantalla de tu dispositivo.",
+        "TOAST_SUCCESS": "El código se copio con éxito, ya puedes ir a la banca virtual para continuar con la transacción.",
+        "TOAST_FAILED": "Ocurriò un error al copiar el código, intentalo nuevamente",
+        "NOTIFICATION_MESSAGE": "Ten en cuenta no compartir este código con otras personas."
+      },
+      "PAY": {
+        "TITLE": "<b>Escanear QR del datáfono o cartel</b>",
+        "TITLE_DETAIL": "Pagar o Transferir",
+        "DESCRIPTION_DETAIL": "Realiza pagos de forma inmediata escaneando el QR del datáfono o cartel del establecimiento"
+      },
+      "MODAL_TIME_EXPIRED": {
+        "TITLE": "Estado de tu transacción",
+        "DESCRIPTION": "Lo sentimos el tiempo límite para ingresar el código ya transcurrió.",
+        "TRY_AGAIN": "Valida si tu transacción se realizo correctamente o puedes intentarlo de nuevo"
+      },
+      "SCAN": {
+        "TITLE": "Escanea el QR",
+        "DESCRIPTION": "Coloca el código dentro de la guía",
+        "HELP_TEXT": "¿Cómo pagar con el código QR?",
+        "MODAL_PERMISSION": {
+          "TITLE": "Permiso de cámara",
+          "DESCRIPTION": "Para hacer la lectura de QR necesitas activar los permisos de cámara en la configuración de tu celular",
+          "DESCRIPTION_ERR": "Los permisos de cámara no fueron concedidos correctamente, debes concederlos desde la configuración de tu celular",
+          "DESCRIPTION_ERR_SUPPORTED": "Al parecer tu celular no soporta el uso de tu cámara para lectura de QR"
+        },
+        "MODAL_INFO": {
+          "TITLE": "¿Qué es pagar con código QR",
+          "DESCRIPTION": "<b>Escanea el QR</b> del datáfono o cartel del establecimiento"
+        },
+        "MODAL_ERROR_READING": {
+          "TITLE": "Lo sentimos",
+          "DESCRIPTION": "No pudimos leer tu código. Por favor intenta escanear de nuevo"
+        }
+      },
+      "SAME_DEVICE_TIMEOUT": "Lo sentimos el tiempo límite para ingresar el código ya transcurrió. Valida si tu transacción se realizo correctamente o puedes intentarlo de nuevo"
+    },
+    "HOME": {
+      "TITLE": "Paga con código QR",
+      "SUBTITLE": "Realiza pagos o anulaciones de manera fácil, rápida y segura, solo tienes que:",
+      "LOGO_ALT": "Imagen que representa el logotipo de QR AVAL",
+      "ITEMS_DESC": {
+        "ITEM_1": "Leer el código QR que genera el datáfono",
+        "ITEM_2": "Seleccionar el medio de pago",
+        "ITEM_3": "Si es tarjeta de crédito ingresar el número de cuotas"
+      }
+    },
+    "AUTHORIZATION": {
+      "HEADER": "Autorizar transacción",
+      "TITLE": "Este es tu código para autorizar",
+      "DESCRIPTION": "Debes escribir este código en tu Banca Virtual para autorizar la transacción",
+      "PROGRESS_LABEL": "Tiempo restante de OTP",
+      "NON_ENROLLED_MODAL": {
+        "TITLE": "No te has registrado en la app de AV Villas",
+        "DESCRIPTION": "Para autorizar tus transacciones debes registrarte en AV Villas App.",
+        "BUTTON_LABEL": "Enrolar"
+      }
+    },
+    "PAY": {
+      "DATA_STEP": {
+        "DYNAMIC": {
+          "TITLE": "Verifica los datos y selecciona el método de pago",
+          "DETAIL": {
+            "TOWARD": "Hacia",
+            "VALUE": "Valor",
+            "IVA": "Iva",
+            "INC": "Inc",
+            "TIP": "Propina",
+            "TOTAL_VALUE": "Valor total"
+          }
+        },
+        "STATIC": {
+          "TITLE": "Ingresa el valor y selecciona el método de pago para",
+          "LABEL_INPUT": "Valor a transferir"
+        }
+      },
+      "PRODUCTS_STEP": {
+        "TITLE": "Selecciona el método de pago",
+        "PAYMENT_METHODS_LABELS": {
+          "ACCOUNTS": "Cuentas",
+          "CREDIT_CARDS": "Tarjetas de crédito",
+          "DEBIT_CARDS": "Tarjetas débito"
+        }
+      },
+      "INSTALLMENTS_STEP": {
+        "MESSAGE": "Mínimo {{ qr_pay_installments_field_min }}, máximo {{ qr_pay_installments_field_max }} cuotas"
+      }
+    },
+    "PAY_DALE": {
+      "TITLE": "Pago con QR",
+      "STEPS": {
+        "DATA": "Datos",
+        "FROM": "Desde",
+        "CONFIRM": "Confirma"
+      },
+      "STEP_TITLES": {
+        "DATA": "Ingresa el valor que vas a transferir a",
+        "FROM": "Selecciona el método de pago",
+        "CONFIRM": "Confirma los datos de tu pago"
+      },
+      "STEP_DATA": {
+        "SUBTITLE": "Transacción # ",
+        "LABEL_INPUT": "Valor a transferir",
+        "SCAN_QR_BTN": "Leer QR de nuevo"
+      },
+      "MODAL_EXIT_DATA": {
+        "TITLE": "¿Quieres cancelar?",
+        "DESCRIPTION": "El proceso que has realizado hasta el momento se cancelará"
+      }
+    }
+  },
+  "REGISTER": {
+    "ALERT": {
+      "INFO": "Por tu seguridad el Banco nunca te pedirá esta información por llamada o chat."
+    },
+    "STEPS": {
+      "COMPLETED": {
+        "DESCRIPTION": "Queremos que tengas la mejor experiencia digital AV Villas.",
+        "TITLE": "¡Es un gusto tenerte aquí"
+      },
+      "ERROR": {
+        "BUTTON_CLOSE": "¿DÓNDE ENCONTRARNOS?",
+        "DESCRIPTION": "Debes acercarte a una de nuestras oficinas y actualizar tus datos.",
+        "TITLE": "No fue posible completar tu registro"
+      },
+      "ERROR_STEP02": "Ingreso restringido, por favor acércate a una de nuestras oficinas",
+      "FILL_NEW_UNIVERSAL_PASSWORD": {
+        "CONFIRM_NEW_PASSWORD": "Repite la nueva contraseña",
+        "DESCRIPTION": "Con la que podrás ingresar a todos los canales digitales AV Villas.",
+        "NEW_PASSWORD": "Nueva contraseña",
+        "TITLE": "Crea tu contraseña única"
+      },
+      "FILL_OTP_DATA": {
+        "DESCRIPTION": "de 8 dígitos que enviamos a tu celular o correo registrado.",
+        "REQUEST_NEW_PASSWORD": "Solicitar nueva clave",
+        "SUB_DESCRIPTION": "",
+        "TITLE": "Ingresa la clave"
+      },
+      "FILL_SECURE_DATA": {
+        "CARD_FIELD": "Dígitos de tu tarjeta",
+        "PASSWORD_FIELD": "Clave",
+        "TITLE": "Verifiquemos tus productos AV Villas"
+      },
+      "REQUEST_INPUT_OTP_FROM_ANOTHER_CHANNEL": {
+        "DESCRIPTION": "Si recibiste una clave en tu correo o en tu celular, ingrésala aquí:",
+        "TITLE": "Ingresa tu clave temporal"
+      },
+      "TEMPORARILY_BLOCKED_USER": {
+        "DESCRIPTION": "Usuario bloqueado temporalmente"
+      },
+      "TERMS": {
+        "ACCEPT": "Acepta",
+        "LINK": "Términos y condiciones"
+      },
+      "USER_DOES_NOT_EXISTS": {
+        "DESCRIPTION": "Tenemos para ti:",
+        "TITLE": "¿Quieres tener un producto en AV Villas?"
+      }
+    }
+  },
+  "SEE_MORE": "Ver más",
+  "SIDE_MENU": {
+    "CURRENT_ACCESS": "Acceso actual",
+    "IP_ACCESS": "IP de acceso",
+    "LAST_ACCESS": "Último acceso",
+    "SECURE_EXIT": "Salida segura",
+    "TITLE": "Menú",
+    "VERSION": "Versión"
+  },
+  "TIME": {
+    "MONTHS": {
+      "APRIL": "Abril",
+      "AUGUST": "Agosto",
+      "DECEMBER": "Diciembre",
+      "FEBRUARY": "Febrero",
+      "JANUARY": "Enero",
+      "JULY": "Julio",
+      "JUNE": "Junio",
+      "MARCH": "Marzo",
+      "MAY": "Mayo",
+      "NOVEMBER": "Noviembre",
+      "OCTOBER": "Octubre",
+      "SEPTEMBER": "Septiembre"
+    },
+    "OF": "de",
+    "TODAY": "Hoy",
+    "YESTERDAY": "Ayer"
+  },
+  "TOTAL_BALANCE": "Saldo total",
+  "TRANSFERS": {
+    "NOTE_HELP_TEXT": "Esta información le llegará a la persona que le transfieras.",
+    "BUTTON_LIST": {
+      "AVAL_KEY": "A un Tag Aval o Llave",
+      "AVV_ACCOUNT": "A cuentas <mark>AV Villas</mark>",
+      "AVV_PHONE": "Celular a celular <mark>AV Villas</mark>",
+      "CEL2CEL": "Otras acciones a celular",
+      "CONTACTS": "A contactos inscritos",
+      "TRANSFIYA": "Celulares otros bancos",
+      "UNREGISTERED_ACCOUNTS": "Transferir sin inscribir",
+      "REMITTANCES": "Recibe remesas",
+      "THIRD_TRANSFERS": "Giros a terceros",
+      "WITHOUT_CARD": "Retiro sin tarjetas",
+      "BRE_B": "Transferencias al instante"
+    },
+    "REMITTANCES": {
+      "TITLE": "Remesas",
+      "DESCRIPTION": "Elige la cuenta para recibir",
+      "REGISTERED_ACCOUNT": {
+        "TITLE": "Tu cuenta ya se encuentra registrada",
+        "SUBTITLE": "Ahora podrás cobrar tu giro internacional a la cuenta registrada. Recibe dinero de más de 200 países con Western Union",
+        "CARD": {
+          "DOCUMENT_NUMBER": "Documento de identidad:",
+          "PHONE": "Celular",
+          "HINT": "Disponible",
+          "FULLNAME": "Nombre completo",
+          "ACCOUNT_NUMBER": "No de cuenta:",
+          "WALLET": "Wallet destino:"
+        }
+      },
+      "INFO_ALERT": {
+        "TITLE": "Recibe plata desde el extranjero",
+        "LIST": {
+          "ITEM_1": "Recibe plata en tu cuenta desde cualquier lugar del mundo. La persona que te envía debe realizar el giro desde una oficina o canal digital de Western Union en el país de origen.",
+          "ITEM_2": "Selecciona tu cuenta por única vez.",
+          "ITEM_3": "Por día puedes recibir máximo ${{ transfer_remittances_max$ }} directos a tu cuenta. ",
+          "ITEM_4": "Y listo así de fácil comienzas a recibir plata.",
+          "ITEM_5": "He leído la",
+          "ITEM_6": "Política de Tratamiento de Datos Personales ",
+          "ITEM_7": "y acepto el tratamiento y consulta de mis datos personales."
+        },
+        "NOTIFICATION_DESCRIPTION": "Recuerda que el número de celular registrado en el Banco ({{phoneNumber}}) debe coincidir con el que ingreses en la página de Acciones y Valores. Si no, te recomendamos actualizarlo en cualquiera de nuestras oficinas."
+      },
+      "SUCCESS_ALERT_SHEET": {
+        "TITLE": "¡Registro exitoso!",
+        "VOUCHER": {
+          "NAME": "Nombre",
+          "DOCUMENT_NUMBER": "No Documento",
+          "PHONE_NUMBER": "Celular",
+          "ACCOUNT_NUMBER": "Cuenta para recibir ",
+          "WALLET_NAME": "Billetera Móvil",
+          "DATE": "Fecha",
+          "IP": "IP",
+          "MESSAGE": "En esta cuenta recibirás el dinero que te envíen del exterior"
+        }
+      }
+    },
+    "CONTACT_LINK": "Contactos de celular",
+    "CONTACTS": {
+      "AMOUNT": {
+        "LABEL": "Valor a transferir",
+        "TITLE": "Ingresa el valor a transferir"
+      },
+      "CONFIRMATION": {
+        "MESSAGE": "A tu contacto le llegará un mensaje de texto notificando el envío de la plata y tiene hasta 12 horas para aceptarlo.<br><br>Si esta transferencia es recibida en un banco diferente a AV Villas, tendrá un costo de $",
+        "TITLE": "Vas a transferir"
+      },
+      "FAKE_CONTACT": "Mis cuentas AV Villas",
+      "FROM": {
+        "TITLE": "Elige la Cuenta de origen",
+        "WHO_IS_IT": "¿Qué es transferir a contactos inscritos?"
+      },
+      "INFO_ALERT": {
+        "LIST": {
+          "ITEM_1": "Transfiere a cuentas de tus contactos inscritos AV Villas desde ${{ transfer_value_to_send_min$ }} hasta el tope establecido para esta transacción.",
+          "ITEM_2": "<strong>Transfiere sin costo</strong> si el número de celular de tu contacto está asociado a una cuenta de las entidades del Grupo Aval.",
+          "ITEM_3": "Transfiere <strong>máximo ${{ transfiya_amount_max$ }}</strong> y hasta en {{ transfiya_daily_max }} transacciones por día."
+        },
+        "TITLE": "¿Qué es transferir a contactos inscritos?"
+      },
+      "OWN": {
+        "TITLE": "Elige la opción de tu contacto para hacer la transferencia:"
+      },
+      "PRODUCT_TYPE": {
+        "AVV_CELL_PHONE": "A celulares con Cuenta AV Villas",
+        "MESSAGE": "Para transferir a tus contactos estas son tus opciones",
+        "TITLE": "Selecciona el destino",
+        "TRANSFIYA_CELL_PHONE": "A otros Bancos con Transfiya"
+      },
+      "PRODUCTS": {
+        "ACCOUNT_NOT_FOUND": "¿No encontraste la cuenta de tu contacto?<br>Agrégala ingresando a tu Banca Virtual en <br>avvillas.com.co sección contactos.",
+        "PRODUCTS_ERROR": "No pudimos mostrar las cuentas <br> inscritas a este contacto. <br> Inténtalo más tarde",
+        "TITLE": "Elige hacia donde quieres transferir"
+      },
+      "TITLE": "A contactos inscritos",
+      "TOWARD": {
+        "CONTACT_NOT_FOUND": "¿No encontraste tu contacto?<br>Inscríbelo ingresando a tu Banca Virtual en<br>avvillas.com.co sección contactos.",
+        "TITLE": "Selecciona tu contacto para transferir"
+      }
+    },
+    "EXCEPTION": {
+      "DESCRIPTION": "Te invitamos a abrir una cuenta desde nuestra Banca Virtual u oficina.",
+      "TITLE": "No tienes productos disponibles en el Banco para realizar transferencias"
+    },
+    "EXIT_ALERT": {
+      "TITLE": "¿Estás seguro que deseas abandonar la transferencia?",
+      "TITLE_REQUEST_TRANSFIYA": "¿Deseas cancelar la solicitud de plata?"
+    },
+    "REQUEST_MONEY": {
+      "AMOUNT": {
+        "LABEL": "Valor máximo ${{ transfiya_amount_max$ }}",
+        "TITLE": "Ingresa el valor a solicitar"
+      },
+      "CONFIRM": {
+        "BUTTON": "SOLICITAR PLATA",
+        "MESSAGE": "Tu contacto debe autorizar el envío de plata desde la aplicación bancaria que tenga habilitada",
+        "TITLE": "Vas a Pedir plata"
+      },
+      "FROM": {
+        "DESCRIPTION": "A esta cuenta se consignará la plata cuando te la envíen",
+        "TITLE": "Selecciona la cuenta destino",
+        "WHO_IS_IT": "¿Qué es solicitar plata?"
+      },
+      "INFO_ALERT": {
+        "DESCRIPTION": "Envía un mensaje de texto a otra persona pidiendo que te envíe dinero, si lo deseas puedes adjuntar un mensaje opcional.",
+        "TITLE": "¿Qué es solicitar plata?"
+      },
+      "TITLE": "Solicitar plata",
+      "TOWARD": {
+        "FIELD": "Número de celular",
+        "TITLE": "Ingresa el número de celular o selecciona un contacto de tu celular"
+      }
+    },
+    "RESPONSE": {
+      "ERROR": {
+        "TITLE": "La transferencia no fue realizada",
+        "TITLE_REQUEST_TRANSFIYA": "No fue posible solicitar plata"
+      },
+      "SUCCESS": {
+        "DESCRIPTION": "No. de autorización",
+        "MESSAGE_CONTACT": "Recuerda que las transferencias a otros bancos pueden tomar hasta <b>24 horas hábiles.</b>",
+        "MESSAGE_REQUEST_TRANSFIYA": "A tu contacto le llegará en los próximos minutos un mensaje de texto con este pedido",
+        "MESSAGE_SEND_TRANSFIYA": "Tu contacto debe autorizar la plata entrante desde la aplicación bancaria que tenga habilitada",
+        "MESSAGE_SEND_AVV_PHONE": "Tu contacto deberá aceptar la transferencia desde la aplicación bancaria que tenga habilitada",
+        "TITLE": "¡Transacción exitosa!",
+        "TITLE_REQUEST_TRANSFIYA": "El pedido de plata fue realizado exitosamente",
+        "TITLE_SEND_TRANSFIYA": "La transacción esta en curso"
+      }
+    },
+    "STEPS": {
+      "ADDITIONAL_DATA": "Datos adicionales:",
+      "CONFIRM": "Confirma",
+      "COST": "Costo",
+      "FROM": "Desde",
+      "MESSAGE": "Mensaje:",
+      "TARGET": "Destino",
+      "TO": "A quién",
+      "TOWARD": "Hacia",
+      "VALUE": "Valor"
+    },
+    "TITLE": "Transferencias",
+    "TRANSFIYA": {
+      "TRUST_RELATION_PANEL": {
+        "TITLE": "Marcar contacto como relación de confianza",
+        "FIELD": "Ingresa un nombre",
+        "BUTTON": "Guardar",
+        "SUCCESS": "La relación de confianza se guardó con éxito"
+      },
+      "TRUST_RELATION": {
+        "DESCRIPTION": "La plata que te envían estos contactos por Transfiya llegará directamente tu Cuenta de Ahorros en <mark>AV Villas</mark>",
+        "SELECT_PRODUCT": "Selecciona un producto",
+        "EMPTY": "Aún no tienes relaciones de confianza creadas para esta Cuenta.",
+        "EMPTY_TITLE": "Aún no tienes relaciones de confianza",
+        "EMPTY_DESCRIPTION_ALT": "Cuando te envién dinero a través de Transfiya podrás marcar la transferencia, así siempre recibirás la plata automaticamente en tu cuenta AV Villas.",
+        "EMPTY_DESCRIPTION": "Abre tu Cuenta de Ahorros en AV Villas para recibir plata automáticamente.",
+        "ALERT_NAME": "En este momento, no podemos cargar el nombre de tus Relaciones de Confianza."
+      },
+      "BANK_INFO": {
+        "TITLE": "Bancos aliados",
+        "DESCRIPTION": "Entidades que cuentan con Transfiya para recibir transferencias",
+        "OTHERS_ENTITIES": "Otras entidades",
+        "BUTTON": "Regresar a la transferencia"
+      },
+      "INFO_ALERT": {
+        "DESCRIPTION": "Transfiere a celulares con cuentas en otros bancos máximo ${{ transfiya_amount_max$ }} por transacción.",
+        "LIST": {
+          "ITEM_1": "A tu contacto le llegará un mensaje de texto  notificando el envío de la plata.",
+          "ITEM_2": "Tu contacto tendrá que autorizar la transferencia, desde la aplicación de alguna de estas entidades:"
+        },
+        "SUBLIST": {
+          "INFO": "Transfiere a celulares con cuentas en otros bancos máximo ${{ transfiya_amount_max$ }} por transacción.",
+          "ITEM_1": "AV Villas",
+          "ITEM_10": "Bancolombia",
+          "ITEM_11": "Coonfiar Coop",
+          "ITEM_2": "Banco Caja Social ",
+          "ITEM_3": "Banco CoopCentral",
+          "ITEM_4": "Serfinanza ",
+          "ITEM_5": "DAVIPLATA",
+          "ITEM_6": "DAVIVIENDA",
+          "ITEM_7": "MOVII",
+          "ITEM_8": "NEQUI",
+          "ITEM_9": "BBVA"
+        },
+        "TITLE": "¿Qué es Transfiya?"
+      },
+      "INFO_HOME_ALERT": {
+        "LINK": "Conoce los bancos aliados a Transfiya",
+        "DESCRIPTION": "Envía y solicita plata a otra persona con cuentas en <mark>AV Villas</mark> u otros bancos del ecosistema Transfiya, podrás enviar hasta {{ transfiya_daily_max }} transacciones o máximo ${{ transfiya_amount_max$ }} diarios, utilizando solo el número de celular.",
+        "TITLE": "¿Qué es Transfiya?"
+      },
+      "ITEMS": {
+        "SEND_TRANSFIYA": "Enviar plata",
+        "REQUEST_TRANSFIYA": "Solicitar plata",
+        "PENDING_TRANSFIYA": "Transferencias pendientes",
+        "TRUST_RELATION": "Relación de confianza"
+      },
+      "HEADER": "Transfiya",
+      "TITLE": "Con Transfiya puedes",
+      "MANAGEMENT": {
+        "ACCOUNT_DEFAULT": {
+          "PANEL": {
+            "TITLE": "Marca esta cuenta como favorita"
+          },
+          "ALERT_INFO": {
+            "TITLE": "Tu cuenta favorita",
+            "DESCRIPTION": "Ahora puedes seleccionar tu cuenta favorita para recibir las transferencias sin la necesidad de autorizarlas."
+          },
+          "REMOVE_ACCOUNT": {
+            "REMOVE_ALERT": {
+              "TITLE": "¿Quieres eliminar la cuenta favorita?",
+              "BUTTON_ACTION": "Eliminar cuenta"
+            },
+            "REMOVE_SUCCESS": "La cuenta favorita fue eliminada",
+            "REMOVE_ERROR": "Ha ocurrido un error eliminando la cuenta"
+          }
+        },
+        "ACCEPT": {
+          "HEADER": "Aceptar plata",
+          "LABEL": "Selecciona una cuenta destino para abonar la transferencia",
+          "ALERT_INFO_TRUST_RELATION": "Marcando este contacto como una Relación de confianza, siempre recibirás la plata automáticamente en tu cuenta de AV Villas.",
+          "BTN_SECONDARY": "Rechazar envío"
+        },
+        "SEND": {
+          "HEADER": "Enviar Plata",
+          "LABEL": "Selecciona una cuenta para hacer la transferencia",
+          "BTN_SECONDARY": "Rechazar pedido"
+        }
+      }
+    },
+    "TYPES": {
+      "SEND_AVV_PHONE": "A celulares AV Villas",
+      "SEND_TRANSFIYA": "A celulares Transfiya"
+    },
+    "UNREGISTER_ACCOUNTS": {
+      "AMOUNT": {
+        "LABEL": "Valor a transferir",
+        "TITLE": "Ingresa el valor a transferir"
+      },
+      "CONFIRM": {
+        "MESSAGE_SEND_TRANSFIYA": "A tu contacto le llegará un mensaje de texto notificando el envío de la plata y tiene hasta 24 horas para aceptarlo.<br><br>Si esta transferencia es recibida en un banco diferente a AV Villas, tendrá un costo de $",
+        "TITLE": "Vas a transferir"
+      },
+      "FROM": {
+        "TITLE": "Elige la Cuenta de origen",
+        "WHO_IS_IT": "¿Qué es transferir sin inscribir?"
+      },
+      "INFO_ALERT": {
+        "CHECK_TEXT": "No mostrar de nuevo ese mensaje",
+        "DESCRIPTION": "Realiza transferencias sin inscribir a:",
+        "LIST": {
+          "ITEM_1": "Cuentas y celulares AV Villas hasta ${{ transfer_to_other_accounts_max$ }}.",
+          "ITEM_2": "Celulares de otros Bancos con Transfiya máximo ${{ transfiya_amount_max$ }} por transacción."
+        },
+        "MESSAGE": "Si tu transferencia es por un monto mayor debes inscribir tu contacto ingresando a tu Banca Virtual en avvillas.com.co, sección contactos.",
+        "TITLE": "¿Qué es transferir sin inscribir?"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "TO": "A quién",
+        "TOWARD": "Hacia",
+        "VALUE": "Valor"
+      },
+      "TITLE": "Transferir sin inscribir",
+      "TO_WHO": {
+        "DESCRIPTION": "Para esta transferencia estas son tus opciones disponibles:",
+        "TITLE": "Selecciona el destino",
+        "TYPES": {
+          "CELL_PHONE": "De Celular a celular",
+          "OWN": "A Cuenta AV Villas"
+        }
+      },
+      "TOWARD_ACCOUNT": {
+        "BANK": "Banco AV Villas",
+        "FIELD": "Número de cuenta",
+        "TITLE": "Ingresa los datos para transferir"
+      },
+      "TOWARD_CELL_PHONE": {
+        "FIELD": "Número de celular",
+        "TITLE": "Elige el medio e ingresa el número de celular"
+      }
+    },
+    "AVV_ACCOUNT": {
+      "AMOUNT": {
+        "LABEL": "Valor a transferir",
+        "TITLE": "Ingresa el valor a transferir",
+        "MESSAGE": "Para transferir más de ${{ transfer_to_avv_phone_max$ }} debes inscribir a tu contacto ingresando en avvillas.com.co a tu Banca Virtual sección Contactos."
+      },
+      "CONFIRM": {
+        "TITLE": "Vas a transferir"
+      },
+      "FROM": {
+        "TITLE": "Elige la Cuenta de origen",
+        "WHO_IS_IT": "¿Qué es transferir a cuentas AV Villas?"
+      },
+      "INFO_ALERT": {
+        "CHECK_TEXT": "No mostrar de nuevo ese mensaje",
+        "DESCRIPTION": "Realiza transferencias sin necesidad de inscripción a cuentas AV Villas por montos menores a ${{ transfer_to_other_accounts_max$ }}",
+        "TITLE": "¿Qué es transferir a cuentas <br>AV Villas?"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "TOWARD": "Hacia",
+        "VALUE": "Valor"
+      },
+      "TITLE": "A cuentas AV Villas"
+    },
+    "AVV_PHONE": {
+      "AMOUNT": {
+        "LABEL": "Valor a transferir",
+        "TITLE": "Ingresa el valor a transferir",
+        "MESSAGE": "Para transferir más de ${{ transfer_to_avv_phone_max$ }} debes inscribir a tu contacto ingresando en avvillas.com.co a tu Banca Virtual sección Contactos."
+      },
+      "CONFIRM": {
+        "MESSAGE_SEND_TRANSFIYA": "A tu contacto le llegará un mensaje de texto notificando el envío de la plata y tiene hasta 24 horas para aceptarlo.",
+        "TITLE": "Vas a transferir"
+      },
+      "FROM": {
+        "TITLE": "Elige la Cuenta de origen",
+        "WHO_IS_IT": "¿Qué es transferir de celular a celular AV Villas?"
+      },
+      "INFO_ALERT": {
+        "CHECK_TEXT": "No mostrar de nuevo ese mensaje",
+        "DESCRIPTION": "Puedes transferir a número de celular con cuentas AV Villas hasta ${{ transfer_to_avv_phone_max$ }}",
+        "TITLE": "¿Qué es transferir de celular a <br>celular AV Villas?"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "TOWARD": "Hacia",
+        "VALUE": "Valor"
+      },
+      "TITLE": "De celular a celular",
+      "TOWARD_CELL_PHONE": {
+        "FIELD": "Número de celular",
+        "TITLE": "Ingresa el número de celular al que le vas a transferir"
+      }
+    },
+    "CEL2CEL": {
+      "HOME": {
+        "TITLE": "¿Qué quieres hacer?",
+        "SEND_LINK": "Enviar plata",
+        "DESC_TITLE": "Transfiere sin costo y de inmediato",
+        "DESC_1": "Si el número de tu contacto tiene<br>una cuenta en el <mark><b>Grupo Aval</b></mark>",
+        "DESC_2": "y a otros bancos a través de",
+        "DESC_3": "<b>Transfiya*</b>",
+        "DESC_4": "*Consulta tasas y tarifas en avvillas.com.co",
+        "LINK_REQUEST": "Solicitar plata",
+        "LINK_PENDING": "Transferencias pendientes",
+        "LINK_ADMIN_TRANSFIYA": "Administra tu <br> Transfiya",
+        "LINK_INFO": "¿Qué es transferir a un celular?",
+        "NAVBAR_TITLE": "A un celular"
+      },
+      "ALERT_INFO": {
+        "TITLE": "¿Qué es transferir a un celular?",
+        "TEXT_1": "<b>Transfiere sin costo</b> si el número de celular de tu contacto está asociado a una cuenta de las entidades del <b>Grupo Aval</b>.",
+        "TEXT_2": "El dinero se verá reflejado de <b>inmediato en la cuenta del banco</b> de tu contacto.",
+        "TEXT_3": "A través de <b>Transfiya</b> envía o solicita plata a otros bancos",
+        "TEXT_4": "Transfiere <b>máximo ${{ transfiya_amount_max$ }}</b> y hasta en {{ transfiya_daily_max }} transacciones por día."
+      },
+      "REQUEST": {
+        "STEPS": {
+          "TOWARD_LABEL": "Hacia",
+          "FROM_LABEL": "Desde",
+          "CONFIRMATION_LABEL": "Confirmación",
+          "ACCOUNTS_DATA_TITLE": "Selecciona la cuenta donde se consignara el dinero solicitado",
+          "CONFIRMATION_DATA_TITLE": "Confirma los datos de tu solicitud de plata"
+        },
+        "RESPONSE_TITLE_REQUEST": "La solicitud de plata fue realizado exitosamente"
+      },
+      "SEND": {
+        "STEPS": {
+          "TOWARD_TITLE": "Elige la entidad destino de tu contacto",
+          "TOWARD_INFO": "Si seleccionas otras entidades puedes recibir cargos extra en la transacción.",
+          "TOWARD_LABEL": "Hacia",
+          "CONFIRMATION_TITLE": "Confirma los datos de tu transferencia",
+          "FROM_LABEL": "Desde",
+          "ENTITY_LABEL": "Entidad",
+          "CONFIRMATION_LABEL": "Confirmación",
+          "ACCOUNTS_DATA_TITLE": "Selecciona la cuenta donde se consignara el dinero solicitado",
+          "CONFIRMATION_DATA_TITLE": "Confirma los datos de tu solicitud de plata"
+        },
+        "TRANSFERS_CEL2CEL_CANT_TRANSFER_ALERT": {
+          "TITLE": "Tu contacto no puede recibir esta transferencia en las entidades del Grupo Aval",
+          "DESCRIPTION": "Puedes realizar la transacción a través de Transfiya o ingresar un número de celular que tenga cuenta en una entidad del Grupo Aval",
+          "LINK_TEXT": "¿Que es Transfiya?",
+          "BUTTON_CHANGE_NUMBER": "Cambiar Número",
+          "BUTTON_USE_TRANSFIYA": "Usar Transfiya"
+        },
+        "TRANSFERS_TRANSFIYA_INFO_ALERT": {
+          "TITLE": "Tu contacto no puede recibir esta transferencia en las entidades del Grupo Aval",
+          "DESCRIPTION": "Envía y solicita plata a otra persona con cuentas en AV Villas u otros bancos del ecosistema Transfiya, podrás enviar hasta 15 transacciones o máximo ${{ transfiya_amount_max$ }} diarios, utilizando solo el número de celular.",
+          "LINK_TEXT": "Conoce los bancos aliados a Transfiya",
+          "BUTTON_CHANGE_NUMBER": "Cambiar Número",
+          "BUTTON_USE_TRANSFIYA": "Usar Transfiya"
+        },
+        "TRANSFERS_AVV_PHONE_CONFIRM_TOWARD_ALERT": {
+          "DESCRIPTION": "¿Este es el número al que deseas realizar la transferencia?",
+          "BUTTON_CONFIRM": "Sí, Confirmar",
+          "BUTTON_CHANGE_NUMBER": "No, Cambiar Número"
+        },
+        "CONFIRMATION_MESSAGE_TRANSFIYA": "A tu contacto le llegará un mensaje de texto notificando el envío de la plata y tiene hasta 12 horas para aceptarlo.",
+        "CONFIRMATION_MESSAGE": "A tu contacto le llegará la transferencia directo a la cuenta de la entidad.",
+        "TOWARD_AMOUNT_FIELD_LABEL": "Valor a transferir",
+        "TOWARD_NOTE_FIELD_LABEL": "Mensaje “Opcional”"
+      },
+      "ALERT_SHEET": {
+        "REQUEST_MESSAGE": "A tu contacto le llegará un mensaje de texto con esta solicitud de plata.",
+        "SEND_MESSAGE": "A tu contacto le llegará la transferencia directo a la cuenta de la entidad."
+      },
+      "OTHER_ENTITIES_TRANSFIYA": "Otras entidades • Transfiya"
+    },
+    "SEND_MONEY": {
+      "AMOUNT": {
+        "LABEL": "Valor a transferir",
+        "TITLE": "Ingresa el valor a transferir",
+        "MESSAGE": "Para transferir más de ${{ transfiya_amount_max$ }} debes inscribir a tu contacto ingresando en avvillas.com.co a tu Banca Virtual sección Contactos."
+      },
+      "CONFIRM": {
+        "MESSAGE": "A tu contacto le llegará un mensaje de texto notificando el envío de la plata y tiene hasta 12 horas para aceptarlo.<br><br>Si esta transferencia es recibida en un banco diferente a AV Villas, tendrá un costo de $",
+        "TITLE": "Vas a transferir"
+      },
+      "FROM": {
+        "TITLE": "Elige la Cuenta de origen",
+        "WHO_IS_IT": "¿Qué es enviar plata con transfiya?"
+      },
+      "INFO_ALERT": {
+        "CHECK_TEXT": "No mostrar de nuevo ese mensaje",
+        "DESCRIPTION": "Envía y solicita plata a otra persona con cuentas en <mark>AV Villas</mark> u otros bancos del ecosistema Transfiya, podrás enviar hasta {{ transfiya_daily_max }} transacciones o máximo ${{ transfiya_amount_max$ }} diarios, utilizando solo el número de celular.",
+        "LIST": {
+          "ITEM_1": "A tu contacto le llegará un mensaje de texto  notificando el envio de la plata.",
+          "ITEM_2": "Tendrá que autorizar la transferencia, desde la aplicación de alguna de las entidades."
+        },
+        "LINK": "Conoce los bancos aliados a Transfiya",
+        "TITLE": "¿Qué es Transfiya?"
+      },
+      "STEPS": {
+        "CONFIRM": "Confirma",
+        "FROM": "Desde",
+        "TOWARD": "Hacia",
+        "VALUE": "Valor"
+      },
+      "TITLE": "Enviar plata",
+      "TOWARD_CELL_PHONE": {
+        "FIELD": "Número de celular",
+        "TITLE": "Ingresa el número de celular al que le vas a transferir"
+      }
+    },
+    "PENDING": {
+      "HEADER": "Transfiya",
+      "TITLE": "Transferencias pendientes",
+      "SEE_DETAIL": "Ver detalle",
+      "EMPTY": {
+        "TITLE": "No tienes transferencias pendientes"
+      }
+    },
+    "ADMIN_TRANSFIYA": {
+      "HEADER": "Administra tu Transfiya",
+      "TITLE": "Puedes modificar y consultar tus cuentas de confianza y contactos",
+      "DEFAULT_ACCOUNT_LABEL": "Cuenta favorita",
+      "TRUST_RELATION_LABEL": "Relación de confianza",
+      "ALERT_INFO": {
+        "TITLE": "Administra tu Transfiya",
+        "MESSAGE": "¿Qué es administrar tu Transfiya?",
+        "ITEMS": {
+          "ITEM_1": "Guarda tus <b>contactos de confianza</b> para recibir plata automáticamente en tu cuenta AV Villas.",
+          "ITEM_2": "Marca tu <b>cuenta de ahorros</b> para recibir plata de todas las personas que te transfieren por Transfiya sin aprobar previamente."
+        }
+      }
+    },
+    "DEFAULT_ACCOUNT": {
+      "HEADER": "Cuenta favorita Transfiya",
+      "TITLE": "En esta cuenta recibes dinero sin la necesidad de autorizar las transferencias",
+      "NOTICE_ALERT_MESSAGE": "Recuerda que si eliminas esta cuenta nuevamente tendrás que autorizar todas las transferencias que recibas por medio de Transfiya.",
+      "EMPTY": {
+        "TITLE": "Aún no tienes una cuenta favorita marcada",
+        "TEXT": "Podrás activar esta función cuando tengas que autorizar una transferencia que te envíen."
+      }
+    },
+    "TRUST_RELATION": {
+      "ACTIONS": {
+        "REMOVE_RELATION": "Eliminar relación"
+      },
+      "HEADER": "Relación de Confianza",
+      "INFO_ALERT": {
+        "DESCRIPTION": "Marca cómo relación de confianza a aquellos contactos de los que recibes transferencias frecuentemente a través de Transfiya, para que la plata llegue automáticamente a tu cuenta en <mark>AV Villas</mark>.",
+        "TITLE": "¿Qué son las relaciones de confianza?",
+        "MESSAGE": "¿Qué son las relaciones de confianza?",
+        "BUTTON_TEXT": "INGRESAR"
+      },
+      "REMOVE_ALERT": {
+        "TITLE": "¿Quieres eliminar la relación de confianza?",
+        "DESCRIPTION": "Si este contacto vuelve a enviarte plata, debes autorizar la transacción en máximo 12 horas"
+      }
+    },
+    "WHO_IS_TRANSFIYA": "¿Qué es Transfiya?",
+    "AVAL_KEY": {
+      "HEADER": "A un Tag Aval o Llave",
+      "STEPS": {
+        "FROM": "Desde",
+        "TOWARD": "Hacia",
+        "CONFIRM": "Confirma",
+        "CONFIRMATION_TITLE": "Confirma los datos de tu transferencia",
+        "CONFIRMATION_MESSAGE": "A tu contacto le llegará la transferencia directo a la cuenta de la entidad.",
+        "FROM_TITLE": "Elige la cuenta de origen",
+        "TOWARD_TITLE": "Ingresa los datos para transferir"
+      },
+      "ALERT_INFO": {
+        "TITLE": "¿Qué es transferir a un Tag Aval?",
+        "TEXT_1": "Un Tag Aval es un <b>identificador único</b> que te permite recibir transferencias entre cuentas AVAL.",
+        "TEXT_2": "<b>Realiza transacciones</b> de manera instantánea, segura y sin costo.",
+        "TEXT_3": "Transfiere <b>máximo ${{ transfiya_amount_max$ }}</b>."
+      },
+      "ALERT_ERROR_AVAL_KEY": {
+        "TITLE": "Ingresa un Tag Aval existente",
+        "DESCRIPTION": "El Tag ingresado no está activo."
+      },
+      "FIELDS": {
+        "AVAL_KEY": "Ingresa el Tag Aval o Llave",
+        "AMOUNT": "Valor a transferir",
+        "NOTE": "Mensaje \"Opcional\""
+      },
+      "FROM": {
+        "WHO_IS_IT": "¿Qué es transferir a un Tag Aval?"
+      }
+    },
+    "SPI_CONSENT": {
+      "TITLE": "Queremos proteger tus datos",
+      "DESCRIPTION": "Para usar las <b>Transferencias y Pagos Inmediatos,</b> necesitamos tu permiso para manejar tus datos de forma segura. Si en algún momento desistes de participar en el Sistema de Pagos Inmediatos comunícate a nuestras líneas de atención.",
+      "TERMS_AND_CONDITIONS": {
+        "TITLE": "Conoce los términos y condiciones que debes tener en cuenta",
+        "DETAIL": "Autorizo a la Entidad Banco AV Villas para que incorpore, actualice, consulte, modifique, habilite, comparta, traslade mi nombre, documento de identificación, número de telefonía móvil, correo electrónico, llave alfanumérica, número de productos financieros y cualquier otro dato asociado a mis medios de pago, con el fin de poblar los directorios federados y centralizados de los sistemas de pagos de bajo valor inmediato, entre ellos, el Banco de la República con el propósito de adelantar todos y cada uno de los procesos relacionados con el funcionamiento del SPBVI."
+      },
+      "CHECK_TEXT": {
+        "ACCEPT": "Acepto",
+        "SHARE_MY_INFORMATION": "compartir mi información",
+        "DETAIL": "de forma segura con los directorios del Sistema de Pagos inmediatos."
+      },
+      "BUTTONS": {
+        "ACCEPT": "Aceptar y continuar",
+        "REJECT": "Preguntar luego",
+        "GO_BACK": "Cerrar"
+      }
+    },
+    "BRE_B": {
+      "TITLE": "A llaves Bre-B",
+      "STEPS": {
+        "TOWARD": {
+          "TITLE": "Envía dinero a un Tag Aval o llave",
+          "DESCRIPTION": "Escribe un Tag Aval o una llave tipo alfanumérica, celular, correo, número de identificación, código de comercio o un código QR.",
+          "FIELDS": {
+            "AVAL_KEY": "Escribe la llave",
+            "KEY_DIRECTORY": "Elegir en agenda de llaves"
+          }
+        },
+        "DATA": {
+          "TITLE": "Envía dinero a un Tag Aval o llave",
+          "CARD_TITLE": "¿A quién envías?",
+          "CHANGE_KEY": "Cambiar llave",
+          "FIELDS": {
+            "AMOUNT": "¿Cuanta plata vas a enviar?",
+            "MAX_AMOUNT": "Máximo",
+            "PER_DAY": "por día.",
+            "MODAL_TITLE": "Selecciona una cuenta",
+            "FROM_PRODUCT": "¿De que cuenta saldrá la plata?",
+            "MESSAGE": "Mensaje “Opcional”",
+            "WARNING": "Esta información le llegará a la persona que le transfieras.",
+            "SAVE_CONTACT": "Guardar en agenda de llaves"
+          },
+          "TOOLTIP_INFO": {
+            "TITLE": "¿Qué Agenda de llaves?",
+            "TEXT": "Esta agenda es exclusiva para guardar los contactos a los cuales transfieres por llaves."
+          }
+        },
+        "CONFIRMATION": {
+          "TITLE": "Verifica la información",
+          "SUBTITLE": ", esta transacción es gratis",
+          "AMOUNT": "Vas a enviar:",
+          "TOWARD": "Enviarás a:",
+          "FROM": "Desde:",
+          "COST": "Costo:",
+          "MESSAGE": "Mensaje:",
+          "ACTIONS_BUTTONS": {
+            "SEND": "Enviar",
+            "MODIFY": "Modificar"
+          }
+        },
+        "VOUCHER": {
+          "AMOUNT": "Valor enviado:",
+          "TO": "Enviaste a:",
+          "FROM": "Desde:",
+          "FEE": "Costo:",
+          "MESSAGE": "Mensaje:",
+          "IP": "Dirección IP"
+        }
+      },
+      "EXIT_ALERT": {
+        "BUTTON": "Salir del proceso",
+        "TITLE": "¿Estás seguro que deseas abandonar la transferencia?",
+        "DESCRIPTION": "Recuerda que si abandonas la transferencia se perderán los datos ingresados y tendrás que comenzar de nuevo.",
+        "BUTTON_OK": "Salir de la transacción",
+        "BUTTON_CANCEL": "Continuar"
+      },
+      "ADD_SPI_CONTACT": {
+        "SUCCESS": {
+          "TITLE": "{{contact_name}} se guardó en tu lista de contactos"
+        }
+      },
+      "UPDATE_SPI_CONTACT": {
+        "ADD_TO_FAVORITE": {
+          "ADD_FIELD": "Agregar contacto a favoritos",
+          "ADDED_FAVORITE_CONTACT": "Contacto agregado a favoritos",
+          "SUCCESS": "{{contact_alias}} se agregó a tus favoritos"
+        },
+        "REMOVE_FROM_FAVORITE": {
+          "REMOVE_FIELD": "Quitar contacto de favoritos",
+          "REMOVED_FAVORITE_CONTACT": "Contacto quitado de favoritos",
+          "SUCCESS": "{{contact_alias}} se quitó de tus favoritos"
+        }
+      }
+    }
+  },
+  "UPDATE_INSTALLMENTS": {
+    "HEADER": "Modificar cuotas",
+    "INFO_ALERT": {
+      "TITLE": "¿Qué es modificar cuotas?",
+      "DESCRIPTION": "Modificar una cuota permite aumentar o disminuir el número de pagos restantes de una compra o avance."
+    },
+    "MOVEMENT_STEP": {
+      "TITLE": "Elige la transacción a la cual deseas modificar el número de cuotas"
+    },
+    "CONFIRMATION_STEP": {
+      "BUTTON": "Modificar cuotas",
+      "INSTALLMENTS_DESCRIPTION": "{{previous_installments}} a {{next_installments}} cuotas",
+      "MESSAGE": "La modificación de las cuotas no afectará el pago mínimo ya facturado para este mes, verás reflejado el cambio en la próxima facturación junto con la tasa establecida por el Banco.",
+      "TITLE": "Vas a modificar el número de cuotas"
+    },
+    "INSTALLMENTS_STEP": {
+      "TITLE": "Selecciona el número de cuotas que deseas asignar esta compra o avance realizado con la Tarjeta de Crédito.",
+      "MESSAGE": "Mínimo {{ update_installments_field_min }}, máximo {{ update_installments_field_max }} cuotas",
+      "MESSAGE_ALT": "Mínimo {{ update_installments_field_min }}, máximo {{ debit_purchase_installments_max }} cuotas",
+      "MOVEMENT_DESCRIPTION": "{{paid}} de {{installments}}",
+      "LABEL": "Ingrese el nuevo número de cuotas."
+    },
+    "EXIT_ALERT": {
+      "BUTTON": "Salir del proceso",
+      "TITLE": "¿Quieres cancelar la modificación de plazo?"
+    },
+    "FIELDS": {
+      "BALANCE": "Saldo",
+      "INSTALLMENTS": "Cuotas",
+      "INSTALLMENTS_NUMBER": "No. de cuotas",
+      "PRODUCT": "Producto",
+      "PURCHASE_VALUE": "Valor",
+      "TOTAL_BALANCE": "Saldo total",
+      "TOWARD": "Hacia",
+      "TRANSACTION": "Transacción",
+      "RATE": "Tasa"
+    },
+    "RESPONSE": {
+      "ERROR": {
+        "TITLE": "No fue posible modificar el número de cuotas"
+      },
+      "SUCCESS": {
+        "AUTHORIZATION": "No. de autorización",
+        "TITLE": "<b>Modificación exitosa</b><br/> La modificación de cuotas se reflejará en los movimientos posteriores a la fecha de corte."
+      }
+    },
+    "RESTRICTED_EMPTY_MOVEMENTS": "Aún no cuentas con movimientos para realizar esta transacción",
+    "RESTRICTED_ERROR": "Para hacer un pago dirigido de una compra o avance tendrás que hacer primero el pago mínimo",
+    "STEPS": {
+      "CONFIRM": "Confirma",
+      "INSTALLMENTS": "Cuotas",
+      "MOVEMENT": "Transacción"
+    }
+  },
+  "USE_QUOTA": {
+    "AMOUNT": "Valor",
+    "AMOUNT_TO_BUY": "Valor a transferir",
+    "AVAILABLE": "Disponible",
+    "CANCEL": "Cancelar",
+    "CONFIRM_DESCRIPTION": "Confirma los datos de tu Crédito Rotativo",
+    "COST": "Costo",
+    "DESCRIPTION": "Transfiere el cupo disponible de tu Crédito Rotativo",
+    "DESTINATION_ACCOUNT": "Cuenta destino",
+    "EDIT_DATA": "Editar información",
+    "ERROR": "No fue posible usar el cupo rotativo",
+    "FROM": "Desde",
+    "INSTALLMENT": "cuotas",
+    "INSTALLMENTS_DESCRIPTION": "No. de cuotas",
+    "NUMBER": "No.",
+    "QUESTION": "¿Estás seguro de cancelar esta transacción?",
+    "QUESTION_DESCRIPTION": "La información que has ingresado hasta el momento se borrará.",
+    "QUOTA_FOR_ADVANCES": "Cupo para avances",
+    "SUB_DESCRIPTION": "Ingresa los datos del producto a transferir",
+    "SUCCESS": "El cupo rotativo fue usado con éxito",
+    "TITLE": "Uso de cupo",
+    "TO": "Hacia",
+    "USE_QUOTA": "Usar cupo",
+    "VOUCHER": {
+      "AUTHORIZATION": "No. de autorización",
+      "AVAILABLE": "Disponible",
+      "COST": "Costo de transacción",
+      "DATE_AND_TIME": "Fecha y hora",
+      "FROM": "Desde",
+      "INSTALLMENTS_NUMBER": "No. de cuotas",
+      "MESSAGE": "El uso de cupo se verá reflejado inmediatamente en tu cuenta destino.",
+      "TITLE": "Detalle del uso de cupo",
+      "TO": "Hacia",
+      "VALUE": "Valor"
+    }
+  },
+  "VOUCHER": {
+    "ACTIONS": {
+      "DOWNLOAD": "Descargar comprobante",
+      "SHARE": "Compartir",
+      "DOWNLOADING": "Descargando",
+      "SHARING": "compartiendo"
+    },
+    "DOWNLOAD": {
+      "ERROR": "!El comprobante no pudo ser descargado!",
+      "OK": "!El comprobante fue descargado con éxito!"
+    },
+    "EDIT_DATA": "Editar información",
+    "SHARE": {
+      "ERROR": "!El comprobante no pudo ser compartido!",
+      "OK": "!El comprobante fue compartido con éxito!"
+    },
+    "DATE_LABEL": "Fecha"
+  },
+  "WITHDRAW": {
+    "CHANNEL_TYPE": {
+      "ATM": "Cajero Aval",
+      "CB": "Corresponsales"
+    },
+    "MONEY_ORDERS": {
+      "ERROR": {
+        "TITLE": "El giro no fue realizado"
+      },
+      "HEADER": {
+        "TITLE": "Giros"
+      },
+      "SLIDE": {
+        "AMOUNT": {
+          "DESCRIPTION": "El valor del retiro debe ser mínimo de ${{ money_order_amount_min$ }} y máximo de ${{ money_order_amount_max$ }}.",
+          "DESCRIPTION_ATM": "El valor del retiro debe ser mínimo de ${{ money_order_amount_min_atm$ }} y máximo de ${{ money_order_amount_max$ }}.",
+          "LABEL": "Valor",
+          "TITLE": "Ingresa el valor a enviar"
+        },
+        "CONFIRMATION": {
+          "MESSAGE": "En la confirmación verás <b>la clave del giro</b> que tu contacto debe ingresar en el cajero o compartir en el corresponsal. Tu contacto debe ingresar el número de documento y hacer el retiro antes de <b>48 HORAS.</b>",
+          "TITLE": "Vas a hacer un giro",
+          "MESSAGES_1": "<b>En la confirmación verás la clave del giro</b> que tu contacto debe ingresar en el cajero o compartir en el corresponsal.",
+          "MESSAGES_2": "Tu contacto debe ingresar el número de documento y hacer el retiro antes de <b>48 HORAS</b>."
+        },
+        "MONEY_ORDER_CHANNEL": {
+          "TITLE": "Selecciona el lugar donde realizarás el giro"
+        },
+        "PRODUCT_ORIGIN": {
+          "TITLE": "Elige la Cuenta de origen"
+        },
+        "WHO": {
+          "LABEL": "Número",
+          "TITLE": "Ingresa el número de documento de quien recibirá el giro"
+        }
+      },
+      "STEPPER": {},
+      "SUCCESS": {
+        "DESCRIPTION": "Clave del giro",
+        "LABEL": "No. de aprobación",
+        "MESSAGE": "Tienes 48 horas para hacer el retiro",
+        "TITLE": "Clave creada exitosamente"
+      }
+    },
+    "NOTICES": {
+      "DESCRIPTION": {
+        "MONEY_ORDER": "Giro a terceros",
+        "WITHOUT_CARD": "Retiro sin tarjeta"
+      },
+      "ERROR": {
+        "MONEY_ORDER": "¡No fue posible generar la clave para giro a terceros!",
+        "WITHOUT_CARD": "¡No fue posible generar la clave para el retiro sin tarjeta!"
+      },
+      "OTP": {
+        "MONEY_ORDER": "Clave para el giro: {{number}}",
+        "WITHOUT_CARD": "Clave para retiro: {{number}}"
+      },
+      "SUCCESS_TITLE": "Tu clave para {{type}} es <br><b>{{number}}</b>",
+      "VOUCHER": {
+        "AUTHORIZATION": "No. de autorización",
+        "DATE_AND_TIME": "Fecha y hora",
+        "DETAIL": {
+          "MONEY_ORDER": "Detalle de giro",
+          "WITHOUT_CARD": "Detalle de retiro"
+        },
+        "MESSAGE": {
+          "MONEY_ORDER": "La clave de giro tiene una vigencia de 48 horas. Si la plata no se retira durante ese tiempo, regresará a tu cuenta.",
+          "WITHOUT_CARD": "La clave de retiro tiene una vigencia de 60 minutos. Si la plata no se retira durante ese tiempo, regresará a tu cuenta."
+        },
+        "PASSWORD": "Clave",
+        "TO": "Hacia",
+        "VALUE": "Valor"
+      }
+    },
+    "WITHOUT_CARD": {
+      "ERROR": {
+        "TITLE": "El retiro no fue realizado"
+      },
+      "HEADER": {
+        "TITLE": "Retiro sin tarjeta"
+      },
+      "SLIDE": {
+        "AMOUNT": {
+          "DESCRIPTION": "El valor del retiro debe ser mínimo de ${{ cash_withdrawal_amount_min$ }} y máximo de ${{ cash_withdrawal_amount_max$ }}.",
+          "DESCRIPTION_ATM": "El valor del retiro debe ser mínimo de ${{ cash_withdrawal_amount_min_atm$ }} y máximo de ${{ cash_withdrawal_amount_max$ }}.",
+          "LABEL": "Valor",
+          "TITLE": "Ingresa el valor a retirar"
+        },
+        "CASH_WITHDRAWAL_CHANNEL": {
+          "TITLE": "Selecciona el lugar donde realizarás el retiro"
+        },
+        "CONFIRMATION": {
+          "MESSAGE": "En la confirmación verás <b>la clave de retiro</b> que debes ingresar en el cajero junto con tu número de cédula. El retiro debes hacerlo <b>antes de 60 MINUTOS.</b>",
+          "TITLE": "Vas a hacer un retiro"
+        },
+        "PRODUCT_ORIGIN": {
+          "TITLE": "Elige la Cuenta de origen"
+        }
+      },
+      "STEPPER": {},
+      "SUCCESS": {
+        "DESCRIPTION": "Clave del retiro",
+        "LABEL": "No. de aprobación",
+        "TITLE": "Clave creada exitosamente",
+        "MESSAGE": "Esta clave también estará disponible en el comprobante de descarga."
+      }
+    }
+  },
+  "SECURITY": {
+    "BLOCK_TEMPORARY": {
+      "MESSAGE": "Puedes realizar 3 bloqueos en el mes por una duración máxima de 8 días.",
+      "CHOOSE_MESSAGE": "Elige la fecha límite de bloqueo",
+      "BLOCK_TO": "Bloquear hasta",
+      "CONFIRMATION_TITLE": "Vas a realizar un bloqueo temporal",
+      "CONFIRMATION_ALERT": "Una vez se cumpla el periodo, se desbloqueará automáticamente tu tarjeta o manilla.",
+      "PRODUCT": "Producto",
+      "BLOCK_DATES": "Fechas de bloqueo",
+      "FROM": "Del",
+      "TO": "Hasta",
+      "BLOCK": "Bloquear",
+      "CHOOSE_LIMIT": "Elige la fecha límite de bloqueo",
+      "MAX_DATE": "Máximo 8 días.",
+      "SELECT_DATE": "Seleccionar fecha"
+    },
+    "UNLOCK": {
+      "MESSAGE": "Puedes realizar 3 bloqueos en el mes por una duración máxima de 8 días.",
+      "LOST_CARD_MESSAGE": "Perdiste tu tarjeta o te la robaron?",
+      "LOST_CARD_BUTTON": "Bloquear por pérdida o robo"
+    },
+    "COMPLEMENTARY_SERVICES": {
+      "INFO": {
+        "TITLE": "¿Qué son los servicios complementarios?",
+        "SUBTITLE": "Son funcionalidades seguras que ponemos a tu disposición, con ellas puedes:",
+        "FEATURES": {
+          "FEATURE_1": "Autorizar transacciones",
+          "FEATURE_1_B": " de tu Banca Virtual.",
+          "FEATURE_2": "Transferir a cuentas no inscritas",
+          "FEATURE_2_B": " y entre celulares.",
+          "FEATURE_3": "Pagar servicios no inscritos y",
+          "FEATURE_3_B": " hacer compras con QR.",
+          "FEATURE_4": "Generar claves para",
+          "FEATURE_4_B": " hacer giros  y retiros.",
+          "FEATURE_5": "Pagar",
+          "FEATURE_5_B": " Impuestos y PILA",
+          "FEATURE_5_C": " (seguridad social)."
+        }
+      },
+      "QUESTION": {
+        "TITLE": "Activar servicios complementarios",
+        "SUBTITLE": "Para activarlos necesitarás pedir una clave de registro en oficina o cajero.",
+        "DESCRIPTION": "¿Ya tienes tu clave de registro?",
+        "YES_ACTION": "Sí, la tengo",
+        "NOT_ACTION": "No la tengo"
+      },
+      "OTP": {
+        "TITLE": "Ingresa la clave",
+        "SUBTITLE": "de 8 dígitos que te enviamos a tu celular."
+      }
+    }
+  },
+  "RECHARGES": {
+    "ACCOUNTS_STEP": {
+      "EXCEPTION_DESCRIPTION": "Te invitamos a abrir una cuenta desde nuestra Banca Virtual u oficina.",
+      "EXCEPTION_TITLE": "No tienes una cuenta de ahorros o corriente disponible",
+      "TITLE": "Elige la cuenta de origen"
+    },
+    "OPERATOR_STEP": {
+      "TITLE": "Selecciona el operador"
+    },
+    "PHONE_NUMBER_STEP": {
+      "TITLE": "Ingresa el número de celular",
+      "FIELD": "Número de celular"
+    },
+    "AMOUNT_STEP": {
+      "TITLE": "Ingresa el valor que vas a recargar",
+      "FIELD": "Valor de la recarga",
+      "DESCRIPTION": "El valor de la recarga debe ser mínimo de ${{ recharge_amount_min$ }} y máximo de ${{ recharge_amount_max$ }}. Usa múltiplos de ${{ recharge_amount_multiple$ }}."
+    },
+    "CONFIRMATION_STEP": {
+      "TITLE": "Vas a recargar"
+    },
+    "EXIT_ALERT": {
+      "TITLE": "¿Estás seguro salir y cancelar la recarga?"
+    },
+    "STEPS": {
+      "FROM": "Desde",
+      "CONFIRM": "Confirma",
+      "OPERATOR": "Operador",
+      "PHONE_NUMBER": "Número",
+      "VALUE": "Valor"
+    },
+    "TITLE": "Recargas"
+  },
+  "PFM": {
+    "PRODUCT_DETAIL_SUMMARY": {
+      "TITLE": "Tus movimientos de",
+      "DONUT_CHART": {
+        "EXPENSES": "Plata que salió",
+        "AVAILABLE_PURCHASE": "Disponible compras"
+      },
+      "BAR_CHART": {
+        "TOTAL_INCOMES": "Saldo total",
+        "INCOMES": "Plata que entró",
+        "PREVIOUS_BALANCE": "Saldo anterior",
+        "EXPENSES": "Plata que salió",
+        "OVERDRAFT": "Sobregiro",
+        "BALANCE": "Saldo"
+      }
+    },
+    "PRODUCT_DETAIL_MOVEMENT_LIST": {
+      "TOTAL_INCOMES": "Total plata que entró",
+      "TOTAL_EXPENSES": "Total plata que salió"
+    },
+    "INCOME": "ingreso",
+    "EXPENSE": "gasto",
+    "CHANGE_CATEGORY": {
+      "MODAL": {
+        "HEADER": "Cambiar de categoría",
+        "TITLE": "Selecciona una categoría para mover este",
+        "ACTION": "Mover a esta categoría"
+      },
+      "RESULT": {
+        "SUCCESS": "Cambiaste la transacción de categoría correctamente",
+        "ERROR": "No fue posible cambiar tu transacción de categoría. Intenta nuevamente"
+      }
+    }
+  },
+  "BLOCK_ACCOUNT": {
+    "INFO_TITLE": "¡Precaución bloqueo de cuenta!",
+    "INFO_INFORMATION": "Los medios de manejo asociados a esta cuenta (tarjetas y manillas) quedarán inactivos, no podrás hacer ningún tipo de movimiento desde medios digitales o físicos en oficinas o cajeros.",
+    "INFO_TEXT_1": "Transferencias,",
+    "INFO_TEXT_2": "Pagos,",
+    "INFO_TEXT_3": "Recargas,",
+    "INFO_TEXT_4": "Uso de bolsillos,",
+    "INFO_TEXT_5": "Todos los pagos automáticos asociados a esta cuenta se suspenderán.",
+    "INFO_ALERT": "Recuerda que puedes bloquear los medios de manejo, sin tener que bloquear toda la cuenta.",
+    "INFO_BTN_TEXT": "BLOQUEAR CUENTA",
+    "FORM_DDA_TEXT": "Cuenta corriente",
+    "FORM_SDA_TEXT": "Cuenta de ahorros",
+    "FORM_REASON_TEXT": "Elige el motivo del bloqueo",
+    "FORM_LOST_TEXT": "Pérdida de chequera",
+    "FORM_STOLE_TEXT": "Robo",
+    "FORM_BTN_TEXT": "Bloquear cuenta",
+    "FORM_MEDIA_LIST_TEXT": "Medios de manejo asociados a esta cuenta",
+    "FORM_MEDIA_LIST_TEXT_ERROR": "No tienes medios de manejo asociados a esta cuenta",
+    "BLOCK_ACCOUNT_CONFIRM_TITLE": "¿Estás seguro de bloquear tu cuenta?",
+    "BLOCK_ACCOUNT_CONFIRM_DESCRIPTION": "Solo podrá ser desbloqueada en una oficina del Banco AV Villas de forma presencial con tu documento de identidad.",
+    "BLOCK_ACCOUNT_CONFIRM_BTN_1": "Sí, bloquear",
+    "BLOCK_ACCOUNT_CONFIRM_BTN_2": "No, regresar",
+    "BLOCK_ACCOUNT_CONFIRM_WARN_TEXT": "Para desbloquear esta cuenta tendrás que asistir a una oficina del Banco AV Villas, con tu documento de identidad, recuerda que los medios de manejo asociados a esta cuenta quedarán inactivos mientras este bloqueada."
+  },
+  "CURRENCIES": {
+    "COP": "pesos",
+    "USD": "dólares",
+    "EUR": "euros"
+  },
+  "CANCEL_ACCOUNT": {
+    "ALERT_BALANCE_ERROR": {
+      "TITLE": "No es posible cancelar tu cuenta",
+      "DESCRIPTION": "Para hacerlo, tu saldo tiene que ser de máximo ${{ min_value_to_cancel_account$ }} peso."
+    },
+    "MODAL": {
+      "TITLE": "Cancelar cuenta",
+      "SUBTITLE": "¿Vas a cancelar esta cuenta?",
+      "DESCRIPTION": "Desaparecera del listado del tus productos, al igual que el histórico de movimientos, extractos y bolsillos vinculados.",
+      "DESCRIPTION_ALT": "Desaparecerá del listado de tus productos, <b>junto con la tarjeta Master Débito Digital que tienes asociada,</b> de igual forma el histórico de movimientos, extractos y bolsillos se eliminarán.",
+      "PANEL_INFO": "Recuerda que puedes abrir una nueva Cuenta o Depósito digital en el momento que quieras.",
+      "ACTION": "Sí, cancelar cuenta"
+    }
+  },
+  "REDIRECT_ALERT": {
+    "BUTTONS": {
+      "OK": "OK",
+      "CANCEL": "No, permanecer en la App"
+    },
+    "TITLE": "Vas a salir de la App",
+    "DESCRIPTION": "Seras redirigido a una pagina fuera de la app, por seguridad se cerrará tu sesión."
+  },
+  "REDIRECT_MAP": {
+    "BUTTONS": {
+      "OK": "CONTINUAR",
+      "CANCEL": "Cancelar"
+    },
+    "TITLE": "Serás redirigido al portal bancario para que puedas buscar en el mapa las oficinas, cajeros y corresponsales.",
+    "DESCRIPTION": " Por seguridad la sesión en tu AV Villas app se cerrará"
+  },
+  "REDIRECT_EXTERNAL_URL": {
+    "TITLE": "A continuación vas a salir de AV Villas App",
+    "DESCRIPTION": "Serás enviado al sitio web",
+    "BUTTONS": {
+      "OK": "Ir al sitio web"
+    }
+  },
+  "REDIRECT_REMITTANCES": {
+    "DESCRIPTION": "Has seleccionado tu cuenta exitosamente, ahora serás redirigido a una página externa de nuestro aliado Acciones y Valores y Western Union para terminar el proceso.",
+    "CONTINUE": "Continuar",
+    "CANCEL": "Cancelar"
+  },
+  "SUPPORT": {
+    "TITLE": "Ayuda",
+    "DESCRIPTION": "Encuentra aquí toda la información referente al funcionamiento, condiciones y experiencia de cada servicio en tu banco AV Villas.",
+    "LABEL_INPUT_SEARCH": "Buscar"
+  },
+  "WALLETS": {
+    "GENERAL_ERROR": "En este momento no podemos continuar con la transacción, por favor intenta más tarde.",
+    "PROVISIONING": {
+      "PROVISIONING_ERROR": "En este momento no podemos continuar con la transacción, por favor intenta más tarde."
+    },
+    "TERMS_AND_CONDITIONS": {
+      "TEXT1": "Acepto",
+      "TEXT2": "términos y condiciones"
+    },
+    "CARD_TYPE_DEBIT": "Débito",
+    "CARD_TYPE_CREDIT": "Crédito",
+    "HOME": {
+      "HEADER": "Agregar tarjeta",
+      "TITLE": "Selecciona tu tarjeta",
+      "LOGO_CARD_ALT": "Logotipo de la franquicia de la tarjeta",
+      "EMPTY": {
+        "TITLE": "Aún no tienes tarjetas para agregar",
+        "DESCRIPTION": "Abre una cuenta de ahorros, envía dinero fácil y sin complicaciones a cuentas Aval o de otros bancos.",
+        "ACTION": "Abrela aquí"
+      }
+    },
+    "APPLE_PAY": {
+      "START_WALLET_ALERT_MODAL": {
+        "TITLE": "Paga con tus tarjetas usando tu celular",
+        "ICON_LIST": {
+          "ITEM1": "<b>Compra sin contacto</b><br/> Acerca tu IPhone o Apple Watch al datáfono y listo. No más tarjetas ni efectivo.",
+          "ITEM2": "<b>Seguridad y privacidad</b><br/> Solo tú puedes confirmar cualquier compra usando tu Face ID o Touch ID"
+        },
+        "ACTION_BUTTON": "Configurar",
+        "ACTION_BUTTON_EXTEND": "Pay"
+      },
+      "HOME": {
+        "CARD_ACTION_LABEL": "Agregar a Apple Wallet",
+        "STATUS_CARD_PROVISIONED": "Agregado en Apple Wallet",
+        "CONTINUE_PROCESS_ALERT": {
+          "TITLE": "Continúa tu proceso en Apple Pay",
+          "DESCRIPTION": "Serás enviado a Apple Pay para continuar tu proceso y agregar tu tarjeta"
+        }
+      },
+      "CONTINUE_PROCESS_WALLET": {
+        "TITLE": "Continúa tu proceso en Apple Pay",
+        "DESCRIPTION": "Serás enviado a Apple Pay para continuar con tu proceso y agregar tu tarjeta"
+      },
+      "PUSH_PROCESS": {
+        "TITLE_ERROR": "El proceso no pudo continuar",
+        "APPLE_PAY_STATUS_ERROR": "En este momento no podemos continuar con la transacción, por favor intenta más tarde.",
+        "CANNOT_PUSH_CARD_TO_APPLE_PAY": "En este momento no podemos digitalizar la tarjeta, por favor intenta más tarde.",
+        "PUSH_CARD_ERROR": "En este momento no podemos digitalizar la tarjeta, por favor intenta más tarde.",
+        "PUSH_CARD_SUCCESS": "La tarjeta se digitalizó exitosamente."
+      }
+    },
+    "GOOGLE_PAY": {
+      "START_WALLET_ALERT_MODAL": {
+        "TITLE": "Paga con tus tarjetas usando solo tu celular",
+        "ICON_LIST": {
+          "ITEM1": "<b>Compra sin contacto</b><br/> Acerca tu IPhone o Apple Watch al datáfono y listo. No más tarjetas ni efectivo.",
+          "ITEM2": "<b>Seguridad y privacidad</b><br/> Solo tú puedes confirmar cualquier compra usando el reconocimiento facial o huella.",
+          "ITEM3": "<b>Paga fácil y rápido</b><br/> Paga en comercios online y datáfonos que soporten Google pay."
+        },
+        "ACTION_BUTTON": "Añadir a Google Wallet",
+        "ACTION_BUTTON_EXTEND": "Pay"
+      },
+      "HOME": {
+        "ACTION_LABEL": "Agregar a Google Wallet",
+        "STATUS_CARD_PROVISIONED": "Agregada a Google Pay",
+        "CONTINUE_PROCESS_ALERT": {
+          "TITLE": "Continúa tu proceso en la billetera de Google",
+          "DESCRIPTION": "Serás enviado a Google Wallet para continuar con tu proceso y a agregar tu tarjeta"
+        }
+      }
+    },
+    "ACTIVATE_TOKEN": {
+      "ONBOARDING": {
+        "TITLE": "Finaliza tu vinculación",
+        "DESCRIPTION": "Ingresa a la aplicación de Banca móvil para terminar el proceso de vinculación de tu Tarjeta"
+      },
+      "SUCCESS": {
+        "TITLE": "¡Listo!",
+        "DESCRIPTION": "Ya puedes comenzar a pagar con Apple Pay usando tu dispositivo.",
+        "BUTTON": "CERRAR"
+      },
+      "ERROR": {
+        "TITLE": "Lo sentimos",
+        "DESCRIPTION": "En este momento no podemos continuar con tu ingreso, por favor inténtalo de nuevo",
+        "BUTTON": "CERRAR"
+      }
+    },
+    "WALLET_PRODUCT_DETAIL_PANEL": {
+      "APPLE_WALLET": {
+        "TITLE": "Agregar a Apple Wallet"
+      },
+      "GOOGLE_WALLET": {
+        "TITLE": "Añadir a Google Wallet"
+      }
+    }
+  },
+  "BARCODE_SCANNER": {
+    "ERRORS": {
+      "BARCODE_ERROR": "Error escaneando código",
+      "BARCODE_ERROR_PERMISSION": "Los permisos de cámara no fueron concedidos correctamente, debes concederlos desde la configuración de tu celular"
+    }
+  },
+  "VIRTUAL_CREDIT_CARD": {
+    "PANEL": {
+      "SINGLE": {
+        "CONTENT_TITLE": "Tarjeta Crédito Virtual",
+        "CONTENT_ACTION": "Ver datos de la tarjeta"
+      },
+      "MULTIPLE": {
+        "CONTENT_TITLE": "Tarjetas Crédito Virtual",
+        "CONTENT_ACTION": "Ver mis tarjetas"
+      },
+      "LINK_ACTION": "Activar otra Tarjeta Crédito Virtual",
+      "MODAL": {
+        "TITLE": "Tarjetas Crédito Virtual",
+        "CARD": {
+          "TITLE": "Crédito Virtual",
+          "ACTION": "Ver datos de la tarjeta",
+          "TEMPORARY_BLOCKED": "Bloqueada temporalmente"
+        }
+      }
+    },
+    "ACTIVATE": {
+      "HEADER_TITLE": "Activar tarjeta",
+      "STEPS": {
+        "FROM": "Producto",
+        "INFO": "Información",
+        "CONFIG": "Cupo"
+      },
+      "INFO": {
+        "TITLE": "Activa tu Tarjeta Crédito Virtual en un solo paso",
+        "DESCRIPTION": "La tarjeta 100% Virtual",
+        "LIST_1": "Cuota de manejo $0",
+        "LIST_2": "Pagas tus compras por internet de manera práctica y segura",
+        "LIST_3": "Podrás ver tu tarjeta de crédito Virtual desde tú AV Villas App o Banca Virtual.",
+        "LIST_4": "Acumulas puntos tuplús",
+        "LIST_5": "Administra tus cupos ",
+        "ACTION": "Activar tarjeta",
+        "LINK": "Preguntas Frecuentes"
+      },
+      "CONFIG": {
+        "TITLE": "Configurar Tarjeta Crédito Virtual",
+        "DESCRIPTION": "Puedes asignar un límite de uso para esta Tarjeta, podrás cambiarlo de acuerdo a tus necesidades.",
+        "CUSTOM": "Personalización",
+        "CUSTOM_FIELD": "Nombra tu tarjeta",
+        "CUSTOM_BOTTOM": "Es útil para encontrarla fácilmente",
+        "AMOUNT_FIELD": "¿Qué cupo vas a asignar?",
+        "AMOUNT_BOTTOM": "Puedes asignar un tope para hacer compras"
+      },
+      "CONFIRM": {
+        "TITLE": "Cupo asignado",
+        "DESCRIPTION": "Por favor, confirma el cupo asignado a tu Tarjeta de Crédito Virtual y ajusta según tus preferencias.",
+        "ACTION": "Activar tarjeta",
+        "LINK": "Cambiar cupo"
+      },
+      "FORM": {
+        "TITLE": "Vas a activar tu {{name}}"
+      },
+      "PASSWORD": {
+        "TITLE": "Asigna la contraseña <br> para tu {{cardFranchise}} No. {{cardId}}",
+        "DESCRIPTION": "Crea la clave para retirar en cajeros y oficinas",
+        "CONFIRM_PASSWORD": "Confirma la contraseña",
+        "NEW_PASSWORD": "Contraseña",
+        "CONTINUE": " Crear contraseña"
+      },
+      "SUCCESS_RESPONSE": "¡Tu Tarjeta Crédito Virtual fue activada con éxito! Recuerda puedes activar máximo {{max_cards}} tarjetas, te quedan {{remaining_cards}}."
+    },
+    "FREQUENT_QUESTIONS": {
+      "HEADER_TITLE": "Preguntas frecuentes"
+    },
+    "USE": {
+      "TITLE": "Tarjeta de Crédito Virtual",
+      "SUBTITLE": "Con AV Villas tienes la posibilidad de tener una Tarjeta de Crédito Virtual desde tus Tarjetas de Crédito físicas.",
+      "SUBTITLE_2": "Realiza todo el proceso en línea.",
+      "DESCRIPTION": {
+        "ITEM_1": "Selecciona la Tarjeta con la que quieres compartir el cupo para tu Tarjeta de Crédito Virtual.",
+        "ITEM_2": "Y listo tú Tarjeta de Crédito Virtual quedará activa inmediatamente, para realizar compras por internet."
+      },
+      "MESSAGE": "Para consultar los movimientos de tu Tarjeta Débito Digital, ingresa a tu Banca Virtual o AV Villas App, opción detalle de la cuenta."
+    },
+    "DETAIL": {
+      "TITLE": "Tarjeta Crédito Virtual",
+      "DATE": "Fecha de vencimiento",
+      "CVC": "CVC",
+      "USE": "¿Cómo funciona mi tarjeta?",
+      "QUESTIONS": "Preguntas frecuentes",
+      "MAX_AMOUNT": "Cupo total",
+      "CARDS_QUANTITY": "Cantidad de tarjetas",
+      "ACTIONS_TITLE": "Estas son las opciones de tu tarjeta"
+    },
+    "EDIT": {
+      "HEADER_TITLE": "Editar tarjeta",
+      "TITLE": "Editar tu tarjeta",
+      "CUSTOM": "Personalización",
+      "CUSTOM_FIELD": "Nombre de tu tarjeta",
+      "CUSTOM_BOTTOM": "Es útil para encontrarla fácilmente",
+      "AMOUNT_FIELD": "Monto máximo de compras",
+      "AMOUNT_BOTTOM": "Puedes asignar un tope para hacer compras",
+      "EDIT_SUCCESS": "Los cambios se guardaron con éxito."
+    },
+    "CANCEL": {
+      "HEADER_TITLE": "Cancelación tarjeta",
+      "TITLE": "Cancelar Tarjeta Crédito Virtual",
+      "DESCRIPTION_1": "Recuerda que",
+      "DESCRIPTION_2": "puedes adquirir una nueva Tarjeta Crédito Virtual en el momento que quieras",
+      "DESCRIPTION_3": "y su activación será inmediata.",
+      "APPROVAL": "No. de aprobación",
+      "LIST_1": "Esta tarjeta y su número se cancelan, si la inscribiste en un servicio  como Netflix, Spotify u otros, los pagos automáticos quedarán anulados.",
+      "CANCEL_BTN": "Cancelar tarjeta",
+      "CANCEL_SUCCESS": "La cancelación de tu tarjeta fue exitosa"
+    },
+    "REISSUE": {
+      "HEADER_TITLE": "Reexpedir tarjeta",
+      "TITLE": "Reexpedición Tarjeta Crédito Virtual",
+      "DESCRIPTION": "Se genera una <b>nueva Tarjeta Crédito Virtual</b> con un nuevo número para realizar compras",
+      "LIST_1": "Es un proceso inmediato, tu nueva tarjeta queda activa.",
+      "LIST_2": "Esta reexpedición de tarjeta tiene un costo de $0.",
+      "LIST_3": "Tu anterior tarjeta y su número se cancelan, si la inscribiste en un servicio prepago como Netflix, Spotify u otros, los pagos automáticos quedarán anulados.",
+      "REISSUE_BTN": "Reexpedir Tarjeta"
+    },
+    "REISSUE_SUCCESS": {
+      "HEADER_TITLE": "Reexpedir tarjeta",
+      "TOAST": "¡tu tarjeta fue reexpedida con éxito!",
+      "TITLE": "Ya puedes utilizar tu nueva Tarjeta Crédito Virtual",
+      "INFO": "Esta tarjeta es nueva y su número es diferente a la anterior.",
+      "DATE": "Fecha"
+    },
+    "ALERT": {
+      "TITLE": "Te presentamos la nueva Tarjeta Débito Digital Mastercard",
+      "DESCRIPTION": "Pide tu Tarjeta Débito Digital SIN COSTO para que disfrutes de todos sus beneficios al comprar por internet sin tener una Tarjeta en tu mano."
+    },
+    "RESPONSE": {
+      "ERROR_DETAIL": {
+        "TITLE": "No es posible ver el detalle de la tarjeta"
+      },
+      "ERROR_CREATE": {
+        "TITLE": "No fue posible activar tu Tarjeta Crédito Virtual"
+      },
+      "ERROR_EDIT": {
+        "TITLE": "No fue posible editar tu Tarjeta Crédito Virtual"
+      },
+      "ERROR_CANCEL": {
+        "TITLE": "No fue posible cancelar tu Tarjeta"
+      },
+      "ERROR_REISSUE": {
+        "TITLE": "No fue posible reexpedir tu Tarjeta Crédito Virtual"
+      }
+    }
+  },
+  "BLOCK_CARD_TEMPORARILY": {
+    "HEADER_TITLE": "Bloquear temporalmente",
+    "MODAL_BLOCK": {
+      "TITLE": "¿Quieres bloquear temporalmente tu tarjeta?",
+      "DESCRIPTION": "Desbloquea la tarjeta cuando quieras. Recuerda que las transacciones quedarán bloqueadas hasta que sea reactivada. Ten en cuenta que esto no te exime de cumplir con tus obligaciones, como los pagos, etc.",
+      "CONFIRM_BUTTON_TEXT": "Continuar",
+      "CANCEL_BUTTON_TEXT": "Cancelar"
+    },
+    "MODAL_UNBLOCK": {
+      "TITLE": "¿Quieres desbloquear tu tarjeta?",
+      "DESCRIPTION": "Al desbloquear tu tarjeta las transacciones como compras o avances estarán habilitadas nuevamente.",
+      "CONFIRM_BUTTON_TEXT": "Desbloquear",
+      "CANCEL_BUTTON_TEXT": "Cancelar"
+    },
+    "FROM": {
+      "TITLE": "Selecciona el producto que quieres bloquear temporalmente o desbloquear."
+    },
+    "DATE": {
+      "TITLE": "Puedes bloquear temporalmente tu tarjeta máximo 3 veces en el mes por una duración máxima de 8 días.",
+      "INPUT_LABEL": "Elige la fecha limite de bloqueo",
+      "INPUT_PLACEHOLDER": "Bloquear hasta"
+    },
+    "CONFIRMATION": {
+      "WARNING_MESSAGE": "Una vez se cumpla el periodo, tu tarjeta quedará activa automáticamente, también puedes desbloquearla cuando quieras."
+    },
+    "SUCCESS": {
+      "TITLE": "<b>Bloqueo temporal exitoso</b><br/>Tu tarjeta se bloqueó temporalmente de manera correcta, puedes desbloquearla cuando quieras.",
+      "TITLE_UNBLOCK": "<b>Desbloqueo exitoso</b><br/>Tu tarjeta se desbloqueó de manera correcta."
+    }
+  },
+  "CUSTOMIZE_AVAL_TAG": {
+    "HEADER_TITLE": "Personalización Tag Aval",
+    "ALERT_INFO": {
+      "TITLE": "¿Quieres personalizar tu Tag Aval?",
+      "DESCRIPTION": "Hazlo si quieres que sea de más fácil recordación y compártelo con tus contactos para recibir dinero 24x7 de forma inmediata y sin costo. <br/><br/> Si personalizas tu <b>Tag Aval</b>, tu Tag anterior queda libre y podrá ser usado por otra persona."
+    },
+    "TITLE": "Modifica el nombre de tu Tag Aval",
+    "INPUT_LABEL": "Nombre del Tag Aval",
+    "RECOMMENDATIONS": {
+      "TITLE": "Recomendaciones para tu Tag Aval:",
+      "ITEM_1": "Que sea corto para fácil recordación.",
+      "ITEM_2": "Usar una combinación entre letras y números que puedas recordar fácilmente.",
+      "ITEM_3": "Tu llave solo permite máximo (15) caracteres para personalización.",
+      "ITEM_4": "No uses nombres de comercios o uses nombres de marcas restringidas o registradas",
+      "ITEM_5": "No utilices la información confidencial",
+      "ITEM_6": "Lee los términos y condiciones"
+    },
+    "VALIDATIONS_MESSAGES": {
+      "MESSAGE_1": "No debe incluir puntos ni caracteres especiales.",
+      "MESSAGE_2": "Entre 5 a 15 caracteres.",
+      "MESSAGE_3": "No incluir espacios ni tildes."
+    },
+    "MODAL_CONFIRM": {
+      "CONFIRM": "Ir a Bre-B",
+      "TITLE": "Personalizaste tu Tag Aval",
+      "MESSAGE": "Ten en cuenta que para recibir dinero con este nuevo Tag lo debes registrar en la sección de Bre-B"
+    },
+    "RESPONSE": {
+      "SUCCESS": {
+        "MESSAGE": "<b>¡Listo! Personalizaste tu Tag Aval con éxito</b><br/> Tu nuevo Tag Aval es"
+      },
+      "ERROR": {
+        "TITLE": "No fue posible modificar tu Tag Aval"
+      },
+      "MODAL_ERROR": {
+        "TITLE": "El nombre del Tag que ingresaste ya existe",
+        "MESSAGE": "Intenta con otro nombre.",
+        "CONFIRM_BUTTON_TEXT": "Ingresar otro nombre"
+      }
+    },
+    "EDIT_SELECT": {
+      "TITLE": "Registra tu Tag Aval o llave alfanumérica en Bre-B",
+      "SUBTITLE": "Selecciona la llave que quieres registrar",
+      "USER_SELECTED_TAG": "Tag Aval",
+      "HINT": "A tu medida",
+      "RANDOM_KEY": "Tag Aval o llave alfanumérica aleatoria",
+      "ACCOUNT_TITLE": "Tu llave será asociada a la cuenta",
+      "ACTIONS": {
+        "CONTINUE": "Continuar",
+        "CANCEL": "Cancelar"
+      }
+    },
+    "TRANSACTION_RESULT": {
+      "TITLE": "¡Hecho! Registraste tu llave correctamente",
+      "SUBTITLE": "Pronto podrás transferir con Bre-B, gratis y al instante. Por ahora, envía y recibe desde las opciones que ya conoces."
+    },
+    "TRANSACTION_FAILED": {
+      "TITLE": "¡Lo sentimos! No se pudo modificar tu llave"
+    }
+  },
+  "PRODUCT_ACTIONS": {
+    "TITLE": "Opciones de tu tarjeta",
+    "TITLE_ACCOUNTS": "Opciones de tu cuenta"
+  },
+  "DIGITAL_HOUSING": {
+    "EXIT_ALERT": {
+      "BUTTON": "Salir del proceso",
+      "TITLE": "¿Estás seguro que deseas abandonar la solicitud de tu Crédito de Vivienda?",
+      "DESCRIPTION": "Recuerda que si deseas abandonar la solicitud se perderán los datos ingresados y tendrás que comenzar de nuevo.",
+      "BUTTON_OK": "No, volver",
+      "BUTTON_CANCEL": "Si, abandonar"
+    }
+  },
+  "CREDIT_CARD": {
+    "EXIT_ALERT": {
+      "BUTTON": "Salir del proceso",
+      "TITLE": "¿Estás seguro que deseas abandonar la solicitud de tu Tarjeta de Crédito?",
+      "DESCRIPTION": "Recuerda que si deseas abandonar la solicitud se perderán los datos ingresados y tendrás que comenzar de nuevo.",
+      "BUTTON_OK": "No, volver",
+      "BUTTON_CANCEL": "Si, abandonar"
+    }
+  },
+  "PERSONAL_LOAN": {
+    "EXIT_ALERT": {
+      "BUTTON": "Salir del proceso",
+      "TITLE": "¿Estás seguro que deseas abandonar la solicitud de tu Crédito de Libre Inversión?",
+      "DESCRIPTION": "Recuerda que si deseas abandonar la solicitud se perderán los datos ingresados y tendrás que comenzar de nuevo.",
+      "BUTTON_OK": "No, volver",
+      "BUTTON_CANCEL": "Si, abandonar"
+    }
+  },
+  "POCKET_WITH_RETURNS": {
+    "CONFIRMATION": {
+      "PERIOD": {
+        "BIWEEKLY": "Tus cuotas serán bloqueadas los días 15 y 30 de cada mes.",
+        "MONTHLY": "Tus cuotas serán bloqueadas el primer día de cada mes.",
+        "WEEKLY": "Tus cuotas serán bloqueadas todos los lunes de cada semana."
+      },
+      "ACCEPT": "Aceptar",
+      "TERMS_AND_CONDITIONS": "términos y condiciones",
+      "CREATE_POCKET": "Crear bolsillo"
+    },
+    "POCKET_DETAIL": {
+      "BLOCKED_MONEY_ADVISE": "¡Recuerda! Si retiras tu dinero ahora, no ganaras la rentabilidad esperada.",
+      "ACTIVE_SAVINGS": "Bolsillo activo",
+      "AUTO_RENEWAL": "Renovar automáticamente (Capital)",
+      "AUTO_RATES": "Renovar intereses (Capital + Intereses)",
+      "SAVED_MONEY": "Plata ahorrada:",
+      "TABS": {
+        "POCKET_DETAIL": "Detalle del bolsillo",
+        "MOVEMENTS_TITLE": "Movimientos"
+      },
+      "CARD": {
+        "PUASE_POCKET_MESSAGE": "Tu bolsillo está pausado. Activa tu bolsillo para continuar con tu ahorro.",
+        "POCKET_RENEWAL_MESSAGE": "Para renovar tu bolsillo puedes hacerlo hasta dos días antes de la fecha de vencimiento.",
+        "START_DATE": "Fecha de inicio",
+        "SAVINGS_GOAL": "Meta de ahorro",
+        "ORIGIN_ACCOUNT": "Cuenta de origen",
+        "QUOTA": "Valor cuota periódica",
+        "INTEREST": "Intereses a hoy*",
+        "PERIODICITY": "Periodicidad",
+        "PENDING_INSTALMENTS": "Cuotas pendientes",
+        "DEADLINE": "Plazo",
+        "CURRENT_RATES": "Consulta las tasas mensuales vigentes",
+        "CURRENT_RATES_PRM": "Consulta las tasas",
+        "DEADLINE_IN_DAYS": "días",
+        "ADVICE": "El valor de la cuota será bloqueado de la cuenta el 15 y 30 de cada mes. <br><br>* Intereses a la fecha, recuerda se abonarán únicamente al cumplimiento del plazo de permanencia.",
+        "ADVICE_PRM": "Tu cuenta gana y recibe intereses diarios. Los intereses aquí mostrados corresponden a los adicionales por tu Bolsillo y se abonan al cumplimiento del plazo de permanencia."
+      },
+      "MOVEMENTS": {
+        "TITLE": "Consulta tus movimientos hasta 3 meses atrás.",
+        "FILTERS": {
+          "ALL": "Ver todo",
+          "INCOMING_MONEY": "Plata qué entró",
+          "WIDTHDRAW_MONEY": "Plata qué salió"
+        }
+      },
+      "WITHOUT_MOVEMENTS": {
+        "TITLE": "No hay movimientos para este rango de tiempo",
+        "DESCRIPTION": "Aquí podrás ver las transferencias que hagas desde tu bolsillo a otros bolsillos o tu cuenta."
+      },
+      "EMPTY": {
+        "TITLE": "No es posible mostrar el detalle de tu bolsillo",
+        "DESCRIPTION": ""
+      },
+      "TOAST": {
+        "RENEW_AUTOMATICALLY": {
+          "ACTIVE": "La renovación de capital quedó activada",
+          "PAUSED": "La renovación de capital y de intereses de tu bolsillo quedó desactivada"
+        },
+        "RENEW_PROFIT": {
+          "ACTIVE": "La renovación de los intereses de tu bolsillo quedó activada",
+          "PAUSED": "La renovación de los intereses de tu bolsillo quedó desactivada"
+        }
+      },
+      "ALERTS": {
+        "ERROR": {
+          "RENEW_PROFIT": {
+            "ACTIVATE": "No fue posible activar la renovación de los intereses",
+            "PAUSED": "No fue posible desactivar la renovación de los intereses"
+          },
+          "RENEW_AUTOMATICALLY": {
+            "ACTIVATE": "No fue posible activar la renovación de capital",
+            "PAUSED": "No fue posible desactivar la renovación de capital"
+          }
+        },
+        "STATUS": {
+          "ACTIVATE": {
+            "TITLE": "¿Estas seguro de activar tu bolsillo?",
+            "DESCRIPTION": "Recuerda la cuota establecida será debitada de nuevo",
+            "BUTTON": "Activar Bolsillo",
+            "BUTTON_CANCEL": "Mantener pausado"
+          },
+          "PAUSE": {
+            "TITLE": "¿Estas seguro de pausar tu bolsillo?",
+            "DESCRIPTION": "Recuerda que no se bloqueará dinero de tu cuenta desde ahora.",
+            "BUTTON": "SI, PAUSAR",
+            "BUTTON_CANCEL": "Mantener activo"
+          }
+        },
+        "AUTO_RENEW": {
+          "ACTIVATE": {
+            "DESCRIPTION": "Vas a reinvertir la plata ahorrada de tu bolsillo, y no incluye los intereses ganados.",
+            "BUTTON": "aceptar"
+          },
+          "PAUSE": {
+            "DESCRIPTION": "Vas a desactivar la renovación automática tanto de capital como de intereses.",
+            "BUTTON": "aceptar"
+          }
+        },
+        "AUTO_RATES": {
+          "ACTIVATE": {
+            "DESCRIPTION": "Vas a reinvertir la plata ahorrada más los intereses de tu bolsillo.",
+            "BUTTON": "aceptar"
+          },
+          "PAUSE": {
+            "DESCRIPTION": "Vas a desactivar tu inversión, ya no se renovará automáticamente la inversión de tú capital, ni los interesés.",
+            "BUTTON": "aceptar"
+          }
+        },
+        "DELETE": {
+          "TITLE": "Vas a eliminar tu bolsillo",
+          "DESCRIPTION": "<b>Si eliminas el bolsillo</b> sin cumplir el plazo pactado, <b>no ganarás la rentabilidad adicional</b> y la plata quedará disponible en tu Cuenta de Ahorros.",
+          "BUTTON": "Eliminar bolsillo",
+          "BUTTON_CANCEL": "Cancelar"
+        }
+      }
+    },
+    "OPEN_AMOUNT": "Aporte inicial",
+    "AUTOMATIC_QUOTA_RENEWAL": "Renovar automáticamente",
+    "RENEW_PROFIT_WITH_GAINS": "Renovar intereses generados",
+    "TITLE": "Bolsillos",
+    "CREATE": {
+      "FROM_STEP": {
+        "TITLE": "Crea un bolsillo con rentabilidad"
+      },
+      "STEPS": {
+        "CUSTOMIZATION": "Personalización",
+        "CONFIGURATION": "Configuración",
+        "CONFIRMATION": "Confirmación"
+      },
+      "FIELDS": {
+        "PRODUCT": "Producto",
+        "ORIGIN_ACCOUNT": "Cuenta de origen",
+        "PERIODICITY": "Periodicidad débito de la cuota",
+        "FEE_VALUE_FOR_GOAL": "Valor de la cuota para llegar a tu meta",
+        "RENEWAL_QUESTION": "¿Quieres que el Bolsillo se renueve automáticamente con el dinero ahorrado?",
+        "RENEWAL_WITH_GAINS_QUESTION": "¿Quieres que los intereses generados se renueven junto con el bolsillo?",
+        "RATE_TIP_DETAIL": "Consulta las tasas de interés de acuerdo con el plazo de permanencia y al saldo de tu Bolsillo.",
+        "DAILY_RATE_TIP": "En el detalle de tu Bolsillo puedes consultar los intereses acumulados a la fecha, los cuales recibirás si cumples con el plazo pactado.",
+        "CURRENT_MONTHLY_RATES": "Consulta las tasas mensuales vigentes",
+        "HINTS": {
+          "ACCOUNT_MOUNT_WILL_BE_BLOCKED": "El valor de la cuota será bloqueado de esta cuenta"
+        }
+      },
+      "CONTINUE": "Continuar",
+      "TITLE": "Bolsillo con rentabilidad",
+      "DESCRIPTION": "Crea un bolsillo para ahorrar y gana un  interés mayor, a partir de un plazo de permanencia mínimo que definas.",
+      "BUTTON": "Crea un bolsillo",
+      "CREATE_TITLE": "Vas a crear tu bolsillo",
+      "SUCCESSFUL_RESPONSE": "¡Tu bolsillo fue creado con éxito!"
+    },
+    "CONFIGURATION": {
+      "TITLE": "Configura tu bolsillo con rentabilidad",
+      "POCKET_NAME": "Nombre del bolsillo",
+      "INITIAL_CONTRIBUTION": "Valor inversión",
+      "MIN_OPEN_AMOUNT_VALUE": "Valor mínimo $500.000",
+      "DUE_DATE": "Plazo de tu inversión desde 31 días",
+      "GOAL": "Meta de ahorro",
+      "CATEGORY": "Categoría",
+      "ORIGIN_ACCOUNT": "Cuenta de origen",
+      "PERIODICITY": "Periodicidad",
+      "DEADLINE": "Plazo",
+      "RENEW_POCKET": "Renovar automáticamente",
+      "RENEW_PROFIT": "Renovar intereses generados",
+      "QUOTA": "Valor de tu cuota"
+    },
+    "DELETE": {
+      "TITLE": "Vas a eliminar tu bolsillo",
+      "DESCRIPTION": "Recuerda que al no cumplir el plazo pactado, <b> no ganarás los intereses adicionales del bolsillo</b> y la plata se moverá a tu Cuenta de Ahorros.",
+      "BUTTON": "Eliminar bolsillo",
+      "BUTTON_CANCEL": "Cancelar"
+    },
+    "EDIT_POCKET": {
+      "HEADER_TITLE": "Modificar bolsillo",
+      "TITLE": "Vas a modificar tu bolsillo",
+      "MODIFY_STEP": {
+        "POCKET_NAME": "Nombre del bolsillo",
+        "CATEGORY": "Categoría",
+        "GOAL": "Meta de ahorro",
+        "PERIOD_INSTALLMENTS": "Periodicidad débito de la cuota",
+        "CARD": {
+          "DESCRIPTION": "Valor de la cuota para llegar a tu meta",
+          "QUOTA": "Número de cuotas:"
+        },
+        "BUTTON": "Continuar",
+        "CANCEL_BUTTON": "Cancelar"
+      },
+      "CONFIRMATION_STEP": {
+        "TITLE": "Vas a modificar tu bolsillo",
+        "FIELDS": {
+          "POCKET_NAME": "Nombre del bolsillo",
+          "CATEGORY": "Categoría",
+          "GOAL": "Meta de ahorro",
+          "PERIOD": "Periodicidad",
+          "QUOTA_AMOUNT": "Valor cuota mensual",
+          "QUOTA": "Número de cuotas"
+        },
+        "BUTTON": "Guardar cambios",
+        "CANCEL_BUTTON": "Cancelar"
+      }
+    }
+  },
+  "PUSH_NOTIFICATIONS": {
+    "ALERT_MESSAGE": "{{nicknameTransaction}} desde {{nicknameAccount}} No. <b>{{accountNumber}}</b> por valor de <b>{{amount}}</b><br><br><small>{{date}}</small>",
+    "APPROVAL": {
+      "ALERT_ERROR": {
+        "TITLE": "Lo sentimos algo ha pasado",
+        "MOBILE_DESCRIPTION": "No podemos completar el proceso en este momento, pero puedes hacer la autorización de tu transacción ingresando a la sección de notificaciones en el menú superior",
+        "WEB_DESCRIPTION": "No podemos completar el proceso en este momento, pero puedes hacer la autorización de tu transacción por medio del código QR",
+        "ACTIONS": {
+          "BUTTON": "CONTINUAR",
+          "BUTTON_CANCEL": "CANCELAR"
+        }
+      }
+    }
+  },
+  "BRE_B": {
+    "VIEW_MORE_KEYS": "Ver más llaves",
+    "UNREGISTERED_KEYS": "Tienes {{keys}} llaves por registrar",
+    "UNREGISTERED_KEY": "Registra tu Tag Aval",
+    "REGISTER_KEY": "Registrar Llave",
+    "POPOVER": {
+      "WHAT_IS_TAG_TITLE": "¿Qué es Bre-B?",
+      "BRE_B_DESCRIPTION": "Es tu Llave principal por la cual puedes hacer transferencias al instante."
+    }
+  },
+  "GMF": {
+    "VALUE": "<small class=\"small-opaque\">+ {{value}} del 4x1000 </small>",
+    "INSUFFICIENT_FUNDS": "No es posible realizar el pago, revisa tu saldo. Recuerda el cobro del impuesto 4x1000."
+  },
+  "MF_FALLBACK": {
+    "TITLE": "{{siteName}} no está disponible en este momento",
+    "TITLE_GENERIC": "Lo sentimos, estamos tardando en cargar la información.",
+    "SUBTITLE": "Inténtalo más tarde.",
+    "SUBTITLE_GENERIC": "Pero puedes consultar la oferta de productos en nuestro sitio web o inténtarlo más tarde.",
+    "ACTIONS": {
+      "RETRY": "Reintentar",
+      "GO_HOME": "Volver a inicio",
+      "GO_TO_SITE": "Ir al  sitio web",
+      "GO_BACK": "Volver"
+    }
+  }
+}

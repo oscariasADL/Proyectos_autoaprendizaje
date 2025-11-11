@@ -1,0 +1,84 @@
+<div class="content-search-services">
+    <p class="avv-generic-step-description">
+        {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.TITLE' | translate }}
+    </p>
+    <form
+        id="search-category"
+        (submit)="search(searchControl.value)">
+        <avv-input
+            type="text"
+            [id]="'input-register-payment-service-search'"
+            [keepIcon]="true"
+            [icon]="'icon-lupa_search'"
+            [label]="'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.SEARCH_SERVICE' | translate"
+            [control]="searchControl">
+        </avv-input>
+        <button
+            *ngIf="!working && ((completed$ | async) === null || !!(completed$ | async))"
+            type="submit"
+            [disabled]="!searchControl.valid || working"
+            class="avv-btn-secondary sm btn-continue"
+            id="search-services-btn">
+            {{ 'ACTIONS.SEARCH' | translate | uppercase }}
+        </button>
+    </form>
+    <div class="services-list">
+        <div
+            *ngIf="working; else ((completed$ | async) || (list$ | async).length > 0) ? content : errorContent"
+            class="contacts-loading">
+            <div *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+                <ion-skeleton-text
+                    animated
+                    class="avv-skeleton"></ion-skeleton-text>
+            </div>
+        </div>
+        <ng-template #content>
+            <div
+                *ngIf="(list$ | async).length > 0; else notFound"
+                class="services-list-content">
+                <p class="avv-generic-step-description info">
+                    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.CHOOSE_SERVICE' | translate }}
+                </p>
+                <div class="services-list-content-categories">
+                    <div
+                        *ngFor="let list of list$ | async; index as i"
+                        (click)="this.selectCategory.emit(list)"
+                        class="avv-contact-card item">
+                        <div class="contact-info item-info">
+                            <h6 class="name">{{ list.name | titlecase }}</h6>
+                            <p class="nickname">{{ list.description }}</p>
+                        </div>
+                        <span class="contact-icon icon-next"></span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #notFound>
+            <div class="avv-alert-error">
+                <i class="avv-alert-icon icon-alerta"></i>
+                <div class="avv-alert-text">
+                    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.NOT_FOUND' | translate }}
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #errorContent>
+            <div
+                *ngIf="(completed$ | async) !== null"
+                class="services-list-error">
+                <img
+                    [src]="'errorde-carga.svg' | imageUrl"
+                    alt>
+                <p class="description">
+                    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.PROBLEMS' | translate }}
+                </p>
+                <button
+                    (click)="search(searchControl.value)"
+                    class="avv-link"
+                    id="search-services-btn-try-again">
+                    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SEARCH.TRY_AGAIN' | translate }}
+                    <i class="icon icon-next"></i>
+                </button>
+            </div>
+        </ng-template>
+    </div>
+</div>

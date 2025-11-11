@@ -1,0 +1,31 @@
+<app-headers
+    #header
+    [backUrl]="'/auth/login'"
+    [title]="'REQUEST_PRODUCTS.HEADER' | translate"
+    [type]="header?.headerType?.whiteTertiary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+    <div class="hello-product">
+        <p class="hello-product-title"><span *ngIf="!userName">{{ 'LOGIN.HI' | translate }}, </span> <span *ngIf="userName" class="semi-bold">
+            {{ ' ' + (userName | firstWord) }}
+            </span> <span>{{ 'REQUEST_PRODUCTS.HELLO.TITLE' | translate }}</span>
+        </p>
+        <p class="hello-product-content">{{ 'REQUEST_PRODUCTS.HELLO.SUB_TITLE' | translate }}</p>
+    </div>
+    <div class="request-products-container avv-pb-with-footer">
+        <div class="request-products-item" [ngClass]="slide.class" *ngFor="let slide of sliders; let i = index">
+            <img class="request-products-item-img" [src]="slide.img | imageUrl: slide.isImageSourceOnline" alt="slide.img">
+            <div class="slider-content">
+                <p [innerHTML]="slide.content | translate"></p>
+            </div>
+            <button
+                    (click)="selectProduct(slide)"
+                    id="{{slide.id || 'home-request-products-btn-' + i }}"
+                    class="avv-btn-secondary btn-market avv-title-semibold sm"
+                    type="button">
+                {{ slide.btn | translate }}
+            </button>
+        </div>
+    </div>
+</ion-content>

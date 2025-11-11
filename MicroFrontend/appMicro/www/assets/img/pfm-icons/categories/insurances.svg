@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="TC_Seguros" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-IconBasic/24/security">
+            <rect id="fondo" fill-rule="nonzero" x="0" y="-8.52651283e-14" width="24" height="24"></rect>
+            <path d="M19.2888889,3 L12.1777778,1 C12,1 11.9111111,1 11.7333333,1 L4.62222222,3 C4.26666667,3.1 4,3.5 4,4 L4,12 C4,18.5 11.2888889,22.7 11.6444444,22.9 C11.7333333,23 11.8222222,23 12,23 C12.1777778,23 12.2666667,23 12.3555556,22.9 C12.7111111,22.7 20,18.5 20,12 L20,4 C20,3.5 19.7333333,3.1 19.2888889,3 Z M18,12.0243166 C18,16.5625835 13.3714286,19.9914962 12,21 C10.6285714,20.0923466 6,16.6634339 6,12.0243166 L6,4.7630896 L12,3 L18,4.7630896 L18,12.0243166 Z" id="Mask" fill="currentColor"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "compileOnSave": false,
+  
+  "compilerOptions": {
+    
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": false,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "es2019",
+      "dom"
+    ],
+    "paths": {
+      
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@environment": [
+        "src/environments/environment.dev.ts"
+      ],
+      "@store/*": [
+        "src/app/store/*"
+      ],
+      "@commons/*": [
+        "src/app/commons/*"
+      ],
+      "@modules/*": [
+        "src/app/modules/*"
+      ],
+      "@testing/*": [
+        "test-helpers/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+
+  "exclude": [
+    "cypress/**/*",
+    "node_modules",
+    "cypress.config.ts",
+    "projects/bavv-mb-frontend-shell/cypress.config.ts",
+    "cypress/**/*",
+    "projects/bavv-mb-frontend-shell/cypress/**/*",
+    "node_modules"
+  ],
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableIvy": true
+  },
+  
+}

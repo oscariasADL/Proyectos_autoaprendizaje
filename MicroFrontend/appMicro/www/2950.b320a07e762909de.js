@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[2950],{82950:(r,a,n)=>{n.r(a),n.d(a,{OneSpanSecureMessagingWeb:()=>_});var e=n(10467),s=n(15083);class _ extends s.E_{parseBodyTransaction(t){return(0,e.A)(function*(){return{title:"Transacci\xf3n XYZ",data:{AMOUNT:"38747645"}}})()}}}}]);

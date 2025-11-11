@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-ingreso-egreso',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class IngresoEgresoComponent implements OnInit {
+
+  ingresoForm: FormGroup;
 
   constructor() { }
 

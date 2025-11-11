@@ -1,0 +1,58 @@
+<ion-content [forceOverscroll]="false">
+  <div class="virtual-credit-card-reissue-success-header">
+    <div class="virtual-credit-card-reissue-success-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="virtual-credit-card-card-reissue-success-header-title">
+        {{ 'VIRTUAL_CREDIT_CARD.REISSUE_SUCCESS.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="virtual-credit-card-reissue-success-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="virtual-credit-card-reissue-success-container">
+    <div class="avv-alert-success mt-3">
+      <i class="avv-alert-icon icon-check"></i>
+      <div class="avv-alert-text">
+        {{ 'VIRTUAL_CREDIT_CARD.REISSUE_SUCCESS.TOAST' | translate }}
+      </div>
+    </div>
+    <div class="text-center">
+      <h6 class="semi-bold mb-5">{{ 'VIRTUAL_CREDIT_CARD.REISSUE_SUCCESS.TITLE' | translate }}</h6>
+      <img appPreloadImage
+           [preload]="skeleton"
+           [src]="franchiseImage | imageUrl"
+           class="virtual-credit-card-image"
+           alt="Cromalina de la tarjeta virtual de crédito"
+           aria-hidden="true">
+      <ion-skeleton-text
+        #skeleton
+        class="avv-skeleton virtual-credit-card-cromaline-skeleton mt-5 mb-5"
+        animated></ion-skeleton-text>
+    </div>
+    <div class="avv-ticket">
+      <div class="avv-ticket-border"></div>
+      <div class="avv-ticket-content">
+        <div class="avv-ticket-header">
+          <img [src]="'icons/check.svg' | imageUrl" alt="ícono de aprobado">
+          <div class="avv-ticket-header-content">
+            <p class="avv-ticket-header-content-title">{{ 'COMMON_LABELS.NUMBER_APPROVAL'|translate }}</p>
+            <p class="avv-ticket-header-content-subtitle">{{ response.approvalId }}</p>
+          </div>
+        </div>
+        <div class="avv-ticket-list-items">
+          <p class="items-label">{{ 'VIRTUAL_CREDIT_CARD.REISSUE_SUCCESS.DATE' | translate }}</p>
+          <p class="items-value">{{ response.transactionDate | date: 'dd/MM/yyyy' }}</p>
+        </div>
+      </div>
+      <div class="avv-ticket-border"></div>
+    </div>
+    <div class="avv-alert-info mx-3">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text">
+        {{ 'VIRTUAL_CREDIT_CARD.REISSUE_SUCCESS.INFO' | translate }}
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,17 @@
+<div class="terms-detail-container">
+  <div>
+    <h6 class="semi-bold mb-3">{{ 'AUTH.STEP.TERMS.TERMS_DETAIL.TITLE' | translate }}</h6>
+    <p [innerHTML]="'AUTH.STEP.TERMS.TERMS_DETAIL.TEXT' | translate"></p>
+  </div>
+
+  <div class="terms-detail-footer">
+    <div class="terms-detail-footer-button">
+      <button class="avv-btn-primary"
+              [id]="'terms-detail-close-btn'"
+              (click)="closeModal()">
+        {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+      </button>
+    </div>
+    <div class="avv-bottom-line"></div>
+  </div>
+</div>

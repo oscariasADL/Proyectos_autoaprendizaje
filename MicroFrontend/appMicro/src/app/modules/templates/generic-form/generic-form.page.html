@@ -1,0 +1,103 @@
+<app-headers
+  #header
+  [title]="data.pageName"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="avv-form">
+    <ng-container *ngFor="let item of template" [ngSwitch]="item.type">
+      <img *ngSwitchCase="templateType.image" class="avv-form-image" [src]="item.label | imageUrl" alt="">
+      <p *ngSwitchCase="templateType.title" class="avv-form-title">{{ item.label | translate }}</p>
+      <p *ngSwitchCase="templateType.description" class="avv-form-sub-title">{{ item.label | translate }}</p>
+      <div *ngSwitchCase="templateType.account" class="avv-form-account">
+        <p>
+          <img class="franchise-image"
+               [src]="item.account.franchise | franchiseImage"
+               (error)="img.className = 'display-none'"
+               alt="icon" #img>
+          <span class="account-type">{{ item.account.cardType || (item.account.typeName | split: ' ')[1] }}</span>
+          <span>{{ 'CARD_ADVANCE.NUMBER' | translate }} {{ item.account.numberProduct }}</span>
+        </p>
+        <p>{{ 'CARD_ADVANCE.QUOTA_FOR_ADVANCES' | translate }} <span
+          [innerHTML]="item.account?.availableAdvanceBalance | currencyFormat"></span></p>
+      </div>
+
+      <form *ngSwitchCase="templateType.form" [formGroup]="item.form" (ngSubmit)="confirmAction(item)">
+
+        <ng-container *ngFor="let field of item.fields" [ngSwitch]="field.fieldType">
+          <ng-container *ngIf="!field.hide">
+            <avv-input
+              *ngSwitchCase="fieldType.input"
+              [type]="field.type"
+              [id]="field.id"
+              [label]="field.label | translate"
+              [control]="field.control">
+            </avv-input>
+
+            <avv-dropdown
+              *ngSwitchCase="fieldType.dropdown"
+              [id]="field.id"
+              [label]="field.label | translate"
+              [items]="field.items"
+              [control]="field.control">
+            </avv-dropdown>
+
+            <avv-dropdown
+              *ngSwitchCase="fieldType.dropdownAccount"
+              [id]="field.id"
+              [label]="field.label | translate"
+              [items]="field.items"
+              [control]="field.control"
+              [template]="accountTemplate">
+
+              <ng-template
+                #accountTemplate
+                let-account="data"
+                let-className="class">
+                <div class="avv-item-account {{ className }}">
+                  <p class="name avv-title-bold">{{ account.typeName | lastWord }}</p>
+                  <p class="number avv-title-bold">No. {{ account.numberProduct }}</p>
+                  <p class="available"
+                     [innerHTML]="('AVAILABLE' | translate) + ' ' + (account.availableBalance | currencyFormat)"></p>
+                </div>
+              </ng-template>
+            </avv-dropdown>
+
+            <avv-dropdown
+              *ngSwitchCase="fieldType.dropdownCompany"
+              [id]="field.id"
+              [label]="field.label | translate"
+              [items]="field.items"
+              [control]="field.control"
+              [template]="mobileCompanyTemplate">
+
+              <ng-template
+                #mobileCompanyTemplate
+                let-operator="data"
+                let-className="class">
+                <div class="avv-item-operator-company {{ className }}">
+                  <img class="img-operator"
+                       [src]="'mobile-icons/' + operator.value + '.png' | imageUrl"
+                       draggable="false" alt=""/>
+                  <p class="name">{{ operator.label | lastWord }}</p>
+                </div>
+              </ng-template>
+            </avv-dropdown>
+
+            <p *ngSwitchCase="fieldType.note" class="avv-form-note" [innerHTML]="field.label | translate"></p>
+
+          </ng-container>
+        </ng-container>
+
+        <button type="submit"
+                class="avv-form-btn"
+                [id]="id + 'confirm-button'"
+                [disabled]="!item.form.valid">
+          {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+        </button>
+      </form>
+
+    </ng-container>
+  </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-content
+        [forceOverscroll]="false"
+        class="content-generic-stepper">
+    <app-generic-stepper
+            [form]="form"
+            [data]="data"
+            [steps]="steps"
+            [title]="'TRANSFERS.UNREGISTER_ACCOUNTS.TITLE' | translate"
+            [backUrl]="backUrl"
+            [exitData]="exitData"
+            [currentSlide]="currentSlide"
+            (nextStep)="setNextStep($event)"
+            (stepSelected)="stepSelected($event)"
+            (slideSelected)="slideSelected($event)"
+            [template]="template">
+    </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep"
+  let-runSlideSelected="slideSelected">
+    <div [ngSwitch]="screen">
+        <app-transfers-unregistered-accounts-to-who
+                *ngSwitchCase="'to-who'"
+                [form]="form"
+                (continueSlide)="runSlideSelected($event)">
+        </app-transfers-unregistered-accounts-to-who>
+
+        <app-transfers-unregistered-accounts-toward-account
+                *ngSwitchCase="'toward-account'"
+                [form]="form"
+                (continue)="runNextStep(key)">
+        </app-transfers-unregistered-accounts-toward-account>
+
+        <app-transfers-unregistered-accounts-toward-cell-phone
+                *ngSwitchCase="'toward-cell-phone'"
+                [form]="form"
+                (continue)="runNextStep(key)">
+        </app-transfers-unregistered-accounts-toward-cell-phone>
+    </div>
+</ng-template>

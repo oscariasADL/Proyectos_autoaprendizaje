@@ -1,0 +1,146 @@
+<ng-container
+  *ngTemplateOutlet="
+  ((working$ | async) ? working : (completed$ | async) && (cardList$ | async)?.length > 0 ? content : empty);
+  context: { cardList: (cardList$ | async) }"></ng-container>
+
+<ng-template #content let-cardList="cardList">
+  <section class="virtual-credit-card-panel" id="virtual-credit-card-panel">
+    <ng-container
+      *ngTemplateOutlet="cardList.length > 1 ? contentMultiple : contentSingle; context: { cardList: cardList }"></ng-container>
+    <a class="virtual-credit-card-panel-link-action" href="javascript:void(0);"
+       *ngIf="canAddVirtualCreditCard$ | async"
+       (click)="activateVirtualCreditCard()">
+      <i class="icon icon-salir"></i>
+      <span>{{ 'VIRTUAL_CREDIT_CARD.PANEL.LINK_ACTION' | translate }}</span>
+    </a>
+  </section>
+</ng-template>
+
+<ng-template #contentSingle let-cardList="cardList">
+  <ng-container *ngIf="cardList[0].status ==='U' ; else allowReadSingleCard">
+    <div class="virtual-credit-card-panel-card-container"  role="button"
+    >
+ <div class="card-franchise">
+   <img [src]="getSrcImgFranchise(cardList[0].numberProductTCV)" alt="">
+ </div>
+ <div class="card-content-single">
+  <div>
+    <p
+    class="title-content">
+    {{ cardList[0].nickname || 'VIRTUAL_CREDIT_CARD.PANEL.SINGLE.CONTENT_TITLE' | translate }}</p>
+   <p class="disabled-content">
+     <i class="icon icon-seguridad2"></i>
+    {{ 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.CARD.TEMPORARY_BLOCKED' | translate }}
+     
+   </p>
+  </div>
+
+  <i (click)="cancelVCC(cardList[0])" class="icon icon-basura avv-link mr-2  thrash-icon"></i>
+  </div>
+  
+
+</div>
+  </ng-container>
+  <ng-template #allowReadSingleCard>
+    <div class="virtual-credit-card-panel-card-container" role="button"
+    (click)="showVirtualCreditCardDetail(cardList[0])">
+ <div class="card-franchise">
+   <img [src]="getSrcImgFranchise(cardList[0].numberProductTCV)" alt="">
+ </div>
+ <div class="card-content">
+   <p
+     class="title-content">{{ cardList[0].nickname || 'VIRTUAL_CREDIT_CARD.PANEL.SINGLE.CONTENT_TITLE' | translate }}</p>
+   <p class="action-content">
+     <i class="icon icon-ver"></i>
+     <span>{{ 'VIRTUAL_CREDIT_CARD.PANEL.SINGLE.CONTENT_ACTION' | translate }}</span>
+   </p>
+ </div>
+</div>
+  </ng-template>
+
+</ng-template>
+
+<ng-template #contentMultiple>
+  <div class="virtual-credit-card-panel-card-container" role="button" (click)="openModal()">
+    <div class="card-franchise">
+      <i class="icon icon-tarjeta"></i>
+    </div>
+    <div class="card-content">
+      <p class="title-content">{{ 'VIRTUAL_CREDIT_CARD.PANEL.MULTIPLE.CONTENT_TITLE' | translate }}</p>
+      <p class="action-content">
+        <i class="icon icon-ver"></i>
+        <span>{{ 'VIRTUAL_CREDIT_CARD.PANEL.MULTIPLE.CONTENT_ACTION' | translate }}</span>
+      </p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #working>
+  <div class="virtual-credit-card-panel-loading">
+    <ion-skeleton-text class="avv-skeleton card-panel" animated></ion-skeleton-text>
+    <ion-skeleton-text class="avv-skeleton link-action" animated></ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #empty></ng-template>
+
+<ion-modal css-class="avv-custom-modal" #modal>
+  <ng-template>
+    <div class="virtual-credit-card-modal">
+      <div class="virtual-credit-card-modal-header">
+        <h3>{{ 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.TITLE' | translate }}</h3>
+        <i class="icon-salir" (click)="modal.dismiss()"></i>
+      </div>
+      <ng-container *ngFor="let card of cardList$  | async ">
+        <ng-container *ngIf="card.status === 'U'; else allowedReadCard">
+          <div class="virtual-credit-card-modal-card" role="button">
+            
+            <div class="card-franchise">
+              <img [src]="getSrcImgFranchise(card.numberProductTCV)" class="bw" alt="">
+            </div>
+            
+            <div class="card-content">
+              <div>
+              <p class="title-content">
+                {{ card.nickname || 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.CARD.TITLE' | translate }}
+                {{ 'ACCOUNT_NUMBER' | translate }}
+                {{ card.numberProductTCV | productNumberMask }}
+              </p>
+              <p class="disabled-content">
+                <i class="icon icon-seguridad2"  ></i>
+               {{ 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.CARD.TEMPORARY_BLOCKED' | translate }}
+                
+              </p>
+            </div>
+            <div class="icon-container avv-btn-link " >
+              <i class="icon icon-basura" (click)="cancelVCC(card)"></i>
+            </div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-template #allowedReadCard>
+        <div class="virtual-credit-card-modal-card" role="button" (click)="showVirtualCreditCardDetail(card)">
+          <div class="card-franchise">
+            <img [src]="getSrcImgFranchise(card.numberProductTCV)" alt="">
+          </div>
+          <div class="card-content">
+            <div>
+              <p class="title-content">
+                {{ card.nickname || 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.CARD.TITLE' | translate }}
+                {{ 'ACCOUNT_NUMBER' | translate }}
+                {{ card.numberProductTCV | productNumberMask }}
+              </p>
+              <p class="action-content">
+                <i class="icon icon-ver"></i>
+                <span>{{ 'VIRTUAL_CREDIT_CARD.PANEL.MODAL.CARD.ACTION' | translate }}</span>
+              </p>
+            </div>
+           
+          </div>
+        </div>
+
+      </ng-template>
+      </ng-container>
+    </div>
+  </ng-template>
+</ion-modal>

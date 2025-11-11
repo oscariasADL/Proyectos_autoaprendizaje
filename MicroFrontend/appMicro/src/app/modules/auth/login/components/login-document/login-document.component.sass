@@ -1,0 +1,35 @@
+@import 'utils'
+
+.login-document-container
+  display: flex
+  flex-direction: column
+
+  ::ng-deep
+    avv-dropdown, avv-input
+      width: 100%
+
+      .form-input
+        padding: 0 0 $spacer-2
+
+        label
+          border-color: #D1D6DA
+          border-radius: 5px
+
+          input
+            background-color: white !important
+        //color: var(--white) !important
+
+        span.form-icon
+          z-index: 0 !important
+        //color: var(--white) !important
+
+        &.dropdown
+          .dropdown-list
+            > li
+              &.active
+                background-color: var(--white) !important
+
+.login-problems-link
+  margin: $spacer-2 0
+  color: #0048DB
+  font-size: 14px

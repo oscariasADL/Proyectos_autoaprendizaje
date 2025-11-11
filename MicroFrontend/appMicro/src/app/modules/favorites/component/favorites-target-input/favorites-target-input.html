@@ -1,0 +1,52 @@
+<article class="favorites-target-input-container">
+  <div class="header">
+    <h3>{{ TITLES[typeTargetVal] | translate }}</h3>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="input-container">
+    <ng-container [ngSwitch]="typeTargetVal">
+      <ng-container *ngSwitchCase="typeTarget.ACCOUNT">
+        <avv-radio
+          class="avv-radio-input"
+          [id]="'transfers-avv-account-type'"
+          [items]="productAccountTypes"
+          [control]="towardAccountTypeFormControl">
+        </avv-radio>
+        <avv-input
+          [id]="'favorites-target-field-input'"
+          [type]="'numeric'"
+          [allowCut]="true"
+          [allowCopy]="true"
+          [allowPaste]="true"
+          [label]="'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_ACCOUNT.FIELD' | translate"
+          [control]="targetFormControl">
+        </avv-input>
+      </ng-container>
+      <ng-container *ngSwitchCase="typeTarget.CELLPHONE">
+        <avv-input
+          [id]="'favorites-target-field-input'"
+          [type]="'phone'"
+          [allowCut]="true"
+          [allowCopy]="true"
+          [allowPaste]="true"
+          [label]="'TRANSFERS.AVV_PHONE.TOWARD_CELL_PHONE.FIELD' | translate"
+          [control]="targetFormControl">
+        </avv-input>
+      </ng-container>
+      <ng-container *ngSwitchCase="typeTarget.DOCUMENT">
+        <avv-input
+          [id]="'favorites-target-field-input'"
+          [type]="'document'"
+          [allowCut]="true"
+          [allowCopy]="true"
+          [allowPaste]="true"
+          [label]="'WITHDRAW.MONEY_ORDERS.SLIDE.WHO.LABEL' | translate"
+          [control]="targetFormControl">
+        </avv-input>
+      </ng-container>
+
+    </ng-container>
+    <button type="buttton" class="avv-btn-primary" (click)="saveChanges()"
+            [disabled]="targetFormControl.invalid && towardAccountTypeFormControl.invalid">{{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}</button>
+  </div>
+</article>

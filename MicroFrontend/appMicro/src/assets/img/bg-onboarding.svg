@@ -1,0 +1,138 @@
+<svg
+  width="412"
+  height="669"
+  viewBox="0 0 412 669"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g clip-path="url(#clip0_3103_249)">
+    <path
+      d="M0 3.99999C0 1.79085 1.79086 0 4 0H408C410.209 0 412 1.79086 412 4V669H0V3.99999Z"
+      fill="white"
+    />
+    <g opacity="0.16" filter="url(#filter0_f_3103_249)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M39.3651 183.302C-28.453 150.157 -100.906 159.062 -122.462 203.191C-144.019 247.32 -106.517 309.963 -38.6985 343.107C29.1196 376.251 101.572 367.346 123.129 323.217C144.686 279.088 107.183 216.446 39.3651 183.302Z"
+        fill="#E1001D"
+      />
+    </g>
+    <g opacity="0.16" filter="url(#filter1_f_3103_249)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M75.885 334.63C7.75974 351.446 -38.4609 400.836 -27.3517 444.948C-16.2425 489.059 47.9897 511.186 116.115 494.37C184.24 477.554 230.461 428.164 219.352 384.052C208.242 339.941 144.01 317.814 75.885 334.63Z"
+        fill="#0048DB"
+      />
+    </g>
+    <g opacity="0.16" filter="url(#filter2_f_3103_249)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M235.293 -23.72C183.79 -10.9362 148.848 26.6125 157.246 60.1473C165.645 93.682 214.204 110.504 265.707 97.72C317.21 84.9361 352.152 47.3875 343.754 13.8527C335.355 -19.682 286.796 -36.5039 235.293 -23.72Z"
+        fill="#0048DB"
+      />
+    </g>
+    <g opacity="0.16" filter="url(#filter3_f_3103_249)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M374.954 166.112C423.36 144.629 452.549 98.5106 440.148 63.1025C427.747 27.6945 378.453 16.4056 330.046 37.8881C281.64 59.3706 252.451 105.489 264.852 140.897C277.253 176.306 326.547 187.594 374.954 166.112Z"
+        fill="#E1001D"
+      />
+    </g>
+  </g>
+  <defs>
+    <filter
+      id="filter0_f_3103_249"
+      x="-228.551"
+      y="63.2686"
+      width="457.768"
+      height="399.871"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="50"
+        result="effect1_foregroundBlur_3103_249"
+      />
+    </filter>
+    <filter
+      id="filter1_f_3103_249"
+      x="-129"
+      y="229"
+      width="450"
+      height="371"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="50"
+        result="effect1_foregroundBlur_3103_249"
+      />
+    </filter>
+    <filter
+      id="filter2_f_3103_249"
+      x="56"
+      y="-128"
+      width="389"
+      height="330"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="50"
+        result="effect1_foregroundBlur_3103_249"
+      />
+    </filter>
+    <filter
+      id="filter3_f_3103_249"
+      x="162"
+      y="-73"
+      width="381"
+      height="350"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="50"
+        result="effect1_foregroundBlur_3103_249"
+      />
+    </filter>
+    <clipPath id="clip0_3103_249">
+      <path
+        d="M0 3.99999C0 1.79085 1.79086 0 4 0H408C410.209 0 412 1.79086 412 4V669H0V3.99999Z"
+        fill="white"
+      />
+    </clipPath>
+  </defs>
+</svg>

@@ -1,0 +1,11 @@
+<div class="view-more-keys" ngClass="{{!isWhite&&'avv-btn-primary sm'}}" id="view-more-keys">
+ <span ngClass="{{isWhite && 'btn-m'}}" > {{ buttonLabel | translate }}</span>
+ <div class="actions">
+  <span class="key mr-2" ngClass="{{isWhite && 'white-label'}}" >{{avalTag}}</span>
+  <i class="icon-editar" ngClass="{{isWhite && 'avv-link-new'}}" (click)="editTagAval()"></i>
+  <span class="divider"></span>
+  <i class="icon-next" ngClass="{{isWhite && 'avv-link-new'}}"  (click)="goToBreB()"></i> 
+</div>
+</div>
+
+

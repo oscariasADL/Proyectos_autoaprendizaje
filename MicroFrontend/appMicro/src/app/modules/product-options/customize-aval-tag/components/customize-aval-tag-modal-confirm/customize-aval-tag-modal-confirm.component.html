@@ -1,0 +1,27 @@
+<section class="customize-aval-tag-modal-confirm">
+  <div class="customize-aval-tag-modal-confirm__close_icon">
+    <i class="icon icon-salir" (click)="closeModal()"></i>
+  </div>
+  <figure class="customize-aval-tag-modal-confirm__icon">
+    <img [src]="'illustrations/notifications.svg' | imageUrl" alt="">
+  </figure>
+  <h2 class="customize-aval-tag-modal-confirm__title">
+    {{ 'CUSTOMIZE_AVAL_TAG.MODAL_CONFIRM.TITLE' | translate }}
+  </h2>
+  <p class="customize-aval-tag-modal-confirm__message">
+    {{ 'CUSTOMIZE_AVAL_TAG.MODAL_CONFIRM.MESSAGE' | translate }}
+  </p>
+  <p class="customize-aval-tag-modal-confirm__aval-tag">
+    <i class="icon icon-aval-tag"></i>
+    <span>{{ avalTag | uppercase }}</span>
+  </p>
+  <p class="customize-aval-tag-modal-confirm__product">{{ product }}</p>
+
+  <div class="customize-aval-tag-modal-confirm__button-container">
+    <button type="button" class="avv-btn-primary" (click)="closeModal(true)"
+            [utagCategory]="TAG_AVAL_CONFIRM_CUSTOMIZATION_EVENT.event_category"
+            [utag]="TAG_AVAL_CONFIRM_CUSTOMIZATION_EVENT.event_label">
+      {{ 'CUSTOMIZE_AVAL_TAG.MODAL_CONFIRM.CONFIRM' | translate |uppercase }}
+    </button>
+  </div>
+</section>

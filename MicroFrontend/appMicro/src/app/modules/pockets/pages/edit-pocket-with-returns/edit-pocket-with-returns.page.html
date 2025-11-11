@@ -1,0 +1,80 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper [form]="form" [data]="data" [steps]="steps"
+                       [title]="'POCKET_WITH_RETURNS.EDIT_POCKET.HEADER_TITLE' | translate" [backUrl]="backUrl"
+                       [exitData]="exitData"
+                       [showSteps]="false" [currentSlide]="currentSlide" (nextStep)="setNextStep($event)"
+                       (stepSelected)="stepSelected($event)" (slideSelected)="slideSelected($event)"
+                       [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template #template let-key="key" let-screen="data" let-runNextStep="nextStep">
+  <div [ngSwitch]="screen">
+
+    <div *ngSwitchCase="editPocketWithReturnsSlide.update" class="pockets-edit-step">
+      <ng-container *ngIf="pocket$ | async as pocket">
+        <div class="pockets-edit-step__header">
+          <img [src]="'/assets/images/illustrations/pockets/money-pocket.svg' | imageUrl:true"
+               [alt]="'POCKET_WITH_RETURNS.EDIT_POCKET.WITHOUT_MOVEMENTS.TITLE' | translate">
+          <p class="semi-bold pockets-edit-step-title">
+            {{ 'POCKET_WITH_RETURNS.EDIT_POCKET.TITLE' | translate }}
+          </p>
+        </div>
+        <form class="pockets-edit-step-form" (ngSubmit)="runNextStep(key)">
+          <avv-field [type]="'text'" [id]="'pocket-edit-name'"
+                     [label]="'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.POCKET_NAME' | translate" [control]="name">
+          </avv-field>
+
+          <avv-dropdown class="form-dropdown" [id]="'pocket-edit-category'" [items]="pocketCategories$ | async"
+                        [label]="'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.CATEGORY' | translate"
+                        [control]="category">
+          </avv-dropdown>
+
+          <avv-input [type]="'currency'" [id]="'pocket-edit-goal'"
+                     [label]="'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.GOAL' | translate" [control]="goal">
+          </avv-input>
+
+          <avv-dropdown class="form-dropdown" [id]="'pocket-edit-period'" [items]="periodicity"
+                        [label]="'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.PERIOD_INSTALLMENTS' | translate"
+                        [control]="period">
+          </avv-dropdown>
+          <div class="pockets-edit-step__card">
+            <div class="pockets-edit-step__quota-value">
+              <p>{{
+                  'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.CARD.DESCRIPTION' |
+                    translate
+                }}
+              </p>
+              <avv-input
+                [id]="'fee-value'"
+                [type]="'currency'"
+                [label]="'POCKET_WITH_RETURNS.CONFIGURATION.QUOTA' | translate"
+                [control]="quota"
+                [hint]="('POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.CARD.QUOTA' | translate) + ' ' + installments.toString()"
+              >
+              </avv-input>
+            </div>
+          </div>
+          <div class="pockets-edit-step__actions">
+            <button class="avv-btn-primary" type="submit" [id]="'pocket-edit-btn'" [disabled]="!form.valid"
+                    [utag]='EDIT_POCKETS_TAG.event_label'
+                    [utagCategory]="EDIT_POCKETS_TAG.event_category"
+                    (continue)="runNextStep(key)">
+              {{ 'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.BUTTON' | translate | uppercase }}
+            </button>
+            <button class="avv-btn-link" type="submit" [id]="'pocket-edit-cancel-btn'" (click)="backPage()">
+              {{ 'POCKET_WITH_RETURNS.EDIT_POCKET.MODIFY_STEP.CANCEL_BUTTON' | translate }}
+            </button>
+          </div>
+        </form>
+      </ng-container>
+    </div>
+    <div *ngSwitchCase="editPocketWithReturnsSlide.confirmation" class="pockets-edit-step">
+      <app-confirm-pocket-with-returns [form]="form" [installments]="installments" (confirm)="editPocket() "
+                                       (backStep)="runNextStep(editPocketWithReturnsSlide.update)"
+                                       [utag]='CONFIRM_EDIT_TAG.event_label'
+                                       [utagCategory]="CONFIRM_EDIT_TAG.event_category"></app-confirm-pocket-with-returns>
+    </div>
+  </div>
+
+</ng-template>

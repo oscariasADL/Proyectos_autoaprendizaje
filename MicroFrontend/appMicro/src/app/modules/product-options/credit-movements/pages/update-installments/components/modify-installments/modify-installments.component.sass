@@ -1,0 +1,62 @@
+@import 'utils'
+
+.modify-installments
+  &-container
+    padding: $spacer-3 $spacer-2 $spacer-4
+    text-align: initial
+    display: flex
+    flex-direction: column
+    gap: $spacer-3
+
+  &-title
+    font-size: 14px
+
+  &-panel
+    display: flex
+    flex-direction: column
+    border-radius: 8px
+    border: 1px solid #D1D6DA
+
+    &-header
+      padding: $spacer $spacer-2
+      background-color: #F5F9FF
+      border-radius: 8px 8px 0 0
+
+    &-body
+      display: flex
+      flex-direction: column
+      gap: $spacer
+      padding: $spacer-2
+
+      p, span
+        font-size: 12px
+        color: var(--gray-1)
+
+      .body-info
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: start
+        gap: 8px 0
+
+        span
+          justify-self: end
+
+      .separator
+        border: 1px solid #D1D6DA
+        margin: $spacer 0
+
+      .body-balance
+        display: flex
+        justify-content: space-between
+
+    &-info
+      color: var(--gray-7)
+
+  &-form
+    display: flex
+    flex-direction: column
+
+    .modify-installments-field
+      display: flex
+      flex-direction: column
+      margin-bottom: $spacer-4

@@ -1,0 +1,48 @@
+@import 'utils'
+
+.virtual-credit-card-edit
+
+  &-header
+    width: 100%
+    +flex(center, space-between)
+    padding: calc(8px + var(--safe-area-inset-top)) $spacer $spacer
+    background-color: var(--white)
+
+    &-back
+      +flex(center, flex-start)
+
+      i
+        font-size: 24px
+        color: var(--gray-8)
+        padding: 8px
+
+      .header-title
+        color: var(--gray-8)
+        white-space: nowrap
+        overflow: hidden
+        padding-left: 8px
+        text-overflow: ellipsis
+
+    &-close
+      display: flex
+
+      i
+        font-size: 24px
+        color: var(--gray-8)
+        padding: 8px
+
+  &-container
+    padding: $spacer-1 $spacer-3 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+    display: flex
+    flex-direction: column
+    gap: $spacer-2
+
+    ::ng-deep .form-input
+      padding: 0
+
+    .text-center
+      p
+        font-size: 14px
+
+    h6
+      font-size: 16px

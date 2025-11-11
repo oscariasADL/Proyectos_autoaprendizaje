@@ -1,0 +1,136 @@
+@import 'utils'
+
+.directed-payment-list
+  height: 90vh
+  overflow-y: scroll
+  position: relative
+  padding: $spacer-3 $spacer-2 $spacer-4
+  text-align: initial
+
+  p
+    font-size: 14px
+
+  .avv-alert-info > .avv-alert-text-action
+    font-size: 12px
+    color: #3F3F3F
+
+  .directed-payment-header
+    display: flex
+    flex-direction: column
+    gap: $spacer-2
+
+    .avv-information-link
+      padding: 0 0 0 calc(#{$spacer} / 2)
+      margin: $spacer-2 0
+
+  .directed-payment-list-items
+    margin-bottom: 10vh
+
+  .directed-payment-list-items .action
+    position: fixed
+    left: 0
+    bottom: 0px
+    width: 100%
+    padding: 40px 16px calc(16px + var(--safe-area-inset-bottom))
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 40%)
+
+  .directed-payment-list-items .items-grouped
+    display: flex
+    flex-direction: column
+    gap: $spacer-2
+    margin-bottom: $spacer-3
+
+    & > p
+      font-weight: 700
+
+    & > div
+      display: flex
+      flex-direction: column
+      gap: $spacer-2
+
+    .directed-payment-card.selected
+      border: 1px solid #51DAA9
+
+    .directed-payment-card.disabled
+      background-color: #F8F9FA
+      color: #5C6B7A
+
+      .container-info-header > .abbreviation-date, .container-info-header > .description-content p, .container-info-header > .description-content small
+        color: #5C6B7A
+
+    .directed-payment-card
+      display: flex
+      gap: $spacer-2
+      width: 100%
+      padding: $spacer-2
+      border: 1px solid #DEE1E4
+      border-radius: 4px
+
+      .container-info
+        flex-grow: 1
+
+      .container-info-header
+        display: flex
+        margin-bottom: $spacer-2
+
+      .container-info-header > .abbreviation-date
+        +flex(center, start, column)
+        color: var(--blue-2)
+
+        span:first-child
+          font-size: 16px
+          font-weight: 700
+
+        span:last-child
+          font-size: 9px
+          font-weight: 600
+
+      .container-info-header > .separator
+        border: 1px solid #D1D6DA
+        margin: 0 $spacer
+
+      .container-info-header > .description-content
+        +flex(start, center, column)
+
+        p
+          font-weight: bold
+
+        small
+          font-size: 11px
+
+      .container-info-body ul
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 8px
+        font-size: 12px
+
+        div
+          display: grid
+          grid-template-columns: auto 1fr
+
+        span:last-child
+          margin-left: 5px
+          font-weight: 600
+
+.input-checkbox:where([type="checkbox"])
+  -webkit-appearance: none
+  appearance: none
+  width: 24px
+  height: 24px
+  margin: calc(0.75em - 11px) 0.25rem 0 0
+  vertical-align: top
+  border: 1px solid #5c6b7a
+  border-radius: 4px
+  background: var(--white) no-repeat center center
+
+
+.input-checkbox:where([type="checkbox"]):where(:active:not(:disabled), :focus)
+  outline: none
+
+.input-checkbox:where([type="checkbox"]):disabled
+  background: #F8F9FA
+
+.input-checkbox[type="checkbox"]:checked
+  background-image: url("/assets/img/icons/checkbox.svg")
+  background-color: var(--success)
+  border-color: transparent

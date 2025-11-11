@@ -1,0 +1,249 @@
+@import 'variables'
+
+$border-radius: 4px
+
+.product-detail-card
+  padding: 0px 0 16px
+
+  .product-detail-card-image
+    position: relative
+    padding: 0 8.533vw
+    margin-top: 24px
+
+    & > img
+      width: 100%
+
+    .detail
+      position: absolute
+      bottom: 5%
+      right: 11.733vw
+      display: flex
+      align-items: center
+      gap: 8px
+
+      p
+        font-size: 18px
+        font-weight: bold
+        line-height: 1.78
+        color: var(--white)
+
+        i
+          display: none
+
+      img
+        width: 36px
+
+    &.no-image
+      margin-bottom: 0
+      padding: 0 18px
+      min-height: 5vh
+
+      img
+        display: none
+
+      .detail
+        width: 100%
+        left: 0
+
+        p
+          font-size: 14px
+          position: relative
+          width: 100%
+          padding: 10px 4.267vw
+          text-align: right
+          border-radius: 12.6px 12.6px 0 0
+          background-image: linear-gradient(252.24deg, #E1001D 0%, #9E0014 100%)
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          i
+            display: inline-block
+            font-size: 24px
+
+  .product-detail-card-content
+    position: relative
+    border-radius: $border-radius
+    box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+    background-color: var(--white)
+
+    ul
+      padding: 8px 0 0
+
+      .divider
+        border-top: 1px solid #d8d8d8
+
+      > li
+        display: flex
+        align-items: end
+        justify-content: space-between
+        padding: 0 16px
+
+        .divider
+          width: 100%
+          border-top: 1px solid #d8d8d8
+
+        .spi-user-key
+          &-label
+            display: flex
+            flex-direction: column
+            gap: $spacer
+
+            &-logo
+              display: flex
+              align-items: center
+              gap: 8px
+
+              i
+                color: var(--blue-1)
+
+            &-value
+              font-weight: 600
+              color: #3F3F3F
+
+            & i:first-child
+              font-size: 18px
+
+            & i:last-child
+              margin: 0
+              font-size: 18px
+
+          &-value
+            display: flex
+            gap: $spacer
+            font-weight: 600
+
+            i
+              font-size: 20px
+              color: var(--blue-1)
+
+        &.has-divider
+          padding: 2px 8px 0
+          margin: 0 8px
+          border-top: 1px solid #d8d8d8
+
+        p
+          font-size: 16px
+          color: var(--gray-1)
+
+          i
+            color: var(--blue-1)
+            font-size: 16px
+            margin-left: 4px
+
+        &.normal, &.normal-bold
+          p
+            line-height: 1.5
+
+        &.normal-bold
+          p
+            font-weight: 600
+
+        &.opaque
+          p
+            font-size: 14px
+            line-height: 1.71
+            color: var(--gray-2)
+
+        &.highlighted
+          background-color: var(--blue-5)
+          padding: 2px 16px
+
+          p
+            font-size: 14px
+            line-height: 1.71
+
+            &:last-child
+              font-size: 16px
+              font-weight: bold
+              line-height: initial
+
+        &.main
+          margin-top: 16px
+          padding: 8px 16px
+          border-top: 1px solid #d8d8d8
+
+          p
+            line-height: 1.5
+            font-weight: 600
+
+            &:last-child
+              font-size: 18px
+              line-height: 1.78
+              color: var(--gray-1)
+
+    .product-detail-card-quick-list
+      padding: 8px 0
+      //background-color: var(--blue-5)
+      background-color: #F5F9FF
+      border-top: 1px solid #DEE1E4
+      border-radius: 0 0 4px 4px
+
+      .divider
+        width: 100%
+        height: 0px
+        border: 1px solid #DEE1E4
+        margin: $spacer-1 0px
+
+    .product-detail-card-dropdown-list
+      max-height: 56px
+      padding: $spacer-2
+      background-color: #F0F5FF
+      border-bottom-left-radius: $border-radius
+      border-bottom-right-radius: $border-radius
+      overflow-y: hidden
+      transition: max-height .3s linear
+
+      .dropdown-list-header
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        h4
+          font-size: 16px
+          line-height: 24px
+          font-weight: 600
+
+        span
+          transform: rotate(0)
+          transition: transform .3s linear
+
+          i
+            font-size: 24px
+            color: var(--blue-1)
+
+      &.open
+        max-height: 500px
+        transition: max-height .5s linear
+
+        .dropdown-list-header
+          span
+            transform: rotate(180deg)
+            transition: transform .3s linear
+
+      .dropdown-list-container
+        margin-top: $spacer-2
+
+        ul > li
+        padding: 0 0 4px
+
+        p.salary-advance-status
+          &-ACTIVA, &-BLOQUEADA, &-A, &-B
+            padding: 4px 12px
+            font-size: 14px
+
+            &-ACTIVA, &-A
+              background-color: var(--success-bg)
+              color: var(--success)
+
+            &-BLOQUEADA, &-B
+              background-color: var(--danger-bg)
+              color: var(--danger)
+
+  .product-detail-card-actions
+
+    button
+      margin: $spacer-3 0 0
+
+.avv-alert-info-product
+  margin-top: 32px

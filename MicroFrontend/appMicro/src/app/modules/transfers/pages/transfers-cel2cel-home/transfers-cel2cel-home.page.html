@@ -1,0 +1,111 @@
+<app-headers
+  #header
+  [backUrl]="'/'"
+  [title]="'TRANSFERS.CEL2CEL.HOME.NAVBAR_TITLE' | translate"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+<ion-content [forceOverscroll]="false">
+
+  <div class="home-cel2cel-container avv-padding">
+    <div class="cel-2-cel">
+      <p class="title mb-3">{{ 'TRANSFERS.CEL2CEL.HOME.TITLE' | translate }}</p>
+      <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celSend">
+        <ion-card class="custom-card main">
+          <ion-card-content class="p-0">
+            <div role="button" [attr.aria-label]="('TRANSFERS.CEL2CEL.HOME.SEND_LINK' | translate)" class="m-0"
+                 [utag]="'enviar plata'"
+                 [utagCategory]="'a un celular'"
+                 style="width: 100%; border-bottom: solid 1px #c4d4e3;"
+                 id="cel2cel-send-phone-btn"
+                 [routerLink]="CEL2CEL_SEND_URL">
+              <div class="m-2">
+                <img src="assets/img/icons/transfer.svg" style="width: 38px;">
+                {{ 'TRANSFERS.CEL2CEL.HOME.SEND_LINK' | translate }}
+                <i class="icon icon-next send-arrow"></i>
+              </div>
+            </div>
+
+            <div class="m-3 text-center">
+              <p class="my-2">
+                <b style="font-size: 16px;">{{ texts.descTitle | translate }}</b>
+              </p>
+              <p class="mb-2" style="font-size: 16px;" [innerHTML]="texts.desc1 | translate"></p>
+              <div>
+                <img src="assets/img/bank-list.png" style="width: 100%;"
+                     alt="Logos banco de bogota, banco de occidente, banco popular, banco av villas, dale">
+              </div>
+              <p class="mt-2" style="font-size: 16px;">
+                {{ texts.desc2 | translate }}
+                <span [innerHtml]="texts.desc3 | translate" style="font-size: 18px;"></span>
+              </p>
+              <small>{{ texts.desc4 | translate }}</small>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ng-template>
+
+      <ion-grid class="mt-2 mx-0 custom-grid">
+        <ion-row>
+
+          <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celRequest">
+            <ion-col>
+              <ion-card role="button"
+                        [attr.aria-label]="texts.linkRequest | translate | stripTags"
+                        class="custom-card" [routerLink]="['/request-transfiya']"
+                        id="request-transfiya-transfer-btn">
+                <ion-card-content>
+                  <div class="text-center cel-2-cel-link-div pt-3">
+                    <i class="icon icon-mis_otros_creditos cel-2-cel-link-icon"></i>
+                    <p class="cel-2-cel-link-text mt-2">{{ texts.linkRequest | translate }}</p>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ng-template>
+          <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celPending">
+            <ion-col>
+              <ion-card role="button"
+                        [attr.aria-label]="texts.linkPending | translate | stripTags"
+                        class="custom-card" [routerLink]="['/pending-transfers']"
+                        id="pending-transfiya-transfer-btn">
+                <ion-card-content>
+                  <div class="text-center cel-2-cel-link-div pt-3">
+                    <i class="icon icon-formulario cel-2-cel-link-icon"></i>
+                    <p class="cel-2-cel-link-text">{{ texts.linkPending | translate }}</p>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ng-template>
+          <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celAdminTransfiya">
+            <ion-col>
+              <ion-card role="button"
+                        [attr.aria-label]="texts.linkAdminTransfiya | translate | stripTags"
+                        class="custom-card" [routerLink]="['/admin-transfiya']"
+                        id="trust-relation-transfer-btn">
+                <ion-card-content>
+                  <div class="text-center cel-2-cel-link-div pt-3">
+                    <i class="icon icon-contacts cel-2-cel-link-icon"></i>
+                    <p class="cel-2-cel-link-text" [innerHTML]="texts.linkAdminTransfiya | translate"></p>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ng-template>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="avv-information-link pt-2"
+         role="button"
+         [attr.aria-label]="(texts.linkInfo | translate)"
+         utag="¿que es transferir a un celular?"
+         utagCategory="a un celular"
+         (click)="showCel2CelInformation()">
+      <i class="icon-info"></i>
+      <small>{{ texts.linkInfo | translate }}</small>
+    </div>
+
+  </div>
+
+</ion-content>

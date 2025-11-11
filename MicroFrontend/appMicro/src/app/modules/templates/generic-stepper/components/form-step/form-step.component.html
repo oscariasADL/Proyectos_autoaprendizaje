@@ -1,0 +1,78 @@
+<div class="avv-generic-step form-step">
+  <ng-container *ngIf="!data?.hasException">
+    <p class="avv-generic-step-title"
+       [ngClass]="{'with-description': data.description}">
+      {{ data.title | translate }}
+    </p>
+    <p class="avv-generic-step-description"
+       *ngIf="data.description"
+       [innerHTML]="data.description | translate">
+    </p>
+    <form [formGroup]="form" (ngSubmit)="setNextStep()">
+      <ng-container *ngFor="let item of data.form">
+        <div [ngClass]="{'message': item.message}" class="item-container">
+          <div class="item-container-input">
+            <avv-input *ngIf="!item.items"
+                       [type]="item.type"
+                       [id]="item.id"
+                       [label]="item.label | translate"
+                       [franchiseIcon]="item.franchiseIcon"
+                       [control]="item.control"
+                       [hint]="item.hint">
+            </avv-input>
+
+            <avv-dropdown *ngIf="item.items"
+                          class="form-dropdown"
+                          [id]="item.id"
+                          [items]="item.items"
+                          [label]="item.label | translate"
+                          [control]="item.control"
+                          [hint]="item.hint">
+            </avv-dropdown>
+          </div>
+          <p *ngIf="item.message"
+             class="item-container-message"
+             [innerHTML]="item.message | translate">
+          </p>
+        </div>
+      </ng-container>
+
+      <p class="avv-generic-step-message"
+         *ngIf="data.message"
+         [innerHTML]="data.message | translate">
+      </p>
+
+      <p class="avv-generic-step-message"
+         *ngIf="data.asyncMessage"
+         [innerHTML]="data.asyncMessage.value">
+      </p>
+
+      <button class="avv-btn-primary form-step-btn"
+              type="submit"
+              [id]="data.id + '-btn'"
+              [disabled]="!form.valid">
+        {{ data.buttonText | translate | uppercase }}
+        <i class="icon-siguiente"></i>
+      </button>
+    </form>
+
+  </ng-container>
+
+  <ng-container *ngIf="data?.hasException">
+    <div class="avv-generic-exception-block">
+      <p class="avv-generic-step-title">{{ data?.accountException?.title | translate }}</p>
+      <div class="avv-generic-exception-image">
+        <img
+                class="icon"
+                [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+                alt="sin-resultados">
+      </div>
+      <p class="avv-generic-exception-message">{{ data?.accountException?.description | translate }}</p>
+      <button class="avv-btn-secondary"
+              [id]="'account-step-exit-btn'"
+              (click)="closeStepper()">
+        {{ 'Salir del proceso' | translate | uppercase }}
+      </button>
+    </div>
+  </ng-container>
+</div>

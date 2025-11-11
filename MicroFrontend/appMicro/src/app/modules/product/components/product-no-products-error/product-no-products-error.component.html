@@ -1,0 +1,18 @@
+<ion-content [forceOverscroll]="false">
+  <div class="no-products-container">
+    <div class="no-products-header">
+      <i class="icon icon-salir" (click)="redirectToLogin()"></i>
+    </div>
+    <div class="no-products-content">
+      <img class="no-products-icon" [src]="'icons/error-x.svg' | imageUrl" alt="Logo" draggable="false">
+      <h2>{{ 'LOGIN.ERROR.GENERAL.UNKNOWN' | translate }}</h2>
+      <p class="semi-bold no-products-title">{{ 'LOGIN.ERROR.GENERAL.NO_PRODUCTS.MESSAGE' | translate }}</p>
+      <button class="avv-btn-link"
+              id="logout-retry-btn"
+              (click)="redirectPortal()">
+        <span>{{ 'LOGIN.ERROR.GENERAL.NO_PRODUCTS.BUTTON_SECONDARY' | translate | uppercase }}</span>
+        <i class="icon icon-next"></i>
+      </button>
+    </div>
+  </div>
+</ion-content>

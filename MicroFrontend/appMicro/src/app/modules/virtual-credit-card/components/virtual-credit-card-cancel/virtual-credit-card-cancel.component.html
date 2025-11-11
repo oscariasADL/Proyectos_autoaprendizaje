@@ -1,0 +1,56 @@
+<ion-content [forceOverscroll]="false">
+  <div class="virtual-credit-card-cancel-header">
+    <div class="virtual-credit-card-cancel-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="virtual-credit-card-card-cancel-header-title">
+        {{ 'VIRTUAL_CREDIT_CARD.CANCEL.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="virtual-credit-card-cancel-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="virtual-credit-card-cancel-container">
+    <div class="text-center">
+      <h6 class="semi-bold mb-5">{{ 'VIRTUAL_CREDIT_CARD.CANCEL.TITLE' | translate }}</h6>
+      <img appPreloadImage
+           [preload]="skeleton"
+           [src]="franchiseImage | imageUrl"
+           class="virtual-credit-card-image"
+           alt="Cromalina de la tarjeta virtual de crédito"
+           aria-hidden="true">
+      <ion-skeleton-text
+        #skeleton
+        class="avv-skeleton virtual-credit-card-cromaline-skeleton mt-5 mb-5"
+        animated></ion-skeleton-text>
+    </div>
+
+    <p class="virtual-credit-card-cancel-container-description">
+      {{ 'VIRTUAL_CREDIT_CARD.CANCEL.DESCRIPTION_1' | translate }}
+      <b>{{ 'VIRTUAL_CREDIT_CARD.CANCEL.DESCRIPTION_2' | translate }}</b>
+      {{ 'VIRTUAL_CREDIT_CARD.CANCEL.DESCRIPTION_3' | translate }}
+    </p>
+
+    <ul class="avv-list-red-point">
+      <li class="mb-2">
+        <p class="small">{{ 'VIRTUAL_CREDIT_CARD.CANCEL.LIST_1' | translate }}</p>
+      </li>
+    </ul>
+
+    <div class="actions">
+      <button type="button" id="virtual-credit-card-cancel-btn"
+              class="avv-btn-primary"
+              (click)="cancelVirtualCreditCard()"
+              [utag]="CANCEL_TCV.event_label"
+              [utagCategory]="CANCEL_TCV.event_category">
+        {{ 'VIRTUAL_CREDIT_CARD.CANCEL.CANCEL_BTN' | translate | uppercase }}
+      </button>
+      <button type="button" id="virtual-credit-card-cancel-back-btn"
+              class="avv-btn-secondary mt-4"
+              (click)="closeModal()">
+        {{ 'ACTIONS.BACK2' | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</ion-content>

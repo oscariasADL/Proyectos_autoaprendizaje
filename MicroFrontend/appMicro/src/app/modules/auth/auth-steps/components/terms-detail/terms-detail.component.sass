@@ -1,0 +1,19 @@
+@import 'utils'
+
+.terms-detail
+
+  &-container
+    +flex(flex-start, space-between, column)
+    height: 100%
+    overflow: auto
+    padding: calc(#{$spacer-4} + var(--safe-area-inset-top)) $spacer-3 calc(112px + var(--safe-area-inset-bottom))
+
+  &-footer
+    background-color: var(--white)
+    position: fixed
+    width: 100%
+    bottom: 0
+    left: 0
+
+    &-button
+      padding: $spacer-3

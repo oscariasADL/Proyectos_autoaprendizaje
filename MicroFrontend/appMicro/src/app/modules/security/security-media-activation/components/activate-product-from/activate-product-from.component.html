@@ -1,0 +1,83 @@
+<div class="auth-steps-container activate-product-password" [ngClass]="{'activate-product-password__credit-card': isCreditCardOrMasterDebit}">
+ <ng-container *ngIf="!isCreditCardOrMasterDebit; else creditCard">
+    <form [formGroup]="form" (ngSubmit)="activateProduct()">
+      <div class="auth-steps-body activate-product-password__container">
+        <div class="activate-product-password__detail">
+          <p class="auth-steps-title activate-product-password__title">
+            Activar tarjeta
+          </p>
+          <div class="activate-product-password__fields">
+            <div class="activate-product-password__debit-cromalite">
+              <img class="img" [src]="getCromalite(product) | imageUrl" alt="Product Image" draggable="false">
+              <app-media-activation-card [product]="product"></app-media-activation-card>
+            </div>
+          </div>
+        </div>
+        <div class="activate-product-password__actions">
+          <button class="avv-btn-primary submit-btn" type="submit" [disabled]="!form.valid">
+            {{ 'ACTIONS.CONTINUE' | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <div class="auth-steps-footer"></div>
+</div>
+
+
+
+<ng-template #creditCard>
+  <form [formGroup]="form" (ngSubmit)="activateProduct()">
+    <div class="auth-steps-body activate-product-password__container">
+      <div class="activate-product-password__detail">
+        <p class="auth-steps-title activate-product-password__title" *ngIf="isDigitalCoverType()">{{
+          'VIRTUAL_CREDIT_CARD.ACTIVATE.FORM.TITLE' | translate :{name: product.name} }}
+        </p>
+
+        <div class="activate-product-password__fields">
+          <div class="activate-product-password__credit-cromalite"
+            [ngClass]="{'activate-product-password__credit-cromalite-none': !hasImg}">
+            <swiper #swiper mode="md" [config]="slideOpts">
+              <ng-template swiperSlide *ngIf="isDigitalCoverType()">
+                <img class="img" [src]="getCromalite(product) | imageUrl" alt="Product Image" draggable="false">
+              </ng-template>
+              <ng-template swiperSlide *ngIf="!isDigitalCoverType()">
+                <img class="img front" [src]="getCromalite(product, '-expiration') | imageUrl" alt="Product Image"
+                  draggable="false">
+                <img class="img front" [ngClass]="{'on-expiration': face === '-expiration'}"
+                  [src]="getCromalite(product, '') | imageUrl" alt="Product Image" draggable="false">
+              </ng-template>
+              <ng-template swiperSlide *ngIf="!isDigitalCoverType()">
+                <img class="img" [src]="getCromalite(product, '-cvc') | imageUrl" alt="Product Image" draggable="false">
+              </ng-template>
+            </swiper>
+          </div>
+          <app-media-activation-card [product]="product"></app-media-activation-card>
+          <div *ngIf="isDigitalCoverType()">
+            <app-virtual-credit-card-benefits></app-virtual-credit-card-benefits>
+          </div>
+          <div class="activate-product-password__header" *ngIf="!isDigitalCoverType()">
+            <h6 class="semi-bold">Ingresa los datos de tu tarjeta</h6>
+            <p>Fecha de vencimiento y código CVC</p>
+          </div>
+          <div class="activate-product-password__expiration-date" *ngIf="!isDigitalCoverType()">
+            <div class="activate-product-password__expiration-date-fields">
+              <avv-input class="mr-3" (focusEvent)="setFace('-expiration', swiper)" (blurEvent)="setFace('', swiper)"
+                [type]="'credit_card_expiration'" [id]="'active-product-from-month'" [label]="'MM/AA'"
+                [control]="expiration">
+              </avv-input>
+              <avv-input class="second" (focusEvent)="setFace('-cvc', swiper)" (blurEvent)="setFace('', swiper)"
+                [type]="'credit_card_cvc'" [id]="'active-product-from-year'" [label]="'CVC'" [control]="cvc">
+              </avv-input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activate-product-password__actions">
+        <button class="avv-btn-primary submit-btn" type="submit" [disabled]="!form.valid">
+          {{ 'ACTIONS.ACTIVATE' | translate }}
+        </button>
+      </div>
+    </div>
+  </form>
+</ng-template>

@@ -1,0 +1,25 @@
+<div class="confirmation-container">
+  <img class="pocket-img" [src]="'/assets/images/illustrations/pockets/money-pocket.svg' | imageUrl:true">
+  <div class="header">
+
+    <h3 class="title">{{ "POCKET_WITH_RETURNS.CREATE.CREATE_TITLE"|translate }}</h3>
+  </div>
+  <app-voucher-list [items]="voucherItems" [className]="'no-padding-right'">
+
+  </app-voucher-list>
+  <span
+    class="periodicity">{{ PERIODICITY_LABEL[this.form.get('periodicity')?.value?.value]| translate| translate }}</span>
+
+
+  <form action="" [formGroup]="checkForm">
+    <label>
+      <input type="checkbox" class="input-checkbox" formControlName="checkTerms"/>
+    </label>
+    <span class="">{{ 'POCKET_WITH_RETURNS.CONFIRMATION.ACCEPT' | translate }}
+      <small class="avv-link-underline"
+             (click)="openUrl(ratesURL)">{{ 'POCKET_WITH_RETURNS.CONFIRMATION.TERMS_AND_CONDITIONS'| translate }}</small> </span>
+
+  </form>
+ 
+  <button class="avv-btn-primary" [disabled]="checkForm.invalid" (click)="completePocket.emit()" [utag]="RENTABILITY_POCKET_CREATE.event_label" [utagCategory]="RENTABILITY_POCKET_CREATE.event_category">{{"POCKET_WITH_RETURNS.CONFIRMATION.CREATE_POCKET" |translate | uppercase}}</button>
+</div>

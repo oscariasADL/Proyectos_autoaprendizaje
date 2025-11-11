@@ -1,0 +1,42 @@
+<ion-content [forceOverscroll]="false">
+    <div class="auth-steps-container">
+        <div class="auth-steps-header">
+            <h5>{{ title | translate }}</h5>
+            <i class="icon-salir" (click)="goToHome()"></i>
+        </div>
+        <div class="auth-steps-body auth-steps-completed-container">
+            <div class="auth-steps-completed-detail">
+                <img class="auth-steps-completed__img"
+                    [src]="(isSilentEnrollment ? 'av-villas-logo.svg' : 'illustrations/success.svg') | imageUrl"
+                    draggable="false" alt>
+                <p class="semi-bold auth-steps-completed-title">{{ completeStepTitle }}</p>
+
+                <p class="auth-steps-completed__description">
+                    {{ ((hasComplementaryServices$ | async)
+                    ? 'AUTH.STEP.COMPLETED.DESCRIPTION_1'
+                    : 'AUTH.STEP.COMPLETED.DESCRIPTION_2') | translate }}
+                </p>
+
+                <ul class="auth-steps-completed__list">
+                    <li class="auth-steps-completed__item">
+                        <i class="avv-alert-icon icon-info auth-steps-completed__icon"></i>
+                        {{ 'AUTH.STEP.COMPLETED.WARNING' | translate }}
+                    </li>
+                    <li class="auth-steps-completed__item">
+                        {{ 'AUTH.STEP.COMPLETED.DESCRIPTION_3' | translate }}
+                    </li>
+                    <li class="auth-steps-completed__item">
+                        {{ 'AUTH.STEP.COMPLETED.DESCRIPTION_4' | translate }}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="auth-steps-completed-actions">
+                <button class="avv-btn-primary auth-steps-completed__btn" (click)="redirectLogin()">
+                    {{ 'AUTH.STEP.COMPLETED.BUTTON' | translate }}
+                </button>
+            </div>
+        </div>
+        <div class="auth-steps-footer"></div>
+    </div>
+</ion-content>

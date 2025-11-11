@@ -1,0 +1,10 @@
+<div class="error-for-check">
+    <ng-container *ngFor="let key of errorsForCheckKeys">
+        <div [ngClass]="{'error': validateError(key)}" class=" error-for-check__item">
+            <small class="error-for-check__label"
+                [innerHtml]="validateError(key) ? errorsForCheck[key][1] : errorsForCheck[key][0]"></small>
+            <i class="icon-circle-check error-for-check__icon"
+                [ngClass]="{'error-for-check__icon--error': validateError(key)}"></i>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,25 @@
+@import 'utils'
+
+.complementary-services-otp-container
+  +flex(center, center, column)
+  padding: $spacer-4 $spacer-2
+  min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+  text-align: center
+
+  > 
+    p
+      font-size: 1.25rem
+    small
+      font-size: 1rem
+
+  ::ng-deep
+    .input-password-container
+      margin: 0
+
+      fieldset
+        .password-input
+          display: flex
+          width: 100vw
+          align-items: center
+          justify-content: space-between
+          padding: 0 $spacer-2

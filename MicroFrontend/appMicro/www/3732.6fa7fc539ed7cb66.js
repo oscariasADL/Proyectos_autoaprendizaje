@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[3732],{63732:(r,_,e)=>{e.r(_),e.d(_,{StoreRatingPluginWeb:()=>a});var n=e(10467),s=e(15083);class a extends s.E_{requestReview(){return(0,n.A)(function*(){return Promise.resolve()})()}}}}]);

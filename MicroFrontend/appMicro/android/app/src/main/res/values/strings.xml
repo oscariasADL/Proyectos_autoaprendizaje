@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AV Villas</string>
+    <string name="title_activity_main">AV Villas</string>
+    <string name="package_name">co.com.adl.mb.avvillas</string>
+    <string name="custom_url_scheme">co.com.adl.mb.avvillas</string>
+    <string name="antelop_application_id">3759335892501787292</string>
+    <string name="antelop_issuer_id">avillas</string>
+</resources>

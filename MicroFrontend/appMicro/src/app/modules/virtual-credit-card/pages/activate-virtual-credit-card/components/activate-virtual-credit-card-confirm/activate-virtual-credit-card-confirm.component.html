@@ -1,0 +1,33 @@
+<article class="virtual-credit-card-confirm-container">
+  <div class="virtual-credit-card-confirm-title text-center mb-5 mt-3">
+    <h2 class="semi-bold px-3">{{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.CONFIRM.TITLE' | translate }}</h2>
+  </div>
+
+  <p class="virtual-credit-card-confirm-description mb-3">
+    {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.CONFIRM.DESCRIPTION' | translate }}
+  </p>
+
+  <div class="virtual-credit-card-confirm-quota mb-5">
+    <i class="icon icon-tarjeta"></i>
+    <p>Virtual</p>
+    <span>${{ amount.value }}</span>
+  </div>
+
+  <button 
+  type="button" 
+  id="virtual-credit-card-confirm-btn"
+  class="avv-btn-primary mb-4" (click)="activate.emit()"
+  [utag]="ACTIVATE_TCV_CONFIRM.event_label"
+  [utagCategory]="ACTIVATE_TCV_CONFIRM.event_category"
+  >
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+
+  <div class="virtual-credit-card-confirm-link mb-3">
+    <button class="avv-btn-link"
+            id="virtual-credit-card-detail-instructions-btn"
+            (click)="backStep.emit()">
+      {{ 'VIRTUAL_CREDIT_CARD.ACTIVATE.CONFIRM.LINK' | translate }}
+    </button>
+  </div>
+</article>

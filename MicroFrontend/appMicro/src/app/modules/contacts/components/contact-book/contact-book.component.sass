@@ -1,0 +1,52 @@
+.contact-book
+  &-loading
+    margin-top: 24px
+
+  &-empty
+    text-align: center
+    margin-top: 16px
+
+    img
+      max-width: 200px
+      margin: 24px
+
+    p
+      color: var(--gray-1)
+      font-size: 16px
+      font-weight: 600
+      line-height: 1.5
+      text-align: center
+      display: inline-block
+
+  .avv-panel-empty
+    padding: 60px 0
+
+  ::ng-deep
+    .form-input
+      padding: 32px 0
+
+    &:nth-child(4n-2)
+      .contact-item
+        .contact-image
+          background-color: #ffd042 !important
+
+    &:nth-child(4n-1)
+      .contact-item
+        .contact-image
+          background-color: #f99594 !important
+
+    &:nth-child(4n+0)
+      .contact-item
+        .contact-image
+          background-color: #6a81e7 !important
+
+    &:nth-child(4n+1)
+      .contact-item
+        .contact-image
+          background-color: #51daa9 !important
+
+  p.contact-book-label
+    margin: 20px 16px 16px 0
+    font-size: 12px
+    line-height: 1.33
+    color: var(--gray-1)

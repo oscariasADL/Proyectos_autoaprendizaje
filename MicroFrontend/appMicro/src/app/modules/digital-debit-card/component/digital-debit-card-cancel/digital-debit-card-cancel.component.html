@@ -1,0 +1,42 @@
+<ion-content [forceOverscroll]="false">
+  <div class="digital-debit-card-cancel-header">
+    <div class="digital-debit-card-cancel-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="digital-debit-card-card-cancel-header-title">
+        {{ 'DIGITAL_DEBIT_CARD.CANCEL.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="digital-debit-card-cancel-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="digital-debit-card-cancel-container">
+    <div class="text-center">
+      <h6 class="semi-bold mb-5">{{ 'DIGITAL_DEBIT_CARD.CANCEL.TITLE' | translate }}</h6>
+      <img [src]="'digital-debit-card.svg' | imageUrl" class="digital-debit-card-image" alt="">
+    </div>
+
+    <ul class="avv-list-red-point">
+      <li class="mb-2">
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.CANCEL.LIST_1' | translate }}</p>
+      </li>
+      <li>
+        <p class="small">{{ 'DIGITAL_DEBIT_CARD.CANCEL.LIST_2' | translate }}</p>
+      </li>
+    </ul>
+
+    <div class="actions">
+      <button type="button" id="digital-debit-card-cancel-btn"
+              class="avv-btn-primary"
+              (click)="closeModal()">
+        {{ 'ACTIONS.BACK2' | translate | uppercase }}
+      </button>
+      <button type="button" id="digital-debit-card-cancel-back-btn"
+              class="avv-btn-secondary mt-4"
+              (click)="cancelDigitalDebitCard()">
+        {{ 'DIGITAL_DEBIT_CARD.CANCEL.CANCEL_BTN' | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</ion-content>

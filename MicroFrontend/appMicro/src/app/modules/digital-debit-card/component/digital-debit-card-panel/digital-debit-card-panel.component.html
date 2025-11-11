@@ -1,0 +1,24 @@
+<div class="digital-debit-card-container" *ngIf="showDigitalDebitCardPanel$ | async" id="digital-debit-card-container">
+
+  <div *ngIf="digitalDebitCard$ | async as digitalDebitCard"
+       (click)="digitalDebitCardDetail(digitalDebitCard)"
+       [attr.aria-label]="'DIGITAL_DEBIT_CARD.PANEL.TITLE' | translate"
+       class="digital-debit-card-detail">
+
+    <div class="digital-debit-card-detail-left">
+      <img [src]="franchiseImages.MASTERCARD | imageUrl" alt="" draggable="false" [attr.aria-hidden]="true">
+      <div>
+        <p class="semi-bold">{{ digitalDebitCard?.name }}</p>
+        <button class="avv-link-underline">
+          <i class="icon icon-ver" [attr.aria-hidden]="true"></i> {{ 'DIGITAL_DEBIT_CARD.PANEL.TITLE' | translate }}
+        </button>
+      </div>
+    </div>
+    <div class="mt-1" *ngIf="digitalDebitCard?.isNew" [attr.aria-hidden]="true">
+      <span class="avv-alert-status-danger">
+        {{ 'DIGITAL_DEBIT_CARD.PANEL.NEW' | translate }}
+      </span>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,42 @@
+<section class="wrapper-slider">
+  <swiper
+    #swiper
+    [config]="slideOpts"
+    [hidden]="!showSlides"
+    class="sliders-content">
+    <ng-container *ngFor="let slide of sliders; let i = index; let isLast = last">
+      <ng-template swiperSlide>
+        <div class="slide-item" [class.swiper-slide-active-only]="sliders.length === 1" [ngClass]="slide.class"
+             [class.swiper-slide-active-is-end]="isLast">
+          <figure class="request-products-item-img">
+            <img [src]="slide.img | imageUrl" [alt]="slide.img">
+          </figure>
+          <div class="slide-data">
+            <p class="title" [innerHTML]="slide.title | translate"></p>
+            <p class="content" [innerHTML]="slide.content | translate"></p>
+            <button
+              (click)="selectProduct(slide)"
+              id="{{slide.id || 'home-request-products-btn-' + i }}"
+              class="campaign-action"
+              type="button">
+              {{ slide.btn | translate }}
+            </button>
+          </div>
+          <span class="slide-nav" *ngIf="!onlySlide">
+      <button class="slides-button" (click)="slidePrev()">
+        <img class="request-products-item-img"
+             [src]="'slider-campaign/arrow-back.svg' | imageUrl"
+             alt="arrow-back">
+      </button>
+       <span class="position">{{ i + 1 }} / {{ sliders.length }}</span>
+       <button class="slides-button" (click)="slideNext()">
+         <img class="request-products-item-img"
+              [src]="'slider-campaign/arrow-next.svg' | imageUrl"
+              alt="arrow-next">
+       </button>
+      </span>
+        </div>
+      </ng-template>
+    </ng-container>
+  </swiper>
+</section>

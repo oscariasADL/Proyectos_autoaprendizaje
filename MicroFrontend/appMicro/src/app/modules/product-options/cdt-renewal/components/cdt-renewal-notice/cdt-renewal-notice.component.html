@@ -1,0 +1,38 @@
+<ng-container *ngIf="showCdtRenewal$ | async">
+  <div class="cdt-renewal-notice-container"
+       [ngClass]="{'disabled': disabledCdtRenewal$ | async}"
+       (click)="redirectCdtRenewal()">
+
+    <ng-container *ngIf="cdtRenewalData$ | async as cdtRenewalData">
+
+      <div class="cdt-renewal-notice-active" *ngIf="cdtRenewalData?.reInvest === cdtRenewalStatus.ACTIVE">
+        <img [src]="'icons/renovar-cdt.svg' | imageUrl" alt="">
+        <div class="pl-1">
+          <p class="cdt-renewal-notice-active-info small semi-bold">
+            {{ 'CDT_RENEWAL.NOTICE.ACTIVE.DESCRIPTION_NOTICE' | translate: { date: (cdtRenewalData.expDate | date: 'dd/MM/y') } }}
+          </p>
+          <div class="cdt-renewal-notice-active-panel">
+            <small class="avv-link-underline">{{ 'CDT_RENEWAL.NOTICE.ACTIVE.ACTION' | translate }}</small>
+            <i class="icon-next"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="cdt-renewal-notice-inactive" *ngIf="cdtRenewalData?.reInvest === cdtRenewalStatus.INACTIVE">
+        <div class="cdt-renewal-notice-inactive-panel">
+          <img [src]="'icons/renovar-cdt.svg' | imageUrl" alt="">
+          <p class="semi-bold pl-3">{{ 'CDT_RENEWAL.NOTICE.INACTIVE.ACTION' | translate }}</p>
+        </div>
+        <i class="icon-next cdt-renewal-notice-inactive-next"></i>
+      </div>
+
+    </ng-container>
+  </div>
+
+  <div class="cdt-renewal-notice-info" [ngClass]="{'last-day': disabledCdtRenewal$ | async}">
+    <i class="icon-info"></i>
+    <small class="pl-1">
+      {{ ((disabledCdtRenewal$ | async) ? 'CDT_RENEWAL.LAST_DAY' : 'CDT_RENEWAL.INFO') | translate  }}
+    </small>
+  </div>
+</ng-container>

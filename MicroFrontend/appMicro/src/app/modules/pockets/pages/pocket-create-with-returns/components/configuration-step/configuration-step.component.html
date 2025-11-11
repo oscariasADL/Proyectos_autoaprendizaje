@@ -1,0 +1,92 @@
+<div class="container">
+  <form class="form-container">
+    <h6 class="title">
+      {{ 'POCKET_WITH_RETURNS.CONFIGURATION.TITLE' | translate }}
+    </h6>
+    <avv-input
+      [id]="'pocket-goeal'"
+      [type]="'currency'"
+      [label]="'POCKET_WITH_RETURNS.CONFIGURATION.GOAL' | translate"
+      [control]="goal">
+    </avv-input>
+    <avv-input
+      [type]="'currency'"
+      [id]="'pocket-initial-contribution'"
+      [label]="'POCKET_WITH_RETURNS.CONFIGURATION.INITIAL_CONTRIBUTION' | translate"
+      [control]="openAmount"
+      [hint]="'POCKET_WITH_RETURNS.CONFIGURATION.MIN_OPEN_AMOUNT_VALUE'">
+    </avv-input>
+    <avv-input
+      [id]="'due-date'"
+      [type]="'numeric'"
+      [label]="'POCKET_WITH_RETURNS.CONFIGURATION.DUE_DATE' | translate"
+      [control]="period">
+    </avv-input>
+    <app-notification icon="icon-info"
+                      [description]="'POCKET_WITH_RETURNS.POCKET_DETAIL.BLOCKED_MONEY_ADVISE'| translate">
+    </app-notification>
+    <div class="dropdown-container">
+      <avv-dropdown
+        [id]="'periodicity'"
+        [items]="periodicityItems"
+
+        [label]="'POCKET_WITH_RETURNS.CREATE.FIELDS.PERIODICITY' | translate"
+        [control]="periodicity">
+      </avv-dropdown>
+
+    </div>
+    <div class="card">
+      <h5 class="title">{{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.FEE_VALUE_FOR_GOAL' | translate }}</h5>
+      <avv-input
+        [id]="'fee-value'"
+        [type]="'currency'"
+        [label]="'POCKET_WITH_RETURNS.CONFIGURATION.QUOTA' | translate"
+        [control]="quota"
+        [hint]="'POCKET_WITH_RETURNS.CREATE.FIELDS.HINTS.ACCOUNT_MOUNT_WILL_BE_BLOCKED'"
+      >
+      </avv-input>
+    </div>
+    <h6 class="renew">
+      {{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.RENEWAL_QUESTION' | translate }}
+    </h6>
+    <avv-radio
+      class="avv-radio-input"
+      [id]="'renew-pocket'"
+      [items]="toggleValues"
+      [control]="renewPocket">
+    </avv-radio>
+    <div
+      *ngIf="renewPocket.value"
+    >
+      <h6 class="renew">
+        {{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.RENEWAL_WITH_GAINS_QUESTION' | translate }}
+      </h6>
+      <avv-radio
+        class="avv-radio-input"
+        [id]="'renew-with-gains'"
+        [items]="toggleValues"
+        [control]="renewWithProfits">
+      </avv-radio>
+    </div>
+    <div class="about-container">
+      <p class="consult-rate">
+        {{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.RATE_TIP_DETAIL' | translate }}
+
+      </p>
+      <p class="consult-rate"> {{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.DAILY_RATE_TIP' | translate }}</p>
+
+      <small (click)="openUrl(ratesURL)"
+             class="consult-rate avv-link-underline">{{ 'POCKET_WITH_RETURNS.CREATE.FIELDS.CURRENT_MONTHLY_RATES' | translate }}</small>
+    </div>
+  </form>
+  <button class="avv-btn-primary" 
+[disabled]="this.form.invalid"
+          
+(click)="onSubmit()"
+[utag]="RENTABILITY_POCKET_CONTINUE_CONFIRMATION.event_label"
+[utagCategory]="RENTABILITY_POCKET_CONTINUE_CONFIRMATION.event_category">
+{{ "POCKET_WITH_RETURNS.CREATE.CONTINUE"| translate | uppercase }}
+  
+</button>
+
+</div>

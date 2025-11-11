@@ -1,0 +1,33 @@
+<app-headers
+  [backUrl]="'/'"
+  [title]="'Giros / Recargas'">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+
+  <div class="withdraw-container">
+    <div class="avv-icons-btn-list">
+      <ng-template *ngFor="let item of withdrawList" [appFeatureToggle]="item.featureFlagKey">
+        <div
+          (click)="item.action && !item.disabled ? item.action() : null"
+          [id]="item.id"
+          [ngClass]="{'disabled': item.disabled}"
+          role="button"
+          [attr.aria-label]="item.label"
+          class="avv-icons-btn-list-item {{ item.className }}">
+          <div class="avv-icons-btn-list-item-icon">
+            <img
+              [src]="item.image | imageUrl"
+              alt>
+          </div>
+          <p
+            class="avv-icons-btn-list-item-label small"
+            [innerHTML]="item.label">
+          </p>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,11 @@
+<div class="register-breb-key">
+  <div class="register-breb-key__icon">
+    <i class="icon icon-info" (click)="onShowTagAvalPopover($event)"></i>
+    <img [src]="getIcon()" alt="">
+  </div>
+  <div class="register-breb-key__detail">
+    <div class="register-breb-key__text" role="button" aria-label="Ver todo" (click)="onGoToLink()">
+      <i class="icon icon-more"></i>{{'BRE_B.REGISTER_KEY' | translate}}
+    </div>
+  </div>
+</div>

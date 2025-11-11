@@ -1,0 +1,18 @@
+@import 'utils'
+
+.complementary-services-request-info
+  &-container
+    +flex(center, center, column)
+    padding: $spacer-4 $spacer-2
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+  &-title
+    margin-bottom: $spacer-4
+    text-align: center
+    max-width: 300px
+
+  &-list
+    margin: 40px 0
+
+    li:before
+      background-color: var(--red-1)

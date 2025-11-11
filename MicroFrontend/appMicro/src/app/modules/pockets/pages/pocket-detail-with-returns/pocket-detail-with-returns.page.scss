@@ -1,0 +1,86 @@
+
+.pocket {
+    &__resume{
+      background-color: #f8f9fa;
+      padding: 24px 0;
+    }
+
+    &__header{
+      display: flex; 
+      flex-direction: row;
+      gap: 9px;
+      padding: 0 16px;
+    }
+    
+    &__icon{
+      margin: auto 0;
+      font-size: 22px;
+    }
+    
+    &__progress{
+      padding: 24px 0;
+
+      &-information{
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      &-title{
+        text-align: center;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 29px;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      .action-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+  
+      .action-item-image {
+        border-radius: 50%;
+        height: 56px;
+        width: 56px;
+        background: white;
+        box-shadow: 0px 1px 2px 0px rgba(37, 43, 49, 0.08)
+      }
+    }
+
+    &-detail__no-content{
+      padding: 1rem;
+      height: 100%;
+    }
+
+    &-detail-container{
+      height: 100%;
+    }
+  }
+  
+
+
+.avv-toggle-text{
+  display: flex;
+  align-items: start;
+
+  .avv-toggle-label{
+    color: var(--gray-7);}
+
+  .icon-info-tooltip{
+    flex-grow: 1;
+    margin-left: 2px;
+    font-size: 20px;
+    color: var(--blue-1);}
+
+  .transfiya-management-step-default-account-text, .transfiya-management-step-trust-relation-text{
+    flex-grow: 1;}
+  }

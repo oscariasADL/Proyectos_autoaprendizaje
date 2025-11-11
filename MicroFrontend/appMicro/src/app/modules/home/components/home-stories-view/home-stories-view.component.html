@@ -1,0 +1,20 @@
+<div class="story-loader">
+  <div class="story-loader-value"></div>
+</div>
+<div class="story-close">
+  <i class="icon-salir" (click)="closeModal()"></i>
+</div>
+<div class="story-container" [id]="story.storyModalId">
+  <div>
+    <h2 class="story-title">{{story.title}}</h2>
+    <h3 class="story-subtitle" *ngIf="story.subtitle">{{story.subtitle}}</h3>
+  </div>
+  <img appPreloadImage [preload]="skeleton" class="story-image" [src]="story.image | imageUrlAlt" [alt]="">
+  <ion-skeleton-text #skeleton class="story-skeleton" animated></ion-skeleton-text>
+  <ol class="story-list" *ngIf="story.itemList">
+    <li class="story-list-item" *ngFor="let item of story.itemList" [innerHTML]="item"></li>
+  </ol>
+  <p class="story-description" *ngIf="story.description" [innerHTML]="story.description"></p>
+  <button class="avv-btn-primary story-action" *ngIf="story.buttonText"
+    (click)="redirectUrl()">{{story.buttonText}}</button>
+</div>

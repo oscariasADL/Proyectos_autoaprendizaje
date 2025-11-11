@@ -1,0 +1,29 @@
+<ion-content [forceOverscroll]="false">
+    <div class="auth-steps-container">
+        <div class="auth-steps-header">
+            <h5>{{ title | translate }}</h5>
+            <i class="icon-salir" (click)="showExitModal()"></i>
+        </div>
+        <div class="auth-steps-body confirm-device-registration__container">
+            <div class="confirm-device-registration__detail">
+                <img class="mb-5" [src]="getIconByAuthStepType() | imageUrl" [alt]="title" draggable="false">
+                <h6 class="confirm-device-registration__title"
+                    [innerHTML]="getTitleByAuthStepType() | translate | safeHtml">
+                </h6>
+                <p class="confirm-device-registration__description"
+                    [innerHTML]="getDescriptionByAuthStepType() | translate | safeHtml">
+                </p>
+            </div>
+
+            <div class="confirm-device-registration__actions">
+                <button class="avv-btn-primary" (click)="run(true)" id="register">
+                    {{ 'AUTH.STEP.CONFIRM_DEVICE_REGISTRATION.REGISTER' | translate }}
+                </button>
+                <a (click)="showExitModal()" class="avv-link auth-steps-link" id="exit">
+                    {{ 'AUTH.STEP.CONFIRM_DEVICE_REGISTRATION.CANCEL' | translate }}
+                </a>
+            </div>
+        </div>
+        <div class="auth-steps-footer"></div>
+    </div>
+</ion-content>

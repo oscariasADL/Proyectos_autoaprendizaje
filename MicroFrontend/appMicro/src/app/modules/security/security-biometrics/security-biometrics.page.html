@@ -1,0 +1,34 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="biometricText$ | async "
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <div class="security-biometrics-container">
+    <app-security-biometric-alert
+      *ngIf="isActiveStep$(securityBiometricStep.question) | async"
+      [type]="biometricType$ | async"
+      [hasBiometric]="hasBiometricRegistered$ | async"
+      (option)="runAction($event)">
+    </app-security-biometric-alert>
+
+    <app-security-biometric-password
+      *ngIf="isActiveStep$(securityBiometricStep.password) | async"
+      (verifyPassword)="verifyPassword($event)">
+    </app-security-biometric-password>
+
+    <app-security-biometric-finished
+      *ngIf="isActiveStep$(securityBiometricStep.finished) | async"
+      [type]="biometricType$ | async"
+      [hasBiometric]="hasBiometricRegistered$ | async"
+      (closeEvent)="close()">
+    </app-security-biometric-finished>
+
+    <app-security-biometric-error
+      *ngIf="isActiveStep$(securityBiometricStep.error) | async"
+      [type]="biometricType$ | async"
+      (closeEvent)="close()">
+    </app-security-biometric-error>
+  </div>
+</ion-content>

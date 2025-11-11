@@ -1,0 +1,79 @@
+<app-headers #header [title]="'CUSTOMIZE_AVAL_TAG.HEADER_TITLE' | translate" [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="customize-aval-tag">
+    <figure class="customize-aval-tag__logo">
+      <img [src]="'aval-icons/tag-aval-transfers.svg' | imageUrl" alt="Logo Tag Aval">
+    </figure>
+    <h2 class="customize-aval-tag__title">
+      {{ 'CUSTOMIZE_AVAL_TAG.TITLE' | translate }}
+    </h2>
+    <div class="customize-aval-tag__account" *ngIf="currentSpiUserKey$ | async as currentSpiUserKey">
+      <i class="icon icon-salario"></i>
+      <p>
+        {{ getProductType({type: currentSpiUserKey.accountType}) + ' No. ' + currentSpiUserKey.numberProduct }}
+      </p>
+    </div>
+    <form id="customizeAvalTagForm" [formGroup]="form" (ngSubmit)="modifyAvalTagAction()">
+      <div class="customize-aval-tag__form-control">
+        <label for="newKeyId">
+          {{ 'CUSTOMIZE_AVAL_TAG.INPUT_LABEL'| translate }}
+        </label>
+        <div class="form-control__input">
+          <i class="icon icon-aval-tag"></i>
+          <input type="text" id="newKeyId" [utagCategory]="TAG_AVAL_UPDATE_NAME_CUSTOMIZATION_EVENT.event_category"
+                 [utag]="TAG_AVAL_UPDATE_NAME_CUSTOMIZATION_EVENT.event_label" [formControl]="newKeyIdControl"
+                 (blur)="newKeyIdControl.markAsDirty()">
+        </div>
+        <avv-validation-messages [control]="newKeyIdControl"></avv-validation-messages>
+      </div>
+    </form>
+    <div class="customize-aval-tag__recommendations">
+      <ion-accordion-group class="layout" [value]="'main'">
+        <ion-accordion [value]="'main'" class="acc-content">
+          <ion-item slot="header">
+            <ion-label>
+              <h2>{{ 'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.TITLE'|translate }}</h2>
+            </ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ul class="avv-list-blue-point">
+              <li>
+                <p [innerHTML]="'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_1' | translate | safeHtml"></p>
+              </li>
+              <li>
+                <p [innerHTML]="'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_2' | translate | safeHtml"></p>
+              </li>
+              <li>
+                <p [innerHTML]="'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_3' | translate | safeHtml"></p>
+              </li>
+              <li>
+                <p [innerHTML]="'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_4' | translate | safeHtml"></p>
+              </li>
+              <li>
+                <p [innerHTML]="'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_5' | translate | safeHtml"></p>
+              </li>
+              <li>
+                <a href="javascript:void(0);" (click)="showTermsAndConditions()">
+                  {{ 'CUSTOMIZE_AVAL_TAG.RECOMMENDATIONS.ITEM_6' | translate }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+    <div class="customize-aval-tag__buttons-container">
+      <button type="submit" form="customizeAvalTagForm" class="avv-btn-primary"
+              [utagCategory]="TAG_AVAL_CONTINUE_CUSTOMIZATION_EVENT.event_category"
+              [utag]="TAG_AVAL_CONTINUE_CUSTOMIZATION_EVENT.event_label" [disabled]="form.invalid">
+        {{ 'ACTIONS.SAVE' | translate | uppercase }}
+      </button>
+      <button type="button" class="avv-btn-link" [utagCategory]="TAG_AVAL_CANCEL_CUSTOMIZATION_EVENT_ALT.event_category"
+              [utag]="TAG_AVAL_CANCEL_CUSTOMIZATION_EVENT_ALT.event_label" (click)="cancelAction()">
+        {{ 'ACTIONS.CANCEL' | translate }}
+      </button>
+    </div>
+  </article>
+</ion-content>

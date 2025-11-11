@@ -1,0 +1,85 @@
+@import 'utils'
+
+@mixin flex-column($gap)
+  display: flex
+  flex-direction: column
+  gap: $gap
+
+.start-wallet-modal
+  background-color: var(--white)
+  padding: $spacer-4 $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+  @include flex-column($spacer-3)
+
+  &-header
+    @include flex-column($spacer)
+    align-items: center
+
+    > h2
+      font-size: 16px
+      font-weight: 600
+
+  &-container
+    @include flex-column($spacer-3)
+
+    .item-info
+      display: flex
+      align-items: start
+      gap: $spacer-2
+
+    .item-info > .info-icon
+      font-size: 22px
+
+    .form-terms
+      display: flex
+      align-items: center
+      gap: $spacer-2
+
+      a
+        text-decoration: underline
+
+  &-actions
+    @include flex-column($spacer-3)
+
+    .avv-btn.btn-apple
+      display: flex
+      justify-content: center
+      align-items: end
+      gap: 4px
+      background-color: #252B31
+      border-radius: 4px
+      font-size: 18px
+      color: var(--white)
+
+      &:disabled
+        background-color: #9DA6AF
+
+      span
+        display: inline-flex
+        align-items: start
+
+        i
+          font-size: 24px
+
+
+.input-checkbox:where([type="checkbox"])
+  -webkit-appearance: none
+  appearance: none
+  width: 24px
+  height: 24px
+  margin: calc(0.75em - 11px) 0.25rem 0 0
+  vertical-align: top
+  border: 1px solid #5c6b7a
+  border-radius: 4px
+  background: var(--white) no-repeat center center
+
+
+.input-checkbox:where([type="checkbox"]):where(:active:not(:disabled), :focus)
+  outline: none
+
+.input-checkbox:where([type="checkbox"]):disabled
+  background: #F8F9FA
+
+.input-checkbox[type="checkbox"]:checked
+  background-image: url("/assets/img/icons/checkbox.svg")
+  background-color: var(--success)
+  border-color: transparent

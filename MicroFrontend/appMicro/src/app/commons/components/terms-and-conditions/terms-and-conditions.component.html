@@ -1,0 +1,16 @@
+<app-headers
+  #header
+  [title]="title"
+  [type]="header?.headerType?.whitePrimary"
+  (closeAction)="closeModal()">
+</app-headers>
+<ion-content>
+  <article class="terms-and-conditions">
+    <section class="terms-and-conditions-container" [innerHTML]="content"></section>
+    <div class="footer-action">
+      <button type="button" class="avv-btn-primary"
+              (click)="closeModal()">{{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+      </button>
+    </div>
+  </article>
+</ion-content>

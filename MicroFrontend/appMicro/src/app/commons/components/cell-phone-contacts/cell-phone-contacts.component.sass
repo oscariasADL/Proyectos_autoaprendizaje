@@ -1,0 +1,73 @@
+@import 'utils'
+
+.cell-phone-contacts
+  &-header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 3
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: calc(#{$spacer-2} + var(--safe-area-inset-top)) $spacer-2 $spacer-2
+    background-color: var(--white)
+
+    .icon-salir
+      position: absolute
+      right: 8px
+      bottom: $spacer-2
+      font-size: 24px
+      color: var(--gray-2)
+      padding: 8px
+
+    p
+      margin-left: 8px
+      font-size: 20px
+      line-height: 1.6
+      color: var(--gray-2)
+
+  &-content
+    overflow: auto
+    margin-top: calc(64px + var(--safe-area-inset-top))
+
+    &-header
+      padding: $spacer-2
+      position: relative
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: var(--gray-4)
+
+      > *
+        padding: 0
+        margin: 0
+
+      &.tabs
+        padding: $spacer-2 0 0
+
+        .avv-tabs
+          margin-top: $spacer-3
+
+    &-body
+      padding: 0 $spacer-2 $spacer-3
+
+      .content-villas
+        .small
+          color: var(--gray-2)
+          padding: $spacer-3 $spacer-2
+          text-align: center
+
+          &.pb-0
+            padding-bottom: 0
+
+        ::ng-deep .form-input
+          padding: $spacer-3 0 $spacer-4
+
+      .contacts-content-empty
+        text-align: center

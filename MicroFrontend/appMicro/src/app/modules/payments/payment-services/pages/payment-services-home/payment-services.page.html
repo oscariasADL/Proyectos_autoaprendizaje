@@ -1,0 +1,152 @@
+<app-headers
+  [backUrl]="'/payments'"
+  [title]="'PAYMENTS.SERVICES.HEADER' | translate">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+
+  <div class="payment-services-container">
+    <ng-container
+      *ngTemplateOutlet="(working$ | async) ? working : (completed$ | async) ? (hasServices$ | async) ? content : empty: error"></ng-container>
+  </div>
+
+</ion-content>
+
+<ng-template #working>
+  <ion-skeleton-text
+    class="avv-skeleton payment-services-working-title"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    class="avv-skeleton payment-services-working-sub-title"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    class="avv-skeleton payment-services-working-description"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    class="avv-skeleton payment-services-working-label"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    *ngFor="let item of [1, 2, 3]; let i = index"
+    class="avv-skeleton payment-services-working-card"
+    animated>
+  </ion-skeleton-text>
+</ng-template>
+
+<ng-template #error>
+  <ng-container *ngTemplateOutlet="newServicesPanel"></ng-container>
+
+  <div class="avv-panel-empty">
+    <div class="avv-panel-empty-image">
+      <img class="payment-credits-empty-image" [src]="'icons/recargar-celular-cancelar.svg' | imageUrl" alt="">
+    </div>
+    <small class="avv-panel-empty-text">
+      {{ 'PAYMENTS.SERVICES.ERROR.TEXT' | translate }}
+    </small>
+    <button
+      class="avv-btn-secondary"
+      (click)="goToHome()"
+      [id]="'pocket-detail-empty-btn'">
+      {{ 'PAYMENTS.SERVICES.ERROR.BUTTON' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <ng-container *ngTemplateOutlet="newServicesPanel"></ng-container>
+  <div class="avv-panel-empty">
+    <p class="avv-list-panel-title avv-title-semibold">
+      {{ 'PAYMENTS.SERVICES.EMPTY.DESCRIPTION' | translate }}
+    </p>
+    <div class="avv-panel-empty-image">
+      <img
+        class="icon"
+        [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+        alt="sin-resultados">
+    </div>
+    <small class="avv-panel-empty-text">
+      {{ 'PAYMENTS.SERVICES.EMPTY.TEXT' | translate }}
+    </small>
+  </div>
+</ng-template>
+
+<ng-template #newServicesPanel>
+  <div class="new-services-empty-content">
+    <p class="avv-list-panel-title">
+      {{ 'PAYMENTS.SERVICES.CONTENT.MESSAGE' | translate }}
+    </p>
+    <button
+      class="avv-btn-primary small"
+      [routerLink]="['/payments/services/pay/unregistered']"
+      [id]="'pay-unregistered-service-link'">
+      {{ 'PAYMENTS.SERVICES.CONTENT.PAY_NEW_SERVICE' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div
+    class="payment-services-content"
+    *ngIf="services$ | async as services">
+    <p class="small payment-services-content-message">
+      {{ 'PAYMENTS.SERVICES.CONTENT.MESSAGE' | translate }}
+    </p>
+    <ng-template [appFeatureToggle]="featureFlagsKey.PaymentUnregisteredService">
+      <button
+        class="avv-btn-secondary"
+        [routerLink]="['/payments/services/pay/unregistered']"
+        [id]="'pay-unregistered-service-link'">
+        {{ 'PAYMENTS.SERVICES.CONTENT.PAY_NEW_SERVICE' | translate | uppercase }}
+      </button>
+    </ng-template>
+
+    <ng-container *ngIf="hasServices$ | async; else empty">
+      <div
+        class="avv-list-panel"
+        *ngIf="services?.biller?.length > 0">
+        <small
+          class="avv-list-panel-title"
+          *ngIf="false">
+          {{ 'PAYMENTS.SERVICES.CONTENT.PUBLIC' | translate }}
+        </small>
+        <ng-container *ngFor="let bill of services?.biller">
+          <app-service-payment-card
+            [paymentBill]="bill"
+            [paymentBillInfo]="bill | serviceCard: (getProduct(bill?.productId) | async)"
+            (pay)="payBill(bill)"
+            (schedule)="scheduleBill(bill)"
+            (editSchedule)="editScheduledBill(bill)"
+            (removeScheduling)="removeScheduledBill(bill)"
+          ></app-service-payment-card>
+        </ng-container>
+        <!--<app-payment-card
+          *ngFor="let bill of services?.biller"
+          [card]="bill | serviceCard"
+          (pay)="payBill(bill)">
+        </app-payment-card>-->
+      </div>
+
+      <div
+        class="avv-list-panel"
+        *ngIf="services?.noBiller?.length > 0">
+        <small
+          class="avv-list-panel-title"
+          *ngIf="false">
+          {{ 'PAYMENTS.SERVICES.CONTENT.OTHERS' | translate }}
+        </small>
+        <ng-container *ngFor="let bill of services?.noBiller">
+          <app-service-payment-card
+            [paymentBill]="bill"
+            [paymentBillInfo]="bill | serviceCard: (getProduct(bill?.productId) | async)"
+            (pay)="payBill(bill)"
+          ></app-service-payment-card>
+        </ng-container>
+        <!--<app-payment-card
+          *ngFor="let bill of services?.noBiller"
+          [card]="bill | serviceCard"
+          (pay)="payBill(bill)">
+        </app-payment-card>-->
+      </div>
+    </ng-container>
+
+  </div>
+</ng-template>

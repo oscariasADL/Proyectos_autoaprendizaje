@@ -1,0 +1,84 @@
+<app-headers
+  #header
+  [title]="'AVAL.STOCKS.TITLE' | translate"
+  [closeUrl]="'/'"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <ng-container
+          *ngTemplateOutlet="(working$ | async) ? working : (completed$ | async) ? ((stocksDetail$ | async) ? content : empty) : error">
+  </ng-container>
+</ion-content>
+
+<ng-template #working>
+  <div class="stocks-detail-working">
+    <ion-skeleton-text
+            *ngFor="let item of [1, 2, 3, 4, 5]"
+            class="avv-skeleton stocks-detail-working-item" animated>
+    </ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="avv-content-empty p-3">
+    <div class="avv-content-empty-image">
+      <img [src]="'sesion-finalizada.svg' | imageUrl" draggable="false">
+    </div>
+    <p class="bold avv-content-empty-text mb-3" [innerHTML]="'AVAL.STOCKS.ERROR.TITLE' | translate"></p>
+    <p class="avv-content-empty-message" [innerHTML]="'AVAL.STOCKS.ERROR.MESSAGE' | translate"></p>
+    <button class="avv-btn-primary mt-5"
+            [id]="'stocks-detail-error-exit-btn'"
+            (click)="close()">
+      {{ 'AVAL.STOCKS.ERROR.BUTTON' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <div class="avv-content-empty p-3">
+    <div class="avv-content-empty-image">
+      <img [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" alt="sin-resultados">
+    </div>
+    <p class="bold avv-content-empty-text mb-3" [innerHTML]="'AVAL.STOCKS.EMPTY.TITLE' | translate"></p>
+    <p class="avv-content-empty-message semi-bold" [innerHTML]="'AVAL.STOCKS.EMPTY.MESSAGE' | translate"></p>
+    <button class="avv-btn-secondary mt-5"
+            [id]="'stocks-detail-empty-exit-btn'"
+            (click)="backStocks()">
+      {{ 'AVAL.STOCKS.EMPTY.BUTTON' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div *ngIf="stocksDetail$ | async as stocksDetail" class="stocks-detail-container">
+    <p class="stocks-detail-title semi-bold">
+      {{ params | avalStocksDetailTitle }}
+    </p>
+
+    <div class="stocks-detail-panel">
+      <div *ngFor="let item of stocksDetail?.stockDetailList" class="stocks-detail-item">
+        <p>{{ item?.type }}: {{ item?.date | date:'dd/MM/yyyy': 'UTC' }}</p>
+        <h6 class="bold" [innerHTML]="item?.amount | currencyFormat"></h6>
+      </div>
+    </div>
+
+    <div class="stocks-detail-payment-panel"
+         *ngIf="stocksDetail?.paymentStockDetail?.length > 0">
+      <h5 class="stocks-detail-payment-panel-title bold">
+        {{ 'AVAL.STOCKS.FIELDS.DETAIL' | translate }}
+      </h5>
+
+      <ul *ngFor="let item of stocksDetail?.paymentStockDetail" class="stocks-detail-payment-item">
+        <li>
+          <p>{{ 'AVAL.STOCKS.FIELDS.CHANNEL' | translate }}</p>
+          <p class="semi-bold">{{ getChannel(item?.channel) | translate }}</p>
+        </li>
+        <li *ngIf="!!item?.amount">
+          <p>{{ 'AVAL.STOCKS.FIELDS.DIVIDENDS_PAID' | translate }}</p>
+          <h6 class="bold" [innerHTML]="item?.amount | currencyFormat"></h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

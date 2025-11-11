@@ -1,0 +1,6 @@
+{
+    "name": "karma-timing-reporter",
+    "version": "0.1.0",
+    "description": "Un reportero de karma para identificar pruebas lentas",
+    "main": "index.js"
+  }

@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="container">
+  <app-headers #header [type]="header?.headerType?.redQuaternary" [closeUrl]="'/products'"></app-headers>
+  <div class="content-container">
+  <h3 class="title px-3 mb-3">{{'CUSTOMIZE_AVAL_TAG.TRANSACTION_RESULT.TITLE'| translate}}</h3>
+  <p class="subtitle px-3 mb-1">{{'CUSTOMIZE_AVAL_TAG.TRANSACTION_RESULT.SUBTITLE'| translate}}</p>
+  <app-voucher  
+  [approvalId]="serviceResponse.approvalId" 
+  [voucherItems]="voucherItems" 
+  [utagEvent]="utag" 
+  [allowShare]="true">
+</app-voucher>
+  <div class="actions mt-3" >
+ </div>
+  </div>
+</div>
+</ion-content>

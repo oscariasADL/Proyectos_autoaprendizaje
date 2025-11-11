@@ -1,0 +1,27 @@
+<section class="popup-error-login">
+  <div class="header">
+    <i class="icon-salir" (click)="closeModal()"></i>
+    <h3 *ngIf="!popUpData.isTitleBottom">{{ popUpData.title | translate }}</h3>
+  </div>
+  <figure>
+  <img [src]="popUpData.image | imageUrl" alt="">
+</figure>
+  <div class="body">
+    <p *ngIf="popUpData.isTitleBottom" class="semi-bold bottom-title" [innerHTML]="popUpData.title | translate">
+    </p>
+    <ng-container *ngFor="let paragraph of popUpData.paragraphs">
+      <p [innerHTML]="paragraph | translate"></p>
+    </ng-container>
+    <ul *ngIf="popUpData.itemList" class="order-list">
+      <li *ngFor="let item of popUpData.itemList">
+        <span [innerHTML]="item"></span>
+      </li>
+    </ul>
+    <ng-container *ngFor="let paragraph of popUpData.paragraphsOther">
+      <p [innerHTML]="paragraph | translate"></p>
+    </ng-container>
+  </div>
+  <div class="footer">
+    <button type="button" class="avv-btn-primary" (click)="onClick()">{{ popUpData.okButtonText | translate}}</button>
+  </div>
+</section>

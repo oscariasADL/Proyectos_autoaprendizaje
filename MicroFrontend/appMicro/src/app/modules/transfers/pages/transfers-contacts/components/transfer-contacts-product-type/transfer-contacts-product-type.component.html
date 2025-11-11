@@ -1,0 +1,36 @@
+<div class="avv-generic-step transfer-contacts-product-type-step">
+    <div class="avv-generic-step-content">
+        <p class="avv-generic-step-title"
+           [innerHtml]="'TRANSFERS.CONTACTS.PRODUCT_TYPE.TITLE' | translate">
+        </p>
+
+        <p class="avv-generic-step-message pb-5 text-center">
+            {{ 'TRANSFERS.CONTACTS.PRODUCT_TYPE.MESSAGE' | translate }}
+        </p>
+
+        <ul class="transfer-contacts-product-type-step-list">
+            <li *ngFor="let item of MENU_PHONE_NUMBER_LIST"
+                [id]="item.id"
+                [ngClass]="{'disabled': item.disabled}">
+                <div (click)="item.action && !item.disabled ? item.action() : null"
+                     class="avv-contact-card transfer-contacts-product-type-step-item phone-number">
+                        <span class="contact-image">
+                            <i class="icon-celular"></i>
+                        </span>
+                    <div class="contact-info">
+                        <h6 class="name"
+                            [innerHTML]="item.label | translate"></h6>
+                    </div>
+                    <span class="contact-icon icon-next"></span>
+                </div>
+            </li>
+        </ul>
+
+        <div (click)="showInformation()"
+             class="avv-information-link">
+            <i class="icon-info"></i>
+            <small [innerHTML]="'TRANSFERS.WHO_IS_TRANSFIYA'| translate"></small>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,95 @@
+@import 'utils'
+
+.favorites-container
+  padding: $spacer-3 $spacer-2 calc(80px + var(--safe-area-inset-bottom))
+
+  .favorites-loading > ion-skeleton-text
+    margin: 0 0 $spacer-3 0
+
+    &.favorites-loading-card
+      height: 96px
+      border-radius: 4px
+
+  .favorites-content
+    .favorites-list
+      .add-favorite
+        font-size: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 164px
+        align-self: flex-end
+        gap: 8px
+        i
+          font-size: 16px
+          top: 0
+          left: 0
+      .favorite-group
+        display: flex
+        flex-direction: column
+        gap: $spacer-2
+      display: flex
+      flex-direction: column
+      gap: $spacer-4
+      .group-label
+        font-weight: bold
+        font-size: 16px
+      .item-favorite
+        width: 100%
+        padding: $spacer-2
+        display: flex
+        flex-direction: column
+        gap: $spacer-2
+        border: 1px solid #DEE1E4
+        border-radius: 8px
+
+      .item-favorite > .favorite-panel
+        i 
+          font-size: 24px
+        +flex(center)
+        gap: $spacer-2
+
+        .avatar
+          width: 42px
+          height: 42px
+          display: flex
+          justify-content: center
+          align-items: center
+          border-radius: 50%
+          font-size: 16px
+
+        .info
+          flex-grow: 1
+
+          .favorite-name
+            font-size: 16px
+            font-weight: 600
+
+          p
+            font-size: 12px
+
+      .item-favorite
+
+        a > i
+          font-size: 14px
+
+        a:last-child
+          margin: 0
+          
+
+          &.disabled
+            pointer-events: none
+
+    &-info
+      display: flex
+      align-items: center
+      margin-bottom: $spacer-4
+      gap: calc(#{$spacer-2} / 2)
+      font-size: 16px
+      color: var(--blue-1)
+
+      i
+        font-size: 14px
+
+      a
+        text-decoration: underline

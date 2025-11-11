@@ -1,0 +1,18 @@
+<div class="media-activation-card mx-3 mb-3" *ngIf="product" [id]="'block-account-media-card-'+ product.id">
+  <div class="content-left">
+    <span class="title">{{ mediaName(product.type) }}</span>
+    <div class="product-number">
+      <img
+        #img
+        class="franchise-img"
+        [src]="(!!product.cardFranchise ? product.cardFranchise : 'DEBIT') | franchiseImage"
+        (error)="img.className = 'display-none'"
+        alt="franchise">
+      No. {{ product.cardId }}
+    </div>
+  </div>
+  <div class="content-right">
+    <i *ngIf="icon" class="content-right-icon {{ icon }}" id="configure-cards-options-btn"></i>
+    <span class="content-right-status {{ class }}">{{ label | translate | capitalize }}</span>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<ng-container
+  *ngTemplateOutlet="balancesWorking ? working : (balancesCompleted && balancesSummaryOne ? content : undefined)"></ng-container>
+
+<ng-template #content>
+  <article class="pfm-product-detail-summary" [class.opened]="isPFMSummaryOpened"
+           [attr.aria-expanded]="isPFMSummaryOpened">
+    <header role="button" (click)="togglePFMSummaryOpened()">
+      <h4 class="title">{{ 'PFM.PRODUCT_DETAIL_SUMMARY.TITLE' | translate }} {{ currentMonth }}</h4>
+      <span class="icon">
+        <i class="icon icon-down"></i>
+      </span>
+    </header>
+    <section *ngIf="balancesSummaryOne">
+      <ng-container *ngIf="accountType === typeAccount.CCA">
+        <pzl-tc-donut-chart
+          [data]="balancesSummaryOne"
+          [showLabelTag]="false">
+        </pzl-tc-donut-chart>
+
+        <pzl-summary-balance-tc
+          [data]="balancesSummaryOne"
+          [showOverdraft]="false"
+          [showPayment]="false"
+          [enabledActions]="false"
+          [totalDebtLabel]="'PFM.PRODUCT_DETAIL_SUMMARY.DONUT_CHART.EXPENSES' | translate"
+          [availableQuotaLabel]="'PFM.PRODUCT_DETAIL_SUMMARY.DONUT_CHART.AVAILABLE_PURCHASE' | translate">
+        </pzl-summary-balance-tc>
+      </ng-container>
+      <ng-container *ngIf="accountType === typeAccount.SDA || accountType === typeAccount.DDA">
+        <pzl-balance-bar-chart [data]="balancesSummaryOne"></pzl-balance-bar-chart>
+        <pzl-summary-balance
+          [data]="{
+                totalIncomes: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.TOTAL_INCOMES' | translate,
+                    value: balancesSummaryOne.totalIncomes
+                },
+                incomes: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.INCOMES' | translate,
+                    value: balancesSummaryOne.incomes
+                },
+                previousBalance: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.PREVIOUS_BALANCE' | translate,
+                    value: balancesSummaryOne.previousBalance
+                },
+                expenses: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.EXPENSES' | translate,
+                    value: balancesSummaryOne.expenses
+                },
+                overdraft: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.OVERDRAFT' | translate,
+                    value: balancesSummaryOne.overdraft
+                },
+                balance: {
+                    label: 'PFM.PRODUCT_DETAIL_SUMMARY.BAR_CHART.BALANCE' | translate,
+                    value: balancesSummaryOne.balance
+                }
+            }"
+          [productType]="balancesSummaryOne.type"
+          [enabledActions]="false">
+        </pzl-summary-balance>
+      </ng-container>
+    </section>
+  </article>
+</ng-template>
+
+<ng-template #working>
+  <article class="pfm-product-detail-summary-loading">
+    <ion-skeleton-text animated *ngFor="let i of [1]"></ion-skeleton-text>
+  </article>
+</ng-template>

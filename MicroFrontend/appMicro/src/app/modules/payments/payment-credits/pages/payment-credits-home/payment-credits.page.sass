@@ -1,0 +1,97 @@
+@import 'utils'
+
+.payment-credits-container
+
+  .payment-credits-content
+    .payment-credits-header
+      background-color: var(--gray-4)
+
+      &-title
+        padding: $spacer-2 $spacer-2 $spacer-3
+        text-align: center
+
+      &-tabs
+        font-size: 0
+
+        .payment-credits-header-item
+          +flex(center, center)
+          display: inline-flex
+          width: 50%
+          height: 44px
+          border-bottom: 1px solid var(--gray-6)
+
+          &.active
+            position: relative
+            bottom: -1px
+            background-color: var(--white)
+            border-radius: 4px 4px 0 0
+            border: 1px solid var(--gray-6)
+            border-bottom-color: var(--white)
+
+            &:after
+              content: ''
+              position: absolute
+              bottom: 0
+              left: 15%
+              height: 2px
+              width: 70%
+              background-color: var(--red-1)
+
+            small
+              position: relative
+              font-weight: 600
+              color: var(--red-1)
+
+    .payment-credits-body
+      padding: $spacer-2 $spacer-2 calc(#{$spacer-2} + var(--safe-area-inset-bottom))
+
+      .payment-credits-title
+        margin: $spacer-2 0
+        text-align: center
+
+      .payment-credits-panel
+        &-title
+          padding: $spacer 0 $spacer
+
+  .payment-credits-working
+    &-title
+      width: 120px
+      height: 16px
+      border-radius: 0
+      margin: 8px 0
+
+    &-card
+      height: 152px
+      margin-bottom: 16px
+
+  .payment-credits-empty
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: $spacer-3 0
+
+    &-title
+      text-align: center
+
+    &-image
+      margin: $spacer-3 0
+
+    &-text
+      text-align: center
+      max-width: 278px
+      line-height: 1.5
+
+  .payment-credits-error
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: $spacer-3 0
+
+    &-image
+      margin: $spacer-3 0 $spacer-4
+
+    &-text
+      max-width: 278px
+      text-align: center

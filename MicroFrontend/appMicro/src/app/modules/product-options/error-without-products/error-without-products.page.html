@@ -1,0 +1,44 @@
+<div class="error-without-products-content">
+
+    <div
+        *ngIf="(retries$ | async) > 0; else retriesFinished"
+        class="avv-panel-empty">
+        <div class="avv-panel-empty-image">
+            <img
+                class="m-left"
+                [src]="'errorde-carga.svg' | imageUrl"
+                alt="errorde-carga"
+                draggable="false">
+        </div>
+        <p class="avv-panel-empty-text semi-bold">
+            Tenemos inconvenientes para cargar tu información.
+        </p>
+        <button
+            class="avv-btn-secondary"
+            (click)="onRetry()"
+            [id]="'error-without-products-btn'">
+            REINTENTAR
+        </button>
+    </div>
+
+    <ng-template #retriesFinished>
+        <div class="avv-panel-empty">
+            <div class="avv-panel-empty-image">
+                <img
+                    class="m-left"
+                    [src]="'sesion-finalizada.svg' | imageUrl"
+                    alt="sesion-finalizada"
+                    draggable="false">
+            </div>
+            <p class="avv-panel-empty-text semi-bold">
+                No pudimos carga tu información, por favor regresa más tarde.
+            </p>
+            <button
+                class="avv-btn-primary"
+                (click)="logout()"
+                [id]="'error-without-products-btn'">
+                {{ 'ACTIONS.COPY_THAT' | translate }}
+            </button>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,58 @@
+<ion-content [forceOverscroll]="false">
+  <div class="virtual-credit-card-reissue-header">
+    <div class="virtual-credit-card-reissue-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="virtual-credit-card-card-reissue-header-title">
+        {{ 'VIRTUAL_CREDIT_CARD.REISSUE.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="virtual-credit-card-reissue-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="virtual-credit-card-reissue-container">
+    <div class="text-center">
+      <h6 class="semi-bold mb-3">{{ 'VIRTUAL_CREDIT_CARD.REISSUE.TITLE' | translate }}</h6>
+      <img appPreloadImage
+           [preload]="skeleton"
+           [src]="franchiseImage | imageUrl"
+           class="virtual-credit-card-image"
+           alt="Cromalina de la tarjeta virtual de crédito"
+           aria-hidden="true">
+      <ion-skeleton-text
+        #skeleton
+        class="avv-skeleton virtual-credit-card-cromaline-skeleton mt-5 mb-5"
+        animated></ion-skeleton-text>
+    </div>
+
+    <p class="virtual-credit-card-reissue-container-description"
+       [innerHtml]="'VIRTUAL_CREDIT_CARD.REISSUE.DESCRIPTION' | translate"></p>
+
+    <ul class="avv-list-red-point">
+      <li>
+        <p class="small">{{ 'VIRTUAL_CREDIT_CARD.REISSUE.LIST_1' | translate }}</p>
+      </li>
+      <li>
+        <p class="small">{{ 'VIRTUAL_CREDIT_CARD.REISSUE.LIST_2' | translate }}</p>
+      </li>
+      <li>
+        <p class="small">{{ 'VIRTUAL_CREDIT_CARD.REISSUE.LIST_3' | translate }}</p>
+      </li>
+    </ul>
+    <div class="actions">
+      <button id="virtual-credit-card-reissue-btn"
+              class="avv-btn-primary"
+              (click)="reissueDigitalDebitCard()"
+              [utag]="REISSUE_TCV.event_label"
+              [utagCategory]="REISSUE_TCV.event_category">
+        {{ 'VIRTUAL_CREDIT_CARD.REISSUE.REISSUE_BTN' | translate | uppercase }}
+      </button>
+      <button id="virtual-credit-card-reissue-back-btn"
+              class="avv-btn-secondary  mt-4"
+              (click)="closeModal()">
+        {{ 'ACTIONS.BACK2' | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</ion-content>

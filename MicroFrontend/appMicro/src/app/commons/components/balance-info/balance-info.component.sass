@@ -1,0 +1,49 @@
+@import 'utils'
+
+.balance-info
+  &-container
+    border-radius: 8px
+    margin-bottom: $spacer-3
+
+  &-header
+    border-top-right-radius: $spacer
+    border-top-left-radius: $spacer
+    background: var(--gradients-primary-grad-primary-normal, linear-gradient(252deg, #E1001D 0%, #9E0014 100%))
+    +flex(normal)
+    padding: $spacer $spacer-2
+    gap: 4px
+    .header-title
+      color: var(--white)
+      font-size: 14px
+      padding-top: 2px
+    .icon-logo-avvillas
+      color: var(--white)
+      font-size: 20px
+
+  &-body
+    border: 1px solid #D1D6DA
+    +flex(flex-start,normal, column)
+    padding: $spacer-2
+    color: #252B31
+    border-bottom-right-radius: $spacer
+    border-bottom-left-radius: $spacer
+    box-shadow: 0px 4px 4px 0px rgba(37, 43, 49, 0.08)
+
+  &-list
+    +flex(normal,normal, column)
+    gap: $spacer
+    width: 100%
+
+    .list-item
+      +flex(normal, space-between)
+
+  &-footer
+    width: 100%
+    hr
+      display: block
+      width: 100%
+      height: 1px
+      background-color: #D1D6DA
+      margin: 16px 0
+    .total
+      +flex(normal, space-between)

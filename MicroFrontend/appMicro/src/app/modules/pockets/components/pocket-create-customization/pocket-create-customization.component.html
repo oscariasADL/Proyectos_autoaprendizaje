@@ -1,0 +1,51 @@
+<section class="pocket-create-customization-step">
+  <h2 class="pocket-create-customization-step__title">
+    {{ title }}
+  </h2>
+  <div class="pocket-create-customization-step__form">
+    <avv-input
+      [type]="'text'"
+      [id]="'pocket-create-name'"
+      [label]="'POCKETS.FIELDS.POCKET_NAME' | translate"
+      [control]="name">
+    </avv-input>
+    <avv-dropdown
+      [id]="'pocket-create-category'"
+      [items]="pocketCategories.value"
+      [label]="'POCKETS.FIELDS.CATEGORY' | translate"
+      [control]="category"
+      [template]="categoryTemplate"
+      (valueOutput)="selectCategory($event)">
+      <ng-template
+        #categoryTemplate
+        let-category="data"
+        let-className="class">
+        <div class="avv-item-account {{ className }}">
+          <i class="icon {{ (category.value | pocketCategory).icon }}"></i>
+          <p class="ml-1">{{ category.label }}</p>
+        </div>
+      </ng-template>
+    </avv-dropdown>
+    <div>
+      <app-dropdown-modal-products
+        [label]="'POCKETS.FIELDS.ORIGIN_ACCOUNT'"
+        [modalTitle]="'POCKETS.FIELDS.SELECT_ACCOUNT' | translate"
+        [control]="product"
+        [products]="modalProducts"
+        [showGroupLabel]="false"
+        [amountToPay]="0"
+        (selectedProductFn)="selectedProduct($event)">
+      </app-dropdown-modal-products>
+      <small class="mt-1">{{ 'POCKETS.CREATE.HINT_ORIGIN_ACCOUNT' | translate }}</small>
+    </div>
+  </div>
+  <div class="pocket-create-customization-step__actions">
+    <button type="button"
+            class="avv-btn-primary"
+            id="pocket-create-customization-continue-btn"
+            [disabled]="name.invalid"
+            (click)="continue.emit()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </div>
+</section>

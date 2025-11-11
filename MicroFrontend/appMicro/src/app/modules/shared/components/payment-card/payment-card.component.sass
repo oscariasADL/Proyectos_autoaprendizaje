@@ -1,0 +1,62 @@
+@import 'utils'
+
+.payment-card-container
+  +shadow()
+  position: relative
+  padding: $spacer-1
+  margin-bottom: $spacer-2
+
+  p
+    line-height: 1.72
+
+  .payment-card-title
+    padding-right: 25px
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+  .payment-card-number
+    +flex(center, flex-start)
+
+    > img
+      position: relative
+      top: -1px
+      width: 16px
+      margin-right: $spacer
+
+  .payment-card-items
+    margin-top: $spacer-1
+
+    .payment-card-item
+      +flex(center, space-between)
+
+      &.opaque
+        p
+          color: var(--gray-2)
+
+  .payment-card-label
+    width: 112px
+    height: 24px
+    position: absolute
+    right: -1px
+    bottom: $spacer-1
+    font-size: 10px
+    line-height: 2.6
+    text-align: center
+    border-radius: 4px 0 0 4px
+    color: var(--info)
+    background-color: var(--info-bg)
+
+  .payment-card-delete-btn
+    position: absolute
+    top: $spacer-1
+    right: $spacer-1
+    font-size: 24px
+    color: var(--blue-1)
+
+  .payment-card-btn
+    padding: 0 36px
+    margin-top: $spacer-2
+
+    .avv-btn-primary
+      margin: 0

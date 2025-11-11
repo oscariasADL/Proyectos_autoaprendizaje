@@ -1,0 +1,71 @@
+<div class="cell-phone-contacts-header">
+    <p>{{ 'CELL_PHONE_CONTACTS.TITLE' | translate }}</p>
+    <i
+        class="icon-salir"
+        (click)="closeClick()">
+    </i>
+</div>
+<ion-content [forceOverscroll]="false">
+    <div class="cell-phone-contacts-content">
+        <div
+            class="cell-phone-contacts-content-header"
+            [ngClass]="{'tabs': showTabs}">
+            <p class="avv-generic-step-title">
+                {{ 'CELL_PHONE_CONTACTS.SELECT_OPTION' | translate }}
+            </p>
+            <div
+                *ngIf="showTabs"
+                class="avv-tabs middle-width">
+                <div
+                    class="avv-tabs-item"
+                    id="contacts-cell-phone-tab"
+                    (click)="this.activeTab = AVV_CONTACTS_TAB.CELL_PHONE"
+                    [ngClass]="{'active': isFromCellPhone}">
+                    <small>{{ 'CELL_PHONE_CONTACTS.OPTION_1' | translate }}</small>
+                </div>
+                <div
+                    class="avv-tabs-item"
+                    id="contacts-avv-tab"
+                    (click)="this.activeTab = AVV_CONTACTS_TAB.AVV"
+                    [ngClass]="{'active': !isFromCellPhone}">
+                    <small>{{ 'CELL_PHONE_CONTACTS.OPTION_2' | translate }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="cell-phone-contacts-content-body">
+            <ng-container *ngIf="isFromCellPhone; else fromAVV">
+                <app-cell-phone-list (selectContacts)="selectCellPhoneContacts($event)" [utagCategory]="utagCategory"></app-cell-phone-list>
+            </ng-container>
+            <ng-template #fromAVV>
+                <div
+                    *ngIf="(avvContacts$ | async); else contactsError"
+                    class="content-villas">
+                    <p
+                        class="small"
+                        [ngClass]="{'pb-0': (avvContacts$ | async).length > 5}">
+                        {{ 'CELL_PHONE_CONTACTS.TITLE_CONTACTS_SAVED' | translate }}
+                    </p>
+                    <app-contact-book
+                        [contacts]="avvContactsFiltered$ | async"
+                        [showSearch]="(avvContacts$ | async).length > 5"
+                        [working]="avvContactsWorking$ | async"
+                        [filter]="avvContactsKeyWord"
+                        [fieldToNickname]="'phoneNumber'"
+                        (setFilter)="this.avvContactsKeyWord = $event"
+                        (clicked)="selectContactFromAVV($event)">
+                    </app-contact-book>
+                </div>
+            </ng-template>
+            <ng-template #contactsError>
+                <div class="contacts-content-empty">
+                    <p class="avv-generic-step-title bold">
+                        {{ 'CELL_PHONE_CONTACTS.ERROR_LOADING' | translate }}
+                    </p>
+                    <img
+                        [src]="'icons/error-x-phone.svg' | imageUrl"
+                        alt="no-contacts">
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</ion-content>

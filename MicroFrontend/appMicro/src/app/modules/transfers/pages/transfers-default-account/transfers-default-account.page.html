@@ -1,0 +1,65 @@
+<app-headers #header [title]="'TRANSFERS.DEFAULT_ACCOUNT.HEADER' | translate" [closeUrl]="'/'"
+             [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="default-account">
+    <ng-container
+      *ngTemplateOutlet="((working$ | async) ? working : (completed$ | async) ? (defaultAccount$ | async) ? content : empty : empty)"></ng-container>
+  </article>
+</ion-content>
+
+<ng-template #working>
+  <ion-skeleton-text
+    class="avv-skeleton default-account-working-title"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    class="avv-skeleton default-account-working-card"
+    animated>
+  </ion-skeleton-text>
+  <ion-skeleton-text
+    class="avv-skeleton default-account-working-alert"
+    animated>
+  </ion-skeleton-text>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="(defaultAccount$ | async) as defaultAccount; else empty">
+    <ng-container *ngIf="defaultAccount?.accountStatus; else empty">
+      <h2 class="default-account-title">{{ 'TRANSFERS.DEFAULT_ACCOUNT.TITLE' | translate }}</h2>
+      <section class="default-account-content">
+        <div class="default-account-content-card">
+        <span class="card-icon">
+          <i class="icon icon-retiro"></i>
+        </span>
+          <div class="card-title">
+            <p>{{ defaultAccount.accountId }}</p>
+          </div>
+          <span class="card-delete-icon" (click)="deleteDefaultAccount()">
+          <i class="icon icon-basura"></i>
+        </span>
+        </div>
+        <div class="default-account-content-alert-notice">
+          <div class="avv-alert-info mt-3">
+            <i class="avv-alert-icon icon-info"></i>
+            <div class="avv-alert-text">
+              {{ 'TRANSFERS.DEFAULT_ACCOUNT.NOTICE_ALERT_MESSAGE' | translate }}
+            </div>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #empty>
+  <h2 class="default-account-empty-title">
+    {{ 'TRANSFERS.DEFAULT_ACCOUNT.EMPTY.TITLE' | translate }}
+  </h2>
+  <figure class="default-account-empty-image">
+    <img [src]="'iconsV2/card-hand.svg' | imageUrl" alt="">
+  </figure>
+  <p class="default-account-empty-text">
+    {{ 'TRANSFERS.DEFAULT_ACCOUNT.EMPTY.TEXT' | translate }}
+  </p>
+</ng-template>

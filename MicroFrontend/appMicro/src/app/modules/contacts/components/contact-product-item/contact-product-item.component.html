@@ -1,0 +1,23 @@
+<div class="contact-product">
+
+  <div class="contact-product-info">
+    <h5 class="contact-product-title">{{ product?.alias }}</h5>
+    <div class="contact-product-data">
+      <img *ngIf="product?.franchise" class="franchise-image" [src]="product?.franchise | franchiseImage" #img
+           (error)="img.className = 'display-none'" alt="icon">
+      <span *ngIf="!product?.franchise" class="icon-salario"></span>
+      <p>{{ product?.franchise ? '' : product?.type?.name }} No. {{ product?.number }}</p>
+    </div>
+    <p class="contact-product-origin">{{ product?.bank.name }}</p>
+  </div>
+
+  <div class="contact-product-action"
+       [id]="product?.id"
+       (click)="action.emit()"
+       *ngIf="!!product?.action && false">
+    <span class="icon-giros_y_transferencias"></span>
+    <p class="avv-title-semibold">
+      {{ product?.actionLabel | translate | uppercase }}
+    </p>
+  </div>
+</div>

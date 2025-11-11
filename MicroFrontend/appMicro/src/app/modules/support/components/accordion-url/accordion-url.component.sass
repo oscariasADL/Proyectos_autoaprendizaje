@@ -1,0 +1,60 @@
+@import 'utils'
+
+ion-label
+  color: #252B31
+
+ion-icon, icon-inner
+  color: #0048DB
+
+
+.acc-content
+  box-shadow: none
+  border-radius: 0 !important
+
+  > div
+    border: 1px solid #D1D6DA
+    border-top-width: 0
+    border-bottom-left-radius: 4px
+    border-bottom-right-radius: 4px
+
+  &.accordion-expanded ion-item
+    border-color: #D1D6DA
+    border-bottom-width: 0
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+
+.layout
+  display: grid
+  grid-template-columns: auto
+  gap: $spacer-2
+  margin: 0
+
+  .url-list
+    display: flex
+    justify-content: center
+    align-items: baseline
+    flex-direction: column
+    gap: 10px
+
+    .item
+      display: flex
+      flex-direction: row
+      align-items: baseline
+
+      span
+        display: flex
+        width: 5px
+        height: 5px
+        background-color: #d30000
+        border-radius: 50%
+        flex: none
+
+      a
+        text-decoration: underline
+
+      div
+        text-decoration: underline
+
+
+

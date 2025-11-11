@@ -1,0 +1,46 @@
+@import 'utils'
+
+.complementary-services-info
+  &-container
+    +flex(center, space-between, column)
+    padding: $spacer-3 $spacer-2 $spacer-4
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+  &-inner-container
+    +flex(center, flex-start, column)
+
+  &-title
+    margin-top: $spacer-4
+    margin-bottom: $spacer-3
+    text-align: center
+    color: var(--gray-11)
+
+  &-subtitle
+    margin-bottom: $spacer-2
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: 0%
+
+
+  &-list
+    margin-bottom: 54px
+
+    li:before
+      background-color: var(--red-1)
+
+.small
+  color: var(--gray-11)
+  font-weight: 400
+  line-height: 20px
+  letter-spacing: 0%
+  margin-bottom: $spacer-2
+
+  p
+    color: var(--gray-11)
+    font-size: 14px
+    display: inline
+
+  b
+    font-weight: 500
+

@@ -1,0 +1,48 @@
+@import 'utils'
+
+.cdt-renewal-step
+  &-active
+    +flex(inherit, space-between, column)
+    height: 100%
+    padding: $spacer-4 $spacer-2
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+    &-header
+      text-align: center
+
+      &-image
+        width: 72px
+
+      &-title
+        margin: 40px auto 0
+        max-width: 300px
+
+    &-panel
+      padding: $spacer-2 $spacer-1
+      border-radius: 4px
+      background-color: var(--gray-4)
+      margin: $spacer-2 0
+
+      small
+        display: block
+        margin-bottom: 4px
+
+        &:last-child
+          margin-bottom: 0
+
+  &-inactive
+    +flex(inherit, space-between, column)
+    text-align: center
+    height: 100%
+    padding: $spacer-4 $spacer-2
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+    &-title
+      margin: 40px auto 0
+      max-width: 300px
+      text-align: center
+
+    &-description
+      text-align: center
+      max-width: 310px
+      margin: 8px auto 0

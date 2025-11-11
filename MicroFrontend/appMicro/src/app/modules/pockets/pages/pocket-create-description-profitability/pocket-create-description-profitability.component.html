@@ -1,0 +1,41 @@
+<article class="pockets-create-description">
+  <header class="pockets-create-description__header">
+    <div class="pockets-create-description__header-back">
+      <i class="icon icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="header-title">
+        {{ 'POCKETS.HEADER' | translate }}
+      </h5>
+    </div>
+    <div class="pockets-create-description__header-close">
+      <i class="icon icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </header>
+  <section class="pockets-create-description__content">
+    <figure class="pockets-create-description__content-icon">
+      <img [src]="'illustrations/wallet.svg' | imageUrl" alt="pockets-with-profit">
+    </figure>
+    <div class="pockets-create-description__content-info">
+      <h5
+        class="avv-text__title pockets-description__title">{{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.TITLE' | translate }}</h5>
+      <ul class="avv-list-blue-point">
+        <li class="avv-text__paragraph">{{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.ITEMS.TEXT_1' | translate }}</li>
+        <li class="avv-text__paragraph">{{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.ITEMS.TEXT_2' | translate }}</li>
+        <li class="avv-text__paragraph">{{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.ITEMS.TEXT_3' | translate }}</li>
+      </ul>
+    </div>
+    <div class="pockets-create-description__bottom mt-4">
+      <button class="avv-btn-primary" type="button" (click)="closeModal(true)">
+        {{ buttonActionText | translate | uppercase }}
+      </button>
+      <div>
+        <b>
+          {{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.BOTTOM_INFO' | translate }}
+        </b>
+        <a href="javascript:void(0)" (click)="openLink()">
+          {{ 'POCKETS.CREATE_WITH_RETURNS_DESCRIPTION.RATE_INFO' | translate }}
+        </a>
+      </div>
+    </div>
+  </section>
+</article>
+

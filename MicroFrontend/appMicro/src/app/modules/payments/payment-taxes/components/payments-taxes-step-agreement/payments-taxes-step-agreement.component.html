@@ -1,0 +1,9 @@
+<div class="payments-taxes-step-agreement">
+    <p class="title semi-bold">Busca el impuesto a pagar en {{ city.value.name | titlecase }}</p>
+    <app-search-list
+        [inputLabel]="'Impuesto'"
+        [searchList]="agreements$ | async"
+        [working]="workingAgreements$ | async"
+        [showError]="(errorAgreements$ | async) ? 'Tenemos problemas para cargar los impuestos. <br> Inténtalo más tarde' : false"
+        (selectItem)="onSelectAgreement($event.item)"></app-search-list>
+</div>

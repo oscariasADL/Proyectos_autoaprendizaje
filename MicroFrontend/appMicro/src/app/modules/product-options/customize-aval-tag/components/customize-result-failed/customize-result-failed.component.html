@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="container">
+  <app-headers #header [type]="header?.headerType?.redQuaternary" [closeUrl]="'/products'"></app-headers>
+  <div class="content-container">
+  <h3 class="title px-3 mb-3">{{'CUSTOMIZE_AVAL_TAG.TRANSACTION_FAILED.TITLE'| translate}}</h3>
+  <app-voucher 
+  [title]="'No se puedo reg'" 
+  [voucherItems]="voucherItems" 
+  [utagEvent]="utag" 
+  [denyDownload]="true" 
+  [allowShare]="false">
+</app-voucher>
+<p class="pl-3 mb-2 list-title">Puedes intentar lo siguiente:</p>
+<ul class="pl-3">
+  <li>Intenta de nuevo más tarde.</li>
+  <li>Revisa que la llave no esté asociada a otra cuenta o a otro banco.</li>
+  <li>O bien, puedes registrar otro tipo de llave.</li>
+</ul>
+  <div class="actions mt-3 px-3" >
+    <button type="button" class="avv-btn-primary mb-3" (click)="retry()" >{{'Reintentar' | translate | uppercase}}</button>
+    <button type="button" class="avv-btn-secondary" [routerLink]="'/products'">{{'Ir al inicio' | translate | uppercase}}</button>
+ </div>
+  </div>
+</div>
+</ion-content>

@@ -1,0 +1,10 @@
+<section class="non-enrolled-modal">
+  <figure class="non-enrolled-modal-icon">
+    <img [src]="'iconsV2/cellphone-security.svg' | imageUrl" alt=""/>
+  </figure>
+  <h2 class="non-enrolled-modal-title">{{ 'QR.AUTHORIZATION.NON_ENROLLED_MODAL.TITLE' | translate }}</h2>
+  <p class="non-enrolled-modal-text">{{ 'QR.AUTHORIZATION.NON_ENROLLED_MODAL.DESCRIPTION' | translate }}</p>
+  <button type="button" class="avv-btn-primary non-enrolled-modal-button"
+          (click)="closeModal()">{{ 'ACTIONS.COPY_THAT' | translate }}
+  </button>
+</section>

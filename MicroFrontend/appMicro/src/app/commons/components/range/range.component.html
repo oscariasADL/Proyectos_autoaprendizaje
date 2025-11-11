@@ -1,0 +1,17 @@
+<div class="range-container">
+  <small [innerHTML]="title"></small>
+  <ion-range
+          mode="md"
+          min="{{min}}"
+          max="{{max}}"
+          step="{{step}}"
+          value="{{control?.value}}"
+          (ionChange)="setValue($event?.detail.value)"
+          snaps ticks pin>
+  </ion-range>
+  <div class="range-labels">
+    <p *ngFor="let label of labelList" class="small">
+      {{ label }}
+    </p>
+  </div>
+</div>

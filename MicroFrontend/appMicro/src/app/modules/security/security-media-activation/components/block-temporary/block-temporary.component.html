@@ -1,0 +1,98 @@
+<ng-container *ngTemplateOutlet="step === blockTemporaryStep.ChooseDate ? chooseDate : confirmation"></ng-container>
+
+<ng-template #chooseDate>
+  <div class="block-temporary-container">
+    <div class="block-temporary-product">
+      <p class="small block-temporary-title">
+        {{ 'SECURITY.BLOCK_TEMPORARY.MESSAGE' | translate }}
+      </p>
+      <app-media-activation-card [product]="product"></app-media-activation-card>
+    </div>
+
+    <div class="block-temporary-panel">
+      <p class="small semi-bold mb-3">
+        {{ 'SECURITY.BLOCK_TEMPORARY.CHOOSE_MESSAGE' | translate }}
+      </p>
+
+      <div class="block-temporary-field"
+           [ngClass]="{'not-empty': dateControl?.value}"
+           (click)="openCalendar()">
+        <div>
+          <p class="block-temporary-field-title">
+            {{ 'SECURITY.BLOCK_TEMPORARY.BLOCK_TO' | translate }}
+          </p>
+          <p class="block-temporary-field-date" *ngIf="dateControl?.value">{{ dateControl?.value }}</p>
+        </div>
+        <span class="icon-calendario"></span>
+      </div>
+
+      <button type="button" class="avv-btn-primary mt-5"
+              [disabled]="!dateControl?.value"
+              (click)="changeStep(blockTemporaryStep.Confirmation)">
+        {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #confirmation>
+  <div class="block-temporary-confirmation-container">
+    <div class="block-temporary-confirmation-header mb-3">
+      <p class="semi-bold">
+        {{ 'SECURITY.BLOCK_TEMPORARY.CONFIRMATION_TITLE' | translate }}
+      </p>
+    </div>
+
+    <div class="auth-step-info avv-alert-warning mb-5">
+      <i class="avv-alert-icon icon-alerta"></i>
+      <div class="avv-alert-text">
+        {{ 'SECURITY.BLOCK_TEMPORARY.CONFIRMATION_ALERT' | translate }}
+      </div>
+    </div>
+
+    <div class="block-temporary-confirmation-body">
+      <div>
+        <p class="small semi-bold">
+          {{ 'SECURITY.BLOCK_TEMPORARY.PRODUCT' | translate }}
+        </p>
+        <div>
+          <span class="small title">{{ product?.name }}</span>
+          <div class="block-temporary-confirmation-product-number">
+            <img
+              #img
+              class="franchise-img"
+              [src]="(!!product?.cardFranchise ? product?.cardFranchise : 'DEBIT') | franchiseImage"
+              (error)="img.className = 'display-none'"
+              alt="franchise">
+            <p class="small ml-1">{{ 'ACCOUNT_NUMBER' | translate }} {{ product?.cardId }}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="semi-bold small">
+          {{ 'SECURITY.BLOCK_TEMPORARY.BLOCK_DATES' | translate }}
+        </p>
+        <div>
+          <p class="small">{{ 'SECURITY.BLOCK_TEMPORARY.FROM' | translate }} {{ currentDate | date:'dd/MM/yyyy': 'UTC' }}</p>
+          <p class="small">{{ 'SECURITY.BLOCK_TEMPORARY.TO' | translate }} {{ dateControl?.value }}</p>
+        </div>
+      </div>
+
+      <button
+              (click)="blockProduct()"
+              type="button"
+              class="avv-btn-primary mt-5">
+        {{ 'SECURITY.BLOCK_TEMPORARY.BLOCK' | translate | uppercase }}
+      </button>
+
+      <button (click)="changeStep(blockTemporaryStep.ChooseDate)"
+              type="button"
+              class="avv-link mt-2 block-temporary-confirmation-link">
+        {{ 'VOUCHER.EDIT_DATA' | translate }}
+        <i class="icon-editar"></i>
+      </button>
+    </div>
+
+  </div>
+</ng-template>

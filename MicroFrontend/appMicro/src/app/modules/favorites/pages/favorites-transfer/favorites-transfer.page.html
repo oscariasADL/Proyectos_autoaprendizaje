@@ -1,0 +1,79 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [title]="'FAVORITES.HEADER' | translate"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <ng-container *ngIf="(hasProducts | async) else noProducts">
+    <main class="favorites-transfer-container">
+      <ng-container *ngIf="(favorite$ | async) as favorite">
+        <h2>{{ favorite.nameFavoriteTransaction }}</h2>
+        <section>
+          <ul class="avv-voucher-list">
+            <li class="avv-voucher-item" id="amount">
+              <p class="avv-voucher-label">{{ 'TRANSFERS.STEPS.VALUE' | translate }}</p>
+              <div class="avv-voucher-description">
+                <div class="avv-voucher-fields">
+                  <p [innerHTML]="transactionValue | currencyFormat"></p>
+                </div>
+                <span class="icon-editar avv-voucher-edit" (click)="modifyAmount()"></span>
+              </div>
+            </li>
+            <li class="avv-voucher-item {{ item.type }}" *ngFor="let item of (itemsConfirm$ | async); let first = first"
+                [id]="item.id" [class.insufficient-balance]="first && hasInsufficientBalance">
+              <p class="avv-voucher-label" *ngIf="item.label" [innerHTML]="item.label | translate"></p>
+              <div class="avv-voucher-description">
+                <div class="avv-voucher-fields">
+                  <p *ngFor="let field of item.fields" [innerHTML]="field"></p>
+                  <ng-container *ngIf="first && hasInsufficientBalance">
+                    <p
+                      [class.insufficient-balance]="hasInsufficientBalance">{{ 'FAVORITES.TRANSFER.INSUFFICIENT_BALANCE' | translate }}</p>
+                    <button type="button" class="avv-btn-secondary" *ngIf="products?.length > 1"
+                            (click)="modifyAccount()">{{ 'FAVORITES.TRANSFER.CHOOSE_ACCOUNT' | translate }}
+                    </button>
+                  </ng-container>
+                  <ng-container *ngIf="!first && editableFields.includes(item.id)">
+                    <span class="icon-editar avv-voucher-edit" role="button" (click)="modifyField(item.id)"></span>
+                  </ng-container>
+                </div>
+              </div>
+            </li>
+            <ng-container *ngIf="operationCost || operationCost === 0">
+              <li class="avv-voucher-item" id="cost">
+                <p class="avv-voucher-label">{{ 'TRANSFERS.STEPS.COST' | translate }}</p>
+                <div class="avv-voucher-description">
+                  <div class="avv-voucher-fields">
+                    <p [innerHTML]="operationCost | currencyFormat"></p>
+                  </div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+          <button type="button" class="avv-btn-primary mt-5" (click)="executeAction()"
+                  [disabled]="transactionValue === 0 || hasInsufficientBalance">{{ actionLabel | async | uppercase }}
+          </button>
+        </section>
+      </ng-container>
+    </main>
+  </ng-container>
+</ion-content>
+
+<ng-template #noProducts>
+  <main class="favorites-transfer-no-content">
+    <section class="no-content-image">
+      <img [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" [alt]="'FAVORITES.TRANSFER.NO_CONTENT.IMG_ALT' | translate">
+    </section>
+    <section class="no-content-title">
+      <h2>{{ 'FAVORITES.TRANSFER.NO_CONTENT.TITLE' | translate }}</h2>
+      <p>{{ 'FAVORITES.TRANSFER.NO_CONTENT.DESCRIPTION' | translate }}</p>
+    </section>
+    <section class="no-content-actions">
+      <a [routerLink]="['/']" class="avv-btn-secondary">{{ 'ACTIONS.COPY_THAT' | translate }}</a>
+      <button type="button" class="avv-link-underline"
+              (click)="deleteFavorite()">{{ 'FAVORITES.TRANSFER.NO_CONTENT.BUTTON'| translate }}
+      </button>
+    </section>
+  </main>
+</ng-template>

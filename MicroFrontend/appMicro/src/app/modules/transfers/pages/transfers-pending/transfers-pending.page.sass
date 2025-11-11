@@ -1,0 +1,74 @@
+@import 'utils'
+
+.transfers-pending
+  &-container
+    position: relative
+  
+  &-working
+    padding: $spacer-2
+
+  &-transfiya
+    background-color: var(--gray-4)
+
+    &-title
+      font-size: 14px
+      font-weight: bold
+      padding: $spacer-2 0 $spacer $spacer-3
+      border-bottom: 1px solid var(--gray-6)
+
+    &-body
+      background-color: var(--white)
+
+      li
+        +flex(flex-start, space-between)
+        padding: $spacer-1 0
+        margin: 0 $spacer-2
+        border-bottom: 2px solid var(--gray-6)
+        position: relative
+
+        &:last-child
+          border-bottom: none
+
+    &-data
+      +flex(center, space-between)
+
+    &-info
+      small
+        color: var(--gray-7)
+
+      p
+        font-weight: bold
+        color: var(--gray-8)
+
+    &-link
+      +flex(center, center)
+
+      i
+        font-size: 24px
+        color: var(--blue-1)
+
+      small
+        min-width: 74px
+        margin-left: $spacer-2
+
+  &-empty
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 0 $spacer-2
+    background-color: var(--white)
+    height: calc(100vh - calc(56px + var(--safe-area-inset-bottom)))
+
+    > img
+      margin-top: 40px
+
+    .title
+      padding: $spacer-3 0
+      font-size: $spacer-2
+      font-weight: 600
+      line-height: 1.5
+      text-align: center
+      color: var(--gray-1)
+
+    .description
+      padding: 0 0 $spacer-4

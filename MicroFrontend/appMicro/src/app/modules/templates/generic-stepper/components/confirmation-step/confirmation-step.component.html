@@ -1,0 +1,115 @@
+<div class="confirmation-step">
+
+  <div
+    *ngIf="data?.notice"
+    class="avv-alert-success confirmation-step-notice">
+    <i class="avv-alert-icon icon-check"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="data?.notice | translate">
+    </div>
+  </div>
+
+  <figure class="confirmation-step-icon" *ngIf="data?.iconImage">
+    <img [src]="data?.iconImage | imageUrl" alt="Icono de confirmación">
+  </figure>
+
+  <p class="confirmation-step-title"
+     [innerHTML]="data?.title | translate"></p>
+
+  <div
+    *ngIf="data?.noticeInfo"
+    class="avv-alert-info confirmation-step-notice info">
+    <i class="avv-alert-icon icon-info"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="data?.noticeInfo | translate">
+    </div>
+  </div>
+
+  <div
+    *ngIf="data?.noticeError"
+    class="avv-alert-error confirmation-step-notice error">
+    <i class="avv-alert-icon icon-alerta"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="data?.noticeError | translate">
+    </div>
+  </div>
+
+  <div
+    *ngIf="data?.noticeWarning"
+    class="avv-alert-warning confirmation-step-notice warning">
+    <i class="avv-alert-icon icon-alerta"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="data?.noticeWarning | translate">
+    </div>
+  </div>
+
+  <div class="confirmation-step-list">
+    <app-voucher-list
+      [items]="data?.control.value"
+      (edit)="nextStep.emit($event)">
+    </app-voucher-list>
+  </div>
+
+  <p
+    *ngIf="data?.description"
+    class="confirmation-step-description"
+    [innerHTML]="data?.description | translate"></p>
+
+  <p
+    *ngIf="data?.advertisement"
+    class="confirmation-step-advertisement"
+    [innerHTML]="data?.advertisement | translate"></p>
+
+  <div
+    *ngIf="data?.message && !useTransfiya && !data?.messageType"
+    class="avv-alert-info confirmation-step-notice info">
+    <i class="avv-alert-icon icon-info"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="data?.message | translate">
+    </div>
+  </div>
+
+  <div
+    *ngIf="data?.message && useTransfiya && !data?.messageType"
+    class="avv-alert-info confirmation-step-notice info">
+    <i class="avv-alert-icon icon-info"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="'TRANSFERS.CEL2CEL.SEND.CONFIRMATION_MESSAGE_TRANSFIYA' | translate">
+    </div>
+  </div>
+
+  <div *ngIf="data?.messages && !useTransfiya && data?.messageType === 'list' && data?.messages.length > 0">
+    <ul class="avv-list-red-point list-data">
+      <li [ngClass]="{'mb-2': !last}" *ngFor="let message of data?.messages; let last = last"
+          [innerHTML]="message | translate"></li>
+    </ul>
+  </div>
+
+  <button
+    class="avv-btn-primary confirmation-step-btn"
+    (click)="nextStep.emit()"
+    [disabled]="!!data?.noticeError"
+    [utag]="data?.utag"
+    [utagCategory]="utagCategory"
+    [id]="'transfer-btn'">
+    {{ data?.buttonText | translate | uppercase }}
+  </button>
+
+  <div class="confirmation-step-btn-link">
+    <button
+      *ngIf="data?.buttonOptionId"
+      class="avv-btn-link"
+      (click)="nextStep.emit(data?.buttonOptionId)"
+      [disabled]="!!data?.noticeError"
+      [id]="'confirm-option-btn'">
+      {{ data?.buttonOptionText | translate }}
+      <i class="{{ data?.buttonOptionIcon }}"></i>
+    </button>
+  </div>
+</div>

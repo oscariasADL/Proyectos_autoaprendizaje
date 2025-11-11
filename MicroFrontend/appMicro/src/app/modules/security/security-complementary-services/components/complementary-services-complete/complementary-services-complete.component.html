@@ -1,0 +1,25 @@
+<div class="complementary-services-complete-container">
+  <ng-container *ngIf="state; else inactive">
+    <img class="complementary-services-complete-img" src="assets/img/icons/exito.svg" alt="">
+    <p class="semi-bold complementary-services-complete-title">
+      {{ 'Tus servicios complemetarios estan activos' | translate }}
+    </p>
+    <p class="complementary-services-complete-subtitle">
+      {{ '¡Ahora puedes realizar todas tus transacciones!' | translate }}
+    </p>
+  </ng-container>
+  
+  <ng-template #inactive>
+    <img class="complementary-services-complete-img" src="assets/img/icons/error-x-phone.svg" alt="">
+    <p class="semi-bold complementary-services-complete-title">
+      {{ 'Servicios complementarios desactivados' | translate }}
+    </p>
+    <p class="complementary-services-complete-subtitle">
+      {{ '¡Recuerda no podrás realizar algunas transacciones!' | translate }}
+    </p>
+  </ng-template>
+
+  <button class="avv-btn-secondary" (click)="continue.emit()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+</div>

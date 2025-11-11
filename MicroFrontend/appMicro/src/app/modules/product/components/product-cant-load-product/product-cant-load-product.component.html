@@ -1,0 +1,18 @@
+<div class="avv-panel-empty">
+    
+    <div class="avv-panel-empty-image">
+        <img
+            [src]="'icons/cancelar-cdt.svg' | imageUrl"
+            alt="error al obtener los productos">
+    </div>
+    <h6 class="avv-list-panel-title avv-title-semibold"> <b>Lo sentimos</b></h6>
+    <p class="avv-title-semibold" [innerHTML]=" 'PRODUCTS.CANT_LOAD_PRODUCT'|translate">
+    
+    </p>
+    <button
+        class="avv-btn-primary btn-spc"
+        (click)="goHome()"
+        >
+        {{ 'PRODUCTS.GO_TO_HOME' | translate  }}
+    </button>
+</div>

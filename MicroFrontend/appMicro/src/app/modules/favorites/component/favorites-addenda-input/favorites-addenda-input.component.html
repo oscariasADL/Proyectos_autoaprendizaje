@@ -1,0 +1,16 @@
+<article class="favorites-addenda-input-container">
+  <div class="header">
+    <h3>{{ title | translate }}</h3>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="input-container">
+    <avv-input
+      [type]="'text'"
+      [id]="'favorites-addenda-field-input'"
+      [label]="label | translate"
+      [control]="addendaFormControl">
+    </avv-input>
+    <button type="buttton" class="avv-btn-primary" (click)="saveChanges()"
+            [disabled]="addendaFormControl.invalid">{{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}</button>
+  </div>
+</article>

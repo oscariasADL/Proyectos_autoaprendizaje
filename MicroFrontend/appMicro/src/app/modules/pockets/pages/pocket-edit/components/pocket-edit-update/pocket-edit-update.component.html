@@ -1,0 +1,61 @@
+<section class="pockets-edit-step">
+  <figure>
+    <img [src]="'illustrations/pocket-money.svg' | imageUrl" alt="">
+  </figure>
+
+  <p class="semi-bold pockets-edit-step-title">
+    {{ 'POCKETS.EDIT.MODIFY_STEP.TITLE' | translate }}
+  </p>
+
+  <form class="pockets-edit-step-form" (ngSubmit)="continue.emit()">
+    <avv-field
+      [type]="'text'"
+      [id]="'pocket-edit-name'"
+      [label]="'POCKETS.FIELDS.POCKET_NAME' | translate"
+      [control]="name">
+    </avv-field>
+
+    <avv-dropdown class="form-dropdown"
+                  [id]="'pocket-edit-category'"
+                  [items]="pocketCategories$ | async"
+                  [label]="'POCKETS.FIELDS.CATEGORY' | translate"
+                  [control]="category">
+    </avv-dropdown>
+
+    <avv-input
+      [type]="'currency'"
+      [id]="'pocket-edit-goal'"
+      [label]="'POCKETS.FIELDS.GOAL' | translate"
+      [control]="goal">
+    </avv-input>
+
+    <avv-input
+      [type]="'currency'"
+      [id]="'pocket-edit-quota'"
+      [label]="'POCKETS.FIELDS.QUOTA' | translate"
+      [control]="quota">
+    </avv-input>
+    <small class="quota-hint">{{ 'POCKETS.EDIT.HINT_QUOTA' | translate }}</small>
+
+    <avv-dropdown class="form-dropdown"
+                  [id]="'pocket-edit-period'"
+                  [items]="periodicity"
+                  [label]="'POCKETS.FIELDS.PERIOD_INSTALLMENTS' | translate"
+                  [control]="period">
+    </avv-dropdown>
+
+    <p class="pockets-edit-step-installments">
+      {{ 'POCKETS.FIELDS.INSTALLMENTS_NUMBER' | translate }}
+      <span class="semi-bold">{{ installments }}</span>
+    </p>
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'pocket-edit-btn'"
+            [disabled]="!form.valid"
+            [utag]="utag.event_label"
+            [utagCategory]="utag.event_category">
+      {{ 'POCKETS.EDIT.MODIFY_STEP.BUTTON' | translate | uppercase }}
+    </button>
+  </form>
+</section>

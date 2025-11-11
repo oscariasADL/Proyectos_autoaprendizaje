@@ -1,0 +1,43 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="true">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'DIRECTED_PAYMENTS.HEADER' | translate"
+    [backUrl]="backUrl"
+    [showSteps]="false"
+    [exitData]="exitData"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-directed-payment-list
+      *ngSwitchCase="'movements'"
+      [form]="form"
+      [control]="movement"
+      [movements]="creditMovements$ | async"
+      [informationText]="'DIRECTED_PAYMENTS.MOVEMENT_STEP.INFORMATION_TEXT' | translate"
+      (showInformation)="setNextStep({ value: StepperTypes.informationPanel })"
+      (continue)="runNextStep(key)">
+    </app-directed-payment-list>
+
+    <app-directed-payment-amount
+      *ngSwitchCase="'amount'"
+      [form]="form"
+      [control]="amount"
+      (continue)="runNextStep(key)">
+    </app-directed-payment-amount>
+  </div>
+
+</ng-template>

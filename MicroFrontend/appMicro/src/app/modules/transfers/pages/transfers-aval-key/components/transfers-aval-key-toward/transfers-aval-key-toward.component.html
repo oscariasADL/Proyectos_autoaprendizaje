@@ -1,0 +1,49 @@
+<section class="avv-generic-step transfer-aval-key">
+  <p class="avv-generic-step-title pb-4">{{ 'TRANSFERS.AVAL_KEY.STEPS.TOWARD_TITLE' | translate }}</p>
+  <div class="transfer-aval-key-content">
+    <avv-field
+      [id]="'transfer-aval-key-tag-aval'"
+      [type]="'text'"
+      [allowPaste]="true"
+      [label]="'TRANSFERS.AVAL_KEY.FIELDS.AVAL_KEY' | translate"
+      [control]="towardAvalKey"
+      [utagCategory]="utagCategory"
+      [utag]="'enviar plata - ingresa los datos de tu contacto - tag aval'"
+    ></avv-field>
+
+    <div class="input-with-help-text">
+      <avv-input
+        [id]="'transfer-aval-key-amount'"
+        [type]="'currency'"
+        [allowPaste]="true"
+        [label]="'TRANSFERS.AVAL_KEY.FIELDS.AMOUNT' | translate"
+        [control]="amount"
+        [utagCategory]="utagCategory"
+        [utag]="'enviar plata - ingresa los datos para transferir - valor a transferir'"
+      ></avv-input>
+      <small>Máximo ${{ amountMax | numberFormat }} por día.</small>
+    </div>
+
+    <div class="input-with-help-text">
+      <avv-field
+        [utag]="'enviar plata - ingresa los datos para transferir - mensaje'"
+        [utagCategory]="utagCategory"
+        [id]="'transfer-note'"
+        [type]="'text'"
+        [label]="'TRANSFERS.CEL2CEL.SEND.TOWARD_NOTE_FIELD_LABEL' | translate"
+        [control]="note">
+      </avv-field>
+      <small>{{ 'TRANSFERS.NOTE_HELP_TEXT' | translate }}</small>
+    </div>
+
+    <button type="button"
+            class="avv-btn-primary mt-3"
+            [utagCategory]="utagCategory"
+            [utag]="'enviar plata - ingresa los datos para transferir - continuar'"
+            [id]="'transfer-tag-aval-btn'"
+            [disabled]="form.invalid"
+            (click)="continueAction()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </div>
+</section>

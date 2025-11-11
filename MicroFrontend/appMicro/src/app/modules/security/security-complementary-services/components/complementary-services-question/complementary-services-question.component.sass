@@ -1,0 +1,24 @@
+@import 'utils'
+
+.complementary-services-question
+  &-container
+    +flex(center, flex-start, column)
+    padding: $spacer-4 $spacer-2
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+  &-title
+    margin-bottom: $spacer-4
+    text-align: center
+    max-width: 300px
+
+  &-subtitle
+    margin: $spacer-4 0
+    text-align: center
+
+  &-description
+    margin-bottom: 48px
+    text-align: center
+
+  &-buttons
+    +flex(center, space-between)
+    width: 100%

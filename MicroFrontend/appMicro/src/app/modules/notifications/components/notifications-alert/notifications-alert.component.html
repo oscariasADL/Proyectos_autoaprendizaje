@@ -1,0 +1,15 @@
+<div class="notification-alert-container">
+  <div class="notification-alert-header">
+    <p class="notification-alert-title">{{ item?.title }}</p>
+    <small class="notification-alert-date">{{ item?.date | mailboxDate : true }}</small>
+  </div>
+
+  <p class="notification-alert-message">{{ item?.message }}</p>
+
+  <button class="avv-btn-primary" [id]="id + '-button'" (click)="closeModal()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+  <button class="avv-btn-link mt-4" [id]="id + 'delete-button'" (click)="removeItem()">
+    {{ 'NOTIFICATION.MENU.MAILBOX.DELETE_ITEM' | translate }}
+  </button>
+</div>

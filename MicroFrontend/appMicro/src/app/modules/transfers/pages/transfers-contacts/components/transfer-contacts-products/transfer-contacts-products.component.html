@@ -1,0 +1,105 @@
+<div class="avv-generic-step transfer-contacts-products-step">
+  <div class="avv-generic-step-content">
+
+    <div class="avv-contact-card transfer-contacts-products-step-contact-card"
+         role="button"
+         [attr.aria-label]="(contactData?.name | capitalize: true) + ' ' + (contactData?.nickname?.trim()) || (contactData?.phoneNumber) || '-' | capitalize"
+         (click)="editContactSelected()">
+            <span class="contact-image">
+                {{ (contactData.name + '') | slice : 0 : 1 | uppercase }}
+            </span>
+      <div class="contact-info">
+        <h6 class="name"
+            [innerHTML]="contactData?.name | capitalize: true">
+        </h6>
+        <p class="nickname"
+           [innerHTML]="(contactData?.nickname?.trim()) || (contactData?.phoneNumber) || '-' | capitalize">
+        </p>
+        <i class="icon icon-back"></i>
+      </div>
+    </div>
+
+    <div *ngIf="contactProductsWorking$ | async; else contactProducts">
+      <ul>
+        <li *ngFor="let item of [1, 2, 3 , 4 , 5]">
+          <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<ng-template #contactProducts>
+  <p class="avv-generic-step-title" [innerHtml]="'TRANSFERS.CONTACTS.PRODUCTS.TITLE' | translate"></p>
+  <ul class="transfer-contacts-products-step-list">
+    <li
+      *ngIf="isValidCellPhone as phoneNumber"
+      [ngClass]="{'disabled' : exceedsTransferToPhoneMax}">
+      <div
+        role="button"
+        [attr.aria-label]="phoneNumber"
+        (click)="!exceedsTransferToPhoneMax ? selectPhoneNumber() : null"
+        class="avv-contact-card transfer-contacts-products-step-item phone-number"
+        id="transfer-contacts-phone">
+                        <span class="contact-image">
+                            <i class="icon-celular"></i>
+                        </span>
+        <div class="contact-info">
+          <h6
+            class="name"
+            [innerHTML]="phoneNumber"></h6>
+        </div>
+        <span class="contact-icon icon-next"></span>
+      </div>
+    </li>
+    <div
+      *ngIf="(contactProductsCompleted$ | async) === false"
+      class="transfer-contacts-products-step-list-products-error">
+      <img
+        class="mt-5 mb-4"
+        [src]="'icons/recargar-celular-cancelar.svg' | imageUrl"
+        alt>
+      <p [innerHtml]="'TRANSFERS.CONTACTS.PRODUCTS.PRODUCTS_ERROR' | translate"></p>
+    </div>
+    <li
+      *ngFor="let product of contactProducts$ | async"
+      [ngClass]="{'disabled' : transferLessMinimum}">
+      <div
+        role="button"
+        [attr.aria-label]="(product.alias | stripTags) + ' ' + (product.bank.name | stripTags) + ' ' + (product.type.name + ' ' + ('ACCOUNT_NUMBER' | translate) + ' ' + product.number)"
+        (click)="!transferLessMinimum ? selectContactProduct(product) : null"
+        class="avv-contact-card transfer-contacts-products-step-item" [class.product-block]="product?.status !== statusProduct.ACTIVE">
+                        <span class="contact-image">
+                            <i class="icon-tarjeta"></i>
+                        </span>
+        <div class="contact-info">
+          <h6
+            class="name"
+            [innerHTML]="product.alias"></h6>
+          <h6
+            class="name"
+            [innerHTML]="product.bank.name"></h6>
+          <p class="nickname" [class.title-popover]="product?.status !== statusProduct.ACTIVE">
+            {{ product.type.name + ' ' + ('ACCOUNT_NUMBER' | translate) + ' ' + product.number}} 
+            <ng-container *ngIf="product.status !== statusProduct.ACTIVE">
+              <i class="icon-informacion" (click)="showPopover($event, popoverMessage  , product.relativeId)" role="button"
+              [attr.aria-label]="'Más información'"></i>
+            </ng-container>
+          </p>
+          <span *ngIf="product?.status !== statusProduct.ACTIVE" class="product-tag">En proceso de inscripción</span>
+        </div>
+        <span *ngIf="product?.status === statusProduct.ACTIVE" class="contact-icon icon-next"></span>
+      </div>
+    </li>
+  </ul>
+
+  <div
+    *ngIf="(contactProductsCompleted$ | async)"
+    class="avv-alert-info mt-3">
+    <i class="avv-alert-icon icon-info"></i>
+    <div
+      class="avv-alert-text"
+      [innerHtml]="'TRANSFERS.CONTACTS.PRODUCTS.ACCOUNT_NOT_FOUND' | translate">
+    </div>
+  </div>
+</ng-template>

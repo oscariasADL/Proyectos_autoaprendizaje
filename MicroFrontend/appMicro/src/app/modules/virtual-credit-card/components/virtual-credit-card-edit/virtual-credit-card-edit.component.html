@@ -1,0 +1,49 @@
+<ion-content [forceOverscroll]="false">
+  <div class="virtual-credit-card-edit-header">
+    <div class="virtual-credit-card-edit-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="virtual-credit-card-edit-header-title">
+        {{ 'VIRTUAL_CREDIT_CARD.EDIT.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="virtual-credit-card-edit-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="virtual-credit-card-edit-container">
+    <div class="text-center">
+      <h6 class="semi-bold mb-3">{{ 'VIRTUAL_CREDIT_CARD.EDIT.TITLE' | translate }}</h6>
+    </div>
+
+    <p class="small semi-bold">{{ 'VIRTUAL_CREDIT_CARD.EDIT.CUSTOM' | translate }}</p>
+
+    <div class="form-control">
+      <avv-field
+        [type]="'text'"
+        [id]="'virtual-credit-card-configuration-name'"
+        [label]="'VIRTUAL_CREDIT_CARD.EDIT.CUSTOM_FIELD' | translate"
+        [control]="nickName">
+      </avv-field>
+      <small class="mt-1">{{ 'VIRTUAL_CREDIT_CARD.EDIT.CUSTOM_BOTTOM' | translate }}</small>
+    </div>
+    <div class="form-control">
+      <avv-input
+        [type]="'currency'"
+        [id]="'virtual-credit-card-configuration-amount'"
+        [label]="'VIRTUAL_CREDIT_CARD.EDIT.AMOUNT_FIELD' | translate"
+        [control]="amount">
+      </avv-input>
+      <small class="mt-1">{{ 'VIRTUAL_CREDIT_CARD.EDIT.AMOUNT_BOTTOM' | translate }}</small>
+    </div>
+    <button type="button" id="virtual-credit-card-edit-btn"
+            class="avv-btn-primary mt-3"
+            [disabled]="form.invalid"
+            (click)="editVirtualCreditCard()"
+            [utag]="EDIT_TCV.event_label"
+            [utagCategory]="EDIT_TCV.event_category"
+            >
+      {{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}
+    </button>
+  </div>
+</ion-content>

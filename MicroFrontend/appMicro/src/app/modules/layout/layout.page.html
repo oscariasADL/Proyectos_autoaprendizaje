@@ -1,0 +1,22 @@
+<ion-menu
+    type="overlay"
+    menuId="side-menu"
+    side="end"
+    contentId="my-content">
+    <app-side-menu></app-side-menu>
+</ion-menu>
+
+<ion-menu
+    type="overlay"
+    side="start"
+    menuId="notifications"
+    swipeGesture="false"
+    contentId="my-content">
+    <app-notifications-menu></app-notifications-menu>
+</ion-menu>
+
+<ion-content
+    id="my-content"
+    [forceOverscroll]="false">
+    <ion-router-outlet></ion-router-outlet>
+</ion-content>

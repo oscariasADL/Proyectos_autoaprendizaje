@@ -1,0 +1,73 @@
+<div *ngIf="mailboxList.length > 0" class="notification-mailbox">
+
+  <!-- BEGIN - Remove for Huawei Distribution -->
+  <div *ngIf="!notificationsState" class="notification-mailbox-alert">
+    <div class="avv-alert-info">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text-action notification-mailbox-alert-text">
+        {{ 'NOTIFICATION.MENU.ALERT.DESCRIPTION' | translate }}
+        <button class="avv-link-underline text-left"
+                id="notification-mailbox-btn-link"
+                (click)="redirectNotifications.emit()">
+          {{ 'NOTIFICATION.MENU.ALERT.BUTTON' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- END - Remove for Huawei Distribution -->
+
+  <div class="notification-mailbox-header">
+    <div class="notification-header" *ngIf="!showItemSelection; else elseBlock">
+      <p class="notification-mailbox-title">
+        {{ 'NOTIFICATION.MENU.MAILBOX.TITLE' | translate }}
+      </p>
+      <button class="avv-link-underline text-left"
+              (click)="showSelection()">{{ 'NOTIFICATION.MENU.MAILBOX.SELECT' | translate }}</button>
+    </div>
+    <ng-template #elseBlock>
+      <div class="notification-options">
+        <button class="avv-link-underline text-left" *ngIf="showRemoveSelection"
+                (click)="selectAllNotifications(false)">{{ 'NOTIFICATION.MENU.MAILBOX.REMOVE_SELECTION' | translate }}</button>
+        <button class="avv-link-underline text-left" *ngIf="!showRemoveSelection"
+                (click)="selectAllNotifications()">{{ 'NOTIFICATION.MENU.MAILBOX.SELECT_ALL' | translate }}</button>
+        <button class="avv-link-underline text-left"
+                (click)="hideSelection()">{{ 'ACTIONS.CANCEL' | translate }}</button>
+      </div>
+    </ng-template>
+  </div>
+
+  <form [formGroup]="form">
+    <ng-container formArrayName="notifications">
+      <ul>
+        <li *ngFor="let item of mailboxList; let i = index">
+          <div class="notification-item" [ngClass]="{'read': item?.read}" *ngIf="isPush(item) || isDefault(item) || isQR(item)">
+            <div class="notification-item-checkbox" *ngIf="showItemSelection">
+              <label>
+                <input type="checkbox" class="input-checkbox" [formControlName]="i"/>
+              </label>
+            </div>
+            <div class="notification-item-content" (click)="showMailboxItem(item)">
+              <div class="content-icon">
+                <i class="notification-item-icon icon-caht_2"
+                   aria-hidden="true"
+                   [ngClass]="{'icon-caht_2': !item?.isTransaction, 'icon-salario money' : item?.isTransaction}"></i>
+              </div>
+
+              <div class="content-panel">
+                <div class="content-title-container">
+                  <p class="content-title semi-bold">{{ item?.title }}</p>
+                  <small class="content-date" *ngIf="item?.date ">{{ item?.date  | mailboxDate }}</small>
+                  <small class="content-date" *ngIf="item?.notificationType===notificationType.QR">{{ item?.timestamp | isoTimeFormat }}</small>
+                </div>
+                <div class="content-description" [ngClass]="{'reduce': showItemSelection}" *ngIf="item.notificationType !==notificationType.PUSH">
+                  <small class="">{{ item?.message }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+
+  </form>
+</div>

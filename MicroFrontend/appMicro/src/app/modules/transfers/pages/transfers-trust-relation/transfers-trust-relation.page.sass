@@ -1,0 +1,43 @@
+@import 'utils'
+
+.transfers-trust-relation
+  &-container
+    width: 100%
+    display: inline-block
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+    padding: $spacer-4 $spacer-2
+
+  &-empty
+    padding: 90px 24px
+    +flex(center, center, column)
+    position: relative
+
+  &-content
+    width: 100%
+    margin-top: $spacer-4
+
+    > div
+      &:nth-child(4n-2)
+        .contact-image
+          background-color: #ffd042 !important
+
+      &:nth-child(4n-1)
+        .contact-image
+          background-color: #f99594 !important
+
+      &:nth-child(4n+0)
+        .contact-image
+          background-color: #6a81e7 !important
+
+      &:nth-child(4n+1)
+        .contact-image
+          background-color: #51daa9 !important
+
+  &-working-cards
+    margin-top: $spacer-4
+    position: relative
+
+    &-item
+      width: 100%
+      border-radius: 4px
+      margin-bottom: $spacer-2

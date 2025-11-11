@@ -1,0 +1,67 @@
+@import 'utils';
+
+.pocket-detail{
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__notification{
+        padding-bottom: 24px;
+    }
+
+    &__renew-notification{
+        padding: 0 12px;
+    }
+
+    &__actions{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    &__action{
+        display: flex;
+        justify-content: space-between;
+        &-title{
+            margin: auto 0;
+        }
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+
+
+        padding: 16px;
+
+        border: 1px solid #DEE1E4;
+        border-radius: 8px;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+
+    &__advice{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: #5C6B7A;
+    }
+}
+
+.avv-text__button--highlighted{
+    font-size: 1rem;
+}
+
+.icon-info-tooltip{
+    flex-grow: 1;
+    margin-left: $spacer;
+    font-size: 16px;
+    color: var(--blue-1)
+}
+

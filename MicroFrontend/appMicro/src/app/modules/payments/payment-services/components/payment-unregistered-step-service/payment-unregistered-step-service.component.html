@@ -1,0 +1,13 @@
+<div class="payment-unregistered-step-service">
+  <p class="title semi-bold">{{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SERVICE.MESSAGE' | translate }}</p>
+  <button
+    (click)="scanBarcode2()"
+    class="avv-btn-secondary btn-codebar"
+    id="pay-unregistered-codebar-scanner-btn">
+    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_SERVICE.BUTTON' | translate | uppercase }}
+    <i
+      class="icon-camara"
+      title="icon-camara"></i>
+  </button>
+  <app-search-services (selectCategory)="onselectCategory($event)" *ngIf="!isScanActive"></app-search-services>
+</div>

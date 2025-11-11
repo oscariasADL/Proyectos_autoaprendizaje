@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259718429289",
+    "project_id": "bavv-mb-frontend-app-test",
+    "storage_bucket": "bavv-mb-frontend-app-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259718429289:android:bcfe878d405c86947180f8",
+        "android_client_info": {
+          "package_name": "co.com.adl.mb.test.avvillas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "GOOGLE_SERVICES_ANDROID_CURRENT_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

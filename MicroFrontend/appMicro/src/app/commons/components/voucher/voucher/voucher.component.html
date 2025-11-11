@@ -1,0 +1,128 @@
+<!-- Contenedor principal del comprobante para captura de PDF -->
+<div id="voucher-content" class="voucher-capture-area">
+  <section class="create-voucher__body avv-ticket">
+    <div class="avv-ticket-border"></div>
+    <div class="create-voucher__body-content avv-ticket-content">
+      
+      <!-- Header con aprobación exitosa -->
+      <div class="avv-ticket-header" *ngIf="hasApprovalId">
+        <img [src]="'illustrations/success.svg' | imageUrl" 
+             alt="ícono de aprobado" 
+             class="mr-3">
+        <div class="avv-ticket-header-content">
+          <p class="avv-ticket-header-content-title">
+            {{ 'COMMON_LABELS.NUMBER_AUTHORIZATION' | translate }}
+          </p>
+          <p class="avv-ticket-header-content-subtitle">
+            {{ approvalId }}
+          </p>
+        </div>
+      </div>
+      
+      <!-- Header con error -->
+      <div class="avv-ticket-header" 
+           *ngIf="!hasApprovalId" 
+           [ngClass]="{'normal-img': !hasApprovalId}">
+        <img [src]="'illustrations/error-proceso.svg' | imageUrl" 
+             alt="ícono de error" 
+             class="mr-0">
+      </div>
+
+      <!-- Lista de items del comprobante -->
+      <app-voucher-list
+        [items]="displayItems"
+        [className]="'no-end-line no-padding-right'">
+      </app-voucher-list>
+      
+      <!-- Indicador de carga -->
+      <div class="loading-indicator" *ngIf="!ipLoaded">
+        <p class="loading-text">
+          {{ 'VOUCHER.LOADING_DEVICE_INFO' | translate }}
+        </p>
+      </div>
+      
+    </div>
+    <div class="avv-ticket-border"></div>
+  </section>
+</div>
+
+<!-- Botones de acción -->
+<div class="action-container mt-3">
+  <!-- Botón de descarga -->
+  <button 
+    type="button" 
+    class="avv-btn-round avv-alert-download-btn" 
+    *ngIf="!denyDownload"
+    [id]="id + '-btn-download'" 
+    [ngClass]="{
+      'working': (workingDownload$ | async) || !ipLoaded,
+      'disabled': !ipLoaded
+    }"
+    [disabled]="(workingDownload$ | async) || !ipLoaded"
+    [utag]="(utagEvent.event_label) ? utagEvent.event_label + 'descargar comprobante' : null"
+    [utagCategory]="utagEvent.event_category" 
+    (click)="downloadTicket()"
+    [attr.aria-label]="'VOUCHER.ACTIONS.DOWNLOAD' | translate">
+    
+    <!-- Ícono de descarga -->
+    <i class="icon-descarga avv-alert-download-btn-icon" 
+       *ngIf="(workingDownload$ | async)===false  && ipLoaded"></i>
+    
+    <!-- Spinner de carga -->
+    <i class="spinner avv-alert-download-btn-loader" 
+       *ngIf="(workingDownload$ | async) || !ipLoaded"></i>
+    
+    <!-- Texto del botón -->
+    <span class="label-btn-round">
+      <ng-container *ngIf="(workingDownload$ | async)===false  && ipLoaded">
+        {{ 'VOUCHER.ACTIONS.DOWNLOAD' | translate }}
+      </ng-container>
+      <ng-container *ngIf="(workingDownload$ | async)">
+        {{ 'VOUCHER.ACTIONS.DOWNLOADING' | translate }}
+      </ng-container>
+      <ng-container *ngIf="!ipLoaded">
+        {{ 'VOUCHER.ACTIONS.DOWNLOADING' | translate }}
+      </ng-container>
+    </span>
+  </button>
+
+  <!-- Botón de compartir -->
+  <button 
+    type="button" 
+    class="avv-btn-round avv-alert-share" 
+    *ngIf="allowShare"
+    [id]="id + '-btn-share'" 
+    [ngClass]="{
+      'working': (workingShare$ | async) || !ipLoaded,
+      'disabled': !ipLoaded
+    }"
+    [disabled]="(workingShare$ | async) || !ipLoaded" 
+    [utag]="(utagEvent.event_label) ? utagEvent.event_label + 'compartir' : null"
+    [utagCategory]="utagEvent.event_category" 
+    (click)="shareTicket()"
+    [attr.aria-label]="'VOUCHER.ACTIONS.SHARE' | translate">
+    
+    <!-- Ícono de compartir -->
+    <i class="icon-compartir avv-alert-share-icon" 
+       *ngIf="(workingShare$ | async)===false  && ipLoaded"></i>
+    
+    <!-- Spinner de carga -->
+    <i class="spinner avv-alert-share-loader" 
+       *ngIf="(workingShare$ | async) || !ipLoaded"></i>
+    
+    <!-- Texto del botón -->
+    <span class="label-btn-round">
+      <ng-container *ngIf="(workingShare$ | async)===false  && ipLoaded">
+        {{ 'VOUCHER.ACTIONS.SHARE' | translate }}
+      </ng-container>
+      <ng-container *ngIf="(workingShare$ | async)">
+        {{ 'VOUCHER.ACTIONS.SHARING' | translate }}
+      </ng-container>
+      <ng-container *ngIf="!ipLoaded">
+        {{ 'VOUCHER.ACTIONS.PREPARING' | translate }}
+      </ng-container>
+    </span>
+  </button>
+</div>
+
+

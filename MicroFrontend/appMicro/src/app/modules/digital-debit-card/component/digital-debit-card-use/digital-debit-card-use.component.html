@@ -1,0 +1,28 @@
+<div class="digital-debit-card-use-container">
+  <div class="digital-debit-card-use-image">
+    <p class="semi-bold mb-4">{{ 'DIGITAL_DEBIT_CARD.USE.TITLE' | translate }}</p>
+    <img class="mb-2" [src]="'digital-debit-card-use.svg' | imageUrl" alt="digital-debit-card-use" draggable="false">
+  </div>
+
+  <ul class="avv-list-red-point">
+    <li>
+      <p class="small">
+        {{ 'DIGITAL_DEBIT_CARD.USE.DESCRIPTION.ITEM_1' | translate }}
+      </p>
+    </li>
+    <li>
+      <p class="small">
+        {{ 'DIGITAL_DEBIT_CARD.USE.DESCRIPTION.ITEM_2' | translate }}
+      </p>
+    </li>
+    <li>
+      <p class="small">
+        {{ 'DIGITAL_DEBIT_CARD.USE.DESCRIPTION.ITEM_3' | translate }}
+      </p>
+    </li>
+  </ul>
+
+  <button id="digital-debit-card-use-btn" class="avv-btn-primary mt-4" (click)="closeModal()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+</div>

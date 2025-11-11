@@ -1,0 +1,57 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'PAYROLL_ADVANCE.PAGE.HEADER' | translate"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <div class="payroll-advance-info-container">
+    <div class="payroll-advance-info-inner-container">
+      <img src="assets/img/illustrationsV2/retiro-dinero-regular.svg" width="113" height="112" draggable="false">
+      <p class="semi-bold payroll-advance-info-title">
+        {{ 'PAYROLL_ADVANCE.PAGE.TITLE' | translate }} <span *ngIf="productDetail$ | async as product" [innerHtml]="productDetail.payrollAdvanceAmount | currencyFormat"></span>
+      </p>
+
+      <div class="avv-list-blue-point payroll-advance-info-list">
+        <div class="small">
+          <span class="punto"></span>
+          {{ 'PAYROLL_ADVANCE.PAGE.TEXT_1' | translate }}
+        </div>
+        <div class="small">
+          <span class="punto"></span>
+          {{ 'PAYROLL_ADVANCE.PAGE.TEXT_2' | translate }}
+        </div>
+        <div class="small">
+          <span class="punto"></span>
+          {{ 'PAYROLL_ADVANCE.PAGE.TEXT_3' | translate }}
+        </div>
+        <div class="small">
+          <span class="punto"></span>
+          {{ 'PAYROLL_ADVANCE.PAGE.TEXT_4' | translate }}
+        </div>
+        <div class="small">
+          <span class="punto"></span>
+          {{ 'PAYROLL_ADVANCE.PAGE.TEXT_5' | translate }}
+        </div>
+      </div>
+    </div>
+  
+    <a 
+      class="avv-btn-link term-btn"
+      (click)="showTermsCond()"
+    >
+      {{ 'PAYROLL_ADVANCE.PAGE.TERMS_AND_CONDITIONS' | translate }}
+    </a>
+
+    <button class="avv-btn-primary payroll-btn" (click)="accepted()">
+      {{ 'PAYROLL_ADVANCE.PAGE.CONFIRM' | translate }}
+    </button>
+    <button type="button"
+            class="avv-btn-link"
+            (click)="declined()">
+      {{ 'PAYROLL_ADVANCE.PAGE.CANCEL' | translate }}
+    </button>
+  
+  </div>
+</ion-content>

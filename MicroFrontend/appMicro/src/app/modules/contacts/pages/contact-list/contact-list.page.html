@@ -1,0 +1,31 @@
+<app-headers
+  [backUrl]="'/'"
+  [title]="'Contactos'">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="contacts-container avv-padding">
+    <div *ngIf="working$ | async; else (completed$ | async) ? content : noContent" class="contacts-loading">
+      <div *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ,12]">
+        <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ng-template #content>
+  <app-contact-book
+          [contacts]="contacts$ | async"
+          [filter]="filter$ |async"
+          (setFilter)="setContactFilter($event)"
+          (clicked)="redirectToContactDetail($event)">
+  </app-contact-book>
+</ng-template>
+
+<ng-template #noContent>
+  <div class="contacts-container-empty">
+    <img [src]="'ilus-register.png' | imageUrl" alt="no-contacts">
+    <p>Próximamente podrás inscribir personas o empresas como contactos para hacerles transferencias más
+      rápido.</p>
+  </div>
+</ng-template>

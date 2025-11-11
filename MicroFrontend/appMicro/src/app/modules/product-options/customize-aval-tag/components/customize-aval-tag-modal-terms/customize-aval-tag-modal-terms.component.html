@@ -1,0 +1,22 @@
+<section class="customize-aval-tag-modal-terms">
+  <figure class="customize-aval-tag-modal-terms__figure">
+    <img appPreloadImage
+         [preload]="skeleton"
+         [src]="'/assets/images/illustrations/transfers/security-phone.svg' | imageUrl:true"
+         alt="">
+    <ion-skeleton-text #skeleton class="customize-aval-tag-modal-terms__skeleton" animated></ion-skeleton-text>
+  </figure>
+  <div class="customize-aval-tag-modal-terms__body">
+    <p class="semi-bold bottom-title">{{ termsAndConditions.title }}</p>
+    <div class="customize-aval-tag-modal-terms__description">
+      <div class="customize-aval-tag-modal-terms__description-content"
+           [innerHTML]="termsAndConditions.content | safeHtml">
+      </div>
+    </div>
+  </div>
+  <div class="customize-aval-tag-modal-terms__footer">
+    <button type="button" class="avv-btn-primary" (click)="closeModal()">
+      {{ 'ACTIONS.COPY_THAT' | translate }}
+    </button>
+  </div>
+</section>

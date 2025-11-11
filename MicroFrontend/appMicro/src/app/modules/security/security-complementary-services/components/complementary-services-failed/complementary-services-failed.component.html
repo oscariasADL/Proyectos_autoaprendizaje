@@ -1,0 +1,24 @@
+<!-- <p>
+  Falló el encendido o apagado de los servicios complementarios
+</p>
+<button class="avv-btn-secondary" (click)="continue.emit()">
+  {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+</button> -->
+<div class="complementary-services-complete-container">
+
+  <img class="complementary-services-complete-img"
+       [src]="(state ? 'icons/exito.svg' : 'icons/error-x-phone.svg') | imageUrl" alt="">
+
+  <p class="semi-bold complementary-services-complete-title">
+    {{ (state ? 'Tus servicios complemetarios estan activos' : 'Falló el encendido o apagado de los servicios complementarios') | translate}}
+  </p>
+
+  <p class="complementary-services-complete-subtitle">
+      {{ (state ? '¡Ahora puedes realizar todas tus transacciones!' : '¡Recuerda no podrás realizar algunas transacciones!') | translate}}
+  </p>
+
+  <button class="avv-btn-secondary" (click)="continue.emit()">
+    {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+  </button>
+
+</div>

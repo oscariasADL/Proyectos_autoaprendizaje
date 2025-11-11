@@ -1,0 +1,50 @@
+@import 'utils'
+
+.transfers-transfiya
+  &-container
+    width: 100%
+    display: inline-block
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+
+  &-list
+    padding: $spacer-4 $spacer-2 0
+
+    .contact-image-icon i
+      color: var(--gray-8)
+
+  &-name
+    padding-right: 40px
+
+  &-number
+    position: absolute
+    right: 45px
+    padding-right: 10px
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      background-color: var(--gray-6)
+      height: 82%
+      width: 1px
+
+    i
+      position: relative
+      font-size: 20px
+      color: var(--red-1)
+
+
+    .notification-number
+      position: absolute
+      top: -4px
+      right: -4px
+      width: 16px
+      height: 16px
+      font-size: 10px
+      padding: 2px
+      font-weight: bold
+      color: var(--white)
+      background-color: var(--blue-3)
+      border-radius: 50%
+      border: solid 2px var(--red-1)

@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "cypress/**/*.ts"
+  ],
+  "compilerOptions": {
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [
+      "cypress"
+    ]
+  }
+}

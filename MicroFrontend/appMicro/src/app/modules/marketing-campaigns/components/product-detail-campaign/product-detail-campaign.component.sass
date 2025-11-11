@@ -1,0 +1,39 @@
+@import 'utils'
+
+.product-detail-campaign-container
+  max-height: 100px
+  margin-bottom: $spacer-3
+  padding: $spacer $spacer-2
+  display: grid
+  grid-template-columns: 1fr 3fr
+  gap: 16px
+  border-radius: 8px
+
+  .campaign-image
+    justify-self: center
+
+    &-skeleton
+      width: 78px
+      height: 78px
+
+  .campaign-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+
+    .campaign-title
+      font-size: 12px
+      font-weight: 400
+      color: #000
+
+    .campaign-description
+      font-size: 14px
+      font-weight: 600
+      color: #000
+
+    .campaign-action
+      margin-top: 3px
+      text-decoration-line: underline
+      color: var(--blue-1)
+

@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[9265],{69265:(u,s,e)=>{e.r(s),e.d(s,{OtpAutocompletePluginWeb:()=>_});var t=e(10467),n=e(15083);class _ extends n.E_{listenOtpOnAndroid(r){var o=this;return(0,t.A)(function*(){return setTimeout(()=>{o.notifyListeners("otpReceivedEvent",{success:!0,otp:"12345678",msg:""})},1e3),{success:!0}})()}}}}]);

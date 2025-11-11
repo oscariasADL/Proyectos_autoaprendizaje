@@ -1,0 +1,9 @@
+<app-headers
+    #header
+    [title]="(title$ | async)"
+    [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+    <ion-router-outlet></ion-router-outlet>
+</ion-content>

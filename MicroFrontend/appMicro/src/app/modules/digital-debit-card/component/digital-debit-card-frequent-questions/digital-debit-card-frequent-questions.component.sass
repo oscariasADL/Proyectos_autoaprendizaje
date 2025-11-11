@@ -1,0 +1,93 @@
+@import 'utils'
+
+.digital-debit-card-frequent-question
+  &-container
+    +flex(flex-start, space-between, column)
+    height: 100%
+    overflow: auto
+    padding: calc(#{$spacer-1} + var(--safe-area-inset-top)) $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+  &-header
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 3
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: calc(8px + var(--safe-area-inset-top)) $spacer $spacer
+    background-color: var(--white)
+
+    &-back
+      font-size: 24px
+      color: var(--gray-8)
+      padding: 8px
+
+    &-title
+      color: var(--gray-8)
+      white-space: nowrap
+      overflow: hidden
+      padding-left: 8px
+      text-overflow: ellipsis
+
+  i
+    font-size: 24px
+    color: var(--gray-2)
+    padding: 8px
+
+  p
+    margin-left: 16px
+    font-size: 20px
+    line-height: 1.6
+    color: var(--gray-2)
+
+  &-img
+    width: 100%
+    text-align: center
+    margin: $spacer-2 0 $spacer-3
+
+  &-list
+    display: flex
+    flex-wrap: wrap
+    text-align: center
+
+    &-header
+      +flex(flex-start, space-between)
+      padding: $spacer $spacer-1
+      background-color: var(--gray-4)
+
+      i
+        position: relative
+        font-size: 24px
+        transition: .3s
+
+      p
+        text-align: left
+
+    &-content
+      position: relative
+      max-height: 0
+      transition: .3s
+      overflow: hidden
+
+      p
+        padding: $spacer-1 $spacer-2
+        text-align: left
+        border-bottom: 1px solid var(--gray-6)
+
+        a
+          text-decoration: underline
+
+    li
+      width: 100%
+      margin-bottom: $spacer-2
+
+      &.active
+        .digital-debit-card-frequent-question-list-header
+
+          i
+            transform: rotate(180deg)
+
+        .digital-debit-card-frequent-question-list-content
+          max-height: 1000px
+

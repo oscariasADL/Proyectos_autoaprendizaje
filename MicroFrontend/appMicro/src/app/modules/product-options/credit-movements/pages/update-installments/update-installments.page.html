@@ -1,0 +1,44 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'UPDATE_INSTALLMENTS.HEADER' | translate"
+    [backUrl]="backUrl"
+    [showSteps]="false"
+    [exitData]="exitData"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-update-installments-list
+      *ngSwitchCase="'movements'"
+      [form]="form"
+      [control]="movement"
+      [movements]="creditMovements$ | async"
+      (showInformation)="showInformation()"
+      (continue)="runNextStep(key)">
+    </app-update-installments-list>
+
+    <app-modify-installments
+      *ngSwitchCase="'installments'"
+      [form]="form"
+      [control]="installments"
+      [validatorInstallment]="validatorInstallmentField"
+      [isDebitPurchaseControl]="isDebitPurchase"
+      (continue)="runNextStep(key)">
+    </app-modify-installments>
+  </div>
+
+</ng-template>

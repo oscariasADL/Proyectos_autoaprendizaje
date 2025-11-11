@@ -1,0 +1,64 @@
+<section class="pockets-transfer-step">
+  <figure class="pockets-transfer-step__icon">
+    <img [src]="'illustrations/transfer-money.svg' | imageUrl" alt="Icono de transferencia de dinero"/>
+  </figure>
+  <h2 class="pockets-transfer-step__title">{{ 'POCKETS.TRANSFER.CONFIRM' | translate }}</h2>
+
+  <ng-container *ngIf="isPocketProfitability">
+    <app-notification icon="icon-alerta" [type]="notificationType.warning"
+                      [description]="'POCKETS.TRANSFER.WARNING_MESSAGE' | translate"></app-notification>
+  </ng-container>
+
+  <div class="pockets-transfer-step_detail">
+    <app-voucher-list
+      [items]="detailItems"
+      [className]="'no-padding-right inverted-bold'"
+    >
+    </app-voucher-list>
+  </div>
+  <div class="pockets-transfer-step__form">
+    <p class="pockets-transfer-options-title">{{ 'POCKETS.FIELDS.TO' | translate }}:</p>
+    <div class="pockets-transfer-options-panel">
+      <ul class="avv-select-list" *ngIf="pocketsAllowed?.length > 0">
+        <li *ngFor="let item of pocketTransferTypes"
+            [ngClass]="{'active': item.value === activeTransferType}"
+            (click)="changeActiveTransferType(item.value)">
+          <p>{{ item.label | translate }}</p>
+        </li>
+      </ul>
+
+      <div class="pockets-transfer-options-panel-parent-account"
+           *ngIf="activeTransferType === pocketTransferType.parentAccount">
+        <p>{{ pocketDetail?.productTypeParentDesc }} {{ 'ACCOUNT_NUMBER' | translate }} {{ pocketDetail.productNumberParent }}</p>
+      </div>
+
+      <avv-dropdown class="form-dropdown"
+                    *ngIf="activeTransferType === pocketTransferType.otherPocket"
+                    [id]="'pocket-transfer-list'"
+                    [items]="pocketsAllowedList"
+                    [label]="'POCKETS.FIELDS.SELECT_POCKET' | translate"
+                    [control]="targetPocket">
+      </avv-dropdown>
+    </div>
+    <div class="pockets-transfer-options-amount-input">
+      <avv-input
+        [type]="'currency'"
+        [id]="'pocket-transfer-amount'"
+        [label]="'POCKETS.FIELDS.VALUE_TO_TRANSFER' | translate"
+        [control]="amount">
+      </avv-input>
+    </div>
+  </div>
+  <div class="pockets-transfer-step_bottom">
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'pocket-transfer-btn'"
+            [disabled]="!form.valid"
+            (click)="continue.emit()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+    <button class="avv-btn-link mt-5" (click)="backPage()">
+      {{ 'ACTIONS.CANCEL' | translate }}
+    </button>
+  </div>
+</section>

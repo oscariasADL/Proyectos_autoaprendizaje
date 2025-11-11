@@ -1,0 +1,19 @@
+@import 'utils'
+
+.modal-time-expired__container
+        +flex(center, center, column)
+        position: relative
+        background-color: var(--white)
+        height: 25%
+        overflow: auto
+        padding: 32px $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+        margin-top: $spacer
+.modal-header
+    text-align: center
+    &__title
+        font-size: 16px
+        line-height: 24px
+        padding-bottom: 24px
+    &__subtitle
+        font-size: 14px
+        line-height: 20px

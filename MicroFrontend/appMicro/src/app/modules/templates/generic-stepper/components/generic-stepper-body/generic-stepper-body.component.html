@@ -1,0 +1,62 @@
+<div class="generic-stepper-body">
+  <ng-container *ngFor="let key of slidesKey; let i = index">
+    <div class="py-2 px-3 text-center"
+         *ngIf="data[key].data.headerMessage && currentStep === i"
+         [innerHTML]="data[key].data.headerMessage | translate"></div>
+  </ng-container>
+  <app-stepper
+    *ngIf="showSteps"
+    [steps]="steps"
+    [currentStep]="currentStep"
+    (stepClicked)="stepSelected.emit($event)">
+  </app-stepper>
+
+  <swiper [config]="slideOpts" #swiper
+              (slideChange)="setCurrentSlide()">
+    <ng-container *ngFor="let key of slidesKey; let i = index">
+      <ng-container [ngSwitch]="data[key].type">
+      <ng-template swiperSlide>
+        <div class="generic-stepper-body-slide" *ngIf="isVisible(i)">
+          <app-accounts-step
+            *ngSwitchCase="stepType.accounts"
+            [data]="data[key].data"
+            (nextStep)="setNextStep(key, $event)">
+          </app-accounts-step>
+          <app-field-step
+            *ngSwitchCase="stepType.field"
+            [data]="data[key].data"
+            (nextStep)="setNextStep(key, $event)">
+          </app-field-step>
+          <app-form-step
+            *ngSwitchCase="stepType.form"
+            [data]="data[key].data"
+            (nextStep)="setNextStep(key, $event)">
+          </app-form-step>
+          <app-telephone-companies-step
+            *ngSwitchCase="stepType.telephoneCompanies"
+            [data]="data[key].data"
+            (nextStep)="setNextStep(key, $event)">
+          </app-telephone-companies-step>
+          <app-withdrawal-channels-step
+            *ngSwitchCase="stepType.withdrawalChannels"
+            [data]="data[key].data"
+            (nextStep)="setNextStep(key, $event)">
+          </app-withdrawal-channels-step>
+          <app-confirmation-step
+            *ngSwitchCase="stepType.confirmation"
+            [data]="data[key].data"
+            [utagCategory]="utagCategory"
+            (nextStep)="setNextStep(key, $event)">
+          </app-confirmation-step>
+          <ng-container *ngSwitchCase="stepType.outlet">
+            <ng-container
+              *ngTemplateOutlet="template; context: { data: data[key].data.outletName, nextStep: setNextStep.bind(this), slideSelected: setSlideSelected.bind(this), key: key }">
+            </ng-container>
+          </ng-container>
+        </div>
+      </ng-template>
+      </ng-container>
+    </ng-container>
+  </swiper>
+
+</div>

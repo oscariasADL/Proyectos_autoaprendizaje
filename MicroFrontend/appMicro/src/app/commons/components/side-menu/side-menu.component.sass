@@ -1,0 +1,157 @@
+@import 'utils'
+
+.side-menu-container
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  height: 100vh
+  background-color: var(--gray-5)
+
+  .side-menu-header
+    position: absolute
+    z-index: 1
+    width: 100%
+    top: 0
+    left: 0
+    padding: calc(17px + var(--safe-area-inset-top)) 16px 16px 32px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: var(--red-1)
+    height: calc(56px + var(--safe-area-inset-top))
+
+    p
+      font-weight: bold
+      color: var(--white)
+      font-size: 20px
+      line-height: 1.2
+
+    i
+      font-size: 24px
+      padding: 14px
+      position: relative
+      right: -14px
+      color: var(--white)
+
+  .side-menu-content
+    overflow-y: auto
+    position: relative
+    padding: calc(56px + var(--safe-area-inset-top)) 0 0
+    height: calc(100vh - calc(56px + var(--safe-area-inset-bottom)))
+
+    .side-menu-content-scroll
+      position: relative
+      min-height: 500px
+      height: 100%
+      +flex(inherit, space-between, column)
+
+    .side-menu-user
+      padding: 22px 21px 27px 32px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+      span
+        background-color: var(--blue-4)
+        border-radius: 50%
+        margin-right: 16px
+        width: 32px
+        height: 32px
+        position: relative
+        overflow: hidden
+
+        &:before
+          content: ''
+          position: absolute
+          top: 20px
+          left: 6px
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          background-color: #6a81e7
+
+        &:after
+          content: ''
+          position: absolute
+          top: 7px
+          left: 10px
+          width: 11px
+          height: 11px
+          border-radius: 50%
+          background-color: #6a81e7
+
+      p
+        font-size: 16px
+        line-height: 1.5
+        color: var(--gray-1)
+        font-weight: normal
+
+
+    .side-menu-actions
+      background-color: var(--white)
+      box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+      li
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: 16px 0
+        margin: 0 16px
+        border-bottom: 1px solid var(--gray-4)
+        background-color: var(--white)
+
+        i
+          font-size: 24px
+          margin-right: 16px
+
+        p
+          font-size: 16px
+          line-height: 1.5
+          color: var(--gray-1)
+          font-weight: normal
+
+
+    .side-menu-info
+      width: 100%
+      padding: 22px 16px 8px 16px
+
+      p
+        font-size: 12px
+        color: var(--gray-2)
+        margin-bottom: 8px
+        line-height: 1.33
+        font-weight: normal
+
+        &:last-child
+          margin-bottom: 0
+
+        +media-max-width(320px)
+          font-size: 0.9rem
+
+        span
+          color: var(--gray-1)
+
+  .side-menu-logout
+    position: absolute
+    bottom: 0
+    left: 0
+    height: calc(56px + var(--safe-area-inset-bottom))
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 16px
+    background-color: var(--white)
+    border: 1px solid var(--gray-4)
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+    i
+      font-size: 24px
+      margin-right: 16px
+      color: var(--blue-1)
+
+    p
+      font-size: 16px
+      line-height: 1.5
+      font-weight: normal
+      color: var(--blue-1)

@@ -1,0 +1,130 @@
+@import 'utils'
+
+$border-color: #D1D6DA
+
+.directed-payment-amount
+  height: 90vh
+  overflow-y: scroll
+  position: relative
+  padding: $spacer-3 $spacer-2 0
+  text-align: initial
+
+  p
+    font-size: 14px
+
+  &-header
+    margin-bottom: $spacer-3
+
+  .amount-card
+    width: 100%
+    margin-bottom: $spacer-3
+    border-radius: 8px
+    border: 1px solid $border-color
+
+
+    &-header
+      display: flex
+      flex-direction: column
+      padding: $spacer-2
+      border-radius: 7px 7px 0px 0px
+      background: #F5F9FF
+
+      p
+        font-weight: 700
+
+      small
+        font-size: 12px
+
+    &-body
+      hr
+        height: 1px
+        margin: 0 16px
+        background-color: $border-color
+
+      &-balance
+        padding: $spacer-2
+        display: flex
+        justify-content: space-between
+
+        p:last-child
+          font-weight: 600
+
+
+      &-value-to-pay
+        padding: $spacer-2
+
+        p
+          margin-bottom: $spacer-2
+
+        .form-group
+          display: flex
+          flex-direction: column
+          gap: 16px
+
+        .form-check
+          display: flex
+          align-items: center
+          gap: 10px
+
+        .form-check > label
+          font-size: 16px
+
+        .form-check > input[type=radio]
+          flex-shrink: 0
+          width: 24px
+          height: 24px
+
+        .form-check > avv-input
+          flex-grow: 1
+
+
+  &-cards
+    padding-bottom: 0
+
+  &-account
+    margin-bottom: $spacer-1
+    padding-bottom: 0
+
+    &-description
+      margin-bottom: $spacer-2
+
+  &-total
+    position: sticky
+    left: 0
+    bottom: 0
+    width: 100%
+    margin-bottom: $spacer-3
+    padding: $spacer 0 var(--safe-area-inset-bottom)
+    display: flex
+    justify-content: space-between
+    background-color: var(--white)
+
+    p
+      font-size: 16px
+
+    span
+      font-size: 24px
+      font-weight: 700
+
+  &-action
+    padding-bottom: var(--safe-area-inset-bottom)
+
+
+.form-check-input
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+  display: inline-block
+  width: 15px
+  height: 15px
+  padding: 3px
+  background-clip: content-box
+  border: 1px solid #252B31
+  border-radius: 50%
+  margin-right: 0
+
+  &:checked
+    background-color: #0048DB
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>fr.antelop.applicationGroupIdentifier</key>
+  <string>group.com.grupoavalav.bancamovil</string>
+  <key>fr.antelop.application_id</key>
+  <integer>5084492626949041536</integer>
+  <key>fr.antelop.initialConnectionTimeout</key>
+  <integer>60</integer>
+  <key>fr.antelop.issuer_id</key>
+  <string>avillas</string>
+  <key>fr.antelop.teamIdentifier</key>
+  <string>7K72D5CH92</string>
+  <key>fr.antelop.apple_pay_check_canPush_online</key>
+  <true/>
+</dict>
+</plist>

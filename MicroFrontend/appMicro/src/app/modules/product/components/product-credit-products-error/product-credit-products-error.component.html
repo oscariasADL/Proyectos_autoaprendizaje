@@ -1,0 +1,30 @@
+<p class="product-info-title" *ngIf="(hasCreditProductError$?.currentValue() ?? false)">
+  {{'PRODUCT.CREDIT_CARD_DETAIL.PRODUCT_ERROR_CARD.TITLE' | translate }}
+</p>
+<div role="button" class="credit-products-error" aria-label="Tarjetas Débito Digital"
+  *ngIf="(hasCreditProductError$?.currentValue() ?? false)">
+  <div class="product-info">
+    <div class="icon-container">
+      <img src="assets/img/icons/error-carga.svg" alt="">
+    </div>
+    <div class="info-container">
+      <p class="description small mx-1">
+        {{'PRODUCT.CREDIT_CARD_DETAIL.PRODUCT_ERROR_CARD.DESCRIPTION' | translate }}
+      </p>
+      <p class="small mx-1">
+        <a *ngIf="(workingTC$ | async) === false" [ngClass]="{'disabled': (firstCallTC$ | async)}"
+          class="retry-request semi-bold" (click)="retryGetProducts()">
+          {{ ( (firstCallTC$ | async )?
+          'PRODUCT.CREDIT_CARD_DETAIL.PRODUCT_ERROR_CARD.TRY_LATER':'PRODUCT.CREDIT_CARD_DETAIL.PRODUCT_ERROR_CARD.TRY_AGAIN')
+          | translate }}
+        </a>
+        <span class="content-validate-info" *ngIf="workingTC$ | async">
+          <i class="spinner extract-loader"></i>
+          <span class="validate-info">
+            {{'PRODUCT.CREDIT_CARD_DETAIL.PRODUCT_ERROR_CARD.CHEKING_INFO_LOADER' | translate }}
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

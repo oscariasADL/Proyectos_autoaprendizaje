@@ -1,0 +1,221 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers #header [closeUrl]="'/'" [title]="'CARE_CHANNELS.HEADER' | translate"
+               [type]="isGuest ? header?.headerType?.redFive : header?.headerType?.redTertiary">
+  </app-headers>
+
+  <div class="care-channels-container">
+    <ng-container *ngIf="adviser">
+      <app-preferred-customer [adviser]="adviser" [working]="(working$ | async)">
+      </app-preferred-customer>
+    </ng-container>
+
+
+    <div class="cc-np" *ngIf="!adviser">
+      <img [src]="'care-channels/default-customer.svg' | imageUrl" alt="">
+      <p class="np-client text-center" [innerHTML]="'CARE_CHANNELS.DEFAULT_CUSTOMER.DESCRIPTION' | translate"></p>
+    </div>
+
+    <ion-accordion-group class="layout" [animated]="false">
+      <ion-accordion [value]="1" class="acc-content" *ngIf="adviser">
+        <ion-item slot="header">
+          <ion-label>
+            <h2>{{ 'CARE_CHANNELS.CONTACT_AND_BENEFITS.TITLE'|translate }}</h2>
+          </ion-label>
+        </ion-item>
+
+        <div class="ion-padding" slot="content">
+          <div class="notification-preferred-customer-alert pb-3">
+            <div class="avv-alert-info">
+              <i class="avv-alert-icon icon-info"></i>
+              <div class="avv-alert-text-action notification-preferred-customer-alert-text">
+                Recuerda que el horario de atención es de <span class="semi-bold">lunes a viernes de 8:00 a.m a 5:00
+                  p.m</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pf-customer">
+            <ng-container *ngIf="adviser?.contactEmail; let email">
+              <a *ngIf="adviser?.contactEmail" href="mailto:{{ adviser.contactEmail.toString() | lowercase }}"
+                 class="pf-customer content-link">
+                <div class="pf-customer info">
+                  <div class="contact">
+                    <span class="item-info name semi-bold">
+                      {{ getEmailUsername(email) }}
+                    </span>
+                    <span class="item-info email">
+                      @{{ getEmailDomain(email) }}
+                    </span>
+                  </div>
+                  <span class="item-icon icon-mail"></span>
+                </div>
+              </a>
+            </ng-container>
+
+            <a *ngIf="adviser?.contactPhone" [href]="'tel:' + adviser.contactPhone" class="pf-customer content-link">
+              <div class="pf-customer info">
+                <div class="item-info phone">
+                  <span>{{ adviser.contactPhone }}</span>
+                </div>
+                <span class="item-icon icon-telefono"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-3 benefits" *ngIf="!!adviser$">
+            <p class="mb-2 benefits-line text-center">
+              Al ser nuestro cliente preferente tienes
+            </p>
+            <p class="text-left semi-bold">
+              • Estudio de Crédito priorizado<br>
+              • Alianzas exclusivas<br>
+              • Atención telefónica preferencial<br>
+            </p>
+            <button class="avv-btn-secondary mt-3 bt-benefits" (click)="openBenefitsUrl(benefitsUrl)">
+              CONOCE TUS BENEFICIOS AQUÍ
+            </button>
+          </div>
+
+        </div>
+      </ion-accordion>
+
+      <ion-accordion [value]="2" class="acc-content">
+        <ion-item slot="header">
+          <ion-label>
+            <h2>{{ 'CARE_CHANNELS.AUDIOVILLAS_LINES.TITLE'|translate }}</h2>
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <div class="phones-lines-list">
+            <div *ngFor="let item of phoneNumbersList" class="container">
+              <a [href]="'tel:' + mapPhoneNumber(item.phonenumber)" class="link">
+                <div [id]="item.id" class="info">
+                  <div class="item-info">
+                    <span class="city">{{ item.label | translate }}</span>
+                    <span class="phonenumber">{{ item.phonenumber }}</span>
+                  </div>
+                  <span class="item-icon icon-telefono"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion [value]="3" class="acc-content">
+        <ion-item slot="header">
+          <ion-label>
+            <h2>{{ 'CARE_CHANNELS.OFFICES_CASHIERS_AND_CORRESPONDENTS.TITLE'|translate }}</h2>
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p class="mb-2 benefits-line text-center">
+            Cerca de ti para resolver tus necesidades
+          </p>
+          <button class="avv-btn-secondary mt-3 bt-benefits" (click)="openMapUrl(urlAth)">
+            VER MAPA
+          </button>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion [value]="4" class="acc-content">
+        <ion-item slot="header">
+          <ion-label>
+            <h2>{{ 'CARE_CHANNELS.FINANCIAL_CUSTOMER.TITLE'|translate }}</h2>
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+
+          <div class="notification-preferred-customer-alert pb-3">
+            <div class="avv-alert-info">
+              <i class="avv-alert-icon icon-info"></i>
+              <div class="avv-alert-text-action notification-preferred-customer-alert-text">
+                Recuerda que el horario de atención es de <span class="semi-bold">lunes a viernes de 8:00 a.m a 6:00
+                  p.m</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <ul class="list">
+              <ng-container *ngIf="financialConsumerAdvocate?.name_1">
+                <li class="financial-consumer-advocate-name">
+                  <span class="dot"></span>
+                  <p class="semi-bold">{{ financialConsumerAdvocate.name_1 }}</p>
+                </li>
+              </ng-container>
+              <ng-container *ngIf="financialConsumerAdvocate?.name_2">
+                <li class="financial-consumer-advocate-name">
+                  <span class="dot"></span>
+                  <p class="semi-bold">{{ financialConsumerAdvocate.name_2 }}</p>
+                </li>
+              </ng-container>
+            </ul>
+            <dl class="wrapper-contact">
+              <ng-container *ngIf="financialConsumerAdvocate?.email">
+                <a href="mailto:{{financialConsumerAdvocate?.email }}" class="content-link">
+                  <div class="info">
+                    <div class="contact">
+                      <span
+                        class="item-info name semi-bold">{{ getEmailUsername(financialConsumerAdvocate?.email) }}</span>
+                      <span>@{{ getEmailDomain(financialConsumerAdvocate?.email) }}</span>
+                    </div>
+                    <span class="item-icon icon-mail"></span>
+                  </div>
+                </a>
+              </ng-container>
+
+              <ng-container *ngIf="financialConsumerAdvocate?.phone1">
+                <a href="tel:{{financialConsumerAdvocate?.phone1}}" class="content-link">
+                  <div class="info">
+                    <div class="contact">
+                      <dd class="item-info">{{ financialConsumerAdvocate.phone1 }}</dd>
+                    </div>
+                    <span class="item-icon icon-telefono"></span>
+                  </div>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="financialConsumerAdvocate?.phone2">
+                <a href="tel:{{financialConsumerAdvocate?.phone2}}" class="content-link">
+                  <div class="info">
+                    <div class="contact">
+                      <dd class="item-info">{{ financialConsumerAdvocate.phone2 }}</dd>
+                    </div>
+                    <span class="item-icon icon-telefono"></span>
+                  </div>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="financialConsumerAdvocate?.web">
+                <!-- <a href="{{financialConsumerAdvocate?.web.ts}}" class="content-link"> -->
+                <a (click)="openUrl(customerURL)" class="content-link">
+                  <div class="info">
+                    <div class="contact">
+                      <dd class="item-info">{{ financialConsumerAdvocate.web }}</dd>
+                    </div>
+                    <span class="item-icon icon-computer"></span>
+                  </div>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="financialConsumerAdvocate?.app">
+                <a (click)="openUrl(financialConsumerAdvocate?.app)" class="content-link">
+                  <div class="info">
+                    <div class="contact">
+                      <dd class="item-info">App DCF</dd>
+                    </div>
+                    <span class="item-icon icon-celular"></span>
+                  </div>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="financialConsumerAdvocate?.address">
+                <div class="address">
+                  <dt class="address info">Dirección:</dt>
+                  <dd class="address info">{{ financialConsumerAdvocate.address }}</dd>
+                </div>
+              </ng-container>
+            </dl>
+          </div>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+</ion-content>

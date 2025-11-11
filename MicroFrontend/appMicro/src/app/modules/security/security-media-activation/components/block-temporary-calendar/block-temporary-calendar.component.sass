@@ -1,0 +1,208 @@
+@import 'utils'
+
+.block-temporary-calendar-container
+  position: relative
+  width: 100%
+  height: 100vh
+
+  .block-temporary-calendar-header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1
+
+    &-top
+      position: relative
+      padding: calc(16px + var(--safe-area-inset-top)) $spacer-2 $spacer-2
+      height: calc(56px + var(--safe-area-inset-top))
+      background-color: var(--red-1)
+      box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+      p, i
+        color: var(--white)
+
+      p
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.2
+
+        +media-max-width(320px)
+          font-size: 16px
+
+      i
+        position: absolute
+        bottom: 0
+        right: 0
+        padding: $spacer-2
+        font-size: 24px
+
+
+
+    &-bottom
+      padding: $spacer-3 $spacer-2 8px
+      background-color: var(--white)
+
+      &:before
+        content: ''
+        position: absolute
+        bottom: -28px
+        left: 0
+        width: 100%
+        height: 28px
+        transform: rotate(180deg)
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--white) 90%)
+        z-index: -1
+
+      &-title
+        color: var(--gray-8)
+        margin-bottom: $spacer-3
+
+  .block-temporary-calendar-footer
+    position: fixed
+    bottom: var(--safe-area-inset-bottom)
+    left: 0
+    width: 100%
+    padding: 8px
+    text-align: center
+    z-index: 1
+
+    button
+      max-width: 290px
+      width: 100%
+
+  .block-temporary-calendar-body
+    position: fixed
+    top: 0
+    padding: calc(196px + var(--safe-area-inset-top)) 16px calc(64px + var(--safe-area-inset-bottom))
+    width: 100%
+    height: 100%
+    overflow: auto
+    z-index: 0
+
+    .block-temporary-calendar-month
+      &-header
+        margin: 16px 0 8px
+        text-align: center
+
+        p
+          font-size: 16px
+          line-height: 1.78
+          text-align: center
+          color: var(--gray-8)
+          user-select: none
+          display: inline-block
+
+      .month-labels
+        list-style: none
+        padding: 0
+        margin: 0 0 1px
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+        > li
+          font-size: 14px
+          line-height: 1.71
+          text-align: center
+          color: var(--gray-7)
+          user-select: none
+
+      .month-row
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        user-select: none
+
+        .month-value
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 14.285714286%
+          height: 13.16vw
+          float: left
+          text-align: center
+          font-size: 14px
+          color: var(--gray-8)
+          user-select: none
+          // transition: .3s background-color, color
+
+          &.previous, &.next
+            visibility: hidden
+            opacity: 0
+
+          &.next
+            display: none
+
+          &.in-range
+            color: var(--blue-1)
+            background-color: var(--blue-4)
+
+          &.disabled
+            color: var(--gray-9)
+
+          &:hover
+            cursor: pointer
+
+            &.disabled
+              cursor: not-allowed
+
+          &.in-range-right,
+          &.in-range-left
+            &::after
+              content: ''
+              position: absolute
+              background-color: var(--blue-4)
+              height: 100%
+              width: 25px
+              top: 0
+              z-index: -1
+
+          &.in-range-right
+            &::after
+              right: 0
+
+          &.in-range-left
+            &::after
+              left: 0
+
+            &.in-range-right
+              &::after
+                display: none
+
+          &.is-weekend:not(.disabled):not(.selected):not(:hover):not(.in-range):not(.in-range-left):not(.in-range-right):not(.is-today)
+            color: var(--gray-1)
+
+          &.is-today
+            color: var(--blue-1)
+
+          &.selected
+            color: var(--white)
+            border-radius: 50%
+            transition: .3s background-color, color
+            background-color: var(--blue-1)
+
+            &.is-today
+              color: var(--white)
+              font-weight: 600
+
+.block-temporary-field
+  +flex(center, space-between)
+  padding: $spacer-2
+  border-radius: 4px
+  border: solid 1px var(--gray-9)
+
+  &-title
+    color: var(--gray-7)
+
+  span
+    font-size: 24px
+
+  &.not-empty
+    padding: 6px $spacer-2
+    border: solid 1px var(--gray-8)
+
+    .block-temporary-field-title
+      font-size: 12px
+      color: var(--blue-3)

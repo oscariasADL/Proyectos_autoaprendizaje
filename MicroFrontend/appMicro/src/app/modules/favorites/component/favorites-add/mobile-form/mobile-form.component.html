@@ -1,0 +1,32 @@
+<avv-input [utag]="utagEvent.event_label" [utagCategory]="utagEvent.event_category" [id]="'transfer-phone-number'"
+  [type]="'phone'" [allowCut]="true" [allowCopy]="true" [allowPaste]="true"
+  [label]="'FAVORITES.ADD_PAGE.FIELDS.PHONE' | translate" [control]="phoneNumber">
+</avv-input>
+
+<div class="bank-list" *ngIf="phoneNumber.valid && transfersCel2celBankIds && transfersCel2celBankIds.length>0 ">
+  <ng-container *ngFor="let bank of banks">
+    <div class="bank-card"
+      [ngClass]="{'bank-card-default': productIdSelected !== bank.id, 'bank-card-checked': productIdSelected === bank.id}"
+      *ngIf="bankInList(bank.id) " (click)="setTowardBankInfo(bank)" [utag]="
+      bank.utag" [utagCategory]="bank.utagCategory" [id]="'cel2cel-entity-' + bank.id + '-btn'">
+      <div class="bank-card__info">
+        <i *ngIf="!bank.icon" class="icon icon-bolsillos"></i>
+        <img *ngIf="bank.icon" [src]="bank.icon" class="cel-2-cel-link-icon" alt="">
+        <p class="small ml-1">{{bank.name}}</p>
+        <img *ngIf="bank.iconAlt" [src]="bank.iconAlt" style="position: absolute; right: 80px;" alt="">
+      </div>
+      <i class="icon icon-next"></i>
+    </div>
+  </ng-container>
+
+  <div class="bank-card"
+    [ngClass]="{'bank-card-default': towardType?.value !== transfiyaType, 'bank-card-checked': towardType?.value === transfiyaType}"
+    (click)="setTransferType()" [utag]="transfiyaUtagEvent.event_label"
+    [utagCategory]="transfiyaUtagEvent.event_category" [id]="'cel2cel-entity-transfiya-btn'">
+    <div class="bank-card__info">
+      <img [src]="transfiyaInfo.icon" class="cel-2-cel-link-icon" alt="">
+      <p class="small ml-1">{{transfiyaInfo.name}}</p>
+    </div>
+    <i class="icon icon-next"></i>
+  </div>
+</div>

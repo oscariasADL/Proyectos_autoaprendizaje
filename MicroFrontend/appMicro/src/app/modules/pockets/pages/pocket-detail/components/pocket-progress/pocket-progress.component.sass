@@ -1,0 +1,22 @@
+@import 'utils'
+
+.pocket-progress
+  position: relative
+  margin-bottom: $spacer-2
+
+  .pocket-detail-progress-content
+    +flex(center, center, column)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 60px
+    text-align: center
+
+    i
+      font-size: 29px
+      color: var(--blue-1)
+      margin-bottom: 4px
+
+    p
+      line-height: 1.29

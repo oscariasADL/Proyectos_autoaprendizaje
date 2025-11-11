@@ -1,0 +1,9 @@
+<div class="modal-time-expired__container">
+  <div class="modal-header">
+    <h2 class="modal-header__title">{{ 'QR.OPTIONS.MODAL_TIME_EXPIRED.TITLE' | translate }}</h2>
+    <p class="modal-header__subtitle px-5">{{ 'QR.OPTIONS.MODAL_TIME_EXPIRED.DESCRIPTION' | translate }}</p>
+    <p class="modal-header__subtitle pb-5">{{ 'QR.OPTIONS.MODAL_TIME_EXPIRED.TRY_AGAIN' | translate }}</p>
+  </div>
+  <button class="avv-btn-primary" [routerLink]="['/']" (click)="closeModal()">{{ 'ACTIONS.COPY_THAT' | translate |
+    uppercase }}</button>
+</div>

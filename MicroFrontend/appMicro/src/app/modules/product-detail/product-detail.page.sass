@@ -1,0 +1,110 @@
+@import 'utils'
+
+.product-detail-container
+  background: var(--white)
+  min-height: 100%
+  padding-bottom: 30px
+
+  .product-detail-item
+    padding: 0 16px
+
+  .block-card-temporarily-panel
+    padding: $spacer $spacer-2
+    display: flex
+    border: 1px solid #DEE1E4
+    border-radius: 4px
+    align-items: center
+    gap: 4px
+    box-shadow: 0 4px 4px 0 rgba(37, 43, 49, 0.16)
+
+    &.error
+      margin: $spacer $spacer-2
+
+    > p
+      flex-grow: 2
+
+    > i
+      font-size: 20px
+
+    > i:last-child
+      font-size: 32px
+      color: var(--blue-1)
+
+  .product-detail-more-movements
+    padding: 16px
+    width: 100%
+    font-size: 14px
+    line-height: 1.57
+    text-transform: none
+
+    > i
+      font-size: 24px
+      top: 6px
+      position: relative
+
+  &-loading
+    padding: 16px 0 20px
+
+    ion-skeleton-text
+      margin: 0
+      padding: 0
+      line-height: 0
+      height: 100%
+
+    .loading-card-1
+      height: 96px
+      padding: 0 48px
+      border-radius: 10px 10px 0 0
+
+    .loading-card-2
+      margin: 8px 16px 0
+      height: 43px
+
+    .loading-card-3
+      margin: 7px 16px 0
+      height: 43px
+
+    .loading-card-4
+      margin: 12px 16px 31px
+      height: 21px
+
+    .loading-card-5
+      margin: 0 16px
+      width: 155px
+      height: 21px
+
+    .loading-card-6
+      margin: 18px 0 0
+
+      ul
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 38px
+
+        li
+          margin-right: 25px
+
+          &:last-child
+            margin-right: 0
+
+          ion-skeleton-text
+            &:first-child
+              width: 56px
+              height: 56px
+              border-radius: 50%
+
+            &:last-child
+              width: 56px
+              height: 13px
+              margin-top: 12px
+
+.payroll-advance-btn
+  padding: 6px 66px
+  white-space: normal
+  height: auto
+  font-weight: 700
+  font-size: 12px
+  line-height: 16px
+  text-align: center
+  margin-bottom: 16px

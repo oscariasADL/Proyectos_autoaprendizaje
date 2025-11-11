@@ -1,0 +1,166 @@
+@import 'utils'
+@import 'spinner'
+
+$border: var(--blue2)
+$border: var(--blue2)
+$border: var(--blue2)
+$border: var(--blue2)
+$border: var(--blue2)
+
+.avv
+  &-btn-primary
+    &.sm
+      margin: 16px 9.067vw 0
+
+  &-btn-primary:not(.sm),
+  &-btn-secondary:not(.sm)
+    height: 48px
+    line-height: 48px
+    padding: 0
+    z-index: 0
+
+    i
+      font-size: 22px
+      position: relative
+      top: 4px
+      left: 6px
+
+  &-btn-round
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 56px
+    height: 56px
+    background: transparent
+    border: 1px solid transparent
+    border-radius: 50%
+    box-shadow: 0 8px 8px rgba(37, 43, 49, 0.08)
+    font-size: 14px
+    font-weight: 600
+    color: var(--blue-1)
+    user-select: none
+    padding: 0
+    z-index: 0
+    cursor: pointer
+
+    &:disabled
+      background: var(--gray-4)
+      color: var(--gray-2)
+
+    &:not(:disabled):not(.disabled):active:focus, &:focus, &:active:focus, &:focus-within
+      box-shadow: 0 8px 8px rgba(37, 43, 49, 0.08)
+
+    &.active
+      background-color: var(--blue-5)
+
+    i
+      font-size: 29px
+      padding: 16px
+
+    .label-btn-round
+      position: absolute
+      width: 70px
+      top: calc(100% + 8px)
+      font-size: 10px
+      color: var(--gray-1)
+      font-weight: 400
+
+
+  &-circle-btn
+    +flex(center, center)
+    position: relative
+    width: 56px
+    height: 56px
+    box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3) !important
+    background-color: var(--white)
+    border-radius: 50%
+    font-size: 0
+    padding: $spacer
+
+    i
+      color: var(--blue-2)
+      font-size: 32px
+
+    &:disabled
+      i
+        color: var(--gray-6)
+
+    &.loading
+      cursor: inherit
+
+      i
+        font-size: 0
+
+      &::after
+        @extend .spinner-border
+        content: ''
+        width: 24px !important
+        height: 24px !important
+        border-width: 2px
+        position: absolute
+        right: 16px
+        top: 16px
+        color: var(--gray-3)
+
+.avv
+  &-link
+    background: transparent
+    border: none
+    font-size: var(--f-15)
+    font-weight: 600
+    transition: .3s
+    color: var(--blue-2)
+    padding: 0
+
+    &:hover:not(:disabled)
+      color: var(--blue-1)
+      cursor: pointer
+
+    &:focus
+      outline: inherit
+      box-shadow: inherit
+
+    &:disabled
+      color: var(--disabled)
+      font-size: var(--f-14)
+
+    &.loading
+      cursor: inherit
+      font-size: 0
+
+      i
+        font-size: 0
+
+      &::after
+        @extend .spinner-border
+        content: ''
+        width: 24px !important
+        height: 24px !important
+        border-width: 2px
+        position: absolute
+        right: 16px
+        top: 0
+        color: var(--gray-3)
+
+  &-link-underline
+    text-decoration: underline
+    background: transparent
+    border: none
+    font-size: var(--f-15)
+    font-weight: 600
+    transition: .3s
+    color: var(--blue-1)
+    padding: 0
+
+    &:hover:not(:disabled)
+      color: var(--blue-2)
+      cursor: pointer
+
+    &:focus
+      outline: inherit
+      box-shadow: inherit
+
+    &:disabled
+      color: var(--disabled)
+      font-size: var(--f-14)

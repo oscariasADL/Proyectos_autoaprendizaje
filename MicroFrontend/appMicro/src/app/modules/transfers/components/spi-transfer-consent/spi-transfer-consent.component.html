@@ -1,0 +1,45 @@
+<section class="spi-transfer-consent">
+  <div *ngIf="!showTermsAndConditions">
+    <div class="spi-transfer-consent__header" *ngIf="skipSPITransferConsentXOption">
+      <button type="button" class="avv-btn-link" (click)="closeModal()">
+        <i class="icon icon-salir"></i>
+      </button>
+    </div>
+    <figure class="spi-transfer-consent__figure">
+      <img appPreloadImage [preload]="skeleton"
+           [src]="'/assets/images/illustrations/transfers/security-phone.svg' | imageUrl:true" alt="">
+      <ion-skeleton-text #skeleton class="spi-transfer-consent__skeleton" animated></ion-skeleton-text>
+    </figure>
+    <div class="spi-transfer-consent__body">
+      <p class="semi-bold bottom-title">{{ 'TRANSFERS.SPI_CONSENT.TITLE' | translate }}</p>
+      <div class="spi-transfer-consent__description">
+        <div class="spi-transfer-consent__description-content">
+          <p [innerHTML]="'TRANSFERS.SPI_CONSENT.DESCRIPTION' | translate | safeHtml"></p>
+        </div>
+      </div>
+      <div class="spi-transfer-consent__form">
+        <input type="checkbox" class="input-checkbox" [(ngModel)]="isSpiConsentAccepted"/>
+        <p class="spi-transfer-consent__form-label">{{ 'TRANSFERS.SPI_CONSENT.CHECK_TEXT.ACCEPT' | translate }}
+          <a href="javascript:void(0);" class="avv-link-underline"
+             (click)="showTermsAndConditions =!showTermsAndConditions">
+            <b>{{ 'TRANSFERS.SPI_CONSENT.CHECK_TEXT.SHARE_MY_INFORMATION' | translate }}</b>
+          </a>
+          {{ 'TRANSFERS.SPI_CONSENT.CHECK_TEXT.DETAIL' | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <button type="button" class="avv-btn-primary" [disabled]="!isSpiConsentAccepted" (click)="acceptConditions()">{{
+          'TRANSFERS.SPI_CONSENT.BUTTONS.ACCEPT' | translate
+        }}
+      </button>
+      <button type="button" class="avv-btn-link mt-4" (click)="closeModal()" *ngIf="skipSPITransferConsent">
+        {{ 'TRANSFERS.SPI_CONSENT.BUTTONS.REJECT' | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="spi-transfer-consent__terms" *ngIf="showTermsAndConditions">
+    <app-spi-terms-and-conditions (termsAccepted)="acceptTerms()"
+                                  (termsClosed)="closeTermsInformation()"></app-spi-terms-and-conditions>
+  </div>
+</section>

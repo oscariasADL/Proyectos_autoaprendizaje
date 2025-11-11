@@ -1,0 +1,61 @@
+<div class="unlock-product-container">
+  <div class="unlock-product-header">
+    <p class="semi-bold unlock-product-title">
+      {{ unlockData?.title | translate }}
+    </p>
+    <p class="small unlock-product-description" *ngIf="unlockData?.description">
+      {{ unlockData?.description | translate }}
+    </p>
+  </div>
+
+  <app-media-activation-card [product]="product"></app-media-activation-card>
+
+  <div class="unlock-product-panel">
+    <p class="small unlock-product-message" *ngIf="!isPreventiveBlock && unlockData?.message">
+      {{ unlockData?.message | translate }}
+    </p>
+
+    <div class="small unlock-product-suspicious-transaction-panel" *ngIf="isPreventiveBlock">
+      <ng-container *ngIf="suspiciousTransactionWorking$ | async">
+        <ion-skeleton-text animated class="avv-skeleton suspicious-transaction-title"></ion-skeleton-text>
+        <ion-skeleton-text animated class="avv-skeleton suspicious-transaction-card"></ion-skeleton-text>
+      </ng-container>
+
+      <ng-container *ngIf="(suspiciousTransactionWorking$ | async) === false">
+        <ng-container *ngIf="suspiciousTransaction$ | async as suspiciousTransaction">
+          <p class="small semi-bold">Transacción marcada como sospechosa:</p>
+          <div *ngFor="let transaction of suspiciousTransaction.uncommonTransactions"
+               class="unlock-product-suspicious-transaction-item mt-1">
+
+            <div *ngIf="!!transaction?.date">
+              <small>{{ transaction?.date | date: 'd/M/y' }}</small>
+              <small class="semi-bold">- {{ transaction?.date | date: 'h:mm a' | lowercase }}</small>
+            </div>
+
+            <small class="mt display-block">{{ transaction?.description }}</small>
+            <small class="mt">{{ transaction?.country }}</small>
+
+            <p class="semi-bold mt" [innerHTML]="transaction?.amount | currencyFormat"></p>
+
+          </div>
+
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <button type="button" class="avv-btn-primary" id="unlock-product-btn" (click)="unlockProduct()">
+      {{ 'ACTIONS.UNLOCK' | translate | uppercase }}
+    </button>
+  </div>
+
+  <div class="unlock-product-footer">
+    <p class="small">
+      {{ 'SECURITY.UNLOCK.LOST_CARD_MESSAGE' | translate }}
+    </p>
+
+    <button class="avv-link avv-alert-link mt-2" id="block-product-btn" (click)="block()">
+      {{ 'SECURITY.UNLOCK.LOST_CARD_BUTTON' | translate }}
+      <i class="icon-siguiente"></i>
+    </button>
+  </div>
+</div>

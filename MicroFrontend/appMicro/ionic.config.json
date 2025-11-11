@@ -1,0 +1,7 @@
+{
+  "name": "bavv-mb-frontend-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

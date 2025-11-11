@@ -1,0 +1,39 @@
+<ion-content [forceOverscroll]="false">
+  <main>
+    <header>
+      <app-headers
+        #header
+        [title]="'QR Aval' | translate"
+        [type]="header?.headerType?.whiteSecondary">
+      </app-headers>
+    </header>
+    <section class="qr-home-container">
+      <h2 class="semi-bold">{{ 'QR.HOME.TITLE' | translate }}</h2>
+      <img [src]="'qr-aval.svg' | imageUrl" class="qr-home-logo" [alt]="'QR.HOME.LOGO_ALT' | translate"
+           draggable="false">
+      <p class="small qr-home-sub-title">
+        {{ 'QR.HOME.SUBTITLE' | translate }}
+      </p>
+      <ul class="avv-list-red-point qr-home-description">
+        <ng-container *ngFor="let item of itemsDescription">
+          <li>
+            <p class="small">
+              {{ item | translate }}
+            </p>
+          </li>
+        </ng-container>
+      </ul>
+
+      <article class="qr-home-buttons">
+        <ng-container *ngFor="let btnItem of qrHomeButtons">
+          <div class="item-button">
+            <button class="avv-circle-btn" [disabled]="btnItem.disabled" [routerLink]="[btnItem.url]">
+              <i [class]="btnItem.icon"></i>
+            </button>
+            <small>{{ btnItem.title | translate }}</small>
+          </div>
+        </ng-container>
+      </article>
+    </section>
+  </main>
+</ion-content>

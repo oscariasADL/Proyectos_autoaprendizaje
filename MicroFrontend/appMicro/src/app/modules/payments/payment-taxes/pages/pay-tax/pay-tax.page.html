@@ -1,0 +1,51 @@
+<ion-content
+    class="content-generic-stepper"
+    [forceOverscroll]="false">
+    <app-generic-stepper
+        [form]="form"
+        [data]="data"
+        [steps]="steps"
+        [title]="'Pagar impuestos'"
+        [backUrl]="backUrl"
+        [exitData]="exitData"
+        [currentSlide]="currentSlide"
+        (nextStep)="setNextStep($event)"
+        (stepSelected)="stepSelected($event)"
+        (slideSelected)="slideSelected($event)"
+        [template]="template">
+    </app-generic-stepper>
+</ion-content>
+
+<ng-template
+    #template
+    let-key="key"
+    let-screen="data"
+    let-runNextStep="nextStep">
+
+    <div [ngSwitch]="screen">
+        <app-payments-taxes-step-city
+            *ngSwitchCase="'city'"
+            (continue)="runNextStep($event ? PaytaxSlide.agreement.toString() : key)"
+            [city]="form.get('city')"
+            [agreement]="form.get('agreement')"
+            [reference]="form.get('reference')"
+            [isBarcode]="form.get('isBarcode')"></app-payments-taxes-step-city>
+
+        <app-payments-taxes-step-agreement
+            *ngSwitchCase="'agreement'"
+            (continue)="runNextStep($event ? key : PaytaxSlide.from.toString())"
+            (scrollToTop)="scrollToTop($event)"
+            [city]="form.get('city')"
+            [agreement]="form.get('agreement')"
+            [isBarcode]="form.get('isBarcode')"></app-payments-taxes-step-agreement>
+
+        <app-payments-taxes-step-reference
+            *ngSwitchCase="'reference'"
+            (continue)="runNextStep(key)"
+            (selectAccount)="runNextStep(-1)"
+            (goToCity)="runNextStep(PaytaxSlide.from.toString())"
+            (exit)="onExit()"
+            [form]="form"
+            [accountFilters]="accountFilters"></app-payments-taxes-step-reference>
+    </div>
+</ng-template>

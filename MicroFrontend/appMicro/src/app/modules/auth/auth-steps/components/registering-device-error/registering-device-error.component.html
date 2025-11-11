@@ -1,0 +1,37 @@
+<ion-content [forceOverscroll]="false">
+    <div class="auth-steps-container">
+        <div class="auth-steps-header">
+            <h5>{{ 'AUTH.REGISTER.TITLE' | translate }}</h5>
+            <i class="icon-salir" (click)="goToHome()"></i>
+        </div>
+        <div class="auth-steps-body registering-device-error__container">
+            <div class="registering-device-error-detail">
+                <img class="registering-device-error__img" [src]="'sesion-finalizada.svg' | imageUrl" draggable="false"
+                    alt="sesion-finalizada">
+                <p class="semi-bold registering-device-error__title"
+                    [innerHTML]="'AUTH.STEP.REGISTERING_DEVICE_ERROR.TITLE' | translate">
+                </p>
+                <p class="registering-device-error__description">
+                    {{'AUTH.STEP.REGISTERING_DEVICE_ERROR.DESCRIPTION' | translate}}
+                </p>
+                <ul class="registering-device-error__list">
+                    <li class="registering-device-error__item">
+                        <i class="avv-alert-icon icon-info registering-device-error__icon"></i>
+                        {{'AUTH.STEP.REGISTERING_DEVICE_ERROR.BANCA_VIRTUAL_INFO' | translate }}
+                    </li>
+                </ul>
+            </div>
+            <div class="registering-device-error-actions">
+                <button (click)="goToHome()" class="avv-btn-primary registering-device-error__btn" type="button"
+                    id="go-to-home">
+                    {{ 'AUTH.STEP.REGISTERING_DEVICE_ERROR.HOME_BTN' | translate }}
+                </button>
+                <button (click)="goToVirtualBanking()" class="avv-link mt-5 mb-3 " type="button"
+                    id="go-to-banca-virtual">
+                    {{ 'AUTH.STEP.REGISTERING_DEVICE_ERROR.BANCA_VIRTUAL_BTN' | translate }}
+                </button>
+            </div>
+        </div>
+        <div class="auth-steps-footer"></div>
+    </div>
+</ion-content>

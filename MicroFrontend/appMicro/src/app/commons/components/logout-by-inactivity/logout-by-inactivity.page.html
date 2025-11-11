@@ -1,0 +1,14 @@
+<ion-content [forceOverscroll]="false">
+  <div class="logout-by-inactivity-container">
+    <div class="logout-by-inactivity-content">
+      <img class="logout-by-inactivity-logo" [src]="'av-villas-logo.svg' | imageUrl" alt="Logo" draggable="false">
+      <img class="logout-by-inactivity-icon" [src]="'sesion-finalizada.svg' | imageUrl" alt="Logo" draggable="false">
+      <p class="semi-bold logout-by-inactivity-title">{{ 'LOGOUT_BY_INACTIVITY.TITLE' | translate }}</p>
+      <button class="avv-btn-primary"
+              id="logout-retry-btn"
+              (click)="redirectToLogin()">
+        {{ 'LOGOUT_BY_INACTIVITY.BUTTON_CLOSE' | translate | uppercase }}
+      </button>
+    </div>
+  </div>
+</ion-content>

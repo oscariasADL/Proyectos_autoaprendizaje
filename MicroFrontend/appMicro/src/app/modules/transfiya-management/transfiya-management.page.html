@@ -1,0 +1,33 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="!!isDispatch ? 'Enviar plata' : 'Aceptar plata'"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [showSteps]="false"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)"
+          [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-transfiya-management-step
+            *ngSwitchCase="'management'"
+            [form]="form"
+            (continue)="runNextStep(key)"
+            (reject)="rejectTransfiyaAuthorization()">
+    </app-transfiya-management-step>
+  </div>
+
+</ng-template>

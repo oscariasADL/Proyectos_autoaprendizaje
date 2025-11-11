@@ -1,0 +1,11 @@
+<label class="radio-wrapper radio-large">
+    <input 
+      type="radio" 
+      [name]="name" 
+      [value]="value"
+      [checked]="isSelected()"
+      [disabled]="disabled"
+      (change)="onRadioChange()"
+      class="radio-input">
+    <span class="radio-circle"></span>
+  </label>

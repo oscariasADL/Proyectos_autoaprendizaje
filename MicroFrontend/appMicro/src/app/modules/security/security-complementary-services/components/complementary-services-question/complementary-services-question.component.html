@@ -1,0 +1,23 @@
+<div class="complementary-services-question-container">
+  <p class="semi-bold complementary-services-question-title">
+    {{ 'SECURITY.COMPLEMENTARY_SERVICES.QUESTION.TITLE' | translate }}
+  </p>
+  <img src="assets/img/icons/app-de-seguridad.svg" alt="" draggable="false"  width="113" height="112">
+  <p class="small complementary-services-question-subtitle">
+    {{ 'SECURITY.COMPLEMENTARY_SERVICES.QUESTION.SUBTITLE' | translate }}
+  </p>
+  <p class="small semi-bold complementary-services-question-description">
+    {{ 'SECURITY.COMPLEMENTARY_SERVICES.QUESTION.DESCRIPTION' | translate }}
+  </p>
+
+  <div class="complementary-services-question-buttons">
+    <button class="avv-btn-secondary mr-1" (click)="continue.emit()">
+      {{ 'SECURITY.COMPLEMENTARY_SERVICES.QUESTION.YES_ACTION' | translate | uppercase }}
+    </button>
+
+    <button class="avv-btn-secondary ml-1" (click)="cancel.emit()">
+      {{ 'SECURITY.COMPLEMENTARY_SERVICES.QUESTION.NOT_ACTION' | translate | uppercase }}
+    </button>
+  </div>
+
+</div>

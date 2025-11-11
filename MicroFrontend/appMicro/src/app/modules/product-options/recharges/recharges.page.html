@@ -1,0 +1,14 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="'RECHARGES.TITLE' | translate"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)">
+  </app-generic-stepper>
+</ion-content>

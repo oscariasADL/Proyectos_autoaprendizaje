@@ -1,0 +1,24 @@
+<div class="modal-container">
+  <div class="modal-container-header">
+    <p class="modal-container-header-title">{{title}}</p>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <hr>
+  <ul class="modal-container-list" role="listbox" *ngIf="resultsVisible">
+    <ng-container [ngTemplateOutlet]="isTypeRadioButton ? radioButtonList : iconList"></ng-container>
+  </ul>
+</div>
+<ng-template #iconList>
+  <li class="category" role="option" [class.active]="i === highlightedItem" (click)="onItemSelect(i)"
+    *ngFor="let item of list; index as i">
+    <i [class]="item.icon"></i>
+    <span class="category-text">{{ item.label }}</span>
+  </li>
+</ng-template>
+<ng-template #radioButtonList>
+  <li class="category" role="option" [class.active]="i === highlightedItem" (click)="onItemSelect(i)"
+    *ngFor="let item of list; index as i">
+    <span class="radio-button"></span>
+    <span class="category-text">{{ item.label }}</span>
+  </li>
+</ng-template>

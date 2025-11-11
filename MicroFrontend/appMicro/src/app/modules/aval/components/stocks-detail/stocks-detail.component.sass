@@ -1,0 +1,48 @@
+@import 'utils'
+
+.stocks-detail-container
+  .stocks-detail-title
+    padding: $spacer-3 $spacer-2 $spacer
+    line-height: 1.5
+    color: var(--gray-8)
+    max-width: 300px
+    margin: 0 auto
+    text-align: center
+
+  .stocks-detail-item
+    position: relative
+    padding: $spacer-2 $spacer-2 0
+
+    &:last-child
+      h6
+        border-bottom: none
+
+    h6
+      border-bottom: 1px solid #d8d8d8
+      padding-bottom: $spacer-2
+
+  .stocks-detail-payment
+    &-panel
+      position: relative
+      background-color: var(--gray-4)
+
+      &-title
+        padding: $spacer-3 $spacer-2 0
+
+    &-item
+      padding: $spacer $spacer-2
+      border-bottom: 1px solid var(--gray-9)
+
+      li
+        +flex(center, space-between)
+        height: 56px
+        border-bottom: 1px solid var(--gray-9)
+
+        &:last-child
+          border-bottom: none
+
+.stocks-detail-working
+  padding: $spacer-2
+
+  .stocks-detail-working-item
+    margin-bottom: $spacer-2

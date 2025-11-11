@@ -1,0 +1,46 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'TRANSFERS.TRANSFIYA.HEADER' | translate"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <div class="transfers-transfiya-container">
+
+    <p class="mt-5 semi-bold text-center">
+      {{ 'TRANSFERS.TRANSFIYA.TITLE' | translate }}
+    </p>
+
+    <ul class="transfers-transfiya-list">
+      <li *ngFor="let item of transfersTransfiyaList" [id]="item?.id">
+        <div class="avv-contact-card single-icon"
+             (click)="redirect(item.url)">
+          <span class="contact-image-icon">
+              <i class="{{ item.icon }}"></i>
+          </span>
+          <div class="contact-info">
+            <h6 class="name transfers-transfiya-name"
+                [innerHTML]="item.label | translate"></h6>
+
+            <span class="transfers-transfiya-number"
+                  *ngIf="(totalNotifications$ | async) > 0 && item.icon === 'icon-formulario'">
+              <i class="icon-notificaciones">
+              <span class="notification-number">{{ totalNotifications$ | async }}</span>
+              </i>
+            </span>
+
+          </div>
+          <span class="contact-icon icon-next"></span>
+        </div>
+      </li>
+    </ul>
+
+    <div (click)="showInformation()" class="avv-information-link pt-2">
+      <i class="icon-info" aria-hidden="true"></i>
+      <small role="button" [innerHTML]="'TRANSFERS.TRANSFIYA.INFO_HOME_ALERT.TITLE' | translate"></small>
+    </div>
+  </div>
+
+  <div class="avv-bottom-line"></div>
+</ion-content>

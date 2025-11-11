@@ -1,0 +1,116 @@
+<div class="product-card-container" role="button"
+  [attr.aria-label]="data?.title + ' ' + (data?.type === typeAccount.SDA && data?.typeDetail ? (data?.typeDetail | reverseDashCase | capitalize: true) : '' ) + ' ' + (data?.description) + ' ' + (!data.valueIsText ? (data.value | numberFormat | hiddenFormat | async) + ' ' + ('CURRENCIES.' + (data?.currency ? data?.currency : 'COP') | translate) : data?.value)"
+  [ngClass]="{'disabled': disabled}">
+  <div class="product-card-image" *ngIf="data?.cardImage">
+    <img [src]="data?.cardImage | imageUrl" alt="Product Image" draggable="false">
+  </div>
+
+  <ion-card class="product-card {{ style }}" *ngIf="data" [id]="'product-card-' + style">
+    <ion-card-content class="product-card-content" (click)="clickAction.emit()">
+      <span class="product-name">
+        <span class="product-icon">
+          <i *ngIf="data?.icon" class="icon {{ data?.icon }}" aria-hidden="true"></i>
+          <span *ngIf="data?.iconImage" class="cca-franchise">
+            <img class="product-franchise" alt="icon" #img *ngIf="data?.iconImage"
+              [src]="data?.iconImage | franchiseImage" (error)="img.className = 'display-none'" />
+          </span>
+        </span>
+
+        <span class="product-title" style="width: 100%;">
+          {{ data.title }}
+        </span>
+      </span>
+      <!-- ToDo: validation -->
+      <p class="product-subtitle" *ngIf="data?.type === typeAccount.SDA && data?.typeDetail">
+        {{ data?.typeDetail | reverseDashCase | capitalize: true }}
+      </p>
+
+      <p class="product-subtitle" *ngIf="!disabled">
+        {{ data?.description | translate }}
+      </p>
+
+      <span class="product-balance" role="text" style="width: 100%;"
+        [attr.aria-label]="(!data.valueIsText ? (data.value | numberFormat | hiddenFormat | async) + ' ' + ('CURRENCIES.' + (data?.currency ? data?.currency : 'COP') | translate) : data?.value)"
+        [innerHTML]="data?.valueIsText ? data?.value : (data?.value | currencyFormat | hiddenFormat | async)"></span>
+
+
+      <span class="show-hide-balance" *ngIf="data?.toggleValue">
+        <i class="icon icon-bolquear_vista" *ngIf="false"></i>
+        <i class="icon icon-ver"></i>
+      </span>
+
+      <p class="insufficient-product-balance" *ngIf="disabled">
+        {{ 'PRODUCT.MY_ACCOUNT_DETAIL.INSUFFICIENT_BALANCE' | translate }}
+      </p>
+
+      <div class="product-new-tag" *ngIf="data?.isNew">
+        <span class="avv-alert-status-danger">Nuevo</span>
+      </div>
+
+      <div class="product-more-options" *ngIf="data?.rightIcon && false">
+        <i class="icon {{ data?.rightIcon }}" role="button" aria-label="Mas opciones"></i>
+      </div>
+    </ion-card-content>
+
+    <div class="product-card-info-to-copy" *ngIf="isSDAOrDDAAccount() && footerCanBeShown">
+     
+
+
+
+<div *ngIf="(filteredSpiKeys$ | async) as spiKeys">
+  <div *ngFor="let item of (filteredSpiKeys$ | async).slice(0, 1)">
+    <app-card-footer-item
+      [item]="item"
+      [utagForCopyKey]="utagForCopyKey"
+      [utagForModifyKey]="utagForModifyKey"
+      (showTagAvalPopover)="showTagAvalPopover($event, item)"
+      (copyKey)="capacitorUtilities.copyToClipboard(item?.keyId)"
+      (modifyKey)="redirectToModifyTagAval(item)">
+    </app-card-footer-item>
+  </div>
+
+
+
+
+   
+      </div>
+      <div *ngIf="!hasAvalTag() && hasBreBKeys() && isAvalTagEnabled()">
+        <div *ngFor="let item of avalKeys| slice:0:1">
+          <app-card-footer-item [item]="item" [utagForCopyKey]="utagForCopyKey" [utagForModifyKey]="utagForModifyKey"
+            (showTagAvalPopover)="showTagAvalPopover($event,item)"
+            (copyKey)="capacitorUtilities.copyToClipboard(item?.keyId)" (modifyKey)="redirectToModifyTagAval(item)">
+          </app-card-footer-item>
+        </div>
+
+      </div>
+      <div *ngIf="(
+        !hasAvalTag() 
+        && !hasBreBKeys() 
+        && isSPIEnabled() 
+        && isEnabledRegisterBreB() 
+       ) 
+        ||((filteredSpiKeys$ | async).length===0 && footerCanBeShown)">
+        <app-register-breb-key  (showTagAvalPopover)="showTagAvalPopover($event)"
+          (goToLink)="goToBreB()"></app-register-breb-key>
+      </div>
+      <div *ngIf="nonRegisteredKeys().length>1 && isSPIEnabled() && hasMoreKeys && isAvalTagEnabled()">
+        <app-view-more-keys-button [type]="viewMoreKeysType.primary" [buttonLabel]="'BRE_B.UNREGISTERED_KEYS'"
+          [translateParams]="{keys: nonRegisteredKeys().length}" (goToBreB)="goToBreB()
+          "></app-view-more-keys-button>
+      </div>
+          <div *ngIf="nonRegisteredKeys().length===1 && isSPIEnabled() && isAvalTagEnabled()">
+        <app-single-unregistered-key-button  
+        [buttonLabel]="'BRE_B.UNREGISTERED_KEY'"
+          [avalTag]="nonRegisteredKeys()[0].keyId"
+          ></app-single-unregistered-key-button>
+      </div>
+
+      <div *ngIf="!hasBreBKeyNotregistered() && isSPIEnabled() && hasMoreKeys">
+        <app-view-more-keys-button [type]="viewMoreKeysType.primary"
+          (goToBreB)="goToBreB()"></app-view-more-keys-button>
+      </div>
+
+
+    </div>
+  </ion-card>
+</div>

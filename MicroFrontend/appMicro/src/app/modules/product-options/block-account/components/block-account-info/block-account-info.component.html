@@ -1,0 +1,51 @@
+<div class="block-account-info-container" style="overflow-y: auto; background-color: white;">
+  <p class="semi-bold block-account-info-title">{{"BLOCK_ACCOUNT.INFO_TITLE"| translate}}</p>
+  <img [src]="'sesion-finalizada.svg' | imageUrl" alt="Logo bloquear cuenta" style="width: 72px;" draggable="false">
+  <p class="small semi-bold block-account-info-subtitle text-center">
+    {{"BLOCK_ACCOUNT.INFO_INFORMATION" | translate}}
+  </p>
+
+  <ul class="avv-list-blue-point block-account-info-list mb-3">
+    <li>
+      <p class="small">
+        {{"BLOCK_ACCOUNT.INFO_TEXT_1" | translate}}
+      </p>
+    </li>
+
+    <li>
+      <p class="small">
+        {{"BLOCK_ACCOUNT.INFO_TEXT_2" | translate}}
+      </p>
+    </li>
+
+    <li>
+      <p class="small">
+        {{"BLOCK_ACCOUNT.INFO_TEXT_3" | translate}}
+      </p>
+    </li>
+
+    <li>
+      <p class="small">
+        {{"BLOCK_ACCOUNT.INFO_TEXT_4" | translate}}
+      </p>
+    </li>
+    <li>
+      <p class="small">
+        {{"BLOCK_ACCOUNT.INFO_TEXT_5" | translate}}
+      </p>
+    </li>
+  </ul>
+
+  <div class="mb-3">
+    <div class="avv-alert-info home-alert-content-alert" id="alert-complementary-services">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text-action" style="font-size: 12px; font-weight: 400;">
+        {{"BLOCK_ACCOUNT.INFO_ALERT" | translate}}
+      </div>
+    </div>
+  </div>
+
+  <button class="avv-btn-primary" id="block-account-info-continue-btn"
+          (click)="continue()"> {{"BLOCK_ACCOUNT.INFO_BTN_TEXT" | translate}} </button>
+
+</div>

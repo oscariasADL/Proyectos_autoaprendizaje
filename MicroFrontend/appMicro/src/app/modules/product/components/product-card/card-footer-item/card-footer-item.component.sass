@@ -1,0 +1,35 @@
+.product-card
+  &-footer, &__tag-icon
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin: auto 0
+    gap: 8px
+    i.icon
+      color: #2666EC
+      font-size: 16px
+  &__detail
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin: auto 0
+
+.product-card__detail
+  span.divider
+    width: 20px
+    height: 1px
+    rotate: 90deg
+    background-color: #BABABA
+    margin: auto
+  .copy-tag-container
+    display: flex
+    align-items: center
+    justify-content: center
+  .tag
+    max-width: 38vw
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.product-card-footer
+  padding: 8px 12px

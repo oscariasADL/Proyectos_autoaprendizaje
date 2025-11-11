@@ -1,0 +1,76 @@
+<div class="avv-generic-step accounts-step">
+  <ng-container *ngTemplateOutlet="(working$ | async) ? working : content"></ng-container>
+</div>
+
+<ng-template #working>
+  <div class="accounts-step-working">
+    <ion-skeleton-text class="avv-skeleton accounts-step-working-title" animated></ion-skeleton-text>
+    <ion-skeleton-text
+      *ngFor="let item of [1, 2, 3, 4, 5]; let i = index"
+      class="avv-skeleton accounts-step-working-card" animated>
+    </ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="products$ | async as products">
+    <ng-container *ngIf="products.length > 0 && !data.hasException">
+      <p class="avv-generic-step-title accounts-step-title">{{ data.title | translate }}</p>
+      <p class="avv-generic-step-description accounts-step-description"
+         *ngIf="data.description">
+        {{ data.description | translate }}
+      </p>
+      <div class="accounts-step-list">
+        <app-product-card-item *ngFor="let product of products"
+                               (click)="selectProduct(product)"
+                               [productDetail]="{ product: product }"
+                               [disabled]="isDisabled(product)"
+                               [utag]="isDisabled(product) ? 'enviar plata - elige la cuenta de origen - cuenta bloqueada' : 'enviar plata - elige la cuenta de origen - cuenta'"
+                               [utagCategory]="data.utagCategory"
+                               [style]="data?.accountType || productStyleType.selectable">
+        </app-product-card-item>
+      </div>
+      <div *ngIf="data?.informationText" (click)="showInformation()" class="avv-information-link pt-2">
+        <i class="icon-info"></i>
+        <small [innerHTML]="data?.informationText | translate"></small>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="products.length === 0 || data.hasException">
+      <div class="avv-generic-exception-block">
+        <p class="avv-generic-step-title">{{ data?.accountException?.title | translate }}</p>
+        <div class="avv-generic-exception-image">
+          <img
+            class="icon"
+            [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+            alt="sin-resultados">
+        </div>
+        <p class="avv-generic-exception-message">{{ data?.accountException?.description | translate }}</p>
+        <button class="avv-btn-secondary"
+                [id]="'account-step-exit-btn'"
+                (click)="closeStepper()">
+          {{ 'Salir del proceso' | translate | uppercase }}
+        </button>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="!!!(products$ | async)">
+    <div class="avv-generic-exception-block">
+      <p class="avv-generic-step-title">Tenemos problemas de carga en este momento</p>
+      <div class="avv-generic-exception-image">
+        <img
+          class="icon"
+          [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+          alt="sin-resultados">
+      </div>
+      <p class="avv-generic-exception-message">Es posible que esta y otras funcionalidades no se muestren
+        correctamente</p>
+      <button class="avv-btn-secondary"
+              [id]="'account-step-exit-btn'"
+              [routerLink]="['/']">
+        {{ 'Regresar al inicio' | translate | uppercase }}
+      </button>
+    </div>
+  </ng-container>
+</ng-template>

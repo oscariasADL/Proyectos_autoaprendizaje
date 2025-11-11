@@ -1,0 +1,23 @@
+<div class="qr-scanner-container">
+  <div class="scan-header">
+    <h2>{{ userGuidanceOptions.title | translate }}</h2>
+    <p *ngIf="userGuidanceOptions.description">{{ userGuidanceOptions.description | translate }}</p>
+  </div>
+  <div class="scan-box-frame">
+    <div class="scan-box"></div>
+  </div>
+  <div class="scan-footer">
+    <!--<div class="footer-help-text" (click)="showInfoPanel()">
+      <i class="icon-informacion"></i>
+      <p>{{ 'QR.OPTIONS.SCAN.HELP_TEXT' | translate }}</p>
+    </div>-->
+    <div class="scan-footer-flashlight" *ngIf="useFlashlight" (click)="toggleFlashlight.emit()">
+        <span class="scan-flash" [class.active]="flashlightStatus">
+          <i class="icon-linterna"></i>
+        </span>
+      <span class="flashlight-label">Linterna</span>
+    </div>
+    <a class="avv-btn-link"
+       (click)="closeScannerModal.emit()">{{ userGuidanceOptions.cancelButtonText | translate }}</a>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div *ngIf="product; else noproductBlock" class="active-product-block-container">
+    <div class="active-product-block-header mb-5">
+        <h6 class="semi-bold">Vas a bloquear tu producto</h6>
+    </div>
+
+    <div class="auth-step-info avv-alert-info mt-2 mb-5">
+        <i class="avv-alert-icon icon-info"></i>
+        <div class="avv-alert-text">{{ product.textInfo }}</div>
+    </div>
+
+    <div class="active-product-block-body">
+        <div>
+            <p class="semi-bold">Producto</p>
+            <div>
+                <span class="title">{{ product.name }}</span>
+                <div class="product-number">
+                    <img
+                        #img
+                        class="franchise-img"
+                        [src]="(!!product.cardFranchise ? product.cardFranchise : 'DEBIT') | franchiseImage"
+                        (error)="img.className = 'display-none'"
+                        alt="franchise">
+                    No. {{ product.cardId }}
+                </div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <p class="semi-bold">Costo de la nueva tarjeta</p>
+            <p
+                (click)="redirectLink()"
+                class="avv-link"
+                id="link-costs">
+                {{ 'Tabla de costos' | uppercase }}
+            </p>
+        </div>
+
+        <button
+            (click)="blockProduct()"
+            type="button"
+            class="avv-btn-primary mt-5">
+            BLOQUEAR
+        </button>
+    </div>
+
+</div>
+<ng-template #noproductBlock>
+    <app-product-cant-load-product></app-product-cant-load-product>
+  </ng-template>

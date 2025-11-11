@@ -1,0 +1,21 @@
+<app-headers #header [closeUrl]="'/'" [title]="'SUPPORT.TITLE' | translate" [type]="header?.headerType?.redTertiary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="support-container">
+    <small class="mb-3">
+      {{ 'SUPPORT.DESCRIPTION' | translate }}
+    </small>
+
+    <avv-input
+      [type]="'text'"
+      [icon]="'icon-lupa_search'"
+      [label]="'SUPPORT.LABEL_INPUT_SEARCH' | translate"
+      [preserveIcon]="true"
+      [control]="searchControl"
+    >
+    </avv-input>
+    <app-accordion-url [urls]="supportData$ | async" (openUrl)="openUrl($event)" [content]="supportDataSpi$ | async"></app-accordion-url>
+  </div>
+
+</ion-content>

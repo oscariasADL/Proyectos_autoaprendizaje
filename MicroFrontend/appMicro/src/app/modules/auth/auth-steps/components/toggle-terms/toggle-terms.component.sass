@@ -1,0 +1,51 @@
+@import 'utils'
+
+.toggle-terms-container
+  position: relative
+  margin-top: $spacer-3
+  width: 100%
+  text-align: left
+
+  div
+    position: relative
+
+    i
+      display: none
+      position: absolute
+      left: 1px
+      top: 1px
+      color: var(--white)
+      z-index: 1
+      font-size: 16px
+
+    a
+      color: var(--blue-6)
+      font-weight: 600
+      text-decoration: none
+
+    p
+      position: relative
+      padding-left: 26px
+      font-size: 14px
+      line-height: 20px
+
+      span
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          width: 18px
+          height: 18px
+          border-radius: 2px
+          background-color: var(--gray-6)
+
+    &.active
+      i
+        display: inline-block
+
+      p span:before
+        background-color: var(--success)
+
+    &:hover
+      cursor: pointer

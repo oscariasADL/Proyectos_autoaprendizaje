@@ -1,0 +1,59 @@
+<main class="extracts-container">
+  <ng-container *ngIf="((products$ | async))?.length > 0; else noProducts">
+    <p class="semi-bold" [innerHTML]="'EXTRACTS.TITLE' | translate"></p>
+    <ng-container
+      *ngIf="(products$ | async)?.length <= 5 || (groupedProducts$ | async)?.length === 1;  else listCategories">
+      <app-product-card-item
+        #productCardItem
+        *ngFor="let product of (products$ | async) | slice: 0 : limit "
+        [productDetail]="{ product: product }"
+        [style]="productCardItem.productStyleType.selectable"
+        [showSubtitle]="false"
+        [routerLink]="['/extracts/selected-product/'+product.type+'/'+product.id]"
+      >
+      </app-product-card-item>
+      <ng-container *ngIf="products$ | async as products">
+        <span class="extracts-load-more" *ngIf="products?.length > 5 && limit !== products?.length">
+          <i class="icon-flecha_abajo_2" (click)="loadMoreProducts()"></i>
+        </span>
+      </ng-container>
+    </ng-container>
+    <ng-template #listCategories>
+      <div class="avv-icons-btn-list">
+        <div
+          class="avv-icons-btn-list-item"
+          *ngFor="let group of (groupedProducts$ | async)"
+          [id]="typeProductCategories[group.typeProduct].id"
+          [ngClass]="{'disabled': typeProductCategories[group.typeProduct].disabled}"
+          (click)="!typeProductCategories[group.typeProduct].disabled ? navigateTo(group) : null">
+          <div class="avv-icons-btn-list-item-icon">
+            <img
+              [src]="typeProductCategories[group.typeProduct].image | imageUrl"
+              alt>
+          </div>
+          <p
+            class="avv-icons-btn-list-item-label small"
+            [innerHTML]="typeProductCategories[group.typeProduct].label | translate">
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+  <ng-template #noProducts>
+    <div class="avv-content-empty">
+      <p class="semi-bold avv-content-empty-text">
+        {{ 'EXTRACTS.NO_PRODUCTS_TITLE' | translate }}
+      </p>
+      <div class="avv-content-empty-image">
+        <img
+          class="icon"
+          [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+          alt="sin-resultados">
+      </div>
+      <small class="avv-content-empty-message">
+        {{ 'EXTRACTS.NO_PRODUCTS_MESSAGE' | translate }}
+      </small>
+    </div>
+  </ng-template>
+</main>
+

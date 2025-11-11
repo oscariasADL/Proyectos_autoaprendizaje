@@ -1,0 +1,43 @@
+.radio-wrapper 
+    display: flex
+    cursor: pointer
+    
+    .radio-input
+        position: absolute
+        opacity: 0
+        cursor: pointer
+    
+    .radio-circle 
+        position: relative
+        width: 20px
+        height: 20px
+        border: 1px solid #ccc
+        border-radius: 50%
+        transition: all 0.3s ease
+        display: block
+
+    .radio-input:checked + .radio-circle 
+        border-color: #3F3F3F
+        background-color: white
+
+    .radio-circle::after 
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background-color: #2666EC
+        transform: translate(-50%, -50%) scale(0)
+        transition: transform 0.2s ease
+    
+    .radio-input:checked + .radio-circle::after 
+        transform: translate(-50%, -50%) scale(1)
+
+    &:hover .radio-circle 
+        border-color: #BABABA
+
+    &.radio-large .radio-circle 
+        width: 24px
+        height: 24px

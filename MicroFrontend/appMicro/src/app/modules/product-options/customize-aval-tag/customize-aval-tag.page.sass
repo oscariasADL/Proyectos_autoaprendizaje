@@ -1,0 +1,101 @@
+@import 'utils'
+ion-content
+  border-bottom: 8px solid var(--red-1)
+.customize-aval-tag
+  padding: $spacer $spacer-2
+  display: flex
+  flex-direction: column
+  gap: $spacer-2
+  
+
+  &__logo img
+    width: 100px
+    display: block
+    margin: 0 auto
+
+  &__title
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+
+  &__account
+    padding: $spacer-2 $spacer-1
+    display: flex
+    align-items: center
+    gap: 12px
+    border: 1px solid #DEE1E4
+    border-radius: 4px
+
+    i
+      font-size: 24px
+
+  &__form-control
+    display: block
+
+    label
+      font-size: 14px
+      font-weight: 600
+      color: var(--gray-1)
+
+    .form-control__input
+      padding: $spacer-2 $spacer-1
+      display: flex
+      gap: 12px
+      border: 1px solid #DEE1E4
+      border-radius: 4px
+
+      i
+        font-size: 24px
+
+      input
+        all: unset
+        flex-grow: 2
+        border-left: 1px solid #DFDFDF
+        font-size: 18px
+        text-transform: uppercase
+        color: var(--gray-7)
+        line-height: 1
+        padding-left: 8px
+
+  &__recommendations .acc-content
+    margin-bottom: 16px
+    margin-top: 12px
+    box-shadow: none
+    border-radius: 0 !important
+
+    h2
+      font-weight: 600
+
+    ion-item
+      --border-width: 0
+
+    > div
+      border: 1px solid #d1d6da
+      border-top-width: 0
+      border-bottom-left-radius: 4px
+      border-bottom-right-radius: 4px
+      padding-bottom: 24px
+
+    &.accordion-expanded ion-item
+      border-color: #d1d6da
+      border-bottom-width: 0
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+
+    li
+      margin-bottom: $spacer
+
+      > p
+        font-size: 12px
+
+        b
+          font-weight: 600
+
+  &__buttons-container
+    display: flex
+    flex-direction: column
+    gap: $spacer-3
+    margin-top: $spacer-1
+
+
+

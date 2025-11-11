@@ -1,0 +1,46 @@
+<app-headers
+        [backUrl]="'/contacts'"
+        [title]="'Detalle de contacto'">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <div class="contact-detail-container">
+
+    <div class="contact-info-card">
+      <h5 class="contact-title">
+        {{ contact?.name }}
+        <span *ngIf="contact?.nickname?.trim()">- {{ contact?.nickname }}</span>
+      </h5>
+      <p class="contact-identification">
+        {{ contact?.identificationData.idType }} {{ contact?.identificationData.id }}
+      </p>
+
+      <p class="contact-phone"
+         *ngIf="contact?.phoneNumber !== '0'">
+        <span class="icon-celular"></span>
+        {{ contact?.phoneNumber }}
+      </p>
+
+      <i class="contact-actions icon-tres_puntos" *ngIf="false"></i>
+    </div>
+
+    <div class="contact-products">
+      <div *ngIf="contactProductsWorking$ | async; else content" class="contact-products-loading">
+        <div *ngFor="let item of [1, 2, 3]">
+          <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+
+<ng-template #content>
+  <div class="contact-product-list">
+    <app-contact-product-item
+            *ngFor="let product of contactProducts$ | async"
+            [product]="product"
+           >
+    </app-contact-product-item>
+  </div>
+</ng-template>

@@ -1,0 +1,7 @@
+<div class="avv-popover-content">
+  <div>
+    <p class="title bold" *ngIf="title" [innerHtml]="title"></p>
+    <p class="text" [innerHtml]="text"></p>
+  </div>
+  <i class="icon-salir" (click)="closePopover()"></i>
+</div>

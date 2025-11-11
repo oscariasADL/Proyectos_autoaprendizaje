@@ -1,0 +1,80 @@
+<div class="alert-info-container {{ props?.cssClass}}">
+  <div class="alert-info-close"  (click)=" closeModal(false,false) ">
+    <i class="icon icon-salir"></i>
+  </div>
+  <p class="semi-bold" [innerHTML]="props?.title | translate"></p>
+  <img [src]="props?.icon | imageUrl" class="alert-info-icon" alt="">
+  <p *ngIf="!!props?.description" class="small" [innerHTML]="props?.description | translate"></p>
+
+  <ul *ngIf="props?.itemList?.length > 0" class="alert-info-items" [ngClass]="{'m-0': !!!props?.description}">
+    <li *ngFor="let item of props?.itemList">
+      <p class="small" [innerHTML]="item | translate"></p>
+    </li>
+  </ul>
+
+  <div *ngIf="props?.iconList?.length > 0" class="alert-info-icon-list" [ngClass]="{'m-0': !!!props?.description}">
+    <div class="div-100 list-item" *ngFor="let iconListItem of props?.iconList; let idx = index">
+    
+        <img [src]="'assets/' + iconListItem.icon" height="24" width="24">
+ 
+      <div class="div-text pl-1"
+           [ngClass]="{'mb-4': (idx < (props?.iconList.length - 1)||props?.checkText )}"
+           [innerHTML]="iconListItem.text | translate"></div>
+    </div>
+  
+<div class="checkbox-wrapper">
+  <ion-checkbox 
+(ionChange)="onCheckboxChange($event)"
+   [checked]="isChecked"
+   labelPlacement="end" 
+   justify="start"
+   *ngIf="props?.checkText">
+
+     {{ props?.checkText| translate }}
+    <span *ngIf="props?.linkUrl" class="avv-link" (click)="openExternal(props?.linkUrl)">{{ props?.checkTextLink | translate }}</span>
+    {{ props?.checkTextAfter | translate }}
+  </ion-checkbox>
+</div>
+
+   
+  </div>
+
+  <div *ngIf="!!props?.sublist" class="alert-info-subitems">
+    <ul>
+      <li *ngFor="let item of props?.sublist" [innerHTML]="item | translate"></li>
+    </ul>
+    <ul>
+      <li *ngFor="let item of props?.sublist2" class="ml-4" [innerHTML]="item | translate"></li>
+    </ul>
+    <span *ngIf="!!props?.sublistInfo">
+      {{ props?.sublistInfo | translate }}
+    </span>
+  </div>
+
+  <div *ngIf="props?.message"
+       class="avv-alert-info mt-4">
+    <i class="avv-alert-icon icon-info"></i>
+    <div
+      class="avv-alert-text"
+      [innerHTML]="props.message | translate">
+    </div>
+  </div>
+
+  <div *ngIf="props?.linkText" class="text-center mt-1">
+    <small class="avv-link-underline"
+           (click)="props?.linkAction()"
+           [innerHTML]="props?.linkText | translate">
+    </small>
+  </div>
+
+
+
+  <button [id]="props?.id + '-btn'"
+          (click)="closeModal(true, isChecked)"
+          [disabled]="!isChecked && props.checkText"
+          [utagCategory]="props?.utagCategory"
+          [utag]="props?.utag"
+          class="avv-btn-primary alert-info-btn">
+    {{ (!!props?.buttons ? props?.buttons[0] : 'ACTIONS.CONTINUE') | translate | uppercase }}
+  </button>
+</div>

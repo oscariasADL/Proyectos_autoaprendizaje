@@ -1,0 +1,32 @@
+<article class="block-card-temporarily-date">
+  <p class="block-card-temporarily-date__title">
+    {{ 'BLOCK_CARD_TEMPORARILY.DATE.TITLE' | translate }}
+  </p>
+  <div class="block-card-temporarily-date__card">
+    <div class="card__content">
+      <p>{{ activationProductControl.value.name }}</p>
+      <div class="card__content-product">
+        <img [src]="(activationProductControl.value.cardFranchise ?? 'DEBIT') | franchiseImage"
+             alt="Logo de franquicia">
+        <span>{{ 'ACCOUNT_NUMBER' | translate }} {{ activationProductControl.value.cardId }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="block-card-temporarily-date__form-control">
+    <p class="form-control__label">{{ 'BLOCK_CARD_TEMPORARILY.DATE.INPUT_LABEL' | translate }}</p>
+    <div class="block-temporary-field"
+         [ngClass]="{'not-empty': endDateControl?.value}"
+         (click)="openCalendar()">
+      <div>
+        <p class="block-temporary-field-title">
+          {{ 'BLOCK_CARD_TEMPORARILY.DATE.INPUT_PLACEHOLDER' | translate }}
+        </p>
+        <p class="block-temporary-field-date" *ngIf="endDateControl.value">{{ endDateControl.value }}</p>
+      </div>
+      <span class="icon-calendario"></span>
+    </div>
+  </div>
+  <button type="button" class="avv-btn-primary" [disabled]="form.invalid" (click)="continue.emit()">
+    {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+  </button>
+</article>

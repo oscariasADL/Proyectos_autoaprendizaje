@@ -1,0 +1,19 @@
+<ion-content [forceOverscroll]="false">
+    <div class="registering-device-container">
+        <img
+            class="icon"
+            [src]="'loader.svg' | imageUrl"
+            draggable="false">
+        <div class="loader">
+            <div class="avv-progress-bar">
+                <div class="avv-progress-bar-value"></div>
+            </div>
+        </div>
+        <h6 class="semi-bold">
+            {{ 'AUTH.STEP.REGISTERING_DEVICE.TITLE' | translate }}
+        </h6>
+        <h6>
+            {{ 'AUTH.STEP.REGISTERING_DEVICE.DESCRIPTION' | translate }}
+        </h6>
+    </div>
+</ion-content>

@@ -1,0 +1,40 @@
+@import 'utils'
+
+.terms-and-conditions
+  position: relative
+  padding: $spacer-3 $spacer-2 calc(80px + var(--safe-area-inset-bottom))
+
+  &-container
+    h2, h3
+      font-size: 18px
+      line-height: 28px
+
+    b, li
+      color: var(--gray-1)
+
+    h2, h3, b
+      font-weight: 600
+
+    h2, h3, p
+      margin-bottom: $spacer-3
+
+    ul
+      list-style: disc
+      padding-left: 16px
+
+      li
+        margin-bottom: $spacer-2
+
+      li::marker
+        font-size: 20px
+        color: red
+
+  .footer-action
+    position: fixed
+    width: 100%
+    bottom: 0
+    left: 0
+    padding: 40px 16px 16px
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.3) 100%)
+
+

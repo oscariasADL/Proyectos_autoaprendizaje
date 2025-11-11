@@ -1,0 +1,60 @@
+@import 'utils'
+
+.unlock-product
+  &-container
+    position: relative
+    padding: $spacer-4 $spacer-2
+
+    ::ng-deep .media-activation-card
+      box-shadow: none
+      border-radius: 4px
+      border: solid 1px var(--gray-6)
+
+  &-header
+    text-align: center
+    padding-bottom: $spacer-4
+
+  &-title
+    max-width: 300px
+    display: inline-block
+
+  &-description
+    text-align: center
+    margin-top: $spacer-2
+
+  &-message
+    text-align: center
+    margin: $spacer-4 0
+
+  &-panel
+    margin-top: $spacer-4
+
+  &-suspicious-transaction-panel
+    margin: $spacer-4 0
+
+    .suspicious-transaction-title
+      width: 170px
+      height: 24px
+
+    .suspicious-transaction-card
+      width: 100%
+      height: 104px
+      margin-top: 8px
+
+  &-suspicious-transaction-item
+    border: solid 1px var(--gray-6)
+    border-radius: 4px
+    padding: $spacer $spacer-2
+
+    small.mt
+      margin-top: 4px
+
+  &-footer
+    text-align: center
+    padding: $spacer-4 0
+
+    i
+      font-size: 20px
+      top: 4px
+      left: 2px
+      position: relative

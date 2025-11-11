@@ -1,0 +1,20 @@
+<div class="aval-key-details" id="aval-key-details">
+  <div class="aval-key-details__label">
+    <div class="aval-key-details__logo">
+      <img [src]="'aval-icons/tag-aval-colored.svg' | imageUrl" alt="">
+      <i class="icon icon-info" (click)="onShowTagAvalPopover($event)"></i>
+    </div>
+  </div>
+  <div class="aval-key-details__content">
+    <span class="aval-key-details__value">
+      {{ item.keyId }}
+    </span>
+    <p class="aval-key-details__actions" role="button">
+      <i class="icon icon-agrupar" (click)="onCopy()"></i>
+      <ng-template [appFeatureToggle]="featureFlagsKey.CustomizationTagAval" >
+              <i class="icon icon-editar" [routerLink]="'/customize-aval-tag/' +item.keyId"></i>
+
+      </ng-template>
+    </p>
+  </div>
+</div>

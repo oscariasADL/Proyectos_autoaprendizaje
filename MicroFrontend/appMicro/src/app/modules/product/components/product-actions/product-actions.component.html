@@ -1,0 +1,40 @@
+<div class="product-actions-container">
+  <div class="product-actions-header">
+    <ng-container *ngIf="actions.length > 0">
+      <p class="product-actions-title">{{(product.type=== typeAccount.SDA ?'PRODUCT_ACTIONS.TITLE_ACCOUNTS': 'PRODUCT_ACTIONS.TITLE') | translate }}</p>
+      <img [id]="actionsTourId" alt="tooltip-icon"
+           [src]="'icons/tooltip-icon.svg' | imageUrl"
+           role="button"
+           [attr.aria-label]="'Mas información sobre acciones del producto'"
+           (click)="actionsTour()">
+    </ng-container>
+  </div>
+  <ul class="product-actions-list" [id]="listId">
+    <ng-template
+      *ngFor="let action of actions | slice: 0: maxNumberActions - (actions.length === maxNumberActions ? 0 : 1)"
+      [appFeatureToggle]="action.featureFlagKey">
+        <ng-container *appDenyAccounts="action.denyDocumentTypes">
+
+      <li>
+        <app-product-action-item
+          [id]="action.id"
+          [action]="action"
+          (clicked)="actionSelected.emit(action)">
+        </app-product-action-item>
+      </li>
+      </ng-container>
+    </ng-template>
+
+    <li (click)="moreActions()" *ngIf="actions.length > maxNumberActions">
+      <div class="product-actions-more">
+        <div class="product-actions-more-image" [attr.aria-hidden]="true">
+          <i class="icon-tres_puntos_horizontal"></i>
+        </div>
+        <small class="product-actions-more-description">
+          {{ 'Más' | translate }}
+        </small>
+      </div>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,56 @@
+require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
+
+platform :ios, '14.0'
+use_frameworks!
+
+# workaround to avoid Xcode caching of Pods that requires
+# Product -> Clean Build Folder after new Cordova plugins installed
+# Requires CocoaPods 1.6 or newer
+install! 'cocoapods', :disable_input_output_paths => true
+
+def capacitor_pods
+  pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
+  pod 'Ankitp5CapacitorSslPinning', :path => '../../node_modules/@ankitp5/capacitor-ssl-pinning'
+  pod 'AvaldigitallabsBavvMbLibLifecycleEvents', :path => '../../node_modules/@avaldigitallabs/bavv-mb-lib-lifecycle-events'
+  pod 'AvaldigitallabsOneSpanDeviceFingerprint', :path => '../../node_modules/@avaldigitallabs/one-span-device-fingerprint'
+  pod 'AvaldigitallabsOneSpanDigipass', :path => '../../node_modules/@avaldigitallabs/one-span-digipass'
+  pod 'AvaldigitallabsOneSpanSecureMessaging', :path => '../../node_modules/@avaldigitallabs/one-span-secure-messaging'
+  pod 'AvaldigitallabsOneSpanSecureStorage', :path => '../../node_modules/@avaldigitallabs/one-span-secure-storage'
+  pod 'CapacitorFirebaseCrashlytics', :path => '../../node_modules/@capacitor-firebase/crashlytics'
+  pod 'CapacitorApp', :path => '../../node_modules/@capacitor/app'
+  pod 'CapacitorCamera', :path => '../../node_modules/@capacitor/camera'
+  pod 'CapacitorClipboard', :path => '../../node_modules/@capacitor/clipboard'
+  pod 'CapacitorDevice', :path => '../../node_modules/@capacitor/device'
+  pod 'CapacitorFilesystem', :path => '../../node_modules/@capacitor/filesystem'
+  pod 'CapacitorGeolocation', :path => '../../node_modules/@capacitor/geolocation'
+  pod 'CapacitorKeyboard', :path => '../../node_modules/@capacitor/keyboard'
+  pod 'CapacitorNetwork', :path => '../../node_modules/@capacitor/network'
+  pod 'CapacitorPreferences', :path => '../../node_modules/@capacitor/preferences'
+  pod 'CapacitorPushNotifications', :path => '../../node_modules/@capacitor/push-notifications'
+  pod 'CapacitorShare', :path => '../../node_modules/@capacitor/share'
+  pod 'CapacitorSplashScreen', :path => '../../node_modules/@capacitor/splash-screen'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
+  pod 'CapawesomeTeamCapacitorFileOpener', :path => '../../node_modules/@capawesome-team/capacitor-file-opener'
+  pod 'NewrelicNewrelicCapacitorPlugin', :path => '../../node_modules/@newrelic/newrelic-capacitor-plugin'
+  pod 'CordovaPlugins', :path => '../capacitor-cordova-ios-plugins'
+end
+
+target 'App' do
+  capacitor_pods
+  # Add your Pods here
+  pod 'OnespanUtilities', :path => './libs/onespan-utilities-sdk'
+  pod 'FirebaseCore', '~> 11.7.0'
+  pod 'Firebase/Messaging'
+  pod 'AntelopSDK', path: './libs/antelop-sdk'
+  pod 'SecureCModule', path: './libs/antelop-sdk'
+  pod 'MSSDigipass', path: './libs/digipass-sdk'
+  pod 'MSSSecureStorage', path: './libs/secure-storage-sdk'
+  pod 'MSSSecureMessaging', path: './libs/secure-messaging-sdk'
+  pod 'MSSDeviceBinding', path: './libs/device-binding-sdk'
+end
+
+
+post_install do |installer|
+  assertDeploymentTarget(installer)
+end

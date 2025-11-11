@@ -1,0 +1,41 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [showSteps]="false"
+    [headerType]="headerType"
+    [title]="'TRANSFERS.BRE_B.TITLE' | translate"
+    [data]="data"
+    [steps]="steps"
+    [backUrl]="backUrl"
+    [exitData]="exitData"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)" (slideSelected)="slideSelected($event)"
+    [template]="template"
+    [utagCategory]="''" [utag]="''">
+  </app-generic-stepper>
+
+</ion-content>
+<ng-template #template let-key="key" let-screen="data" let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-bre-b-transfers-toward
+      *ngSwitchCase="'key'"
+      [form]="form"
+      (continue)="runNextStep(key)">
+    </app-bre-b-transfers-toward>
+
+    <app-bre-b-transfers-data
+      *ngSwitchCase="'data'"
+      [form]="form"
+      (modifySpiKey)="modifySpiKeyTransfer()"
+      (continue)="runNextStep(key)"
+    ></app-bre-b-transfers-data>
+
+    <app-bre-b-transfers-confirmation
+      *ngSwitchCase="'confirmation'"
+      [form]="form" (transferCompleted)="transfer()"
+      (modifyTransfer)="modifyDataTransfer()">
+    </app-bre-b-transfers-confirmation>
+  </div>
+</ng-template>

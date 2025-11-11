@@ -1,0 +1,38 @@
+<div class="avv-generic-step transfer-avv-phone">
+  <p class="avv-generic-step-title pb-4">{{ 'TRANSFERS.CEL2CEL.SEND.STEPS.TOWARD_TITLE' | translate }}</p>
+
+  <div class="accounts-step-list">
+
+    <div>
+      <ng-container *ngFor="let bank of banks">
+        <div class="pockets-product" *ngIf="bankInList(bank.id)" (click)="setTowardBankInfo(bank.id, bank.name)"
+          [utag]="bank.utag" [utagCategory]="bank.utagCategory" [id]="'cel2cel-entity-' + bank.id + '-btn'">
+          <div class="product-info">
+            <i *ngIf="!bank.icon" class="icon icon-bolsillos"></i>
+            <img *ngIf="bank.icon" [src]="bank.icon" class="cel-2-cel-link-icon" alt="">
+            <p class="small ml-1">{{bank.name}}</p>
+            <img *ngIf="bank.iconAlt" [src]="bank.iconAlt" style="position: absolute; right: 80px;" alt="">
+          </div>
+          <i class="icon icon-next"></i>
+        </div>
+      </ng-container>
+
+      <div class="pockets-product" (click)="alertSetTransferType(true)" [utag]="transfiya.utag"
+        [utagCategory]="transfiya.utagCategory" [id]="'cel2cel-entity-transfiya-btn'">
+        <div class="product-info">
+          <img [src]="transfiya.icon" class="cel-2-cel-link-icon" alt="">
+          <p class="small ml-1">{{transfiya.name}}</p>
+        </div>
+        <i class="icon icon-next"></i>
+      </div>
+      <div class="redirect-link" *ngIf="!hasProductAval">
+        <i class="icon icon-informacion"></i>
+        <a class="redirect-link-text" (click)="showTransfiyaAlertInfo(true)">
+          ¿Qué es transfiya?
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

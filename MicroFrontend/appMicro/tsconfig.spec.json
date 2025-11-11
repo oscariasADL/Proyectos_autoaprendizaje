@@ -1,0 +1,48 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@environment": [
+        "src/environments/environment.dev.ts"
+      ],
+      "@store/*": [
+        "src/app/store/*"
+      ],
+      "@commons/*": [
+        "src/app/commons/*"
+      ],
+      "@modules/*": [
+        "src/app/modules/*"
+      ],
+      "@testing/*": [
+        "test-helpers/*"
+      ],
+      "@capacitor/*": [
+        "__mocks__/@capacitor/*"
+      ],
+      "@newrelic/*": [
+        "__mocks__/@newrelic/*"
+      ], 
+      "@capacitor-firebase/*": [
+        "__mocks__/@capacitor-firebase/*"
+      ]
+    }
+  },
+  "files": [
+    "src/test.ts",
+    "src/zone-flags.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
+}

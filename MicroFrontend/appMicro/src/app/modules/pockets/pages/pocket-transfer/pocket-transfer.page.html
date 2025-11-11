@@ -1,0 +1,39 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'POCKETS.TRANSFER.TITLE' | translate"
+    [backUrl]="backUrl"
+    [exitData]="exitData"
+    [showSteps]="false"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template"
+    [utagCategory]="transferTag.event_category"
+    [utag]="transferTag.event_label">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-pocket-transfer-data
+      *ngSwitchCase="'transfer'"
+      [form]="form"
+      [pocketDetail]="pocket$ | async"
+      [pockets]="(pockets$ | async)?.pockets"
+      [isPocketProfitability]="isPocketProfitability"
+      (continue)="runNextStep(key)"
+      [utag]="confirmTag.event_label"
+      [utagCategory]="confirmTag.event_category"
+    ></app-pocket-transfer-data>
+  </div>
+
+</ng-template>

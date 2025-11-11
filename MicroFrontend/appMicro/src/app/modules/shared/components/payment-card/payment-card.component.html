@@ -1,0 +1,41 @@
+<div class="payment-card-container">
+  <i *ngIf="card?.canDelete && false" class="icon-basura payment-card-delete-btn"></i>
+
+  <p class="small semi-bold payment-card-title">{{ card?.title | translate }}</p>
+
+  <ul *ngIf="card?.texts?.length > 0" class="payment-card-texts">
+    <li *ngFor="let text of card?.texts" class="payment-card-text">
+      <p class="small">{{ text | translate }}</p>
+    </li>
+  </ul>
+
+  <div class="payment-card-number">
+    <img *ngIf="card?.icon"
+         [src]="card.icon | franchiseImage: true" #img
+         (error)="img.className = 'display-none'" alt="icon">
+    <p class="small">{{ card?.number }}</p>
+  </div>
+
+  <ul *ngIf="card?.items?.length > 0" class="payment-card-items">
+    <li *ngFor="let item of card?.items" class="payment-card-item {{ item?.className }}">
+      <p class="small">{{ item?.label | translate }}</p>
+      <div>
+        <p class="small" *ngIf="item?.value >= 0" [innerHtml]="item?.value | currencyFormat"></p>
+        <p class="small" *ngIf="item?.text" [innerHtml]="item?.text | translate"></p>
+      </div>
+    </li>
+  </ul>
+
+  <div *ngIf="card?.label" class="payment-card-label">
+    {{ card?.label | translate }}
+  </div>
+
+  <div class="payment-card-btn" *ngIf="card?.canPay">
+    <button class="avv-btn-primary sm"
+            (click)="pay.emit()"
+            [id]="'payment-card-btn'">
+      {{ 'ACTIONS.PAYMENT' | translate | uppercase }}
+    </button>
+  </div>
+
+</div>

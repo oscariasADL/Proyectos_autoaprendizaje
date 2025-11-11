@@ -1,0 +1,45 @@
+<ion-content [forceOverscroll]="false">
+  <div class="digital-debit-card-edit-header">
+    <div class="digital-debit-card-edit-header-back">
+      <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+      <h5 class="digital-debit-card-edit-header-title">
+        {{ 'DIGITAL_DEBIT_CARD.EDIT.HEADER_TITLE' | translate }}
+      </h5>
+    </div>
+    <div class="digital-debit-card-edit-header-close">
+      <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+    </div>
+  </div>
+
+  <div class="digital-debit-card-edit-container">
+    <div class="text-center">
+      <h6 class="semi-bold mb-3">{{ 'DIGITAL_DEBIT_CARD.EDIT.TITLE' | translate }}</h6>
+    </div>
+
+    <p class="small semi-bold">{{ 'DIGITAL_DEBIT_CARD.EDIT.CUSTOM' | translate }}</p>
+
+    <div class="form-control">
+      <avv-field
+        [type]="'text'"
+        [id]="'digital-debit-card-configuration-name'"
+        [label]="'DIGITAL_DEBIT_CARD.EDIT.CUSTOM_FIELD' | translate"
+        [control]="nickName">
+      </avv-field>
+      <small class="mt-1">{{ 'DIGITAL_DEBIT_CARD.EDIT.CUSTOM_BOTTOM' | translate }}</small>
+    </div>
+    <div class="form-control">
+      <avv-input
+        [type]="'currency'"
+        [id]="'digital-debit-card-configuration-amount'"
+        [label]="'DIGITAL_DEBIT_CARD.EDIT.AMOUNT_FIELD' | translate"
+        [control]="amount">
+      </avv-input>
+      <small class="mt-1">{{ 'DIGITAL_DEBIT_CARD.EDIT.AMOUNT_BOTTOM' | translate }}</small>
+    </div>
+    <button type="button" id="digital-debit-card-edit-btn"
+            class="avv-btn-primary mt-3"
+            (click)="editDigitalDebitCard()">
+      {{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}
+    </button>
+  </div>
+</ion-content>

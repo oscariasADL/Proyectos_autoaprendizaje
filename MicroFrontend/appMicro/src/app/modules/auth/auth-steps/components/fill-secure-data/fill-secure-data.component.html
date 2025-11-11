@@ -1,0 +1,83 @@
+<ion-content [forceOverscroll]="false">
+    <div class="auth-steps-container fill-secure-data-container">
+        <div class="auth-steps-header">
+            <h5>{{ title | translate }}</h5>
+            <i
+                class="icon-salir"
+                (click)="showExitModal()"></i>
+        </div>
+
+        <div
+            [ngClass]="{'credit-card': isCreditCard}"
+            class="auth-steps-body">
+            <form
+                *ngIf="form"
+                [formGroup]="form"
+                (ngSubmit)="run()">
+                <p class="semi-bold auth-steps-title mb-4">
+                    {{ 'AUTH.STEP.FILL_SECURE_DATA.TITLE' | translate :
+                        { type: ((isCreditCard ? 'AUTH.STEP.FILL_SECURE_DATA.TYPE.CREDIT_CARD' : 'AUTH.STEP.FILL_SECURE_DATA.TYPE.DEBIT_CARD') | translate) } }}
+                </p>
+
+                <div class="auth-step-info avv-alert-info mb-2" *ngIf="!isLastAttempt">
+                    <i class="avv-alert-icon icon-info"></i>
+                    <div class="avv-alert-text">
+                        {{ 'AUTH.STEP.FILL_SECURE_DATA.INFO' | translate }}
+                    </div>
+                </div>
+
+                <div class="auth-step-info avv-alert-warning mb-2" *ngIf="isLastAttempt">
+                  <i class="avv-alert-icon icon-alerta"></i>
+                  <div class="avv-alert-text">
+                    <p class="bold">{{ 'AUTH.STEP.FILL_SECURE_DATA.WARNING_PRE' | translate }}</p>
+                    {{ 'AUTH.STEP.FILL_SECURE_DATA.WARNING' | translate }}
+                  </div>
+                </div>
+
+                <div
+                    *ngIf="isCreditCard"
+                    class="cromalite-content">
+                    <img
+                        [src]="'cromalites/credit-card-digits.png' | imageUrl"
+                        alt="Logo"
+                        draggable="false">
+                </div>
+
+                <div class="text-left mb-1">
+                    <small class="avv-text-info">
+                        {{ data.secureDataBriefQuestion?.question?.toString().trim() | secureQuestion }}
+                    </small>
+                </div>
+
+                <avv-password
+                    [class]="isCreditCard ? 'auth-steps-otp' : 'debit-password'"
+                    [control]="secureDataSecret"
+                    [hideCharacters]="!isCreditCard"
+                    [autoFocus]="false"
+                    [showEye]="!isCreditCard"
+                    [numCharacters]="this.data.secureDataBriefQuestion.length">
+                </avv-password>
+                <app-validations [control]="secureDataSecret"></app-validations>
+
+                <div
+                    *ngIf="hasError"
+                    class="text-left">
+                    <small class="avv-text-danger">{{ this.data.errorMessage }}</small>
+                </div>
+
+                <app-toggle-terms
+                        [control]="terms">
+                </app-toggle-terms>
+
+                <button
+                    class="avv-btn-primary auth-steps-btn"
+                    type="submit"
+                    [disabled]="!form.valid">
+                    {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-steps-footer"></div>
+    </div>
+</ion-content>

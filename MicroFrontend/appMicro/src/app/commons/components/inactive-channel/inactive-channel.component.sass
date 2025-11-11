@@ -1,0 +1,21 @@
+@import 'utils'
+
+.inactive-channel
+  &-container
+    overflow-y: auto
+    height: 100vh
+
+  &-content
+    padding: 40px $spacer-2
+    text-align: center
+    +flex(center, center, column)
+
+  &-logo, &-icon, &-title
+    margin-bottom: $spacer-4
+
+  &-list
+    margin-bottom: 64px
+
+  @media(max-width: 320px)
+    &-list
+      margin-bottom: $spacer-4

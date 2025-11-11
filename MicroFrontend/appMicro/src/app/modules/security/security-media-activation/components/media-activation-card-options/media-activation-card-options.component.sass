@@ -1,0 +1,27 @@
+@import 'utils'
+
+.media-activation-card-options
+  &-container
+    position: relative
+    background-color: var(--white)
+    padding: $spacer-2 $spacer-2 calc(#{$spacer-2} + var(--safe-area-inset-bottom))
+
+  &-close
+    position: absolute
+    font-size: 24px
+    color: var(--gray-7)
+    padding: $spacer
+    top: 8px
+    right: 8px
+
+  &-list
+    margin-bottom: 3px
+
+    .item
+      +flex(center, flex-start)
+      margin-top: $spacer-3
+
+      i
+        font-size: 24px
+        margin-right: $spacer-2
+

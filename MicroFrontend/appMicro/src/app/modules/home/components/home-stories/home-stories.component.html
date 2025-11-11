@@ -1,0 +1,11 @@
+<section class="stories">
+  <ul class="stories-list">
+    <li class="stories-list-item" *ngFor="let story of stories; trackBy:trackByFn" [id]="story.storyId">
+      <img appPreloadImage [preload]="skeleton" [src]="story.previewImg | imageUrlAlt"
+        [ngClass]="{'opened':story.isOpened }" (click)="openStory(story)" class="story-image"
+        [alt]="story.previewTitle">
+      <ion-skeleton-text #skeleton class="avv-skeleton stories-skeleton" animated></ion-skeleton-text>
+      <p class="story-title">{{story.previewTitle}}</p>
+    </li>
+  </ul>
+</section>

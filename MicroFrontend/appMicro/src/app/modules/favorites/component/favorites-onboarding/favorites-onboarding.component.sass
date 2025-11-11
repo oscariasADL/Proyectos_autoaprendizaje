@@ -1,0 +1,55 @@
+@import 'utils'
+
+ion-progress-bar
+  --progress-background: #0048DB
+
+.favorites-onboarding
+  position: relative
+  display: flex
+  flex-direction: column
+  background: radial-gradient(circle at left bottom, rgba(253, 229, 231) 1%, white 30%)
+  height: 80vh
+  overflow-y: scroll
+
+  &-skip
+    display: block
+    text-decoration: underline
+    text-align: right
+    margin: $spacer-2 0 $spacer-3
+
+  &-slides
+    position: relative
+    flex-grow: 1
+
+    img
+      object-fit: scale-down
+
+    .slides-button-prev, .slides-button-next
+      position: absolute
+      top: 0
+      width: 10%
+      height: 100%
+      background-color: transparent
+      z-index: 2
+
+    .slides-button-prev
+      left: -$spacer-2
+
+    .slides-button-next
+      right: -$spacer-2
+
+  &-slide
+    display: flex
+    flex-direction: column
+    gap: $spacer
+
+    h2
+      font-size: 28px
+      font-weight: 600
+      text-align: center
+
+    p
+      font-size: 20px
+      text-align: center
+
+

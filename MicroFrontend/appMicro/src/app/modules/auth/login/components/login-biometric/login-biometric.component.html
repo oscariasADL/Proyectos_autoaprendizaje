@@ -1,0 +1,6 @@
+<button class="avv-btn-secondary login-password-biometric-btn"
+        type="button"
+        *ngIf="hasBiometricRegistered$ | async"
+        (click)="runBiometric()">
+  <img *ngIf="biometricIcon$ | async as biometricIcon" [src]="biometricIcon | imageUrl" alt="">
+</button>

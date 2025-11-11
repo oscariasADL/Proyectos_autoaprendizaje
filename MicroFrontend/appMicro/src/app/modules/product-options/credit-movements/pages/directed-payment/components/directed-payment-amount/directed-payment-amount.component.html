@@ -1,0 +1,85 @@
+<article class="directed-payment-amount">
+  <section class="directed-payment-amount-header">
+    <p class="header-title">{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.TITLE' | translate }}</p>
+  </section>
+  <section class="directed-payment-amount-cards">
+    <form [formGroup]="form">
+      <ng-container formArrayName="selectedMovements" *ngFor="let control of selectedMovements.controls; let i = index">
+        <div class="amount-card">
+          <div class="amount-card-header">
+            <p>{{ control.value?.purchaseDescription }}</p>
+            <small>{{ control.value?.companyDescription | capitalize }}</small>
+          </div>
+          <div class="amount-card-body">
+            <div class="amount-card-body-balance">
+              <p>{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.TOTAL_PAYMENT' | translate }}</p>
+              <p [innerHtml]="control.value.balance | currencyFormat"></p>
+            </div>
+            <hr/>
+            <div class="amount-card-body-value-to-pay">
+              <p>{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.DESCRIPTION' | translate }}</p>
+              <div class="form-group" [formGroupName]="i">
+                <div class="form-check">
+                  <input type="radio" class="form-check-input"
+                         formControlName="valueToPay"
+                         [value]="control.value.balance"
+                         (click)="setActiveType(directedPaymentType.totalValue, control)"
+                  >
+                  <label class="form-check-label">
+                    <span>{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.TOTAL_PAYMENT' | translate }}</span>&nbsp;
+                    <span [innerHtml]="control.value.balance | currencyFormat"></span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input"
+                         formControlName="valueToPay"
+                         [value]="control.value.otherValue"
+                         (click)="setActiveType(directedPaymentType.otherValue, control)"
+                  >
+                  <ng-container
+                    *ngIf="control.value.directedPaymentType === directedPaymentType.otherValue; else otherValueLabel">
+                    <avv-input
+                      #avvInput
+                      [type]="avvInput.inputTypes.currency"
+                      [control]="getControl(control.get('otherValue'))"
+                      [label]="'DIRECTED_PAYMENTS.AMOUNT_STEP.OTHER_VALUE' | translate"
+                    >
+                    </avv-input>
+                  </ng-container>
+                  <ng-template #otherValueLabel>
+                    {{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.OTHER_VALUE' | translate }}
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </form>
+  </section>
+  <section class="directed-payment-amount-account">
+    <p
+      class="directed-payment-amount-account-description">{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.DESCRIPTION_ACCOUNT' | translate }}</p>
+    <ng-container *ngIf="(products$ | async) as products">
+      <app-dropdown-modal-products
+        [label]="'Cuenta origen'"
+        [control]="fromProduct"
+        [products]="modalProducts(products)"
+        [amountToPay]="totalValueToPay"
+        [showGroupLabel]="false"
+        (selectedProductFn)="selectProduct($event)">
+      </app-dropdown-modal-products>
+    </ng-container>
+  </section>
+  <section class="directed-payment-amount-total" *ngIf="selectedMovements.length > 1" #stickyTotal>
+    <p>{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.TOTAL_VALUE_TO_PAY' | translate }}</p>
+    <span [innerHtml]="totalValueToPay | currencyFormat"></span>
+  </section>
+  <section class="directed-payment-amount-action">
+    <button class="avv-btn-primary" [disabled]="selectedMovements.invalid || fromProduct.invalid"
+            (click)="continueAction()">{{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+    <!--<button class="avv-btn-primary"
+            (click)="continueAction()">{{ 'ACTIONS.CONTINUE' | translate | uppercase }}</button>-->
+  </section>
+</article>

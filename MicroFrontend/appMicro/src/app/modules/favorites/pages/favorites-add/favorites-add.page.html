@@ -1,0 +1,84 @@
+<app-headers #header [title]="'FAVORITES.HEADER' | translate" [type]="header?.headerType?.whitePrimary">
+</app-headers>
+<ion-content>
+  <section class="container">
+    <main class="add-favorite-container">
+      <div class="form-container">
+        <h3 class="title">{{'FAVORITES.ADD_PAGE.TITLE' |translate}} </h3>
+        <form class="form" action="">
+          <p>{{'FAVORITES.ADD_PAGE.FROM' | translate}}</p>
+
+          <div class="single-account" *ngIf="singleProduct; else dropdown">
+            <i [class]="singleProduct.icon" class="icon"></i>
+            <div>
+              <h6 class="title">{{singleProduct.title}} </h6>
+              <p class="descrption" [innerHTML]="singleProduct.value | currencyFormat"></p>
+            </div>
+          </div>
+          <ng-template #dropdown>
+            <app-dropdown-modal-products [label]="'FAVORITES.ADD_PAGE.FIELDS.ORIGIN_ACCOUNT'"
+              [modalTitle]="'FAVORITES.ADD_PAGE.MODAL_TITLE' | translate" 
+              [control]="product" 
+              [products]="modalProducts"
+              [showGroupLabel]="false" 
+              [amountToPay]="0" 
+              (selectedProductFn)="selectedProduct($event)">
+            </app-dropdown-modal-products>
+          </ng-template>
+
+          <p>{{'FAVORITES.ADD_PAGE.TO' | translate}}</p>
+
+          <avv-dropdown-modal [label]="'FAVORITES.ADD_PAGE.FIELDS.TRANSFER_TYPE' | translate"
+            [modalTitle]="'FAVORITES.ADD_PAGE.FIELDS.TRANSFER_TYPE' | translate" [control]="transferType"
+            id="select-favorite-transfer-type" [items]="transferTypes">
+
+          </avv-dropdown-modal>
+          <div *ngIf="transferType.value">
+
+            <div [ngSwitch]="transferType.value.value">
+              <ng-container *ngSwitchCase="favoritesTransferType.cellphone">
+                <ng-container *ngTemplateOutlet="appcel"></ng-container>
+              </ng-container>
+              <ng-container *ngSwitchCase="favoritesTransferType.contacts">
+                <ng-container *ngTemplateOutlet="contacs"></ng-container>
+              </ng-container>
+              <ng-container *ngSwitchCase="favoritesTransferType.avVillasAccounts">
+                <ng-container *ngTemplateOutlet="villas"></ng-container>
+              </ng-container>
+
+
+              <ng-template #appcel>
+                <app-mobile-form [form]="form" [utagEvent]="utagForMobile" [transfiyaUtagEvent]="utagForTransfiya"
+                  (payloadChanged)="onPayloadChanged($event)"></app-mobile-form>
+              </ng-template>
+
+              <ng-template #contacs>
+                <app-contacs-form [form]="form" (payloadChanged)="onPayloadChanged($event)"></app-contacs-form>
+              </ng-template>
+             
+              <ng-template #villas>
+                <app-villas [form]="form" (payloadChanged)="onPayloadChanged($event)" [utagEvent]="utagForVillas"></app-villas>
+              </ng-template>
+        
+            </div>
+          </div>
+          <div class="input-container">
+    <avv-input
+          type="text"
+          [id]="'input-account-name'"
+          [label]="'FAVORITES.ADD_PAGE.FIELDS.FAVORITE_NAME' | translate"
+          [control]="favoriteName">
+
+  </avv-input>
+  </div>
+        </form>
+        <app-notification icon="icon-info" [description]="'FAVORITES.ADD_PAGE.HINT' | translate"></app-notification>
+      </div>
+
+      <button class="avv-btn-primary" [disabled]="form.invalid" (click)="createFavorite()">{{
+        'FAVORITES.ADD_PAGE.ADD'|translate |
+        uppercase}}</button>
+    </main>
+    <footer class="footer"></footer>
+  </section>
+</ion-content>

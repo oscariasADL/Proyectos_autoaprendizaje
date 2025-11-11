@@ -1,0 +1,41 @@
+<ion-content [forceOverscroll]="false">
+  <i id="onboarding-close-btn" class="onboarding-close-btn icon-salir" (click)="closeOnboarding()"></i>
+
+  <div class="onboarding-container">
+    <swiper class="onboarding-container-slides" #swiper [config]="slideOpts"
+            (slideChange)="changeSlide()">
+      <ng-template swiperSlide *ngFor="let item of onboardingSliders; let i = index">
+        <div class="onboarding-img">
+          <img class="onboarding-img-slide" [src]="item.img | imageUrl" alt="">
+        </div>
+      </ng-template>
+    </swiper>
+
+    <div class="onboarding-panel">
+      <div class="onboarding-pager mt-4">
+        <div *ngFor="let item of onboardingSliders; let i = index" [ngClass]="{'active': currentSlide === i}"></div>
+      </div>
+      <div class="onboarding-content">
+        <ng-container [ngSwitch]="currentSlide">
+          <ng-container *ngFor="let item of onboardingSliders; let i = index">
+            <div class="onboarding-section px-4 animated fadeIn" *ngSwitchCase="i">
+              <p class="semi-bold mb-1 onboarding-title" [innerHtml]="item.title | translate"></p>
+              <p class="onboarding-subtitle" [innerHtml]="item.subtitle | translate"></p>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="onboarding-continue">
+        <div class="onboarding-button" (click)="moveToNextSlide()" *ngIf="!isLastSlide">
+          <p class="semi-bold">{{ 'ACTIONS.CONTINUE' | translate }}</p>
+          <i class="icon-siguiente"></i>
+        </div>
+        <button (click)="moveToNextSlide()" *ngIf="isLastSlide" class="avv-btn-primary mx-3 mb-3">
+          {{ 'ONBOARDING.BUTTON' | translate | uppercase }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

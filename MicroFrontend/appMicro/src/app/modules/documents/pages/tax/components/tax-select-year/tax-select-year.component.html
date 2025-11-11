@@ -1,0 +1,19 @@
+<div class="avv-alert-info mt-4">
+  <i class="avv-alert-icon icon-info"></i>
+  <div class="avv-alert-text">
+    {{'TAX.ALERT' | translate }}
+  </div>
+</div>
+
+<div class="tax-list">
+  <div *ngFor="let year of years; index as i" [id]="'tax-download-btn-' + i " class="tax-download-btn"
+    [ngClass]="{'working': (isDownload$(year) | async), 'disabled': (isDownloadingSomeCertificate$ | async)}"
+    (click)="downloadTaxCertificate(year)">
+
+    <p>{{ year }}</p>
+    <div class="tax-download-icon">
+      <i class="icon-descarga tax-icon"></i>
+      <i class="spinner tax-loader"></i>
+    </div>
+  </div>
+</div>

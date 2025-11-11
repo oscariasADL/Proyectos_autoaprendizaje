@@ -1,0 +1,62 @@
+@import 'utils'
+
+.fill-secure-data-container
+  .auth-steps-body
+    &.credit-card
+      padding-top: 60px
+  .cromalite-content
+    margin-bottom: 8px
+    > img
+      max-width: 256px
+
+  .text-left
+    text-align: left
+
+  ::ng-deep
+    .auth-steps-otp
+      .input-password-container
+        margin: 0
+    .debit-password
+      .input-password-container
+        margin: 0
+        +flex(center, space-between)
+
+        fieldset
+          width: 100%
+
+          .password-input
+            +flex(center, space-between)
+
+          div
+            &:first-child
+              input
+                margin-left: 0
+
+            .password-bar
+              height: 3px
+              max-width: 56px
+
+            input
+              margin: 0 0 0 16px
+              width: 56px
+              height: 56px
+
+        &-eye
+          margin-left: 16px
+
+          .icon
+            color: var(--blue-1)
+            font-size: 24px
+            font-weight: bold
+            position: relative
+            top: 5px
+
+            &.hide
+              display: none
+
+        &.hide
+          fieldset
+            div
+              .password-char
+                right: 17px
+                top: 8px

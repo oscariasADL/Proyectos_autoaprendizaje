@@ -1,0 +1,33 @@
+<button 
+  *ngIf="type === viewMoreKeysType.primary && !translateParams" 
+  class="avv-btn-primary sm  view-more-keys" 
+  id="view-more-keys"
+  (click)="onClick()"
+>
+  {{ buttonLabel | translate }}
+</button>
+<button 
+  *ngIf="type === viewMoreKeysType.primary && translateParams" 
+  class="avv-btn-primary sm  view-more-multiple-keys" 
+  id="view-more-keys"
+  (click)="onClick()">
+  {{ buttonLabel | translate : translateParams}}
+  <i class="icon-next"></i>
+</button>
+
+<div class="view-more-keys__detail" *ngIf="type === viewMoreKeysType.secondary && !translateParams">
+  <div class="view-more-keys__text" role="button" aria-label="Ver todo" (click)="onClick()">
+    {{buttonLabel | translate}} 
+  </div>
+</div>
+<div class="view-more-keys__detail" *ngIf="type === viewMoreKeysType.secondary && translateParams">
+  <div class="view-more-keys__text  view-more-keys__register_key" role="button" aria-label="Ver todo" (click)="onClick()">
+    {{buttonLabel | translate: translateParams}}
+      <i class="icon-next"></i>
+  </div>
+</div>
+<div class="view-more-keys__detail" *ngIf="type === viewMoreKeysType.secondary && !translateParams ">
+  <div class="view-more-keys__text" role="button" aria-label="Ver todo" (click)="onClick()">
+    <i class="icon icon-more"></i>{{buttonLabel | translate}}
+  </div>
+</div>

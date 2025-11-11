@@ -1,0 +1,95 @@
+@import 'utils'
+
+.popup-security-alert
+  position: relative
+  background-color: var(--white)
+  padding: $spacer-2 $spacer-2 44px
+  max-height: 85vh
+  overflow-y: scroll
+
+  .header
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+    i
+      font-size: 24px
+      align-self: end
+
+    h3
+      color: var(--red-1)
+      font-weight: 600
+      font-size: 24px
+
+  figure
+    margin: $spacer-3 0
+
+    img
+      display: block
+      margin: 0 auto
+      max-width: 220px
+
+      &.big-img
+        max-width: 248px
+
+  .body
+    margin-bottom: $spacer-3
+
+    .order-list
+      margin: 16px 0 0
+      list-style-type: decimal
+
+      li
+        margin-left: 20px
+
+        &:before
+          content: none
+
+    .list-title
+      margin-top: 16px
+      font-size: 14px
+
+    .bottom-title
+      font-size: 18px
+      margin-bottom: 16px
+
+    p
+      font-size: 14px
+      text-align: center
+      line-height: 20px
+      margin-bottom: 12px
+
+    p:last-child
+      font-weight: 600
+
+  .footer
+    position: sticky
+    bottom: 0
+
+    button
+      position: relative
+      z-index: 2
+      font-size: 16px
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100%
+      height: 100%
+      background-color: var(--white)
+
+    &:before
+      box-shadow: 1px -10px 20px var(--white)
+
+    &:after
+      box-shadow: 1px 20px 10px white
+
+.popup-skeleton
+  border-radius: 50%
+  width: 250px
+  height: 250px
+  margin: 0 auto

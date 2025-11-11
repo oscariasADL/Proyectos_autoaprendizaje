@@ -1,0 +1,36 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'BLOCK_CARD_TEMPORARILY.HEADER_TITLE' | translate"
+    [exitData]="exitData"
+    [showSteps]="false"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+  <div [ngSwitch]="screen">
+    <app-block-card-temporarily-from
+      *ngSwitchCase="blockCardTemporarilySlide.from"
+      [form]="form"
+      [parentProductId]="productSelectedId"
+      (continue)="runNextStep(key)"
+      (unBlockProduct)="unBlockProduct()"
+    ></app-block-card-temporarily-from>
+    <app-block-card-temporarily-date
+      *ngSwitchCase="blockCardTemporarilySlide.date"
+      [form]="form"
+      (continue)="runNextStep(key)"
+    ></app-block-card-temporarily-date>
+  </div>
+</ng-template>

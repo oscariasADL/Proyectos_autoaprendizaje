@@ -1,0 +1,47 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'Servicios complementarios'"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <div [ngSwitch]="step$ | async">
+    <app-complementary-services-info
+      *ngSwitchCase="ComplementaryServicesStep.info"
+      [state]="state$ | async"
+      (activate)="setComplementaryServicesStep(ComplementaryServicesStep.question)"
+      (deactivate)="toggleComplementaryServices(complementaryServicesType.DISABLE)">
+    </app-complementary-services-info>
+
+    <app-complementary-services-question
+      *ngSwitchCase="ComplementaryServicesStep.question"
+      (continue)="toggleComplementaryServices(complementaryServicesType.ENABLE)"
+      (cancel)="setComplementaryServicesStep(ComplementaryServicesStep.requestInfo)">
+    </app-complementary-services-question>
+
+    <app-complementary-services-otp
+      *ngSwitchCase="ComplementaryServicesStep.otp"
+      (setStateWithOtp)="toggleComplementaryServices(complementaryServicesType.ENABLE, $event)">
+    </app-complementary-services-otp>
+
+    <app-complementary-services-request-info
+      *ngSwitchCase="ComplementaryServicesStep.requestInfo"
+      (continue)="close()">
+    </app-complementary-services-request-info>
+
+    <app-complementary-services-complete
+      *ngSwitchCase="ComplementaryServicesStep.complete"
+      [state]="state$ | async"
+      (continue)="close()">
+    </app-complementary-services-complete>
+
+    <app-complementary-services-failed
+      *ngSwitchCase="ComplementaryServicesStep.failed"
+      [state]="state$ | async"
+      (continue)="close()">
+    </app-complementary-services-failed>
+
+  </div>
+  <div class="avv-bottom-line"></div>
+</ion-content>

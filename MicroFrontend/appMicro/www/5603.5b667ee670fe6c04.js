@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[5603],{15603:(h,a,s)=>{s.r(a),s.d(a,{pzl_thead:()=>e});var d=s(940);const e=class{constructor(l){(0,d.r)(this,l)}render(){return(0,d.h)(d.H,{key:"cb5c677fb3f36b76a155e2d4822da6cdf8d48afa",slot:"head"},(0,d.h)("slot",{key:"b48f87db69cd9ae4cd24a7d301ab96e2755ccf58"}))}};e.style=":host{display:block}"}}]);

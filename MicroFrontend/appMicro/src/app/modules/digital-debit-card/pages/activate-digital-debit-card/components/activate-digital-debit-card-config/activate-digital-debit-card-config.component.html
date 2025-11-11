@@ -1,0 +1,76 @@
+<article class="digital-debit-card-configuration-container">
+  <p class="semi-bold text-center">
+    {{ 'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.TITLE' | translate }}
+  </p>
+
+  <div class="digital-debit-card-configuration-options">
+
+    <p class="semi-bold">
+      {{ 'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.DESCRIPTION' | translate }}
+    </p>
+
+    <div class="digital-debit-card-configuration-list">
+      <ng-container *ngIf="products?.length <= minProductsQuantityToGroup; else dropdown">
+        <app-product-card-item #productCardItem
+                               *ngFor="let product of products"
+                               (click)="selectProduct(product)"
+                               [productDetail]="{ product: product }"
+                               [ngClass]="{'active': productOrigin?.value?.id === product?.id}"
+                               [style]="productCardItem.productStyleType.standardWithRates">
+        </app-product-card-item>
+      </ng-container>
+      <ng-template #dropdown>
+        <avv-dropdown
+          [id]="'digital-debit-card-product'"
+          [items]="products"
+          [label]="'EXTRACTS.SELECT_PRODUCT' | translate"
+          [control]="productOrigin"
+          (valueOutput)="selectProduct($event)"
+          [template]="accountTemplate">
+
+          <ng-template
+            #accountTemplate
+            let-account="data"
+            let-className="class">
+            <div class="avv-item-account {{ className }}">
+              <p
+                class="name avv-title-bold">{{ account?.nickname ? account?.nickname : (account.typeName | lastWord) }}</p>
+              <p class="number avv-title-bold">No. {{ account.numberProduct }}</p>
+              <p class="available"
+                 [innerHTML]="('AVAILABLE' | translate) + ' ' + (account.availableBalance | currencyFormat)"></p>
+            </div>
+          </ng-template>
+        </avv-dropdown>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="digital-debit-card-configuration-customization">
+    <p class="semi-bold">{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.CUSTOM' | translate }}</p>
+    <div class="form-control">
+      <avv-field
+        [type]="'text'"
+        [id]="'digital-debit-card-configuration-name'"
+        [label]="'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.CUSTOM_FIELD' | translate"
+        [control]="nickName">
+      </avv-field>
+      <small>{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.CUSTOM_BOTTOM' | translate }}</small>
+    </div>
+    <div class="form-control">
+      <avv-input
+        [type]="'currency'"
+        [id]="'digital-debit-card-configuration-amount'"
+        [label]="'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.AMOUNT_FIELD' | translate"
+        [control]="amount">
+      </avv-input>
+      <small>{{ 'DIGITAL_DEBIT_CARD.ACTIVATE.CONFIG.AMOUNT_BOTTOM' | translate }}</small>
+    </div>
+  </div>
+
+  <button id="digital-debit-card-configuration-btn"
+          class="avv-btn-primary mt-4"
+          (click)="activate.emit()"
+          [disabled]="!form.valid">
+    {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+  </button>
+</article>

@@ -1,0 +1,104 @@
+@import 'utils'
+
+.onboarding-container
+  display: grid
+  grid-template-rows: 50vh 1fr
+  height: 80vh
+
+  &-slides
+    height: 50vh
+    width: 100%
+
+.onboarding-panel
+  +flex(center, start, column)
+  background-color: var(--white)
+  bottom: var(--safe-area-inset-bottom)
+  z-index: 1
+  position: relative
+
+  .onboarding-pager
+    +flex(center, space-between)
+    width: 48px
+    padding-top: 24px
+
+    div
+      width: 8px
+      height: 8px
+      transition: .1s
+      border-radius: 50%
+      background-color: var(--dark-400)
+
+      &.active
+        width: 32px
+        border-radius: 6px
+        background-color: var(--blue-1)
+
+  .onboarding-content
+
+    .onboarding-section
+
+      padding: 0 24px
+      color: #252b31
+      text-align: center
+      width: 100vw
+
+      p
+        @media screen and (max-height: 680px)
+          font-size: 14px
+
+      .onboarding-title
+        font-size: 18px
+        font-weight: 500
+        line-height: 28px
+        color: #252b31
+        padding-bottom: 16px
+
+      .onboarding-subtitle
+        color: #252b31
+
+      .logo
+        width: 8rem
+        height: 4rem
+
+  .onboarding-continue
+    +flex(center, flex-end)
+    width: 100vw
+    margin: auto 0 0 0
+
+    .onboarding-button
+      +flex(center, center)
+      padding: 8px 16px 19px
+      &__title
+        font-size: 16px
+        font-weight: 500
+        line-height: 24px
+
+      p,
+      i
+        color: var(--blue-1)
+
+      i
+        font-size: 24px
+        margin-left: 11px
+
+.onboarding-close-btn
+  position: absolute
+  top: 25px
+  right: $spacer
+  padding: $spacer
+  font-size: 24px
+  z-index: 2
+
+.onboarding-img
+  display: flex
+  flex-direction: column
+  padding: 0 2rem
+  background-color: #f1f1f1
+  justify-content: end
+  height: 100%
+
+.image-skeleton
+  border-radius: 50%
+  width: 371px
+  height: 375px
+  margin: 0 auto

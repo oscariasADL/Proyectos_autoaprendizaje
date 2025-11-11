@@ -1,0 +1,113 @@
+<div class="pocket-detail" *ngIf="product$ | async as product">
+  <div class="pocket-detail__notification" *ngIf="pocket.status === pocketStatus.PAUSED">
+    <app-notification icon="icon-alerta" [type]="notificationType.warning"
+                      [description]="'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.PUASE_POCKET_MESSAGE'| translate">
+    </app-notification>
+
+  </div>
+  <div class="pocket-detail__actions">
+    <div class="pocket-detail__action">
+            <span
+              class="avv-text__subtitle pocket-detail__action-title">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.ACTIVE_SAVINGS'|
+                  translate
+              }}</span>
+      <app-toggle [isChecked]="pocket.status === pocketStatus.ACTIVE"
+                  (toggleChange)="onActiveSavings($event)"></app-toggle>
+
+    </div>
+    <div class="pocket-detail__action">
+            <span
+              class="avv-text__subtitle pocket-detail__action-title">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.AUTO_RENEWAL'
+                  |
+                  translate
+              }}</span>
+      <app-toggle [isChecked]="pocket.renewAutomatically" [isDisabled]="!pocket.daysDue"
+                  (toggleChange)="onAutoRenewal($event)"></app-toggle>
+    </div>
+    <div class="pocket-detail__action">
+            <span
+              class="avv-text__subtitle pocket-detail__action-title">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.AUTO_RATES'
+                  |
+                  translate
+              }}</span>
+      <app-toggle [isChecked]="!!pocket.renewProfits" [isDisabled]="!pocket.daysDue || !pocket.renewAutomatically"
+                  (toggleChange)="onAutoRates($event)"></app-toggle>
+    </div>
+    <div class="pocket-detail__renew-notification">
+      <app-notification icon="icon-info" [type]="notificationType.info"
+                        [description]="'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.POCKET_RENEWAL_MESSAGE'| translate">
+      </app-notification>
+    </div>
+  </div>
+  <div class="pocket-detail__card">
+    <div class="pocket-detail__item">
+      <span class="avv-text__subtitle">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.START_DATE' | translate }}</span>
+      <span class="avv-text__subtitle-first-level">{{ pocket.startDate }}</span>
+    </div>
+    <div class="pocket-detail__item">
+            <span class="avv-text__subtitle">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.SAVINGS_GOAL' |
+                  translate
+              }}</span>
+      <span class="avv-text__subtitle-first-level" [innerHTML]="pocket.goal| currencyFormat"></span>
+    </div>
+    <div class="pocket-detail__item">
+            <span class="avv-text__subtitle">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.ORIGIN_ACCOUNT' |
+                  translate
+              }}</span>
+      <span class="avv-text__subtitle-first-level">No. {{ pocket.productNumberParent }} </span>
+    </div>
+    <div class="pocket-detail__item">
+      <span class="avv-text__subtitle">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.QUOTA' | translate }}</span>
+      <span class="avv-text__subtitle-first-level" [innerHTML]="pocket.instalmentAmount| currencyFormat"></span>
+    </div>
+    <div class="pocket-detail__item">
+      <span class="avv-text__subtitle">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.INTEREST' | translate }}</span>
+      <span class="avv-text__subtitle-first-level" [innerHTML]="pocket.accruedInterest | currencyFormat"></span>
+    </div>
+      <div *ngIf="product.productTypeDetailKey===productTypeDetailKey.PRM">
+        <p class="pocket-detail__advice">{{'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.ADVICE_PRM' | translate}} </p>
+        <small class="avv-link-underline" (click)="linkAction()"
+       >
+       {{'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.CURRENT_RATES_PRM' | translate}}
+  </small>
+      </div>
+   
+   
+    <div class="pocket-detail__item">
+      <span class="avv-text__subtitle">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.PERIODICITY' | translate }}</span>
+      <span class="avv-text__subtitle-first-level">{{ pocket.period }}</span>
+    </div>
+    <div class="pocket-detail__item">
+            <span class="avv-text__subtitle">{{
+                'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.PENDING_INSTALMENTS' |
+                  translate
+              }}</span>
+      <span class="avv-text__subtitle-first-level">{{ pocket.remainingInstalments }}</span>
+    </div>
+    <div class="pocket-detail__item">
+            <span class="avv-text__subtitle">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.DEADLINE' | translate }}<span
+              class="icon-info-tooltip" (click)="showPopoverInfo($event, DEADLINE_POCKET_TOOLTIP)">
+                    <i class="icon icon-informacion"></i>
+                </span></span>
+      <span class="avv-text__subtitle-first-level">{{ pocket.termOfPermanenceInDays }}
+        {{
+          'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.DEADLINE_IN_DAYS' |
+            translate
+        }}</span>
+    </div>
+<div *ngIf="product.productTypeDetailKey!==productTypeDetailKey.PRM">
+
+  <small class="avv-link-underline" (click)="linkAction()"
+  [innerHTML]="'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.CURRENT_RATES' | translate">
+</small>
+<p class="pocket-detail__advice" [innerHTML]="'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.ADVICE' | translate">
+</p>
+</div>
+  </div>
+
+</div>

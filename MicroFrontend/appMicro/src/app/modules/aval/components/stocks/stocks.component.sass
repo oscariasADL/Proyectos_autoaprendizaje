@@ -1,0 +1,31 @@
+@import 'utils'
+
+.stocks
+  &-container
+    position: relative
+
+  &-title
+    padding: $spacer-3 $spacer-2
+    text-align: center
+
+  &-type-panel
+    +flex(center, space-between)
+    padding: $spacer-3 $spacer-2
+    background-color: var(--gray-4)
+
+    p
+      +flex(center, center)
+      width: calc(50% - 8px)
+      border-radius: 4px
+      color: var(--gray-7)
+      background-color: var(--white)
+      text-align: center
+      height: 48px
+
+      &.active
+        border: 2px solid var(--blue-1)
+        color: var(--blue-1)
+        font-weight: 600
+
+  &-months-panel
+    padding: 0 $spacer-2

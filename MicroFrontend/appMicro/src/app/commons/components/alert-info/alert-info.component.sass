@@ -1,0 +1,98 @@
+@import 'utils'
+
+.alert-info
+  &-container
+    padding: $spacer-2 $spacer-2 $spacer-4
+    background-color: var(--white)
+    text-align: center
+
+  &-close
+    width: 100%
+    display: flex
+    justify-content: end
+    font-size: 24px
+    margin-bottom: $spacer
+    color: #5C6B7AFF
+
+  &-subitems
+    display: flex
+    padding: 0 26px
+
+    > *
+      font-size: 11px
+      margin-top: 16px
+      text-align: left
+      width: 50%
+
+    ul
+      li::before
+        content: '-'
+        position: relative
+        left: -3px
+
+  &-icon
+    margin: $spacer-3 0
+    max-width: 112px
+    max-height: 112px
+    &-list
+      display: flex
+      flex-direction: column
+
+  &-items
+    margin: 40px 0 0
+    text-align: left
+
+    li
+      padding-left: 22px
+      position: relative
+      margin-bottom: 16px
+
+      &:last-child
+        margin-bottom: 0
+
+      &:before
+        content: ''
+        position: absolute
+        top: 7px
+        left: 0
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        color: var(--red-1)
+        background-color: var(--red-1)
+
+  &-btn
+    margin-top: 40px
+.div-text
+    text-align: left
+.div-100
+  width: 100%
+.list-item
+  display: flex
+  gap:1rem
+
+
+.checkbox-wrapper
+  display: flex
+.checkbox-wrapper ion-checkbox::part(container)
+  margin-right: 8px
+
+
+ion-checkbox::part(container) 
+  border-radius: 6px
+  border: 2px solid #00C783
+
+ion-checkbox::part(label) 
+  text-align: left
+  white-space: normal
+  overflow-wrap: break-word
+  display: block
+ion-checkbox 
+  --size: 24px
+  --checkbox-background-checked: #00C783
+  
+
+
+  
+
+

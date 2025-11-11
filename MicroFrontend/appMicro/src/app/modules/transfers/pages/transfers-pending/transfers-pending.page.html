@@ -1,0 +1,60 @@
+<app-headers #header [title]="'TRANSFERS.PENDING.HEADER' | translate" [closeUrl]="'/'"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ng-container *ngIf="workingNotifications$ | async, else content">
+    <div class="transfers-pending-working">
+      <div *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+        <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+      </div>
+    </div>
+  </ng-container>
+</ion-content>
+
+<div class="transfers-pending-container">
+  <ng-template #content>
+    <ng-container *ngIf="(transfiyaList$ | async)?.length > 0 ; else noContent">
+      <div class="transfers-pending-transfiya">
+        <p class="transfers-pending-transfiya-title">
+          {{ 'TRANSFERS.PENDING.TITLE' | translate }}
+        </p>
+        <ul class="transfers-pending-transfiya-body">
+          <li *ngFor="let item of transfiyaList$ | async" (click)="goToTransfiyaAuthorization(item)">
+            <div class="transfers-pending-transfiya-data">
+              <img [src]="(item.isRequest ? 'icons/transfiya-request.svg' : 'icons/transfiya-send.svg') | imageUrl"
+                class="mr-2" alt="transfiya-list-icon">
+              <div class="transfers-pending-transfiya-info">
+                <small>
+                  {{ 'NOTIFICATION.MENU.BODY' | translate: {
+                  number: item.targetNumber,
+                  type: ('NOTIFICATION.MENU.BODY_TYPE.' + (item.isRequest ? 'ASKED' : 'SEND') | translate)
+                  } }}
+                </small>
+                <p [innerHTML]="item.amount | currencyFormat"></p>
+              </div>
+            </div>
+            <div class="transfers-pending-transfiya-link">
+              <small class="avv-link-underline">
+                {{ 'TRANSFERS.PENDING.SEE_DETAIL' | translate }}
+              </small>
+              <i class="arrow icon-next"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </ng-template>
+
+  <ng-template #noContent>
+    <div class="transfers-pending-empty">
+      <img [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" alt="sin-resultados">
+      <p class="title">{{ 'TRANSFERS.PENDING.EMPTY.TITLE' | translate }}</p>
+      <p class="description">{{ 'NOTIFICATION.MENU.EMPTY.DESCRIPTION' | translate }}</p>
+    </div>
+  </ng-template>
+</div>

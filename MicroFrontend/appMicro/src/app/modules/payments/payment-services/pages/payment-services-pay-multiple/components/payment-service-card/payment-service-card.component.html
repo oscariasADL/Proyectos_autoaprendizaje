@@ -1,0 +1,24 @@
+<div class="service-card" [ngClass]="{'selected': control.value, 'disabled': control.disabled}">
+  <div class="checkbox-container">
+    <label>
+      <input type="checkbox" class="input-checkbox" [formControl]="control" (change)="changeSelection.emit()"/>
+    </label>
+  </div>
+  <div class="service-card-content">
+    <div class="content-header">
+      <p>{{ bill.organizationName | capitalize }}</p>
+      <small>{{ bill.alias }}</small>
+    </div>
+    <div class="content-info-items">
+      <dl>
+        <ng-container *ngFor="let info of paymentBillInfo">
+          <dt>{{ info.label | translate }}</dt>
+          <dd *ngIf="info.value; else valText" [innerHTML]="info.value | currencyFormat"></dd>
+          <ng-template #valText>
+            <dd>{{ info.valueText | translate }}</dd>
+          </ng-template>
+        </ng-container>
+      </dl>
+    </div>
+  </div>
+</div>

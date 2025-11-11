@@ -1,0 +1,96 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [title]="'FAVORITES.HEADER' | translate"
+  [type]="header?.headerType?.redSecondary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="favorites-container">
+    <ng-container *ngTemplateOutlet="
+          (working$ | async) ? working :
+          ((completed$ | async) ? ((favorites$ | async)?.length > 0 ? content : info) : noContent)">
+    </ng-container>
+  </article>
+</ion-content>
+
+<ng-template #working>
+  <section class="favorites-loading">
+    <ion-skeleton-text class="favorites-loading-card" animated *ngFor="let i of [1, 2, 3, 4]"></ion-skeleton-text>
+  </section>
+</ng-template>
+
+<ng-template #content>
+  <section class="favorites-content">
+    <ul class="favorites-list">
+      <button *ngIf="isAddFavoritesEnabled" class="avv-btn-secondary add-favorite" [routerLink]="ADD_FAVORITE">{{'FAVORITES.ACTIONS.BTN_SAVE'|translate | uppercase}}
+        <i class=icon-love-fill></i>
+      
+      </button>
+      <ng-container *ngFor="let group of favorites$ | async">
+        <div class="favorite-group">
+        <li class="group-label">{{ (favoriteTypesLabels[group.typeFavorite] | translate) + 's' }}</li>
+        <ng-container *ngFor="let favorite of group.values; index as i;">
+          <li class="item-favorite" [id]="'favorite-' + i">
+            <div class="favorite-panel">
+              <div class="avatar"
+                   [style.background-color]="favoriteUiConfig[favorite.identificationFavoriteType].bgColor">
+                <i [class]="favoriteUiConfig[favorite.identificationFavoriteType].icon"
+                   [style.color]="favoriteUiConfig[favorite.identificationFavoriteType].textColor"></i>
+              </div>
+              <div class="info">
+                <div class="favorite-name">{{ favorite.nameFavoriteTransaction }}</div>
+                <p class="favorite-description">
+                  {{ favorite.additionalDataTransaction?.descriptionTargetLabel }}
+                  
+                </p>
+                <p>{{
+                  favorite.additionalDataTransaction.typeTarget === typeTarget.ACCOUNT.toString()
+                    ?
+                    'No' :
+                   ''
+                  }}
+                  <ng-container
+                    *ngIf="favorite.identificationFavoriteType !== identificationFavoriteType.MONEY_ORDER">
+                    <ng-container
+                      *ngIf="(favorite?.additionalDataTransaction.subtypeOperation && (favorite?.additionalDataTransaction?.subtypeOperation.toString() ))!== subTypeOperationFavorite.CEL2CEL.toString(); else cel2celField">
+                      {{ favorite.additionalDataTransaction.target }}
+                    </ng-container>
+                    <ng-template #cel2celField>
+                      {{ favorite.additionalDataTransaction?.txTarget }}
+                    </ng-template>
+                  </ng-container></p>
+              </div>
+
+              <a [routerLink]="['/favorites/edit', favorite.keyFavorite]">
+                <i class="icon-edit"></i>
+              </a>
+                 <a href="javascript:void(0);" (click)="delete(favorite.keyFavorite)">
+                <i class="icon-delete"></i>
+              </a>
+             
+            </div>
+            <div class="favorite-action">
+           
+              <a class="avv-btn-primary sm" [class.disabled]="(balanceWorking$ | async)"
+                 [routerLink]="['/favorites/transfer', favorite.keyFavorite]"
+                 routerDirection="forward">{{ actionLabels[favorite.identificationFavoriteType] | uppercase }}</a>
+            </div>
+          </li>
+        </ng-container>
+        </div>
+      </ng-container>
+        <div class="favorites-content-info" role="button" tabindex="0" (click)="showOnboarding()">
+      <i class="icon-info"></i>
+      <a href="javascript:void(0)">{{ 'FAVORITES.HOME.TEXT_INFO' | translate }}</a>
+    </div>
+    </ul>
+  
+  </section>
+</ng-template>
+
+<ng-template #noContent>
+</ng-template>
+
+<ng-template #info>
+</ng-template>

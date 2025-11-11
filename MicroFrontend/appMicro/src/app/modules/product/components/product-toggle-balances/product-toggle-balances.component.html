@@ -1,0 +1,21 @@
+<div
+  class="avv-toggle-text"
+  (click)="toggleHiddenBalances()"
+  [ngClass]="{'active': (hiddenBalance$ | async) === false }">
+  <p class="small">
+        <span
+          role="button"
+          [attr.aria-label]="'Desbloquear vista'"
+          [attr.aria-hidden]="(hiddenBalance$ | async) === false"
+          [ngClass]="{'hide': (hiddenBalance$ | async) === false}"
+          class="icon icon-ver show"
+          title="icon-ver"></span>
+    <span
+      role="button"
+      [attr.aria-label]="'Bloquear vista'"
+      [attr.aria-hidden]="(hiddenBalance$ | async)"
+      [ngClass]="{'hide': (hiddenBalance$ | async)}"
+      class="icon icon-bolquear_vista"
+      title="icon-bolquear_vista"></span>
+  </p>
+</div>

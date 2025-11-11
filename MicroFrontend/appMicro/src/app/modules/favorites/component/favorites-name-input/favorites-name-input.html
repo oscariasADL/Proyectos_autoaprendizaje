@@ -1,0 +1,16 @@
+<article class="favorites-name-input-container">
+  <div class="header">
+    <h3>{{ 'FAVORITES.EDIT.NAME_MODAL.TITLE' | translate }}</h3>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="input-container">
+    <avv-input
+      [type]="'text'"
+      [id]="'favorites-name-field-input'"
+      [label]="'FAVORITES.CREATE.NAME_FIELD' | translate"
+      [control]="nameFormControl">
+    </avv-input>
+    <button type="buttton" class="avv-btn-primary" (click)="saveChanges()"
+            [disabled]="nameFormControl.invalid">{{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}</button>
+  </div>
+</article>

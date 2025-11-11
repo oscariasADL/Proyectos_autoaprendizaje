@@ -1,0 +1,38 @@
+@import 'utils'
+
+.admin-transfiya
+  padding: $spacer-3 $spacer-2 0
+
+  &-title
+    margin-bottom: $spacer-4
+    font-size: 16px
+    font-weight: 500
+    text-align: center
+
+  &-cards
+    display: grid
+    grid-template-rows: auto
+    gap: $spacer-3
+
+  &-card
+    padding: $spacer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 8px
+    box-shadow: 0 4px 4px 0 rgba(37, 43, 49, 0.08)
+    border-radius: 4px
+
+    &-avatar
+      margin: 0
+
+    &-title
+      flex-grow: 2
+
+    &-icon
+      display: flex
+      font-size: 24px
+      color: var(--blue-1)
+
+  &-info
+    margin-top: $spacer-4

@@ -1,0 +1,81 @@
+<div class="digital-debit-card-detail-container">
+  <i class="digital-debit-card-detail-close icon-salir"
+     role="button"
+     [attr.aria-label]="'Cerrar'"
+     (click)="closeModal()"></i>
+
+  <div class="digital-debit-card-detail-panel">
+    <!--<h6 class="semi-bold mb-2 text-center">{{ digitalDebitCardDetail?.name }}</h6>-->
+
+    <div class="digital-debit-card-detail-panel-cromalite">
+      <img [src]="'digital-debit-card.svg' | imageUrl" class="alert-info-icon" alt="" aria-hidden="true">
+    </div>
+
+    <div class="digital-debit-card-detail-panel-number"
+         *ngIf="digitalDebitCardDetail?.numberDigitalCard as numberDigitalCard"
+    >
+      <h6 class="bold">{{ numberDigitalCard | creditCardNumberFormat }}</h6>
+      <i *ngIf="isPossibleCopyToClipboard"
+         (click)="copyNumberToClipboard()"
+         aria-hidden="true"
+         class="icon icon-agrupar">
+      </i>
+    </div>
+
+    <div class="digital-debit-card-detail-panel-data">
+      <div *ngIf="digitalDebitCardDetail?.expDate as expDate">
+        <small>
+          {{ 'DIGITAL_DEBIT_CARD.DETAIL.DATE' | translate }}
+        </small>
+        <h6 class="bold">{{ expDate | creditCardDateFormat }}</h6>
+      </div>
+      <div *ngIf="digitalDebitCardDetail?.cvs as cvs">
+        <small>
+          {{ 'DIGITAL_DEBIT_CARD.DETAIL.CVC' | translate }}
+        </small>
+        <h6 class="bold">{{ cvs }}</h6>
+      </div>
+      <div>
+        <small>{{ 'DIGITAL_DEBIT_CARD.DETAIL.MAX_AMOUNT' | translate }}</small>
+        <h6
+          class="bold"
+          [attr.aria-label]="(digitalDebitCardDetail?.amount | numberFormat:'COP')"
+          [innerHtml]="(digitalDebitCardDetail?.amount | currencyFormat)"></h6>
+      </div>
+    </div>
+
+    <div class="digital-debit-card-detail-panel-divider"></div>
+
+    <div class="digital-debit-card-detail-panel-actions-list">
+      <div class="actions-list-header">
+        <p class="actions-list-title">{{ 'DIGITAL_DEBIT_CARD.DETAIL.ACTIONS_TITLE' | translate }}</p>
+      </div>
+      <ul class="actions-list-items">
+        <li *ngFor="let action of actions">
+          <app-product-action-item
+            [id]="action.id"
+            [action]="action"
+            (clicked)="actionSelected(action)"
+          ></app-product-action-item>
+        </li>
+      </ul>
+    </div>
+
+    <div class="digital-debit-card-detail-panel-links">
+      <div class="digital-debit-card-detail-link" (click)="showUse()">
+        <i class="icon-informacion_2 mr-1" aria-hidden="true"></i>
+        <button class="avv-link-underline digital-debit-card-detail-btn"
+                [id]="'digital-debit-card-detail-instructions-btn'">
+          {{ 'DIGITAL_DEBIT_CARD.DETAIL.USE' | translate }}
+        </button>
+      </div>
+      <div class="digital-debit-card-detail-link" (click)="showFrequentQuestions()">
+        <i class="icon-informacion mr-1" aria-hidden="true"></i>
+        <button class="avv-link-underline digital-debit-card-detail-btn"
+                [id]="'digital-debit-card-detail-instructions-btn'">
+          {{ 'DIGITAL_DEBIT_CARD.DETAIL.QUESTIONS' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

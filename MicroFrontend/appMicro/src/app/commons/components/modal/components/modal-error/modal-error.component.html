@@ -1,0 +1,24 @@
+<div class="avv-alert-sheet error" [id]="id" role="dialog">
+  <i role="button" class="avv-alert-sheet-close icon-salir" aria-label="Cerrar" (click)="closeModal(null)"></i>
+  <div id="alert-title" class="avv-alert-sheet-header">
+    <img alt="alert-sheet-icon" src="./assets/img/icons/error-x.svg">
+    <p>{{ title | translate }}</p>
+  </div>
+  <div class="avv-alert-sheet-body">
+    <p class="avv-alert-sheet-description">
+      {{ message | translate }}
+    </p></div>
+  <div class="avv-alert-sheet-footer">
+    <button type="button"
+            class="avv-btn-primary mb-3"
+            (click)="closeModal(true)">
+      {{ buttonPrimary | translate | uppercase }}
+    </button>
+    <button type="button"
+            class="avv-btn-link"
+            (click)="closeModal(false)">
+      {{ buttonSecondary | translate }}
+      <i class="icon-next"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="movement-item">
+  <i class="{{ movement.icon }} movement-item-icon" [attr.aria-hidden]="true"></i>
+  <div class="movement-item-content">
+    <!-- <small class="movement-item-date">
+      {{ movement.date | date:'dd/MM/yyyy': 'UTC' }}
+    </small> -->
+    <p class="movement-item-title">
+      {{ movement.description | capitalize }}
+    </p>
+    <small *ngIf="shouldShowRate" class="movement-item-rate-installments">
+      <span *ngIf="movement?.rate > 0" class="rate">{{ 'MOVEMENTS.RATE' | translate }}: {{ movement.rate }}
+        % {{ 'MOVEMENTS.EA' | translate }}</span>
+      <span *ngIf="movement?.totalInstalments > 0"
+            class="installments">{{ movement.instalmentsPaid }} {{ 'OF' | translate }} {{ movement.totalInstalments }} {{ 'MOVEMENTS.INSTALLMENTS_PAID' | translate }}</span>
+    </small>
+    <p class="movement-item-value"
+       role="text"
+       [attr.aria-label]="(movement.state === filterMoveDown ? '' : 'menos ' ) + (movement.valueMove | numberFormat) + ' ' + ('CURRENCIES.' + (movement?.currency ? movement?.currency : 'COP') | translate)"
+       [ngClass]="(movement.state === filterMoveDown) ? 'add' : 'subtract'"
+       [innerHTML]="(movement.state === filterMoveDown ? '' : '-' ) + (movement.valueMove | currencyFormat)">
+    </p>
+  </div>
+  <i *ngIf="movement.hasAddenda" class="icon-descarga movement-item-download-icon" [attr.aria-hidden]="true"></i>
+  <i *ngIf="movement.rightIcon" class="icon movement-item-right-icon {{ movement.rightIcon }}" [attr.aria-hidden]="true"></i>
+</div>

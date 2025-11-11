@@ -1,0 +1,29 @@
+<ion-card class="product-card"
+          [attr.aria-label]="product.description + ' ' + (product.balance | numberFormat:'COP' | hiddenFormat | async)"
+          role="button">
+  <ion-card-content class="product-card-content">
+    <span class="product-name">
+      <span class="product-icon" [ngSwitch]="product.productType">
+        <i class="icon icon-depositos" aria-hidden="true" *ngSwitchCase="typeAccount.LOC"></i>
+        <i class="icon icon-depositos" aria-hidden="true" *ngSwitchCase="typeAccount.DLA"></i>
+        <i class="icon icon-mis_otros_creditos" aria-hidden="true" *ngSwitchCase="typeAccount.CDA"></i>
+        <i class="icon icon-tarjeta" aria-hidden="true" *ngSwitchCase="typeAccount.CCA"></i>
+        <i class="icon icon-retiro" aria-hidden="true" *ngSwitchDefault></i>
+      </span>
+      <span class="product-title">{{ product.description }}</span>
+    </span>
+
+    <span class="product-balance"
+          role="text"
+          [attr.aria-label]="(product.balance | numberFormat:'COP' | hiddenFormat | async)"
+          [innerHTML]="product.balance | currencyFormat | hiddenFormat | async"></span>
+    <span class="show-hide-balance" *ngIf="false">
+      <i class="icon icon-bolquear_vista"></i>
+      <i class="icon icon-ver"></i>
+    </span>
+
+    <div class="see-all" role="button" aria-label="Ver todo">
+        Ver todo <i class="icon icon-next"></i>
+    </div>
+  </ion-card-content>
+</ion-card>

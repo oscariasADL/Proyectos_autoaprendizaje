@@ -1,0 +1,61 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [type]="header?.headerType?.whiteSecondary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <main class="qr-authorization-container">
+    <ng-container *ngTemplateOutlet="(working$ | async) && (completed$ | async) === false ? working : content">
+    </ng-container>
+  </main>
+</ion-content>
+
+<ng-template #working>
+  <section class="qr-authorization-loading">
+    <ion-skeleton-text class="slt-title"></ion-skeleton-text>
+    <ion-skeleton-text class="slt-description"></ion-skeleton-text>
+    <div class="slt-otp-container">
+      <ion-skeleton-text class="slt-otp" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]"></ion-skeleton-text>
+    </div>
+    <ion-skeleton-text class="slt-progress"></ion-skeleton-text>
+    <div class="slt-info-container">
+      <ion-skeleton-text *ngFor="let i of [1, 2, 3]"></ion-skeleton-text>
+    </div>
+    <ion-skeleton-text class="slt-action"></ion-skeleton-text>
+  </section>
+</ng-template>
+
+<ng-template #content>
+  <section class="otp-container" *ngIf="timeValue">
+      <h2 class="title">{{ 'QR.AUTHORIZATION.TITLE' | translate }} &nbsp;
+       <span  *ngIf="transactionTitle$ | async ">{{ transactionTitle$ | async }}</span>
+
+      </h2>
+      <p  [innerHtml]="'QR.AUTHORIZATION.DESCRIPTION' | translate"></p>
+    <p class="otp-value">
+      <ng-container *ngFor="let letter of (dynamicCode$ | async | split: '')">
+        <span>{{ letter }}</span>
+      </ng-container>
+    </p>
+    <div class="otp-progress middle"
+         [ngClass]="{'middle': timeValue > 30, 'quarter': timeValue <= 30 , 'finished': timeValue === 0}">
+      <progress [max]="qrAuthorizationMaxOtpTime" [value]="counter"
+                [attr.aria-label]="'QR.AUTHORIZATION.PROGRESS_LABEL' | translate"></progress>
+      <span>{{ timeValue | secondsFormat }}</span>
+    </div>
+      <div class="decrypted-data-container">
+      <ng-container *ngFor="let data of (decryptedData$ | async)">
+        <p [innerHtml]="data"></p>
+      </ng-container>
+      </div>
+
+
+      <app-notification type="warning"  icon="icon-alerta" description="{{'QR.OPTIONS.AUTHORIZATION.NOTIFICATION_MESSAGE'| translate}}" *ngIf="hasToken">  </app-notification>
+
+    <div class="actions-container">
+      <button *ngIf="hasToken" (click)="handleToken()" class="avv-btn-primary ">{{ 'ACTIONS.APPROVE_TRANSACTION' | translate | uppercase }}</button>
+      <a [routerLink]="['/']" class="avv-btn-secondary">{{ 'ACTIONS.CANCEL' | translate | uppercase }}</a>
+    </div>
+  </section>
+</ng-template>

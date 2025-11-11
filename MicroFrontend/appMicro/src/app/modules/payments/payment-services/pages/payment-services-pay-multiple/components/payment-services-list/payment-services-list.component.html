@@ -1,0 +1,29 @@
+<article class="payment-services-list">
+  <section class="payment-services-list-header">
+    <h2 class="payment-services-list-title">{{ 'PAYMENTS.SERVICES.SERVICE_STEP.TITLE' | translate }}</h2>
+    <h3 class="payment-services-list-subtitle">{{ 'PAYMENTS.SERVICES.SERVICE_STEP.SUBTITLE' | translate }}</h3>
+
+    <div *ngIf="informationText" (click)="showInformation.emit()" class="avv-information-link">
+      <i class="icon-informacion"></i>
+      <small [innerHTML]="informationText"></small>
+    </div>
+  </section>
+  <section class="payment-services-list-items">
+    <form class="item-order-container" [formGroup]="form">
+      <ng-container *ngFor="let control of paymentBillsControl.controls; let index = index">
+        <app-payment-service-card class="item-order" [ngClass]="{'selected': control.value, 'unselected': !control.value}"
+          [control]="control" [bill]="services[index]" (changeSelection)="changeSelection()">
+        </app-payment-service-card>
+      </ng-container>
+      <p class="max-subtitle item-order title">{{'PAYMENTS.SERVICES.SERVICE_STEP.MAX_SERVICES_TEXT' | translate }}</p>
+    </form>
+  </section>
+  <section class="payment-services-list-amount-total">
+    <p>{{ 'DIRECTED_PAYMENTS.AMOUNT_STEP.TOTAL_VALUE_TO_PAY' | translate }}</p>
+    <span [innerHtml]="totalValueToPay | currencyFormat"></span>
+  </section>
+  <section class="payment-services-list-action">
+    <button class="avv-btn-primary" [disabled]="countBillSelection.value === 0" (click)="continueAction()">{{
+      'ACTIONS.PAYMENT' | translate | uppercase }}</button>
+  </section>
+</article>

@@ -1,0 +1,32 @@
+<ion-content [forceOverscroll]="false">
+
+  <div class="voucher-container">
+    <img class="voucher-image" [src]="data?.image | imageUrl" alt="Logo" draggable="false">
+    <h6 class="voucher-title">{{ data?.title }}</h6>
+    <p class="voucher-sub-title" [innerHTML]="data?.description || data?.authorization"></p>
+    <ul class="voucher-list">
+      <li *ngFor="let item of data?.data" class="{{ item.type }}">
+        <p class="avv-title-semibold" [innerHTML]="item.title"></p>
+        <div class="voucher-description-container">
+          <p class="voucher-description" [innerHTML]="item.description"></p>
+          <p class="voucher-description" [innerHTML]="item.sub_description"></p>
+        </div>
+      </li>
+    </ul>
+    <p class="voucher-message" [innerHTML]="data?.message" *ngIf="data?.message"></p>
+
+    <button class="avv-btn-primary voucher-btn-confirm"
+            id="btn-{{ data?.id }}-confirm"
+            (click)="closeModal(true)">
+      {{ data?.btnConfirmText | uppercase }}
+    </button>
+
+    <a class="avv-link oucher-btn-edit"
+       id="btn-{{ data?.id }}-edit"
+       (click)="closeModal()">
+      <i class="icon-editar"></i>
+      {{ 'VOUCHER.EDIT_DATA' | translate }}
+    </a>
+  </div>
+
+</ion-content>

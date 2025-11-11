@@ -1,0 +1,98 @@
+<section class="product-summary">
+  <ng-container *ngIf="homeProduct?.length > 0 || hasCreditProductError; else balancesError">
+    <div *ngIf="homeProduct as products">
+      <div *ngFor="let product of products; let i = index" class="product">
+        <p *ngIf="i === 0 || product?.categoryName !== products[i - 1].categoryName" class="category-name"
+          [ngClass]="{'mt-0': (i === 0)}">
+          {{ product.categoryName }}
+        </p>
+        <div *ngIf="product.type === homeProductType.group" (click)="setProductFilter(product.filter)">
+          <app-product-group-card [product]="product">
+          </app-product-group-card>
+        </div>
+        <div *ngIf="product.type === homeProductType.product">
+          <app-product-card [balanceTypeProduct]="product?.balanceTypeProduct" [productDetail]="product"
+            (clickAction)="redirectProductDetail(product.url)">
+          </app-product-card>
+        </div>
+      </div>
+
+      <app-product-credit-products-error></app-product-credit-products-error>
+
+      <div *ngIf="digitalDebitCards">
+        <div id="digital-debit-card-home-product" class="digital-debit-card-home-product" role="button"
+          [attr.aria-label]="'Tarjetas Débito Digital'" *ngIf="digitalDebitCards.length > minProductsQuantityToGroup"
+          (click)="setProductFilter(typeProduct.DIGITAL_DEBIT_CARD)">
+          <div class="product-info">
+            <i class="icon icon-tarjeta"></i>
+            <p class="small ml-1">Tarjetas Débito Digital</p>
+          </div>
+          <i class="icon icon-next"></i>
+        </div>
+
+        <ng-container *ngIf="digitalDebitCards.length <= minProductsQuantityToGroup && digitalDebitCards.length > 0">
+          <small class="product-digital-debit-card-title">Tarjetas Débito Digital</small>
+          <app-product-card *ngFor="let product of digitalDebitCards" (clickAction)="digitalDebitCardDetail(product)"
+            [productDetail]="{ product: product }" [style]="productStyleType.digitalDebitCard">
+          </app-product-card>
+        </ng-container>
+      </div>
+
+      <ng-template [appFeatureToggle]="featureFlagsKey.Pockets">
+        <div (click)="navigateToPockets()" role="button" [attr.aria-label]="'Bolsillos'">
+          <div class="pockets-product">
+            <div class="product-info">
+              <i class="icon icon-bolsillos"></i>
+              <p class="small ml-1">Bolsillos</p>
+            </div>
+            <i class="icon icon-next"></i>
+            <span class="avv-icons-btn-list-item-new">Nuevo</span>
+          </div>
+        </div>
+      </ng-template>
+
+      <div role="button" [attr.aria-label]="'HOME.AVAL_PRODUCTS.BUTTON' | translate" *ngIf="products.length > 0"
+        class="all-product-aval" id="see-all-products" (click)="setProductFilter()">
+        <div class="product-info">
+          <i class="icon icon-billetera"></i>
+          <p class="small ml-1">{{ 'HOME.AVAL_PRODUCTS.BUTTON' | translate }}</p>
+        </div>
+        <i class="icon icon-next"></i>
+      </div>
+      <ng-template [appFeatureToggle]="featureFlagsKey.NewFeaturesSectionBM">
+        <ng-template [appDenyAccounts]="denyDocuments">
+          <div class="new-features mt-4">
+
+            <p>{{"HOME.NEW_FEATURES.TITLE" | translate}}</p>
+            <ng-template [appFeatureToggle]="featureFlagsKey.Remittances">
+              <div class="banner ion-activatable ripple-parent" [routerLink]='REMITTANCES'
+                [queryParams]="{ from: currentRoute }">
+                <ion-ripple-effect></ion-ripple-effect>
+                <img [src]="'illustrationsV2/bolsillo-de-dinero-small.svg' | imageUrl" alt="">
+                <p>{{'HOME.NEW_FEATURES.BANNER'|translate}}</p>
+              </div>
+            </ng-template>
+          </div>
+        </ng-template>
+      </ng-template>
+
+
+
+      <div class="mathilde-credit-card" id="mathilde-ads-first"
+        *appFeatureToggle="featureFlagsKey.MathildeAdsProductSummary"></div>
+    </div>
+  </ng-container>
+
+  <ng-template #balancesError>
+    <div class="avv-panel-empty">
+      <div class="avv-panel-empty-image">
+        <img class="m-left" [src]="'errorde-carga.svg' | imageUrl" alt="errorde-carga" draggable="false">
+      </div>
+      <p class="avv-panel-empty-text mb-1">
+        No pudimos mostrar tus productos con el Banco.
+        <br>
+      </p>
+      <span class="semi-bold">Inténtalo más tarde</span>
+    </div>
+  </ng-template>
+</section>

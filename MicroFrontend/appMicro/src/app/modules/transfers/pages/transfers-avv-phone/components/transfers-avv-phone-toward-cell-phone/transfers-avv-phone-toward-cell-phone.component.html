@@ -1,0 +1,42 @@
+<div class="avv-generic-step transfer-avv-phone">
+    <p class="avv-generic-step-title pb-4">{{ 'TRANSFERS.AVV_PHONE.TOWARD_CELL_PHONE.TITLE' | translate }}</p>
+
+    <form [formGroup]="formGroup" (submit)="continue.emit()" class="avv-generic-step-content">
+
+        <avv-input
+                *ngIf="!contactData?.value"
+                [id]="'transfer-phone-number'"
+                [type]="'phone'"
+                [allowCut]="true"
+                [allowCopy]="true"
+                [allowPaste]="true"
+                [label]="'TRANSFERS.AVV_PHONE.TOWARD_CELL_PHONE.FIELD' | translate"
+                [control]="phoneNumber">
+        </avv-input>
+
+        <div *ngIf="!!contactData?.value"
+             class="avv-contact-card transfer-avv-phone-contact-card">
+            <span class="contact-image">{{ (contactData?.value?.displayName + '') | slice : 0 : 1 | uppercase }}</span>
+            <div class="contact-info">
+                <h6 class="name" [innerHTML]="contactData?.value?.displayName | capitalize: true"></h6>
+                <p class="nickname" [innerHTML]="contactData?.value?.phoneNumber | capitalize"></p>
+                <i class="icon icon-basura" (click)="removeCellPhoneContact()"></i>
+            </div>
+        </div>
+
+        <button
+                (click)="setCellPhoneContact()"
+                class="avv-link transfer-avv-phone-contacts-link"
+                type="button"
+                [id]="'transfer-phone-number-btn-contacts'">
+            {{ 'TRANSFERS.CONTACT_LINK' | translate }}
+            <span class="icon icon-grupo" title="icon-grupo"></span>
+        </button>
+
+        <button type="submit" class="avv-btn-primary mt-3"
+                [id]="'transfer-account-btn'"
+                [disabled]="!formGroup.valid">
+            {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+        </button>
+    </form>
+</div>

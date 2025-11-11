@@ -1,0 +1,28 @@
+<section class="avv-generic-step bre-b-transfers">
+  <h2 class="bre-b-transfers__title">
+    {{ 'TRANSFERS.BRE_B.STEPS.TOWARD.TITLE' | translate }}
+  </h2>
+  <p class="bre-b-transfers__description">
+    {{ 'TRANSFERS.BRE_B.STEPS.TOWARD.DESCRIPTION' | translate }}
+  </p>
+  <div class="bre-b-transfers__content">
+    <avv-field [id]="'bre-b-transfers-key'" [type]="'text'" [allowPaste]="true"
+               [label]="'TRANSFERS.BRE_B.STEPS.TOWARD.FIELDS.AVAL_KEY' | translate" [control]="towardAvalKey"
+               [utagCategory]="tagAvalOtKeyUtagEvent.event_category"
+               [utag]="tagAvalOtKeyUtagEvent.event_label"></avv-field>
+    <ng-template [appFeatureToggle]="featureFlagsKey.SPIContactBook">
+      <div class="bre-b-transfers__content-key-directory">
+        <a href="javascript:void(0)" (click)="openKeyDirectory()">
+          <i class="icon icon-usuario"></i>
+          <span>{{ 'TRANSFERS.BRE_B.STEPS.TOWARD.FIELDS.KEY_DIRECTORY' | translate }}</span>
+        </a>
+      </div>
+    </ng-template>
+
+    <button type="button" class="avv-btn-primary bre-b-transfers__continue"
+            [utagCategory]="continueButtonUtagEvent.event_category" [utag]="continueButtonUtagEvent.event_label"
+            [id]="'transfer-tag-aval-btn'" [disabled]="towardAvalKey.invalid" (click)="continueAction()">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </div>
+</section>

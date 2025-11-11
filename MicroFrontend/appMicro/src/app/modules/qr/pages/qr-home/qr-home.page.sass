@@ -1,0 +1,35 @@
+@import 'utils'
+
+.qr-home-container
+  padding: $spacer-3 $spacer-2 $spacer-4
+  text-align: center
+
+  h2
+    font-size: 24px
+
+  .qr-home-logo
+    margin: $spacer-3 0
+
+  .qr-home-sub-title
+    max-width: 311px
+    margin: 0 auto
+
+  .qr-home-description
+    margin: $spacer-2 0 $spacer-4
+    padding: 0 10px
+
+  .qr-home-buttons
+    +flex(flex-start, space-around)
+    width: 100%
+    padding: 0 $spacer-2
+
+    .item-button
+      +flex(center, center, column)
+      width: 90px
+
+    small
+      font-size: 10px
+      line-height: 1.2
+      text-align: center
+      margin-top: $spacer
+

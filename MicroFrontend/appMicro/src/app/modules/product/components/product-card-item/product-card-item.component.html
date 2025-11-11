@@ -1,0 +1,41 @@
+<div class="product-card-container {{ style }}"
+     role="button"
+     [attr.aria-label]="(data.title) + ' ' + (data?.description | translate) + ' ' + (data?.value | numberFormat) + ' ' + ('CURRENCIES.' + data?.currency | translate)"
+     [ngClass]="{'disabled': disabled}">
+
+  <div class="product-card-image" *ngIf="data?.cardImage">
+    <img [src]="data?.cardImage | imageUrl" alt="Product Image" draggable="false">
+  </div>
+
+  <div class="product-card-content">
+    <div [class.without-subtitle]="!showSubtitle">
+      <div class="product-card-icon" [attr.aria-hidden]="true">
+        <i *ngIf="data?.icon" class="icon {{ data?.icon }}"></i>
+        <img class="product-card-franchise" alt="icon" #img
+             *ngIf="data?.iconImage"
+             [src]="data?.iconImage | franchiseImage"
+             (error)="img.className = 'display-none'"/>
+      </div>
+
+      <div class="product-card-data">
+        <p class="product-card-title" [innerHTML]="data.title"></p>
+        <p class="product-card-subtitle" *ngIf="showSubtitle">
+          <span class="product-card-insufficient semi-bold"
+                *ngIf="disabled">{{ 'PRODUCT.INSUFFICIENT_BALANCE' | translate }}:</span>
+          <span [innerHTML]="(data?.description | translate) + ':'" *ngIf="!disabled"></span>
+          <span class="product-card-balance"
+                role="text"
+                [attr.aria-label]="(data?.value | numberFormat) + ' ' + ('CURRENCIES.' + data?.currency | translate)"
+                [innerHTML]="(data?.value | currencyFormat)"></span>
+        </p>
+      </div>
+
+      <div class="product-card-right-icon" *ngIf="data?.rightIcon">
+        <i class="icon {{ data?.rightIcon }}"></i>
+      </div>
+    </div>
+
+    <ng-content></ng-content>
+
+  </div>
+</div>

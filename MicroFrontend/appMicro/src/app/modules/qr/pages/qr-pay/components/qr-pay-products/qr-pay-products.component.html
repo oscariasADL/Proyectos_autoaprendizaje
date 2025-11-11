@@ -1,0 +1,58 @@
+<article class="qr-pay-products-container">
+  <h2 class="semi-bold qr-pay-products-title">{{ 'QR.PAY.PRODUCTS_STEP.TITLE' | translate }}</h2>
+
+  <section class="qr-pay-products-debit-cards"
+           *ngIf="paymentMethod?.debitAccounts?.length > 0 && !isItBetweenAccounts.value">
+    <small class="group-label">{{ 'QR.PAY.PRODUCTS_STEP.PAYMENT_METHODS_LABELS.DEBIT_CARDS' | translate }}</small>
+    <div role="button" class="app-product-card-debit-card" *ngFor="let product of paymentMethod?.debitAccounts"
+         (click)="selectProduct(product)" [ngClass]="{'disabled': isDisabled(product)}">
+      <div class="product-card-content">
+        <div>
+          <div class="product-card-icon">
+            <i class="icon icon-tarjeta"></i>
+          </div>
+          <div class="product-card-data">
+            <p class="product-card-title" [innerHTML]="'Tarjeta débito No.' + product.numberProduct"></p>
+            <p class="product-card-subtitle">
+              <span [innerHTML]="'Disponible' + ':'"></span>
+              <span class="product-card-balance"
+                    role="text"
+                    [attr.aria-label]="(product.availableBalance | numberFormat) + ' ' + ('CURRENCIES.' + product.currency | translate)"
+                    [innerHTML]="(product.availableBalance | currencyFormat)"></span>
+            </p>
+            <small class="product-card-insufficient" *ngIf="isDisabled(product)">
+              {{ 'PRODUCT.INSUFFICIENT_BALANCE' | translate }}
+            </small>
+          </div>
+          <div class="product-card-right-icon">
+            <i class="icon icon-next"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="qr-pay-products-credit-cards"
+           *ngIf="paymentMethod?.creditCards?.length > 0 && !isItBetweenAccounts.value">
+    <small class="group-label">{{ 'QR.PAY.PRODUCTS_STEP.PAYMENT_METHODS_LABELS.CREDIT_CARDS' | translate }}</small>
+    <app-product-card-item #productCard
+                           *ngFor="let product of paymentMethod?.creditCards"
+                           (click)="selectProduct(product)"
+                           [disabled]="isDisabled(product)"
+                           [productDetail]="{ product: product }"
+                           [style]="productCard.productStyleType.selectable">
+    </app-product-card-item>
+  </section>
+
+  <section class="qr-pay-products-accounts"
+           *ngIf="isItBetweenAccounts.value || (!isItBetweenAccounts.value && isValidCommerce.value)">
+    <small class="group-label">{{ 'QR.PAY.PRODUCTS_STEP.PAYMENT_METHODS_LABELS.ACCOUNTS' | translate }}</small>
+    <app-product-card-item #productCard
+                           *ngFor="let product of products"
+                           (click)="selectProduct(product)"
+                           [disabled]="isDisabled(product)"
+                           [productDetail]="{ product: product }"
+                           [style]="productCard.productStyleType.selectable">
+    </app-product-card-item>
+  </section>
+</article>

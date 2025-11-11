@@ -1,0 +1,114 @@
+@import 'utils'
+
+@keyframes progressAnimation
+  from
+    width: 0%
+  to
+    width: 100%
+
+\:host
+  justify-content: flex-start
+  display: flex
+  flex-direction: column
+
+.story
+
+  &-skeleton
+    border-radius: 50%
+    width: 250px
+    height: 250px
+    margin: 0 auto
+
+  &-loader
+    margin: calc(16px + var(--safe-area-inset-top)) 16px 8px
+    border-radius: 10px
+    background-color: #e7e9fb
+
+    &-value
+      background-color: #0048db
+      border-radius: 10px
+      animation-name: progressAnimation
+      animation-duration: 15s
+      animation-timing-function: linear
+      height: 4px
+
+  &-close
+    display: flex
+    justify-content: flex-end
+    font-size: 24px
+    margin-right: 16px
+
+  &-container
+    margin: 24px 16px
+    color: #252b31
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @media(min-width: 376px)
+      .story
+        &-title
+          font-size: 26px
+
+        &-image
+          width: 100%
+          margin: 0
+
+        &-description
+          margin: 0
+          font-size: 24px
+
+        &-list
+          margin: 0
+
+        &-action
+          margin: 0
+
+  &-title
+    font-size: 24px
+    text-align: center
+    @media(max-width: 375px)
+      font-size: 24px
+
+  &-subtitle, &-description
+    font-size: 20px
+    font-weight: 400
+    text-align: center
+    @media(max-width: 375px)
+      font-size: 16px
+
+  &-description
+    margin-bottom: 24px
+    padding: 0 8px
+    @media(max-width: 375px)
+      font-size: 20px
+
+  &-image
+    width: 75%
+    height: auto
+    margin: 12px auto
+
+  &-skeleton
+    margin: 12px auto
+
+  &-list
+    font-size: 20px
+    list-style-type: none
+    counter-reset: item
+    padding-left: 8px
+    margin-bottom: 24px
+    @media(max-width: 375px)
+      font-size: 16px
+
+  &-list-item
+    margin-bottom: 8px
+
+  &-list-item::before
+    content: counter(item) "."
+    counter-increment: item
+    font-weight: bold
+    position: relative
+    left: -4px
+
+  &-action
+    margin-top: auto

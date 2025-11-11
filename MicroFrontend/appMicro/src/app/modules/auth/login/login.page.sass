@@ -1,0 +1,175 @@
+@import 'utils'
+
+.login-container.keyboard-shown
+  min-height: 110dvh
+  align-self: start
+  grid-template-rows: max-content 1fr
+
+  &.login-type-document
+    min-height: 100dvh
+
+  .login-content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+.login-container
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: max-content 1fr max-content
+  width: 100%
+  height: 100dvh
+  padding: var(--safe-area-inset-top) 0 0
+  background: linear-gradient(-70deg, #ED1B2F 60%, #f4f4f4 30%)
+  background-size: 100%
+
+  ::ng-deep .footer-tabs
+    position: relative
+
+    aside.show
+      margin-bottom: 0 !important
+
+  header.login-header
+    display: flex
+    justify-content: space-between
+    align-items: start
+    padding: $spacer-2
+
+    img
+      max-height: 40px
+
+
+  .login-cover
+    position: relative
+    display: flex
+    justify-content: end
+    height: 100%
+    overflow: hidden
+
+    &__text-image
+      position: absolute
+      top: 0
+      left: 16px
+      width: 120px
+      height: 80px
+
+    &__picture
+      max-height: 100%
+      width: auto
+      object-fit: contain
+
+      &.user-logged-picture
+        margin-right: 10vw
+        max-height: inherit
+        height: 35vh
+
+    .app-version
+      position: absolute
+      top: 16px
+      right: 0
+      transform: rotate(-90deg)
+      color: #FFFFFF
+
+
+  article.login-content
+    position: relative
+    min-height: 30vh
+    align-self: end
+    padding-top: $spacer-4
+    background-color: #FFFFFF
+    border-top-left-radius: $spacer-2
+    border-top-right-radius: $spacer-2
+
+    section
+      padding: 0 $spacer-3
+
+    .login-body
+      width: 100%
+      padding: 0 $spacer-3
+      text-align: center
+      font-size: 0
+      margin-bottom: 5vh
+
+    ::ng-deep
+      .login-form
+        width: 100%
+        //height: calc(100vh - 228px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+        margin-bottom: $spacer-2
+
+  ::ng-deep
+    .login-footer
+      .footer-tabs
+        aside
+          background: var(--white)
+
+        .footer-tabs-container
+          box-shadow: none !important
+
+          .menu-left, .menu-right
+            box-shadow: none !important
+
+          .menu-center::before, .menu-center::after
+            border: none !important
+
+          .menu-center
+            .shadow
+              box-shadow: none !important
+
+  .card-login
+    position: relative
+    background-color: #FFFFFF
+    min-height: 30vh
+    align-self: end
+    padding-top: 30px
+    border-top-left-radius: 16px
+    border-top-right-radius: 16px
+
+    .app-version
+      position: absolute
+      right: -7px
+      transform: rotate(-90deg)
+      top: -40px
+      color: #FFFFFF
+
+    .login-footer
+      .footer-tabs
+        .footer-tabs-container
+          .menu-left
+            box-shadow: none
+
+.login-notifications
+  padding: 0
+  width: 32px
+  height: 32px
+  background-color: white
+  border-radius: 50%
+  margin-top: 3px
+
+  i
+    padding: 0
+    font-size: 24px
+    color: #E1001D
+
+  .icon-notificaciones
+    position: relative
+
+  .notification-number
+    display: inline-block
+    position: absolute
+    right: -0.6em
+    top: -0.4em
+    min-width: 1.8em
+    height: 1.8em
+    border: solid 2px var(--blue-3)
+    background-color: var(--blue-3)
+    font-size: 0.625rem
+    font-weight: bold
+    letter-spacing: normal
+    color: var(--white)
+    border-radius: 50%
+    padding: 0.3em
+
+
+

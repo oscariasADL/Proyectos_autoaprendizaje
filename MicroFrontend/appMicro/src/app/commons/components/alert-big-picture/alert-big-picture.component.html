@@ -1,0 +1,20 @@
+<div [utag]="props?.utagModal" [utagCategory]="props?.utagCategory" class="avv-alert-sheet"
+  [id]="props.id">
+  <i *ngIf="!(props?.hideCloseButton === true)" [attr.aria-label]="'Cerrar'" role="button"
+    class="avv-alert-sheet-close icon-salir" (click)="closeModal()"></i>
+
+  <div class="avv-alert-sheet-header" id="alert-title" [ngStyle]="backgroundStyle">
+  </div>
+  <div class="content-container">
+    <div class="avv-alert-sheet-body">
+      <p class="avv-alert-sheet-body__title"> {{props.title}}</p>
+      <p class="avv-alert-sheet-body__subtitle">{{props.description}}</p>
+    </div>
+    <div class="avv-alert-sheet-actions">
+      <button class="avv-btn-primary" (click)="closeWithRedirect()">{{props.buttonText | uppercase}}</button>
+
+    </div>
+  </div>
+
+
+</div>

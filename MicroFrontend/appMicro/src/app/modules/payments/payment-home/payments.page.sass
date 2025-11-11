@@ -1,0 +1,72 @@
+@import 'utils'
+
+.payments-container
+  min-height: 100%
+  .avv-icons-btn-list
+    padding: $spacer-4 $spacer-4 0
+  .payment-panel
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 30px 16px
+    flex-wrap: wrap
+
+    .payment-header-item
+      flex-grow: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      padding: 9px
+      border-radius: 5px
+      box-shadow: 0 0 10px 0 rgba(195, 207, 226, 0.7)
+      background-color: var(--white)
+      border: solid 1px var(--white)
+      width: calc(50% - 16px)
+      max-width: calc(50% - 16px)
+      height: calc(45vw - 32px)
+      transition: .3s
+      margin-bottom: 32px
+
+      p
+        margin: 0
+        display: inline-block
+        text-align: center
+
+      .payment-item-image
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        height: 60px
+
+        img
+          max-height: 50px
+          max-width: 54px
+
+      &.item-credit
+        .payment-item-image
+          align-items: center
+          margin-top: -6px
+
+      &:hover
+        border: solid 1px var(--blue-1)
+        cursor: pointer
+
+      &.active
+        border: solid 2px var(--blue-1)
+
+      &:focus
+        outline: none
+
+      &.disabled
+        opacity: 0.19
+
+        &:hover
+          border: solid 1px var(--white)
+          cursor: inherit
+
+        &.active
+          border: solid 1px var(--white)
+          transform: scale(1)
+

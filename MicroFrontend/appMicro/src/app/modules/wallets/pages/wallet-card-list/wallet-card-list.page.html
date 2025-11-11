@@ -1,0 +1,107 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [title]="'WALLETS.HOME.HEADER' | translate"
+  [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="card-list-container">
+    <ng-container
+      *ngTemplateOutlet="((working$ | async) ? working : (completed$ | async) ? (walletCardList$ | async)?.length > 0 ? content : empty : error)"></ng-container>
+  </article>
+</ion-content>
+
+<ng-template #working>
+  <ion-skeleton-text
+    class="avv-skeleton card-list-working-title"
+    animated></ion-skeleton-text>
+  <ion-skeleton-text
+    *ngFor="let item of SKELETON_ARRAY"
+    class="avv-skeleton card-list-working-card"
+    animated>
+  </ion-skeleton-text>
+</ng-template>
+
+<ng-template #content>
+  <section class="card-list-content">
+    <h2>{{ 'WALLETS.HOME.TITLE' | translate }}</h2>
+    <ng-container *ngFor="let group of walletCardListGroup$ | async">
+      <span class="wallet-card-type">{{ 'WALLETS.CARD_TYPE_' + group.type.toUpperCase() | translate }}</span>
+      <div class="wallet-cards-container">
+        <ng-container *ngFor="let card of group.cards">
+          <div class="wallet-card" [class.provisioned]="!card.canPushCardInWalletPay" (click)="pushCard(card)">
+            <div class="wallet-card-icon">
+              <img alt="icon"
+                   class="franchise-img"
+                   [src]="getSrcImgFranchise(card.bin)">
+            </div>
+            <div class="wallet-card-detail">
+              {{ 'ACCOUNT_NUMBER' | translate }} {{ card.lastDigits | productNumberMask }}
+            </div>
+            <ng-container
+              *ngTemplateOutlet="walletCardAction; context: { $implicit: card.canPushCardInWalletPay }"></ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </section>
+</ng-template>
+
+<ng-template #empty>
+  <section class="card-list-empty">
+    <div class="card-list-empty-icon">
+      <img [src]="'iconsV2/card-money.svg' | imageUrl" alt="">
+    </div>
+    <h2>{{ 'WALLETS.HOME.EMPTY.TITLE' | translate }}</h2>
+    <p>{{ 'WALLETS.HOME.EMPTY.DESCRIPTION' | translate }}</p>
+    <button type="button" class="avv-btn-primary">{{ 'WALLETS.HOME.EMPTY.ACTION' | translate | uppercase }}
+    </button>
+  </section>
+</ng-template>
+
+<ng-template #error>
+  <section class="card-list-error"></section>
+</ng-template>
+
+<ng-template #walletCardAction let-canPushCardInWalletPay>
+  <ng-container [ngSwitch]="currentPlatform.toString()">
+    <ng-container *ngSwitchCase="platform.IOS.toString()">
+      <ng-container
+        *ngTemplateOutlet="walletCardActionIos; context: { $implicit: canPushCardInWalletPay }"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="platform.ANDROID.toString()">
+      <ng-container
+        *ngTemplateOutlet="walletCardActionAndroid; context: { $implicit: canPushCardInWalletPay }"></ng-container>
+    </ng-container>
+  </ng-container>
+
+</ng-template>
+
+<ng-template #walletCardActionIos let-canPushCard>
+  <div role="button" class="wallet-card-action-apple"
+       *ngIf="canPushCard; else cardActionAlt">
+    <img [src]="'wallets/apple-pay-logo-mini.svg' | imageUrl" alt="">
+    <a href="javascript:void(0);">
+      {{ 'WALLETS.APPLE_PAY.HOME.CARD_ACTION_LABEL' | translate }}
+    </a>
+    <i class="icon icon-next"></i>
+  </div>
+  <ng-template #cardActionAlt>
+    <div class="wallet-card-action-apple">
+      <span>{{ 'WALLETS.APPLE_PAY.HOME.STATUS_CARD_PROVISIONED' | translate }}</span>
+    </div>
+  </ng-template>
+</ng-template>
+
+<ng-template #walletCardActionAndroid let-canPushCard>
+  <div role="button" class="wallet-card-action-google"
+       *ngIf="canPushCard; else cardActionAlt">
+    <i class="icon icon-next"></i>
+  </div>
+  <ng-template #cardActionAlt>
+    <div class="wallet-card-action-google">
+      <span>{{ 'WALLETS.GOOGLE_PAY.HOME.STATUS_CARD_PROVISIONED' | translate }}</span>
+    </div>
+  </ng-template>
+</ng-template>

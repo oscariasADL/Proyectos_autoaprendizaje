@@ -1,0 +1,61 @@
+<div class="modify-installments-container" *ngIf="formGroup">
+  <p class="modify-installments-title">{{ 'UPDATE_INSTALLMENTS.INSTALLMENTS_STEP.TITLE' | translate }}</p>
+
+  <div class="modify-installments-panel">
+    <div class="modify-installments-panel-header">
+      <p class="small bold">
+        {{ movement?.purchaseDescription | capitalize }}
+      </p>
+    </div>
+    <div class="modify-installments-panel-body">
+      <div class="body-info">
+        <p>{{ 'UPDATE_INSTALLMENTS.FIELDS.PURCHASE_VALUE' | translate }}:</p>
+        <span class="semi-bold" [innerHTML]="movement?.purchaseValue | currencyFormat"></span>
+
+        <p>{{ 'UPDATE_INSTALLMENTS.FIELDS.RATE' | translate }}:</p>
+        <span class="semi-bold">{{ movement?.rate }} %</span>
+
+        <p>{{ 'UPDATE_INSTALLMENTS.FIELDS.INSTALLMENTS' | translate }}</p>
+        <span class="semi-bold">{{ 'UPDATE_INSTALLMENTS.INSTALLMENTS_STEP.MOVEMENT_DESCRIPTION' | translate:
+          {
+            paid: movement?.installments - movement?.pendingInstallments,
+            installments: movement?.installments
+          } }}</span>
+      </div>
+      <div class="separator"></div>
+      <p class=" body-balance">{{ 'UPDATE_INSTALLMENTS.FIELDS.BALANCE' | translate }}:
+        <span class="semi-bold" [innerHTML]="movement?.balance | currencyFormat"></span>
+      </p>
+    </div>
+  </div>
+
+  <form [formGroup]="form"
+        (ngSubmit)="continue.emit()"
+        class="modify-installments-form">
+    <p>{{ 'UPDATE_INSTALLMENTS.INSTALLMENTS_STEP.LABEL' | translate }}</p>
+    <div class="modify-installments-field">
+      <avv-input
+        [id]="'installments-number'"
+        [type]="'numeric'"
+        [label]="'UPDATE_INSTALLMENTS.FIELDS.INSTALLMENTS_NUMBER' | translate"
+        [autoFocus]="true"
+        [control]="installments"
+        class="modify-installments-input">
+      </avv-input>
+
+      <small
+        *ngIf="!isDebitPurchaseFlag; else debitPurchaseMessage">{{ 'UPDATE_INSTALLMENTS.INSTALLMENTS_STEP.MESSAGE' | translate }}</small>
+      <ng-template #debitPurchaseMessage>
+        <small>{{ 'UPDATE_INSTALLMENTS.INSTALLMENTS_STEP.MESSAGE_ALT' | translate }}</small>
+      </ng-template>
+    </div>
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'modify-installments-continue-btn'"
+            [disabled]="!installments.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+
+</div>

@@ -1,0 +1,101 @@
+<ion-header [translucent]="true">
+  <app-headers
+  *ngIf="showHeaders"
+    #header
+    [title]="'TRANSFERS.REMITTANCES.TITLE' | translate"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary"
+    [backUrl]='backUrl'>
+  </app-headers>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <div *ngIf="isLoading$ | async" class="loading-container">
+    
+  <avv-loading></avv-loading>
+  </div>
+
+<div  class="container" *ngIf="(isLoading$ | async)===false && validateCustomer$ | async as remittanceCheckResponse ">
+  <ng-container [ngSwitch]="remittanceCheckResponse.customer">
+    
+    <ng-container *ngSwitchCase="customerRemittancesType.F">
+      <ng-container *ngTemplateOutlet="productListTemplate"></ng-container>
+    </ng-container>
+    
+    <ng-container *ngSwitchCase="customerRemittancesType.P">
+      <ng-container *ngTemplateOutlet="productListTemplate"></ng-container>
+    </ng-container>
+    
+    <ng-container *ngSwitchCase="customerRemittancesType.A">
+      <ng-container *ngTemplateOutlet="productListTemplate"></ng-container>
+    </ng-container>
+    
+    <section *ngSwitchCase="customerRemittancesType.R" class="customer-registered">
+      <div class="customer-registered__main">
+        <div class="customer-registered__main__images">
+          <img [src]="'av-villas-logo.svg' | imageUrl" alt="logo de avvillas">
+          <div class="customer-registered__main__images__separator"></div>
+          <img [src]="'western-union.svg' | imageUrl" alt="logo wester union" >
+        </div>
+       <h2 class="customer-registered__main__title">{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.TITLE' | translate}}</h2>
+       <h3 class="customer-registered__main__subtitle">{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.SUBTITLE' | translate}}</h3>
+      </div>
+      <div class="customer-registered__card">
+         <span class="avv-icons-btn-list-item-new">Disponible</span>
+        <div class="customer-registered__card__info__title mb-3">
+          <h5>{{remittanceCheckResponse.infoAccount.clientName}}</h5>
+          
+          <h4>{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.CARD.FULLNAME'| translate}}</h4>
+        </div>
+            <div class="customer-registered__card__info-container mb-1">
+          <h5>{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.CARD.DOCUMENT_NUMBER'| translate}}</h5>
+          <h4>{{remittanceCheckResponse.infoAccount.document}}</h4>
+        </div>
+            <div class="customer-registered__card__info-container mb-1">
+          <h5>{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.CARD.PHONE'| translate}}</h5>
+          <h4>{{remittanceCheckResponse.infoAccount.cellphone}}</h4>
+        </div>
+        <div class="customer-registered__card__info-container mb-1">
+          <h5>{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.CARD.ACCOUNT_NUMBER'| translate}}</h5>
+          <h4>No.{{remittanceCheckResponse.infoAccount.numberAccount}}</h4>
+        </div>
+        <div class="customer-registered__card__info-container">
+          <h5>{{'TRANSFERS.REMITTANCES.REGISTERED_ACCOUNT.CARD.WALLET'| translate}}</h5>
+          <h4>{{remittanceCheckResponse.infoAccount.nameWallet}}</h4>
+        </div>
+      </div>
+     
+    </section>
+    
+    
+  </ng-container>
+  
+
+  <ng-template #productListTemplate>
+    <ng-container *ngIf="products$ | async as products">
+      <h2 class="title">{{'TRANSFERS.REMITTANCES.DESCRIPTION' | translate}}</h2>
+      
+      <div class="accounts-step-list">
+        <app-product-card-item *ngFor="let product of products"
+                               (click)="selectProduct(product, remittanceCheckResponse)"
+                               [productDetail]="{ product: product }"
+                               [style]="product.accountType || product.selectable">
+        </app-product-card-item>
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #productsList>
+  <ng-container *ngIf="(products$ | async) as products">
+    <h2 class="title">{{'TRANSFERS.REMITTANCES.DESCRIPTION' | translate}}</h2>
+    <div class="accounts-step-list">
+      <app-product-card-item *ngFor="let product of products"
+                             (click)="selectProduct(product,remittanceCheckResponse)"
+                             [productDetail]="{ product: product }"
+                             [style]="product.accountType || product.selectable">
+      </app-product-card-item>
+    </div>
+  </ng-container>
+</ng-template>
+</div>
+   
+</ion-content>

@@ -1,0 +1,19 @@
+<app-generic-stepper-header
+        [title]="title"
+        [headerType]="headerType"
+        (backClick)="backClick()"
+        (closeClick)="closeClick()">
+</app-generic-stepper-header>
+
+<app-generic-stepper-body
+        [data]="data"
+        [steps]="steps"
+        [template]="template"
+        [showSteps]="showSteps"
+        [currentSlide]="currentSlide"
+        (nextStep)="runNextStep($event)"
+        (stepSelected)="stepSelected.emit($event)"
+        [utagCategory]="utagCategory"
+        (slideSelected)="slideSelected.emit($event)">
+</app-generic-stepper-body>
+

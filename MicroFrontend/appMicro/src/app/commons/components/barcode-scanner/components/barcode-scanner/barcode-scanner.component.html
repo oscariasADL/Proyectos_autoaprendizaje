@@ -1,0 +1,16 @@
+<section class="barcode-scanner-container">
+  <div class="scanner-container" id="scanner-container"></div>
+  <div class="user-guidance-container">
+    <ng-container [ngSwitch]="barcodeType">
+      <app-qr-scanner-template *ngSwitchCase="BARCODE_TYPES.QR"
+                               [userGuidanceOptions]="barcodeScannerUserGuidance"
+                               [useFlashlight]="useFlashlight"
+                               [flashlightStatus]="flashlightStatus"
+                               (closeScannerModal)="closeModal()"
+                               (toggleFlashlight)="toggleFlashlight()"></app-qr-scanner-template>
+      <app-barcode-scanner-template *ngSwitchCase="BARCODE_TYPES.BARCODE"
+                                    [userGuidanceOptions]="barcodeScannerUserGuidance"
+                                    (closeScannerModal)="closeModal()"></app-barcode-scanner-template>
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+@import 'utils'
+
+$widthCromaline: 250px
+
+\:root
+  .colombia
+    top: 25vh
+
+.digital-debit-card-detail
+  &-container
+    +flex(center, start, column)
+    position: relative
+    background-color: var(--white)
+    height: 85vh
+    overflow: auto
+    padding: 36px $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+  &-close
+    position: absolute
+    font-size: 24px
+    top: $spacer-1
+    right: $spacer-1
+
+  &-title
+    margin-bottom: $spacer-1
+
+  &-btn
+    font-size: 12px
+
+  &-panel
+    +flex(center, center, column)
+
+    &-cromalite
+      position: relative
+      margin-bottom: $spacer-3
+
+      img
+        width: $widthCromaline
+
+      p
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        color: var(--white)
+        padding-left: $spacer-3
+
+    &-number
+      width: 100%
+      max-width: $widthCromaline
+      +flex(center, space-between)
+      margin-block-end: $spacer-2
+
+      small
+        font-weight: 300
+        color: var(--gray-7)
+
+      i
+        font-size: 24px
+        color: var(--blue-1)
+        margin-left: $spacer-2
+
+    &-data
+      max-width: $widthCromaline
+      +flex(flex-start, flex-start)
+      flex-wrap: wrap
+      column-gap: 24px
+
+    &-divider
+      height: 1px
+      width: 100%
+      max-width: $widthCromaline
+      margin: $spacer 0
+      background-color: #EBEDEF
+
+    &-actions-list
+      width: 100%
+      max-width: $widthCromaline
+      margin-bottom: $spacer-3
+
+      .actions-list-header
+        .actions-list-title
+          font-size: 13px
+          color: #252B31
+
+      .actions-list-items
+        margin-top: $spacer-1
+        +flex(flex-start, space-between)
+        flex-wrap: wrap
+
+    &-links
+      +flex(center, center, column)
+      gap: $spacer-1
+
+      .digital-debit-card-detail-link
+        +flex(center, center)
+        color: var(--blue-1)

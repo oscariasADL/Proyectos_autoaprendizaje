@@ -1,0 +1,37 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'DIGITAL_DEBIT_CARD.ACTIVATE.HEADER_TITLE' | translate"
+    [backUrl]="[activateUrlBackTo$ | async]"
+    [exitData]="exitData"
+    [showSteps]="false"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+  <div [ngSwitch]="screen">
+    <app-activate-digital-debit-card-info
+      *ngSwitchCase="activateDigitalDebitCardSlide.info"
+      [form]="form"
+      (continue)="runNextStep(key)"
+      (showFrequentQuestions)="showFrequentQuestions()"
+    ></app-activate-digital-debit-card-info>
+    <app-activate-digital-debit-card-config
+      *ngSwitchCase="activateDigitalDebitCardSlide.config"
+      [form]="form"
+      [products]="products$ | async"
+      (activate)="runNextStep(key)"
+    ></app-activate-digital-debit-card-config>
+  </div>
+</ng-template>

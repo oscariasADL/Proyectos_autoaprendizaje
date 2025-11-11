@@ -1,0 +1,47 @@
+<ul *ngIf="working; else contactsContent" class="contact-book-loading">
+    <li *ngFor="let item of [1, 2, 3, 4, 5]">
+        <ion-skeleton-text animated class="avv-skeleton"></ion-skeleton-text>
+    </li>
+</ul>
+
+<ng-template #contactsContent>
+    <div class="contact-book">
+        <avv-input *ngIf="showSearch" [type]="'text'" [id]="'contact-book-contacts-search'" [label]="'Buscar contacto'"
+            [icon]="'icon-lupa_search'" [preserveIcon]="true" [control]="searchControl">
+        </avv-input>
+        <ng-container *ngIf="!hideList">
+        <div *ngIf="contacts?.length > 0  ; else empty" class="contact-book-list">
+            <app-contact-item
+                *ngFor="let contact of contacts; let i = index" [index]="i"
+                [showTitle]="!visualControlContacts"
+                [contact]="contact" 
+                [keyWord]="filter"
+                [fieldToNickname]="fieldToNickname"
+                (click)="onContactClick(contact)">
+            </app-contact-item>
+        </div>
+        </ng-container>
+        <ng-container *ngTemplateOutlet="visualControlContacts ? empty : undefined"></ng-container>
+    </div>
+</ng-template>
+
+<ng-template #empty>
+    <div *ngIf="!!searchControl.value; else withoutContacts" class="contact-book-empty">
+        <p>{{ 'CONTACTS.LIST.EMPTY' | translate }}</p>
+        <img [src]="'search_not_found.svg' | imageUrl" alt="search-not-found">
+    </div>
+</ng-template>
+
+<ng-template #withoutContacts>
+    <div class="avv-panel-empty">
+        <p class="avv-list-panel-title avv-title-semibold">
+            No tienes contactos AV Villas disponibles para hacer transferencias.
+        </p>
+        <div class="avv-panel-empty-image">
+            <img class="icon" [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl" alt="sin-resultados">
+        </div>
+        <small class="avv-panel-empty-text">
+            Puedes crear y editar contactos desde nuestra pagina web.
+        </small>
+    </div>
+</ng-template>

@@ -1,0 +1,65 @@
+<ion-content [forceOverscroll]="false">
+  <div class="auth-steps-container">
+    <div class="auth-steps-header">
+      <h5>{{ title | translate }}</h5>
+      <i class="icon-salir" (click)="showExitModal()"></i>
+    </div>
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="run()">
+      <div class="auth-steps-body fill-otp-data__container">
+
+        <div class="fill-otp-data__detail">
+          <div class="fill-otp-data__header">
+            <img class="fill-otp-data__img" [src]="'illustrationsV2/navegador-seguridad-regular.svg' | imageUrl" alt
+              draggable="false">
+            <small class="fill-otp-data__description"
+              [innerHTML]="'AUTH.STEP.FILL_OTP_DATA.DESCRIPTION' | translate | safeHtml">
+              {{ 'AUTH.STEP.FILL_OTP_DATA.DESCRIPTION' | translate }}
+            </small>
+          </div>
+
+
+          <small class="fill-otp-data__subtitle">
+            {{ 'AUTH.STEP.FILL_OTP_DATA.TITLE' | translate }}
+          </small>
+
+          <avv-password class="auth-steps-otp" (oneTimeCode)="onOtpAutocompleteInIOS($event)" [control]="otp"
+            [hideCharacters]="false" [autoFocus]="true" [showEye]="false" [autocomplete]="'one-time-code'"
+            [numCharacters]="8" [hasError]="!data.success" [errorMessage]="data.errorMessage">
+          </avv-password>
+
+          <small class="fill-otp-data__sub-description ">
+            {{ 'AUTH.STEP.FILL_OTP_DATA.SUB_DESCRIPTION' | translate }}
+          </small>
+
+          <div class="auth-step-info avv-alert-info fill-otp-data__alert">
+            <i class="avv-alert-icon icon-info"></i>
+            <div class="avv-alert-text">
+              <b>{{ 'AUTH.STEP.FILL_OTP_DATA.INFO.TITLE' | translate }}</b><br> {{
+              'AUTH.STEP.FILL_OTP_DATA.INFO.DESCRIPTION' | translate }}
+            </div>
+          </div>
+          <div class="fill-otp-data__request-otp" *ngIf="isRequestOTPEnabled">
+            <small class="fill-otp-data__description">
+              {{ 'AUTH.STEP.FILL_OTP_DATA.QUESTION' | translate }}
+            </small>
+            <button class="avv-link-underline fill-otp-data__request-otp-button" type="button" (click)="requestNewOtp()"
+              *ngIf="requestOtpEnable" [disabled]="!requestOtpEnable" [id]="'fill-otp-data-link-btn'">
+              {{ 'AUTH.STEP.FILL_OTP_DATA.LINK' | translate }}
+            </button>
+            <small class="fill-otp-data__description" *ngIf="!requestOtpEnable">
+              <b> {{'AUTH.STEP.FILL_OTP_DATA.REQUEST_OTP' | translate }} {{ timeWaitRequestOtp }}</b>
+            </small>
+          </div>
+        </div>
+
+        <div class="fill-otp-data__actions">
+          <button class="avv-btn-primary fill-otp-data__continue" type="submit" [disabled]="!form.valid">
+            {{ 'ACTIONS.CONTINUE' | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="auth-steps-footer"></div>
+  </div>
+</ion-content>

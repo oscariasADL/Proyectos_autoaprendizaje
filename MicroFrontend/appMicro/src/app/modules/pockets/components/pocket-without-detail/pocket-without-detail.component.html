@@ -1,0 +1,18 @@
+<div class="pocket-without-detail">
+    <div class="pocket-without-detail__content">
+        <img [src]="'/assets/images/illustrations/pockets/results.svg' | imageUrl:true"
+            [alt]="'POCKET_WITH_RETURNS.POCKET_DETAIL.WITHOUT_MOVEMENTS.TITLE' | translate">
+        <h3 class="pocket-without-detail__title">
+            {{"POCKET_WITH_RETURNS.POCKET_DETAIL.EMPTY.TITLE" | translate}}
+        </h3>
+        <p class="pocket-without-detail__description">
+            {{"POCKET_WITH_RETURNS.POCKET_DETAIL.EMPTY.DESCRIPTION" | translate}}
+        </p>
+    </div>
+    <div class="pocket-without-detail__actions">
+        <button class="avv-btn-secondary" (click)="close()" [id]="'pocket-detail-empty-btn'">
+            {{ 'ACTIONS.EXIT' | translate | uppercase }}
+        </button>
+    </div>
+
+</div>

@@ -1,0 +1,46 @@
+<section class="wallet-product-detail-panel mb-4">
+  <ng-container
+    *ngTemplateOutlet="CREDIT_CARDS_TYPES.includes(typeAccount) ? credit_cards : ACCOUNT_TYPES.includes(typeAccount) ? debit_cards : empty"></ng-container>
+</section>
+
+<ng-template #credit_cards>
+  <ng-container [ngSwitch]="deviceOS | async">
+    <ng-container *ngSwitchCase="platform.IOS">
+      <button
+        type="button"
+        class="avv-btn btn-apple"
+        *ngIf="canPushCreditCard | async"
+        (click)="initTokenization()">
+        <span>
+          <ng-content></ng-content>
+        </span>
+        <img class="wallet-logo" [src]="'wallets/apple-pay-white-no-bg.svg' | imageUrl" alt="">
+      </button>
+    </ng-container>
+    <ng-container *ngSwitchCase="platform.ANDROID">
+      <button
+        type="button"
+        class="avv-btn btn-google-wallet"
+        *ngIf="isEnableGoogleWalletBanner() && canPushCreditCard | async "
+        (click)="initTokenization()">
+        <img [src]="'wallets/google-wallet-icon.svg' | imageUrl" alt="">
+        {{ 'WALLETS.WALLET_PRODUCT_DETAIL_PANEL.GOOGLE_WALLET.TITLE' | translate }}
+      </button>
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #debit_cards>
+  <ng-container [ngSwitch]="deviceOS | async">
+    <ng-container *ngSwitchCase="platform.ANDROID">
+      <button type="button" class="avv-btn btn-google-wallet"
+        *ngIf="isEnableGoogleWalletBanner()"
+        (click)="initTokenization()">
+        <img [src]="'wallets/google-wallet-icon.svg' | imageUrl" alt="">
+        {{ 'WALLETS.WALLET_PRODUCT_DETAIL_PANEL.GOOGLE_WALLET.TITLE' | translate }}
+      </button>
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #empty></ng-template>

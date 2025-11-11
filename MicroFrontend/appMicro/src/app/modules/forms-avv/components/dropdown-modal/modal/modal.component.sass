@@ -1,0 +1,73 @@
+.modal-container
+  position: relative
+  padding-bottom: var(--safe-area-inset-bottom)
+  background-color: var(--white)
+  max-height: 85vh
+  overflow: hidden scroll
+  display: flex
+  flex-direction: column
+
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 16px
+    margin-bottom: 8px
+    padding: 0 16px 8px 16px
+
+    &-title
+      font-size: 16px
+      font-weight: 500
+      color: #252B31
+      margin-top: 0
+
+    .icon-salir
+      font-size: 24px
+      align-self: end
+      padding: 0
+
+hr
+  border: 1px solid #D1D6DA
+  width: 100%
+  margin: 0 0 16px
+
+ul
+  li
+    display: flex
+    align-items: center
+    gap: 10px
+    padding: 12px 12px 12px 0
+    border-bottom: 1px solid #EBEDEF
+
+    &.active
+      background-color: #E7E9FB
+
+      .radio-button:after
+        background-color: #0048DB
+
+    i
+      font-size: 24px
+      margin-left: 14px
+
+    .category-text
+      height: 14px
+      line-height: 14px
+      margin: auto 0
+
+    .radio-button
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 24px
+      width: 24px
+      border: 1px solid #252b31
+      border-radius: 50%
+      margin-left: 14px
+
+      &:after
+        display: block
+        content: ''
+        border-radius: 50%
+        height: 14px
+        width: 14px
+        background-color: transparent

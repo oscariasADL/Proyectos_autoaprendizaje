@@ -1,0 +1,28 @@
+{
+	"appId": "co.com.adl.mb.test.avvillas",
+	"appName": "AV Villas",
+	"bundledWebRuntime": false,
+	"webDir": "www",
+	"cordova": {},
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": false,
+			"launchShowDuration": 5000,
+			"androidScaleType": "CENTER_CROP",
+			"splashFullScreen": true
+		},
+		"PushNotifications": {
+			"presentationOptions": [
+				"alert",
+				"sound"
+			]
+		},
+		"Keyboard": {
+			"resize": "none",
+			"resizeOnFullScreen": false
+		}
+	},
+	"android": {
+		"adjustMarginsForEdgeToEdge": true
+	}
+}

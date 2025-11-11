@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="113" height="112" viewBox="0 0 113 112">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <path stroke="#2C2C33" stroke-linecap="round" stroke-width="2.333" d="M41.87 71.392s2.2 3.206 6.86.646c4.369-2.401 7.42.144 7.42.144" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <path stroke="#2C2C33" stroke-linecap="round" stroke-width="2.333" d="M65.814 81.422H32.206c-3.06 0-5.542-2.482-5.542-5.543V5.543C26.664 2.48 29.145 0 32.206 0h33.608c3.061 0 5.543 2.482 5.543 5.543v70.336c0 3.061-2.482 5.543-5.543 5.543z" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <path fill="#2C2C33" d="M55.784 6.336H42.167c-1.155 0-2.258-.484-3.04-1.334l-3.616-3.93H62.51L58.798 5.03c-.782.833-1.872 1.306-3.014 1.306" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <path stroke="#2C2C33" stroke-linecap="round" stroke-width="2.333" d="M35.879 50.261L62.141 50.261M35.879 57.891L62.141 57.891" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <g>
+                        <path fill="#404A53" d="M0.447 0.087L12.995 12.592" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(42.947 19.204)"/>
+                        <path stroke="#FFF" stroke-linecap="round" stroke-width="2.333" d="M0.447 0.087L12.995 12.592" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(42.947 19.204)"/>
+                    </g>
+                    <g stroke-linecap="round">
+                        <path fill="#404A53" d="M12.995 0.087L0.447 12.592" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(42.947 19.204)"/>
+                        <path stroke="#FFF" stroke-width="2.333" d="M12.995 0.087L0.447 12.592" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(42.947 19.204)"/>
+                    </g>
+                    <path stroke="#2C2C33" stroke-linecap="round" stroke-width="2.333" d="M26.528 38.386l-2.144 1.197C15.776 44.393 8.86 57.531 6.677 67.167 4.958 74.754 4.1 80.659 4.1 91.667" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <g>
+                        <path fill="#FFF" d="M2.481 11.515c.11-.007.933.018.933.018.164 2.187 2.29 3.902 4.523 2.271 5.667-4.138 8.827-8.539 11.19-11.65 1.44-1.91 4.167-2.246 6-.721.042.04.082.07.134.111 2.157 1.902 1.936 3.742-.01 6.71-1.745 2.653-4.026 5.58-5.445 7.827-1.45 2.277-2.584 4.717-3.588 7.228-3.193 7.97-8.313 11.385-11.89 12.839C1.842 37.164.252 39.449.252 42.133v.67" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(23.114 48.37)"/>
+                        <path stroke="#2C2C33" stroke-linecap="round" stroke-width="2.333" d="M2.481 11.515c.11-.007.933.018.933.018.164 2.187 2.29 3.902 4.523 2.271 5.667-4.138 8.827-8.539 11.19-11.65 1.44-1.91 4.167-2.246 6-.721.042.04.082.07.134.111 2.157 1.902 1.936 3.742-.01 6.71-1.745 2.653-4.026 5.58-5.445 7.827-1.45 2.277-2.584 4.717-3.588 7.228-3.193 7.97-8.313 11.385-11.89 12.839C1.842 37.164.252 39.449.252 42.133v.67" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296) translate(23.114 48.37)"/>
+                    </g>
+                    <path stroke="#E1001D" stroke-linecap="round" stroke-width="2.333" d="M49.213 12.762h0c-3.54 0-6.41 2.87-6.41 6.41v2.395h12.82v-2.395c0-3.54-2.87-6.41-6.41-6.41z" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <path fill="#E1001D" d="M37.546 43.372L60.879 43.372 60.879 20.039 37.546 20.039z" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                    <path fill="#0048DB" d="M27.794 102.037v-9.022c0-.967-.783-1.75-1.75-1.75H1.751c-.967 0-1.75.783-1.75 1.75L0 102.037h27.794z" transform="translate(-130 -144) translate(130.5 144) translate(21.22 5.296)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

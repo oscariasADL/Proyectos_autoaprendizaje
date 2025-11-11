@@ -1,0 +1,34 @@
+<ion-accordion-group [animated]="false" expand="inset" class="layout">
+  <ng-container *ngFor="let category of urls | keyvalue; let i = index; trackBy: trackByFunction">
+    <ion-accordion [value]="i" class="acc-content">
+      <ion-item slot="header">
+        <ion-label>
+          <h2>{{ category.key }}</h2>
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ul class="url-list">
+          <li *ngFor="let item of category.value.items; trackBy: trackByFunction2" class="url-list item">
+            <span></span>
+            <a (click)="openUrl.emit(item.url)"> {{ item.title }} </a>
+          </li>
+        </ul>
+      </div>
+    </ion-accordion>
+  </ng-container>
+  <ion-accordion class="acc-content">
+    <ion-item slot="header">
+        <ion-label>
+        <h2>Zona Bre-B</h2>
+        </ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+        <ul class="url-list">
+        <li *ngFor="let item of content.questions; trackBy: trackByFunction2" class="url-list item">
+            <span></span>
+            <div (click)="openPopUp(item.title, item.content)"> {{ item.title }} </div>
+        </li>
+        </ul>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>

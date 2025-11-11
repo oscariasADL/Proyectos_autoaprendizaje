@@ -1,0 +1,36 @@
+<ion-content class="content-generic-stepper" [forceOverscroll]="false">
+  <app-generic-stepper
+    [form]="form"
+    [data]="data"
+    [steps]="steps"
+    [title]="'POCKETS.PAY.TITLE' | translate"
+    [backUrl]="backUrl"
+    [exitData]="exitData"
+    [showSteps]="false"
+    [currentSlide]="currentSlide"
+    (nextStep)="setNextStep($event)"
+    (stepSelected)="stepSelected($event)"
+    (slideSelected)="slideSelected($event)"
+    [template]="template"
+    [utagCategory]="utagEvent.event_category">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+
+  <div [ngSwitch]="screen">
+    <app-pocket-pay-data
+      *ngSwitchCase="'pay'"
+      [form]="form"
+      [pocketDetail]="pocket$ | async"
+      [product]="product$ | async"
+      (continue)="runNextStep(key)"
+      [utagEvent]="utagEvent"
+      >
+    </app-pocket-pay-data>
+  </div>
+</ng-template>

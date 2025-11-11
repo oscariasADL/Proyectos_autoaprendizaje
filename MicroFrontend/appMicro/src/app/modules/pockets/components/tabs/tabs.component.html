@@ -1,0 +1,20 @@
+<div class="tabs">
+    <ng-container *ngFor="let tab of tabs; let i = index">
+        <div 
+            *ngIf="!tab.disabled"
+            class="tab" 
+            [class.active]="activeTab === i"
+            (click)="setActiveTab(i)">
+            {{ tab.label }}
+        </div>
+    </ng-container>
+</div>
+
+<div>
+    <ng-container *ngFor="let template of tabTemplates.toArray(); let i = index">
+        <ng-template 
+            *ngIf="activeTab === i && !isTabDisabled(i)" 
+            [ngTemplateOutlet]="template">
+        </ng-template>
+    </ng-container>
+</div>

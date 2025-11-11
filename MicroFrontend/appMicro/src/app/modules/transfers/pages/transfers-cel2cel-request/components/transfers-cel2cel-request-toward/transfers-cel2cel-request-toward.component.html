@@ -1,0 +1,64 @@
+<div class="avv-generic-step transfer-request-money">
+  <p class="avv-generic-step-title pb-4">{{ 'Ingresa el número y valor a solicitar' | translate }}</p>
+
+  <form [formGroup]="formGroup" (submit)="continue.emit()" class="avv-generic-step-content">
+    <avv-input
+      *ngIf="!contactData?.value"
+      [id]="'transfer-phone-number'"
+      [type]="'phone'"
+      [allowCut]="true"
+      [allowCopy]="true"
+      [allowPaste]="true"
+      [label]="'TRANSFERS.REQUEST_MONEY.TOWARD.FIELD' | translate"
+      [control]="phoneNumber">
+    </avv-input>
+
+    <div *ngIf="!!contactData?.value"
+         class="avv-contact-card transfer-request-money-contact-card">
+      <span class="contact-image">{{ (contactData?.value?.displayName + '') | slice : 0 : 1 | uppercase }}</span>
+      <div class="contact-info">
+        <h6 class="name" [innerHTML]="contactData?.value?.displayName | capitalize: true"></h6>
+        <p class="nickname" [innerHTML]="contactData?.value?.phoneNumber | capitalize"></p>
+        <i class="icon icon-basura" (click)="removePhoneNumberContact()"></i>
+      </div>
+    </div>
+
+    <div (click)="setPhoneNumberContact()"
+         [id]="'transfer-phone-number-btn-contacts'"
+         class="avv-information-link p-0 m-0">
+      <i class="icon-contacts"></i>
+      <small>{{ 'Elegir de mis contactos de celular' | translate }}</small>
+    </div>
+
+    <div class="mt-3">
+      <avv-input
+        [type]="'currency'"
+        [id]="'amount-value'"
+        [autoFocus]="false"
+        [allowCopy]="true"
+        [allowPaste]="true"
+        [allowCut]="true"
+        [label]="'Valor a transferir' | translate"
+        [control]="amount">
+      </avv-input>
+      <small>Máximo $250.000 por día.</small>
+    </div>
+
+    <div class="mt-3">
+      <avv-field
+        [id]="'transfer-note'"
+        [type]="'text'"
+        [label]="'Mensaje' | translate"
+        [control]="note">
+      </avv-field>
+      <small class="example-text">Esta información le llegará a la persona que le transfieras.</small>
+    </div>
+
+    <button type="submit" class="avv-btn-primary mt-3"
+            (click)="setNoteValue()"
+            [id]="'transfer-account-btn'"
+            [disabled]="!formGroup.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+</div>

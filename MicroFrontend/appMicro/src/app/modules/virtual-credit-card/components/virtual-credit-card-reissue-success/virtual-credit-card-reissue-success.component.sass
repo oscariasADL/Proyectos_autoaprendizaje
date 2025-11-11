@@ -1,0 +1,62 @@
+@import 'utils'
+
+.virtual-credit-card-reissue-success
+
+  &-header
+    width: 100%
+    +flex(center, space-between)
+    padding: calc(8px + var(--safe-area-inset-top)) $spacer $spacer
+    background-color: var(--white)
+
+    &-back
+      +flex(center, flex-start)
+
+      i
+        font-size: 24px
+        color: var(--gray-8)
+        padding: 8px
+
+      .header-title
+        color: var(--gray-8)
+        white-space: nowrap
+        overflow: hidden
+        padding-left: 8px
+        text-overflow: ellipsis
+
+    &-close
+      display: flex
+
+      i
+        font-size: 24px
+        color: var(--gray-8)
+        padding: 8px
+
+
+  &-container
+    padding: $spacer-1 $spacer-3 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+    +flex(center, center, column)
+    gap: $spacer-4
+
+    .text-center
+      h6
+        padding: 0 $spacer-4
+        font-size: 16px
+
+      img
+        margin: auto
+
+      p
+        font-size: 14px
+
+    &-description
+      font-size: 14px
+
+    .avv-ticket
+      width: 100%
+
+    .avv-ticket-list-items
+      display: flex
+      justify-content: space-between
+
+      .items-label
+        font-weight: 600

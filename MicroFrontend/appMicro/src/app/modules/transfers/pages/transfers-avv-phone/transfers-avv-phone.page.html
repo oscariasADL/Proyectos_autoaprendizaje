@@ -1,0 +1,32 @@
+<ion-content
+        [forceOverscroll]="false"
+        class="content-generic-stepper">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="'TRANSFERS.AVV_PHONE.TITLE' | translate"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)"
+          [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+  <div [ngSwitch]="screen">
+
+    <app-transfers-avv-phone-toward-cell-phone
+            *ngSwitchCase="'toward-cell-phone'"
+            [form]="form"
+            (continue)="runNextStep(key)">
+    </app-transfers-avv-phone-toward-cell-phone>
+  </div>
+</ng-template>

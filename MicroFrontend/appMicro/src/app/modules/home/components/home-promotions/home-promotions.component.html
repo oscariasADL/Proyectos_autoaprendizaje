@@ -1,0 +1,15 @@
+<div class="avv-pb-with-footer">
+  <div class="home-promotions-container">
+    <div class="home-promotions-logo">{{ 'HOME.PROMOTION.SECTION_TITLE' | translate }}</div>
+    <div class="home-promotions-texts">
+      <h5 class="home-promotions-title">{{ 'HOME.PROMOTION.TITLE' | translate }}</h5>
+      <p class="home-promotions-description mb-3" [innerHTML]="'HOME.PROMOTION.DESCRIPTION' | translate | safeHtml"></p>
+    </div>
+    <div class="home-promotions-images">
+      <button class="avv-btn-primary home-promotions-button" id="home-promotions-link" (click)="redirectLink()">
+        {{ 'HOME.PROMOTION.ACTION' | translate }}
+      </button>
+      <img class="active" [src]="'home-promotions/zona-promo.png' | imageUrl" alt="">
+    </div>  
+  </div>
+</div>

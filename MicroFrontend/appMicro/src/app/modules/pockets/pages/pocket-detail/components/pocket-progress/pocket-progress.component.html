@@ -1,0 +1,15 @@
+<div class="pocket-progress">
+  <div class="progress-circular-container">
+    <svg class="progress-circular" width="120" height="120" viewBox="0 0 150 150" aria-hidden="true">
+      <circle class="progress__meter" cx="75" cy="75" r="70" stroke-width="10" />
+      <circle class="progress__value"
+              [style.stroke-dasharray]="circumference"
+              [style.stroke-dashoffset]="fill"
+              cx="75" cy="75" r="70" stroke-width="10" />
+    </svg>
+  </div>
+  <div class="pocket-detail-progress-content">
+    <i class="{{ icon }}" aria-hidden="true"></i>
+    <p class="small semi-bold"><b>{{ progress }}%</b><br> de tu meta</p>
+  </div>
+</div>

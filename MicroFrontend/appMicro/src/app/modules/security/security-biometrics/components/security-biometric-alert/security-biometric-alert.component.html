@@ -1,0 +1,23 @@
+<div class="security-biometrics-alert-container">
+  <img *ngIf="biometricIcon" [src]="biometricIcon | imageUrl" alt="" class="security-biometrics-alert-image">
+
+  <p class="semi-bold security-biometrics-alert-title">
+    {{ ('BIOMETRICS.ALERT.TITLE.' + (hasBiometric ? 'DEACTIVATE' : 'ACTIVATE')) | translate: { type: (biometricText | translate) } }}
+  </p>
+
+  <p class="security-biometrics-alert-description">
+    {{ ('BIOMETRICS.ALERT.DESCRIPTION.' + (hasBiometric ? 'DEACTIVATE' : 'ACTIVATE')) | translate }}
+  </p>
+
+  <button class="avv-btn-primary security-biometrics-alert-btn"
+          [id]="'biometric-alert-btn-cancel'"
+          (click)="onToggleBiometrics()">
+    {{ ('BIOMETRICS.ALERT.' + (hasBiometric ? 'DEACTIVATE' : 'ACTIVATE')) | translate | uppercase }}
+  </button>
+
+  <button class="avv-btn-secondary"
+          [id]="'biometric-alert-btn-cancel'"
+          (click)="option.emit(false)">
+    {{ 'BIOMETRICS.ALERT.BACK_BUTTON' | translate | uppercase }}
+  </button>
+</div>

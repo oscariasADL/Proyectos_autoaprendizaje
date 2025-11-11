@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="container">
+    <app-headers #header [type]="header?.headerType?.redTertiary"  >
+    </app-headers>
+    <div class="content-container">
+      <div class="keys-info">
+        <h3 class="title">{{'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.TITLE' | translate}}</h3>
+        <h4 class="subtitle">{{'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.SUBTITLE' | translate}}</h4>
+
+   
+        <avv-tap-radio-card 
+          [title]="userCard.title" 
+          [subtitle]="userCard.subtitle" 
+          [radioValue]="userCard.value"
+          [radioName]="'main-group'" 
+          [(selectedValue)]="selectedOption" 
+          (radioChange)="onRadioChange($event)"
+          [tag]="userCard.tag">
+        </avv-tap-radio-card>
+
+       
+        <div *ngIf="randomKeyData$ | async as randomKey">
+          <div *ngIf="randomKey.keySuggestions && randomKey.keySuggestions.length > 0">
+            <avv-tap-radio-card 
+            *ngFor="let card of randomKey.keySuggestions"
+              [title]="card.key" 
+              [subtitle]="'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.RANDOM_KEY' " 
+              [radioValue]="card.key"
+              [radioName]="'main-group'" 
+              [(selectedValue)]="selectedOption" 
+              (radioChange)="onRadioChange($event)">
+            </avv-tap-radio-card>
+          </div>
+        </div>
+
+      
+        <div *ngIf="loading$ | async">
+          <ion-skeleton-text animated style="width: 100%; height: 60px;"></ion-skeleton-text>
+        </div>
+
+  
+        <div *ngIf="error$ | async as error">
+     
+        </div>
+
+      </div>
+      <div class="account-info-container">
+        <h5 class="account-info-title">{{'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.ACCOUNT_TITLE'| translate}}</h5>
+        <div class="account-info-card">
+          <i class="icon-salario"></i>
+          <p>{{ getProductType({type: account.accountType}) + ' No. ' + account.numberProduct }}</p>
+        </div>
+      </div>
+      <div class="actions-container">
+        <button class="avv-btn-primary" [disabled]="!this.selectedOption" (click)="confirmForm()">{{'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.ACTIONS.CONTINUE'| translate | uppercase}}</button>
+        <button class="avv-link" [routerLink]="'/customize-aval-tag/' + paramkey">{{'CUSTOMIZE_AVAL_TAG.EDIT_SELECT.ACTIONS.CANCEL'| translate | uppercase}}</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

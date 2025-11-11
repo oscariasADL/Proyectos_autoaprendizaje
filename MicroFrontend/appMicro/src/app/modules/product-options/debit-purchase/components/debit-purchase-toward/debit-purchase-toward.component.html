@@ -1,0 +1,52 @@
+<div class="avv-generic-step form-step debit-purchase-toward-container">
+
+  <app-product-card-item
+    #productCardItem
+    [productDetail]="{ product: form.get('fromProduct')?.value }"
+    [style]="productCardItem.productStyleType.standardWithRates"
+    class="debit-purchase-product-card">
+    <small class="debit-purchase-rate"
+           *ngIf="form.controls.rates?.value as rates">
+      {{ 'DEBT_PURCHASE.TOWARD_STEP.PRODUCT_RATE' | translate:
+      {
+        month: rates.monthRate,
+        annual: rates.annualRate
+      } }}
+    </small>
+  </app-product-card-item>
+
+  <p class="avv-generic-step-title with-description"
+     [innerHTML]="'DEBT_PURCHASE.TOWARD_STEP.TITLE' | translate">
+  </p>
+  <p class="avv-generic-step-description"
+     [innerHTML]="'DEBT_PURCHASE.TOWARD_STEP.DESCRIPTION' | translate">
+  </p>
+
+  <form [formGroup]="formGroup" (submit)="continue.emit()">
+    <div class="item-container">
+      <div class="item-container-input">
+        <avv-dropdown class="form-dropdown"
+                      [id]="'debit-purchase-bank'"
+                      [items]="banksList"
+                      [label]="'DEBT_PURCHASE.TOWARD_STEP.BANK_LABEL' | translate"
+                      [control]="bank">
+        </avv-dropdown>
+
+        <avv-input #input
+                   [type]="input.inputTypes.creditCard"
+                   [id]="'debit-purchase-productNumber'"
+                   [label]="'DEBT_PURCHASE.TOWARD_STEP.PRODUCT_LABEL' | translate"
+                   [franchiseIcon]="true"
+                   [control]="account">
+        </avv-input>
+      </div>
+    </div>
+
+    <button class="avv-btn-primary form-step-btn mt-5"
+            type="submit"
+            [id]="'debit-purchase-toward-btn'"
+            [disabled]="!formGroup.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+</div>

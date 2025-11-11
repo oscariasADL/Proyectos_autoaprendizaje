@@ -1,0 +1,14 @@
+<div class="product-action-modal">
+  <p class="product-action-modal-title">{{ 'PRODUCT_ACTIONS.TITLE' | translate }}</p>
+  <ul class="product-actions-list">
+    <ng-template *ngFor="let action of actions" [appFeatureToggle]="action.featureFlagKey">
+      <li [id]="action.id">
+        <app-product-action-item
+          [action]="action"
+          [className]="'border-solid'"
+          (clicked)="closeModal(action)">
+        </app-product-action-item>
+      </li>
+    </ng-template>
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+import { Injector } from '@angular/core';
+import { InformationService } from '@commons/services/information.service';
+import { StepperTypes } from '@modules/templates/generic-stepper/entities/generic-stepper.entity';
+import { GenericStepperBase } from '@modules/templates/generic-stepper/generic-stepper.base';
+import { TransfersFacade } from '@modules/transfers/transfers.facade';
+import {
+  TransferAvvAccountSlide,
+  TRANSFERS_AVV_ACCOUNT_INFO_ALERT
+} from './constants/transfers-avv-account.constants';
+
+export class TransfersAvvAccountBase extends GenericStepperBase {
+  protected facade: TransfersFacade;
+  protected informationService: InformationService;
+
+  constructor(protected injector: Injector) {
+    super(injector);
+    this.facade = this.injector.get<TransfersFacade>(TransfersFacade);
+    this.informationService =
+      this.injector.get<InformationService>(InformationService);
+  }
+
+  public async setNextStep(data: any): Promise<void> {
+    const { value } = data;
+    this.form.updateValueAndValidity();
+
+    if (value === StepperTypes.informationPanel) {
+      await this.informationService.showPanel(TRANSFERS_AVV_ACCOUNT_INFO_ALERT);
+    } else {
+      await super.setNextStep(data);
+    }
+  }
+
+  public slideSelected(slide: string): void {
+    this.data[TransferAvvAccountSlide.confirmation].data.notice = null;
+    this.nextStep(slide);
+  }
+}

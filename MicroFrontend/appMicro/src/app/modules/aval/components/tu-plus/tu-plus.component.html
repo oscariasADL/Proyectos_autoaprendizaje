@@ -1,0 +1,50 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'AVAL.TUPLUS.HEADER' | translate"
+    [type]="header?.headerType?.whiteSecondary">
+  </app-headers>
+
+  <ng-container *ngTemplateOutlet="(tuplus$ | async)?.pointsPerBank?.length > 0 ? content : empty"></ng-container>
+</ion-content>
+
+<ng-template #empty>
+  <div class="avv-generic-exception-block">
+    <p class="avv-generic-step-title">{{ 'AVAL.TUPLUS.EMPTY.TITLE' | translate }}</p>
+    <div class="avv-generic-exception-image">
+      <img class="icon"
+           [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+           alt="sin-resultados">
+    </div>
+    <p class="avv-generic-exception-message">
+      {{ 'AVAL.TUPLUS.EMPTY.MESSAGE' | translate }}
+    </p>
+    <button class="avv-btn-secondary"
+            [id]="'account-step-exit-btn'"
+            (click)="redirectTuplus()">
+      {{ 'AVAL.TUPLUS.EMPTY.LINK' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="tu-plus-container">
+    <div class="tu-plus-header">
+      <img [src]="'aval-icons/tu-plus.svg' | imageUrl" alt="">
+      <p class="small" [innerHTML]="'AVAL.TUPLUS.DESCRIPTION' | translate"></p>
+    </div>
+
+    <div class="tu-plus-panel" *ngIf="tuplus$ | async as tuplus">
+      <ul>
+        <li *ngFor="let item of tuplus?.pointsPerBank">
+          <p [innerHTML]="item?.bankName"></p>
+          <p [innerHTML]="convertValue(item?.bankPoints)"></p>
+        </li>
+      </ul>
+      <div class="tu-plus-panel-total">
+        <p class="semi-bold">{{ 'AVAL.TUPLUS.TOTAL_POINTS' | translate }}</p>
+        <h6 class="bold">{{ convertValue(tuplus?.totalPoints) }}</h6>
+      </div>
+    </div>
+  </div>
+</ng-template>

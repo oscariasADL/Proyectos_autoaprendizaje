@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[1248],{1248:(o,_,e)=>{e.r(_),e.d(_,{LifecycleEventsWeb:()=>c});var n=e(10467),a=e(15083);class c extends a.E_{echo(s){return(0,n.A)(function*(){return console.log("ECHO",s),s})()}}}}]);

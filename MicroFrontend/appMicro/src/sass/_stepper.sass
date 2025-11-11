@@ -1,0 +1,93 @@
+.avv-generic-step
+  text-align: left
+  padding: 0 16px
+  min-height: 80vh
+
+  &-title
+    padding: 32px 0
+    font-size: 16px
+    font-weight: 600
+    line-height: 1.5
+    text-align: center
+    color: var(--gray-1)
+
+    &.with-description
+      padding: 32px 0 8px
+
+  &-description
+    padding: 0 24px 24px
+    font-size: 12px
+    line-height: 1.33
+    letter-spacing: normal
+    text-align: center
+    color: var(--gray-1)
+
+  &-message
+    padding: 0 0 56px
+    font-size: 14px
+    line-height: 1.71
+    color: var(--gray-1)
+
+.avv-generic-exception
+  &-block
+    padding: 0 16px
+
+  &-message
+    font-size: 12px
+    text-align: center
+    line-height: 1.33
+    margin: 40px 0
+
+  &-image
+    width: 112px
+    height: 112px
+    margin: 0 auto
+
+.avv-generic-accordion
+  position: relative
+  margin-top: 32px
+
+  &-title
+    display: inline-block
+    float: right
+    position: relative
+    padding-left: 20px
+
+    i
+      position: absolute
+      top: 2px
+      left: 0
+      font-size: 16px
+      transition: .3s
+      color: var(--quaternary)
+
+    span
+      font-size: 11px
+      font-weight: 600
+      line-height: 1.45
+      color: var(--blue-2)
+
+  &-content
+    width: 100%
+    max-height: 0
+    overflow: hidden
+    transition: .3s
+    font-size: 0
+
+    ::ng-deep
+      &:first-child
+        .form-input
+          margin: 16px 0 32px
+
+  .form-input
+    margin: 12px 0 4px
+
+  &.active
+    max-height: 400px
+
+    .avv-generic-accordion-title
+      i
+        transform: rotate(180deg)
+
+    .avv-generic-accordion-content
+      max-height: 400px

@@ -1,0 +1,182 @@
+@import 'utils'
+
+.calendar-container
+  position: relative
+  width: 100%
+  height: 100vh
+
+  .calendar-header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1
+
+    &-top
+      position: relative
+      padding: calc(16px + var(--safe-area-inset-top)) $spacer-2 $spacer-2
+      height: calc(56px + var(--safe-area-inset-top))
+      background-color: var(--red-1)
+      box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+      p, i
+        color: var(--white)
+
+      p
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.2
+
+      i
+        position: absolute
+        bottom: 0
+        right: 0
+        padding: $spacer-2
+        font-size: 24px
+
+    &-bottom
+      padding: $spacer-2
+      background-color: var(--gray-4)
+      box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+      &-title
+        font-size: 16px
+        font-weight: 600
+        line-height: 2
+        color: var(--gray-1)
+        margin-bottom: 8px
+
+  .calendar-footer
+    position: fixed
+    bottom: var(--safe-area-inset-bottom)
+    left: 0
+    width: 100%
+    padding: 8px
+    text-align: center
+    z-index: 1
+
+    button
+      max-width: 290px
+      width: 100%
+
+  .calendar-body
+    position: fixed
+    top: 0
+    padding: calc(190px + var(--safe-area-inset-top)) 16px calc(64px + var(--safe-area-inset-bottom))
+    width: 100%
+    height: 100%
+    overflow: auto
+    z-index: 0
+
+    .calendar-month
+      .month-header
+        margin: 16px 0 8px
+        font-size: 18px
+        line-height: 1.78
+        text-align: center
+        color: var(--gray-1)
+
+        b, p
+          font-size: 18px
+          line-height: 1.78
+          user-select: none
+          display: inline-block
+          color: var(--gray-1)
+
+        p
+          padding-left: 4px
+
+
+      .month-labels
+        list-style: none
+        padding: 0
+        margin: 0 0 1px
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+        > li
+          font-size: 14px
+          line-height: 1.71
+          text-align: center
+          color: var(--gray-2)
+          user-select: none
+
+      .month-row
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        user-select: none
+
+        .month-value
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 14.285714286%
+          height: 13.16vw
+          float: left
+          text-align: center
+          font-size: 14px
+          color: var(--gray-1)
+          user-select: none
+          // transition: .3s background-color, color
+
+          &.previous, &.next
+            visibility: hidden
+            opacity: 0
+
+          &.next
+            display: none
+
+          &.in-range
+            color: var(--blue-1)
+            background-color: var(--blue-4)
+
+          &.disabled
+            color: var(--gray-5)
+
+          &:hover
+            cursor: pointer
+
+            &.disabled
+              cursor: not-allowed
+
+          &.in-range-right,
+          &.in-range-left
+            &::after
+              content: ''
+              position: absolute
+              background-color: var(--blue-4)
+              height: 100%
+              width: 25px
+              top: 0
+              z-index: -1
+
+          &.in-range-right
+            &::after
+              right: 0
+
+          &.in-range-left
+            &::after
+              left: 0
+
+            &.in-range-right
+              &::after
+                display: none
+
+          &.is-weekend:not(.disabled):not(.selected):not(:hover):not(.in-range):not(.in-range-left):not(.in-range-right):not(.is-today)
+            color: var(--gray-1)
+
+          &.is-today
+            color: var(--blue-1)
+
+          &.selected
+            color: var(--white)
+            border-radius: 50%
+            transition: .3s background-color, color
+            background-color: var(--blue-1)
+
+            &.is-today
+              color: var(--white)
+              font-weight: 600

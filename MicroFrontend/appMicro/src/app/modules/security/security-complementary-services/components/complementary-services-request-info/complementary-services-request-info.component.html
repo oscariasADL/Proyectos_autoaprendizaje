@@ -1,0 +1,32 @@
+<div class="complementary-services-request-info-container">
+    <p class="semi-bold complementary-services-request-info-title">
+       Tienes que pedir una clave de registro en oficina o cajero Red Aval
+    </p>
+    <img [src]="'icons/app-de-seguridad.svg' | imageUrl" alt="" draggable="false">
+
+    <ul class="avv-list-blue-point complementary-services-request-info-list">
+        <li>
+            <p class="small">
+                Dirígete a uno de los cajeros de la Red Aval: Banco AV Villas, Banco de Bogotá, Banco de Occidente,
+                Banco Popular.
+            </p>
+        </li>
+
+        <li>
+            <p class="small">
+                Ingresa tu tarjeta y selecciona <b>Banca virtual</b> en la pantalla.
+            </p>
+        </li>
+
+        <li>
+            <p class="small">
+                Elige <b>Opciones para Banca móvil</b> y luego <b>Generar clave para registro</b>
+            </p>
+        </li>
+    </ul>
+
+    <button class="avv-btn-primary" (click)="continue.emit()">
+        {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+    </button>
+
+</div>

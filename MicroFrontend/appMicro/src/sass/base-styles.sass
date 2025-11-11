@@ -1,0 +1,1322 @@
+@import 'variables'
+@import 'fonts'
+@import 'colors'
+@import 'icons'
+@import 'input'
+@import 'radio'
+@import 'buttons'
+@import 'forms'
+@import 'modal'
+@import 'stepper'
+@import 'alert'
+@import 'mixins'
+@import 'toast'
+@import 'spinner'
+@import 'icons-btn-list'
+@import 'tabs'
+@import 'spacing'
+@import 'animations'
+@import 'progress-bar'
+@import 'popover'
+@import '@avaldigitallabs/bavv-commons-lib-design-system/dist/css/bavv-design-system.min.css'
+
+html
+  font-size: $font-size-base
+  @media (min-width: $max-width-sm)
+    font-size: $font-size-sm
+
+*
+  --ion-font-family: Onest
+  --ion-default-font: Onest
+  font-family: Onest
+  --keyboard-offset: 0 !important
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+p,
+b,
+button,
+img,
+ion-title,
+li
+  margin: 0
+  user-select: none
+
+  &:not(:disabled):not(.disabled):active:focus,
+  &:focus,
+  &:active:focus,
+  &:focus-within
+    outline: none
+    box-shadow: none
+
+img
+  border: none
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small
+  color: var(--gray-1)
+  position: relative
+  margin: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small
+  &.semi-bold
+    font-weight: 600
+
+  &.bold
+    font-weight: bold
+
+h1
+  font-size: 56px
+  line-height: 1.14
+
+h2
+  font-size: 40px
+  line-height: 1.4
+
+h3
+  font-size: 32px
+  line-height: 1.5
+
+h4
+  font-size: 24px
+  line-height: 1.33
+
+h5
+  font-size: 20px
+  line-height: 1.6
+
+h6
+  font-size: 18px
+  line-height: 1.78
+
+mark
+  color: inherit
+  background: none
+  display: inline-block
+
+p
+  font-size: 16px
+
+  &.small
+    font-size: 11px
+    line-height: 1.71
+
+small
+  font-size: 12px
+  line-height: 1.33
+  display: inline-block
+
+span
+  &.decimal-numbers-format
+    vertical-align: top
+    font-size: calc(1em - 2px)
+
+.avv-custom-modal
+  --height: auto
+  // align-items: end
+
+  &::part(content)
+    position: absolute
+    bottom: 0
+    background: transparent
+    border-radius: 10px 10px 0 0
+
+    .ion-page
+      position: relative
+      display: initial
+
+.avv-custom-center-modal2
+  --height: auto
+
+  &::part(content)
+    position: absolute
+    top: 0
+    transform: translate3d(0px, 0px, 0px)
+    background-color: rgba(0, 0, 0, 0.3)
+    opacity: 1
+
+    .ion-page
+      position: relative
+      display: initial
+
+.avv-custom-center-modal
+  --height: auto
+
+  &::part(content)
+    background: transparent
+    border-radius: 4px
+    margin: 16px
+    max-width: 300px
+
+    .ion-page
+      position: relative
+      display: initial
+
+.display-none
+  display: none !important
+
+.display-block
+  display: block !important
+
+.visibility-hidden
+  visibility: hidden !important
+
+.text-center
+  text-align: center
+
+.text-left
+  text-align: left !important
+
+.header-border
+  border-bottom: 1px solid var(--gray-3)
+
+  i
+    font-size: 22px
+    position: absolute
+    top: 4px
+    left: 10px
+
+.avv-title-bold
+  font-weight: bold
+
+.avv-title-semibold
+  font-weight: 600
+
+.progress
+  position: relative
+  width: 100%
+  height: 5px
+  border-radius: 2.5px
+  background-color: var(--gray-4)
+  overflow: hidden
+  margin: 5px 0
+
+  span
+    position: absolute
+    left: 0
+    top: 0
+    height: 5px
+    border-radius: 2.5px
+    background-color: var(--blue-1)
+
+ion-menu
+  --width: 100%
+  --min-width: 100%
+
+.nav-buttons
+  white-space: nowrap
+  width: 100%
+  overflow-x: auto
+  display: inline-block
+  margin: 20px 0
+
+  &::-webkit-scrollbar
+    display: none
+
+  button
+    font-size: 14px
+    font-weight: 600
+    color: var(--gray-3)
+    width: 90px
+    height: 30px
+    border: 1px solid var(--gray-3)
+    border-radius: 15px
+    padding: 8px 0 6px
+    background: transparent
+    margin-right: 10px
+
+    &:last-child
+      margin-right: 0
+
+    &.active
+      border: 1px solid var(--blue-1)
+      color: var(--blue-1)
+      cursor: pointer
+
+.product-square-card
+  border-radius: 5px
+  box-shadow: 0 0 10px 0 rgba(195, 207, 226, 0.7)
+  background-color: var(--white)
+  position: relative
+  overflow: hidden
+  width: 290px
+  height: 170px
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 5px
+    height: 100%
+    background-color: var(--gray-4)
+
+  .product-content
+    padding: 20px 15px 10px 20px
+    width: 100%
+    height: 100%
+
+  .product-header
+    text-align: left
+
+    p
+      color: var(--gray-1)
+
+    .product-name
+      display: flex
+      align-items: center
+      margin-bottom: 4px
+
+      p
+        font-weight: bold
+        display: inline-block
+        line-height: 1.5
+
+      .product-franchise
+        margin-right: 6px
+        margin-top: -5px
+        margin-left: -5px
+
+    .product-number
+      font-size: 14px
+      line-height: 1.43
+
+
+  .product-body
+    .product-label
+      font-size: 14px
+      line-height: 1.43
+      color: var(--gray-1)
+
+    .product-value
+      font-size: 20px
+      font-weight: 600
+      line-height: 1.5
+      color: var(--gray-1)
+
+    .product-body-available
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-top: 20px
+
+    .product-body-information
+      margin-top: 10px
+
+      div
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+      .expense
+        font-size: 12px
+        line-height: 1.67
+        color: var(--gray-3)
+        text-align: left
+
+
+  .product-footer
+    position: absolute
+    left: 12px
+    bottom: 2px
+    display: inline-block
+
+    p
+      font-size: 14px
+      color: var(--blue-2)
+      padding: 8px
+      font-weight: 600
+
+.avv
+  &-shadow
+    border-radius: 5px
+    box-shadow: 0 0 10px 0 rgba(195, 207, 226, 0.7)
+
+  &-padding
+    padding: 16px 16px 30px
+
+  &-skeleton
+    width: 100%
+    height: 60px
+    border-radius: 5px
+    margin: 0 0 10px
+
+  &-fab-btn
+    padding: 0
+    margin: 0
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: var(--white)
+    box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+    i
+      font-size: 24px
+      color: var(--blue-2)
+
+    &:not(:disabled):not(.disabled):active:focus, &:focus, &:active:focus, &:focus-within, &:active
+      outline: none
+      box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+.avv-skeleton
+  background-color: var(--gray-4)
+  transition: .5s
+  animation-duration: 2s
+  animation-iteration-count: infinite
+  animation-name: loader-animate
+  animation-timing-function: linear
+
+// Loader animation
+@keyframes loader-animate
+  0%
+    opacity: 0.3
+
+  50%
+    opacity: 1
+
+  100%
+    opacity: 0.3
+
+.avv-contact-card
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  border-radius: 4px
+  overflow: hidden
+  background-color: var(--white)
+  box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+  margin-bottom: 8px
+  height: 56px
+  text-align: left
+  width: 100%
+
+  .contact-image
+    width: 48px
+    min-width: 48px
+    height: 100%
+    background-color: red
+    font-size: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: var(--white)
+
+  .contact-image-icon
+    width: 56px
+    min-width: 48px
+    height: 100%
+    font-size: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: var(--blue-1)
+
+  .contact-info
+    padding: 8px 36px 4px 15px
+    width: calc(100% - 48px)
+    height: 100%
+
+    .name
+      margin: 0
+      font-size: 14px
+      line-height: 1.56
+      color: var(--gray-1)
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+
+    .nickname
+      line-height: 1.56
+      margin-top: -4px
+      font-size: 14px
+      text-transform: capitalize
+      color: var(--gray-2)
+
+  .contact-icon
+    font-size: 24px
+    color: var(--blue-1)
+    position: absolute
+    right: 12px
+    top: 50%
+    transform: translateY(-50%)
+
+  &.one-item
+    .contact-info
+      height: inherit
+      display: flex
+      align-items: center
+
+  &.single-icon
+    margin-bottom: 16px
+
+    .contact-info
+      height: inherit
+      display: flex
+      align-items: center
+      padding: 8px 36px 4px 0
+
+      .name
+        font-size: 16px
+
+  &:disabled
+    opacity: .5
+
+.avv-voucher-list
+  .avv-voucher-item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 16px 0
+    border-bottom: solid 1px #EBEDEF
+
+    .avv-voucher-label
+      font-size: 14px
+      font-weight: 600
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.43
+      letter-spacing: normal
+      color: var(--gray-1)
+
+      .failed
+        color: #CB3A29
+
+      small
+        font-weight: 400
+
+        &.opaque
+          color: var(--gray-7)
+
+    .avv-voucher-description
+      text-align: right
+      display: flex
+      align-items: flex-end
+      position: relative
+      flex-direction: column
+
+      p
+        font-size: 14px
+        line-height: 1.43
+        color: var(--gray-1)
+
+      img
+        height: 34px
+        margin-top: -11px
+        margin-bottom: -11px
+
+      .avv-voucher-edit
+        position: absolute
+        top: -14px
+        right: -14px
+        padding: 14px 14px 14px 24px
+        font-size: 16px
+        color: var(--blue-1)
+
+      .avv-voucher-fields
+        padding-right: 32px
+
+        p > small
+          color: var(--gray-7)
+
+      .franchise-img
+        height: 16px
+        width: 30px
+        position: relative
+        top: -2px
+        margin: 0 4px 0 0
+
+    &.main
+      align-items: center
+
+      .avv-voucher-description
+        .avv-voucher-fields
+          p
+            font-size: 20px
+            font-weight: 600
+            color: var(--blue-1)
+
+    &.list
+      .avv-voucher-description
+        .avv-voucher-fields
+          text-align: left
+
+          p
+            font-size: 14px
+            margin-bottom: 8px
+            padding-left: $spacer
+            position: relative
+
+            &::before
+              content: ''
+              position: absolute
+              top: 7px
+              left: 0
+              width: 4px
+              height: 4px
+              border-radius: 50%
+              background-color: var(--red-1)
+
+    &.multiple-items
+      .avv-voucher-description
+        width: 100%
+
+        .avv-voucher-edit
+          top: inherit
+          bottom: -10px
+
+        .avv-voucher-fields
+          width: 100%
+
+          p
+            display: flex
+            align-items: center
+            justify-content: space-between
+            line-height: 1.71
+
+            span
+              &.big
+                font-size: 16px
+                line-height: 1.5
+
+              &.small-opaque
+                font-size: 12px
+                text-align: right
+                width: 100%
+
+    &.note
+      padding: 15px 0 5px 0
+      border: none
+      justify-content: flex-start
+
+      .avv-voucher-label
+        padding-right: 4px
+
+      .avv-voucher-description
+        flex: 1
+        align-items: flex-start
+
+    &.additional-data
+      padding: 0
+      border: none
+      justify-content: flex-start
+
+      .avv-voucher-label
+        padding-right: 4px
+
+      .avv-voucher-description
+        flex: 1
+        align-items: flex-start
+
+
+    &.with-action
+      .avv-voucher-description
+        flex-direction: row
+        align-items: center
+        gap: $spacer-2
+
+        .avv-voucher-action
+          font-size: 18px
+          color: var(--blue-1)
+
+  &.no-end-line
+    .avv-voucher-item
+      &:last-child
+        border-bottom: none
+
+  &.no-padding-right
+    .avv-voucher-item
+      .avv-voucher-description
+        .avv-voucher-fields
+          padding-right: 0
+
+  &.inverted-bold
+    .avv-voucher-item
+      .avv-voucher-label
+        font-weight: 500
+
+      .avv-voucher-description p
+        font-weight: 600
+
+.franchise-img
+  height: 16px
+  width: 30px
+  position: relative
+  top: -2px
+  margin: 0 4px 0 0
+
+.avv-calendar-item
+  position: relative
+  display: inline-block
+  font-size: 0
+  padding: 6px 16px
+  width: calc((100% - 16px) / 2)
+  height: 56px
+  border-radius: 4px
+  border: solid 1px var(--gray-3)
+  background-color: var(--white)
+  overflow: hidden
+
+  &:last-child
+    margin-left: 16px
+
+  &.active
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: var(--blue-1)
+
+  small
+    font-size: 12px
+    line-height: 1.67
+    color: var(--blue-1)
+
+  p
+    font-size: 4.267vw
+    line-height: 1.5
+    color: var(--gray-1)
+
+  i
+    font-size: 6.400vw
+    color: var(--blue-1)
+    position: absolute
+    top: 16px
+    right: 16px
+
+ion-content
+
+  &.content-generic-stepper
+    border-bottom: 8px solid var(--red-1)
+
+
+.avv-action-item
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  margin-right: 2.667vw
+
+  &-image
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 14.933vw
+    height: 14.933vw
+    border-radius: 50%
+    margin: 0 1.867vw 2.133vw
+    background: var(--white)
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+
+    > img
+      padding: 1.25vw
+
+  &-description
+    font-size: 2.68vw
+    line-height: 1.2
+    color: var(--gray-1)
+    text-align: center
+    width: 18.667vw
+
+  &.border-solid
+    margin-bottom: 6.400vw
+
+    .avv-action-item-image
+      box-shadow: none
+      border: solid 0.9px var(--gray-6)
+
+.avv-toggle-text
+  position: relative
+
+  p
+    padding-right: 48px
+
+    &:before
+      content: ''
+      position: absolute
+      top: -2px
+      right: 0
+      width: 40px
+      height: 24px
+      border-radius: 12.1px
+      background-color: var(--gray-3)
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 18px
+      width: 20px
+      height: 20px
+      transition: .3s
+      border-radius: 50%
+      box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+      background-color: var(--white)
+
+  &.active
+    p
+      &:before
+        background-color: var(--success)
+
+      &:after
+        right: 2px
+        background-color: var(--white)
+
+.avv-check-text
+  position: relative
+  margin-top: $spacer-3
+  width: 100%
+  text-align: left
+
+  i
+    display: none
+    position: absolute
+    left: 1px
+    top: 1px
+    color: var(--white)
+    z-index: 1
+    font-size: 16px
+
+  p
+    position: relative
+    padding-left: 26px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 18px
+      height: 18px
+      border-radius: 2px
+      background-color: var(--gray-6)
+
+  &.active
+    i
+      display: inline-block
+
+    p:before
+      background-color: var(--blue-1)
+
+  &.green
+    p:before
+      border-radius: 4px
+
+    &.active
+      p:before
+        background-color: var(--success)
+
+.progress-circular-container
+  display: block
+  text-align: center
+
+  &:first-child
+    margin-bottom: 20px
+
+  .progress-circular
+    transform: rotate(-90deg)
+
+  .progress__meter,
+  .progress__value
+    fill: none
+
+  .progress__meter
+    stroke: var(--gray-4)
+
+  .progress__value
+    stroke: var(--blue-1)
+    transition: stroke-dashoffset .5s linear
+
+.avv-select-list
+  +flex(center, center)
+  margin-bottom: $spacer-3
+
+  li
+    +flex(center, center)
+    width: 50%
+    height: 48px
+    margin: 0 8px
+    border-radius: 4px
+    border: solid 1px var(--gray-4)
+    background-color: var(--white)
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+    p
+      line-height: 1.5
+      color: var(--blue-1)
+      margin-top: 4px
+
+    &.active
+      border: solid 1px var(--blue-1)
+
+.avv-content-empty
+  text-align: center
+
+  &-image
+    text-align: center
+    margin-bottom: 16px
+
+    > img
+      width: 112px
+      height: 112px
+
+  &-text
+    margin-bottom: 32px
+    line-height: 1.5
+
+  &-message
+    display: block
+    color: var(--gray-1)
+
+.avv-list-panel
+  &-title
+    padding: $spacer 0 $spacer
+
+.avv-panel-empty
+  text-align: center
+  padding: 24px
+
+  &-image
+    text-align: center
+    margin-bottom: 16px
+
+    > img
+      width: 112px
+      height: 112px
+
+  &-text
+    margin-bottom: 40px
+    line-height: 1.33
+
+.avv-option-select
+  padding: $spacer-4 $spacer-2
+
+  &-title
+    padding-bottom: $spacer-4
+
+  &-form
+    padding: 0
+
+    ::ng-deep
+      .form-input
+        padding: 0
+        margin-bottom: 32px
+
+  &-item
+    +flex(center, space-between)
+    padding-left: 28px
+    position: relative
+
+    &-message
+      margin-top: $spacer-2
+      color: var(--gray-2)
+      text-align: left
+      max-height: 0
+
+    &-input-panel
+      margin-top: $spacer-2
+
+      ::ng-deep
+        .form-input
+          padding: 0
+          margin-bottom: 0
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      border: solid 1px var(--gray-1)
+      background-color: var(--white)
+
+    &:after
+      content: ''
+      position: absolute
+      top: 3px
+      left: 3px
+      border-radius: 50%
+      width: 14px
+      height: 14px
+      background-color: var(--blue-1)
+      visibility: hidden
+      opacity: 0
+      transition: .3s
+
+  &-option
+    position: relative
+    padding: $spacer-2
+    border-radius: 4px
+    border: solid 1px var(--gray-6)
+    background-color: var(--white)
+    margin-bottom: $spacer-2
+    max-height: 56px
+    overflow: hidden
+    transition: .3s
+
+    &:last-child
+      margin-bottom: $spacer-4
+
+    &.active
+      border: solid 1px var(--blue-1)
+      max-height: 600px
+
+      .avv-option-select-item
+        &:after
+          visibility: visible
+          opacity: 1
+
+      &.error
+        border: solid 1px var(--gray-1)
+
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 3px
+          background-color: var(--red-2)
+
+    ::ng-deep
+      .validation-text
+        margin-top: $spacer-1
+
+.avv-opaque
+  p
+    font-size: 14px
+    line-height: 1.71
+    color: var(--gray-2)
+
+.bg-gray
+  background-color: var(--gray-4)
+
+.bg-white
+  background-color: var(--white)
+
+.auth-steps-container
+  text-align: center
+  overflow: auto
+
+  .auth-steps-header
+    width: 100%
+    height: calc(56px + var(--safe-area-inset-top))
+    border: solid 1px var(--gray-4)
+    padding: calc(12px + var(--safe-area-inset-top)) 16px 12px
+    +flex(center, space-between)
+    color: var(--gray-11)
+
+    i
+      font-size: 16px
+      color: var(--gray-11)
+
+  .auth-steps-footer
+    width: 100%
+    height: 8px
+    background-color: var(--red-1)
+    margin-top: var(--safe-area-inset-bottom)
+
+  .auth-steps-body
+    display: inline-block
+    text-align: center
+    width: 100%
+    min-height: calc(100vh - 64px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom))
+    padding: $spacer-4 $spacer-2
+
+    @media(max-width: 320px)
+      transform: scale(0.9)
+      padding: 0
+
+    .auth-steps-title,
+    .auth-steps-description,
+    .auth-steps-sub-description
+      text-align: center
+
+    .auth-steps-title
+      line-height: 1.5
+
+    .auth-steps-description
+      margin: $spacer 0 0
+
+    .auth-steps-sub-description
+      margin: $spacer-4 0 0
+
+    .input-password-container
+      margin-top: $spacer-2
+
+    .auth-steps-btn
+      margin-top: $spacer-4
+      max-width: 290px
+
+    .auth-steps-link
+      display: inline-block
+      font-size: 14px
+      font-weight: 600
+      line-height: 1.57
+      text-align: center
+      color: var(--blue-2)
+      margin-top: $spacer-3
+
+      i
+        position: relative
+        top: 4px
+        left: 2px
+        font-size: 24px
+
+    .auth-steps-secure-input
+      .form-input
+        padding: $spacer-3 0 $spacer
+
+    .auth-steps-otp
+      .input-password-container
+        width: 100%
+
+        fieldset
+          width: 100%
+
+          .password-input
+            width: 100%
+            +flex(center, space-between)
+
+.avv-list-red-point
+  text-align: left
+
+  li
+    position: relative
+    padding-left: $spacer-2
+
+    &:before
+      content: ''
+      position: absolute
+      top: 6px
+      left: 0
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: var(--red-1)
+
+  &.space
+    li
+      margin-bottom: 8px
+
+      &:last-child
+        margin-bottom: 0
+
+.avv-list-blue-point
+  text-align: left
+  padding-left: 4px
+
+  li
+    position: relative
+    padding-left: $spacer-3
+    margin-bottom: $spacer
+
+    &:before
+      content: ''
+      position: absolute
+      top: 8px
+      left: 0
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: #0080ef
+
+.avv-list-icons
+  background-color: var(--white)
+  box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+
+  li
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 16px 0
+    margin: 0 16px
+    border-bottom: 1px solid var(--gray-4)
+    background-color: var(--white)
+
+    .avv-list-name
+      +flex()
+
+      i
+        font-size: 24px
+        margin-right: 16px
+
+      p
+        font-size: 16px
+        line-height: 1.5
+        color: var(--gray-1)
+        font-weight: normal
+
+.avv-toggle
+  position: relative
+  width: 40px
+  height: 24px
+  border-radius: 12.1px
+  background-color: var(--gray-3)
+
+  &:before
+    content: ''
+    position: absolute
+    left: 2px
+    top: 2px
+    transition: .3s
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+    background-color: var(--white)
+
+  &.active
+    background-color: var(--success)
+
+    &:before
+      left: 18px
+
+.avv-bottom-line
+  width: 100%
+  height: 8px
+  background-color: var(--red-1)
+  margin-top: var(--safe-area-inset-bottom)
+
+  &.bottom
+    position: absolute
+    bottom: 0
+
+.avv-preview-selected
+  padding: $spacer-2
+  text-align: left
+
+  .pay-info
+    padding: $spacer-1 0 $spacer-1
+
+    .row
+      display: flex
+      justify-content: space-between
+      width: 100%
+
+.avv-pb-with-footer
+  padding-bottom: calc(20px + var(--footer-heigth) + var(--safe-area-inset-bottom)) !important
+
+.avv-information-link
+  +flex(center, flex-start)
+  padding: $spacer-2 $spacer-2 0
+  text-align: left
+  color: var(--blue-1)
+
+  i
+    font-size: 16px
+    color: var(--blue-1)
+    margin-top: -2px
+    margin-right: $spacer
+
+  small
+    color: var(--blue-1)
+    font-weight: 600
+    text-decoration: underline
+
+.transfer-transfiya-info-alert
+  padding-bottom: 8px !important
+
+  .alert-info
+    &-icon
+      margin: 8px 0 !important
+
+    &-items
+      margin-top: 16px !important
+
+.footer-bar
+  position: relative
+  background-color: var(--red-1)
+  width: 100%
+  height: 8px
+
+.product-actions-list
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-wrap: wrap
+
+  li
+    flex: 1 0 calc(25% - 12px)
+    margin: 0 16px 0 0
+    max-width: calc(25% - 12px)
+    text-align: center
+
+    &:nth-child(4n)
+      margin-right: 0
+
+span.normal
+  font-weight: 400 !important
+
+.toolbar-no-safe-area
+  .header-container
+    padding: 16px 2px 16px 0 !important
+    height: 56px !important
+
+.avv-toast-survey
+  background: #0048DB
+  color: #FFFFFF
+
+  .toast-title
+    color: #FFFFFF
+
+    img
+      margin-left: 14px
+
+.width-auto
+  width: auto !important
+
+/**
+  * Barcode Scanning
+  * -------------------------------------------
+  */
+body.barcode-scanning-active
+  visibility: hidden
+  background-color: transparent
+  --background: transparent
+  --ion-background-color: transparent
+
+.barcode-scanning-modal
+  visibility: visible
+
+.movement-date
+  display: block
+  height: 28px
+  width: 100%
+  background-color: #F8F9FA
+  font-size: 14px
+  line-height: 20px
+  font-weight: 600
+  padding: 4px 12px
+
+.forgot-pass-popup
+  color: #0048DB !important
+  font-weight: 600

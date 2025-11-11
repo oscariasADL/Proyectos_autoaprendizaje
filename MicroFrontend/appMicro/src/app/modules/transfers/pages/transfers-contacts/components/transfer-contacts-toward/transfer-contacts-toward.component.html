@@ -1,0 +1,18 @@
+<div class="avv-generic-step transfer-contacts-toward-step">
+  <p *ngIf="(contacts$ | async).length > 0" class="avv-generic-step-title">
+    {{ 'TRANSFERS.CONTACTS.TOWARD.TITLE' |translate }}
+  </p>
+  <ng-container *ngIf="amount.currencyValue() >= transfiyaMinimumAmount">
+    <div class="avv-generic-step-list">
+      <app-contact-book [working]="contactsWorking$ | async" [contacts]="contactsFiltered$ | async"
+        [showSearch]="(contacts$ | async).length > 5" [filter]="keyWord" (setFilter)="listenSearch($event)"
+        (clicked)="selectContact($event)">
+      </app-contact-book>
+    </div>
+    <div class="avv-alert-info mt-3">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text" [innerHtml]="'TRANSFERS.CONTACTS.TOWARD.CONTACT_NOT_FOUND' | translate">
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,49 @@
+<div class="pay-loan-type">
+  <p class="pay-loan-type-title semi-bold">{{ 'PAYMENTS.PAY_LOAN.TYPE_STEP.TITLE' | translate }}</p>
+  <div class="pay-loan-type-sub-title">
+    <p>{{ 'PAYMENTS.PAY_LOAN.TYPE_STEP.SUB_TITLE' | translate }}</p>
+    <p [attr.aria-label]="amount | numberFormat"
+       [innerHTML]="amount | currencyFormat"></p>
+  </div>
+
+  <form (submit)="continue.emit()" class="pay-loan-type-form">
+
+    <ul class="pay-loan-type-options">
+      <li class="pay-loan-type-option"
+          [ngClass]="{'active': paymentType.value === payLoanPaymentType.normal}"
+          (click)="setActiveType(payLoanPaymentType.normal)">
+        <div class="pay-loan-type-item">
+          <p class="small">{{ 'PAYMENTS.PAY_LOAN.TYPE_STEP.MONTHLY_INSTALLMENT_PAYMENT' | translate }}</p>
+        </div>
+      </li>
+
+      <li class="pay-loan-type-option"
+          (click)="setExtraordinaryPayment()"
+          [ngClass]="{'active': isExtraordinaryPayment}">
+        <div class="pay-loan-type-item">
+          <p class="small">{{ 'PAYMENTS.PAY_LOAN.TYPE_STEP.EXTRAORDINARY_PAYMENT' | translate }}</p>
+        </div>
+        <div class="pay-loan-type-item-input-panel" *ngIf="isExtraordinaryPayment">
+          <small class="pay-loan-type-info">
+            {{ 'PAYMENTS.PAY_LOAN.TYPE_STEP.CHOOSE_REDUCE' | translate }}
+          </small>
+
+          <ul class="avv-select-list mb-0">
+            <li *ngFor="let item of payLoanPaymentTypeList"
+                [ngClass]="{'active': item.value === paymentType.value}"
+                (click)="setActiveType(item.value)">
+              <p>{{ item.label | translate }}</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'pay-loan-type-btn'">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+
+</div>

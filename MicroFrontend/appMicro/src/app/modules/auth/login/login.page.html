@@ -1,0 +1,40 @@
+<ion-menu type="overlay" side="start" menuId="notifications" swipeGesture="false" contentId="login-content">
+  <app-notifications-menu></app-notifications-menu>
+</ion-menu>
+
+<ion-content [forceOverscroll]="false" id="login-content">
+  <main class="login-container"
+        [ngClass]="{'keyboard-shown': keyboardShown, 'login-type-document': (isLoginTypePassword$ | async) === false}">
+    <header class="login-header">
+      <img [src]="(isProduction ? 'av-villas-logo.svg' : 'av-villas-logo-black.svg') | imageUrl"
+           [alt]="'ACCESSIBILITY.LOGO' | translate" draggable="false">
+    </header>
+    <article class="login-cover" [hidden]="keyboardShown">
+      <small class="app-version" *ngIf="version$ | async as version">V {{ version }}</small>
+      <img [src]="'login-text-image.png' | imageUrl" class="login-cover__text-image" draggable="false" alt=""/>
+      <img [src]="'login-picture.webp' | imageUrl" class="login-cover__picture"
+           [ngClass]="{'user-logged-picture': (isLoginTypePassword$ | async)}" draggable="false" alt=""/>
+    </article>
+    <article class="login-content">
+      <section class="login-body" *ngIf="loginType$ | async as currentLoginType">
+        <app-login-document *ngIf="currentLoginType === loginType.Document" (setDocument)="setDocument($event)"
+                            (loaded)="setContentLoaded()">
+        </app-login-document>
+
+        <app-login-password [showSpiKeyOnLoginPage]="showSpiKeyOnLoginPage()"
+                            *ngIf="currentLoginType === loginType.Password" [userName]="userName"
+                            [working]="working$ | async"
+                            (redirectForgotPassword)="redirectForgotPassword()" (loginUser)="login($event, false)"
+                            (loaded)="setContentLoaded()">
+
+          <app-login-biometric (loginUser)="login($event, true)">
+          </app-login-biometric>
+        </app-login-password>
+      </section>
+      <app-footer class="login-footer" [menuListLeft]="menuListLeft"
+                  [principalListItem]="menuListCenter" [menuListRight]="menuListRight" [isColorBlack]="false"
+                  [mainButtonColor]="'red'">
+      </app-footer>
+    </article>
+  </main>
+</ion-content>

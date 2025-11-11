@@ -1,0 +1,25 @@
+<ion-content>
+  <article class="payment-services-create-scheduling-confirm">
+    <h2>{{ (!isEdit ? 'PAYMENTS.SERVICES.SCHEDULING.CONFIRM.TITLE' : 'PAYMENTS.SERVICES.SCHEDULING.CONFIRM.TITLE_EDIT') | translate }}</h2>
+    <section>
+      <div class="summary">
+        <app-voucher-list
+          [items]="summaryCreateScheduling$ | async"
+          [className]="'no-end-line no-padding-right'">
+        </app-voucher-list>
+        <p>
+          {{ 'PAYMENTS.SERVICES.SCHEDULING.CONFIRM.NOTE' | translate }}
+        </p>
+      </div>
+      <div class="actions">
+        <button type="button" class="avv-btn-primary" (click)="createScheduling()">
+          {{ 'PAYMENTS.SERVICES.SCHEDULING.CONFIRM.ACTION' | translate }}
+        </button>
+        <a href="javascript:void(0)" class="avv-link-underline" tabindex="0" (click)="editInfo()">
+          <i class="icon-editar"></i>
+          {{ 'PAYMENTS.SERVICES.SCHEDULING.CONFIRM.ACTION_EDIT' | translate }}
+        </a>
+      </div>
+    </section>
+  </article>
+</ion-content>

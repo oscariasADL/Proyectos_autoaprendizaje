@@ -1,0 +1,38 @@
+@import 'utils'
+
+.accounts-step
+  text-align: left
+  padding: 0
+
+  &-title
+    padding: 32px 24px 8px
+
+  &-description
+    padding: 0 32px
+
+  &-list
+    height: 100%
+    margin-top: 24px
+    padding: 0 16px
+
+  &-working
+    +flex(center, center, column)
+    padding: 0 16px
+
+    &-title
+      width: 60%
+      height: 24px
+      margin: $spacer-4 0
+
+    &-card
+      width: 100%
+      height: 56px
+      margin: 0 0 $spacer-2
+
+  ::ng-deep
+    .product-card
+      margin: 0 16px 16px
+
+      &.credit-card-for-advance
+        margin: 0 16px 26px
+

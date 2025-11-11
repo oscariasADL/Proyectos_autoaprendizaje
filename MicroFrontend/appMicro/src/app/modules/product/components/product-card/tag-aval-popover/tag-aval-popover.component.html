@@ -1,0 +1,21 @@
+<div class="avv-popover-content">
+  <div>
+    <p class="title bold">{{ title | translate}} </p>
+    <p class="text">{{ text | translate}}
+    </p>
+        <ng-template  [appFeatureToggle]="featureFlagsKey.CustomizationTagAval">
+    <p *ngIf="isCustomizationEnabled" class="title bold">{{ 'PRODUCT.SPI_KEYS.CUSTOMATIZATION_TITLE' | translate}} </p>
+    <div *ngIf="isCustomizationEnabled">
+  
+      <span class="text avv-link-underline" (click)="redirectToTagAval()" [utagCategory]="tagAvalEvent.event_category"
+        [utag]="tagAvalEvent.event_label">
+        {{'PRODUCT.SPI_KEYS.MODIFY_LINK' |
+        translate}}
+      </span>
+      <span class="text">
+        {{'PRODUCT.SPI_KEYS.CUSTOMATIZATION_DESCRIPTION' | translate}}</span>
+    </div>
+    </ng-template>
+  </div>
+  <i class="icon-salir" (click)="closePopover()"></i>
+</div>

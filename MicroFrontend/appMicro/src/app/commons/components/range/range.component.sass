@@ -1,0 +1,26 @@
+@import 'utils'
+
+.range-container
+  padding: 16px 24px
+  background-color: var(--gray-4)
+
+  small
+    margin-bottom: 30px
+
+  ion-range
+    --bar-background: var(--blue-5)
+    --bar-background-active: var(--blue-1)
+    --knob-background: var(--blue-1)
+    --knob-size: 24px
+    --pin-background: var(--blue-1)
+    --pin-color: var(--white)
+    padding: 0 8px
+
+  .range-labels
+    position: relative
+    margin-top: -8px
+    +flex(center, space-between)
+
+    p
+      width: 16px
+      text-align: center

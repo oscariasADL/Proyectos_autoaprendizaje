@@ -1,0 +1,56 @@
+<div class="pocket-movements">
+  <h3 class="pocket-movements__title">{{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.MOVEMENTS.TITLE' | translate }}
+  </h3>
+  <div class="pocket-movements__filters">
+    <div class="pocket-movements__date-filters">
+      <app-movements-date-picker [date]="date" [params]="movementsDetailParams" [monthsBackward]="monthsBackward"
+                                 (changeEvent)="fetchMovementsWithFilters($event)">
+      </app-movements-date-picker>
+    </div>
+    <div class="pocket-movements__tags">
+      <app-tag *ngFor="let item of movementsFilters" [id]="item.id" [isActive]="filterSelected === item.filter"
+               (status)="setFilter(item.filter)" [label]="item.label | translate">
+      </app-tag>
+    </div>
+
+  </div>
+  <ng-container *ngTemplateOutlet="((working$ | async) && (completed$ | async) === false)
+                       ? loading : (movements$ | async).length > 0
+                       ? productMovementList : noMovements"></ng-container>
+</div>
+<ng-template #productMovementList>
+  <div class="pocket-movements-item" *ngFor="let group of (movements$ | async); let i = index;">
+    <div class="movement-item__title">
+      <small class="movement-item-date">
+        {{ group.date }} </small>
+    </div>
+    <div class="movement-item__content" *ngFor="let movement of group.movements">
+      <i class="icon-otros movement-item-icon" [attr.aria-hidden]="true"></i>
+      <div class="movement-item-content">
+        <p class="movement-item-title">
+          {{ movement.description }}
+        </p>
+        <p class="movement-item-value" role="text"
+           [attr.aria-label]="(movement.type === movementTypeDown ? '' : 'menos') + (movement.amount | numberFormat ) + ' CURRENCIES COP '"
+           [ngClass]="(movement.type === movementTypeDown) ? 'substract' : 'add'"
+           [innerHTML]="(movement.type === movementTypeDown ? '-' : '' ) + (movement.amount  | currencyFormat)">
+          {{ movement.amount }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <div class="pocket-movements__loading" *ngFor="let i of [1, 2, 3, 4]">
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+  </div>
+</ng-template>
+<ng-template #noMovements>
+  <div class="pocket-movements__no-content">
+    <app-pocket-without-movements></app-pocket-without-movements>
+  </div>
+</ng-template>

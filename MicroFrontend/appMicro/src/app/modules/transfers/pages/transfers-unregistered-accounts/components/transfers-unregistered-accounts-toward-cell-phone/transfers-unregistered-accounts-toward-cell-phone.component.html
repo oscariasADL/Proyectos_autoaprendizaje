@@ -1,0 +1,54 @@
+<div class="avv-generic-step transfer-unregistered-accounts">
+    <p class="avv-generic-step-title pb-4">{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_CELL_PHONE.TITLE' | translate }}</p>
+
+    <form [formGroup]="formGroup" (submit)="continue.emit()" class="avv-generic-step-content">
+        <avv-radio
+                class="avv-radio-input full"
+                [id]="'transfer-toward-type'"
+                [items]="transfersUnregisteredTypeList"
+                [control]="transferType">
+        </avv-radio>
+
+        <div (click)="showTransfiyaInfo()"
+             class="avv-information-link transfer-unregistered-accounts-information-link">
+            <i class="icon-info"></i>
+            <small [innerHTML]="'TRANSFERS.WHO_IS_TRANSFIYA'| translate"></small>
+        </div>
+
+        <avv-input
+                *ngIf="!contactData?.value"
+                [id]="'transfer-phone-number'"
+                [type]="'phone'"
+                [allowCut]="true"
+                [allowCopy]="true"
+                [allowPaste]="true"
+                [label]="'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_CELL_PHONE.FIELD' | translate"
+                [control]="phoneNumber">
+        </avv-input>
+
+        <div *ngIf="!!contactData?.value"
+             class="avv-contact-card transfer-unregistered-accounts-contact-card">
+            <span class="contact-image">{{ (contactData?.value?.displayName + '') | slice : 0 : 1 | uppercase }}</span>
+            <div class="contact-info">
+                <h6 class="name" [innerHTML]="contactData?.value?.displayName | capitalize: true"></h6>
+                <p class="nickname" [innerHTML]="contactData?.value?.phoneNumber | capitalize"></p>
+                <i class="icon icon-basura" (click)="removeCellContact()"></i>
+            </div>
+        </div>
+
+        <button
+                (click)="setCellContact()"
+                class="avv-link transfer-unregistered-accounts-contacts-link"
+                type="button"
+                [id]="'transfer-phone-number-btn-contacts'">
+            {{ 'TRANSFERS.CONTACT_LINK' | translate }}
+            <span class="icon icon-grupo" title="icon-grupo"></span>
+        </button>
+
+        <button type="submit" class="avv-btn-primary mt-3"
+                [id]="'transfer-account-btn'"
+                [disabled]="!formGroup.valid">
+            {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+        </button>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<div class="aval-products-panel avv-pb-with-footer" [ngClass]="{'active': isActive || forceView}">
+  <div class="aval-products-panel-toggle" (click)="toggleActive()" *ngIf="!forceView">
+    <small class="semi-bold">Productos Aval</small>
+    <i class="icon-up"></i>
+  </div>
+
+  <ul class="aval-products-panel-list">
+    <li *ngFor="let item of avalProductList" (click)="navigateTo(item)">
+      <img [src]="item.icon | imageUrl" [alt]="item.label">
+    </li>
+  </ul>
+</div>

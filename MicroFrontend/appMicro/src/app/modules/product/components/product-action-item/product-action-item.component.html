@@ -1,0 +1,12 @@
+<div class="product-action-item {{ className }}"
+     role="button"
+     [attr.aria-label]="action.label"
+     (click)="clicked.emit()">
+  <div class="product-action-item-image">
+    <img [src]="action.icon | imageUrl" alt="">
+  </div>
+  <small class="product-action-item-description">
+    {{ action.label }}
+  </small>
+  <span class="avv-icons-btn-list-item-new" *ngIf="action.isNew">Nuevo</span>
+</div>

@@ -1,0 +1,33 @@
+<div class="avv-generic-step transfers-unregistered-accounts-toward">
+    <p class="avv-generic-step-title">{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_ACCOUNT.TITLE' | translate }}</p>
+
+    <p class="transfers-unregistered-accounts-toward-bank-name">
+        <i class="icon-salario"></i>
+        <span>{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_ACCOUNT.BANK' | translate }}</span>
+    </p>
+
+    <form [formGroup]="formGroup" (submit)="continue.emit()" class="avv-generic-step-content">
+        <avv-radio
+                class="avv-radio-input"
+                [id]="'transfers-unregistered-accounts-type'"
+                [items]="productAccountTypes"
+                [control]="towardAccountType">
+        </avv-radio>
+
+        <avv-input
+                [id]="'transfers-unregistered-accounts-number'"
+                [type]="'numeric'"
+                [allowCut]="true"
+                [allowCopy]="true"
+                [allowPaste]="true"
+                [label]="'TRANSFERS.UNREGISTER_ACCOUNTS.TOWARD_ACCOUNT.FIELD' | translate"
+                [control]="towardAccount">
+        </avv-input>
+
+        <button type="submit" class="avv-btn-primary"
+                [id]="'transfers-unregistered-accounts-btn'"
+                [disabled]="!formGroup.valid">
+            {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+        </button>
+    </form>
+</div>

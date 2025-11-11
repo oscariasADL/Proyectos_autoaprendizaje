@@ -1,0 +1,115 @@
+<div class="payment-unregistered-step-reference">
+  <p class="title semi-bold">{{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.TITLE' | translate }}</p>
+  <form>
+    <avv-input
+      type="number"
+      [id]="'input-pay-unregistered-service-reference'"
+      (keyup)="$event.key === 'Enter' ? this.searchReference(this.reference.value) : null"
+      [label]="'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.PAY_REFERENCE' | translate"
+      [control]="reference">
+    </avv-input>
+    <div
+      *ngIf="(working$ | async); else (bill.isBiller) ? biller : notBiller"
+      class="contacts-loading">
+      <div *ngFor="let item of [1, 2, 3]">
+        <ion-skeleton-text
+          animated
+          class="avv-skeleton"></ion-skeleton-text>
+      </div>
+    </div>
+    <!-- BILLERS -->
+    <ng-template #biller>
+      <div
+        *ngIf="bill.imageUrl"
+        (click)="this.showExample = !this.showExample"
+        [ngClass]="{'active': showExample}"
+        class="avv-toggle-text">
+        <p class="small info">
+          {{ ('PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.' + (!showExample ? 'SHOW_EXAMPLE' : 'HIDE_EXAMPLE')) | translate }}
+        </p>
+      </div>
+      <div *ngIf="showExample">
+        <img
+          class="show-example-img"
+          [src]="bill.imageUrl"
+          alt>
+      </div>
+      <button
+        (click)="searchReference(reference.value)"
+        [disabled]="!reference.valid || !!referenceInfo"
+        type="button"
+        class="avv-btn-secondary sm btn-continue"
+        id="search-reference-btn">
+        {{ 'ACTIONS.SEARCH' | translate | uppercase }}
+      </button>
+    </ng-template>
+    <!-- NOT BILLERS -->
+    <ng-template #notBiller>
+      <avv-input
+        type="currency"
+        [id]="'input-pay-unregistered-service-value'"
+        [label]="'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.VALUE' | translate"
+        [control]="payValue">
+      </avv-input>
+
+      <button
+        *ngIf="!shouldRegisterService"
+        (click)="continue.emit()"
+        type="button"
+        class="avv-btn-primary btn-continue-notbiller"
+        id="pay-unregistered-service-btn"
+        [disabled]="!form.valid">
+        {{ 'ACTIONS.CONFIRM' | translate | uppercase }}
+      </button>
+    </ng-template>
+  </form>
+  <div
+    *ngIf="(working$ | async) === false && ((notFound$ | async) || showNotFunds || !!(hasErrorMessage$ | async) || shouldRegisterService)"
+    class="avv-alert-error">
+    <i class="avv-alert-icon icon-alerta"></i>
+    <div class="avv-alert-text">
+      {{
+      showNotFunds
+        ? ('PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.NOT_FOUNDS' | translate)
+        : !!(hasErrorMessage$ | async)
+          ? (hasErrorMessage$ | async)
+          : shouldRegisterService
+            ? ('PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.NOTICE_1' | translate)
+            : ('PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.NOTICE_2' | translate)
+
+      }}
+    </div>
+  </div>
+  <p
+    *ngIf="shouldRegisterService"
+    class="avv-generic-step-message">
+    {{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.MESSAGE' | translate }}
+  </p>
+</div>
+<!-- SHOW PREVIEW BILLERS -->
+<div
+  *ngIf="bill.isBiller && !!referenceInfo && (completed$ | async)"
+  class="preview-selected-bill bg-gray">
+  <p class="small avv-title-semibold">{{ bill.name | titlecase }}</p>
+  <p class="small">{{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.PAY_REF' | translate }}: {{ reference.value }}</p>
+  <div class="pay-info">
+    <div class="row">
+      <p class="small">{{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.PAYMENT_VALUE' | translate }}</p>
+      <p
+        class="small"
+        [innerHTML]="referenceInfo.amount | currencyFormat"></p>
+    </div>
+    <div class="row avv-opaque" *ngIf="referenceInfo?.maxPaymentDate">
+      <p class="small">{{ 'PAYMENTS.SERVICES.UNREGISTERED_STEP_REFERENCE.LIMIT_DATE' | translate }}</p>
+      <p class="small">{{ referenceInfo?.maxPaymentDate }}</p>
+    </div>
+  </div>
+  <button
+    (click)="continue.emit()"
+    type="button"
+    class="avv-btn-primary"
+    id="pay-unregistered-service-btn"
+    [disabled]="!form.valid || shouldRegisterService">
+    {{ 'ACTIONS.CONFIRM' | translate | uppercase }}
+  </button>
+</div>

@@ -1,0 +1,23 @@
+<div class="aval-product-card-container" [ngClass]="{'active': isActive}" (click)="toggle()">
+  <i class="aval-product-card-icon {{ product?.icon }}"></i>
+  <i class="aval-product-card-arrow icon-down" *ngIf="product?.items.length > 0"></i>
+  <div>
+    <small class="aval-product-card-header">{{ product?.title }}</small>
+
+    <div class="aval-product-card-panel">
+      <ul>
+        <li *ngFor="let item of product?.items">
+          <small *ngIf="item?.label" [innerHTML]="item.label"></small>
+          <p class="bold" *ngIf="item?.value"
+             [innerHTML]="item.isText ? item.value : (item.value | currencyFormat)"></p>
+          <hr *ngIf="item?.isEnd">
+        </li>
+      </ul>
+    </div>
+
+    <div class="aval-product-card-footer">
+      <small [innerHTML]="product?.description | translate"></small>
+      <h5 class="bold" [innerHTML]="product?.amount | currencyFormat"></h5>
+    </div>
+  </div>
+</div>

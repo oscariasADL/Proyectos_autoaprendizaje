@@ -1,0 +1,49 @@
+<div class="unblock-product-password-container">
+  <div class="unblock-product-password-container-header">
+    <p class="description">Tu tarjeta se encuentra bloqueada por superar
+      el máximo de intentos fallidos. Desbloquéala creando una nueva clave.</p>
+    <p class="semi-bold title">Ingresa una nueva clave</p>
+  </div>
+  <form
+          [formGroup]="form"
+          class="unblock-product-password-fields">
+    <small class="unblock-product-password-label">Nueva clave</small>
+    <avv-password
+            class="unblock-product-password-input"
+            [control]="newPassword"
+            [hideCharacters]="true"
+            [autoFocus]="false"
+            [showEye]="true">
+    </avv-password>
+
+    <small class="unblock-product-password-label">Repite nueva clave</small>
+    <avv-password
+            class="unblock-product-password-input"
+            [control]="confirmPassword"
+            [hideCharacters]="true"
+            [autoFocus]="false"
+            [showEye]="true">
+    </avv-password>
+
+    <small
+            *ngIf="form?.controls?.confirmPassword?.errors?.doNotMatch as text"
+            class="new-password-container-error">
+      {{ text | translate }}
+    </small>
+
+    <app-errors-for-check
+            [control]="form.get('confirmPassword')"
+            [hasError]="!!form?.controls?.confirmPassword?.errors?.doNotMatch">
+    </app-errors-for-check>
+
+    <button
+            class="avv-btn-primary unblock-product-password-btn"
+            type="button"
+            (click)="submitPassword()"
+            [id]="'unblock-product-password-btn'"
+            [disabled]="!form.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+</div>
+

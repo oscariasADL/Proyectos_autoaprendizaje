@@ -1,0 +1,32 @@
+<ion-content [forceOverscroll]="false">
+
+  <div id="voucher-container" class="voucher-container">
+    <img class="ilus-voucher" [src]="data?.image | imageUrl" alt="Logo" draggable="false">
+    <h6 class="avv-title-semibold m-0">{{ data?.title }}</h6>
+    <p class="voucher-sub-title" [innerHTML]="data?.description || data?.authorization"></p>
+    <!--<ul class="voucher-list">
+      <li *ngFor="let item of voucher.data" class="{{ item.type }}">
+        <p class="avv-title-semibold" [innerHTML]="item.title"></p>
+        <div class="voucher-description-container">
+          <p class="voucher-description" [innerHTML]="item.description"></p>
+          <p class="voucher-description" [innerHTML]="item.sub_description"></p>
+        </div>
+      </li>
+    </ul>
+    <p class="voucher-message" [innerHTML]="voucher.message" *ngIf="voucher.message"></p>-->
+
+    <button class="avv-btn-primary btn-modal-confirm"
+            id="btn-{{ data?.id }}-confirm"
+            (click)="closeModal(true)">
+      {{ 'CARD_ADVANCE.CARD_ADVANCE' | translate | uppercase }}
+    </button>
+
+    <a class="modal-confirm-edit"
+       id="btn-{{ data?.id }}-edit"
+       (click)="closeModal()">
+      <i class="icon-editar"></i>
+      {{ 'CARD_ADVANCE.EDIT_DATA' | translate }}
+    </a>
+  </div>
+
+</ion-content>

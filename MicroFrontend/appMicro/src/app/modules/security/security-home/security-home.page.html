@@ -1,0 +1,48 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'Seguridad' | translate"
+    [type]="header?.headerType?.redTertiary">
+  </app-headers>
+
+  <div class="security-home-container">
+    <ul class="avv-list-icons">
+      <ng-template [appFeatureToggle]="featureFlagsKey.SecurityComplementaryServices">
+        <li (click)="navigateToComplementaryServices()"
+            id="security-menu-complementary-services">
+          <div class="avv-list-name">
+            <i class="icon-formulario"></i>
+            <p>Servicios complementarios</p>
+          </div>
+          <ng-container *ngIf="complementaryServicesError$ | async">
+            <i class="security-home-alert icon-alerta"></i>
+          </ng-container>
+          <ng-container *ngIf="(complementaryServicesError$ | async) === false">
+            <div class="avv-toggle" [ngClass]="{'active': complementaryServicesState$ | async}"></div>
+          </ng-container>
+        </li>
+      </ng-template>
+
+      <ng-template [appFeatureToggle]="featureFlagsKey.SecurityBiometrics">
+        <li *ngIf="hasBiometric$ | async"
+            (click)="navigateTo(NAVIGATE.SECURITY_BIOMETRICS)"
+            id="'security-menu-biometrics'">
+          <div class="avv-list-name">
+            <i [class]="biometricIconClass$ | async"></i>
+            <p>{{ biometricText$ | async }}</p>
+          </div>
+          <div class="avv-toggle" [ngClass]="{'active': hasBiometricRegistered$ | async}"></div>
+        </li>
+      </ng-template>
+
+      <ng-template [appFeatureToggle]="featureFlagsKey.SecurityMediaActivation">
+        <li (click)="navigateTo(NAVIGATE.MEDIA_ACTIVATION)" id="security-menu-configure-cards">
+          <div class="avv-list-name">
+            <i class="icon-tarjeta"></i>
+            <p>Configurar tarjetas</p>
+          </div>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</ion-content>

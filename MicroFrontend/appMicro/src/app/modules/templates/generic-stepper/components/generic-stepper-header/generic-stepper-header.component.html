@@ -1,0 +1,15 @@
+<div class="generic-stepper-header" [ngClass]="'generic-stepper-header-'+backgroundColor">
+  <i class="icon-back generic-stepper-header-back"
+     [ngClass]="'generic-stepper-header-back-'+backgroundColor"
+     role="button"
+     [attr.aria-label]="'Volver'"
+     (click)="backClick.emit()">
+  </i>
+  <p class="generic-stepper-header-title">{{ title }}</p>
+  <i class="icon-salir generic-stepper-header-close"
+     [ngClass]="'generic-stepper-header-close-'+backgroundColor"
+     role="button"
+     [attr.aria-label]="'Cerrar'"
+     (click)="closeClick.emit()">
+  </i>
+</div>

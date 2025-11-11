@@ -1,0 +1,94 @@
+@import 'utils'
+.avv-alert-sheet
+    padding: 0
+    &:before
+        background-color: transparent
+    .avv-alert-sheet-header
+        padding: 0
+        height: 50vh
+        p
+            font-weight: bolder
+            font-size: 28px
+        img
+            display: block
+    .content-container
+        padding: 0 24px
+        display: flex
+        flex-direction: column
+        row-gap: 24px
+        margin-bottom: 56px
+        .avv-alert-sheet-body
+            display: flex
+            flex-direction: column
+            gap: 24px
+            margin-top: 32px
+            text-align: center
+            &__title
+                font-size: 18px
+                font-weight: 500
+                line-height: 28px
+            &__subtitle
+                font-size: 16px
+                font-weight: 400
+                line-height: 24px
+
+
+        .avv-alert-sheet-actions
+         
+
+.avv-alert-sheet
+  &.success
+    .avv-alert-sheet-footer
+      padding: $spacer $spacer-2 calc(#{$spacer-3} + var(--safe-area-inset-bottom)) $spacer-2
+
+      .round-actions
+        display: flex
+        justify-content: space-evenly
+
+
+  &.question,
+  &.option
+    &::before
+      content: initial
+
+    .avv-alert-sheet-description
+      margin-top: $spacer
+
+    .avv-alert-sheet-footer
+      padding: $spacer-3 $spacer-2 calc(#{$spacer-3} + var(--safe-area-inset-bottom))
+
+      button:last-child
+        margin-top: $spacer-3
+
+  &.option
+    .avv-alert-sheet-footer
+      button:last-child
+        margin-top: $spacer
+
+.justify-content-center
+  justify-content: center !important
+
+
+
+  .icon-compartir.avv-alert-share-icon
+    display: inline-block
+
+
+
+
+    .avv-alert-share-loader
+      display: inline-block !important
+
+
+
+.number-reference-big
+  color: rgba(0, 84, 191, 1)
+  line-height: 44px
+  font-size: 29px
+
+@media (max-width: 300px)
+  .avv-ticket-header-content-title
+    font-size: 10px !important
+
+  .avv-ticket-header-content-subtitle
+    font-size: 14px !important

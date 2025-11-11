@@ -1,0 +1,21 @@
+<section class="spi-transfer-consent">
+  <div class="spi-transfer-consent__header">
+    <i class="icon-salir" (click)="goBack()"></i>
+  </div>
+  <div class="spi-transfer-consent__body">
+    <p class="semi-bold bottom-title">{{'TRANSFERS.SPI_CONSENT.TERMS_AND_CONDITIONS.TITLE' | translate}}</p>
+    <div class="spi-transfer-consent__description">
+      <div class="spi-transfer-consent__description-content">
+        <p>{{'TRANSFERS.SPI_CONSENT.TERMS_AND_CONDITIONS.DETAIL' | translate}}</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <button type="button" class="avv-btn-primary" (click)="acceptTerms()">{{
+      'TRANSFERS.SPI_CONSENT.BUTTONS.ACCEPT' | translate }}</button>
+    <button type="button" class="avv-btn-link mt-4" (click)="goBack()">
+      {{'TRANSFERS.SPI_CONSENT.BUTTONS.GO_BACK' | translate }}
+    </button>
+  </div>
+</section>

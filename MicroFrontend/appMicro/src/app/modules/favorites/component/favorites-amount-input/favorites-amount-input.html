@@ -1,0 +1,22 @@
+<article class="favorites-amount-input-container">
+  <div class="header">
+    <h3>{{ labels.title | translate }}</h3>
+    <i class="icon-salir" (click)="closeModal()"></i>
+  </div>
+  <div class="input-container">
+    <avv-input
+      [type]="'currency'"
+      [id]="'favorites-amount'"
+      [label]="labels.input_label | translate"
+      [control]="amountFormControl">
+    </avv-input>
+    <button type="buttton" class="avv-btn-primary" (click)="saveChanges()"
+            [disabled]="amountFormControl.invalid">{{ 'ACTIONS.SAVE_CHANGES' | translate | uppercase }}</button>
+    <div class="avv-alert-info field-step-notice" *ngIf="this.notice && amountFormControl">
+      <i class="avv-alert-icon icon-info"></i>
+      <div class="avv-alert-text">
+        {{ notice | translate }}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,62 @@
+ion-card.product-card
+  border-radius: 4px
+  box-shadow: 0 2px 4px 0 rgba(65, 74, 83, 0.3)
+  background-color: var(--gray-4)
+  min-height: 72px
+  margin: 0 0 8px 0
+  color: var(--gray-1)
+  font-size: 14px
+
+  ion-card-content.product-card-content
+    position: relative
+    padding: 12px
+    line-height: normal
+
+    span.product-name
+      display: flex
+      align-items: center
+      width: 100%
+
+      span.product-icon
+
+        i.icon
+          font-size: 16px
+
+      span.product-title
+        margin-left: 8px
+        font-size: 14px
+
+    span.product-balance
+      font-size: 20px
+      margin-left: 25px
+      font-weight: bold
+
+    span.show-hide-balance
+      margin-left: 8px
+      color: var(--blue-1)
+
+      i.icon
+        font-size: 16px
+        cursor: pointer
+
+        &.icon-ver
+          display: none
+
+    div.see-all
+      position: absolute
+      right: 12px
+      top: 12px
+      font-size: 12px
+      display: flex
+      align-items: center
+      color: var(--blue-1)
+      cursor: pointer
+
+      i.icon
+        font-size: 24px
+
+@media(max-width: 385px)
+  ion-card.product-card
+    ion-card-content.product-card-content
+      span.product-name
+        width: 68%

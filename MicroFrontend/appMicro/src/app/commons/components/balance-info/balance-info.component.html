@@ -1,0 +1,22 @@
+<section class="balance-info-container">
+  <div class="balance-info-header">
+    <i class="icon-logo-avvillas"></i>
+    <h3 class="header-title">{{ title }}</h3>
+  </div>
+  <div class="balance-info-body">
+    <ul class="balance-info-list">
+      <li *ngFor="let item of balanceInfo?.items" class="list-item">
+        <span>{{ item.description }}</span>
+        <span class="bold"> ${{ item.amount | numberFormat}} </span>
+      </li>
+    </ul>
+    <div *ngIf="balanceInfo?.totalBalance" class="balance-info-footer">
+      <hr>
+      <div class="total">
+        <span class="bold"> {{totalText}} </span>
+        <span class="bold"> ${{ balanceInfo?.totalBalance | numberFormat }} </span>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,29 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { IonicModule } from '@ionic/angular';
+import { AvalFacadeMock } from '@testing/mocks/facade/aval.facade.mock';
+import { TestingModule } from '@testing/testing.module';
+import { AvalFacade } from '../../aval.facade';
+import { StocksComponent } from './stocks.component';
+
+describe('StocksComponent', () => {
+  let component: StocksComponent;
+  let fixture: ComponentFixture<StocksComponent>;
+
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [StocksComponent],
+      imports: [TestingModule, IonicModule],
+      providers: [{ provide: AvalFacade, useClass: AvalFacadeMock }],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(StocksComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,86 @@
+@import utils
+$size-scan-frame-width: 20vh
+$size-scan-frame-height: 100vh
+$size-scan-box-width: 20vh
+$size-scan-box-height: 90vh
+$size-margin-lr: 10vw
+$text-color: var(--white)
+
+.barcode-scanner-container
+  height: 100vh
+  display: flex
+  flex-direction: row
+  align-items: stretch
+
+  .barcode-scanner-box-frame
+    height: $size-scan-frame-height
+    position: relative
+    display: grid
+    place-items: center
+    flex-grow: 1
+    z-index: 1
+
+    .barcode-scanner-box
+      width: $size-scan-box-width
+      height: $size-scan-box-height
+      box-shadow: 0 0 0 100vmax rgba(37, 43, 49, 0.5)
+      border-radius: 16px
+      position: relative
+
+      &::before
+        content: ""
+        height: 100%
+        border: 1px solid var(--red-1)
+        position: absolute
+        left: 50%
+        animation: blinkerAnimation .8s infinite
+
+  .barcode-scanner-header, .barcode-scanner-footer
+    position: relative
+    z-index: 2
+
+  .barcode-scanner-header
+    writing-mode: vertical-rl
+    margin-right: $size-margin-lr
+
+    h2, p
+      color: $text-color
+      text-align: center
+
+    h2
+      font-size: 20px
+
+  .barcode-scanner-footer
+    display: flex
+    flex-direction: column
+    writing-mode: vertical-rl
+    margin-left: $size-margin-lr
+
+    a
+      color: $text-color
+      font-size: 18px
+      margin: 10vh 0
+
+    .footer-help-text
+      display: flex
+      flex-direction: row
+      align-items: center
+
+      i, p
+        color: $text-color
+
+      i
+        font-size: 16px
+        margin-right: $spacer
+
+      p
+        font-size: 14px
+        text-decoration: underline
+
+@keyframes blinkerAnimation
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1

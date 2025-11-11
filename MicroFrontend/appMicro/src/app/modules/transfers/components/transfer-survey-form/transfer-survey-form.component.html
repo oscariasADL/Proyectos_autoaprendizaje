@@ -1,0 +1,100 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <ng-container *ngIf="slides > 0 else noSlides">
+      <swiper [config]="{allowTouchMove: false, slidesPerView: 1}" #surveySlides>
+        <ng-container *ngFor="let slide of [].constructor(slides); let idx = index; let lastSlide = last">
+          <ng-template swiperSlide>
+            <div class="survey-container">
+              <ng-container *ngFor="let question of questionBelongsSlide(idx + 1)">
+                <ng-container [ngSwitch]="question.controlType">
+                  <ng-container *ngSwitchCase="'options'">
+                    <div class="question-option-container">
+                      <input type="hidden"
+                             [required]="question.required"
+                             [formControlName]="question.key"
+                             [id]="'question-options-input-' + question.key">
+                      <div class="question-container py-3" [id]="'question-container-' + question.key">
+                        <div class="question-title" [id]="'question-title-' + question.key">
+                          {{question.label}}
+                        </div>
+                        <div class="question-options" [id]="'question-options-' + question.key">
+                          <div class="question-option"
+                               [utag]="replaceSpecialCharacters(question.label) + ' - ' + (optionIdx + 1)"
+                               [utagCategory]="'encuesta de satisfaccion - ' + activeFeature"
+                               [id]="'question-option-' + question.key + '-' + (optionIdx + 1)"
+                               [ngClass]="{'selected': isSelected(option.value, question.key)}"
+                               (click)="setValue(option.value, question.key)"
+                               *ngFor="let option of question.options; let optionIdx = index">{{option.key}}</div>
+                        </div>
+                        <div class="question-options-help">
+                          <div class="item-left">No estoy de acuerdo.</div>
+                          <div class="item-right">De acuerdo.</div>
+                        </div>
+                        <!--<div *ngIf="form.controls[question.key].invalid">El campo es requerido</div>-->
+                      </div>
+                    </div>
+                  </ng-container>
+                  <ng-container *ngSwitchCase="'textbox'">
+                    <div class="question-option-container">
+                      <div *ngIf="question.title"><b>{{question.title}}</b></div>
+                      <avv-input [control]="getFormControl(question.key)"
+                                 [utag]="'respuesta final - dejanos saber tu opinion'"
+                                 [utagCategory]="'encuesta de satisfaccion - ' + activeFeature"
+                                 [id]="'question-textbox-' + question.key"
+                                 [label]="question.label"></avv-input>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+              <button class="avv-btn-primary"
+                      (click)="slideNext()"
+                      *ngIf="!lastSlide"
+                      type="button"
+                      [disabled]="!validSlide(idx+1)"> SIGUIENTE </button>
+              <button type="submit"
+                      *ngIf="lastSlide"
+                      [disabled]="!form.valid"
+                      (click)="closeModal()"
+                      class="avv-btn-primary"
+                      id="alert-other-features-transfers-btn-confirm"> RESPONDER </button>
+            </div>
+          </ng-template>
+        </ng-container>
+      </swiper>
+    </ng-container>
+
+    <ng-template #noSlides>
+      <ng-container *ngFor="let question of questions">
+        <ng-container [ngSwitch]="question.controlType">
+          <ng-container *ngSwitchCase="'options'">
+            <div class="question-option-container">
+              <input type="hidden"
+                     [required]="question.required"
+                     [formControlName]="question.key"
+                     [id]="question.key">
+              <div class="question-container py-3">
+                <div class="question-title">
+                  {{question.label}}
+                </div>
+                <div class="question-options">
+                  <div class="question-option"
+                       [ngClass]="{'selected': isSelected(option.value, question.key)}"
+                       (click)="setValue(option.value, question.key)"
+                       *ngFor="let option of question.options">{{option.key}}</div>
+                </div>
+                <div class="question-options-help">
+                  <div class="item-left">No estoy de acuerdo.</div>
+                  <div class="item-right">De acuerdo.</div>
+                </div>
+                <!--<div *ngIf="form.controls[question.key].invalid">El campo es requerido</div>-->
+
+              </div>
+            </div>
+
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-template>
+  </form>
+</div>

@@ -1,0 +1,86 @@
+<app-headers
+  #header
+  [title]="'AVAL.PRODUCTS.TITLE' | translate"
+  [type]="header?.headerType?.whiteSecondary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <ng-container
+          *ngTemplateOutlet="(working$ | async) ? working : (completed$ | async) ? (avalProducts$ | async).length > 0 ? content : empty : error"></ng-container>
+</ion-content>
+
+<ng-template #working>
+  <div class="aval-products-working-cards">
+    <ion-skeleton-text
+            class="avv-skeleton aval-products-working-cards-title"
+            animated>
+    </ion-skeleton-text>
+    <ion-skeleton-text
+            class="avv-skeleton aval-products-working-cards-icon"
+            animated>
+    </ion-skeleton-text>
+    <ion-skeleton-text
+            *ngFor="let item of [1, 2, 3]; let i = index"
+            class="avv-skeleton aval-products-working-cards-item"
+            animated>
+    </ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <div class="avv-generic-exception-block">
+    <p class="avv-generic-step-title">{{ 'AVAL.PRODUCTS.EMPTY.TITLE' | translate }}</p>
+    <div class="avv-generic-exception-image">
+      <img class="icon"
+           [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+           alt="sin-resultados">
+    </div>
+    <p class="avv-generic-exception-message">
+      {{ ('AVAL.PRODUCTS.EMPTY.' + (isSpecialProduct ? 'MESSAGE_SHORTED' : 'MESSAGE') | translate) + ' ' + (bankLabel | translate) }}
+    </p>
+    <button class="avv-btn-secondary"
+            [id]="'no-products-exit-btn'"
+            (click)="closeModal()">
+      {{ 'ACTIONS.COPY_THAT' | translate | uppercase }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="avv-panel-empty">
+    <div class="avv-panel-empty-image mb-0">
+      <img [src]="'sesion-finalizada.svg' | imageUrl"
+           alt="sesion-finalizada"
+           draggable="false">
+    </div>
+    <p class="avv-generic-step-title bold" [innerHTML]="'AVAL.PRODUCTS.ERROR.TITLE' | translate"></p>
+    <p class="avv-panel-empty-text" [innerHTML]="'AVAL.PRODUCTS.ERROR.MESSAGE' | translate"></p>
+    <button
+            class="avv-btn-primary"
+            (click)="closeModal()"
+            [id]="'error-products-exit-btn'">
+      {{ 'ACTIONS.COPY_THAT' | translate }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="aval-products-container">
+    <div class="aval-products-header">
+      <p class="semi-bold" [innerHTML]="bankLabel | translate"></p>
+      <img [src]="bankIcon | imageUrl" alt="">
+    </div>
+
+    <div class="aval-products-content">
+      <div *ngFor="let item of avalProducts$ | async; let i = index">
+        <small *ngIf="i !== 0" class="my-1">
+          {{ item?.label }}
+        </small>
+        <app-aval-product-card
+                *ngFor="let product of item?.products"
+                [product]="product">
+        </app-aval-product-card>
+      </div>
+    </div>
+  </div>
+</ng-template>

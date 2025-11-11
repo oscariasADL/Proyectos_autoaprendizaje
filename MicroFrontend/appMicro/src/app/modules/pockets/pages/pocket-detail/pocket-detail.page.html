@@ -1,0 +1,130 @@
+<app-headers
+  #header
+  [closeUrl]="'/'"
+  [title]="'POCKETS.DETAIL.TITLE' | translate"
+  [type]="header?.headerType?.redTertiary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="pocket-detail-container">
+    <ng-container
+      *ngTemplateOutlet="(working$ | async) ? working : (completed$ | async) ? content : noContent">
+    </ng-container>
+  </article>
+</ion-content>
+
+<ng-template #working>
+  <app-skeleton-pocket-detail></app-skeleton-pocket-detail>
+</ng-template>
+
+<ng-template #noContent>
+  <section class="pocket-detail-no-content">
+    <app-pocket-without-detail (closePocketDetail)="closePocketDetail()"></app-pocket-without-detail>
+  </section>
+</ng-template>
+
+<ng-template #content>
+  <section class="pocket-detail-content"
+           *ngIf="pocket$ | async as pocket">
+    <div class="pocket-detail-resume">
+      <div class="pocket-detail-content__header">
+        <span class="icon-bolsillos pocket__icon"></span>
+        <h5 id="pocket-description" class="avv-text__title">{{ pocket.description | capitalize }}</h5>
+      </div>
+      <div class="pocket-detail-content__progress">
+        <app-pocket-progress [progress]="pocket.progress" [icon]="(pocket.pocketCategory | pocketCategory).icon">
+        </app-pocket-progress>
+        <div class="pocket-detail-content__progress-information">
+          <p
+            class="pocket-detail-content__progress-title avv-text__paragraph">{{ 'POCKETS.DETAIL.MONEY_SAVED' | translate }}</p>
+          <p class="pocket-detail-content__progress-title avv-text__paragraph"
+             [innerHtml]=" pocket.amountSaved | currencyFormat">
+          </p>
+        </div>
+      </div>
+      <div class="pocket-detail-content__actions">
+        <ul>
+          <ng-template *ngFor="let action of actions" [appFeatureToggle]="action.featureFlagKey">
+            <li [id]="action.id">
+              <div class="action-item" (click)="runAction(action.type)" [utag]="action.utag"
+                   [utagCategory]="action.utagCategory">
+                <div class="action-item-image">
+                  <img [src]="action.icon | imageUrl:true" [alt]="action.label">
+                </div>
+                <small class="action-item-description">
+                  {{ action.label }}
+                </small>
+              </div>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+    </div>
+    <div class="pocket-detail-tabs">
+
+<app-tabs [tabs]="tabs$ | async">
+  <ng-template>
+    <div class="pocket-detail-tabs__detail-tab">
+      <div class="pocket-detail-tabs__notification"
+           *ngIf="pocket.status === pocketStatus.PAUSED">
+        <app-notification icon="icon-alerta" [type]="notificationType.warning"
+                          [description]="'POCKET_WITH_RETURNS.POCKET_DETAIL.CARD.PUASE_POCKET_MESSAGE'| translate">
+        </app-notification>
+      </div>
+      <div class="detail-tab__actions" *ngIf="pocket.status === pocketStatus.ACTIVE || pocket.status === pocketStatus.PAUSED">
+        <div class="detail-tab__actions-action">
+          <span class="detail-tab__actions-action-title">
+            {{ 'POCKET_WITH_RETURNS.POCKET_DETAIL.ACTIVE_SAVINGS'| translate }}
+          </span>
+          <app-toggle [isChecked]="pocket.status === pocketStatus.ACTIVE"
+                      (toggleChange)="runAction(PocketActionType.ChangeStatus)"></app-toggle>
+        </div>
+      </div>
+      <div class="detail-tab__card">
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.STARTED' | translate }}</span>
+          <span class="avv-text__subtitle-first-level">{{ pocket.startDate }}</span>
+        </div>
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.SAVINGS_GOAL' | translate }}</span>
+          <span class="avv-text__subtitle-first-level"
+                [attr.aria-label]="(pocket.goal | numberFormat:'COP')"
+                [innerHtml]="pocket.goal | currencyFormat"></span>
+        </div>
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.QUOTA_VALUE' | translate }}</span>
+          <span class="avv-text__subtitle-first-level"
+                [attr.aria-label]="(pocket.instalmentAmount | numberFormat:'COP')"
+                [innerHtml]="pocket.instalmentAmount | currencyFormat"></span>
+        </div>
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.ORIGIN_ACCOUNT' | translate }}</span>
+          <span class="avv-text__subtitle-first-level">
+            {{ 'ACCOUNT_NUMBER' | translate }} {{ pocket.productNumberParent }}
+          </span>
+        </div>
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.PERIODICITY' | translate }}</span>
+          <span class="avv-text__subtitle-first-level">{{ pocket.period }}</span>
+        </div>
+        <div class="detail-tab__card-item">
+          <span class="avv-text__subtitle">{{ 'POCKETS.DETAIL.PENDING_INSTALMENTS' | translate }}</span>
+          <span class="avv-text__subtitle-first-level">{{ pocket.remainingInstalments }}</span>
+        </div>
+        <div class="pocket-detail-info-message">
+          <small>{{ (periodicity$ | async) | translate }}</small>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template>
+    <app-pocket-movements
+      [accountType]="urlParams.type"
+      [idParent]="urlParams.id_parent"
+      [pocketId]="urlParams.number"></app-pocket-movements>
+  </ng-template>
+</app-tabs>
+
+    </div>
+  </section>
+</ng-template>

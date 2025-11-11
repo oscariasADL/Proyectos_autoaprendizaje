@@ -1,0 +1,100 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'CDT_RENEWAL.TITLE' | translate"
+    [closeUrl]="'/'"
+    [type]="header?.headerType?.whitePrimary">
+  </app-headers>
+
+  <ng-container
+          *ngTemplateOutlet="(cdtRenewalData$ | async)?.reInvest === cdtRenewalStatus.ACTIVE ? inactive : active">
+  </ng-container>
+
+  <div class="footer-bar"></div>
+</ion-content>
+
+
+<ng-template #active>
+  <div>
+    <div class="cdt-renewal-step-active">
+      <div>
+        <div class="cdt-renewal-step-active-header">
+          <img class="cdt-renewal-step-active-header-image" [src]="'icons/renovar-cdt.svg' | imageUrl" alt="">
+          <p class="cdt-renewal-step-active-header-title semi-bold">
+            {{ 'CDT_RENEWAL.NOTICE.ACTIVE.TITLE' | translate }}
+          </p>
+        </div>
+
+        <div class="cdt-renewal-step-active-panel" *ngIf="cdtData$ | async as cdtData">
+          <small class="semi-bold">
+            {{ 'CDT_RENEWAL.NOTICE.ACTIVE.DESCRIPTION' | translate: { date: ((cdtRenewalData$ | async).expDate | date: 'dd/MM/y') } }}
+          </small>
+          <small class="semi-bold"
+                 [innerHtml]="('CDT_RENEWAL.NOTICE.ACTIVE.STARTUP_VALUE' | translate) + ': ' + (cdtData.startupValue.toString() | currencyFormat)">
+          </small>
+          <small class="semi-bold">
+            {{ 'CDT_RENEWAL.NOTICE.ACTIVE.TERM' | translate }}: {{ cdtData.term }}
+          </small>
+        </div>
+
+        <ul class="avv-list-red-point space">
+          <li>
+            <p class="small" [innerHTML]="'CDT_RENEWAL.NOTICE.ACTIVE.OPTION_1' | translate"></p>
+            <small class="avv-link-underline" (click)="redirectLink()"
+                   [innerHTML]="'CDT_RENEWAL.NOTICE.ACTIVE.LINK' | translate">
+            </small>
+          </li>
+          <li>
+            <p class="small" [innerHTML]="'CDT_RENEWAL.NOTICE.ACTIVE.OPTION_2' | translate"></p>
+          </li>
+          <li>
+            <p class="small" [innerHTML]="'CDT_RENEWAL.NOTICE.ACTIVE.OPTION_3' | translate"></p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <button class="avv-btn-primary mt-5"
+                (click)="renewalCdt()"
+                [id]="'cdt-renewal-step-cancel-confirm'">
+          {{ 'CDT_RENEWAL.NOTICE.ACTIVE.ACTION_CONFIRM' | translate | uppercase }}
+        </button>
+        <button class="avv-btn-secondary mt-2"
+                (click)="navigateBack()"
+                [id]="'cdt-renewal-step-cancel-back'">
+          {{ 'CDT_RENEWAL.NOTICE.ACTIVE.ACTION_CANCEL' | translate | uppercase }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #inactive>
+  <div>
+    <div class="cdt-renewal-step-inactive">
+      <div>
+        <img [src]="'icons/cancelar-cdt.svg' | imageUrl" alt="">
+        <p class="cdt-renewal-step-inactive-title semi-bold">
+          {{ 'CDT_RENEWAL.NOTICE.INACTIVE.TITLE' | translate }}
+        </p>
+        <p class="cdt-renewal-step-inactive-description">
+          {{ 'CDT_RENEWAL.NOTICE.INACTIVE.DESCRIPTION' | translate }}
+        </p>
+      </div>
+
+      <div>
+        <button class="avv-btn-primary mt-4"
+                (click)="navigateBack()"
+                [id]="'cdt-renewal-step-renewal-back'">
+          {{ 'CDT_RENEWAL.NOTICE.INACTIVE.ACTION_CANCEL' | translate | uppercase }}
+        </button>
+        <button class="avv-btn-secondary mt-2"
+                (click)="cancelRenewalCdt()"
+                [id]="'cdt-renewal-step-renewal-confirm'">
+          {{ 'CDT_RENEWAL.NOTICE.INACTIVE.ACTION_CONFIRM' | translate | uppercase }}
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

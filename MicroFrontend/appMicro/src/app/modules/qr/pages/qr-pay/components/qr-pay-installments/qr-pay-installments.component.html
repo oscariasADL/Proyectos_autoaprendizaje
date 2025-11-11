@@ -1,0 +1,37 @@
+<div class="qr-pay-installments-container">
+  <p class="semi-bold qr-pay-installments-title">Ingresa la cantidad de cuotas</p>
+
+  <div class="qr-pay-installments-product" *ngIf="fromProduct?.value">
+    <app-product-card-item #productCard
+                           [productDetail]="{ product: fromProduct.value }"
+                           [style]="productCard.productStyleType.selectable">
+    </app-product-card-item>
+  </div>
+
+  <form [formGroup]="form"
+        (ngSubmit)="continue.emit()"
+        class="qr-pay-installments-panel">
+
+    <div class="qr-pay-installments-field">
+      <avv-input #qrPayInstallments
+                 [id]="'qr-pay-installments'"
+                 [type]="qrPayInstallments?.inputTypes?.numeric"
+                 [label]="'No. de cuotas' | translate"
+                 [autoFocus]="true"
+                 [control]="installments"
+                 class="qr-pay-installments-input">
+      </avv-input>
+
+      <small>{{ 'QR.PAY.INSTALLMENTS_STEP.MESSAGE' | translate }}</small>
+    </div>
+
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'qr-pay-data-continue-btn'"
+            [disabled]="!installments.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+
+</div>

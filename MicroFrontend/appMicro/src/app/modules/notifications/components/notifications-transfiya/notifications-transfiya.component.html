@@ -1,0 +1,21 @@
+<div *ngIf="transfiyaList.length > 0" class="notification-transfiya">
+
+  <p class="notification-transfiya-title">
+    {{ 'NOTIFICATION.MENU.TITLE' | translate }}
+  </p>
+
+  <ul class="notification-transfiya-body">
+    <li *ngFor="let item of transfiyaList"
+        (click)="redirect.emit(item)">
+      <p class="label">
+        <i [ngClass]="item.isRequest ? 'icon-subir_docs' : 'icon-descargar'" aria-hidden="true"></i>
+        {{ 'NOTIFICATION.MENU.BODY' | translate: {
+        number: item.targetNumber,
+        type: ('NOTIFICATION.MENU.BODY_TYPE.' + (item.isRequest ? 'ASKED' : 'SEND') | translate)
+      } }}
+      </p>
+      <p class="amount" [innerHTML]="item.amount | currencyFormat"></p>
+      <i class="arrow icon-next"></i>
+    </li>
+  </ul>
+</div>

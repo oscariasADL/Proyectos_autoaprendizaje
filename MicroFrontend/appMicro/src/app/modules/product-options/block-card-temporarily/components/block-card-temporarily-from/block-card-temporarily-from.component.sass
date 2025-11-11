@@ -1,0 +1,72 @@
+@import 'utils'
+
+.block-card-temporarily-from
+  padding: $spacer-3 $spacer-2 calc(#{$spacer-4} + var(--safe-area-inset-bottom))
+
+  &__loading
+    display: block
+
+    .loading-title
+      width: 100%
+      height: 40px
+
+    .loading-card
+      width: 100%
+      height: 96px
+
+
+  &__title
+    text-align: left
+    margin-bottom: $spacer-4
+
+  &__cards-container
+    display: flex
+    flex-direction: column
+    width: 100%
+    gap: $spacer-3
+
+    .card
+      border: 1px solid #DEE1E4
+      border-radius: 4px
+
+      &__status
+        display: inline-block
+        padding: 4px $spacer-2
+        line-height: 1
+        font-weight: 600
+        border-top-left-radius: 4px
+        border-bottom-right-radius: 4px
+
+      &__status.activa
+        background: #E2F9EF
+        color: #115337
+
+      &__status.bloqueo_temporal
+        background: #FFF1C6
+        color: #594600
+
+      .card__content
+        padding: $spacer-1 $spacer-2 $spacer-2
+        display: flex
+        align-items: center
+
+        .card__content-detail
+          flex-grow: 2
+
+          p
+            font-weight: 600
+
+          .card__content-detail-product
+            display: flex
+            align-items: baseline
+            gap: $spacer
+            color: var(--gray-1)
+
+            img
+              width: 16px
+
+      .card__icon i
+        font-size: 32px
+        color: var(--blue-1)
+
+

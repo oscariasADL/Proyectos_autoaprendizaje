@@ -1,0 +1,65 @@
+@import 'utils'
+
+.payment-services-list
+  height: calc(85vh - var(--safe-area-inset-bottom))
+  overflow-y: scroll
+  position: relative
+  padding: $spacer-3 $spacer-2 0
+  text-align: initial
+
+  &-items
+    .max-subtitle
+      font-size: 14px
+      text-wrap: pretty
+      width: 80%
+      color: #252B31
+      font-weight: 600
+
+  &-header
+    text-align: center
+
+    .payment-services-list-title
+      margin-bottom: $spacer-2
+      font-size: 16px
+      font-weight: 600
+
+    .payment-services-list-subtitle
+      margin-bottom: $spacer-3
+      font-size: 14px
+      font-weight: 400
+
+    .avv-information-link
+      padding: 0 0 0 calc(#{$spacer} / 2)
+      margin-bottom: $spacer-3
+
+  &-amount-total
+    position: sticky
+    left: 0
+    bottom: 0
+    width: 100%
+    margin-bottom: $spacer-3
+    padding: $spacer 0 var(--safe-area-inset-bottom)
+    display: flex
+    justify-content: space-between
+    background-color: var(--white)
+
+    p
+      font-size: 16px
+
+    span
+      font-size: 24px
+      font-weight: 700
+
+  &-action
+    padding-bottom: calc(4px + var(--safe-area-inset-bottom))
+
+.item-order
+  &-container
+    display: flex
+    flex-direction: column
+  &.selected
+    order: 1
+  &.title
+    order: 2
+  &.unselected
+    order: 3

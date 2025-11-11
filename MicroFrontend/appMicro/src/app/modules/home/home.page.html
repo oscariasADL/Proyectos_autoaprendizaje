@@ -1,0 +1,76 @@
+<div *ngIf="balanceWorking$ | async" class="header-loading">
+  <div class="header-loading-container">
+    <div class="pt-4">
+      <ion-spinner name="circular" color="light"></ion-spinner>
+    </div>
+    <div>Refrescando saldo...</div>
+  </div>
+</div>
+<app-headers [ngClass]="{'toolbar-no-safe-area': (balanceWorking$ | async)}" #header
+             [type]="header?.headerType?.redPrimary">
+</app-headers>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <!--<ion-refresher-content></ion-refresher-content>-->
+  </ion-refresher>
+
+  <div class="home-container avv-padding avv-pb-with-footer">
+    <div class="products-skeleton" *ngIf="balanceWorking$ | async; else content">
+      <div class="stories-skeleton">
+        <ng-container *ngFor="let item of [1,1,1,1]">
+          <ion-skeleton-text class="avv-skeleton products-skeleton-circle" animated></ion-skeleton-text>
+        </ng-container>
+      </div>
+
+      <ion-skeleton-text animated class="avv-skeleton products-skeleton-toggle"></ion-skeleton-text>
+      <div *ngFor="let item of [1,1,1]">
+        <ion-skeleton-text animated class="avv-skeleton products-skeleton-title"></ion-skeleton-text>
+        <ion-skeleton-text animated class="avv-skeleton products-skeleton-card"></ion-skeleton-text>
+      </div>
+      <ion-skeleton-text animated class="avv-skeleton products-skeleton-see-all"></ion-skeleton-text>
+      <ion-skeleton-text animated class="avv-skeleton products-skeleton-slide"></ion-skeleton-text>
+    </div>
+
+  </div>
+</ion-content>
+
+<ng-template #content>
+  <app-home-alerts *ngIf="(homeAlerts$ | async).length > 0" (goAction)="goActionAlert($event)"
+                   [alerts]="homeAlerts$ | async"></app-home-alerts>
+                   <ng-template [appFeatureToggle]="featureFlagsKey.Stories">
+                  <app-home-stories></app-home-stories>
+                   </ng-template>
+
+  <app-product-toggle-balances *ngIf="(homeProduct$ | async).length > 0"></app-product-toggle-balances>
+  <app-product-summary [homeProduct]="homeProduct$ | async" [isAvailableProducts]="showPockets$ | async"
+                       [hasCreditProductError]="hasCreditProductError$ | async"
+                       [digitalDebitCards]="digitalDebitCards$ | async">
+  </app-product-summary>
+    <a hidden routerLink="/customize-aval-tag" id="mathilde-customize-tag-aval" ></a>
+
+  <!--<article class="panel-create-pocket">
+    <div class="panel-create-pocket-title">{{ 'HOME.POCKETS.PANEL.TITLE' | translate }}</div>
+    <div class="panel-create-pocket-container" [routerLink]="POCKETS_CREATE_URL">
+      <div class="container-icon">
+        <img [src]="'bolsillos.svg' | imageUrl" alt="Icono de bolsillos">
+      </div>
+      <div class="container-description">
+        {{ 'HOME.POCKETS.PANEL.DESCRIPTION' | translate }}
+      </div>
+    </div>
+  </article>-->
+  <!-- ForProd, enable TDD panel in home -->
+  <!--    <app-digital-debit-card-panel [isHome]="true"></app-digital-debit-card-panel>-->
+
+  <ng-template [appFeatureToggle]="featureFlagsKey.FavoritesPanel">
+    <app-favorites-panel [favorites]="favorites$ | async"
+                         *ngIf="(homeProduct$ | async)?.length > 0"></app-favorites-panel>
+  </ng-template>
+
+  <app-home-marketing-space (interceptMathildeAdds)="interceptMathildeAdds($event)"
+                            (openExternalLink)="openExternalLink($event)"></app-home-marketing-space>
+  <app-home-request-products></app-home-request-products>
+  <app-home-promotions></app-home-promotions>
+</ng-template>

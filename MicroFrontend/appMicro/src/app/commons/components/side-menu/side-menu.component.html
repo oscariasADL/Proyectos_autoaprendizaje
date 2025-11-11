@@ -1,0 +1,58 @@
+<div class="side-menu-container">
+
+  <div class="side-menu-header">
+    <p>{{ 'SIDE_MENU.TITLE' | translate }}</p>
+    <i class="icon-salir"
+       role="button"
+       [attr.aria-label]="'Cerrar'"
+       (click)="closeMenu()"></i>
+  </div>
+
+  <div class="side-menu-content">
+    <div class="side-menu-content-scroll">
+      <div>
+        <div *ngIf="basicData$ | async as basicData">
+          <div class="side-menu-user" *ngIf="basicData?.clientName">
+            <span></span>
+            <p>{{ basicData.clientName | capitalize: true }}</p>
+          </div>
+        </div>
+
+        <ul class="side-menu-actions">
+          <ng-template *ngFor="let item of sideMenuList" [appFeatureToggle]="item.featureFlagKey">
+            <li [routerLink]="item.url"
+                role="button"
+                [attr.aria-label]="item.label"
+                (click)="closeMenu()"
+                [id]="item.id">
+              <i class="{{ item.icon }}"></i>
+              <p>{{ item.label }}</p>
+            </li>
+          </ng-template>
+          <app-clear-data></app-clear-data>
+        </ul>
+      </div>
+
+      <div class="side-menu-info" *ngIf="userData$ | async as userData">
+        <p [id]="'app-version'">{{ 'SIDE_MENU.VERSION' | translate }} {{ version$ | async }}</p>
+        <p>{{ 'SIDE_MENU.LAST_ACCESS' | translate }}: <span
+          [id]="'last-access-date'">{{ userData.lastAuthDate | date: 'd/MM/y - h:mm a' || '' | lowercase }}</span>
+        </p>
+        <p>{{ 'SIDE_MENU.IP_ACCESS' | translate }}: <span [id]="'last-ip-access'">{{ userData?.lastIPAddress }}</span>
+        </p>
+        <p>{{ 'SIDE_MENU.CURRENT_ACCESS' | translate }}: <span
+          [id]="'current-access-date'">{{ userData.currentDate | date: 'd/MM/y - h:mm a' || '' | lowercase }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-menu-logout"
+       role="button"
+       [attr.aria-label]="('SIDE_MENU.SECURE_EXIT' | translate)"
+       id="menu-logout-btn"
+       (click)="logout()">
+    <i class="icon-salida"></i>
+    <p>{{ 'SIDE_MENU.SECURE_EXIT' | translate }}</p>
+  </div>
+</div>

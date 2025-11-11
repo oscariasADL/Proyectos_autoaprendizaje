@@ -1,0 +1,13 @@
+<div [ngClass]="alertClass">
+  <i class="avv-alert-icon" [ngClass]="icon"></i>
+  <div class="avv-alert-text">
+    <span *ngIf="title">
+      <strong>
+        {{ title }}
+      </strong>
+      <br>
+    </span>
+    <span [innerHTML]="description">
+    </span>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<ion-content
+        [forceOverscroll]="false"
+        class="content-generic-stepper">
+  <app-generic-stepper
+          [form]="form"
+          [data]="data"
+          [steps]="steps"
+          [title]="'TRANSFERS.AVV_ACCOUNT.TITLE' | translate"
+          [backUrl]="backUrl"
+          [exitData]="exitData"
+          [currentSlide]="currentSlide"
+          (nextStep)="setNextStep($event)"
+          (stepSelected)="stepSelected($event)"
+          (slideSelected)="slideSelected($event)"
+          [template]="template">
+  </app-generic-stepper>
+</ion-content>
+
+<ng-template
+  #template
+  let-key="key"
+  let-screen="data"
+  let-runNextStep="nextStep">
+  <div [ngSwitch]="screen">
+
+    <app-transfers-avv-account-toward-account
+            *ngSwitchCase="'toward-account'"
+            [form]="form"
+            (continue)="runNextStep(key)">
+    </app-transfers-avv-account-toward-account>
+  </div>
+</ng-template>

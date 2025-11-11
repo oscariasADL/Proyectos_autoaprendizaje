@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "194702609120",
+    "firebase_url": "https://push-masivo-avvillas.firebaseio.com",
+    "project_id": "push-masivo-avvillas",
+    "storage_bucket": "push-masivo-avvillas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194702609120:android:9de3b574dc5dae78",
+        "android_client_info": {
+          "package_name": "com.grupoavalav1.bancamovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194702609120-qg94mfe9pe729et997kfvh4kk5r1r7pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "GOOGLE_SERVICES_ANDROID_CURRENT_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194702609120-1kuul4gam7kb0h298k0p3o7atpdnq3g1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194702609120-2h0j73g46samau086sgq019lpf4no7b0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grupoavalav1.bancamovil"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

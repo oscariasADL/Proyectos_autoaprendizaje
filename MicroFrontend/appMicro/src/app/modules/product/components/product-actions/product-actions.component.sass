@@ -1,0 +1,46 @@
+@import 'utils'
+
+.product-actions-container
+  .product-actions-header
+    +flex(center, space-between)
+
+  .product-actions-title
+    font-size: 4.267vw
+    font-weight: 600
+    line-height: 2
+    color: var(--gray-1)
+
+  ul
+    padding: 3.200vw 4.267vw 4.800vw
+
+  .product-actions-more
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    &-image
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 14.933vw
+      height: 14.933vw
+      border-radius: 50%
+      margin: 0 1.867vw 2.133vw
+      box-shadow: 0 2px 8px 0 rgba(65, 74, 83, 0.3)
+
+      > i
+        font-size: 7.2vw
+
+    &-description
+      font-size: 2.68vw
+      line-height: 1.2
+      color: var(--gray-1)
+      text-align: center
+      width: 18.667vw
+
+    &.border
+      .product-action-item-image
+        box-shadow: none
+        border: solid 0.9px var(--gray-6)
+

@@ -1,0 +1,33 @@
+<ion-content [forceOverscroll]="false">
+  <app-headers
+    #header
+    [title]="'DOCUMENTS.HEADER' | translate"
+    [type]="header?.headerType?.redTertiary">
+  </app-headers>
+
+  <div class="documents-container">
+    <p
+      class="semi-bold"
+      [innerHTML]="'DOCUMENTS.TITLE' | translate"></p>
+    <div class="avv-icons-btn-list">
+      <ng-template *ngFor="let item of documentList" [appFeatureToggle]="item.featureFlagKey">
+        <div
+          (click)="!item.disabled ? navigateTo(item) : null"
+          [id]="item.id"
+          [ngClass]="{'disabled': item.disabled}"
+          class="avv-icons-btn-list-item {{ item.className }}">
+          <div class="avv-icons-btn-list-item-icon">
+            <img
+              [src]="item.image | imageUrl"
+              alt>
+          </div>
+          <p
+            class="avv-icons-btn-list-item-label small"
+            [innerHTML]="item.label | translate">
+          </p>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</ion-content>

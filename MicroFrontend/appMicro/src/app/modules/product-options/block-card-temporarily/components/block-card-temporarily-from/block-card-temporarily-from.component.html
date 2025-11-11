@@ -1,0 +1,50 @@
+<article class="block-card-temporarily-from">
+  <ng-container
+    *ngTemplateOutlet="(workingSecurityMediaActivation$ | async) ? loading : (activationProducts | async)?.length > 0 ? content : empty"></ng-container>
+</article>
+
+<ng-template #loading>
+  <div class="block-card-temporarily-from__loading">
+    <ion-skeleton-text
+      class="avv-skeleton loading-title"
+      animated></ion-skeleton-text>
+    <ion-skeleton-text
+      *ngFor="let item of [1, 2, 3, 4]"
+      animated
+      class="avv-skeleton loading-card"></ion-skeleton-text>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <p class="block-card-temporarily-from__title">
+    {{ 'BLOCK_CARD_TEMPORARILY.FROM.TITLE' | translate }}
+  </p>
+  <div class="block-card-temporarily-from__cards-container">
+    <ng-container *ngFor="let product of (activationProducts | async)">
+      <div class="card" (click)="selectCard(product)">
+        <div class="card__status" [ngClass]="product.status.toLowerCase()">{{ activationStatusLabel[product.status] }}
+        </div>
+        <div class="card__content">
+          <div class="card__content-detail">
+            <p>{{ product.name }}</p>
+            <div class="card__content-detail-product">
+              <img [src]="(product.cardFranchise ?? 'DEBIT') | franchiseImage" alt="Logo de franquicia">
+              <span>{{ 'ACCOUNT_NUMBER' | translate }} {{ product.cardId }}</span>
+            </div>
+          </div>
+          <div class="card__icon">
+            <i class="icon icon-next"></i>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <div class="avv-panel-empty">
+    <div class="avv-panel-empty-image">
+      <img alt="sin-resultados" [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"></div>
+    <p class="avv-list-panel-title avv-title-semibold"> No tienes tarjetas débito para bloquear </p>
+  </div>
+</ng-template>

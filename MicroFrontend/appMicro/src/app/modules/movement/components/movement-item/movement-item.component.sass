@@ -1,0 +1,70 @@
+.movement-item
+  position: relative
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 16px 0 8px
+  border-bottom: 1px solid var(--gray-4)
+
+  &-icon
+    font-size: 16px
+    margin-right: 8px
+    color: var(--gray-2)
+    line-height: 1.33
+
+  &-content
+    width: 100%
+
+  &-title
+    font-size: 14px
+    color: var(--gray-1)
+    line-height: 1.14
+    width: calc(100% - 20px)
+
+  &-date
+    font-size: 12px
+    color: var(--gray-2)
+    line-height: 1.33
+
+  &-right-icon
+    font-size: 24px
+    color: var(--blue-1)
+
+  &-rate-installments
+    display: block
+    font-size: 12px
+    color: var(--gray-2)
+    line-height: 1.33
+
+    span.rate
+      margin-right: 14px
+
+    span.installments
+      margin-left: 14px
+
+      &::before
+        content: ''
+        position: absolute
+        width: 1px
+        height: 12px
+        background-color: var(--gray-2)
+        margin: 0 -14px
+
+  &-value
+    font-size: 14px
+    font-weight: bold
+    line-height: 1.71
+    color: var(--gray-1)
+
+    &.add
+      color: var(--blue-1)
+
+  &-download-icon
+    font-size: 16px
+    color: var(--blue-2)
+    position: absolute
+    top: 16px
+    right: 0
+
+
+

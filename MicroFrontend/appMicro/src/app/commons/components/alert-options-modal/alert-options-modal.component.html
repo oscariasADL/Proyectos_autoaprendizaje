@@ -1,0 +1,13 @@
+<article class="alert-options-modal">
+  <p class="semi-bold">{{ title | translate }}</p>
+  <i class="alert-options-modal-close icon-salir" (click)="closeModal()"></i>
+
+  <div class="alert-options-modal-list">
+    <div class="item" *ngFor="let option of options"
+         [id]="option.id"
+         (click)="option.callback()">
+      <i class="{{ option.icon }}"></i>
+      <p class="small">{{ option.text | translate }}</p>
+    </div>
+  </div>
+</article>

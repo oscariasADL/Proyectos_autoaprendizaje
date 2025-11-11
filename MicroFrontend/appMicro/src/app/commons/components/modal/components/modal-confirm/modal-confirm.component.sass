@@ -1,0 +1,72 @@
+.voucher-container
+  background-color: white
+  // width: 350px
+  height: 100%
+  border-radius: 7px
+  position: relative
+  overflow: hidden
+  padding: 26px 20px 25px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-direction: column
+  // position: absolute
+  top: 0
+  //z-index: -1
+
+  .ilus-voucher
+    margin: 20px 0
+
+  .voucher-sub-title
+    margin: 5px 0 10px
+    color: var(--gray-1)
+
+    > span
+      font-weight: 600
+
+  .voucher-message
+    margin: 20px 0 0
+    text-align: center
+    color: var(--gray-1)
+    line-height: 1.43
+
+  .voucher-list
+    list-style: none
+    margin: 0
+    padding: 0
+    width: 100%
+
+    > li
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 58px
+      border-bottom: solid 1px var(--gray-1)
+
+      .voucher-description-container
+        text-align: right
+
+      ::ng-deep p
+        margin: 0
+
+        &.voucher-description
+          line-height: 1.43
+
+          img
+            height: 10px
+
+      &.main
+        .voucher-description
+          font-size: 20px
+          font-weight: 600
+          color: var(--blue-1)
+
+      &.main-with-description
+        .voucher-description
+          &:first-child
+            font-size: 16px
+            font-weight: 600
+            color: var(--blue-1)
+
+          &:last-child
+            font-size: 12px

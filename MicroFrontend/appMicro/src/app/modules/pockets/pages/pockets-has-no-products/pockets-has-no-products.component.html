@@ -1,0 +1,32 @@
+<ion-content>
+  <app-headers #header [closeUrl]="'/'" [title]="'POCKETS.HEADER' | translate" [type]="header?.headerType?.redTertiary">
+  </app-headers>
+  <div class="ion-page avv-generic-exception-block has-not-product-container">
+    <div class="has-not-product-container-inner">
+      <img
+        class="icon results"
+        [src]="'/assets/images/illustrations/pockets/results.svg' | imageUrl:true"
+        alt="sin-resultados">
+      <div class="text-container">
+        <p class="title">{{ 'POCKETS.NO_PRODUCTS.TITLE' | translate }}</p>
+        <p [innerHTML]=" 'POCKETS.NO_PRODUCTS.DESCRIPTION' | translate"></p>
+      </div>
+    </div>
+    <div class="actions-container">
+      <button class="avv-btn-primary btn-action"
+              [id]="'account-step-exit-btn'"
+              (click)="openExternal()"
+      >
+        {{ 'POCKETS.NO_PRODUCTS.OPEN_ACCOUNT'| translate | uppercase }}
+      </button>
+      <button class="avv-link link-box btn-action"
+              [routerLink]="Home"
+
+              [id]="'account-step-exit-btn'"
+      >
+        {{ 'POCKETS.NO_PRODUCTS.EXIT_FLOW' | translate | uppercase }}
+      </button>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+<article class="favorites-panel">
+
+  <ng-container *ngTemplateOutlet="
+    (working$ | async) ? working :
+    ((completed$ | async) && favorites?.length > 0 ? content : info)">
+  </ng-container>
+  <footer *ngIf="favorites?.length > 0">
+    <a [routerLink]="['/favorites']">
+      {{ 'FAVORITES.HOME.FOOTER' | translate }}
+    </a>
+    <i class="icon-next"></i>
+  </footer>
+</article>
+
+<ng-template #working>
+  <section class="favorites-loading">
+    <ion-skeleton-text class="favorites-loading-card" animated *ngFor="let i of [1, 2, 3]"></ion-skeleton-text>
+  </section>
+</ng-template>
+
+<ng-template #content>
+  <header>
+    <h3>
+      <i class="icon-love-fill"></i>
+      {{ 'FAVORITES.HOME.TITLE' | translate }}
+    </h3>
+  </header>
+  <section class="favorites-panel-container" *ngIf="favorites?.length > 0 else info">
+    <ng-container *ngFor="let favorite of favorites | slice: 0: maxFavoritesShow">
+      <div class="item-favorite" [routerLink]="['/favorites/transfer', favorite.keyFavorite]" tabindex="0" role="link">
+        <span [style.background-color]="favoriteUiConfig[favorite.identificationFavoriteType].bgColor">
+          <i [style.color]="favoriteUiConfig[favorite.identificationFavoriteType].textColor"
+            [class]="favoriteUiConfig[favorite.identificationFavoriteType].icon"></i>
+        </span>
+        <div class="item-favorite-content">
+          <p>{{ favoriteUiConfig[favorite.identificationFavoriteType].title | translate }}</p>
+          <p>{{ favorite.nameFavoriteTransaction }}</p>
+        </div>
+      </div>
+
+    </ng-container>
+
+    <div *ngIf="isAddFavoritesEnabled" class="item-favorite" [routerLink]="ADD_FAVORITE" tabindex="0" role="link">
+      <span [style.background-color]='"#EAF0FC"'>
+        <i [style.color]="'#1F7AFF'" class="icon-agregar"></i>
+      </span>
+      <div class="add-favorite">
+        <p>{{ 'FAVORITES.ADD' | translate }}</p>
+
+      </div>
+    </div>
+  </section>
+</ng-template>
+
+<ng-template #info>
+  <section class="favorites-panel-info">
+    <app-add-favorite-card (cardClicked)="showOnboarding()" *ngIf="hasSDA"></app-add-favorite-card>
+  </section>
+</ng-template>

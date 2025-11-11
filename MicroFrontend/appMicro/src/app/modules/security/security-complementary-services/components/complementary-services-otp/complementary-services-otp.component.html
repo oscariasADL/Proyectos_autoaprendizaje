@@ -1,0 +1,18 @@
+<div class="complementary-services-otp-container">
+  <p class="semi-bold mb-1">
+    {{ 'SECURITY.COMPLEMENTARY_SERVICES.OTP.TITLE' | translate }}
+  </p>
+
+  <small class="mb-5">
+    {{ 'SECURITY.COMPLEMENTARY_SERVICES.OTP.SUBTITLE' | translate }}
+  </small>
+
+  <avv-password id="complementary-services-otp-input" [control]="otp" [hideCharacters]="false" [autoFocus]="true"
+    [showEye]="false" [numCharacters]="8" [hasError]="errorMessage$ | async" [errorMessage]="errorMessage$ | async">
+  </avv-password>
+
+  <button class="avv-btn-primary mt-5" [id]="'complementary-services-otp-btn'" [disabled]="otp.invalid"
+    (click)="setStateWithOtp.emit(otp.value)">
+    {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+  </button>
+</div>

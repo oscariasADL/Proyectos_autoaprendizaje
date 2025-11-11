@@ -1,0 +1,99 @@
+@import 'utils'
+
+.update-installments-list
+  padding: $spacer-3 $spacer-2 $spacer-4
+  text-align: initial
+
+  p
+    font-size: 14px
+
+  .update-installments-header
+    .update-installments-title
+      margin-bottom: $spacer
+
+    .avv-information-link
+      padding: 0 0 0 calc(#{$spacer} / 2)
+      margin-bottom: $spacer-3
+
+  .update-installments-list-items
+    margin-bottom: 10vh
+
+  .update-installments-list-items .items-grouped
+    display: flex
+    flex-direction: column
+    gap: $spacer-2
+    margin-bottom: $spacer-3
+
+    & > p
+      font-weight: 700
+
+    .update-installments-card
+      display: flex
+      flex-direction: column
+      border: 1px solid #DEE1E4
+      border-radius: 4px
+
+    .update-installments-card-body
+      display: flex
+      flex-direction: row
+      gap: $spacer
+      width: 100%
+      padding: $spacer-2
+
+      .abbreviation-date
+        +flex(center, start, column)
+        color: var(--blue-2)
+
+        span:first-child
+          font-size: 16px
+          font-weight: 700
+
+        span:last-child
+          font-size: 9px
+          font-weight: 600
+
+      .separator
+        border: 1px solid #D1D6DA
+        margin: 0 $spacer
+        height: 4.5vh
+
+      .container-info
+        display: flex
+        flex-direction: column
+        gap: $spacer-2
+        flex-grow: 1
+
+      .container-info-header
+        display: flex
+
+      .container-info-header > .description-content
+        +flex(start, center, column)
+
+        p
+          font-weight: bold
+
+        small
+          font-size: 11px
+
+      .container-info-body ul
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 8px
+        font-size: 12px
+
+        div
+          display: grid
+          grid-template-columns: auto 1fr
+
+        span:last-child
+          margin-left: 5px
+          font-weight: 600
+
+    .update-installments-card-footer
+      padding: $spacer-2
+      background-color: #F8F9FA
+      border-top: 1px solid #EBEDEF
+      border-radius: 0 0 4px 4px
+
+      button
+        background-color: var(--white)

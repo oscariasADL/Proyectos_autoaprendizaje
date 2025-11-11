@@ -1,0 +1,26 @@
+<div class="avv-generic-step toward-step">
+  <p class="avv-generic-step-title">{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TO_WHO.TITLE' | translate }}</p>
+  <p class="avv-generic-step-description">{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TO_WHO.DESCRIPTION' | translate }}</p>
+
+  <button class="avv-contact-card one-item mb-3"
+          id='transfers-unregistered-accounts-to-avvillas-btn'
+          [disabled]="denyTowardAccounts"
+          (click)="setTowardAccounts()">
+    <span class="contact-image-icon icon-salario"></span>
+    <span class="contact-info pl-0">
+      <p>{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TO_WHO.TYPES.OWN' | translate }}</p>
+    </span>
+    <span class="contact-icon icon-next"></span>
+  </button>
+
+  <button class="avv-contact-card one-item"
+          id='transfers-unregistered-accounts-to-cell-phone-btn'
+          [disabled]="denyTowardCellPhone"
+          (click)="setTowardCellPhone()">
+    <span class="contact-image-icon icon-celular"></span>
+    <span class="contact-info pl-0">
+      <p>{{ 'TRANSFERS.UNREGISTER_ACCOUNTS.TO_WHO.TYPES.CELL_PHONE' | translate }}</p>
+    </span>
+    <span class="contact-icon icon-next"></span>
+  </button>
+</div>

@@ -1,0 +1,58 @@
+<div class="modal-products-input" id="select-product" role="button"
+     (click)="openModal()"
+     [ngClass]="{'balance-error': hasBalanceError(), 'disabled': amountToPay === null}">
+  <div class="input-label">
+    <span class="input-placeholder" [ngClass]="{'selected-product': selectedProduct}">{{ label | translate }}</span>
+    <span class="input-value" *ngIf="selectedProduct" [innerHTML]="selectedProduct.title"></span>
+  </div>
+  <i class="icon icon-down"></i>
+</div>
+<small class="modal-products-input-insufficient" *ngIf="hasBalanceError()">
+  {{ 'PRODUCT.INSUFFICIENT_BALANCE' | translate }}
+</small>
+
+<ion-modal css-class="avv-custom-modal"
+           #modal>
+  <ng-template>
+    <article class="modal-products">
+      <header class="modal-products-header">
+        <h3>{{ modalTitle }}</h3>
+        <i class="icon-salir" (click)="modal.dismiss()"></i>
+      </header>
+      <ng-container *ngFor="let modalProduct of products; let indexGroup = index">
+        <section class="modal-products-groups"
+                 *ngIf="modalProduct?.productsCards && modalProduct?.productsCards.length > 0">
+          <small class="group-label" *ngIf="showGroupLabel">{{ modalProduct.label }} </small>
+          <div role="button" class="product-card" *ngFor="let product of modalProduct.productsCards; let index = index"
+               (click)="selectProduct(indexGroup, index)"
+               [ngClass]="{'disabled': isDisabled(product.value)}">
+            <div class="product-card-content">
+              <div class="product-card-icon">
+                <i *ngIf="product?.icon" class="icon {{ product?.icon }}"></i>
+                <img class="product-card-franchise" alt="icon" #img
+                     *ngIf="product?.iconImage"
+                     [src]="product?.iconImage | franchiseImage"
+                     (error)="img.className = 'display-none'"/>
+              </div>
+              <div class="product-card-data">
+                <p class="product-card-title" [innerHTML]="product.title"></p>
+                <p class="product-card-subtitle">
+                  <span class="product-card-insufficient semi-bold"
+                        *ngIf="isDisabled(product.value)">{{ 'PRODUCT.INSUFFICIENT_BALANCE' | translate }}:</span>
+                  <span [innerHTML]="(product?.description | translate) + ':'"
+                        *ngIf="!isDisabled(product.value)"></span>
+                  <span class="product-card-balance"
+                        [attr.aria-label]="(product.value | numberFormat) + ' ' + ('CURRENCIES.' + product.currency | translate)"
+                        [innerHTML]="(product.value| currencyFormat)"></span>
+                </p>
+              </div>
+              <div class="product-card-right-icon">
+                <i class="icon icon-next"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ng-container>
+    </article>
+  </ng-template>
+</ion-modal>

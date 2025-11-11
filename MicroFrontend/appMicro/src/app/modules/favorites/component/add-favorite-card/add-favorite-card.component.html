@@ -1,0 +1,8 @@
+<div class="add-favorite__card" (click)="onClick()" role="button" tabindex="0">
+  <img appPreloadImage [preload]="skeleton" width="36" height="36" [src]="favoritePhonePath| imageUrl:true" alt="">
+  <div>
+    <h5 class="add-favorite__title">{{'FAVORITES.HOME.ADD_FAVORITE_CARD.TITLE' | translate}}</h5>
+    <p class="add-favorite__description">{{'FAVORITES.HOME.ADD_FAVORITE_CARD.DESCRIPTION' | translate}}</p>
+  </div>
+  <ion-skeleton-text #skeleton class="favorite-phone__skeleton" animated></ion-skeleton-text>
+</div>

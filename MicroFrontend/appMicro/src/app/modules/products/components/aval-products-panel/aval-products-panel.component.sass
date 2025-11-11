@@ -1,0 +1,83 @@
+@import 'utils'
+
+.container-aval-products
+  width: 100%
+  overflow: hidden
+  position: relative
+  transition: 0.3s
+  padding: 0 $spacer-2
+
+.aval-products-panel
+  padding: $spacer-1 0
+  background-color: var(--gray-4)
+  min-height: 146px
+  position: relative
+  &::before
+      content: ""
+      position: absolute
+      bottom: 0
+      right: -20px
+      width: 80px
+      height: 100%
+      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%)
+      z-index: 2
+      transform: rotate(180deg)
+
+  &-toggle
+    +flex(center, flex-start)
+    margin-bottom: $spacer-1
+
+    small, i
+      color: var(--blue-1)
+
+    small
+      text-decoration: underline
+      line-height: 2
+      padding-left: $spacer-2
+
+    i
+      font-size: 16px
+      margin-left: $spacer
+      transition: .2s
+
+  &-list
+    max-height: 0
+    display: flex
+    overflow-x: scroll
+    overflow-y: hidden
+    position: relative
+    transition: 0.3s
+    gap: 8px
+    padding: 0 $spacer-2
+    -ms-overflow-style: none 
+    crollbar-width: none
+    margin-bottom: 40px
+    &::-webkit-scrollbar
+      display: none
+
+    li
+      +flex(center, flex-start)
+      position: relative
+      width: 84px
+      height: 84px
+      border-radius: 4px
+      padding: $spacer
+      border: solid 1px var(--pale-grey) s
+      box-shadow: 0 2px 4px 0 rgba(44, 44, 51, 0.24)
+      background-color: var(--white)
+      margin-bottom: $spacer
+      flex-shrink: 0
+      justify-content: center
+      align-content: center
+      align-content: center
+      img
+        height: 100%
+
+  &.active
+    .aval-products-panel
+      &-toggle
+        i
+          transform: rotate(180deg)
+
+      &-list
+        max-height: 1000px

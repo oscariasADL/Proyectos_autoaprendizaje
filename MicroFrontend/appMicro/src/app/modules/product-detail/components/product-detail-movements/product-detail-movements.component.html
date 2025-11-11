@@ -1,0 +1,68 @@
+<div class="product-detail-movements avv-pb-with-footer">
+  <ng-container
+          *ngTemplateOutlet="working ? loading : (completed ? (movements?.length > 0 ? content : noContent) : showError)">
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  <div class="product-detail-movements-loading">
+    <div class="product-detail-movements-loading-title">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+    <div class="product-detail-movements-loading-card" *ngFor="let i of [1, 2, 3, 4]">
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <ng-container *ngIf="movements.length > 0; else noContent">
+    <p class="product-detail-movements-title">
+      {{ movementsTitle }}
+    </p>
+    <div class="product-detail-movements-list">
+      <div *ngFor="let group of groupedMovements | slice: 0 : 10; let i = index">
+        <span class="movement-date">{{ group.date }}</span>
+        <app-movement-item
+              *ngFor="let movement of group.movements | slice: 0 : 10; let i = index"
+              [id]="'movement-'+(i+1)"
+              [movement]="movement">
+      </app-movement-item>
+      </div>
+      
+      <ng-container *ngTemplateOutlet="btnMoreMovements"></ng-container>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #showError>
+  <div class="avv-content-empty p-3">
+    <div class="avv-content-empty-image">
+      <img [src]="'sesion-finalizada.svg' | imageUrl" alt="" draggable="false" />
+    </div>
+    <p class="bold avv-content-empty-text mb-3">Lo sentimos</p>
+    <p class="avv-content-empty-message">
+      No fue posible cargar tus movimientos
+    </p>
+  </div>
+</ng-template>
+
+<ng-template #noContent>
+  <div class="product-detail-movements-empty">
+    <img
+      class="icon"
+      [src]="'sin-movimientos.svg' | imageUrl"
+      alt="sin-movimientos">
+    <p>No tienes movimientos en este rango de tiempo.</p>
+    <ng-container *ngTemplateOutlet="btnMoreMovements"></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #btnMoreMovements>
+  <button (click)="moreMovements.emit()"
+          class="avv-link redirect-more-movements">
+    Ver más movimientos <i class="icon-next"></i>
+  </button>
+</ng-template>

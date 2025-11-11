@@ -1,0 +1,55 @@
+<div class="confirm-pocket-with-returns">
+    <div class="confirm-pocket-with-returns__header">
+        <img [src]="'/assets/images/illustrations/pockets/money-pocket.svg' | imageUrl:true"
+            [alt]="'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.TITLE' | translate">
+        <p class="semi-bold pockets-edit-step-title">
+            {{ 'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.TITLE' | translate }}
+        </p>
+    </div>
+    <div class="confirm-pocket-with-returns__info">
+        <ul class="confirm-pocket-with-returns__list">
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.POCKET_NAME' | translate}}</span>
+                <span class="confirm-pocket-with-returns__value">{{editPocketWithReturns.name}} </span>
+            </li>
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.CATEGORY'
+                    | translate}}</span>
+                <span class="confirm-pocket-with-returns__value"> {{editPocketWithReturns.category.label}}</span>
+            </li>
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.GOAL' |
+                    translate}}</span>
+                <span class="confirm-pocket-with-returns__value"
+                    [innerHTML]="sanitizeCurrency(editPocketWithReturns.goal) | currencyFormat"> </span>
+            </li>
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.PERIOD' |
+                    translate}}</span>
+                <span class="confirm-pocket-with-returns__value">{{editPocketWithReturns.period.label}} </span>
+            </li>
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.QUOTA_AMOUNT' | translate}}</span>
+                <span class="confirm-pocket-with-returns__value"
+                    [innerHTML]="editPocketWithReturns.pocket.instalmentAmount | currencyFormat">
+                </span>
+            </li>
+            <li class="confirm-pocket-with-returns__item">
+                <span class="confirm-pocket-with-returns__key">{{
+                    'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.FIELDS.QUOTA' |
+                    translate}}</span>
+                <span class="confirm-pocket-with-returns__value">{{installments}} </span>
+            </li>
+        </ul>
+    </div>
+    <div class="confirm-pocket-with-returns__actions"> <button class="avv-btn-primary" type="submit"
+            [id]="'pocket-edit-btn'" [disabled]="!form.valid" (click)="confirm.emit()">
+            {{ 'POCKET_WITH_RETURNS.EDIT_POCKET.CONFIRMATION_STEP.BUTTON' | translate | uppercase }}
+        </button>
+    </div>
+</div>

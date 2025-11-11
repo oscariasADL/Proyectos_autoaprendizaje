@@ -1,0 +1,68 @@
+<article class="update-installments-list">
+  <section class="update-installments-header">
+    <p class="update-installments-title">{{ 'UPDATE_INSTALLMENTS.MOVEMENT_STEP.TITLE' | translate }}</p>
+
+    <div (click)="showInformation.emit()" class="avv-information-link">
+      <i class="icon-informacion"></i>
+      <small>{{ 'UPDATE_INSTALLMENTS.INFO_ALERT.TITLE' | translate }}</small>
+    </div>
+  </section>
+  <section class="update-installments-list-items">
+    <ng-container *ngFor="let group of movements; let indexGroup = index;">
+      <div class="items-grouped">
+        <p>{{ group.date | capitalize }}</p>
+        <ng-container *ngFor="let movement of group.values; let indexValue = index;">
+          <div class="update-installments-card">
+            <div class="update-installments-card-body">
+              <div class="abbreviation-date">
+                <span>{{ movement.purchaseDate | date: 'd' }}</span>
+                <span>{{ movement.purchaseDate | monthAbbreviation }}</span>
+              </div>
+              <div class="separator"></div>
+              <div class="container-info">
+                <div class="container-info-header">
+
+                  <div class="description-content">
+                    <p>{{ movement.purchaseDescription }}</p>
+                    <small>{{ movement.companyDescription }}</small>
+                  </div>
+                </div>
+                <div class="container-info-body">
+                  <ul>
+                    <li>
+                      <div>
+                        <span>{{ 'UPDATE_INSTALLMENTS.FIELDS.INSTALLMENTS' | translate }}:</span>
+                        <span>{{ movement.installments - movement.pendingInstallments }}
+                          {{ 'OF' | translate }} {{ movement.installments }}</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <span>{{ 'UPDATE_INSTALLMENTS.FIELDS.RATE' | translate }}:</span>
+                        <span>{{ movement.rate }} %</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <span>{{ 'DIRECTED_PAYMENTS.FIELDS.BALANCE' | translate }}:</span>
+                        <span
+                          [innerHtml]="movement.balance | currencyFormat"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="update-installments-card-footer">
+              <button type="button" class="avv-btn-secondary sm"
+                      [id]="'movement-'+(indexGroup + 1)+'-'+(indexValue+1)"
+                      (click)="selectMovement(movement)">{{ 'ACTIONS.MODIFY' | translate | uppercase }}</button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </section>
+</article>

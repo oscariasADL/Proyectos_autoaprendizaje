@@ -1,0 +1,27 @@
+.stories
+  margin-bottom: 24px
+  &-list
+    display: flex
+    gap: 20px
+    &-item
+      width: 80px
+      .story-image
+        border-radius: 50%
+        height: auto
+        width: 100%
+        object-fit: cover
+        padding: 4px
+        border: 2px solid #0014A2
+        &.opened
+          border-color: #d1d6da
+      .story-title
+        font-size: 11px
+        margin-top: 6px
+        text-align: center
+        text-overflow: ellipsis
+        overflow: hidden
+        line-height: 14px
+  &-skeleton
+    border-radius: 50%
+    width: 64px
+    height: 64px

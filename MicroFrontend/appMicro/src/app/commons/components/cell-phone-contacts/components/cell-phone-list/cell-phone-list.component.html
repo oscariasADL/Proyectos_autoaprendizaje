@@ -1,0 +1,73 @@
+<div class="list-from-cell-phone">
+    <ng-container *ngIf="working; else contacts.length > 0 ? contactsContent : contactsError">
+        <div
+            *ngFor="let item of [1, 2, 3, 4]"
+            class="working">
+            <ion-skeleton-text
+                animated
+                class="avv-skeleton"></ion-skeleton-text>
+        </div>
+    </ng-container>
+    <ng-template #contactsContent>
+        <div class="contacts-content">
+            <p class="small">
+                {{ 'CELL_PHONE_CONTACTS.LIST.TITLE' | translate }}
+            </p>
+            <avv-input
+                *ngIf="contacts.length > 5"
+                [utag]="'enviar plata - ingresa los datos de tu contacto - contactos - buscar contacto'"
+                [utagCategory]="utagCategory"
+                [type]="'text'"
+                [id]="'cell-phone-contacts-search'"
+                [label]="'CELL_PHONE_CONTACTS.LIST.LABEL' | translate"
+                [icon]="'icon-lupa_search'"
+                [preserveIcon]="true"
+                [control]="searchControl">
+            </avv-input>
+
+            <div class="contacts-content-list">
+                <ng-container *ngFor="let contact of contactsFiltered">
+                    <div
+                        (click)="this.selectContacts.emit(contact)"
+                        [utag]="'enviar plata - ingresa los datos de tu contacto - contactos - seleccionar contacto'"
+                        [utagCategory]="utagCategory"
+                        id="contact-own-accounts"
+                        class="avv-contact-card item">
+                        <div class="contact-info">
+                            <h6
+                                class="name"
+                                [innerHTML]="contact.displayName | highlight: keyWord"></h6>
+                            <p
+                                class="nickname"
+                                [innerHTML]="contact.phoneNumber"></p>
+                        </div>
+                        <span class="contact-icon icon-next"></span>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div
+                *ngIf="contactsFiltered.length === 0"
+                class="contacts-content-list-empty">
+                <p class="avv-generic-step-title bold">
+                    {{ 'CELL_PHONE_CONTACTS.LIST.EMPTY' | translate }}
+                </p>
+                <img
+                    class="icon"
+                    [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+                    alt="sin-resultados">
+            </div>
+
+        </div>
+    </ng-template>
+    <ng-template #contactsError>
+        <div class="contacts-content-empty">
+            <p class="avv-generic-step-title bold">
+                {{ 'CELL_PHONE_CONTACTS.LIST.ERROR' | translate }}
+            </p>
+            <img
+                [src]="'icons/error-x-phone.svg' | imageUrl"
+                alt="no-contacts">
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#2C2C33" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M36.122 57.39L14.747 57.262 14.747 53.512M46.601 12.183L50.51 12.183 50.51 36.558"/>
+        <path fill="#E1001D" d="M38.81 54.844l1.259-1.989c-.472-1.297-.716-2.673-.716-4.076 0-5.215 3.364-9.656 8.035-11.275V8.412c0-.35-.284-.635-.634-.635H8.743c-.351 0-.635.285-.635.635V54.853h30.534c.057 0 .112-.006.168-.009"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.63 13.655L41.193 13.655M13.63 19.963L41.193 19.963M13.63 25.568L41.193 25.568M13.63 30.879L41.193 30.879"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-width="1.5" d="M13.671 37.636s1.356 1.975 4.226.398c2.692-1.48 4.573.089 4.573.089"/>
+        <g>
+            <path stroke="#2C2C33" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.631 4.087L6.539 10.551 5.357 5.291 0.096 6.474 4.188 0.009" transform="translate(39.375 39.957) translate(0 12.918)"/>
+            <path stroke="#2C2C33" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M0.312 4.432L4.589 10.775 5.619 5.483 10.911 6.512 6.634 0.169" transform="translate(39.375 39.957) translate(12.375 12.543)"/>
+            <path fill="#FFF" d="M19.288 8.448c0-4.283-3.472-7.754-7.753-7.754-4.282 0-7.754 3.471-7.754 7.754 0 4.281 3.472 7.753 7.754 7.753 4.281 0 7.753-3.472 7.753-7.753" transform="translate(39.375 39.957)"/>
+            <path stroke="#2C2C33" stroke-linecap="round" stroke-width="1.5" d="M19.982 8.448C19.982 3.782 16.2 0 11.535 0 6.869 0 3.087 3.782 3.087 8.448c0 4.665 3.782 8.447 8.448 8.447 4.665 0 8.447-3.782 8.447-8.447z" transform="translate(39.375 39.957)"/>
+            <path fill="#0048DB" d="M16.893 8.58c0-2.905-2.354-5.259-5.258-5.259S6.377 5.675 6.377 8.58s2.354 5.258 5.258 5.258 5.258-2.354 5.258-5.258" transform="translate(39.375 39.957)"/>
+        </g>
+    </g>
+</svg>

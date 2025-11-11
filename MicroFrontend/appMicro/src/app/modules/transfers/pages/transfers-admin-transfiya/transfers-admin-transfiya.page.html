@@ -1,0 +1,48 @@
+<app-headers #header [title]="'TRANSFERS.PENDING.HEADER' | translate" [closeUrl]="'/'"
+             [type]="header?.headerType?.whitePrimary">
+</app-headers>
+
+<ion-content [forceOverscroll]="false">
+  <article class="admin-transfiya">
+    <h2 class="admin-transfiya-title">{{ 'TRANSFERS.ADMIN_TRANSFIYA.TITLE' | translate }}</h2>
+    <section class="admin-transfiya-cards">
+      <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celDefaultAccount">
+        <div class="admin-transfiya-card"
+             id="admin-transfiya-default-account"
+             [routerLink]="['/default-account']">
+          <figure class="admin-transfiya-card-avatar">
+            <img [src]="'avatar.svg' | imageUrl" alt="">
+          </figure>
+          <div class="admin-transfiya-card-title">
+            <p>{{ 'TRANSFERS.ADMIN_TRANSFIYA.DEFAULT_ACCOUNT_LABEL' | translate }}</p>
+          </div>
+          <div class="admin-transfiya-card-icon">
+            <i class="icon icon-next"></i>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template [appFeatureToggle]="featureFlagsKey.TransferCel2celTrustRelations">
+        <div class="admin-transfiya-card"
+             id="admin-transfiya-trust-relation"
+             *appFeatureToggle="featureFlagsKey.TransferCel2celTrustRelations"
+             [routerLink]="['/trust-relation']">
+          <figure class="admin-transfiya-card-avatar">
+            <img [src]="'avatar.svg' | imageUrl" alt="">
+          </figure>
+          <div class="admin-transfiya-card-title">
+            <p>{{ 'TRANSFERS.ADMIN_TRANSFIYA.TRUST_RELATION_LABEL' | translate }}</p>
+          </div>
+          <div class="admin-transfiya-card-icon">
+            <i class="icon icon-next"></i>
+          </div>
+        </div>
+      </ng-template>
+    </section>
+    <section class="admin-transfiya-info">
+      <div (click)="showInformation()" class="avv-information-link p-0 mt-4">
+        <i class="icon-info"></i>
+        <small [innerHTML]="'TRANSFERS.ADMIN_TRANSFIYA.ALERT_INFO.MESSAGE' | translate"></small>
+      </div>
+    </section>
+  </article>
+</ion-content>

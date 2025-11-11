@@ -1,0 +1,33 @@
+<ion-content [forceOverscroll]="false">
+  <main class="pfm-change-category">
+    <header class="pfm-change-category-header">
+      <div class="pfm-change-category-header-back">
+        <i class="icon-back header-back-icon" (click)="closeModal()"></i>
+        <h5 class="pfm-change-category-header-title">
+          {{ 'PFM.CHANGE_CATEGORY.MODAL.HEADER' | translate }}
+        </h5>
+      </div>
+      <div class="pfm-change-category-header-close">
+        <i class="icon-salir header-close-icon" (click)="closeModal()"></i>
+      </div>
+    </header>
+    <section class="pfm-change-category-container">
+      <h3>
+        {{ 'PFM.CHANGE_CATEGORY.MODAL.TITLE' | translate }}
+        {{ (categoryType === pfmCategoryType.INCOME ? 'PFM.INCOME' : 'PFM.EXPENSE') | translate }}
+      </h3>
+      <avv-radio
+        class="avv-radio-input full"
+        [id]="'transfers-avv-account-type'"
+        [items]="categoryOptions"
+        [control]="newCategoryCode"
+        [isPFM]="true">
+      </avv-radio>
+    </section>
+    <footer>
+      <button type="button" class="avv-btn-primary" [disabled]="formGroup.invalid" (click)="changeCategory()">
+        {{ 'PFM.CHANGE_CATEGORY.MODAL.ACTION' | translate | uppercase }}
+      </button>
+    </footer>
+  </main>
+</ion-content>

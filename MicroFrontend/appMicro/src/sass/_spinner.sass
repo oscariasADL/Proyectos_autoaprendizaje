@@ -1,0 +1,23 @@
+@keyframes spinner-border
+  to
+    transform: rotate(360deg)
+
+.spinner
+  display: inline-block
+  width: 24px
+  height: 24px
+  vertical-align: text-bottom
+  border: 3px solid var(--blue-2)
+  border-right-color: transparent
+  border-radius: 50%
+  animation: spinner-border .75s linear infinite
+
+.spinner-border
+  display: inline-block
+  width: 40px
+  height: 40px
+  vertical-align: text-bottom
+  border: 2px solid var(--gray-3)
+  border-right-color: transparent
+  border-radius: 50%
+  animation: spinner-border .75s linear infinite

@@ -1,0 +1,28 @@
+@import 'utils'
+
+.wallet-product-detail-panel
+  width: 100%
+  display: inline-flex
+
+
+  .avv-btn.btn-apple
+    max-height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 8px
+    background-color: #252B31
+    border-radius: 4px
+    font-size: 18px
+    color: var(--white)
+
+    .wallet-logo
+      width: 4rem
+      height: 4rem
+
+    &:disabled
+      background-color: #9DA6AF
+
+    span
+      line-height: 1
+      font-size: 20px

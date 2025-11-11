@@ -1,0 +1,274 @@
+<div [utag]="props?.utagModal" [utagCategory]="props?.utagCategory" class="avv-alert-sheet {{ props.type }}"
+     [id]="props.id">
+  <i *ngIf="!(props?.hideCloseButton === true)" [attr.aria-label]="'Cerrar'" role="button"
+     class="avv-alert-sheet-close icon-salir" (click)="closeModal(false)"></i>
+
+  <div class="avv-alert-sheet-header" id="alert-title">
+    <img *ngIf="icon" [src]="icon | imageUrl" alt="alert-sheet-icon">
+    <p [innerHtml]="props.title | translate"></p>
+  </div>
+
+  <div class="avv-alert-sheet-body">
+    <div class="avv-ticket" *ngIf="props.type === alertSheetType.success">
+      <ng-container *ngTemplateOutlet="
+                alertTemplate;
+                context: {
+                    state: (shareCompleted$ | async),
+                    textOk: 'VOUCHER.SHARE.OK',
+                    textError: 'VOUCHER.SHARE.ERROR'
+                }"></ng-container>
+
+      <ng-container *ngTemplateOutlet="
+                alertTemplate;
+                context: {
+                    state: (downloadCompleted$ | async),
+                    textOk: 'VOUCHER.DOWNLOAD.OK',
+                    textError: 'VOUCHER.DOWNLOAD.ERROR'
+                }"></ng-container>
+
+      <ng-container *ngTemplateOutlet="voucherTemplate; context: { data: props, items: items }"></ng-container>
+      <div *ngIf="props.message" class="avv-alert-info" id="ticket-message">
+        <i class="avv-alert-icon icon-info"></i>
+        <div class="avv-alert-text" [innerHTML]="props.message | translate">
+        </div>
+      </div>
+
+    </div>
+
+    <p class="avv-alert-sheet-description"
+       *ngIf="props.type === alertSheetType.error || props.type === alertSheetType.question || props.type === alertSheetType.option"
+       [innerHTML]="props.descriptionHtml || (props.description | translate)">
+    </p>
+    <div class="notification-container"
+         *ngIf="props.showNotification"
+    >
+      <app-notification
+        [type]="props.notificationType"
+        [icon]="props.notificationIcon"
+        [description]="props.notificationDescription">
+      </app-notification>
+    </div>
+    <div class="avv-alert-sheet-sublist-info" *ngIf="props?.sublistInfo" [innerHtml]="props.sublistInfo"></div>
+
+    <div *ngIf="props?.linkText" (click)="props?.linkAction()"
+         class="avv-information-link justify-content-center p-0 mt-2">
+      <i [ngClass]="props?.linkIcon" *ngIf="props?.linkIcon"></i>
+      <small [innerHTML]="props?.linkText | translate"></small>
+    </div>
+
+  </div>
+
+  <div class="avv-alert-sheet-footer">
+
+    <ng-container *ngIf="props.type === alertSheetType.success && !hasSuccessButtons">
+
+      <div *ngIf="props?.bottomMessage" class="py-2 px-5 text-center" [innerHTML]="props?.bottomMessage | translate">
+      </div>
+
+      <div *ngIf="props?.id === 'block-account-success-alert'" class="avv-alert-warning"
+           id="ticket-message-block-account-success-alert">
+        <i class="avv-alert-icon icon-alerta"></i>
+        <div style="font-size: 12px;">
+          {{ "BLOCK_ACCOUNT.BLOCK_ACCOUNT_CONFIRM_WARN_TEXT" | translate }}
+        </div>
+      </div>
+      <div *ngIf="props?.id === 'block-account-success-alert'">
+      </div>
+      <div class="round-actions">
+        <button type="button" class="avv-btn-round avv-alert-download-btn" *ngIf="!props.denyDownload"
+                [id]="props.id + '-btn-download'" [ngClass]="{'working': (workingDownload$ | async) || !ipLoaded}"
+                [disabled]="workingDownload$ | async"
+                [utag]="(props?.utag) ? props.utag + 'descargar comprobante' : null"
+                [utagCategory]="props?.utagCategory" (click)="downloadTicket()">
+          <i class="icon-descarga avv-alert-download-btn-icon"></i>
+          <i class="spinner avv-alert-download-btn-loader"></i>
+          <span class="label-btn-round">{{ 'VOUCHER.ACTIONS.DOWNLOAD' | translate }}</span>
+        </button>
+        <button type="button" class="avv-btn-round avv-alert-share" *ngIf="props.allowShare"
+                [id]="props.id + '-btn-share'" [ngClass]="{'working': (workingShare$ | async) || !ipLoaded}"
+                [disabled]="workingShare$ | async" [utag]="(props?.utag) ? props.utag + 'compartir' : null"
+                [utagCategory]="props?.utagCategory" (click)="shareTicket()">
+          <i class="icon-compartir avv-alert-share-icon"></i>
+          <i class="spinner avv-alert-share-loader"></i>
+          <span class="label-btn-round">{{ 'VOUCHER.ACTIONS.SHARE' | translate }}</span>
+        </button>
+        <button type="button" class="avv-btn-round" *ngIf="canBeFavorite || isFavorite"
+                [ngClass]="{'active': isFavorite || showFavoriteNameField}" (click)="saveOrDeleteFavorite()">
+          <i class="icon-love" *ngIf="!isFavorite && !showFavoriteNameField else iconLoveFill"></i>
+          <ng-template #iconLoveFill>
+            <i class="icon-love-fill" [style.color]="'var(--red-1)'" *ngIf="isFavorite || showFavoriteNameField"></i>
+          </ng-template>
+          <span class="label-btn-round">{{ 'FAVORITES.ACTIONS.BTN_SAVE' | translate }}</span>
+        </button>
+        <ng-container *ngIf="(isEnabledSpiContactBook() | async) && props?.spiContactKey">
+          <button type="button" class="avv-btn-round"
+                  *ngIf="props?.spiContactKey && !props.shouldSaveSpiContact && !props.isSavedSpiContact"
+                  (click)="redirectToAddSpiContact()">
+            <i class="icon-contacts"></i>
+            <span class="label-btn-round">{{ 'TRANSFERS.BRE_B.STEPS.DATA.FIELDS.SAVE_CONTACT' | translate }}</span>
+          </button>
+          <button type="button" class="avv-btn-round" *ngIf="!props?.shouldSaveSpiContact && props.isSavedSpiContact"
+                  [ngClass]="{'active': props.isFavoriteSpiContact || showSpiFavoriteNameField}"
+                  (click)="saveOrDeleteSpiFavorite()">
+            <i class="icon-love" *ngIf="!props.isFavoriteSpiContact && !showSpiFavoriteNameField else iconLoveFill"></i>
+            <ng-template #iconLoveFill>
+              <i class="icon-love-fill" [style.color]="'var(--red-1)'"
+                 *ngIf="props.isFavoriteSpiContact || showSpiFavoriteNameField"></i>
+            </ng-template>
+            <span class="label-btn-round">
+              {{ (props.isFavoriteSpiContact ? 'TRANSFERS.BRE_B.UPDATE_SPI_CONTACT.ADD_TO_FAVORITE.ADDED_FAVORITE_CONTACT' : 'TRANSFERS.BRE_B.UPDATE_SPI_CONTACT.ADD_TO_FAVORITE.ADD_FIELD') | translate }}
+            </span>
+          </button>
+        </ng-container>
+      </div>
+
+      <div class="favorites-name-field" *ngIf="showSpiFavoriteNameField">
+        <avv-field [type]="'text'" [id]="'favorites-name'" [label]="'FAVORITES.CREATE.NAME_FIELD' | translate"
+                   [control]="favoriteFormControl" [hasBtnInputAction]="true" [textBtnInputAction]="'ACTIONS.SAVE'"
+                   (clickBtnInputAction)="saveSpiFavorite()"></avv-field>
+      </div>
+
+      <div class="favorites-name-field" *ngIf="showFavoriteNameField">
+        <avv-field [type]="'text'" [id]="'favorites-name'" [label]="'FAVORITES.CREATE.NAME_FIELD' | translate"
+                   [control]="favoriteFormControl" [hasBtnInputAction]="true" [textBtnInputAction]="'ACTIONS.SAVE'"
+                   (clickBtnInputAction)="saveFavorite()"></avv-field>
+      </div>
+
+      <button class="avv-btn-secondary" *ngIf="props.denyDownload && props.buttons && props.buttons?.length > 0"
+              [id]="props.id + '-btn-default'" (click)="closeModal()">
+        {{ (!!props?.buttons ? props?.buttons[0] : 'ACTIONS.COPY_THAT') | translate | uppercase }}
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="hasSuccessButtons">
+      <button class="avv-btn-primary" [id]="props.id + '-btn-confirm'" [utag]="props?.utag ?? null"
+              [utagCategory]="props?.utagCategory ?? null"
+              (click)="!!props?.buttonsAction ? props?.buttonsAction[0]() : null; closeModal(true)">
+        {{ (!!props?.buttons ? props?.buttons[0] : 'PAYROLL_ADVANCE.ACTIONS.TRY_AGAIN') | translate }}
+      </button>
+
+      <button class="avv-btn-secondary mt-3" [id]="props.id + '-btn-cancel'" [utag]="props?.utagCancel ?? null"
+              [utagCategory]="props?.utagCategory ?? null"
+              (click)="!!props?.buttonsAction ? props?.buttonsAction[1]() : null; closeModal(false)">
+        {{ (!!props?.buttons ? props?.buttons[1] : 'PAYROLL_ADVANCE.ACTIONS.GO_BACK') | translate }}
+      </button>
+    </ng-container>
+
+    <button *ngIf="props.type === alertSheetType.error" [id]="props.id + '-btn-action'"
+            [ngClass]="'avv-btn-secondary ' + props.cssClass" (click)="closeModal(true)">
+      {{ (!!props?.buttons ? props?.buttons[0] : 'ACTIONS.COPY_THAT') | translate | uppercase }}
+    </button>
+
+    <ng-container *ngIf="props.type === alertSheetType.question">
+      <button class="avv-btn-primary" [id]="props.id + '-btn-confirm'" [utag]="props?.utag ?? null"
+              [utagCategory]="props?.utagCategory ?? null"
+              (click)="!!props?.buttonsAction ? props?.buttonsAction[0]() : null; closeModal(true)">
+        {{ (!!props?.buttons ? props?.buttons[0] : 'ACTIONS.CONTINUE') | translate | uppercase }}
+      </button>
+
+      <button class="avv-link" [id]="props.id + '-btn-cancel'" [utag]="props?.utagCancel ?? null"
+              [utagCategory]="props?.utagCategory ?? null"
+              (click)="!!props?.buttonsAction ? props?.buttonsAction[1]() : null; closeModal(false)">
+        {{ (!!props?.buttons ? props?.buttons[1] : 'ACTIONS.CANCEL') | translate }}
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="props.type === alertSheetType.option">
+      <button class="avv-btn-primary" *ngFor="let button of props?.buttons; let i = index"
+              [id]="props.id + '-btn-confirm'" (click)="closeModal(i)">
+        {{ button | translate | uppercase }}
+      </button>
+    </ng-container>
+  </div>
+  <ng-container *ngTemplateOutlet="bannerMarketing"></ng-container>
+
+</div>
+
+<div *ngIf="props.type === alertSheetType.success" class="voucher-download-backdrop">
+  <div class="avv-ticket voucher-download-backdrop-content">
+    <div *ngIf="ipLoaded" id="voucher-download">
+
+      <div class="logo">
+        <img class="logo" [src]="'av-villas-logo.svg' | imageUrl" alt="">
+        <!--<app-image-svg [classSvg]="'logo'" [nameSvg]="'av-villas-logo.svg'"></app-image-svg>-->
+      </div>
+      <ng-container *ngTemplateOutlet="voucherTemplate; context: { data: props, items: downloadItems }"></ng-container>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="props.id === 'payment-service-pay-multiple-success-alert' && dataVoucherAlt"
+     class="voucher-download-backdrop backdrop-alt">
+  <div class="avv-ticket voucher-download-backdrop-content">
+    <div *ngIf="ipLoaded" id="voucher-download-alt">
+      <img class="logo" [src]="'av-villas-logo.svg' | imageUrl" alt="">
+      <!--<app-image-svg [classSvg]="'logo'" [nameSvg]="'av-villas-logo.svg'"></app-image-svg>-->
+      <ng-container
+        *ngTemplateOutlet="voucherTemplate; context: { data: dataVoucherAlt.props, items: dataVoucherAlt.downloadItems }"></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #voucherTemplate let-data="data" let-items="items">
+  <div class="avv-ticket-content">
+    <div class="avv-ticket-header">
+      <img [src]="icon | imageUrl" alt="">
+      <!--<app-image-svg [classSvg]="''" [nameSvg]="icon" draggable="false"></app-image-svg>-->
+      <div class="avv-ticket-header-content">
+        <p class="avv-ticket-header-content-title">{{ data.description | translate }}
+        </p>
+        <!-- ForProd, hide ngClass -->
+        <p class="avv-ticket-header-content-subtitle" [ngClass]="{
+            'number-reference-big': props?.id === 'money-orders-success-alert' || props?.id === 'cash-withdrawals-success-alert',
+            'summary-directed-payments': ['directed-payment-success-alert', 'payment-service-pay-multiple-success-alert'].includes(props?.id)
+          }" id="number-reference" [innerHtml]="data.reference">
+        </p>
+      </div>
+    </div>
+    <div class="avv-ticket-footer-content" *ngIf="data.dateReference">
+      <p class="footer-content-label">{{ 'VOUCHER.DATE_LABEL' | translate }}</p>
+      <p class="footer-content-value">{{ data.dateReference | date: 'dd/MM/yyyy' }}</p>
+    </div>
+
+    <app-voucher-list
+      [items]="items"
+      [className]="'no-end-line no-padding-right'"
+      (action)="actionVoucher($event)"
+    >
+    </app-voucher-list>
+
+    <div *ngIf="props.bottomImage">
+      <div style="width: 100%; text-align: center;" class="my-3">
+        <img [src]="props.bottomImage | imageUrl" alt=""/>
+      </div>
+    </div>
+  </div>
+  <div class="avv-ticket-border"></div>
+</ng-template>
+
+<ng-template #alertTemplate let-state="state" let-textOk="textOk" let-textError="textError">
+  <ng-container *ngIf="state !== null">
+    <div [ngClass]="state ? 'avv-alert-success' : 'avv-alert-error'">
+      <i [ngClass]="state ? 'icon-check' : 'icon-alerta'" class="avv-alert-icon"></i>
+      <div class="avv-alert-text" [innerHTML]="(state ? textOk : textError) | translate">
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #bannerMarketing>
+  <ng-container *ngIf="props.type === alertSheetType.success && marketingCampaign$ | async as marketingCampaign">
+    <span class="avv-ticket-voucher">
+      <svg height="40" width="600">
+        <g fill="none" stroke="#ddd" stroke-width="1">
+          <path stroke-dasharray="10,10" d="M5 20 l600 0"/>
+        </g>
+      </svg>
+    </span>
+    <p class="avv-ticket-voucher-title text-center semi-bold">También te podría interesar:</p>
+    <div class="avv-ticket-voucher-container">
+      <app-voucher-campaign [campaign]="marketingCampaign" (doClick)="closeModal()">
+      </app-voucher-campaign>
+    </div>
+  </ng-container>
+</ng-template>

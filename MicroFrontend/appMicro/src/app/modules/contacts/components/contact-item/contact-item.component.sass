@@ -1,0 +1,61 @@
+@import 'utils'
+
+.contact-item
+  &.fake
+    margin-bottom: $spacer-3
+
+    .contact-image
+      background-color: var(--red-1) !important
+
+      > img
+        position: relative
+        top: -4px
+        left: 4px
+
+    .contact-info
+      &.bigger-title
+        display: flex
+        align-items: center
+        .nickname
+          font-size: 16px
+          color: #252B31
+          font-weight: 400
+      .nickname
+        text-transform: initial
+
+  .contact-image
+    padding-top: 6px
+
+hr
+  display: block
+  width: 100%
+  height: 1px
+  background-color: #D1D6DA
+
+.avv-contacts-title
+  font-size: 14px
+  font-weight: 600
+  color: #252B31
+  margin: $spacer-3 0 $spacer-2
+
+.contact-info-title
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  column-gap: 8px
+  .icon-informacion
+    color: #0048DB
+    font-size: 24px
+
+.contact-tag
+  display: block
+  background-color: #EAF0FC
+  border-radius: 4px
+  color: #0054BF
+  font-size: 11px
+  font-weight: 700
+  padding: 2px 4px
+  width: 145px
+
+.contact-block
+  height: 76px

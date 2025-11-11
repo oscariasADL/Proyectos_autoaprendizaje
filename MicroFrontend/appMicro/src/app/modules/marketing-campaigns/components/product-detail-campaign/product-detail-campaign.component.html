@@ -1,0 +1,16 @@
+<article class="product-detail-campaign-container" [id]="campaign.id"
+         [ngStyle]="{'background-color': campaign.backgroundColor}">
+  <section class="campaign-image">
+    <img [src]="campaign.image.urlAlt | imageUrlAlt" [alt]="campaign.image.alt" appPreloadImage [preload]="skeleton"
+         fetchpriority="high">
+    <ion-skeleton-text #skeleton class="campaign-image-skeleton" animated></ion-skeleton-text>
+  </section>
+  <section class="campaign-content">
+    <h3 class="campaign-title">{{ campaign.title }}</h3>
+    <p class="campaign-description">
+      {{ campaign.description }}
+    </p>
+    <a class="campaign-action" href="javascript:void(0);" (click)="openLink()"
+       [id]="campaign.id + '-action'">{{ campaign.linkKnowMore.text }}</a>
+  </section>
+</article>

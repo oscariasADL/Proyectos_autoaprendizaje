@@ -1,0 +1,59 @@
+<div class="block-temporary-calendar-container">
+  <div class="block-temporary-calendar-header">
+    <div class="block-temporary-calendar-header-top">
+      <p>{{ 'SECURITY.BLOCK_TEMPORARY.CHOOSE_LIMIT' | translate }}</p>
+      <i class="icon-salir" (click)="closeModal()"></i>
+    </div>
+
+    <div class="block-temporary-calendar-header-bottom">
+      <small class="block-temporary-calendar-header-bottom-title">
+        {{ 'SECURITY.BLOCK_TEMPORARY.MAX_DATE' | translate }}
+      </small>
+      <div class="block-temporary-field" [ngClass]="{'not-empty': dateControl?.value}">
+        <div>
+          <p class="block-temporary-field-title">
+            {{ 'SECURITY.BLOCK_TEMPORARY.BLOCK_TO' | translate }}
+          </p>
+          <p class="block-temporary-field-date" *ngIf="dateControl?.value">{{ dateControl?.value }}</p>
+        </div>
+        <span class="icon-calendario"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-temporary-calendar-body" #calendarMatrix>
+    <div class="block-temporary-calendar-month" *ngFor="let item of calendar.print">
+      <div class="block-temporary-calendar-month-header {{item.month}}">
+        <p class="semi-bold">{{ 'MONTHS.' + item.month | translate }} {{ item.year }}</p>
+      </div>
+      <ul class="month-labels">
+        <li *ngFor="let label of item.labels">{{ 'CALENDAR.DAY.' + label | translate }}</li>
+      </ul>
+      <div *ngFor="let row of item.calendar;" class="month-row">
+        <div *ngFor="let date of row;" class="month-value {{date.type}}" id="date-{{date.identifier}}"
+             [ngClass]="{
+                  'disabled': date.disabled,
+                  'selected': date.selected || date.minRange || date.maxRange,
+                  'in-range': date.inRange,
+                  'in-range-right': date.inRangeRight,
+                  'in-range-left': date.inRangeLeft,
+                  'is-today': date.isToday,
+                  'is-weekend': date.isWeekend
+                }"
+             (click)="selectDay(date)">
+          {{ date.value }}
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-temporary-calendar-footer">
+    <button class="avv-btn-primary"
+            [id]="'block-temporary-calendar-btn-confirm'"
+            [disabled]="!dateControl?.value"
+            (click)="closeModal(dateControl.value)">
+      {{ 'SECURITY.BLOCK_TEMPORARY.SELECT_DATE' | translate | uppercase }}
+    </button>
+  </div>
+</div>

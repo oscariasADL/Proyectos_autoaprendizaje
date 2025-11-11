@@ -1,0 +1,18 @@
+<div class="product-action-tour-container" [ngClass]="{'hidden': hideContent}">
+  <div class="product-action-tour-background" (click)="close()" aria-hidden="true"></div>
+  <div class="product-action-tour-info" id="product-action-tour-info">
+    <p><b>En el menú de acciones rápidas</b> encuentra todo lo que puedes hacer con tu producto.</p>
+    <i class="icon-salir" (click)="close()" role="button" [attr.aria-label]="'Cerrar'"></i>
+  </div>
+  <ul class="product-actions-list product-action-tour-list" id="product-actions-list-tour">
+    <ng-template *ngFor="let action of actions" [appFeatureToggle]="action.featureFlagKey">
+      <li [id]="action.id">
+        <app-product-action-item
+          [action]="action"
+          [className]="'border-solid'"
+          (clicked)="closeModal(action)">
+        </app-product-action-item>
+      </li>
+    </ng-template>
+  </ul>
+</div>

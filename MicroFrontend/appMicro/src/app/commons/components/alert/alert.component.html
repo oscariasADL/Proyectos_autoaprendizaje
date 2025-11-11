@@ -1,0 +1,30 @@
+<div class="avv-alert-modal" [id]="props?.id">
+  <div class="avv-alert-modal-header" id="alert-title">
+    <img [src]="icon | imageUrl" alt="alert-modal-icon">
+    <h6 class="semi-bold" [innerHTML]="props?.title | translate"></h6>
+  </div>
+
+  <div class="avv-alert-modal-body">
+    <p class="avv-alert-modal-description small" [innerHTML]="props?.description | translate"></p>
+  </div>
+
+  <div class="avv-alert-modal-footer">
+    <button *ngIf="props?.id !== 'login-error-alert-unknown'" class="avv-btn-secondary"
+            [id]="props?.id + '-btn-confirm'"
+            (click)="!!props?.buttonsAction ? props?.buttonsAction[0]() : null; closeModal(true)">
+      {{ (!!props?.buttons ? props?.buttons[0] : 'ACTIONS.CONTINUE') | translate | uppercase }}
+    </button>
+
+    <button *ngIf="props?.id !== 'login-error-alert-unknown'" class="avv-link avv-alert-link"
+            [id]="props?.id + '-btn-cancel'"
+            (click)="!!props?.buttonsAction ? props?.buttonsAction[1]() : null; closeModal(false)">
+      {{ (!!props?.buttons ? props?.buttons[1] : 'ACTIONS.CANCEL') | translate }}
+      <i *ngIf="props?.buttonIconLink" class="{{ props?.buttonIconLink }}"></i>
+    </button>
+
+    <p *ngIf="props?.id === 'login-error-alert-unknown'" id="login-problems" class="login-problems-link" (click)="openPopUpErrorLogin()">
+      {{ 'LOGIN.ERROR_LOGIN' | translate }}
+    </p>
+  </div>
+
+</div>

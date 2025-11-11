@@ -1,0 +1,18 @@
+<div #avvDropdown tabindex="0" (keydown.escape)="blur()" (keydown.enter)="onEnterKey(highlightedItem)"
+     (keydown.arrowup)="highlightPrevious($event)" (keydown.arrowdown)="highlightNext($event)"
+     class="form-input dropdown"
+     [class.is_open]="resultsVisible" [class.loading]="loading" [class.sm]="isSmall" [class.is_template]="!!template">
+  <label [for]="id">
+    <input [id]="id" type="text" (click)="touchEnd()" [value]="inputValue" autocomplete="off" tabindex="-1"
+           [disabled]="disabled || loading" placeholder="{{ label }}" readonly role="combobox"
+           [attr.aria-expanded]="resultsVisible">
+    <span class="label">{{ label }}</span>
+    <ng-container *ngIf="!!control.value">
+      <ng-container
+        *ngTemplateOutlet="template; context: { data: control.value, class: 'item-selected' }"></ng-container>
+    </ng-container>
+    <span class="form-border"></span>
+    <span class="form-icon icon-down" role="button" tabindex="-1"></span>
+  </label>
+  <avv-validation-messages [control]="control"></avv-validation-messages>
+</div>

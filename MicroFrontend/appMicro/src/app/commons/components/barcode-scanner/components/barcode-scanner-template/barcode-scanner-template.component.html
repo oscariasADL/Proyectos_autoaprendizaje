@@ -1,0 +1,13 @@
+<section class="barcode-scanner-container">
+  <div class="barcode-scanner-footer">
+    <a class="avv-btn-link"
+       (click)="closeScannerModal.emit()">{{ userGuidanceOptions.cancelButtonText | translate }}</a>
+  </div>
+  <div class="barcode-scanner-box-frame">
+    <div class="barcode-scanner-box"></div>
+  </div>
+  <div class="barcode-scanner-header">
+    <h2>{{ userGuidanceOptions.title | translate }}</h2>
+    <!--      <p>{{ 'QR.OPTIONS.SCAN.DESCRIPTION' | translate }}</p>-->
+  </div>
+</section>

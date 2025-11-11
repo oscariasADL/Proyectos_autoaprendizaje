@@ -1,0 +1,27 @@
+<div class="form-input">
+    <label [for]="id">
+        <input type="text"
+               #avvInput
+               [ngClass]="{'has-btn-input-action': hasBtnInputAction}"
+               (keyup)="keyUp($event)"
+               (copy)="!allowCopy ? $event.preventDefault(): null"
+               (paste)="!allowPaste ? $event.preventDefault(): null"
+               (cut)="!allowCut ? $event.preventDefault(): null"
+               [id]="id"
+               [type]="inputType"
+               [formControl]="control"
+               [autocomplete]="autocomplete"
+               placeholder="&nbsp;">
+
+        <span class="label" [innerHTML]="label"></span>
+        <span class="form-border"></span>
+        <span class="alert-icon icon-alerta" *ngIf="isErrorMessage" [ngClass]="{'has-btn-input-action': hasBtnInputAction}"></span>
+        <span class="form-icon {{ icon }}" *ngIf="!!icon && !isErrorMessage" [ngClass]="{'has-btn-input-action': hasBtnInputAction}"></span>
+        <ng-container *ngIf="hasBtnInputAction">
+          <button type="button" class="btn-input-action" [disabled]="control.invalid" (click)="clickBtnInputAction.emit()">{{ textBtnInputAction | translate }}</button>
+        </ng-container>
+    </label>
+    <avv-validation-messages [control]="control"></avv-validation-messages>
+</div>
+
+

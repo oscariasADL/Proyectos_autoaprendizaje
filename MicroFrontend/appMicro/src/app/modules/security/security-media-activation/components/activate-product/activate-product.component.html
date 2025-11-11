@@ -1,0 +1,120 @@
+<div class="media-activation-home-container media-activation-container">
+    <ng-container *ngIf="working$ | async; else !!(product$ | async) || !!(currentStep$ | async) ? content : contentError">
+        <div class="mt-4">
+            <div
+                *ngFor="let item of [1, 2, 3, 4]"
+                class="working">
+                <ion-skeleton-text
+                    animated
+                    class="avv-skeleton"></ion-skeleton-text>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #content>
+        <ng-container [ngSwitch]="(currentStep$ | async)">
+
+            <app-activate-product-from
+                *ngSwitchCase="ActivateProductSteps.from"
+                (continue)="nextStep($event)"
+                [product]="product$ | async"></app-activate-product-from>
+
+            <app-activate-product-password
+                *ngSwitchCase="ActivateProductSteps.password"
+                [title]="(passwordData$ | async)?.title"
+                [product]="product$ | async"
+                [description]="(passwordData$ | async)?.description"
+                (continue)="nextStep($event)">
+            </app-activate-product-password>
+
+            <app-activate-product-block
+                *ngSwitchCase="ActivateProductSteps.block"
+                [product]="product$ | async"
+                (continue)="nextStep($event)">
+            </app-activate-product-block>
+
+            <app-block-temporary
+                *ngSwitchCase="ActivateProductSteps.blockTemporary"
+                [product]="product$ | async"
+                (continue)="nextStep($event)">
+            </app-block-temporary>
+
+            <app-unlock-product
+                *ngSwitchCase="ActivateProductSteps.unlockInfo"
+                [product]="product$ | async"
+                (continue)="nextStep($event)">
+            </app-unlock-product>
+
+            <app-unblock-product
+                *ngSwitchCase="ActivateProductSteps.unblockProduct"
+                (continue)="nextStep($event)">
+            </app-unblock-product>
+
+            <ng-container *ngSwitchCase="ActivateProductSteps.success">
+                <div class="avv-panel-empty success-container">
+                    <ng-container *ngIf="successData$ | async as successData">
+                        <p class="avv-list-panel-title avv-title-semibold">{{ successData?.title | translate }}</p>
+                        <ng-container>
+                            <app-voucher [voucherItems]="items" [utagEvent]="utagForVoucher"
+                                [allowShare]="false" [denyDownload]="true">
+                            </app-voucher>
+                        </ng-container>
+
+                      <ng-template #textTemplate>
+                        <p class="avv-panel-empty-text"
+                           *ngIf="successData?.description"
+                           [innerHTML]="successData?.description | translate">
+                        </p>
+
+                        <ul *ngIf="successData?.items?.length > 0" class="avv-list-red-point mt-4 mb-5">
+                            <li *ngFor="let item of successData?.items" class="mb-1">
+                                <p class="small" [innerHTML]="item | translate"></p>
+                            </li>
+                        </ul>
+                      </ng-template>
+                    </ng-container>
+                    <button
+                        class="avv-btn-secondary"
+                        (click)="goHome()">
+                        {{ 'ACTIONS.COPY_THAT' | translate  }}
+                    </button>
+                </div>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="ActivateProductSteps.error">
+                <div class="avv-panel-empty">
+                    <div class="avv-panel-empty-image">
+                        <img
+                            [src]="'icons/datos-no-coinciden.svg' | imageUrl"
+                            alt="sin-resultados">
+                    </div>
+                    <p class="avv-list-panel-title avv-title-semibold mb-3">{{ errorData$ | async |translate}}</p>
+                    <p class="avv-panel-empty-text">{{ (message$ | async) }}</p>
+                    <button
+                        class="avv-btn-secondary"
+                        (click)="goHome()">
+                        {{ 'ACTIONS.COPY_THAT' | translate  }}
+                    </button>
+                </div>
+            </ng-container>
+        </ng-container>
+    </ng-template>
+
+    <ng-template #contentError>
+        <div class="avv-panel-empty">
+            <div class="avv-panel-empty-image">
+                <img
+                    [src]="'illustrationsV2/navegador-buscar-regular.svg' | imageUrl"
+                    alt="sin-resultados">
+            </div>
+            <p class="avv-list-panel-title avv-title-semibold">
+                No tienes tarjetas débito o crédito para configurar
+            </p>
+            <button
+                class="avv-btn-secondary"
+                (click)="goHome()">
+                {{ 'ACTIONS.COPY_THAT' | translate  }}
+            </button>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,73 @@
+.pocket-movements
+  padding: 1rem
+
+  &__title
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    color: #252B31
+    padding-bottom: 16px
+
+  &__filters
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 24px
+
+  &__tags
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  &__loading
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+
+  &__no-content
+    padding-top: 24px
+
+  &-item
+    display: flex
+    flex-direction: column
+    padding: 16px 0 8px
+
+    .movement-item-icon
+      font-size: 16px
+      margin-right: 8px
+      color: #5C6B7A
+      line-height: 1.33
+
+    .movement-item-title
+      font-size: 14px
+      color: #252b31
+      line-height: 20px
+      margin: 0
+
+    .movement-item-value
+      font-size: 14px
+      font-weight: 500
+      line-height: 20px
+      margin: 0
+
+      &.add
+        color: #0048db
+
+      &.substract
+        color: #414a53
+
+.movement-item
+  &__title
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    background-color: #EBEDEF
+    color: #252B31
+    border-radius: 4px
+    padding: 4px 16px
+
+  &__content
+    display: flex
+    flex-direction: row
+    padding: 16px 16px 8px 16px
+    border-bottom: 1px solid #D1D6DA

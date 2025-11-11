@@ -1,0 +1,30 @@
+<ion-content [forceOverscroll]="false">
+    <div class="auth-steps-container">
+        <div class="auth-steps-header">
+            <h5>{{ title | translate }}</h5>
+            <i class="icon-salir" (click)="goToHome()"></i>
+        </div>
+        <div class="auth-steps-body biometric-verification-failed-container">
+            <div class="biometric-verification-failed-detail">
+                <img class="mb-5" [src]="'illustrationsV2/error-navegador-regular.svg' | imageUrl" alt
+                    draggable="false">
+                <h6 class="biometric-verification-failed-title">
+                    {{ getTitleByAuthStepType() | translate }}
+                </h6>
+                <p class="biometric-verification-failed-description">
+                    {{ 'AUTH.STEP.BIOMETRIC_VERIFICATION_FAILED.DESCRIPTION' | translate }}
+                </p>
+            </div>
+
+            <div class="biometric-verification-failed-actions">
+                <button class="avv-btn-primary" (click)="redirecToOffice()" id="redirect-to-office">
+                    {{ 'AUTH.STEP.BIOMETRIC_VERIFICATION_FAILED.REDIRECT_TO_OFFICE' | translate }}
+                </button>
+                <a (click)="goToHome()" class="avv-link auth-steps-link" id="exit">
+                    {{ 'AUTH.STEP.BIOMETRIC_VERIFICATION_FAILED.EXIT' | translate }}
+                </a>
+            </div>
+        </div>
+        <div class="auth-steps-footer"></div>
+    </div>
+</ion-content>

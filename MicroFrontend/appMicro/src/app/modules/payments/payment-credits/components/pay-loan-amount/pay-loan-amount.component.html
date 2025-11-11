@@ -1,0 +1,143 @@
+<div class="pay-loan-amount" *ngIf="formGroup">
+  <p class="pay-loan-amount-title semi-bold">{{ title | translate }}</p>
+
+  <form (submit)="continue.emit()" class="pay-loan-amount-form">
+
+    <ul *ngIf="isVillas" class="pay-loan-amount-options">
+      <li class="pay-loan-amount-option" *ngIf="credit?.minPaymentAmount > 0"
+          (click)="setActiveType(payLoanAmountType.minPayment)"
+          [ngClass]="{'active': activeType === payLoanAmountType.minPayment, 'error': hasErrors}">
+        <div class="pay-loan-amount-item">
+          <p class="small">
+            {{ (isCredit ? 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.NEXT_INSTALLMENT' : 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.MINIMUM_PAYMENT') | translate }}
+          </p>
+          <p class="small semi-bold"
+             [attr.aria-label]="(credit?.minPaymentAmount | numberFormat)  + ' ' + ('CURRENCIES.' + activeCurrencyType | translate)"
+             [innerHTML]="credit?.minPaymentAmount | currencyFormat"></p>
+        </div>
+
+        <ng-container *ngIf="activeType === payLoanAmountType.minPayment && hasErrors">
+          <ng-container
+                  *ngTemplateOutlet="amountErrors">
+          </ng-container>
+        </ng-container>
+      </li>
+
+      <li class="pay-loan-amount-option" *ngIf="!isCredit && credit?.minPaymentReducedAmount > 0"
+          (click)="setActiveType(payLoanAmountType.minReduced)"
+          [ngClass]="{'active': activeType === payLoanAmountType.minReduced, 'error': hasErrors}">
+        <div class="pay-loan-amount-item">
+          <p class="small">{{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.MINIMUM_REDUCED_PAYMENT' | translate }}</p>
+          <p class="small semi-bold"
+             [attr.aria-label]="(credit?.minPaymentReducedAmount | numberFormat)  + ' ' + ('CURRENCIES.' + activeCurrencyType | translate)"
+             [innerHTML]="credit?.minPaymentReducedAmount | currencyFormat"></p>
+        </div>
+        <small class="pay-loan-amount-item-message" *ngIf="!hasErrors">
+          {{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.MINIMUM_REDUCED_NOTICE' | translate }}
+        </small>
+
+        <ng-container *ngIf="activeType === payLoanAmountType.minReduced && hasErrors">
+          <ng-container
+                  *ngTemplateOutlet="amountErrors">
+          </ng-container>
+        </ng-container>
+      </li>
+
+      <li class="pay-loan-amount-option" *ngIf="credit?.totalPaymentAmount > 0"
+          (click)="setActiveType(payLoanAmountType.totalValue)"
+          [ngClass]="{'active': activeType === payLoanAmountType.totalValue, 'error': hasErrors}">
+        <div class="pay-loan-amount-item">
+          <p class="small">{{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.TOTAL_PAYMENT' | translate }}</p>
+          <p class="small semi-bold"
+             [attr.aria-label]="(credit?.totalPaymentAmount | numberFormat)  + ' ' + ('CURRENCIES.' + activeCurrencyType | translate)"
+             [innerHTML]="credit?.totalPaymentAmount | currencyFormat"></p>
+        </div>
+
+        <ng-container *ngIf="activeType === payLoanAmountType.totalValue && hasErrors">
+          <ng-container
+                  *ngTemplateOutlet="amountErrors">
+          </ng-container>
+        </ng-container>
+
+      </li>
+
+      <li class="pay-loan-amount-option"
+          (click)="setActiveType(payLoanAmountType.otherValue)"
+          [ngClass]="{'active': activeType === payLoanAmountType.otherValue}">
+        <div class="pay-loan-amount-item">
+          <p class="small">{{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.OTHER_VALUE' | translate }}</p>
+        </div>
+        <div class="pay-loan-amount-item-input-panel" *ngIf="activeType === payLoanAmountType.otherValue">
+          <ng-container
+                  *ngTemplateOutlet="amountInput; context: { id: 'pay-loan-amount-other-field', show: activeType === payLoanAmountType.otherValue }">
+          </ng-container>
+
+          <small class="pay-loan-amount-item-message" *ngIf="!hasErrors && showNotice">
+            {{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.OTHER_VALUE_NOTICE' | translate }}
+          </small>
+        </div>
+      </li>
+    </ul>
+
+    <ng-container *ngIf="!isVillas">
+      <ng-container
+              *ngTemplateOutlet="amountInput; context: { id: 'pay-loan-amount-field', show: !isVillas }">
+      </ng-container>
+    </ng-container>
+
+    <button class="avv-btn-primary"
+            type="submit"
+            [id]="'pay-loan-amount-btn'"
+            [disabled]="!formGroup.valid">
+      {{ 'ACTIONS.CONTINUE' | translate | uppercase }}
+    </button>
+  </form>
+
+</div>
+
+<ng-template
+  #amountInput
+  let-id="id"
+  let-show="show">
+
+  <ng-container *ngTemplateOutlet="occidentePanel"></ng-container>
+
+  <avv-input
+          *ngIf="show"
+          [id]="id"
+          [type]="'currency'"
+          [label]="'PAYMENTS.PAY_LOAN.AMOUNT_STEP.VALUE' | translate"
+          [autoFocus]="true"
+          [control]="amount">
+  </avv-input>
+</ng-template>
+
+<ng-template
+  #amountErrors>
+
+  <app-validations
+          [control]="amount">
+  </app-validations>
+</ng-template>
+
+<ng-template
+  #occidentePanel>
+
+  <ul *ngIf="isOccidente" class="pay-loan-amount-options">
+    <li class="pay-loan-amount-option"
+        (click)="setActiveCurrencyType(currentType.COP)"
+        [ngClass]="{'active': activeCurrencyType === currentType.COP}">
+      <div class="pay-loan-amount-item">
+        <p class="small">{{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.PAY_IN_COP' | translate }}</p>
+      </div>
+    </li>
+
+    <li class="pay-loan-amount-option inner-text"
+        (click)="setActiveCurrencyType(currentType.USD)"
+        [ngClass]="{'active': activeCurrencyType === currentType.USD}">
+      <div class="pay-loan-amount-item">
+        <p class="small">{{ 'PAYMENTS.PAY_LOAN.AMOUNT_STEP.PAY_IN_DOLLAR' | translate }}</p>
+      </div>
+    </li>
+  </ul>
+</ng-template>

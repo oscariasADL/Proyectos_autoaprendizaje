@@ -1,0 +1,116 @@
+<footer
+  class="footer-tabs"
+  [ngClass]="{'bg-black': isColorBlack, 'without-center': !principalListItem}">
+
+  <ng-container *ngIf="(isLogged$ | async) === true">
+    <app-adviser-aval></app-adviser-aval>
+  </ng-container>
+
+  <div class="footer-tabs-container">
+    <ul class="menu-left">
+      <li
+        role="button"
+        [attr.aria-label]="(item.label | translate )"
+        *ngFor="let item of menuListLeft"
+        [routerLink]="item.url"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        [queryParams]="item.queryParams"
+        [id]="item.id"
+        (click)="handleClickSideButton()">
+        <i
+          class="{{ item.icon }}"
+          [title]="item.title"></i>
+        <p>{{ item.label | translate }}</p>
+      </li>
+    </ul>
+    <ng-container *ngIf="principalListItem">
+      <div
+        class="menu-center">
+        <button
+          type="button"
+          class="avv-circle-btn"
+          [class.rotate]="showOptions"
+          [ngClass]="mainButtonColor"
+          [id]="principalListItem.id"
+          (click)="handleClickMenu(principalListItem)">
+          <img
+            *ngIf="!showOptions; else closeIcon"
+            [src]="principalListItem.icon | imageUrl"
+            class="qr-home-logo"
+            alt="qr-blanco"
+            draggable="false">
+          <ng-template #closeIcon>
+            <img
+              [src]="CLOSE_ICON | imageUrl"
+              alt=""
+            />
+          </ng-template>
+        </button>
+        <span class="bottom"></span>
+        <span class="shadow"></span>
+      </div>
+    </ng-container>
+    <ul class="menu-right">
+      <li
+        role="button"
+        [attr.aria-label]="(item.label | translate )"
+        *ngFor="let item of menuListRight"
+        [routerLink]="item.url"
+        routerLinkActive="active"
+        [queryParams]="item.queryParams"
+        [routerLinkActiveOptions]="{exact: true}"
+        [id]="item.id"
+        (click)="handleClickSideButton()">
+        <i
+          class="{{ item.icon }}"
+          [title]="item.title"></i>
+        <p>{{ item.label | translate }}</p>
+      </li>
+    </ul>
+  </div>
+  <aside
+    *ngIf="principalListItem?.subMenuList?.length > 0"
+    [class.show]="showOptions" role="dialog"
+    [attr.aria-labelledby]="'FOOTER.OPTIONS.ARIA_TILE' | translate"
+    [attr.aria-describedby]="'FOOTER.OPTIONS.ARIA_DESC' | translate"
+    [ngClass]="principalListItem.subMenuList.length===1 && 'single-item'"
+    >
+    <div class="options-container" [ngClass]="principalListItem.subMenuList.length===1  ? 'single-item' : ''" *ngIf="!showOptionsDetail; else optionsDetails">
+      <ng-template *ngFor="let option of principalListItem.subMenuList" [appFeatureToggle]="option.featureFlagKey">
+        <button
+          type="button"
+          class="avv-btn-round option-container"
+          [id]="option.id"
+          (click)="handleClickSubMenu(option)">
+          <img [src]="option.icon| imageUrl" alt="">
+          <span class="label-btn-round" [innerHtml]="option.label | translate" [ngClass]="principalListItem.subMenuList.length===1  && 'single-item' "></span>
+        </button>
+      </ng-template>
+    </div>
+    <p *ngIf="principalListItem.subMenuList.length===1" class="description-text">{{principalListItem.subMenuList[0].descriptionDetail | translate}}</p>
+    <p class="avv-btn-link help-action" *ngIf="!showOptionsDetail && principalListItem.subMenuList.length>1" (click)="showOptionsDetail = !showOptionsDetail">
+      ¿Para que sirven estás opciones?
+    </p>
+    <p class="avv-btn-link help-action-alt" *ngIf="showOptionsDetail" (click)="showOptionsDetail = !showOptionsDetail">
+      <i class="icon icon-previos"></i>
+      Volver
+    </p>
+  </aside>
+  <div class="options-overlay" *ngIf="showOptions" (click)="handleClickSideButton()"></div>
+  <!-- end -->
+</footer>
+
+<ng-template #optionsDetails>
+  <ng-container *ngFor="let option of principalListItem.subMenuList">
+    <div class="options-detail-container">
+      <div class="options-detail-image">
+        <img [src]="option.icon | imageUrl" alt="">
+      </div>
+      <div class="options-detail-description">
+        <p class="description-title" [innerHtml]="option.titleDetail | translate"></p>
+        <p class="description-text" [innerHtml]="option.descriptionDetail | translate"></p>
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
