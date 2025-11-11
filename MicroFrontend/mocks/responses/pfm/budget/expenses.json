@@ -1,0 +1,48 @@
+{
+  "amount": 819803.21,
+  "fixed": {
+    "amount": 325540.06,
+    "categories": [
+      {
+        "categoryType": "Gasto fijo",
+        "code": "200001",
+        "color": "#5c2c73",
+        "amount": 242860.04,
+        "name": "Transporte"
+      },
+      {
+        "categoryType": "Gasto fijo",
+        "code": "10001",
+        "color": "#fe8b25",
+        "amount": 82680.02,
+        "name": "Mercado"
+      }
+    ]
+  },
+  "variables": {
+    "amount": 494263.15,
+    "categories": [
+      {
+        "categoryType": "Gasto variable",
+        "code": "190001",
+        "color": "#0014a2",
+        "amount": 246600.02,
+        "name": "Tecnología"
+      },
+      {
+        "categoryType": "Gasto variable",
+        "code": "210001",
+        "color": "#6e529e",
+        "amount": 212003.09,
+        "name": "Viajes"
+      },
+      {
+        "categoryType": "Gasto variable",
+        "code": "30001",
+        "color": "#a42c71",
+        "amount": 35660.04,
+        "name": "Belleza"
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "expenses": {
+    "total": 2839000.00,
+    "usual": 5753821.86,
+    "fixed": {
+      "total": 1345000.00,
+      "usual": 2804950.90,
+      "categories": [
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 146050.90,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "10004",
+            "color": "#6E529E",
+            "name": "Ahorro e inversiones"
+          }
+        },
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 400000.00,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "90001",
+            "color": "#2d3d6c",
+            "name": "Impuestos"
+          }
+        },
+        {
+          "currentAmount": 75000.00,
+          "overLimit": 0.00,
+          "usualAmount": 588900.00,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "10001",
+            "color": "#fe8b25",
+            "name": "Mercado"
+          }
+        },
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 400000.00,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "100001",
+            "color": "#5b679a",
+            "name": "Obligaciones Financieras"
+          }
+        },
+        {
+          "currentAmount": 600000.00,
+          "overLimit": 0.00,
+          "usualAmount": 600000.00,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "170001",
+            "color": "#2C2C33",
+            "name": "Servicios Públicos"
+          }
+        },
+        {
+          "currentAmount": 670000.00,
+          "overLimit": 0.00,
+          "usualAmount": 670000.00,
+          "category": {
+            "categoryType": "Gasto fijo",
+            "code": "200001",
+            "color": "#5c2c73",
+            "name": "Transporte"
+          }
+        }
+      ]
+    },
+    "variable": {
+      "total": 1494000.00,
+      "usual": 2948870.96,
+      "categories": [
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 300000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "30001",
+            "color": "#a42c71",
+            "name": "Belleza"
+          }
+        },
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 115000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "10003",
+            "color": "#B3CAF3",
+            "name": "Donaciones"
+          }
+        },
+        {
+          "currentAmount": 154000.00,
+          "overLimit": 0.00,
+          "usualAmount": 154000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "220001",
+            "color": "#2C2C33",
+            "name": "Intereses"
+          }
+        },
+        {
+          "currentAmount": 40000.00,
+          "overLimit": 0.00,
+          "usualAmount": 529800.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "110001",
+            "color": "#9a1829",
+            "name": "Otros Gastos"
+          }
+        },
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 470000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "150001",
+            "color": "#ba1c25",
+            "name": "Ropa y Calzado"
+          }
+        },
+        {
+          "currentAmount": 40000.00,
+          "overLimit": 0.00,
+          "usualAmount": 40000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "160001",
+            "color": "#b3caf3",
+            "name": "Salud"
+          }
+        },
+        {
+          "currentAmount": 600000.00,
+          "overLimit": 75000.00,
+          "usualAmount": 525000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "180001",
+            "color": "#5C6B7A",
+            "name": "Servicios y Asesorias"
+          }
+        },
+        {
+          "currentAmount": 600000.00,
+          "overLimit": 0.00,
+          "usualAmount": 600000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "190001",
+            "color": "#0014a2",
+            "name": "Tecnología"
+          }
+        },
+        {
+          "currentAmount": 0.00,
+          "overLimit": 0.00,
+          "usualAmount": 155070.96,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "10002",
+            "color": "#A42C71",
+            "name": "Transferencias a mis cuentas"
+          }
+        },
+        {
+          "currentAmount": 60000.00,
+          "overLimit": 0.00,
+          "usualAmount": 60000.00,
+          "category": {
+            "categoryType": "Gasto variable",
+            "code": "210001",
+            "color": "#6e529e",
+            "name": "Viajes"
+          }
+        }
+      ]
+    }
+  },
+  "incomes": {
+    "total": 10729002.18,
+    "usual": 16429002.18,
+    "categories": [
+      {
+        "currentAmount": 600000.00,
+        "overLimit": 0.00,
+        "usualAmount": 1000000.00,
+        "category": {
+          "categoryType": "otro",
+          "code": "610001",
+          "color": "#710b79",
+          "name": "Acciones productos financieros"
+        }
+      },
+      {
+        "currentAmount": 6000000.00,
+        "overLimit": 0.00,
+        "usualAmount": 10000000.00,
+        "category": {
+          "categoryType": "otro",
+          "code": "310001",
+          "color": "#0331a1",
+          "name": "Depósitos"
+        }
+      },
+      {
+        "currentAmount": 1229001.30,
+        "overLimit": 0.00,
+        "usualAmount": 1229001.30,
+        "category": {
+          "categoryType": "otro",
+          "code": "10006",
+          "color": "#B3CAF3",
+          "name": "Desembolsos y avances"
+        }
+      },
+      {
+        "currentAmount": 600000.00,
+        "overLimit": 0.00,
+        "usualAmount": 1000000.00,
+        "category": {
+          "categoryType": "otro",
+          "code": "710001",
+          "color": "#7f8f00",
+          "name": "Negocios y ventas"
+        }
+      },
+      {
+        "currentAmount": 700000.00,
+        "overLimit": 0.00,
+        "usualAmount": 1200000.00,
+        "category": {
+          "categoryType": "otro",
+          "code": "410001",
+          "color": "#007fbd",
+          "name": "Otros Ingresos"
+        }
+      },
+      {
+        "currentAmount": 1000000.88,
+        "overLimit": 0.00,
+        "usualAmount": 1000000.88,
+        "category": {
+          "categoryType": "otro",
+          "code": "810001",
+          "color": "#5bc7e1",
+          "name": "Salarios"
+        }
+      },
+      {
+        "currentAmount": 600000.00,
+        "overLimit": 0.00,
+        "usualAmount": 1000000.00,
+        "category": {
+          "categoryType": "otro",
+          "code": "510001",
+          "color": "#f88810",
+          "name": "Transferencias de contactos"
+        }
+      }
+    ]
+  }
+}

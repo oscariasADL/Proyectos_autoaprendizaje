@@ -1,0 +1,95 @@
+{
+  "code": "BLS-200",
+  "message": "OK",
+  "data": {
+    "lastUpdate": "2022-04-15",
+    "products": [
+      {
+        "accountNumber": "",
+        "idProduct": "0000",
+        "type": "ALL",
+        "incomes": 230350003.73999998,
+        "expenses": -63325000,
+        "balance": 167025003.73999998,
+        "previousBalance": 0,
+        "overdraft": 0,
+        "totalIncomes": 230350003.73999998
+      },
+      {
+        "accountNumber": "518500000000999",
+        "idProduct": "3",
+        "type": "CA",
+        "incomes": 1550000.22,
+        "expenses": -445000,
+        "balance": 1105000.22,
+        "previousBalance": 0,
+        "overdraft": 0,
+        "totalIncomes": 1550000.22
+      },
+      {
+        "accountNumber": "640815200",
+        "idProduct": "2",
+        "type": "CA",
+        "incomes": 25550000.22,
+        "expenses": -7005000,
+        "balance": 18545000.22,
+        "previousBalance": 0,
+        "overdraft": 0,
+        "totalIncomes": 25550000.22
+      },
+      {
+        "accountNumber": "640815192",
+        "idProduct": "1",
+        "type": "CA",
+        "incomes": 24050000.22,
+        "expenses": -6595000,
+        "balance": 17455000.22,
+        "previousBalance": 0,
+        "overdraft": 0,
+        "totalIncomes": 24050000.22
+      },
+      {
+        "accountNumber": "008438871",
+        "idProduct": "12",
+        "type": "CC",
+        "incomes": 24050000.22,
+        "expenses": -6595000,
+        "balance": 17455000.22,
+        "previousBalance": 0,
+        "overdraft": 0,
+        "totalIncomes": 24050000.22
+      },
+      {
+        "accountNumberCreditCard": "1234567890987654321",
+        "idProduct": "8",
+        "type": "TC",
+        "availableQuota": 10000,
+        "billingDay": "2",
+        "overdraft": 10000,
+        "rank": "Gold",
+        "totalDebt": -10000,
+        "totalQuota": 10000,
+        "totalQuotaAdvance": 10000,
+        "franchise": "Mastercard",
+        "date": "2022-11-08T00:00:00Z",
+        "minimumPayment": 100
+      },
+      {
+        "accountNumberCreditCard": "1234567890987654321",
+        "idProduct": "9",
+        "type": "TC",
+        "availableQuota": 10000,
+        "billingDay": "2",
+        "overdraft": 10000,
+        "rank": "Gold",
+        "totalDebt": -10000,
+        "totalQuota": 10000,
+        "totalQuotaAdvance": 10000,
+        "franchise": "Mastercard",
+        "date": "2022-11-08T00:00:00Z",
+        "minimumPayment": 100
+      }
+    ],
+    "savings": {}
+  }
+}

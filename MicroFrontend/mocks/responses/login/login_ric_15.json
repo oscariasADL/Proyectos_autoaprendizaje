@@ -1,0 +1,25 @@
+{
+  "token": "eyJraWQiOiJUV2JaVDIrVE1ZTUZpUjNIaVJMYmZJYjdLZldqaVJ2SkxsbExCUlFKWjNnPSIsImFsZyI6IkhTMjU2In0.eyJzdWIiOiI3Y3U5MTE5MWlsYzliZzViN245cmVlbWJtayIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiQURMLUFVVEgtU2VydmljZS9jcmVhdGUtdG9rZW4gQURMLUFVVEgtU2VydmljZS92YWxpZGF0ZS10b2tlbiIsImF1dGhfdGltZSI6MTU0OTk4MTkwNiwiaXNzIjoiaHR0cHM6Ly9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbS91cy1lYXN0LTJfRFEzbkt4V0JlIiwiZXhwIjoxNTQ5OTg1NTA2LCJpYXQiOjE1NDk5ODE5MDYsInZlcnNpb24iOjIsImp0aSI6ImEzNTZhOWNkLTljODEtNDcxOC1iNmJmLWUyZmQ2ZGQzYWU1ZiIsImNsaWVudF9pZCI6IjEwMTM1OTU2NTUifQ.ebKOBxIUVHbml12B4mi0Eql92bpUneec0rhLg3mqzQg",
+  "success": true,
+  "lastAuthDate": "2019-01-12T09:30:46.122Z",
+  "currentDate": "2019-01-12T09:30:46Z",
+  "lastIPAddress": "10.10.1.75",
+  "migrate": false,
+  "dataBasicClientDto": {
+    "clientName": "KEVIN SILVA",
+    "documentNumber": "1019100203",
+    "documentType": "CC",
+    "phoneNumber": "3143804297",
+    "phoneNumberStatus": "A",
+    "email": "TATIANA.ARIZA@AVALDIGITALLABS.COM",
+    "emailType": "A",
+    "lastAuthInfo": "1900-01-01T12:00:00",
+    "ip": "10.3.1.124",
+    "channelState": "A",
+    "signStatus": 0,
+    "adviserName": "",
+    "adviserPhone": "0",
+    "adviserEmail": "",
+    "hasCreditProducts": false
+  }
+}

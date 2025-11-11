@@ -1,0 +1,15 @@
+{
+  "amount": 1250700.60,
+  "lastMonth": 1,
+  "month": 2,
+  "categories": [
+    {
+      "categoryType": "otro",
+      "code": "10005",
+      "color": "#A42C71",
+      "amount": 1250700.60,
+      "name": "Abono transferencia entre mis cuentas",
+      "lastMonthAmount": 2601401.20
+    }
+  ]
+}

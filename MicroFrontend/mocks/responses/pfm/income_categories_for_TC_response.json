@@ -1,0 +1,73 @@
+{
+  "code": "CIS-200",
+  "message": "OK",
+  "data": {
+    "categories": [
+      {
+        "code": "100",
+        "name": "TC_Reversiones",
+        "color": ""
+      },
+      {
+        "code": "1000001",
+        "name": "TC_Reembolsos y/o devoluciones",
+        "color": "#9A1829"
+      },
+      {
+        "code": "10005",
+        "name": "TC_Abono transferencia entre mis cuentas",
+        "color": "#A42C71"
+      },
+      {
+        "code": "10006",
+        "name": "TC_Desembolsos y avances",
+        "color": "#B3CAF3"
+      },
+      {
+        "code": "10007",
+        "name": "TC_Ahorro e inversiones",
+        "color": "#6E529E"
+      },
+      {
+        "code": "1100001",
+        "name": "TC_Ajustes y novedades",
+        "color": "#5BC7E1"
+      },
+      {
+        "code": "310001",
+        "name": "TC_Depósitos",
+        "color": "#0331a1"
+      },
+      {
+        "code": "410001",
+        "name": "TC_Otros Ingresos",
+        "color": "#007fbd"
+      },
+      {
+        "code": "510001",
+        "name": "TC_Transferencias de contactos",
+        "color": "#f88810"
+      },
+      {
+        "code": "610001",
+        "name": "TC_Acciones productos financieros",
+        "color": "#710b79"
+      },
+      {
+        "code": "710001",
+        "name": "TC_Negocios y ventas",
+        "color": "#7f8f00"
+      },
+      {
+        "code": "810001",
+        "name": "TC_Salarios",
+        "color": "#5bc7e1"
+      },
+      {
+        "code": "910001",
+        "name": "TC_Pagos realizados",
+        "color": "#0014A2"
+      }
+    ]
+  }
+}

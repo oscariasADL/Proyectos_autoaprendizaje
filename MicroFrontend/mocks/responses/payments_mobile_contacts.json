@@ -1,0 +1,121 @@
+{
+  "loansVillas": [],
+  "loansOtherBanks": [],
+  "loansContacts": [
+    {
+      "loanName": "Occidente",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****5878",
+      "relativeId": "0f58804b7c329c9ae0dd35577732aff493480e655c0403f78eee7dcbf1afeae5",
+      "franchise": "MASTERCARD",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "Alejandra oliveros MC",
+      "owner": {
+        "idType": "CC",
+        "id": "52430577"
+      }
+    },
+    {
+      "loanName": "Occidente",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****2430",
+      "relativeId": "0f58804b7c329c9ae0dd35577732aff493480e655c0403f78eee7dcbf1afeae5",
+      "franchise": "VISA",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "Alejandra oliveros VISA",
+      "owner": {
+        "idType": "CC",
+        "id": "52430577"
+      }
+    },
+    {
+      "loanName": "Alias",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****7722",
+      "relativeId": "d6c3f45e673e91d67e136b9aab4d7993aa52de6d93d928e912157dfb068b966e",
+      "franchise": "VISA",
+      "bankCode": "0998",
+      "bankName": "Otros Bancos",
+      "contactName": "Nombre del contactp",
+      "owner": {
+        "idType": "CC",
+        "id": "1019200345"
+      }
+    },
+    {
+      "loanName": "Tc 4824512000059436",
+      "productType": "UNKNOWN",
+      "productTypeDesc": "Producto Desconocido",
+      "numberProduct": "5229733000062166",
+      "relativeId": "d98a34f1cafcfcd1c3e38a3f1397d44bc9ccae4c51497e5fdd02e8d9369c8da2",
+      "bankCode": "0052",
+      "bankName": "Banco AV Villas",
+      "contactName": "Prueba contacto",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100210"
+      }
+    },
+    {
+      "loanName": "Credito",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "72201494845",
+      "relativeId": "6be60434ae2f25bec9eb4684d460b26f02ff83e75d0eb2553d41b0c9880422ae",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "Alejandra oliveros",
+      "owner": {
+        "idType": "CC",
+        "id": "52430577"
+      }
+    },
+    {
+      "loanName": "Prueba prestamo",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "89586231",
+      "relativeId": "2b7288560412ad81849043bb5ba5eff872eaabfc213b17596a9271225b183d86",
+      "bankCode": "0001",
+      "bankName": "Banco de Bogotá",
+      "contactName": "Jhon celis",
+      "owner": {
+        "idType": "CC",
+        "id": "1030558582"
+      }
+    },
+    {
+      "loanName": "Alias",
+      "productType": "DE",
+      "productTypeDesc": "Crédito Rotativo",
+      "numberProduct": "2124565548383932",
+      "relativeId": "ff6d73f8380fa767d21b6220b08216f023fb1a5be2d6cec941aeb776a80c228b",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "William mendoza",
+      "owner": {
+        "idType": "CC",
+        "id": "94542704"
+      }
+    },
+    {
+      "loanName": "Test",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "130000011",
+      "relativeId": "ebf03f4ee8dccbe8580416212eb6d8598e30d80d3d5d63f5dfcd07c7f78091d4",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "William mendoza",
+      "owner": {
+        "idType": "CC",
+        "id": "94542704"
+      }
+    }
+  ]
+}

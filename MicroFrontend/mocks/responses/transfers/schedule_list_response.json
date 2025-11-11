@@ -1,0 +1,606 @@
+{
+    "scheduledTransferListActive": [
+        {
+            "scheduleId": "d9ae5c9b-d96e-4774-97cc-1ee85653326d",
+            "sourceProduct": {
+                "productType": "DDA",
+                "productId": "008480865",
+                "bank": "0052",
+                "relativeId": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "075686969",
+                "bank": "0804",
+                "relativeId": null
+            },
+            "amount": "6000",
+            "startDate": "2025-12-28",
+            "endDate": "2025-12-28",
+            "recurrent": false,
+            "frequency": "",
+            "description": "Abe",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "PENDING",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "ec16868a-c9fd-4a93-bec4-cd1469fc30ee",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "324354657687",
+                "bank": "0814",
+                "relativeId": null
+            },
+            "amount": "2500",
+            "startDate": "2023-10-15",
+            "endDate": "2024-04-15",
+            "recurrent": true,
+            "frequency": "MONTHLY",
+            "description": "Abe",
+            "installments": "6",
+            "installmentsCompleted": "1",
+            "state": "PENDING",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "1fb93df8-6974-4556-814b-1fe1880b7a83",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "324354657687",
+                "bank": "0814",
+                "relativeId": null
+            },
+            "amount": "10000",
+            "startDate": "2023-10-15",
+            "endDate": "2023-10-15",
+            "recurrent": true,
+            "frequency": "MONTHLY",
+            "description": "Abe",
+            "installments": "0",
+            "installmentsCompleted": "0",
+            "state": "PENDING",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "84ccfb4b-c519-454b-b31c-d96d102f792e",
+            "sourceProduct": {
+                "productType": "DDA",
+                "productId": "008480865",
+                "bank": "0052",
+                "relativeId": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "10000",
+            "startDate": "2023-09-30",
+            "endDate": "2024-01-31",
+            "recurrent": true,
+            "frequency": "ENDOFMONTH",
+            "description": "",
+            "installments": "4",
+            "installmentsCompleted": "3",
+            "state": "PENDING",
+            "detailTransaction": "Ãltima transacciÃ³n"
+        },
+        {
+            "scheduleId": "bdea6438-4a6c-4eb5-bf56-99968a387094",
+            "sourceProduct": {
+                "productType": "DDA",
+                "productId": "008480865",
+                "bank": "0052",
+                "relativeId": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7"
+            },
+            "targetProduct": {
+                "productType": "DDA",
+                "productId": "008480881",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "3333",
+            "startDate": "2023-09-22",
+            "endDate": "2023-09-22",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "0",
+            "installmentsCompleted": "0",
+            "state": "PENDING",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "9dfac88b-3898-4ac2-86d3-ef350433ed2d",
+            "sourceProduct": {
+                "productType": "DDA",
+                "productId": "008480865",
+                "bank": "0052",
+                "relativeId": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "324354657687",
+                "bank": "0814",
+                "relativeId": null
+            },
+            "amount": "4000",
+            "startDate": "2023-09-22",
+            "endDate": "2023-10-27",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "Abe",
+            "installments": "5",
+            "installmentsCompleted": "1",
+            "state": "PENDING",
+            "detailTransaction": ""
+        }
+    ],
+    "scheduledTransferListInactive": [
+        {
+            "scheduleId": "6aca22e0-edec-4350-aa07-f5f5642c86de",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "2682424456651244",
+                "bank": "0051",
+                "relativeId": null
+            },
+            "amount": "10000",
+            "startDate": "2023-06-16",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "Aaron",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "b951b68b-5678-48ea-bd0f-b159dacbc8f6",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "2000",
+            "startDate": "2023-06-14",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "3175bd53-ca52-40e0-9f81-45188b67e30b",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "10000",
+            "startDate": "2023-03-09",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "844317b9-553d-4f37-a226-82b4eb30cc6d",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "0000000640836768",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "20000",
+            "startDate": "2022-08-24",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "hola  mundo|Prueba Transferencia  01",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "7a6a08b5-b52a-4495-b7ee-550c02274524",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "20000",
+            "startDate": "2022-03-11",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "prueba  02|Prueba  coma",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "448cdbf5-6b3a-421f-8397-f809e0c85fed",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "59500",
+            "startDate": "2022-03-10",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "MONTHLY",
+            "description": "Prueba ApiGw Encriptado",
+            "installments": "0",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "b33c5054-be5a-4bdc-af9c-c4ae72a51116",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "100000",
+            "startDate": "2022-03-04",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "de526546-d7e5-48ae-9c07-a30bc322b865",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "65000",
+            "startDate": "2022-02-28",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "MONTHLY",
+            "description": "Prueba para el Cifrado ApiGw",
+            "installments": "0",
+            "installmentsCompleted": "0",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "8158fc85-e537-4150-a6c9-50ffe2753be0",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "13453",
+            "startDate": "2022-01-29",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "Migracion v1 a v2 Cuentas Propias",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "ee5d0d2e-2e00-4cb6-adaf-b8816aa4c6aa",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "456789",
+            "startDate": "2022-01-15",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "148544f9-a102-407c-b176-b5e3ab7f9717",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008939683",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "345678",
+            "startDate": "2021-12-29",
+            "endDate": "",
+            "recurrent": false,
+            "frequency": "",
+            "description": "",
+            "installments": "1",
+            "installmentsCompleted": "0",
+            "state": "ERROR",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "b7e8d9c8-528b-4df9-9ee0-2282145630e5",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008985009",
+                "bank": "0052",
+                "relativeId": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+            },
+            "targetProduct": {
+                "productType": "DDA",
+                "productId": "008480881",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "9999",
+            "startDate": "2023-08-17",
+            "endDate": "2023-10-26",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "10",
+            "installmentsCompleted": "10",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "d243c43b-22ee-4b81-8b3e-1d8f090816c4",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "008968385",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "9999",
+            "startDate": "2023-08-17",
+            "endDate": "2023-10-26",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "10",
+            "installmentsCompleted": "10",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "145ba0d8-6690-4a7a-8406-d593264192d4",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "008985009",
+                "bank": "0052",
+                "relativeId": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+            },
+            "targetProduct": {
+                "productType": "DDA",
+                "productId": "008480881",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "9999",
+            "startDate": "2023-08-16",
+            "endDate": "2023-10-25",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "10",
+            "installmentsCompleted": "10",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "b5046ade-a4a9-4f3f-a7c6-1c4928e5f397",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640836735",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "100000",
+            "startDate": "2023-05-04",
+            "endDate": "2023-06-15",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "6",
+            "installmentsCompleted": "6",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "2570e068-7b90-4456-85bf-38e8495f6510",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "150999",
+            "startDate": "2022-08-05",
+            "endDate": "2022-08-19",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "Prueba Description",
+            "installments": "2",
+            "installmentsCompleted": "2",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "e06dd9e8-03a1-484f-ba07-f9888aeaab10",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "640846882",
+                "bank": "0052",
+                "relativeId": null
+            },
+            "amount": "150000",
+            "startDate": "2022-08-01",
+            "endDate": "2022-08-15",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "",
+            "installments": "2",
+            "installmentsCompleted": "2",
+            "state": "SUCCESSFUL",
+            "detailTransaction": ""
+        },
+        {
+            "scheduleId": "d514a2ad-2bc5-4646-8390-406383a22a5d",
+            "sourceProduct": {
+                "productType": "SDA",
+                "productId": "640836750",
+                "bank": "0052",
+                "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+            },
+            "targetProduct": {
+                "productType": "SDA",
+                "productId": "500800001711",
+                "bank": "0002",
+                "relativeId": null
+            },
+            "amount": "28000",
+            "startDate": "2022-02-18",
+            "endDate": "2022-03-18",
+            "recurrent": true,
+            "frequency": "WEEKLY",
+            "description": "Daniel Alejandro Rios",
+            "installments": "4",
+            "installmentsCompleted": "4",
+            "state": "ERROR",
+            "detailTransaction": ""
+        }
+    ]
+}

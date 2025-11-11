@@ -1,0 +1,10 @@
+{
+  "paymentMethod": {
+    "accountNumber": "****0959",
+    "accountFranchise": "VISA",
+    "cardType": "Platinum",
+    "accountBalance": 100000,
+    "accountType": "CCA"
+  },
+  "installments": "12"
+}

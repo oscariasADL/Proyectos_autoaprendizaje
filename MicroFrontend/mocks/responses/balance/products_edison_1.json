@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "typeProduct": 1,
+      "name": "Mis Cuentas",
+      "description": "Saldo total",
+      "balanceTotal": 89012988.48,
+      "quantity": 4,
+      "products": [
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939626",
+          "id": 3,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "4208939626",
+          "id": 21,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "4708939626",
+          "id": 22,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008437048",
+          "id": 12,
+          "accountType": 2,
+          "balance": 24582361.48,
+          "others": 0.00,
+          "availableBalance": 24582361.48,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 24582361.48,
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 3,
+      "name": "Mis Créditos Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 0.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "LOC",
+          "typeName": "Crédito Rotativo",
+          "numberProduct": "2115013000002593",
+          "id": 17,
+          "availableBalance": 0.00,
+          "expense": 81800000.00,
+          "creditLimit": 81800000.00,
+          "dueDate": "04-09-2020",
+          "minimumPayment": 0.00,
+          "notEmpty": true,
+          "availableBarPercentage": 99.88
+        }
+      ]
+    }
+  ]
+}

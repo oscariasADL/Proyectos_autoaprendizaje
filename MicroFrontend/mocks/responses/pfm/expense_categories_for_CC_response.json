@@ -1,0 +1,158 @@
+{
+  "code": "CIS-200",
+  "message": "OK",
+  "data": {
+    "categories": [
+      {
+        "code": "100001",
+        "name": "CC_Obligaciones Financieras",
+        "color": "#5b679a"
+      },
+      {
+        "code": "10001",
+        "name": "CC_Alimentación",
+        "color": "#fe8b25"
+      },
+      {
+        "code": "10002",
+        "name": "CC_Transferencias a mis cuentas",
+        "color": "#A42C71"
+      },
+      {
+        "code": "10003",
+        "name": "CC_Donaciones",
+        "color": "#B3CAF3"
+      },
+      {
+        "code": "10004",
+        "name": "CC_Ahorro e inversiones",
+        "color": "#6E529E"
+      },
+      {
+        "code": "110001",
+        "name": "CC_Otros Gastos",
+        "color": "#9a1829"
+      },
+      {
+        "code": "120001",
+        "name": "CC_Compras",
+        "color": "#a04c82"
+      },
+      {
+        "code": "130001",
+        "name": "CC_Pagos",
+        "color": "#0054bf"
+      },
+      {
+        "code": "140001",
+        "name": "CC_Retiros",
+        "color": "#6a81e7"
+      },
+      {
+        "code": "150001",
+        "name": "CC_Ropa y Calzado",
+        "color": "#ba1c25"
+      },
+      {
+        "code": "160001",
+        "name": "CC_Salud",
+        "color": "#b3caf3"
+      },
+      {
+        "code": "170001",
+        "name": "CC_Servicios Públicos",
+        "color": "#2C2C33"
+      },
+      {
+        "code": "180001",
+        "name": "CC_Servicios y Asesorias",
+        "color": "#5C6B7A"
+      },
+      {
+        "code": "190001",
+        "name": "CC_Tecnología",
+        "color": "#0014a2"
+      },
+      {
+        "code": "200",
+        "name": "CC_Reversiones",
+        "color": ""
+      },
+      {
+        "code": "200001",
+        "name": "CC_Transporte",
+        "color": "#5c2c73"
+      },
+      {
+        "code": "20001",
+        "name": "CC_Avances",
+        "color": "#e44a00"
+      },
+      {
+        "code": "210001",
+        "name": "CC_Viajes",
+        "color": "#6e529e"
+      },
+      {
+        "code": "220001",
+        "name": "CC_Intereses",
+        "color": "#2C2C33"
+      },
+      {
+        "code": "230001",
+        "name": "CC_Seguros",
+        "color": "#5C6B7A"
+      },
+      {
+        "code": "240001",
+        "name": "CC_Cuota de manejo",
+        "color": "#0331A1"
+      },
+      {
+        "code": "250001",
+        "name": "CC_Gastos administrativos",
+        "color": "#5B679A"
+      },
+      {
+        "code": "260001",
+        "name": "CC_Ajustes y novedades",
+        "color": "#5BC7E1"
+      },
+      {
+        "code": "30001",
+        "name": "CC_Belleza",
+        "color": "#a42c71"
+      },
+      {
+        "code": "40001",
+        "name": "CC_Educación",
+        "color": "#0048db"
+      },
+      {
+        "code": "50001",
+        "name": "CC_Entretenimiento",
+        "color": "#e2252f"
+      },
+      {
+        "code": "60001",
+        "name": "CC_Gastos Financieros",
+        "color": "#5c3377"
+      },
+      {
+        "code": "70001",
+        "name": "CC_Giros y Transferencias",
+        "color": "#00c783"
+      },
+      {
+        "code": "80001",
+        "name": "CC_Hogar",
+        "color": "#6f1d55"
+      },
+      {
+        "code": "90001",
+        "name": "CC_Impuestos",
+        "color": "#2d3d6c"
+      }
+    ]
+  }
+}

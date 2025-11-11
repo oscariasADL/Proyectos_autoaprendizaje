@@ -1,0 +1,40 @@
+{
+    "directedPaymentList": [
+        {
+            "approvalId": "5259110000",
+            "checkNum": null,
+            "transactionDate": "2019-07-16T13:59:14",
+            "directedPaymentStatus": true,
+            "messageError": "",
+            "codeError": "1045",
+            "purchaseDescription": "Arturo Calle",
+            "companyDescription": "Compra comercio Rappi",
+            "approvalIdOld": "12345",
+            "directedPayment": "12000"
+        },
+        {
+            "approvalId": "5259110000",
+            "checkNum": null,
+            "transactionDate": "2019-07-16T13:59:14",
+            "directedPaymentStatus": true,
+            "messageError": "",
+            "codeError": "1045",
+            "purchaseDescription": "Arturo Calle",
+            "companyDescription": "Compra comercio Rappi",
+            "approvalIdOld": "12345",
+            "directedPayment": "12000"
+        },
+        {
+            "approvalId": "5259110000",
+            "checkNum": null,
+            "transactionDate": "2019-07-16T13:59:14",
+            "directedPaymentStatus": false,
+            "messageError": "¡Oh no! Ha ocurrido un error que no esperábamos. Comunícate con nosotros (999)",
+            "codeError": "1045",
+            "purchaseDescription": "Drogueria Plaza No Bogotá",
+            "companyDescription": "Compra comercio Rappi",
+            "approvalIdOld": "54321",
+            "directedPayment": "50000"
+        }
+    ]
+}

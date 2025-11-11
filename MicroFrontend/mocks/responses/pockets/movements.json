@@ -1,0 +1,196 @@
+{
+  "movementList": [
+    {
+      "amount": "129000",
+      "date": "2025-01-18T15:06:58-05:00",
+      "description": "Abono a bolsillo1",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2025-01-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "14000776",
+      "date": "2025-01-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2024-12-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "23000776",
+      "date": "2024-12-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-08T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2024-12-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "13080776",
+      "date": "2024-12-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2024-12-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "1306",
+      "date": "2024-12-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2024-12-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "13000772",
+      "date": "2024-12-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    },
+    {
+      "amount": "34000",
+      "date": "2024-12-14T12:24:54-05:00",
+      "description": "Abono a bolsillo2",
+      "type": "D"
+    },
+    {
+      "amount": "1000543",
+      "date": "2024-12-16T09:55:01-05:00",
+      "description": "Transferencia desde bolsillo1",
+      "type": "C"
+    },
+    {
+      "amount": "13000772",
+      "date": "2024-12-13T14:00:02-05:00",
+      "description": "Transferencia desde bolsillo2",
+      "type": "C"
+    },
+    {
+      "amount": "89754000",
+      "date": "2024-12-09T18:25:36-05:00",
+      "description": "Transferencia desde bolsillo3",
+      "type": "C"
+    },
+    {
+      "amount": "104287",
+      "date": "2024-12-11T00:33:02-05:00",
+      "description": "Abono a bolsillo3",
+      "type": "D"
+    }
+  ]
+}

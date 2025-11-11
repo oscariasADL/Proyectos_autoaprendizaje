@@ -1,0 +1,40 @@
+{
+  "stockDetailList": [
+    {
+      "type": "Dividendos por pagar",
+      "amount": "2222.29",
+      "date": "2019-10-31T00:00:01",
+      "description": "Fecha corte dividendos"
+    },
+    {
+      "type": "Dividendos liquidados",
+      "amount": "2322.29",
+      "date": "2019-10-31T00:00:01",
+      "description": "Fecha de corte de liquidación de dividendos"
+    },
+    {
+      "type": "Valor de los ajustes realizados",
+      "amount": "2332.29",
+      "date": "2019-10-31T00:00:01",
+      "description": "Fecha de corte de liquidación de los ajustes"
+    },
+    {
+      "type": "Valor de las novedades",
+      "amount": "2333.29",
+      "date": "2019-10-31T00:00:01",
+      "description": "Fecha de corte de liquidación de las novedades"
+    },
+    {
+      "type": "Total de dividendos pagados",
+      "amount": "2333.39",
+      "date": "2019-10-31T00:00:01",
+      "description": "Fecha de corte de las acciones"
+    }
+  ],
+  "paymentStockDetail": [
+    {
+      "channel": "1",
+      "amount": null
+    }
+  ]
+}

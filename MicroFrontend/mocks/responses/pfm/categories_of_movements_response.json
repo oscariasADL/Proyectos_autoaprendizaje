@@ -1,0 +1,236 @@
+{
+  "code": "SMS-200",
+  "message": "OK",
+  "data": {
+    "products": [
+      {
+        "accountNumber": "640808478",
+        "idProduct": "3",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "30001",
+              "name": "Belleza",
+              "value": 1849323.00,
+              "color": "#a42c71"
+            },
+            {
+              "code": "20001",
+              "name": "Avances",
+              "value": 732000.00,
+              "color": "#e44a00"
+            },
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 168000.00,
+              "color": "#0048db"
+            },
+            {
+              "code": "50001",
+              "name": "Entretenimiento",
+              "value": 24900.00,
+              "color": "#e2252f"
+            },
+            {
+              "code": "10001",
+              "name": "Alimentación",
+              "value": 2543029.00,
+              "color": "#fe8b25"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "610001",
+              "name": "Acciones productos financieros",
+              "value": 1300000.00,
+              "color": "#710b79"
+            },
+            {
+              "code": "810001",
+              "name": "Salarios",
+              "value": 8532876.22,
+              "color": "#5bc7e1"
+            },
+            {
+              "code": "510001",
+              "name": "Transferencias de contactos",
+              "value": 5389122.00,
+              "color": "#f88810"
+            },
+            {
+              "code": "710001",
+              "name": "Negocios y ventas",
+              "value": 2900000.00,
+              "color": "#7f8f00"
+            },
+            {
+              "code": "410001",
+              "name": "Otros Ingresos",
+              "value": 340000.00,
+              "color": "#007fbd"
+            },
+            {
+              "code": "310001",
+              "name": "Depósitos",
+              "value": 2190000.00,
+              "color": "#0331a1"
+            }
+          ]
+        }
+      },
+      {
+        "accountNumber": "640808478",
+        "idProduct": "2",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "30001",
+              "name": "Belleza",
+              "value": 1300000.00,
+              "color": "#a42c71"
+            },
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 340000.00,
+              "color": "#0048db"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "610001",
+              "name": "Acciones productos financieros",
+              "value": 340000.00,
+              "color": "#710b79"
+            }
+          ]
+        }
+      },
+      {
+        "accountNumber": "640808478",
+        "idProduct": "1",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 340000.00,
+              "color": "#0048db"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "310001",
+              "name": "Depósitos",
+              "value": 13000000.00,
+              "color": "#0331a1"
+            }
+          ]
+        }
+      },
+      {
+        "accountNumber": "008438871",
+        "idProduct": "12",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 340000.00,
+              "color": "#0048db"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "310001",
+              "name": "Depósitos",
+              "value": 13000000.00,
+              "color": "#0331a1"
+            }
+          ]
+        }
+      },
+      {
+        "accountNumber": "****9436",
+        "idProduct": "1234567890987654321",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 340000.00,
+              "color": "#0048db"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "310001",
+              "name": "Depósitos",
+              "value": 13000000.00,
+              "color": "#0331a1"
+            }
+          ]
+        }
+      },
+      {
+        "accountNumber": "****2166",
+        "idProduct": "1234567890987654321",
+        "expenses": {
+          "total": 5365000.00,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "40001",
+              "name": "Educación",
+              "value": 340000.00,
+              "color": "#0048db"
+            }
+          ]
+        },
+        "incomes": {
+          "total": 19550000.22,
+          "previousTotal": 0.00,
+          "categories": [
+            {
+              "code": "310001",
+              "name": "Depósitos",
+              "value": 13000000.00,
+              "color": "#0331a1"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

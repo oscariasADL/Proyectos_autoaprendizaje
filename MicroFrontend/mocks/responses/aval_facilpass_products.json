@@ -1,0 +1,113 @@
+{
+    "data": [
+        {
+            "typeProduct": 1,
+            "name": "Cuentas",
+            "description": "Saldo disponible",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 5,
+            "name": "Inversiones",
+            "description": "Saldo total inversión",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 9,
+            "name": "Mis Cesantías",
+            "description": "",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 2,
+            "name": "Tarjetas",
+            "description": "Cupo disponible",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 4,
+            "name": "Créditos",
+            "description": "Saldo por pagar",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 10,
+            "name": "Facil Pass",
+            "description": "",
+            "balanceTotal": 114600.00,
+            "quantity": 4,
+            "products": [
+                {
+                    "type": "FP",
+                    "typeName": "Facil Pass",
+                    "numberProduct": "676578741",
+                    "id": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+                    "bankCode": "0160",
+                    "balance": 14600.0,
+                    "notEmpty": true
+                },
+                {
+                    "type": "FP",
+                    "typeName": "Facil Pass",
+                    "numberProduct": "676578742",
+                    "id": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+                    "bankCode": "0160",
+                    "balance": 20000.0,
+                    "notEmpty": true
+                },
+                {
+                    "type": "FP",
+                    "typeName": "Facil Pass",
+                    "numberProduct": "676578743",
+                    "id": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+                    "bankCode": "0160",
+                    "balance": 30000.0,
+                    "notEmpty": true
+                },
+                {
+                    "type": "FP",
+                    "typeName": "Facil Pass",
+                    "numberProduct": "676578744",
+                    "id": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+                    "bankCode": "0160",
+                    "balance": 50000.0,
+                    "notEmpty": true
+                }
+            ]
+        },
+        {
+            "typeProduct": 7,
+            "name": "Mi Pension Obligatoria",
+            "description": "",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 3,
+            "name": "Rotativos",
+            "description": "Cupo disponible",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        },
+        {
+            "typeProduct": 8,
+            "name": "Mis Pensiones Voluntarias",
+            "description": "",
+            "balanceTotal": 0.00,
+            "quantity": 0,
+            "products": []
+        }
+    ]
+}

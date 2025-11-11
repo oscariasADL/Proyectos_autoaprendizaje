@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "typeProduct": 5,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Inversiones",
+      "description": "Saldo total inversión",
+      "products": []
+    },
+    {
+      "typeProduct": 13,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "DALE!",
+      "description": "",
+      "products": []
+    },
+    {
+      "typeProduct": 9,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Mis Cesantías",
+      "description": "",
+      "products": [{
+        "numberProduct": "****5288",
+        "bankCode": "0098",
+        "typeName": "Cesantias",
+        "balance": 1000000,
+        "portfolios": [
+          {
+            "totalBalance": "0",
+            "name": "Conservador",
+            "valorizationBalance": "0",
+            "id": "****5288",
+            "units": "0",
+            "notEmpty": false,
+            "unitValue": "34223.86"
+          },
+          {
+            "totalBalance": "0",
+            "name": "Moderado",
+            "valorizationBalance": "0",
+            "id": "****5288",
+            "units": "0",
+            "notEmpty": false,
+            "unitValue": "38158.58"
+          }
+        ],
+        "id": "****5b4b",
+        "type": "SBA",
+        "notEmpty": true
+      }]
+    },
+    {
+      "typeProduct": 10,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Facil Pass",
+      "description": "",
+      "products": []
+    },
+    {
+      "typeProduct": 4,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Créditos",
+      "description": "Saldo por pagar",
+      "products": []
+    },
+    {
+      "typeProduct": 2,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Tarjetas",
+      "description": "Cupo disponible",
+      "products": []
+    },
+    {
+      "typeProduct": 8,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Mis Pensiones Voluntarias",
+      "description": "",
+      "products": []
+    },
+    {
+      "typeProduct": 7,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Mi Pension Obligatoria",
+      "description": "",
+      "products": []
+    },
+    {
+      "typeProduct": 3,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Rotativos",
+      "description": "Cupo disponible",
+      "products": []
+    },
+    {
+      "typeProduct": 1,
+      "balanceTotal": "0",
+      "quantity": 0,
+      "name": "Cuentas",
+      "description": "Saldo disponible",
+      "products": []
+    }
+  ]
+}

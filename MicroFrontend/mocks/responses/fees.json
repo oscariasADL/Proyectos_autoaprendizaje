@@ -1,0 +1,112 @@
+[
+  {
+    "id": 2,
+    "code": "COP",
+    "value": 1300
+  },
+  {
+    "id": 91,
+    "code": "COP",
+    "value": 4200
+  },
+  {
+    "id": 19,
+    "code": "COP",
+    "value": 3750
+  },
+  {
+    "id": 1,
+    "code": "COP",
+    "value": 2000
+  },
+  {
+    "id": 56,
+    "code": "COP",
+    "value": 1023
+  },
+  {
+    "id": 82,
+    "code": "COP",
+    "value": 800
+  },
+  {
+    "id": 34,
+    "code": "COP",
+    "value": 5000
+  },
+  {
+    "id": 51,
+    "code": "COP",
+    "value": 6400
+  },
+  {
+    "id": 42,
+    "code": "COP",
+    "value": 1328
+  },
+  {
+    "id": 21,
+    "code": "COP",
+    "value": 0
+  },
+  {
+    "id": 66,
+    "code": "COP",
+    "value": 1838
+  },
+  {
+    "id": 200332,
+    "code": "COP",
+    "value": 845
+  },
+  {
+    "id": 155,
+    "code": "COP",
+    "value": 234
+  },
+  {
+    "id": 20296,
+    "code": "COP",
+    "value": 0
+  },
+  {
+    "id": 940001,
+    "code": "COP",
+    "value": 4288
+  },
+  {
+    "id": 940004,
+    "code": "COP",
+    "value": 5600
+  },
+  {
+    "id": 940002,
+    "code": "COP",
+    "value": 0
+  },
+  {
+    "id": 75702,
+    "code": "COP",
+    "value": 2534
+  },
+  {
+    "id": 75700,
+    "code": "COP",
+    "value": 2010
+  },
+  {
+    "id": 940003,
+    "code": "COP",
+    "value": 4023
+  },
+  {
+    "id": 200900,
+    "code": "COP",
+    "value": 8765
+  },
+  {
+    "id": 200916,
+    "code": "COP",
+    "value": 100
+  }
+]

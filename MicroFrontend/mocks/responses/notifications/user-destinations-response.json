@@ -1,0 +1,44 @@
+{
+  "alertDests": [
+    {
+      "key": 2,
+      "name": "CELL",
+      "value": "****45"
+    },
+    {
+      "key": 2,
+      "name": "CELL",
+      "value": "****23"
+    },
+    {
+      "key": 1,
+      "name": "EMAIL",
+      "value": "****ramirez@avaldigitallabs.com"
+    },
+    {
+      "key": 1,
+      "name": "EMAIL",
+      "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+    },
+    {
+      "key": 2,
+      "name": "CELL",
+      "value": "****51"
+    },
+    {
+      "key": 1,
+      "name": "EMAIL",
+      "value": "****RAMIREZ@AVALDIGITALLABS.CO"
+    },
+    {
+      "key": 2,
+      "name": "CELL",
+      "value": "****52"
+    },
+    {
+      "key": 2,
+      "name": "CELL",
+      "value": "****53"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "typeProduct": 1,
+      "name": "Mis Cuentas",
+      "description": "Saldo total",
+      "balanceTotal": 89012988.48,
+      "quantity": 3,
+      "products": [
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939626",
+          "id": 3,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "0084375464",
+          "id": 15,
+          "accountType": 2,
+          "balance": -9000000.00,
+          "others": 0.00,
+          "availableBalance": 0.00,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 0,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008434535",
+          "id": 16,
+          "accountType": 2,
+          "balance": -10000000.00,
+          "others": 0.00,
+          "availableBalance": 0.00,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 0,
+          "notEmpty": true
+        }
+      ]
+    }
+  ]
+}

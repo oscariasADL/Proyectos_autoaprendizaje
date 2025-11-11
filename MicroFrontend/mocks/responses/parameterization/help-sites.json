@@ -1,0 +1,132 @@
+{
+  "Transferencias": {
+    "items": [
+      {
+        "title": "Crea tus contactos para realizar transferencias",
+        "url": "https://www.avvillas.com.co/tutoriales/crear-un-contacto-para-transferencias"
+      },
+      {
+        "title": "Transfiere a cuentas inscritas de otros bancos o no inscritas de AV Villas",
+        "url": "https://www.avvillas.com.co/tutoriales/como-realizar-transferencias"
+      }
+    ]
+  },
+  "Pagos": {
+    "items": [
+      {
+        "title": "Paga tus impuestos",
+        "url": "https://www.avvillas.com.co/tutoriales/pago-de-impuestos"
+      },
+      {
+        "title": "Paga tus servicios sin inscribirlos",
+        "url": "https://www.avvillas.com.co/tutoriales/pago-servicios-sin-inscripcion"
+      },
+      {
+        "title": "Haz pagos dirigidos a compras o avances",
+        "url": "https://www.avvillas.com.co/tutoriales/pagos-dirigidos-a-compras-con-tarjeta-credito"
+      },
+      {
+        "title": "Crea tus contactos para pagar obligaciones",
+        "url": "https://www.avvillas.com.co/tutoriales/como-crear-contacto-para-pagos-tdc"
+      },
+      {
+        "title": "Paga tu tarjeta de crédito o la de otros bancos",
+        "url": "https://www.avvillas.com.co/tutoriales/pago-tarjeta-de-credito"
+      }
+    ]
+  },
+  "Productos": {
+    "items": [
+      {
+        "title": "Compra de cartera",
+        "url": "https://www.avvillas.com.co/tutoriales/compra-de-cartera-bv"
+      },
+      {
+        "title": "Conoce los cambios de la nueva banca",
+        "url": "https://www.avvillas.com.co/tutoriales/#banca-virtual"
+      },
+      {
+        "title": "Consulta de extractos",
+        "url": "https://www.avvillas.com.co/tutoriales/extractos-y-certificados-en-linea"
+      },
+      {
+        "title": "Cambia el valor máximo de las transacciones",
+        "url": "https://www.avvillas.com.co/tutoriales/cambio-topes"
+      }
+    ]
+  },
+  "Giros y retiros": {
+    "items": [
+      {
+        "title": "Genera claves para hacer giros",
+        "url": "https://www.avvillas.com.co/tutoriales/clave-para-giros"
+      },
+      {
+        "title": "Genera claves para hacer tus retiros",
+        "url": "https://www.avvillas.com.co/tutoriales/retiro-sin-tarjeta"
+      }
+    ]
+  },
+  "Bolsillos": {
+    "items": [
+      {
+        "title": "Crea y administra bolsillos de ahorro",
+        "url": "https://www.avvillas.com.co/tutoriales/como-crear-bolsillos-de-ahorro-app"
+      }
+    ]
+  },
+  "Zona Bre-B": {
+    "items": [
+      {
+        "title": "¿Qué es un sistema de pagos inmediatos?",
+        "url": "1",
+        "isModal": true
+      },
+      {
+        "title": "¿Cuáles son las ventajas de realizar transferencias o pagos digitales?",
+        "url": "2",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué es una transferencia electrónica o pago digital?",
+        "url": "3",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué son los medios de pago?",
+        "url": "4",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué identifica Bre-B?",
+        "url": "5",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué me solucionará Bre-B?",
+        "url": "6",
+        "isModal": true
+      },
+      {
+        "title": "¿Cuál es el marco regulatorio asociado a los sistemas de pagos inmediatos?",
+        "url": "7",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué necesito para hacer una transferencia o un pago digital?",
+        "url": "8",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué significa que un sistema de pagos inmediatos sea 24/7/365?",
+        "url": "9",
+        "isModal": true
+      },
+      {
+        "title": "¿Qué significa que un sistema de pagos inmediatos sea interoperable?",
+        "url": "10",
+        "isModal": true
+      }
+    ]
+  }
+}

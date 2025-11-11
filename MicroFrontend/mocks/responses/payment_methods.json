@@ -1,0 +1,67 @@
+{
+  "paymentMethods": [
+    {
+      "accountNumber": "****0959",
+      "accountId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "accountIdUn": "89480959",
+      "accountFranchise": "VISA",
+      "cardType": "Platinum",
+      "accountBalance": 100000,
+      "accountType": "CCA"
+    },
+    {
+      "accountNumber": "****0011",
+      "cardType": "Gold",
+      "accountId": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "accountIdUn": "984580011",
+      "accountFranchise": "MASTERCARD",
+      "accountBalance": 230000,
+      "accountType": "CCA"
+    },
+    {
+      "accountNumber": "****4609",
+      "accountId": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "accountIdUn": "784234609",
+      "cardType": "Desconocida",
+      "accountFranchise": "UNKNOWN",
+      "accountBalance": "8461371.36",
+      "accountType": "SDA"
+    },
+    {
+      "accountNumber": "****4625",
+      "accountId": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "accountIdUn": "1345244625",
+      "cardType": "Desconocida",
+      "accountFranchise": "UNKNOWN",
+      "accountBalance": "8159969.16",
+      "accountType": "SDA"
+    },
+    {
+      "accountNumber": "****4625",
+      "accountId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "accountIdUn": "3434344625",
+      "cardType": "Desconocida",
+      "accountFranchise": "UNKNOWN",
+      "accountBalance": "10004588.09",
+      "accountType": "DDA"
+    },
+    {
+      "accountNumber": "****4617",
+      "accountId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "accountIdUn": "356974617",
+      "cardType": "Desconocida",
+      "accountFranchise": "UNKNOWN",
+      "accountBalance": "9560830.33",
+      "accountType": "DDA"
+    },
+    {
+      "accountNumber": "****4625",
+      "accountId": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
+      "accountIdUn": "456784625",
+      "cardType": "Desconocida",
+      "accountFranchise": "UNKNOWN",
+      "accountBalance": "9560830.33",
+      "accountType": "DDA"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "approvalPath": "GREEN",
+  "cardAcctId": {
+    "cardNumber": "482451",
+    "lastDigits": "9018",
+    "cardStatus": {
+      "issDt": "2024-05-22T15:26:27Z",
+      "cardId": "C4000006593739018"
+    },
+    "productId": "6282131826654774994",
+    "cardMagDataResponse": {
+      "magData1": "C0001021212200"
+    },
+    "ccmotoAcct": {
+      "expDt": "2905"
+    }
+  },
+  "deletedCard": "false",
+  "statusCode": "ACTIVE",
+  "tokenInfo": {
+    "tokenId": "62AB0599FB79E0F62E19818F232CD77E",
+    "tokenType": "CARD_ON_FILE",
+    "tokenReq": {
+      "requestorName": "Netflix Inc.",
+      "status": "APPROVED",
+      "idWallet": "40010075839",
+      "provisioned": "false",
+      "warnCode": []
+    },
+    "validity": {
+      "validityDate": "0529"
+    }
+  },
+  "tokenServProv": {
+    "id": "VTS",
+    "panId": "V-3024143555809108158720",
+    "tokenId": "DNITHE302414355585054963",
+    "tokenProvisioning": "DNITHE302414355585054963",
+    "tokenRequestor": "40010075839"
+  },
+  "athResponseError": false
+}

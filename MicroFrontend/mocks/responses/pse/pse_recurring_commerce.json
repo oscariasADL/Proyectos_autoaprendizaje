@@ -1,0 +1,24 @@
+{
+    "recurringPayment": [
+      {
+        "entityCode": "654987321",
+        "entityName": "Comercio uno",
+        "accountInfo": {
+          "type": "SDA",
+          "number": "008438871"
+        },
+        "createDate": "2023-06-13T09:46:42Z",
+        "updateDate": "2023-06-13T09:46:42Z"
+      },
+      {
+        "entityCode": "654987322",
+        "entityName": "Comercio dos",
+        "accountInfo": {
+          "type": "SDA",
+          "number": "321654987"
+        },
+        "createDate": "2023-06-13T09:46:42Z",
+        "updateDate": "2023-06-13T09:46:42Z"
+      }
+    ]
+}

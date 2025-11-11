@@ -1,0 +1,204 @@
+{
+  "products": [
+    {
+      "relativeId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "alias": "Davivienda",
+      "type": {
+        "id": "SDA",
+        "name": "Ahorros"
+      },
+      "number": "725678991",
+      "bank": {
+        "id": "0051",
+        "name": "Banco Davivienda"
+      },
+      "status":"I"
+    },
+    {
+      "relativeId": "7h64b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "alias": "Prueba AVV",
+      "type": {
+        "id": "SDA",
+        "name": "Ahorros"
+      },
+      "number": "5678991",
+      "bank": {
+        "id": "0052",
+        "name": "Banco AV Villas"
+      },
+      "status":"A"
+    },
+    {
+      "relativeId": "7b5679273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb875b4b",
+      "alias": "bancamia",
+      "type": {
+        "id": "SDA",
+        "name": "Ahorros"
+      },
+      "bank": {
+        "id": "0059",
+        "name": "Bancamia S.A."
+      },
+      "isNumberMasked": false,
+      "number": "76545687",
+      "status":"A"
+    },
+    {
+      "relativeId": "a7abfd77289c24d470a0390028eb30647255b1cfa43a9e59b618520254c47ef3",
+      "alias": "bancamia",
+      "type": {
+        "id": "SDA",
+        "name": "Ahorros"
+      },
+      "bank": {
+        "id": "0059",
+        "name": "Bancamia S.A."
+      },
+      "isNumberMasked": false,
+      "number": "76545687",
+      "status":"A"
+    },
+    {
+      "relativeId": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "alias": "BOG visa",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0001",
+        "name": "Banco de Bogotá"
+      },
+      "franchise": "VISA",
+      "isNumberMasked": true,
+      "number": "****7669",
+      "status":"A"
+    },
+    {
+      "relativeId": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "alias": "TC visa",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0998",
+        "name": "Otros Bancos"
+      },
+      "franchise": "VISA",
+      "isNumberMasked": true,
+      "number": "****0519",
+      "status":"A"
+    },
+    {
+      "relativeId": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "alias": "BOG visa2",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0001",
+        "name": "Banco de Bogotá"
+      },
+      "franchise": "VISA",
+      "isNumberMasked": true,
+      "number": "****3771",
+      "status":"A"
+    },
+    {
+      "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "alias": "OCC visa",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0023",
+        "name": "Banco de Occidente"
+      },
+      "franchise": "VISA",
+      "isNumberMasked": true,
+      "number": "****6558",
+      "status":"A"
+    },
+    {
+      "relativeId": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
+      "alias": "DAV master",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0051",
+        "name": "Davivienda"
+      },
+      "franchise": "MASTERCARD",
+      "isNumberMasked": true,
+      "number": "****2760",
+      "status":"A"
+    },
+    {
+      "relativeId": "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451",
+      "alias": "BOG master",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0001",
+        "name": "Banco de Bogotá"
+      },
+      "franchise": "MASTERCARD",
+      "isNumberMasked": true,
+      "number": "****0299",
+      "status":"A"
+    },
+    {
+      "relativeId": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3",
+      "alias": "TC master",
+      "type": {
+        "id": "TC",
+        "name": "Tarjeta de Crédito"
+      },
+      "bank": {
+        "id": "0999",
+        "name": "Otros Bancos"
+      },
+      "franchise": "MASTERCARD",
+      "isNumberMasked": true,
+      "number": "****7362",
+      "status":"A"
+    },
+    {
+      "relativeId": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7",
+      "alias": "POP CH",
+      "type": {
+        "id": "CH",
+        "name": "Hipotecario"
+      },
+      "bank": {
+        "id": "0002",
+        "name": "Banco Popular"
+      },
+      "isNumberMasked": false,
+      "number": "681300395",
+      "status":"A"
+    },
+    {
+      "relativeId": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "alias": "POP OC",
+      "type": {
+        "id": "CH",
+        "name": "Hipotecario"
+      },
+      "bank": {
+        "id": "0002",
+        "name": "Banco Popular"
+      },
+      "isNumberMasked": false,
+      "number": "15013009308",
+      "status":"A"
+    }
+  ]
+}

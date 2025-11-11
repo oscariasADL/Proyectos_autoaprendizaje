@@ -43,10 +43,17 @@
                 </div>
                 <div class="form-group">
                   
-                  <button type="submit"
+                  <button *ngIf="!cargando" type="submit"
                           [disabled]="loginForm.invalid"
                           class="btn btn-primary submit-btn btn-block">
                     Login
+                  </button>
+
+                  <button *ngIf="cargando" type="button"
+                          [disabled]="true"
+                          class="btn btn-primary submit-btn btn-block">
+                    <i class="fa fa-spinner fa-spin"></i>
+                    Espere...
                   </button>
 
                 </div>

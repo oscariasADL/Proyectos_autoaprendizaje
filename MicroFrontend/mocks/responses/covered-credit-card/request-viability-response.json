@@ -1,0 +1,30 @@
+{
+  "coveredCreditCardsList": [
+    {
+      "numberProductCoveredCreditCard": "4***********9436",
+      "maxAmount": "76512000",
+      "minAmount": "600000"
+    },
+    {
+      "numberProductCoveredCreditCard": "5***********2166",
+      "maxAmount": "4000000",
+      "minAmount": "1000000"
+    },
+    {
+      "numberProductCoveredCreditCard": "5***********3318",
+      "maxAmount": "13560000",
+      "minAmount": "1200000"
+    },
+    {
+      "numberProductCoveredCreditCard": "5***********4651",
+      "maxAmount": "3560000",
+      "minAmount": "200000"
+    },
+    {
+      "numberProductCoveredCreditCard": "4***********1111",
+      "maxAmount": "800000",
+      "minAmount": "150000"
+    }
+  ],
+  "amount": "0"
+}

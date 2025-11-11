@@ -1,0 +1,28 @@
+{
+  "periods": [
+    {
+      "period": "Feb 2019",
+      "startDate": "2019-03-01T00:00:00",
+      "endDate": "2019-03-30T00:00:00",
+      "fileId": "",
+      "fileName": "",
+      "fileDesc": "DIC_FEB-19"
+    },
+    {
+      "period": "Mar 2019",
+      "startDate": "2019-03-01T00:00:00",
+      "endDate": "2019-03-30T00:00:00",
+      "fileId": "",
+      "fileName": "",
+      "fileDesc": "ENE_MAR-19"
+    },
+    {
+      "period": "Abr 2019",
+      "startDate": "2019-03-01T00:00:00",
+      "endDate": "2019-03-30T00:00:00",
+      "fileId": "",
+      "fileName": "",
+      "fileDesc": "FEB_ABR-19"
+    }
+  ]
+}

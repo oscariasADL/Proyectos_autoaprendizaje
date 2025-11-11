@@ -1,0 +1,4 @@
+appVersion, isMandatoryUpdate, platform
+4.1.0, false, BOTH
+4.2.1, false, BOTH
+4.3.2, false, BOTH

@@ -1,0 +1,104 @@
+{
+  "loansVillas": [
+    {
+      "loanName": "Tarjeta de Crédito",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****6691",
+      "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "minPaymentAmount": 500000,
+      "minPaymentReducedAmount": 100000,
+      "totalPaymentAmount": 2000000,
+      "franchise": "VISA",
+      "cardType": "Platinum",
+      "maxPaymentDate": "03/08/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    },
+    {
+      "loanName": "Tarjeta de Crédito",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****3318",
+      "relativeId": "4dc6120388ada158d925712fc65ef2bf79641a4429536ba188b5c6cf7fbf2ff6",
+      "minPaymentAmount": 150962.0,
+      "minPaymentReducedAmount": 12993.51,
+      "totalPaymentAmount": 282945.0,
+      "franchise": "MASTERCARD",
+      "cardType": "Gold",
+      "maxPaymentDate": "18/06/2019",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    },
+    {
+      "loanName": "Tarjeta de Crédito",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****4650",
+      "relativeId": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
+      "minPaymentAmount": 0.0,
+      "minPaymentReducedAmount": 0.0,
+      "totalPaymentAmount": 1000000.0,
+      "franchise": "VISA",
+      "cardType": "Platinum",
+      "maxPaymentDate": "08/07/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    },
+    {
+      "loanName": "Crédito prueba",
+      "productType": "DLA",
+      "productTypeDesc": "Crédito prueba",
+      "numberProduct": "12345872622",
+      "relativeId": "5",
+      "minPaymentAmount": 1083234.56,
+      "totalPaymentAmount": 17449704.00,
+      "maxPaymentDate": "03/08/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    },
+    {
+      "loanName": "Crédito Rotativo",
+      "productType": "LOC",
+      "productTypeDesc": "Crédito Rotativo",
+      "numberProduct": "2115013000002594",
+      "relativeId": "25",
+      "minPaymentAmount": 2500000.0,
+      "totalPaymentAmount": 40000000.0,
+      "maxPaymentDate": "03/08/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    }
+  ],
+  "loansOtherBanks": [
+    {
+      "loanName": "Colpatria",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****6897",
+      "relativeId": "1da3423295d57acdd01b2cc41be77b25be6510dfe66833dae5308ebee5f93441",
+      "bankCode": "0999",
+      "bankName": "Otros Bancos",
+      "contactName": "Propia otros bancos",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100201"
+      }
+    },
+    {
+      "loanName": "Credito casa melgar",
+      "productType": "CH",
+      "productTypeDesc": "Crédito hipotecario",
+      "numberProduct": "2475013000002513",
+      "relativeId": "1da3423295d57acdd01b2cc41be77b25be6510dfe66833dae5308ebee5f93763",
+      "bankCode": "0001",
+      "bankName": "Banco de Bogotá",
+      "contactName": "Propia otros bancos",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100201"
+      }
+    }
+  ],
+  "loansContacts": []
+}

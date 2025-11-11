@@ -1,0 +1,364 @@
+{
+	"paymentsHistory": [
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836750",
+				"bankId": "0052"
+			},
+			"approvalCode": "520275",
+			"transactionRef": "0000000000895745",
+			"amount": 6000000.00,
+			"transactionDate": "2024-06-28T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Epaaa"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "8903002794",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "8939683",
+				"bankId": "0052"
+			},
+			"approvalCode": "520014",
+			"transactionRef": "0000006284495346",
+			"amount": 15445.00,
+			"transactionDate": "2024-06-28T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "006.000.000.001",
+			"transactionCost": 0.0,
+			"destinationDescription": "Banco de Occidente"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836750",
+				"bankId": "0052"
+			},
+			"approvalCode": "520275",
+			"transactionRef": "0000000000895745",
+			"amount": 1000000.00,
+			"transactionDate": "2024-06-28T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836750",
+				"bankId": "0052"
+			},
+			"approvalCode": "520275",
+			"transactionRef": "0000000000895745",
+			"amount": 60000.00,
+			"transactionDate": "2023-06-28T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520063",
+			"transactionRef": "0000000000001234",
+			"amount": 10000.00,
+			"transactionDate": "2023-06-13T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Comercio Pruebas WSE"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520056",
+			"transactionRef": "0000000000001234",
+			"amount": 10000.00,
+			"transactionDate": "2023-06-13T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Comercio Pruebas WSE"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520049",
+			"transactionRef": "0000000000001234",
+			"amount": 10000.00,
+			"transactionDate": "2023-06-13T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Comercio Pruebas WSE"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520070",
+			"transactionRef": "0000000000001234",
+			"amount": 20000.00,
+			"transactionDate": "2023-06-13T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Comercio Pruebas WSE"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "0",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520018",
+			"transactionRef": "0000000153799518",
+			"amount": 9816.00,
+			"transactionDate": "2023-06-09T00:00:00-05:00",
+			"paymentDescription": "Pago de Impuestos",
+			"originIp": "200.118.80 .95",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "0000042419746211",
+				"bankId": null
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520007",
+			"transactionRef": "0000042419746211",
+			"amount": 72475.00,
+			"transactionDate": "2023-06-02T00:00:00-05:00",
+			"paymentDescription": "Pago de Servicios Publicos",
+			"originIp": "200.118.80 .95",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "0000042419746211",
+				"bankId": null
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520016",
+			"transactionRef": "0000042419746211",
+			"amount": 72475.00,
+			"transactionDate": "2023-06-02T00:00:00-05:00",
+			"paymentDescription": "Pago de Servicios Publicos",
+			"originIp": null,
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "812345678",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520007",
+			"transactionRef": "0000000000001234",
+			"amount": 10000.00,
+			"transactionDate": "2023-05-24T00:00:00-05:00",
+			"paymentDescription": "Pago PSE",
+			"originIp": "000.000.001.234",
+			"transactionCost": 0.0,
+			"destinationDescription": "Comercio Pruebas WSE"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "9344227",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "520057",
+			"transactionRef": "0000008299817527",
+			"amount": 1760400.00,
+			"transactionDate": "2023-05-16T00:00:00-05:00",
+			"paymentDescription": "Pago de Pila con cargo a cuenta AVVillas",
+			"originIp": "3  .13 .132.40",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "****8068",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "52224457",
+			"transactionRef": "****8068",
+			"amount": 44164.00,
+			"transactionDate": "2023-05-10T00:00:00-05:00",
+			"paymentDescription": "Pago dirigido de Tarjeta de Credito",
+			"originIp": ".   .   .",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "****8068",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "52215246",
+			"transactionRef": "****8068",
+			"amount": 5027.00,
+			"transactionDate": "2023-05-10T00:00:00-05:00",
+			"paymentDescription": "Pago dirigido de Tarjeta de Credito",
+			"originIp": ".   .   .",
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "1234587272",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640846882",
+				"bankId": "0052"
+			},
+			"approvalCode": "521648",
+			"transactionRef": "0000000000000000",
+			"amount": 766206.00,
+			"transactionDate": "2023-05-02T00:00:00-05:00",
+			"paymentDescription": "Pago de Cartera AVVillas",
+			"originIp": ".   .   .",
+			"transactionCost": 0.0,
+			"destinationDescription": "ANGIE LIZZETTE GONZA"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "1234587272",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640846882",
+				"bankId": "0052"
+			},
+			"approvalCode": "525012",
+			"transactionRef": "0000000000000000",
+			"amount": 766206.00,
+			"transactionDate": "2023-05-02T00:00:00-05:00",
+			"paymentDescription": "Pago de Cartera AVVillas",
+			"originIp": ".   .   .",
+			"transactionCost": 0.0,
+			"destinationDescription": "ANGIE LIZZETTE GONZA"
+		},
+		{
+			"targetProduct": {
+				"accountType": null,
+				"accountId": "****8068",
+				"bankId": "0052"
+			},
+			"sourceProduct": {
+				"accountType": "SDA",
+				"accountId": "640836735",
+				"bankId": "0052"
+			},
+			"approvalCode": "52015484",
+			"transactionRef": "****8068",
+			"amount": 200000.00,
+			"transactionDate": "2023-05-02T00:00:00-05:00",
+			"paymentDescription": "Pago de Tarjeta de Credito AVVillas",
+			"originIp": null,
+			"transactionCost": 0.0,
+			"destinationDescription": ""
+		}
+	]
+}

@@ -1,0 +1,208 @@
+{
+  "PAYMENTS": {
+    "description": "Pago de créditos, tarjetas y servicios",
+    "limitItems": [
+      {
+        "transactionCode": "8",
+        "channel": "2",
+        "description": "De créditos y tarjetas en internet y AV Villas App",
+        "maxAmount": "300000",
+        "currentAmount": "5000"
+      },
+      {
+        "transactionCode": "6",
+        "channel": "2",
+        "description": "De servicios inscritos en internet y AV Villas App",
+        "maxAmount": "15000000",
+        "currentAmount": "700000"
+      },
+      {
+        "transactionCode": "6",
+        "channel": "11",
+        "description": "De servicios sin inscribir en internet y AV Villas App",
+        "maxAmount": "500000",
+        "currentAmount": "500000"
+      },
+      {
+        "transactionCode": "6",
+        "channel": "4",
+        "description": "De servicios en establecimientos comerciales",
+        "maxAmount": "500000",
+        "currentAmount": "500000"
+      },
+      {
+        "transactionCode": "6",
+        "channel": "10",
+        "description": "En corresponsales bancarios",
+        "maxAmount": "9999999999999",
+        "currentAmount": "9999999999999"
+      },
+      {
+        "transactionCode": "6",
+        "channel": "3",
+        "description": "En cajeros automáticos",
+        "maxAmount": "9999999999999",
+        "currentAmount": "9999999999999"
+      }
+    ]
+  },
+  "PSE": {
+    "description": "Pagos y compras por PSE",
+    "limitItems": [
+      {
+        "transactionCode": "10",
+        "channel": "2",
+        "description": "En internet",
+        "maxAmount": "50000000",
+        "currentAmount": "25000000"
+      }
+    ]
+  },
+  "RECHARGES": {
+    "description": "Recargas de celular",
+    "limitItems": [
+      {
+        "transactionCode": "16",
+        "channel": "11",
+        "description": "En internet y AV Villas App",
+        "maxAmount": "50000",
+        "currentAmount": "50000"
+      }
+    ]
+  },
+  "WITHDRAWALS": {
+    "description": "Retiros",
+    "limitItems": [
+      {
+        "transactionCode": "1",
+        "channel": "3",
+        "description": "En cajeros automáticos",
+        "maxAmount": "3000000",
+        "currentAmount": "3000000"
+      },
+      {
+        "transactionCode": "1",
+        "channel": "10",
+        "description": "En corresponsales bancarios",
+        "maxAmount": "3000000",
+        "currentAmount": "3000000"
+      }
+    ]
+  },
+  "PILA": {
+    "description": "Pago de impuestos y PILA",
+    "limitItems": [
+      {
+        "transactionCode": "16",
+        "channel": "2",
+        "description": "En internet y AV Villas App",
+        "maxAmount": "50000000",
+        "currentAmount": "15000000"
+      }
+    ]
+  },
+  "CARD_ADVANCES": {
+    "description": "Avances",
+    "limitItems": [
+      {
+        "transactionCode": "1",
+        "channel": "3",
+        "description": "En cajeros nacionales e internacionales",
+        "maxAmount": "3000000",
+        "currentAmount": "3000000"
+      }
+    ]
+  },
+  "PURCHASES": {
+    "description": "Compras en establecimientos",
+    "limitItems": [
+      {
+        "transactionCode": "1",
+        "channel": "4",
+        "description": "Nacionales",
+        "maxAmount": "7000000",
+        "currentAmount": "7000000"
+      },
+      {
+        "transactionCode": "4",
+        "channel": "4",
+        "description": "Internacionales",
+        "maxAmount": "2000000",
+        "currentAmount": "2000000"
+      },
+      {
+        "transactionCode": "9",
+        "channel": "4",
+        "description": "En datáfonos sin contacto",
+        "maxAmount": "500000",
+        "currentAmount": "500000"
+      }
+    ]
+  },
+  "TRANSFERS": {
+    "description": "Transferencias",
+    "limitItems": [
+      {
+        "transactionCode": "3",
+        "channel": "2",
+        "description": "A contactos en internet y AV Villas App",
+        "maxAmount": "50000000",
+        "currentAmount": "25000000"
+      },
+      {
+        "transactionCode": "3",
+        "channel": "3",
+        "description": "A contactos en Cajeros Automáticos",
+        "maxAmount": "25000000",
+        "currentAmount": "25000000"
+      },
+      {
+        "transactionCode": "3",
+        "channel": "10",
+        "description": "A contactos en Corresponsales Bancarios",
+        "maxAmount": "10000000",
+        "currentAmount": "10000000"
+      },
+      {
+        "transactionCode": "2",
+        "channel": "11",
+        "description": "Sin inscribir en internet y AV Villas App",
+        "maxAmount": "500000",
+        "currentAmount": "500000"
+      },
+      {
+        "transactionCode": "29",
+        "channel": "11",
+        "description": "A celular en internet y AV Villas App",
+        "maxAmount": "500000",
+        "currentAmount": "500000"
+      },
+      {
+        "transactionCode": "23",
+        "channel": "02",
+        "description": "Transferencias Bre-B",
+        "maxAmount": "11552000",
+        "currentAmount": "11552000"
+      }
+    ]
+  },
+  "MASTER_DEBIT": {
+    "description": "Compras Tarjeta Debito Mastercard",
+    "limitItems": [
+      {
+        "transactionCode": "20",
+        "channel": "04",
+        "description": "Internet o por telefono nacionales",
+        "maxAmount": "1000000",
+        "currentAmount": "1000000"
+      },
+      {
+        "transactionCode": "21",
+        "channel": "04",
+        "description": "Internet o por telefono internacionales",
+        "maxAmount": "3000000",
+        "currentAmount": "3000000"
+      }
+    ]
+  }
+}

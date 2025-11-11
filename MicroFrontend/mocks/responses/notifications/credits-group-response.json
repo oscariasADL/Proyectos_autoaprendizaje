@@ -1,0 +1,20 @@
+{
+  "alertTypes": [
+    {
+      "group": 3,
+      "description1": "Créditos",
+      "groupItems": [
+        {
+          "description2": "Configuración de notificaciones",
+          "alertGroupItems": [
+            {
+              "key": 2,
+              "name": "Fecha límite de pago",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "numberProduct": "640797218",
+    "id": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+    "balance": "0.00",
+    "coveredDebitCards": [
+        {
+            "numberProductCoveredDebitCard": "****8984",
+            "id": "6013679017568984"
+        },
+        {
+            "numberProductCoveredDebitCard": "****0763",
+            "id": "5185030000000763"
+        },
+        {
+            "numberProductCoveredDebitCard": "****2193",
+            "id": "6013679017072193"
+        },
+        {
+            "numberProductCoveredDebitCard": "****7786",
+            "id": "6013678000007786"
+        },
+        {
+            "numberProductCoveredDebitCard": "****2219",
+            "id": "6013679017072219"
+        },
+        {
+            "numberProductCoveredDebitCard": "****7794",
+            "id": "6013678000007794"
+        }
+    ]
+}

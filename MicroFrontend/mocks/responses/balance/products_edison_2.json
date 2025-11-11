@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "typeProduct": 2,
+      "name": "Mis Tarjetas de Crédito",
+      "description": "Cupo disponible",
+      "balanceTotal": 87097626.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito",
+          "numberProduct": "****6691",
+          "id": 8,
+          "availablePurchasesBalance": 43247626.00,
+          "availableAdvanceBalance": 43247626.00,
+          "expense": 602374.00,
+          "creditLimit": 43850000.00,
+          "dueDate": "20-08-2019",
+          "minimumPayment": 0.00,
+          "franchise": "VISA",
+          "cardType": "Platinum",
+          "notEmpty": true,
+          "availableBarPercentage": 98.63
+        }
+      ]
+    },
+    {
+      "typeProduct": 3,
+      "name": "Mis Créditos Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 81700000.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "LOC",
+          "typeName": "Crédito Rotativo",
+          "numberProduct": "2115013000002593",
+          "id": 6,
+          "availableBalance": 81700000.00,
+          "expense": 100000.00,
+          "creditLimit": 81800000.00,
+          "dueDate": "04-09-2019",
+          "minimumPayment": 0.00,
+          "notEmpty": true,
+          "availableBarPercentage": 99.88
+        }
+      ]
+    }
+  ]
+}

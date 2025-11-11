@@ -1,0 +1,95 @@
+{
+    "totalResults": 32,
+    "results": [
+        {
+            "transactionId": "1-XI0662",
+            "dateTransaction": "2023-10-05T17:35:52",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Procesado",
+            "trnType": "Canje",
+            "description": "Pago de Tarjeta Credito Propias"
+        },
+        {
+            "transactionId": "1-XI07MD",
+            "dateTransaction": "2023-10-05T17:30:19",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Procesado",
+            "trnType": "Canje",
+            "description": "Pago de Tarjeta Credito Propias"
+        },
+        {
+            "transactionId": "1-XI07LU",
+            "dateTransaction": "2023-10-05T17:29:42",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "SINGULAR LUXURY TRAVEL CARTAGENA     CO",
+            "state": "Procesado",
+            "trnType": "Acumulación",
+            "description": "Abono a cuentas propias"
+        },
+        {
+            "transactionId": "1-XI07LI",
+            "dateTransaction": "2023-10-05T17:29:40",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Cancelada",
+            "trnType": "Canje",
+            "description": "Abono a cuentas propias"
+        },
+        {
+            "transactionId": "1-XI0662",
+            "dateTransaction": "2023-10-05T17:35:52",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Procesado",
+            "trnType": "Canje",
+            "description": "Pago de Tarjeta Credito Propias"
+        },
+        {
+            "transactionId": "1-XI07MD",
+            "dateTransaction": "2023-10-05T17:30:19",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Procesado",
+            "trnType": "Canje",
+            "description": "Pago de Tarjeta Credito Propias"
+        },
+        {
+            "transactionId": "1-XI07LU",
+            "dateTransaction": "2023-10-05T17:29:42",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "SINGULAR LUXURY TRAVEL CARTAGENA     CO",
+            "state": "Procesado",
+            "trnType": "Acumulación",
+            "description": "Abono a cuentas propias"
+        },
+        {
+            "transactionId": "1-XI07LI",
+            "dateTransaction": "2023-10-05T17:29:40",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Cancelada",
+            "trnType": "Canje",
+            "description": "Abono a cuentas propias"
+        },
+        {
+            "transactionId": "1-XI07LI",
+            "dateTransaction": "2023-10-06T17:29:40",
+            "points": "1000",
+            "bankName": "Banco de Bogota",
+            "establishmentName": "",
+            "state": "Cancelada",
+            "trnType": "Canje",
+            "description": "Abono a cuentas propias"
+        }
+    ]
+}

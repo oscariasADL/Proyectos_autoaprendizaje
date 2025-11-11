@@ -1,0 +1,11 @@
+banco,sigla,siglaDos,producto
+0023,DE,LOC,Crédito Rotativo
+0023,CH,DLA,Crédito
+0052,CH,DLA,Crédito
+0052,DE,LOC,Crédito Rotativo
+0002,CH,DLA,Crédito
+0001,CH,DLA,Crédito
+-9999,SDA,SDA,Cuenta de ahorros
+-9999,DDA,DDA,Cuenta corriente
+-9999,TC,CCA,Tarjeta de crédito VISA/MASTERCARD
+-9999,FID,FID,Fiducias

@@ -1,0 +1,90 @@
+{
+  "alertTypes": [
+    {
+      "group": 4,
+      "description1": "Cuentas ahorro/corriente",
+      "groupItems": [
+        {
+          "description2": "Saldos, compras y retiros",
+          "alertGroupItems": [
+            {
+              "key": 10,
+              "name": "Saldo de la cuenta",
+              "order": 1
+            },
+            {
+              "key": 11,
+              "name": "Saldo superior a un valor",
+              "order": 2
+            },
+            {
+              "key": 12,
+              "name": "Saldo menor a un valor",
+              "order": 3
+            },
+            {
+              "key": 100,
+              "name": "Retiro superior a un valor",
+              "order": 4
+            },
+            {
+              "key": 102,
+              "name": "Compra superior a un valor",
+              "order": 5
+            },
+            {
+              "key": 108,
+              "name": "Débito automático",
+              "order": 6
+            },
+            {
+              "key": 13,
+              "name": "Sobregiro",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "description2": "Transferencias",
+          "alertGroupItems": [
+            {
+              "key": 104,
+              "name": "Transferencia superior a un valor",
+              "order": 1
+            },
+            {
+              "key": 7,
+              "name": "Transferencia programada",
+              "order": 2
+            },
+            {
+              "key": 8,
+              "name": "Transferencia programada no exitosa",
+              "order": 3
+            },
+            {
+              "key": 9,
+              "name": "Inscripción de contacto",
+              "order": 4
+            }
+          ]
+        },
+        {
+          "description2": "Chequeras",
+          "alertGroupItems": [
+            {
+              "key": 103,
+              "name": "Pago de cheque supera un valor",
+              "order": 1
+            },
+            {
+              "key": 107,
+              "name": "Devolución de cheque",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

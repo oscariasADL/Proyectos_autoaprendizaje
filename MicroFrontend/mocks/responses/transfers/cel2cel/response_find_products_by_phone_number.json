@@ -1,0 +1,101 @@
+{
+  "3119999999": {
+    "data": [
+      {
+        "account": {
+          "accountId": "1000001",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0001"
+          }
+        },
+        "personInfo": {
+          "name": "Mar***** Ang**** Alv****",
+          "documentNumber": "10910000001"
+        }
+      },
+      {
+        "account": {
+          "accountId": "1000052",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0052"
+          }
+        },
+        "personInfo": {
+          "name": "Mar***** Ang**** Alv****",
+          "documentNumber": "10910000001"
+        }
+      },
+      {
+        "account": {
+          "accountId": "1000023",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0023"
+          }
+        },
+        "personInfo": {
+          "name": "Mar***** Ang**** Alv****",
+          "documentNumber": "10910000001"
+        }
+      },
+      {
+        "account": {
+          "accountId": "1000002",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0002"
+          }
+        },
+        "personInfo": {
+          "name": "Mar***** Ang**** Alv****",
+          "documentNumber": "10910000001"
+        }
+      },
+      {
+        "account": {
+          "accountId": "1000097",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0097"
+          }
+        },
+        "personInfo": {
+          "name": "Mar***** Ang**** Alv****",
+          "documentNumber": "10910000097"
+        }
+      }
+    ]
+  },
+  "3148888888": {
+    "data": [
+      {
+        "account": {
+          "accountId": "2000052",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0052"
+          }
+        },
+        "personInfo": {
+          "name": "Ped***** Gom**** Mar****",
+          "documentNumber": "10910000002"
+        }
+      },
+      {
+        "account": {
+          "accountId": "2000002",
+          "accountType": "SDA",
+          "bankInfo": {
+            "bankId": "0002"
+          }
+        },
+        "personInfo": {
+          "name": "Ped***** Gom**** Mar****",
+          "documentNumber": "10910000002"
+        }
+      }
+    ]
+  }
+}

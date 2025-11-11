@@ -1,0 +1,250 @@
+{
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "Ya puedes agregar tus Favoritos en tu <b>AV Villas APP</b>",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-1.svg",
+      "description": {
+        "items": [
+          "Al finalizar tu transacción en el comprobante solo debes dar clic en Guardar Favorito y listo."
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "",
+        "url": ""
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 2,
+      "title": "¿Necesitas enviar dinero a un amigo o familiar? <b>Transfiere de Celular a Celular</b>",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-2.svg",
+      "description": {
+        "items": [
+          "Ingresa a <b>Transferencias</b> opción <b>Celular a Celular</b> en tu <b>AV Villas App</b> y envía tu dinero sin necesidad de tener el número de cuenta."
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/tutoriales/transfiere-de-celular-a-celular"
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 3,
+      "title": "No comprometas tu seguridad. recuerda siempre",
+      "subtitle": "inscribir tu contacto para transferir o pagar",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-3.svg",
+      "description":{
+        "items": [
+          "Asegúrate de inscribir tu contacto, sus cuentas, tarjetas o créditos para realizar tus transferencias o pagos y protege tus transacciones."
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/tutoriales/crear-un-contacto-para-transferencias?p_l_back_url=%2Fbusqueda%3Fq%3Dinscribir%2Bcontacto"
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 4,
+      "title": "<b>Activa tu Tarjeta Débito Digital Mastercard</b>",
+      "subtitle": "a través de tu Banca Virtual o AV Villas APP",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-7.png",
+      "description": {
+        "items": [
+          "Exclusiva en Canales Digitales.",
+          "No tiene costo ni cobro de Cuota de Manejo.",
+          "Ideal para compras por internet.",
+          "Puedes asignarle un tope para realizar tus compras."
+        ],
+        "typeList": "ordered"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/tarjeta-debito-mastercard?p_l_back_url=%2Fbusqueda%3Fq%3Dtarjeta%2Bd%25C3%25A9bito"
+      },
+      "backgroundColor": "transparent",
+      "template": 2
+    },
+    {
+      "id": 5,
+      "title": "<b>Activa tu Tarjeta Débito Digital Mastercard</b>",
+      "subtitle": "a través de tu Banca Virtual o AV Villas APP",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-5.svg",
+      "description": {
+        "items": [
+          "<b>Regístrate</b> en nuestra página o Web dale!",
+          "Ingresa algunos datos tuyos.",
+          "Y transfiere dinero al instante"
+        ],
+        "typeList": "ordered"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/tarjeta-debito-mastercard?p_l_back_url=%2Fbusqueda%3Fq%3Dtarjeta%2Bd%25C3%25A9bito"
+      },
+      "backgroundColor": "transparent",
+      "template": 3
+    },
+    {
+      "id": 6,
+      "title": "Abre tu CDT 100% en línea desde $500 mil,",
+      "subtitle": "y un plazo mínimo de 90 días.",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-6.svg",
+      "description":{
+        "items": [
+          " Transfiere tu plata por PSE desde cualquier entidad y comienza a rentabilizar tus ahorros"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/abrir-cdt-avvillas/?utm_source=directo&utm_medium=portal_publico&utm_campaign=CDT&utm_term=LANDINGPORTAL&utm_content=44844BANNER1"
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 7,
+      "title": "Abre tu CDT 100% en línea desde $500 mil,",
+      "subtitle": "y un plazo mínimo de 90 días.",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-7.svg",
+      "description":{
+        "items": [
+          " Transfiere tu plata por PSE desde cualquier entidad y comienza a rentabilizar tus ahorros"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/abrir-cdt-avvillas/?utm_source=directo&utm_medium=portal_publico&utm_campaign=CDT&utm_term=LANDINGPORTAL&utm_content=44844BANNER1"
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 8,
+      "title": "<b>Tarjeta Débito Digital,</b> la libertad de comprar por internet",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-8.svg",
+      "description":{
+        "items": [
+          "La puedes activar y usar siempre desde AV Villas App y Banca Virtual, cuenta con número y código diferente a tu tarjeta física"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "",
+        "url": ""
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 9,
+      "title": "Tienes a tu disposición los <b>Bolsillos de ahorro</b>",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-9.svg",
+      "description":{
+        "items": [
+          "Abre hasta 15 Bolsillos por cuenta y separa el dinero que necesites para cumplir tus metas de ahorro"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "",
+        "url": ""
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 10,
+      "title": "Realiza <b>transferencias</b> a un número celular",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-10.svg",
+      "description":{
+        "items": [
+          "Ingresa a la sección de transferencias y envía dinero de forma rápida y segura por medio del número celular."
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "Conocer más",
+        "url": "https://www.avvillas.com.co/tutoriales/transfiere-de-celular-a-celular"
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 11,
+      "title": "Protege tus datos en línea contra ataques cibernéticos",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-11.svg",
+      "description":{
+        "items": [
+          "No hagas clic en enlaces ni descargues archivos adjuntos de correos sospechosos, borra estos correos de tu bandeja de entrada y de la carpeta de eliminados"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "",
+        "url": ""
+      },
+      "backgroundColor": "transparent",
+      "template": 1
+    },
+    {
+      "id": 12,
+      "title": "Abre en línea tu CDT",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-12.svg",
+      "description":{
+        "items": [
+          "Es mejor ahorrar en un CDT porque garantiza una rentabilidad fija."
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "ÁBRELO AQUÍ",
+        "url": "https://www.avvillas.com.co/abrir-cdt-avvillas/?utm_source=directo&utm_medium=Landing_Canales&utm_campaign=cdt-cdt-avv-nal-bvl-mpr-cvr-xxx-aon-may24-landingbv00873&utm_term=landingcanalespseCDT&utm_content=45398"
+      },
+      "backgroundColor": "#FFE1ED",
+      "template": 1
+    },
+    {
+      "id": 13,
+      "title": "Unifica tus deudas con una Compra de Cartera",
+      "subtitle": "",
+      "imageUrl": "illustrations/marketing/campaigns/campaign-13.svg",
+      "description":{
+        "items": [
+          "Solicita ahora tu Compra de Cartera de forma rápida y segura"
+        ],
+        "typeList": "none"
+      },
+      "linkKnowMore": {
+        "textLink": "HAZLO AQUÍ",
+        "url": "https://www.avvillas.com.co/vivienda-digital?utm_source=directo&utm_medium=Landing_Canales&utm_campaign=act-chi-avv-nal-bvl-mpr-cvr-xxx-aon-may24-landingbv00876&utm_term=landingcanalesccCHIP&utm_content=45398"
+      },
+      "backgroundColor": "#FFF0DC",
+      "template": 1
+    }
+  ],
+  "settings": {
+    "carousel": {
+      "campaigns_to_show": [12, 13],
+      "interval": 10000
+    },
+    "pse_campaign": 6
+  }
+}

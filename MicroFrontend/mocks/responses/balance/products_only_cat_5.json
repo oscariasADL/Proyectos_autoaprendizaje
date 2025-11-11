@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "typeProduct": 5,
+      "name": "Mis CDT",
+      "description": "Saldo total",
+      "balanceTotal": 16644.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "CDA",
+          "typeName": "CDT",
+          "numberProduct": "8191001002",
+          "id": 14,
+          "interest": 16644.00,
+          "effectiveRate": "0.03",
+          "expirationDate": "01-01-2020",
+          "startupValue": 7500500.00,
+          "notEmpty": true
+        }
+      ]
+    }
+  ]
+}

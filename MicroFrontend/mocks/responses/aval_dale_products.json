@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "typeProduct": 1,
+      "name": "Cuentas",
+      "description": "Saldo disponible",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 5,
+      "name": "Inversiones",
+      "description": "Saldo total inversión",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 9,
+      "name": "Mis Cesantías",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 2,
+      "name": "Tarjetas",
+      "description": "Cupo disponible",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 4,
+      "name": "Créditos",
+      "description": "Saldo por pagar",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 13,
+      "name": "DALE!",
+      "description": "",
+      "balanceTotal": 1200000.60,
+      "quantity": 1,
+      "products": [
+        {
+          "numberProduct": "3117590109",
+          "id": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "bankCode": "0097",
+          "accountType": 1,
+          "availableBalance": 800000.00,
+          "balance": 800000.00,
+          "balanceForOrdering": 0.00,
+          "notEmpty": false,
+          "type": "SRA",
+          "typeName": "Depósito electrónico"
+        }
+      ]
+    },
+    {
+      "typeProduct": 10,
+      "name": "Facil Pass",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 7,
+      "name": "Mi Pension Obligatoria",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 3,
+      "name": "Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 8,
+      "name": "Mis Pensiones Voluntarias",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    }
+  ]
+}

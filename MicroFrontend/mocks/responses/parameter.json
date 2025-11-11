@@ -1,0 +1,446 @@
+{
+  "documents": [
+    {
+      "value": "CC",
+      "label": "Cédula de ciudadanía"
+    },
+    {
+      "value": "CE",
+      "label": "Cédula de extranjería"
+    },
+    {
+      "value": "TI",
+      "label": "Tarjeta de identidad"
+    },
+    {
+      "value": "NIT",
+      "label": "NIT"
+    }
+  ],
+  "code-banks": [
+    {
+      "codigo": "0040",
+      "entidad": "Banco Agrario",
+      "grupo": ""
+    },
+    {
+      "codigo": "0052",
+      "entidad": "Banco AV Villas",
+      "grupo": "aval"
+    },
+    {
+      "codigo": "0059",
+      "entidad": "Bancamia S.A.",
+      "grupo": ""
+    },
+    {
+      "codigo": "0032",
+      "entidad": "Banco Caja Social BCSC",
+      "grupo": ""
+    },
+    {
+      "codigo": "0019",
+      "entidad": "Banco Colpatria",
+      "grupo": ""
+    },
+    {
+      "codigo": "0067",
+      "entidad": "Banco Compartir S.A",
+      "grupo": ""
+    },
+    {
+      "codigo": "0066",
+      "entidad": "Banco Cooperativo Coopcentral",
+      "grupo": ""
+    },
+    {
+      "codigo": "0001",
+      "entidad": "Banco de Bogotá",
+      "grupo": "aval"
+    },
+    {
+      "codigo": "0023",
+      "entidad": "Banco de Occidente",
+      "grupo": "aval"
+    },
+    {
+      "codigo": "0062",
+      "entidad": "Banco Falabella S.A",
+      "grupo": ""
+    },
+    {
+      "codigo": "0063",
+      "entidad": "Banco Finandina S.A",
+      "grupo": ""
+    },
+    {
+      "codigo": "0064",
+      "entidad": "Banco Multibank S.A",
+      "grupo": ""
+    },
+    {
+      "codigo": "0060",
+      "entidad": "Banco Pichincha",
+      "grupo": ""
+    },
+    {
+      "codigo": "0002",
+      "entidad": "Banco Popular",
+      "grupo": "aval"
+    },
+    {
+      "codigo": "0058",
+      "entidad": "Banco Procredit Colombia",
+      "grupo": ""
+    },
+    {
+      "codigo": "0065",
+      "entidad": "Banco Santander",
+      "grupo": ""
+    },
+    {
+      "codigo": "0053",
+      "entidad": "Banco W S.A.",
+      "grupo": ""
+    },
+    {
+      "codigo": "0031",
+      "entidad": "Bancoldex S.A.",
+      "grupo": ""
+    },
+    {
+      "codigo": "0007",
+      "entidad": "Bancolombia",
+      "grupo": ""
+    },
+    {
+      "codigo": "0061",
+      "entidad": "Bancoomeva",
+      "grupo": ""
+    },
+    {
+      "codigo": "0013",
+      "entidad": "BBVA",
+      "grupo": ""
+    },
+    {
+      "codigo": "0042",
+      "entidad": "BNP Paribas Colombia",
+      "grupo": ""
+    },
+    {
+      "codigo": "0009",
+      "entidad": "Citibank",
+      "grupo": ""
+    },
+    {
+      "codigo": "0370",
+      "entidad": "Coltefinanciera S.A.",
+      "grupo": ""
+    },
+    {
+      "codigo": "0292",
+      "entidad": "Confiar",
+      "grupo": ""
+    },
+    {
+      "codigo": "0283",
+      "entidad": "Coop Financiera de Antioquia",
+      "grupo": ""
+    },
+    {
+      "codigo": "0289",
+      "entidad": "Cotrafa Cooperativa Financiera",
+      "grupo": ""
+    },
+    {
+      "codigo": "0551",
+      "entidad": "Daviplata",
+      "grupo": ""
+    },
+    {
+      "codigo": "0051",
+      "entidad": "Davivienda",
+      "grupo": ""
+    },
+    {
+      "codigo": "0121",
+      "entidad": "Financiera Juriscoop S.A. Cpia de Fina",
+      "grupo": ""
+    },
+    {
+      "codigo": "0012",
+      "entidad": "GNB Sudameris",
+      "grupo": ""
+    },
+    {
+      "codigo": "0014",
+      "entidad": "ITAU",
+      "grupo": ""
+    },
+    {
+      "codigo": "0507",
+      "entidad": "Nequi",
+      "grupo": ""
+    },
+    {
+      "codigo": "0069",
+      "entidad": "Banco Serfinanza S.A.",
+      "grupo": ""
+    },
+    {
+      "codigo": "1151",
+      "entidad": "Rappipay",
+      "grupo": ""
+    },
+    {
+      "codigo": "1047",
+      "entidad": "Banco Mundo Mujer",
+      "grupo": ""
+    },
+    {
+      "codigo": "0999",
+      "entidad": "Otros Bancos Mastercard",
+      "grupo": "otros_bancos"
+    },
+    {
+      "codigo": "0998",
+      "entidad": "Otros Bancos Visa",
+      "grupo": "otros_bancos"
+    },
+    {
+      "codigo": "0097",
+      "entidad": "Dale",
+      "grupo": ""
+    }
+  ],
+  "withdrawal-channels": [
+    {
+      "label": "Cajeros Red Aval",
+      "value": "ATM"
+    },
+    {
+      "label": "Corresponsales",
+      "value": "CB"
+    }
+  ],
+  "categories-pockets": [
+    {
+      "label": "Ahorro",
+      "value": "1"
+    },
+    {
+      "label": "Vacaciones/Viaje",
+      "value": "2"
+    },
+    {
+      "label": "Educación",
+      "value": "3"
+    },
+    {
+      "label": "Casa/Apto",
+      "value": "4"
+    },
+    {
+      "label": "Salud",
+      "value": "5"
+    },
+    {
+      "label": "Regalos",
+      "value": "6"
+    },
+    {
+      "label": "Vehículo",
+      "value": "7"
+    },
+    {
+      "label": "FechasEspeciales",
+      "value": "8"
+    },
+    {
+      "label": "Impuestos",
+      "value": "9"
+    },
+    {
+      "label": "OtrosGastos",
+      "value": "10"
+    }
+  ],
+  "type-products": [
+    {
+      "banco": "0023",
+      "sigla": "CR",
+      "siglaDos": "LOC",
+      "producto": "Crédito rotativo"
+    },
+    {
+      "banco": "0023",
+      "sigla": "MV",
+      "siglaDos": "DLA",
+      "producto": "Motos y vehículos"
+    },
+    {
+      "banco": "0023",
+      "sigla": "OC",
+      "siglaDos": "DLA",
+      "producto": "Otros créditos"
+    },
+    {
+      "banco": "0052",
+      "sigla": "CH",
+      "siglaDos": "DLA",
+      "producto": "Crédito hipotecario"
+    },
+    {
+      "banco": "0052",
+      "sigla": "DE",
+      "siglaDos": "LOC",
+      "producto": "Dinero extra / Crédito rotativo"
+    },
+    {
+      "banco": "0052",
+      "sigla": "OC",
+      "siglaDos": "DLA",
+      "producto": "Otros créditos / Crédito personal"
+    },
+    {
+      "banco": "0002",
+      "sigla": "CH",
+      "siglaDos": "DLA",
+      "producto": "Crédito hipotecario"
+    },
+    {
+      "banco": "0002",
+      "sigla": "OC",
+      "siglaDos": "DLA",
+      "producto": "Otros créditos"
+    },
+    {
+      "banco": "0001",
+      "sigla": "CS",
+      "siglaDos": "DLA",
+      "producto": "Crediservice"
+    },
+    {
+      "banco": "0001",
+      "sigla": "CH",
+      "siglaDos": "DLA",
+      "producto": "Crédito hipotecario"
+    },
+    {
+      "banco": "0001",
+      "sigla": "OC",
+      "siglaDos": "LOC",
+      "producto": "Otros créditos"
+    },
+    {
+      "banco": "-9999",
+      "sigla": "SDA",
+      "siglaDos": "SDA",
+      "producto": "Cuenta de ahorros"
+    },
+    {
+      "banco": "-9999",
+      "sigla": "DDA",
+      "siglaDos": "DDA",
+      "producto": "Cuenta corriente"
+    },
+    {
+      "banco": "-9999",
+      "sigla": "TC",
+      "siglaDos": "CCA",
+      "producto": "Tarjeta de crédito VISA/MASTERCARD"
+    }
+  ],
+  "mobile-operator": [
+    {
+      "label": "Claro",
+      "value": "CLARO"
+    },
+    {
+      "label": "Movistar",
+      "value": "MOVISTAR",
+      "field3": ""
+    },
+    {
+      "label": "Tigo",
+      "value": "TIGO",
+      "field3": ""
+    },
+    {
+      "label": "Virgin",
+      "value": "VIRGIN"
+    }
+  ],
+  "social-security-operator": [
+    {
+      "value": "00001130",
+      "label": "Planilla Asistida Operador SOI"
+    },
+    {
+      "value": "00001136",
+      "label": "Planilla Asistida Simple"
+    },
+    {
+      "value": "00001137",
+      "label": "Planilla Asistida Fedecajas"
+    },
+    {
+      "value": "00001138",
+      "label": "Planilla Asistida Compensar "
+    },
+    {
+      "value": "00001139",
+      "label": "Planilla Asistida Asopagos"
+    },
+    {
+      "value": "00001144",
+      "label": "Planilla Asistida Enlace Operativo "
+    },
+    {
+      "value": "00001506",
+      "label": "Planilla Asistida Aporte en Línea "
+    },
+    {
+      "value": "00006347",
+      "label": "Simple S.A Nuevo"
+    }
+  ],
+  "nura-codes": [
+    {
+      "identity_code": "00001130",
+      "ean_code": "7707209914253",
+      "service_code": "0043",
+      "initial": "23",
+      "length": "10"
+    },
+    {
+      "identity_code": "256161",
+      "ean_code": "7707208029194",
+      "service_code": "0090",
+      "initial": "21",
+      "length": "8"
+    },
+    {
+      "identity_code": "256168",
+      "ean_code": "7707202600313",
+      "service_code": "0090",
+      "initial": "22",
+      "length": "19"
+    }
+  ],
+  "app-versions": [
+    {
+      "appVersion": "0.0.21",
+      "appBuild": "9",
+      "isMandatoryUpdate": false,
+      "isTheLatestVersion": false
+    },
+    {
+      "appVersion": "0.0.21",
+      "appBuild": "10",
+      "isMandatoryUpdate": true,
+      "isTheLatestVersion": false
+    }
+  ]
+}

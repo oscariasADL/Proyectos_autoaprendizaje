@@ -1,0 +1,54 @@
+{
+  "amount": 15900000.90,
+  "categories": [
+    {
+      "categoryType": "otro",
+      "code": "10001",
+      "color": "#B3CAF3",
+      "amount": 15900000.90,
+      "name": "Desembolsos y avances"
+    },
+    {
+      "amount": 4000000,
+      "categoryType": "otro",
+      "code": "20001",
+      "color": "",
+      "name": "Abono transferencia entre mis cuentas"
+    },
+    {
+      "amount": 800000,
+      "categoryType": "otro",
+      "code": "30001",
+      "color": "",
+      "name": "Depósitos"
+    },
+    {
+      "amount": 500001.54,
+      "categoryType": "otro",
+      "code": "40001",
+      "color": "#B3CAF3",
+      "name": "Ahorro e inversiones"
+    },
+    {
+      "amount": 400000.44,
+      "categoryType": "otro",
+      "code": "50001",
+      "color": "",
+      "name": "Acciones productos financieros"
+    },
+    {
+      "amount": 400000,
+      "categoryType": "otro",
+      "code": "60001",
+      "color": "",
+      "name": "Transferencias de contactos"
+    },
+    {
+      "amount": 400000,
+      "categoryType": "otro",
+      "code": "70001",
+      "color": "",
+      "name": "Otros Ingresos"
+    }
+  ]
+}

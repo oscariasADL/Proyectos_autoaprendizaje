@@ -1,0 +1,62 @@
+{
+    "campaigns": [
+      {
+        "id": "product-detail-campaign",
+        "place": ["product-detail"],
+        "title": "Bolsillos",
+        "description": "Crea tus bolsillos y define tus metas de ahorro.",
+        "linkKnowMore": {
+          "url": "/pockets",
+          "text": "Abrir bolsillo",
+          "isExternal": false
+        },
+        "image": {
+          "url": "https://avvillas.com.co/bancadigital/assets/img/bm/marketing/product-detail-campaign-pockets.svg",
+          "urlAlt": "/bancadigital/assets/img/bm/marketing/product-detail-campaign-pockets.svg",
+          "alt": "Campaign 1 Image"
+        },
+        "backgroundColor": "#ECF7F9",
+        "isActive": true,
+        "accountTypesAllowed": ["SDA"]
+      },
+      {
+        "id": "product-detail-campaign",
+        "place": ["product-detail"],
+        "title": "Compra de cartera",
+        "description": "Consolida las deudas de tus tarjetas de otros bancos.",
+        "linkKnowMore": {
+          "action": "DebtPurchase",
+          "text": "Hazlo aquí",
+          "isExternal": false
+        },
+        "image": {
+          "url": "https://avvillas.com.co/bancadigital/assets/img/bm/marketing/product-detail-campaign-cartera.svg",
+          "urlAlt": "/bancadigital/assets/img/bm/marketing/product-detail-campaign-cartera.svg",
+          "alt": "Campaign 2 Image"
+        },
+        "backgroundColor": "#E1EEF0",
+        "isActive": false,
+        "accountTypesAllowed": ["CCA"]
+      },
+      {
+        "id": "voucher-campaign",
+        "place": ["alert-sheet"],
+        "title": "Bolsillos",
+        "description": "Abre tu Bolsillo y comienza a ahorrar para todo lo que quieras.",
+        "linkKnowMore": {
+          "url": "/pockets",
+          "text": "Ábrelo aquí",
+          "isExternal": false
+        },
+        "image": {
+          "url": "https://avvillas.com.co/bancadigital/assets/img/bm/marketing/voucher-campaing-pockets.svg",
+          "urlAlt": "/bancadigital/assets/img/bm/marketing/voucher-campaing-pockets.svg",
+          "alt": "Voucher campaign Image"
+        },
+        "backgroundColor": "#F2F2F2",
+        "isActive": true,
+        "accountTypesAllowed": []
+      }
+    ]
+  }
+  

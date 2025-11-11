@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "lastAuthDate": "2025-02-17T15:03:00Z",
+  "currentDate": "2025-02-17T15:07:56Z",
+  "lastIPAddress": "181.237.254.171",
+  "dataBasicClientDto": {
+    "lastName": "ALBARRACIN",
+    "lastAuthInfo": "1900-01-01T12:00:00",
+    "clientName": "LUISA ALBARRACIN",
+    "documentType": "CC",
+    "documentNumber": "1010206331",
+    "ip": "",
+    "signStatus": 1,
+    "adviserEmail": "",
+    "hasCreditProducts": true,
+    "adviserPhone": "0",
+    "phoneNumberStatus": "A",
+    "channelState": "A",
+    "firstName": "LUISA",
+    "phoneNumber": "3194659963",
+    "hasDigitalCard": true,
+    "emailType": "A",
+    "preApproved": false,
+    "adviserName": "",
+    "email": "ALMANZAM@BANCOAVVILLAS.COM.CO"
+  },
+  "token": "****"
+}

@@ -1,0 +1,215 @@
+{
+  "contacts": [
+    {
+      "name": "ADRIANA CAROLINA PEÑA ADL",
+      "nickname": "ADRIANAADL",
+      "phoneNumber": "3134668501",
+      "email": "adriana.peña@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "100207"
+      },
+      "products": []
+    },
+    {
+      "name": "ANGIE LIZZETTE GONZALEZ ADL",
+      "nickname": "ANGIEADL  ",
+      "phoneNumber": "3134668501",
+      "email": "angie.gonzalez@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100203"
+      },
+      "products": []
+    },
+    {
+      "name": "Estefania Ramirez",
+      "nickname": "tefa",
+      "phoneNumber": "3104793456",
+      "email": "stefa.r234@hotmail.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "9182837364"
+      },
+      "products": []
+    },
+    {
+      "name": "DAVID JAVIER GARZON ADL",
+      "nickname": "DAVIDADL",
+      "phoneNumber": "3134668501",
+      "email": "david.garzon@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100204"
+      },
+      "products": []
+    },
+    {
+      "name": "JIMMY ADL",
+      "nickname": "",
+      "phoneNumber": "",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "56262"
+      },
+      "products": []
+    },
+    {
+      "name": "Ricardo Molina",
+      "nickname": "",
+      "phoneNumber": "3158234598",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "2006859"
+      },
+      "products": []
+    },
+    {
+      "name": "JIMMY CARDENAS",
+      "nickname": "shimy",
+      "phoneNumber": "3214567843",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100205"
+      },
+      "products": [
+        {
+          "alias": "",
+          "type": "SDA",
+          "number": "8939725",
+          "bank": {
+            "id": "1052",
+            "name": "Otros Bancos"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Juanito Perez",
+      "nickname": "Juanchis  ",
+      "phoneNumber": "3001234567",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "123456789"
+      },
+      "products": []
+    },
+    {
+      "name": "Laura Perez",
+      "nickname": "Lau       ",
+      "phoneNumber": "300162534",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "192837465"
+      },
+      "products": []
+    },
+    {
+      "name": "NAYLA VANESSA TORRES ADL",
+      "nickname": "NAYLAADL  ",
+      "phoneNumber": "3134668501",
+      "email": "nayla.torres@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100201"
+      },
+      "products": []
+    },
+    {
+      "name": "Omar",
+      "nickname": "PruebaPreg",
+      "phoneNumber": "324568934",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1030661644"
+      },
+      "products": [
+        {
+          "alias": "PruebaPreguntas",
+          "type": "DDA",
+          "number": "1234567890123456",
+          "bank": {
+            "id": "1059",
+            "name": "Otros Bancos"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PABLO ESTEBAN PELAEZ ADL",
+      "nickname": "DAVIDADL  ",
+      "phoneNumber": "3134668501",
+      "email": "pablo.pelaez@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100206"
+      },
+      "products": []
+    },
+    {
+      "name": "Pablo Pelaez",
+      "nickname": "Pablito   ",
+      "phoneNumber": "300654321",
+      "email": "",
+      "identificationData": {
+        "idType": "CC",
+        "id": "11928273645"
+      },
+      "products": []
+    },
+    {
+      "name": "RAUL FERNANDO FANDIÑO ADL",
+      "nickname": "RAULADL   ",
+      "phoneNumber": "3134668501",
+      "email": "raul.fandino@avaldigitallabs.com",
+      "identificationData": {
+        "idType": "CC",
+        "id": "1019100202"
+      },
+      "products": [
+        {
+          "alias": "CUENTA AHORROS",
+          "type": "SDA",
+          "number": "8939675",
+          "bank": {
+            "id": "0052",
+            "name": "Banco AvVillas"
+          }
+        },
+        {
+          "alias": "CUENTA AHORROS",
+          "type": "SDA",
+          "number": "8939857",
+          "bank": {
+            "id": "0052",
+            "name": "Banco AvVillas"
+          }
+        },
+        {
+          "alias": "CUENTA AHORROS",
+          "type": "SDA",
+          "number": "8939865",
+          "bank": {
+            "id": "0052",
+            "name": "Banco AvVillas"
+          }
+        },
+        {
+          "alias": "CARTERA",
+          "type": "OC",
+          "number": "1234587263",
+          "bank": {
+            "id": "0052",
+            "name": "Banco AvVillas"
+          }
+        }
+      ]
+    }
+  ]
+}

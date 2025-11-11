@@ -1,0 +1,33 @@
+{
+  "code": "MVS-200",
+  "message": "OK",
+  "data": {
+    "type": "D",
+    "movements": [
+      {
+        "id": "50001_1",
+        "date": 1565758800000,
+        "description": "50001 - Entretenimiento 1",
+        "value": 1300000.00
+      },
+      {
+        "id": "50001_2",
+        "date": 1565931600000,
+        "description": "50001 - Entretenimiento 2",
+        "value": 6.0
+      },
+      {
+        "id": "50001_3",
+        "date": 1564722000000,
+        "description": "50001 - Entretenimiento 3",
+        "value": 3.0
+      },
+      {
+        "id": "50001_4",
+        "date": 1564722000000,
+        "description": "50001 - Entretenimiento 4",
+        "value": 4.0
+      }
+    ]
+  }
+}

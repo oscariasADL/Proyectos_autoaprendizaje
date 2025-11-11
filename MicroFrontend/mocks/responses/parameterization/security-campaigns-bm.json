@@ -1,0 +1,18 @@
+{
+  "campaigns": [
+    {
+      "title": "No caigas en fraudes por redes",
+      "paragraphs": [
+        "Ante el aumento de fraudes por redes sociales, te invitamos a desconfiar de campañas llamativas ofreciendo descuentos o beneficios por lo cual te recomendamos:"],
+        "itemList": [
+        "Ingresar directamente a la pagina del comercio y realizar cualquier pago en su sitio WEB.",
+        "No entregar información personal o financiera por estos medios."
+      ],
+      "image": "https://avvillas.com.co/bancadigital/assets/img/bm/popup-security-alert/security-alert-redes.png",
+      "imageAlt": "/bancadigital/assets/img/bm/popup-security-alert/security-alert-redes.png",
+      "okButtonText": "ENTENDIDO",
+      "isTitleBottom": true,
+      "enable": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "alias": null,
+    "invoiceNumber": "10000940993382",
+    "referenceId": "4362416",
+    "maxPaymentDate": null,
+    "maxPaymentDateComplete": "2016-12-30T00:00:00-05:00",
+    "currency": null,
+    "amount": "11071823.43",
+    "agreementType": 0,
+    "paid": false,
+    "enablePaymentButton": false,
+    "biller": true,
+    "organizationId": "00000007",
+    "amountType": "Valor_facturador_principal"
+}

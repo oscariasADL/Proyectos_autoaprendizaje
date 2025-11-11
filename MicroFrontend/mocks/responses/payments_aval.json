@@ -1,0 +1,75 @@
+{
+  "loansVillas": [
+    {
+      "loanName": "Crédito Rotativo",
+      "productType": "LOC",
+      "productTypeDesc": "Crédito Rotativo",
+      "numberProduct": "2115013000002593",
+      "relativeId": "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451",
+      "minPaymentAmount": 118560.0,
+      "totalPaymentAmount": 2936570.0,
+      "maxPaymentDate": "03/08/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    }
+  ],
+  "loansOtherBanks": [],
+  "loansContacts": [
+    {
+      "loanName": "Credito",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "72201494845",
+      "relativeId": "6be60434ae2f25bec9eb4684d460b26f02ff83e75d0eb2553d41b0c9880422ae",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "Alejandra oliveros",
+      "owner": {
+        "idType": "CC",
+        "id": "52430577"
+      }
+    },
+    {
+      "loanName": "Prueba prestamo",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "89586231",
+      "relativeId": "2b7288560412ad81849043bb5ba5eff872eaabfc213b17596a9271225b183d86",
+      "bankCode": "0001",
+      "bankName": "Banco de Bogotá",
+      "contactName": "Jhon celis",
+      "owner": {
+        "idType": "CC",
+        "id": "1030558582"
+      }
+    },
+    {
+      "loanName": "Alias",
+      "productType": "DE",
+      "productTypeDesc": "Crédito Rotativo",
+      "numberProduct": "2124565548383932",
+      "relativeId": "ff6d73f8380fa767d21b6220b08216f023fb1a5be2d6cec941aeb776a80c228b",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "William mendoza",
+      "owner": {
+        "idType": "CC",
+        "id": "94542704"
+      }
+    },
+    {
+      "loanName": "Test",
+      "productType": "CH",
+      "productTypeDesc": "Crédito",
+      "numberProduct": "130000011",
+      "relativeId": "ebf03f4ee8dccbe8580416212eb6d8598e30d80d3d5d63f5dfcd07c7f78091d4",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "William mendoza",
+      "owner": {
+        "idType": "CC",
+        "id": "94542704"
+      }
+    }
+  ]
+}

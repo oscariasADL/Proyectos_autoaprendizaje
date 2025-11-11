@@ -1,0 +1,44 @@
+{
+  "questions" : [
+      {
+        "title": "¿Qué es un sistema de pagos inmediatos?",
+        "content": "<div class='support-spi-content'>Es un conjunto organizado de políticas, reglas, acuerdos, instrumentos de pago, entidades y componentes tecnológicos, tales como: equipos, software y sistemas de comunicación; que permite transferencias o pagos entre cuentas o depósitos de entidades financieras de manera instantánea.<br><br>Estos sistemas están diseñados para proporcionar una experiencia de usuario rápida, segura y fácil, simplificando las transacciones en tiempo real tanto para consumidores como para comercios o empresas. Al eliminar las demoras en los pagos, los sistemas de pagos inmediatos mejoran la eficiencia económica y promueven la inclusión financiera.</div>"
+      },
+      {
+        "title": "¿Cuáles son las ventajas de realizar transferencias o pagos digitales?",
+        "content": "<div class='support-spi-content'><ul><li>Simplicidad: posibilita realizar transferencias o pagos desde dispositivos electrónicos de forma rápida y sencilla.</li><br><li>Facilidad: permite realizar transacciones sin la necesidad de que el emisor y receptor se encuentren en el mismo lugar; eliminando la necesidad de desplazamientos.</li><br><li>Educación financiera: proporciona a los usuarios tener un mayor control de sus gastos y medios de pago.</li><br><li>Seguridad: los pagos digitales o transferencias reduce la necesidad de contar con dinero en efectivo y permite contar con un registro de la acción realizada.</li></ul></div>"
+      },
+      {
+        "title": "¿Qué es una transferencia electrónica o pago digital?",
+        "content": "<div class='support-spi-content'>Se considera como pago digital a aquella transacción monetaria realizada de manera electrónica entre medios de pagos, sin realizar un intercambio de dinero en efectivo. Pueden ser realizados desde dispositivos móviles como celulares, tabletas u otras plataformas electrónicas. La transferencia electrónica se utiliza normalmente para las transacciones digitales entre personas naturales, mientras que el pago digital usualmente se utiliza para aquellas transacciones electrónicas entre personas naturales y comercios.</div>"
+      },
+      {
+        "title": "¿Qué son los medios de pago?",
+        "content": "<div class='support-spi-content'>Los medios de pagos se refieren a los productos financieros que tienen los usuarios en las entidades financieras para enviar o recibir dinero de manera instantánea.<br>Los medios de pago son: <br><ul><li>Cuentas de ahorro</li><li>Cuentas corrientes</li><li>Depósitos de bajo monto</li><li>Depósitos ordinarios</li><li>Depósitos de bajo monto inclusivos</li></ul></div>"
+      },
+      {
+        "title": "¿Qué identifica Bre-B?",
+        "content": "<div class='support-spi-content'>Bre-B es el sello que identifica el servicio de pagos o transferencias inmediatos interoperados de bajo valor. Bre-B es un ecosistema que reúne esfuerzos públicos y privados para permitir que las personas en Colombia, realicen pagos o transferencias de forma inmediata, interoperable y con disponibilidad 24/7/365.</div>"
+      },
+      {
+        "title": "¿Qué me solucionará Bre-B?",
+        "content": "<div class='support-spi-content'><ul><li>Eficiencia: a través de Bre-B será posible realizar pagos o transferencias de una cuenta a otra en tiempo real, mejorando la eficiencia en transacciones diarias. Se eliminará la espera de horas o días para que lleguen los pagos al usuario receptor de una transacción, mejorando el flujo de efectivo para individuos y negocios. Bre-B asegurará que los usuarios pueden enviar y/o recibir pagos desde diferentes plataformas sin restricciones.</li><br><li>Seguridad: las entidades financieras que conforman los sistemas de pagos inmediatos implementan estándares de seguridad para sus canales y el procesamiento de las operaciones, reduciendo el riesgo de fraudes y ciberataques. Esto permitirá que los usuarios confíen en esta tecnología, facilitando la adopción de esta nueva forma de hacer pagos o transferencias de bajo valor en el país.</li><br><li>Comodidad: se podrán realizar pagos y transferencias de dinero de manera rápida, sencilla, estandarizada y uniforme, independientemente de la entidad financiera del cliente originador y el usuario receptor de una operación.</li></ul></div>"
+      },
+      {
+        "title": "¿Cuál es el marco regulatorio asociado a los sistemas de pagos inmediatos?",
+        "content": "<div class='support-spi-content'>El marco regulatorio de la interoperabilidad en los Sistemas de Pagos de Bajo Valor Inmediatos (SPBVI) se encuentra contenido en la <a href='https://www.banrep.gov.co/es/normatividad/sistemas-pago/pagos-inmediatos'>Resolución Externa 6 de 2023</a>, regulación de la Junta Directiva del Banco de la República que se desarrolló en virtud del artículo 104 de la Ley 2294 de 2023 (Ley del Plan Nacional de Desarrollo 2022-2026) y la <a href='https://www.banrep.gov.co/es/normatividad/sistemas-pago/pagos-inmediatos'>Circular Reglamentaria Externa DSP-465</a> del Departamento de Sistemas de Pago (DSP) del Banco de la República en las que se establecen las reglas y estándares que deben cumplir las entidades administradoras de los SPBVI que procesan órdenes de pago y/o transferencias de fondos inmediatas.</div>"
+      },
+      {
+        "title": "¿Qué necesito para hacer una transferencia o un pago digital?",
+        "content": "<div class='support-spi-content'>Para realizar una transferencia o un pago digital, es necesario que tanto el emisor como el receptor de la transacción cuenten con un medio de pago que brinde la posibilidad de emitir y recibir una transferencia o pago electrónico.</div>"
+      },
+      {
+        "title": "¿Qué significa que un sistema de pagos inmediatos sea 24/7/365?",
+        "content": "<div class='support-spi-content'>Esto significa que el sistema de pagos inmediatos permite realizar transferencias de fondos o pagos en cualquier momento del día y en cualquier día. Así, el sistema se encuentra disponible las 24 horas del día, los 7 días de la semana y los 365 días del año.</div>"
+      },
+      {
+        "title": "¿Qué significa que un sistema de pagos inmediatos sea interoperable?",
+        "content": "<div class='support-spi-content'>Se refiere a la capacidad que tienen las plataformas para interactuar y operar entre sí de manera eficiente e interconectada. Esto permite que los usuarios realicen un pago o una transferencia electrónica sin importar desde o hacia qué entidad se realice la operación. En otras palabras, ya no será necesario preguntar qué banco o billetera digital tiene la otra persona o si se aceptan pagos de otras entidades distintas a aquella donde el receptor o dueño del comercio tiene su cuenta.</div>"
+      }
+  ]
+}

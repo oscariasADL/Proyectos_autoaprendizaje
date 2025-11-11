@@ -1,0 +1,8 @@
+{
+    "minPoints": 2000,
+    "maxPoints": 5000,
+    "pointsConversion": 12,
+    "lengthOtp": 8,
+    "bankIdType": "Banco AV Villas",
+    "principal": true
+}

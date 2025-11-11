@@ -1,0 +1,83 @@
+{
+  "loansVillas": [
+    {
+      "loanName": "Tarjeta de Crédito",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****9436",
+      "relativeId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "minPaymentAmount": 150962.0,
+      "minPaymentReducedAmount": 12993.51,
+      "totalPaymentAmount": 282945.0,
+      "franchise": "VISA",
+      "cardType": "Platinum",
+      "maxPaymentDate": "03/08/2020",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    },
+    {
+      "loanName": "Tarjeta de Crédito",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****2166",
+      "relativeId": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
+      "minPaymentAmount": 0.0,
+      "minPaymentReducedAmount": 0.0,
+      "totalPaymentAmount": 2683173.0,
+      "franchise": "MASTERCARD",
+      "cardType": "Platinum",
+      "maxPaymentDate": "05/11/2019",
+      "bankCode": "0052",
+      "bankName": "AV Villas"
+    }
+  ],
+  "loansOtherBanks": [
+    {
+      "loanName": "Tc-bocc",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****3491",
+      "relativeId": "4dc6120388ada158d925712fc65ef2bf79641a4429536ba188b5c6cf7fbf2ff6",
+      "franchise": "VISA",
+      "bankCode": "0023",
+      "bankName": "Banco de Occidente",
+      "contactName": "Omar avila",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100210"
+      }
+    },
+    {
+      "loanName": "Tc ob",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****8532",
+      "relativeId": "8a31df55be43e366094ce5a38b3057998fdc83d185dd309c6263824d451fcb80",
+      "franchise": "MASTERCARD",
+      "bankCode": "0999",
+      "bankName": "Otros Bancos",
+      "contactName": "Omar avila",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100210"
+      }
+    }
+  ],
+  "loansContacts": [
+    {
+      "loanName": "444",
+      "productType": "CCA",
+      "productTypeDesc": "Tarjeta de Crédito",
+      "numberProduct": "****7553",
+      "relativeId": "402ff1d50cfab01a1f8f87b68c1a33ddd7f2244a48736f1ecbf5467abb4b9a80",
+      "franchise": "MASTERCARD",
+      "bankCode": "0999",
+      "bankName": "Otros Bancos",
+      "contactName": "Andres lopez",
+      "owner": {
+        "idType": "CC",
+        "id": "1019100211"
+      }
+    }
+  ]
+}

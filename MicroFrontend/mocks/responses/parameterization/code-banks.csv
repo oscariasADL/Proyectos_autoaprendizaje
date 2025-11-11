@@ -1,0 +1,57 @@
+codigo,entidad,grupo,contactosTarjetaCredito,transferencias,compraCartera,contactosCreditos,codigoRBM
+0059,Bancamia S.A.,,no,si,no,no,null
+0040,Banco Agrario,,no,si,si,no,null
+0052,Banco AV Villas,aval,si,si,no,si,0052
+1805,Banco BTG Pactual,,no,si,no,no,null,null
+0032,Banco Caja Social BCSC,,no,si,si,no,null
+0066,Banco Cooperativo Coopcentral,,no,si,si,no,null
+1819,Banco Contactar,,no,si,si,no,null
+1558,Ban100,,no,si,no,no,null
+0001,Banco de Bogotá,aval,si,si,si,si,0001
+0023,Banco de Occidente,aval,si,si,si,si,0023
+0062,Banco Falabella S.A,,no,si,si,no,null
+0063,Banco Finandina S.A,,no,si,si,no,null
+1071,Banco JP Morgan Colombia,,no,si,no,no,null
+0067,Banco Mibanco,,no,si,no,no,null
+0064,Banco Multibank S.A.,,no,si,si,no,null
+0047,Banco Mundo Mujer,,no,si,no,no,null
+0060,Banco Pichincha,,no,si,si,no,null
+0002,Banco Popular,aval,si,si,si,si,0002
+0058,Banco Procredit Colombia,,no,si,si,no,null
+0065,Banco Santander,,no,si,si,no,null
+0019,Banco Scotiabank Colpatria,,no,si,si,no,null
+0069,Banco Serfinanza S.A.,,no,si,si,no,null
+0303,Banco Unión antes Giros,,no,si,si,no,null
+0053,Banco W S.A.,,no,si,no,no,null
+0031,Bancoldex S.A.,,no,si,no,no,null
+0007,Bancolombia,,no,si,si,no,0807
+0061,Bancoomeva,,no,si,si,no,null
+0013,BBVA,,no,si,si,no,null
+0042,BNP Paribas Colombia,,no,si,si,no,null
+1808,BOLD CF,,no,si,no,no,null
+0009,Citibank,,no,si,si,no,null
+0370,Coltefinanciera S.A.,,no,si,si,no,null
+1812,COINK,,no,si,no,no,null
+0292,Confiar,,no,si,si,no,null
+0283,CFA Cooperativa Financiera,,no,si,si,no,null
+0289,Cotrafa Cooperativa Financiera,,no,si,si,no,null
+0551,Daviplata,,no,si,no,no,0860
+0051,Davivienda,,no,si,si,no,0051
+1802,DING Tecnipagos S.A,,no,si,no,no,null
+0121,Financiera Juriscoop S.A. Cpia de Fina,,no,si,si,no,null
+1814,GLOBAL 66,,no,si,no,no,null
+0012,GNB Sudameris,,no,si,si,no,null
+1637,IRIS,,no,si,no,no,null
+0014,ITAU,,no,si,si,no,null
+1286,JFK Cooperativa,,no,si,no,no,null
+0070,Lulo Bank,,no,si,no,no,null
+0801,MOVii,,no,si,no,no,null
+0507,Nequi,,no,si,no,no,0977
+1809,NU,,no,si,no,no,null
+999,Otros Bancos,,no,no,si,no,null
+0999,Otros Bancos Mastercard,otros_bancos,si,no,no,no,null
+0998,Otros Bancos Visa,otros_bancos,si,no,no,no,null
+1560,PIBANK,,no,si,no,no,null
+1803,POWWI,,no,si,no,no,null
+1811,RappyPay,,no,si,no,no,null
+1804,UALÁ,,no,si,si,no,null

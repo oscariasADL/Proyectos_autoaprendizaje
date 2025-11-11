@@ -1,0 +1,1036 @@
+{
+  "alertUsrs": [
+    {
+      "id": "1",
+      "groupKey": "4",
+      "key": "100",
+      "name": "Retiro superior a un tope",
+      "daysBefore": null,
+      "product": {
+        "productId": "3",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "300000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "groupKey": "4",
+      "key": "10",
+      "name": "Saldo de la cuenta",
+      "daysBefore": null,
+      "product": {
+        "productId": "2",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "3",
+          "value": "6"
+        },
+        {
+          "description": "1",
+          "value": "A"
+        },
+        {
+          "description": "2",
+          "value": "12"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "groupKey": "4",
+      "key": "10",
+      "name": "Saldo de la cuenta",
+      "daysBefore": null,
+      "product": {
+        "productId": "3",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "3",
+          "value": "6"
+        },
+        {
+          "description": "1",
+          "value": "A"
+        },
+        {
+          "description": "2",
+          "value": "12"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "groupKey": "4",
+      "key": "10000",
+      "name": "Saldo de la cuenta",
+      "daysBefore": null,
+      "product": {
+        "productId": "3",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "1",
+          "value": "Q"
+        }
+      ],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "groupKey": "4",
+      "key": "100000",
+      "name": "Saldo de la cuenta",
+      "daysBefore": null,
+      "product": {
+        "productId": "4",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "2",
+          "value": "13"
+        },
+        {
+          "description": "1",
+          "value": "M"
+        }
+      ],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        },
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "groupKey": "4",
+      "key": "10000",
+      "name": "Saldo de la cuenta",
+      "daysBefore": null,
+      "product": {
+        "productId": "13",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "2",
+          "value": "5"
+        },
+        {
+          "description": "1",
+          "value": "S"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "groupKey": "4",
+      "key": "11",
+      "name": "Saldo superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "3",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "87654321345"
+        }
+      ],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        },
+        {
+          "key": 2,
+          "value": "****52"
+        },
+        {
+          "key": 2,
+          "value": "****51"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "groupKey": "4",
+      "key": "12",
+      "name": "Saldo menor a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "13",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "40000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "groupKey": "4",
+      "key": "100",
+      "name": "Retiro superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "4",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "12000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "groupKey": "4",
+      "key": "102",
+      "name": "Compra superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "12",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "25000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "groupKey": "4",
+      "key": "108",
+      "name": "Débito automático",
+      "daysBefore": null,
+      "product": {
+        "productId": "1",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "25000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "groupKey": "4",
+      "key": "13",
+      "name": "Sobregiro",
+      "daysBefore": null,
+      "product": {
+        "productId": "12",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "45000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "groupKey": "1",
+      "key": "1",
+      "name": "Vencimiento de la tarjeta",
+      "daysBefore": null,
+      "product": {
+        "productId": "8",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "groupKey": "1",
+      "key": "101",
+      "name": "Compra superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "8",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "300000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "groupKey": "1",
+      "key": "105",
+      "name": "Avance superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "8",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "54000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "groupKey": "1",
+      "key": "106",
+      "name": "Cargo a tarjeta superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "8",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "64000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.CO"
+        },
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "groupKey": "4",
+      "key": "104",
+      "name": "Transferencia superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "2",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "300000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "groupKey": "2",
+      "key": "14",
+      "name": "Fecha límite de vencimiento",
+      "daysBefore": "4",
+      "product": {
+        "productId": "1160925",
+        "productType": "1",
+        "productName": "ETB No. 1160925"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "groupKey": "2",
+      "key": "14",
+      "name": "Fecha límite de vencimiento",
+      "daysBefore": "5",
+      "product": {
+        "productId": "6432532",
+        "productType": "1",
+        "productName": "Codensa No. 6432532"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "groupKey": "4",
+      "key": "102",
+      "name": "Compra con tarjeta debito",
+      "daysBefore": null,
+      "product": {
+        "productId": "4",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "groupKey": "4",
+      "key": "103",
+      "name": "Pago de cheque supera un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "13",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "500000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "groupKey": "4",
+      "key": "107",
+      "name": "Devolución de cheque",
+      "daysBefore": null,
+      "product": {
+        "productId": "12",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "groupKey": "4",
+      "key": "100",
+      "name": "Retiro superior a un tope",
+      "daysBefore": null,
+      "product": {
+        "productId": "13",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "300000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "groupKey": "4",
+      "key": "104",
+      "name": "Transferencia superior a un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "26",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "300000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "groupKey": "2",
+      "key": "109",
+      "name": "Pago superior a un tope",
+      "daysBefore": null,
+      "product": {
+        "productId": "4",
+        "productType": "1",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "25000"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "groupKey": "2",
+      "key": "3",
+      "name": "Factura disponible",
+      "daysBefore": null,
+      "product": {
+        "productId": "30700644",
+        "productType": "6",
+        "productName": "Vanti No. 30700644"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "groupKey": "2",
+      "key": "4",
+      "name": "Pago automático valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "8400460",
+        "productType": "6",
+        "productName": "Codensa - programado No. 8400460"
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "groupKey": "2",
+      "key": "5",
+      "name": "Resultado pago automático",
+      "daysBefore": null,
+      "product": {
+        "productId": "14561",
+        "productType": "6",
+        "productName": "DEMO 1 No. 14561"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "270",
+      "groupKey": "2",
+      "key": "5",
+      "name": "Resultado pago automático",
+      "daysBefore": null,
+      "product": {
+        "productId": "8400460",
+        "productType": "6",
+        "productName": "Codensa - programado No. 8400460"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "groupKey": "2",
+      "key": "6",
+      "name": "Resultado pago automático fallido",
+      "daysBefore": null,
+      "product": {
+        "productId": "14561",
+        "productType": "6",
+        "productName": "DEMO 1 No. 14561"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "groupKey": "2",
+      "key": "6",
+      "name": "Resultado pago automático",
+      "daysBefore": null,
+      "product": {
+        "productId": "8400460",
+        "productType": "6",
+        "productName": "Codensa - programado No. 8400460"
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "groupKey": "4",
+      "key": "102",
+      "name": "Compra con tarjeta debito",
+      "daysBefore": null,
+      "product": {
+        "productId": "4",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "groupKey": "4",
+      "key": "102",
+      "name": "Compra con tarjeta debito",
+      "daysBefore": null,
+      "product": {
+        "productId": "12",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "groupKey": "4",
+      "key": "103",
+      "name": "Pago de cheque supera un valor",
+      "daysBefore": null,
+      "product": {
+        "productId": "12",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "groupKey": "4",
+      "key": "107",
+      "name": "Devolución de cheque",
+      "daysBefore": null,
+      "product": {
+        "productId": "13",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "groupKey": "4",
+      "key": "108",
+      "name": "Debito automatico exitoso",
+      "daysBefore": null,
+      "product": {
+        "productId": "1",
+        "productType": "6",
+        "productName": null
+      },
+      "notification": [
+        {
+          "description": "04",
+          "value": "200001"
+        }
+      ],
+      "destination": [
+        {
+          "key": 2,
+          "value": "****23"
+        },
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "groupKey": "4",
+      "key": "7",
+      "name": "Transferencia programada",
+      "daysBefore": null,
+      "product": {
+        "productId": "0",
+        "productType": "0",
+        "productName": null
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        },
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "groupKey": "4",
+      "key": "8",
+      "name": "Transferencia programada",
+      "daysBefore": null,
+      "product": {
+        "productId": "0",
+        "productType": "0",
+        "productName": null
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        },
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "groupKey": "4",
+      "key": "9",
+      "name": "Inscripción de contacto",
+      "daysBefore": null,
+      "product": {
+        "productId": "0",
+        "productType": "0",
+        "productName": null
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "groupKey": "3",
+      "key": "2",
+      "name": "Fecha límite de pago",
+      "daysBefore": null,
+      "product": {
+        "productId": "17",
+        "productType": "0",
+        "productName": null
+      },
+      "notification": [],
+      "destination": [
+        {
+          "key": 1,
+          "value": "****RAMIREZ@AVALDIGITALLABS.COM"
+        },
+        {
+          "key": 2,
+          "value": "****23"
+        }
+      ]
+    }
+  ]
+}

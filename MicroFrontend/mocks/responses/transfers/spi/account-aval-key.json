@@ -1,0 +1,18 @@
+{
+    "@AVJCP626": {
+        "accountId": "609053300",
+        "accountType": "SDA",
+        "bankId": "0052",
+        "bankName": "Nequi",
+        "name": "Ha*** Po****",
+        "fullName": "Harry Potter",
+        "type": "5",
+        "identSerialNum": "212125",
+        "govIssueIdentType": "CE",
+        "key": "@AVJCP626",
+        "cameraReference": "ENT",
+        "receiverCamera": "ENT",
+        "personType": "PN",
+        "personCategory": "3"
+    }
+}

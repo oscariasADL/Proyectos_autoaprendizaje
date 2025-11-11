@@ -1,0 +1,49 @@
+{
+  "approvalPath":"GREEN",
+  "devRec":[
+
+  ],
+  "cardAcctId":{
+    "cardNumber":"518503",
+    "lastDigits":"5557",
+    "cardStatus":{
+      "issDt":"2024-07-09T19:15:32Z",
+      "cardId":"D5000000617365557"
+    },
+    "productId":"6282131826654774994",
+    "cardMagData":{
+      "magData1":"C0001019202098"
+    },
+    "ccmotoAcct":{
+      "expDt":"0927"
+    }
+  },
+  "deletedCard":"true",
+  "devName":"ADL iPhone XR",
+  "elementSecure":"04452ED3BF5380019170009547301287133DC66DBB64B1AD",
+  "statusCode":"INACTIVE",
+  "tokenInfo":{
+    "tokenId":"62AB0599FB79E0F62E19818F232CD77E",
+    "tokenType":"SECURE_ELEMENT",
+    "tokenReq":{
+      "requestorName":"APPLE PAY",
+      "status":"APPROVED",
+      "idWallet":"04452ED3BF5380019170009547301287133DC66DBB64B1AD",
+      "provisioned":"true",
+      "warnCode":[
+
+      ]
+    },
+    "validity":{
+      "validityDate":"0827"
+    }
+  },
+  "tokenServProv":{
+    "id":"MDES",
+    "panId":"FAPLMC1CO00000004b50c000910d4f0da31c5bb0cee1bac3",
+    "tokenId":"DAPLMC1CO0000000b23e0e12657c4be6b857c94373c41f6f",
+    "tokenProvisioning":"D0000207067786",
+    "tokenRequestor":"50110030273"
+  },
+  "athResponseError": false
+}

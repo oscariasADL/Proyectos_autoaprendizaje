@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "typeProduct": 3,
+      "name": "Mis Créditos Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 81700000.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "LOC",
+          "typeName": "Crédito Rotativo",
+          "numberProduct": "2115013000002593",
+          "id": 6,
+          "availableBalance": 81700000.00,
+          "expense": 100000.00,
+          "creditLimit": 81800000.00,
+          "dueDate": "04-09-2019",
+          "minimumPayment": 0.00,
+          "notEmpty": true,
+          "availableBarPercentage": 99.88
+        }
+      ]
+    }
+  ]
+}

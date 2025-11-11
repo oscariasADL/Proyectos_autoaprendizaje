@@ -1,0 +1,38 @@
+[
+    {
+        "bin": "539828",
+        "franchise": "mastercard",
+        "description": "Tarjeta de Crédito Facilísima",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/tc-mc-facilisima.png"
+    },
+    {
+        "bin": "547141",
+        "franchise": "mastercard",
+        "description": "Tarjeta de Crédito Clásica",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/tc-mc-classic.png"
+    },
+    {
+        "bin": "547142",
+        "franchise": "mastercard",
+        "description": "Tarjeta de Crédito Oro",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/tc-mc-gold.png"
+    },
+    {
+        "bin": "522973",
+        "franchise": "mastercard",
+        "description": "Tarjeta de Crédito Platinum",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/tc-mc-platinum.png"
+    },
+    {
+        "bin": "523577",
+        "franchise": "mastercard",
+        "description": "Tarjeta de Crédito Black",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/tc-mc-black.png"
+    },
+    {
+        "bin": "518503",
+        "franchise": "mastercard",
+        "description": "Tarjeta Débito",
+        "cromalineUrl": "/bancadigital/assets/img/bm/wallet-cromalines/td-mc-classic.png"
+    }
+]

@@ -1,0 +1,25 @@
+{
+  "digitalDebitCardsByDocuments": [
+    {
+      "relativeParentId": "1",
+      "numberProductParent": "8942828",
+      "acctTypeParent": "SDA",
+      "numberDigitalCard": "****9456",
+      "name": "Tarjeta Débito Digital"
+    },
+    {
+      "relativeParentId": "2",
+      "numberProductParent": "8942703",
+      "acctTypeParent": "SDA",
+      "numberDigitalCard": "****8752",
+      "name": "Tarjeta Master Debit"
+    },
+    {
+      "relativeParentId": "12",
+      "numberProductParent": "008438871",
+      "acctTypeParent": "DDA",
+      "numberDigitalCard": "****1344",
+      "name": "Tarjeta debito cor"
+    }
+  ]
+}

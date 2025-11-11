@@ -1,0 +1,18 @@
+{
+  "paymentType": "AVALPAY_PAYMENT",
+  "transactionInfo": {
+    "returningUrl": "https://stg.pasareladepagosaval-cloud.com/wps/portal/pasarela/resultado/?token=89a81b134bc767be219b904ea83e5f61",
+    "trnRqUID": "1210633564",
+    "clientDt": "2021-05-27T12:34:56.900",
+    "transactionCost": "0"
+  },
+  "paymentInfo": {
+    "acctIdTo": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
+    "bankIdTo": "0052",
+    "amt": "22000.0",
+    "loanPmtType": "1",
+    "productName": "BANCO AVVILLAS  TARJETA DE CREDITO MASTERCARD",
+    "productNumber": "****2166"
+  },
+  "curCode": "USD"
+}

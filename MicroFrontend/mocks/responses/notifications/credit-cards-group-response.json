@@ -1,0 +1,35 @@
+{
+  "alertTypes": [
+    {
+      "group": 1,
+      "description1": "Tarjetas de Crédito",
+      "groupItems": [
+        {
+          "description2": "Configuración de notificaciones",
+          "alertGroupItems": [
+            {
+              "key": 1,
+              "name": "Vencimiento de la tarjeta",
+              "order": 1
+            },
+            {
+              "key": 101,
+              "name": "Compra superior a un valor",
+              "order": 2
+            },
+            {
+              "key": 105,
+              "name": "Avance superior a un valor",
+              "order": 3
+            },
+            {
+              "key": 106,
+              "name": "Cargo a tarjeta superior a un valor",
+              "order": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

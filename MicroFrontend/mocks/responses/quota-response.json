@@ -1,0 +1,31 @@
+{
+	"availableProductList": [
+		{
+			"productId": "****2593",
+			"relativeId": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3",
+			"totalQuota": "81695000",
+			"availableQuota": "74896259",
+			"availableTransferQuota": "74896259",
+			"franchise": "MASTERCARD",
+			"productType": "CCA"
+		},
+		{
+			"productId": "****0011",
+			"relativeId": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+			"totalQuota": "4605000",
+			"availableQuota": "4418808",
+			"availableTransferQuota": "4418808",
+			"franchise": "VISA",
+			"productType": "CCA"
+		},
+		{
+			"productId": "****0034",
+			"relativeId": "4fc82b26aecb43405868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+			"totalQuota": "4575000",
+			"availableQuota": "4418808",
+			"availableTransferQuota": "4418808",
+			"franchise": "UNKNOWN",
+			"productType": "LOC"
+		}
+	]
+}

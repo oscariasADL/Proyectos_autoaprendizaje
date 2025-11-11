@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "typeProduct": 4,
+      "name": "Mis créditos",
+      "description": "Saldo por pagar",
+      "balanceTotal": 12748046.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "DLA",
+          "typeName": "Crédito",
+          "numberProduct": "12345872622",
+          "id": 5,
+          "forPayment": 12748046.00,
+          "nextPayment": 195904.00,
+          "expirationDate": "18-11-2019",
+          "bankCode": "0052",
+          "notEmpty": true
+        }
+      ]
+    }
+  ]
+}

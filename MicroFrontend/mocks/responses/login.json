@@ -1,0 +1,29 @@
+{
+  "token": "eyJraWQiOiJUV2JaVDIrVE1ZTUZpUjNIaVJMYmZJYjdLZldqaVJ2SkxsbExCUlFKWjNnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI3Y3U5MTE5MWlsYzliZzViN245cmVlbWJtayIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiQURMLUFVVEgtU2VydmljZVwvY3JlYXRlLXRva2VuIEFETC1BVVRILVNlcnZpY2VcL3ZhbGlkYXRlLXRva2VuIiwiYXV0aF90aW1lIjoxNTQ5OTgxOTA2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9EUTNuS3hXQmUiLCJleHAiOjE1NDk5ODU1MDYsImlhdCI6MTU0OTk4MTkwNiwidmVyc2lvbiI6MiwianRpIjoiYTM1NmE5Y2QtOWM4MS00NzE4LWI2YmYtZTJmZDZkZDNhZTVmIiwiY2xpZW50X2lkIjoiN2N1OTExOTFpbGM5Ymc1YjduOXJlZW1ibWsifQ.r-NPIjYXSGA_jYuBV2pSdIYgzrvZ0YrBzOZD89ZW9cpUZR4qDGiiol8vf9qwSsvpWL5EvIys2VAbHf_6zky3x4VwX66CYSyna_QxjLe7FQZkxQePDenKl2E-MrqglgkwUJZvCs7LxKYBB3K4i4J52Br7ZxgocUcUIMSD7AyscqzlE8qQA1eLV2J1NcperZwqS0iU2l2MCg7SldVrgCXtq4lpnxahVk7bmmvbB6fQVpHo220iWbQ0ZPFPHEGAWcEAKAkMVn78hL6Uyj0o087gPZqVzynSWPyh7mAktkSFDt0zWLuaCw8RkXonlMmyR7qRfmQyLaMaQRyZOvOvaISg4A",
+  "success": true,
+  "lastAuthDate": "2022-11-04T14:33:00Z",
+  "currentDate": "2022-11-10T21:46:41Z",
+  "lastIPAddress": "3.13.132.40",
+  "migrate": false,
+  "dataBasicClientDto": {
+    "clientName": "KEVIN SILVA",
+    "firstName": "KEVIN",
+    "lastName": "SILVA",
+    "documentNumber": "1019100203",
+    "documentType": "CC",
+    "phoneNumber": "3143804297",
+    "phoneNumberStatus": "A",
+    "email": "KEVIN.SILVA@AVALDIGITALLABS.COM",
+    "emailType": "A",
+    "lastAuthInfo": "1900-01-01T12:00:00",
+    "ip": "10.3.1.124",
+    "channelState": "A",
+    "signStatus": 0,
+    "adviserName": "",
+    "adviserPhone": "0",
+    "adviserEmail": "",
+    "hasCreditProducts": true,
+    "hasDigitalCard": true,
+    "preApproved": true
+  }
+}

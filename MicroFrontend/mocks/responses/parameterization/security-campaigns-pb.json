@@ -1,0 +1,162 @@
+{
+  "campaigns": [
+    {
+      "id": 1,
+      "title": {
+        "content": "Recuerda actualizar tu contraseña",
+        "classTitle": "normalTitle"
+      },
+      "subtitle": "",
+      "imageUrl": "illustrations/modal/change-password.svg",
+      "description": {
+        "text": "Por seguridad te recomendamos cambiar la contraseña periódicamente para ingresar a los canales de AV Villas App y Banca Virtual.",
+        "class": "center"
+      },
+      "content": {
+        "title": "Puedes hacerlo de la siguiente forma:",
+        "items": [
+          "En la parte Superior del menú principal, haz clic en <b>Seguridad</b>",
+          "Luego, elige el ícono: <b>\"Cambiar contraseña\"</b>",
+          "Digita la actual e indica una nueva."
+        ],
+        "listType": "ordered",
+        "justifyTextItems": "left"
+      },
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "cambiar contraseña",
+        "isExternalLink": false,
+        "url": "/seguridad/contrasena/cambio"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "content":  "¡Que no te engañen!",
+        "classTitle": "redTitle"
+      },
+      "subtitle": "",
+      "imageUrl": "illustrations/modal/security-popup.svg",
+      "description": "",
+      "content": {
+        "title": "",
+        "items": [
+          "Cuidado con <b>ciberdelicuentes</b> que se hacen pasar por el <b>Banco AV Villas</b> solicitando información financiera por supuestas campañas de devolución del IVA.",
+          "Nunca compartas tus contraseñas, códigos que llegan al celular o números de tarjetas. Si te contactan no des información y comunícate con la línea AudioVillas.",
+          "El Banco nunca solicita esta información por medio telefónico ni a través de mensajes de texto."
+        ],
+        "listType": "none",
+        "justifyTextItems": "center"
+      },
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "más información",
+        "isExternalLink": true,
+        "url": "https://www.avvillas.com.co/productos-en-oficina/seccion-seguridad"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "content":  "¿Te vas de viaje en Semana Santa?",
+        "classTitle": "normalTitle"
+      },
+      "subtitle": "",
+      "imageUrl": "illustrations/modal/holidays.svg",
+      "description": "",
+      "content": {
+        "title": "",
+        "items": [
+          "Te invitamos a hacer el pago de tus créditos antes del 22 de marzo de 2024.",
+          "Así te vas de viaje, te mantienes al día y regresas sin preocupaciones."
+        ],
+        "listType": "none",
+        "justifyTextItems": "left"
+      },
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "entendido",
+        "isExternalLink": false,
+        "url": ""
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "content":  "Nueva opción para autorizar tus transacciones",
+        "classTitle": "normalTitle"
+      },
+      "subtitle": "",
+      "imageUrl": "illustrations/modal/new-option-auth.svg",
+      "description": {
+        "text": "Tu seguridad es lo más importante para nosotros, es por ello que ahora podrás autorizar tus transacciones generadas desde Banca Virtual y PSE a través de la lectura de un QR en tres sencillos pasos:",
+        "class": "center"
+      },
+      "content": {
+        "title": "",
+        "items": [
+          "Realiza tu transacción en Banca virtual o PSE",
+          "Abre AV Villas App y lee el QR que se presenta en la transacción",
+          "Ingresa el código y listo"
+        ],
+        "listType": "ordered",
+        "justifyTextItems": "left"
+      },
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "más información",
+        "isExternalLink": true,
+        "url": "https://www.avvillas.com.co/tutoriales/pagar-con-qr-aval?p_l_back_url=%2Fbusqueda%3Fq%3Dqr"
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "content":  "No caigas en el fraude",
+        "classTitle": "normalTitle"
+      },
+      "subtitle": "",
+      "imageUrl": "illustrations/modal/dont-fall-for-fraud.svg",
+      "description": {
+        "text": "Cuidado con los ciberdelincuentes que se hacen pasar por asesores de telefonías móviles, ofreciendo realizar el cambio a 5G.",
+        "class": "left"
+      },
+      "content": {
+        "title": "",
+        "items": [
+          "Nunca compartas tus contraseñas, códigos que llegan al celular, links enviados o números de productos. Si te contactan no des información y comunícate con la línea de audiovillas."
+        ],
+        "listType": "none",
+        "justifyTextItems": "left"
+      },
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "entendido",
+        "isExternalLink": false,
+        "url": ""
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "content":  "Registra tus llaves en segundos:",
+        "classTitle": "normalTitle"
+      },
+      "subtitle": "Tag Aval, cédula, celular y correo electrónico",
+      "imageUrl": "illustrations/login/host_character_banner.png",
+      "bottom": {
+        "class": "btn btn-primary",
+        "text": "Hazlo ya en la Zona Bre-B",
+        "isExternalLink": false,
+        "url": "/spi"
+      }
+    }
+  ],
+  "settings": {
+    "templates": {
+      "desktop": 2,
+      "mobile": 2
+    },
+    "useCampaign": 7
+  }
+}

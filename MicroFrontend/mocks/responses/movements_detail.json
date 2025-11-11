@@ -1,0 +1,120 @@
+{
+  "results": [
+    {
+      "typeAccount": "CCA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "010787401",
+      "description": "DEB  TRANSF INTERNAS A AHO 008920451 BM",
+      "valueMove": "1002320",
+      "state": "0",
+      "date": "2019-03-08T05:00:00Z",
+      "category": "0",
+      "rate": "2",
+      "totalInstalments": "2",
+      "instalmentsPaid": "2"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "010787401",
+      "description": " COM. CONSULTA BOLSILLOS NOVEDADES SISTEMAS",
+      "valueMove": "1900",
+      "state": "1",
+      "date": "2019-03-08T05:00:00Z",
+      "category": "16"
+    },
+    {
+      "typeAccount": "CCA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939550",
+      "description": "NOTA DEBITO",
+      "valueMove": "3846",
+      "state": "0",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "nota prueba",
+      "invoiceNumber": "234234234",
+      "rate": "2",
+      "totalInstalments": "2",
+      "instalmentsPaid": "2"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939634",
+      "description": " ND IMPUESTO FINANCIERO 4X1000 RETEFUENTE NOVEDADES SISTEMAS",
+      "valueMove": "1.71",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " COMISION GENERACION OTP GIRO NOVEDADES SISTEMAS",
+      "valueMove": "3500",
+      "state": "1",
+      "date": "2025-08-31T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " NOTA DEBITO IMPUESTO FINANCIERO 4X1000 NOVEDADES SISTEMAS",
+      "valueMove": "99.96",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " NOTA DEBITO I.V.A. NOVEDADES SISTEMAS",
+      "valueMove": "3990",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " COMISION GENERACION OTP GIRO NOVEDADES SISTEMAS",
+      "valueMove": "3500",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " COMISION GENERACION OTP GIRO NOVEDADES SISTEMAS",
+      "valueMove": "3500",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    },
+    {
+      "typeAccount": "SDA",
+      "typeName": "Cuenta de Ahorros",
+      "numberProduct": "008939626",
+      "description": " COMISION GENERACION OTP GIRO NOVEDADES SISTEMAS",
+      "valueMove": "3500",
+      "state": "1",
+      "date": "2019-10-02T05:00:00.000Z",
+      "note": "000000000000000000000000",
+      "invoiceNumber": "000000000000000000000000"
+    }
+  ],
+  "totalResults": 100
+}
+

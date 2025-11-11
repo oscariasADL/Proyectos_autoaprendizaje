@@ -1,0 +1,102 @@
+
+[
+    {
+        "numberProduct": "8942786",
+        "accountId": "008942786",
+        "accountType": "SDA",
+        "keyId": "1lugar",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2027-11-14T10:45:50.995-05:00",
+        "statusDirectory": "DICE"
+    },
+     {
+        "numberProduct": "8942786",
+        "accountId": "008942786",
+        "accountType": "SDA",
+        "keyId": "jessica.riano@avaldigitiallabs.com",
+        "keyType": "3",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2026-11-14T10:45:50.995-06:00",
+        "statusDirectory": "DICE"
+    },
+    {
+        "numberProduct": "8942786",
+        "accountId": "008942786",
+        "accountType": "SDA",
+        "keyId": "@AVABC123",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2024-11-14T10:45:50.995-05:00",
+        "statusDirectory": "DICE"
+    },
+    {
+        "numberProduct": "8942703",
+        "accountId": "008942703",
+        "accountType": "SDA",
+        "keyId": "@holamundocomoestasmuybuen",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2024-11-14T10:45:50.995-05:00",
+        "statusDirectory": "DICE4"
+    },
+    {
+        "numberProduct": "8942703",
+        "accountId": "008942703",
+        "accountType": "SDA",
+        "keyId": "@AVXYZ456",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2024-11-14T10:45:50.995-05:00",
+        "statusDirectory": "DICE"
+    },
+    {
+        "numberProduct": "8942828",
+        "accountId": "008942828",
+        "accountType": "SDA",
+        "keyId": "@AV.DEF789",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2024-11-14T10:45:50.995-05:00",
+         "statusDirectory": "DICE4"
+    },
+    {
+        "numberProduct": "8942828",
+        "accountId": "008942828",
+        "accountType": "SDA",
+        "keyId": "@xxxxxx",
+        "keyType": "4",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2025-11-14T10:45:50.995-05:00",
+         "statusDirectory": "DICE5"
+    },
+    {
+        "numberProduct": "8962651",
+        "accountId": "008962651",
+        "accountType": "SDA",
+        "keyId": "@gfdffdgfdgfdgfdgfddhgfgfh",
+        "keyType": "1",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2025-11-14T10:45:50.995-05:00",
+         "statusDirectory": "DICE2"
+    },
+    {
+        "numberProduct": "8962651",
+        "accountId": "008962651",
+        "accountType": "SDA",
+        "keyId": "@TAGAVAL!",
+        "keyType": "1",
+        "preferredIndicator": "N",
+        "statusDesc": "ACTIVA",
+        "effDt": "2025-11-14T10:45:50.995-05:00",
+         "statusDirectory": "DICE2"
+    }
+]

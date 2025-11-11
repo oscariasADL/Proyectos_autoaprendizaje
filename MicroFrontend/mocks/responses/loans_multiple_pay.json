@@ -1,0 +1,37 @@
+{
+  "paymentBillList": [
+    {
+      "approvalId": "543654645",
+      "referenceId": "string",
+      "invoiceNumber": "string",
+      "amount": "12312",
+      "organizationName": "jhsdfhsdkjfsdfhkds",
+      "statusPayment": true,
+      "transactionDate": "04/03/2024",
+      "codeError": "",
+      "messageError": "error"
+    },
+    {
+      "approvalId": "543654645",
+      "referenceId": "string",
+      "invoiceNumber": "string",
+      "amount": "12312",
+      "organizationName": "jhsdfhsdkjfsdfhkds",
+      "statusPayment": true,
+      "transactionDate": "04/03/2024",
+      "codeError": "",
+      "messageError": "error"
+    },
+    {
+      "approvalId": "543654645",
+      "referenceId": "string",
+      "invoiceNumber": "string",
+      "amount": "12312",
+      "organizationName": "jhsdfhsdkjfsdfhkds",
+      "statusPayment": false,
+      "transactionDate": "04/03/2024",
+      "codeError": "",
+      "messageError": "error"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "199",
+      "name": "Servicios públicos",
+      "iconPath": "illustrations/services-categories/public-services.png"
+    },
+    {
+      "id": "201",
+      "name": "Telefonía Celular",
+      "iconPath": "illustrations/services-categories/cellular-telephony.png"
+    },
+    {
+      "id": "196",
+      "name": "Internet",
+      "iconPath": "illustrations/services-categories/internet.png"
+    },
+    {
+      "id": "202",
+      "name": "Televisión",
+      "iconPath": "illustrations/services-categories/television.png"
+    },
+    {
+      "id": "149",
+      "name": "Telefonía",
+      "iconPath": "illustrations/services-categories/telephony.png"
+    },
+    {
+      "id": "195",
+      "name": "Educación",
+      "iconPath": "illustrations/services-categories/education.png"
+    },
+    {
+      "id": "87",
+      "name": "Conj. residenciales",
+      "iconPath": "illustrations/services-categories/residential-complex.png"
+    },
+    {
+      "id": "212",
+      "name": "Salud y Prepagada",
+      "iconPath": "illustrations/services-categories/health-and-prepaid.png"
+    }
+  ]
+}

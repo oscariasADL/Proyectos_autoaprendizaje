@@ -1,0 +1,111 @@
+{
+  "content": [
+    {
+      "date": null,
+      "read": null,
+      "qrCode": "00C15FE262364DD23D16F6B589E79BAC324FF5FF6AAD5C95EE62CFDB02A51537C96F4F4B0089C3837472127CDA72B7C3F24331E7AAB72788E30209D8A2A3824C4FBAFED260DAB4B5184ADA556C48F856A86C0EEE1AD4A9AEA25623C2DF343B4DBF44F711D9458BC546C7ED80A3987BAA5248A45B406E9D30E632D9F7A2A784ED6AA74F8961C3A72623C2ACDC09290F0C555F894486C97A67E859BF060E624473A1E23707DAD69B467F45296FDF94637BCF34CADC5EDBFE60E678BEA365B27DCA03E339E5EC08C64CDBC0C7F81D5956F6F15D9EF18B06D5568296829C371326FF0D6A7D79DC7A519F2B99D247F85629EC7BA8679B17E5C36BF2F0EDA7212F807AE61AE1890BD475884D41780300737D4DE0DE9BF439D70D58",
+      "txId": "92ffa51b-1803-4837-9478-59278ee3509b",
+      "documentId": "1010206331",
+      "id": "00525900h45323493398",
+      "notificationType": "PUSH",
+      "title": "Autoriza",
+      "message": "Autoriza tu transacción",
+      "timestamp": "2025-03-04T14:10:41",
+      "token": "Bearer eyJraWQiOiI0WGNQT3g5Z05mTWxlN0IrMG9FQ0lDajd0Y1cwRHhPeG11dmZhWUlxM3NrPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2dmExY2loc3Z2YjRpc2FpZDZzMzQwdTMyNCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicmItbWItc3RnLWF1dGgtYXBpXC9hdXRob3JpemF0aW9uIiwiYXV0aF90aW1lIjoxNzM5OTExMDkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9GNzhyTGhHbEMiLCJleHAiOjE3Mzk5MTQ2OTMsImlhdCI6MTczOTkxMTA5MywidmVyc2lvbiI6MiwianRpIjoiMjdmZmUxNzktNjRiOC00MWRhLThiZTktM2UyZTFlZDMxNjdkIiwiY2xpZW50X2lkIjoiNnZhMWNpaHN2dmI0aXNhaWQ2czM0MHUzMjQifQ.b3JPj7Iv0QcrlfVlih-uqvuX9Q8pM9VQBSlPJmrZZYyHolpPK0dB07LrZEBQAm8XL4zxKkpKSViP-Jwvi-3iuDbD1sjpj_fdlJUGoMHJV9OCRl-UD1-BtLRFrEsQUvUidVHvBKtkWtVFW08cZLEPTu7YHC74MDf7ny-0OWBZUCu0o8BwlqGP_w3-njQ4iFGmhgto0jPvhdbmwaD8UFmr7KXJIK5qGABX3Q7pQxYPh8nt9cWfOzSEuJ9xXE_DHoEO8FzXAfFbRAqKbbe2Z7dNrSZQYkrZDW2XF9dBz4YCmhxSIDFt1RVBWSufu6nHmDsyALsaztJte08oPObeusBbDA"
+    },
+    {
+      "id": "ULivvuOjGoFZlke0+zLWuUQf",
+      "title": "Bienvenido a AV Villas APP",
+      "message": "NAYLA, te damos la bienvenida a AV Villas App, donde podrás acceder a más de 50 transacciones, consultar movimientos y descargar documentos, entre otros y así, tener tu banco a la mano.",
+      "date": "2021-09-07T11:27:30",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": true
+    },
+    {
+      "id": "005287278340303as",
+      "title": "Transferencia",
+      "message": "Este contrato 030001_AM_AVV_generico funciona unicamente con la plantilla am_contenido_publico",
+      "date": "2021-09-06T09:15:02",
+      "notificationType": "DEFAULT",
+      "read": false,
+      "isTransaction": false
+    },
+    {
+      "id": "00525900453234933927",
+      "title": "Información Saldo",
+      "message": "AVVillas. El saldo de su cuenta CUENTA MOVIL No. *9634 es de $41.85, el cual es menor al tope establecido de $8,500,000.00",
+      "date": "2021-08-11T15:25:29",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": false
+    },
+    {
+      "id": "ULivvuOjGoFZdlke0+zLWuUQf",
+      "title": "Bienvenido a AV Villas APP",
+      "message": "NAYLA, te damos la bienvenida a AV Villas App, donde podrás acceder a más de 50 transacciones, consultar movimientos y descargar documentos, entre otros y así, tener tu banco a la mano.",
+      "date": "2021-09-07T11:27:30",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": true
+    },
+    {
+      "id": "0052872783340303",
+      "title": "Transferencia",
+      "message": "Este contrato 030001_AM_AVV_generico funciona unicamente con la plantilla am_contenido_publico",
+      "date": "2021-09-06T09:15:02",
+      "notificationType": "DEFAULT",
+      "read": false,
+      "isTransaction": false
+    },
+    {
+      "id": "005259004f5323493397",
+      "title": "Información Saldo",
+      "message": "AVVillas. El saldo de su cuenta CUENTA MOVIL No. *9634 es de $41.85, el cual es menor al tope establecido de $8,500,000.00",
+      "date": "2021-08-11T15:25:29",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": false
+    },
+    {
+      "id": "ULivvuOjGohFZlke0+zLWuUQf",
+      "title": "Bienvenido a AV Villas APP",
+      "message": "NAYLA, te damos la bienvenida a AV Villas App, donde podrás acceder a más de 50 transacciones, consultar movimientos y descargar documentos, entre otros y así, tener tu banco a la mano.",
+      "date": "2021-09-07T11:27:30",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": true
+    },
+    {
+      "id": "0052872758340303",
+      "title": "Transferencia",
+      "message": "Este contrato 030001_AM_AVV_generico funciona unicamente con la plantilla am_contenido_publico",
+      "date": "2021-09-06T09:15:02",
+      "notificationType": "DEFAULT",
+      "read": false,
+      "isTransaction": false
+    },
+    {
+      "id": "00525900h45323493397",
+      "title": "Información Saldo",
+      "message": "AVVillas. El saldo de su cuenta CUENTA MOVIL No. *9634 es de $41.85, el cual es menor al tope establecido de $8,500,000.00",
+      "date": "2021-08-11T15:25:29",
+      "notificationType": "DEFAULT",
+      "read": true,
+      "isTransaction": false
+    },
+    {
+      "date": null,
+      "read": null,
+      "qrCode": "00C15FE262364DD23D16F6B589E79BAC324FF5FF6AAD5C95EE62CFDB02A51537C96F4F4B0089C3837472127CDA72B7C3F24331E7AAB72788E30209D8A2A3824C4FBAFED260DAB4B5184ADA556C48F856A86C0EEE1AD4A9AEA25623C2DF343B4DBF44F711D9458BC546C7ED80A3987BAA5248A45B406E9D30E632D9F7A2A784ED6AA74F8961C3A72623C2ACDC09290F0C555F894486C97A67E859BF060E624473A1E23707DAD69B467F45296FDF94637BCF34CADC5EDBFE60E678BEA365B27DCA03E339E5EC08C64CDBC0C7F81D5956F6F15D9EF18B06D5568296829C371326FF0D6A7D79DC7A519F2B99D247F85629EC7BA8679B17E5C36BF2F0EDA7212F807AE61AE1890BD475884D41780300737D4DE0DE9BF439D70D58",
+      "txId": "92ffa51b-1803-4837-9478-59278ee3509b",
+      "documentId": "1010206331",
+      "id": "00525900h45323493398",
+      "notificationType": "QR",
+      "title": "Código QR",
+      "message": "Autoriza tu transacción",
+      "timestamp": "2025-03-04T14:10:41",
+      "token": "Bearer eyJraWQiOiI0WGNQT3g5Z05mTWxlN0IrMG9FQ0lDajd0Y1cwRHhPeG11dmZhWUlxM3NrPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2dmExY2loc3Z2YjRpc2FpZDZzMzQwdTMyNCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicmItbWItc3RnLWF1dGgtYXBpXC9hdXRob3JpemF0aW9uIiwiYXV0aF90aW1lIjoxNzM5OTExMDkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9GNzhyTGhHbEMiLCJleHAiOjE3Mzk5MTQ2OTMsImlhdCI6MTczOTkxMTA5MywidmVyc2lvbiI6MiwianRpIjoiMjdmZmUxNzktNjRiOC00MWRhLThiZTktM2UyZTFlZDMxNjdkIiwiY2xpZW50X2lkIjoiNnZhMWNpaHN2dmI0aXNhaWQ2czM0MHUzMjQifQ.b3JPj7Iv0QcrlfVlih-uqvuX9Q8pM9VQBSlPJmrZZYyHolpPK0dB07LrZEBQAm8XL4zxKkpKSViP-Jwvi-3iuDbD1sjpj_fdlJUGoMHJV9OCRl-UD1-BtLRFrEsQUvUidVHvBKtkWtVFW08cZLEPTu7YHC74MDf7ny-0OWBZUCu0o8BwlqGP_w3-njQ4iFGmhgto0jPvhdbmwaD8UFmr7KXJIK5qGABX3Q7pQxYPh8nt9cWfOzSEuJ9xXE_DHoEO8FzXAfFbRAqKbbe2Z7dNrSZQYkrZDW2XF9dBz4YCmhxSIDFt1RVBWSufu6nHmDsyALsaztJte08oPObeusBbDA"
+    }
+  ]
+}

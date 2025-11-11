@@ -1,0 +1,40 @@
+{
+	"contributors": [
+		{
+			"documentType": "CC",
+			"documentId": "1019100202",
+			"fullName": "Raul Rojas",
+			"category": "1"
+		},
+		{
+			"documentType": "CC",
+			"documentId": "1121861934",
+			"fullName": "Pedro Perez",
+			"category": "1"
+		},
+		{
+			"documentType": "CC",
+			"documentId": "1032456789",
+			"fullName": "John Doe",
+			"category": "1"
+		},
+		{
+			"documentType": "CC",
+			"documentId": "120302020",
+			"fullName": "John Doe",
+			"category": "1"
+		},
+		{
+			"documentType": "CC",
+			"documentId": "1006040404",
+			"fullName": "Camilo Gonzales",
+			"category": "1"
+		},
+		{
+			"documentType": "CC",
+			"documentId": "1006040404",
+			"fullName": "Marco Rojas",
+			"category": "1"
+		}
+	]
+}

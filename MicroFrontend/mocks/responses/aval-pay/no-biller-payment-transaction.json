@@ -1,0 +1,15 @@
+{
+  "paymentType": "AVALPAY_PAYMENT",
+  "transactionInfo": {
+    "returningUrl": "https://stg.pasareladepagosaval-cloud.com/wps/portal/pasarela/resultado/?token=89a81b134bc767be219b904ea83e5f61",
+    "trnRqUID": "1210633564",
+    "clientDt": "2021-05-27T12:34:56.900",
+    "transactionCost": "0"
+  },
+  "paymentNoBillerInfo": {
+    "toEntity": "ARRENDAMIENTOS LAS VILLAS SAS",
+    "amt": "34000",
+    "nie": "1019100210",
+    "pmtCodServ": "00008888"
+  }
+}

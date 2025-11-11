@@ -1,0 +1,36 @@
+{
+	"agreementCities": [
+		{
+			"name": "ANTIOQUIA - MEDELLÍN",
+			"code": "5001"
+		},
+		{
+			"name": "BOGOTÁ - BOGOTÁ",
+			"code": "11001"
+		},
+		{
+			"name": "BOLÍVAR - CARTAGENA",
+			"code": "13001"
+		},
+		{
+			"name": "VALLE - CALI",
+			"code": "76001"
+		},
+		{
+			"name": "META - VILLAVICENCIO",
+			"code": "50001"
+		},
+		{
+			"name": "ATLÁNTICO - BARRANQUILLA",
+			"code": "8001"
+		},
+		{
+			"name": "SANTANDER - BUCARAMANGA",
+			"code": "68001"
+		},
+		{
+			"name": "MAGDALENA - SANTA MARTA",
+			"code": "47001"
+		}
+	]
+}

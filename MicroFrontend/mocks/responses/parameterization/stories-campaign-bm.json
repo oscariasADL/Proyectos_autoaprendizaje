@@ -1,0 +1,94 @@
+{
+  "stories": [
+    {
+      "id": 1,
+      "previewTitle": "Ofertas y aliados",
+      "title": "Déjate sorprender",
+      "subtitle": "",
+      "previewImg": "/bancadigital/assets/img/bm/home-stories/mini/story-1.png",
+      "image": "/bancadigital/assets/img/bm/home-stories/story-1.png",
+      "itemList": null,
+      "description": "Conoce todas las alianzas en productos y servicios que tenemos con beneficios especiales para nuestros clientes.",
+      "buttonText": "CONOCER MÁS",
+      "buttonAction": "",
+      "enable": true,
+      "typeProduct": 0,
+      "productFilter": -1,
+      "redirectUrl": "",
+      "redirectExternalUrl": "https://www.avvillas.com.co/alianzas#dejate-sorprender?utm_source=directo[%E2%80%A6]renderAPP&utm_term=ZonaTransaccional",
+      "redirectUrlWithProducts": "",
+      "redirectUrlWithoutProducts": ""
+    },
+    {
+      "id": 2,
+      "previewTitle": "Tips de seguridad",
+      "title": "Entrénate contra el fraude",
+      "subtitle": "",
+      "previewImg": "/bancadigital/assets/img/bm/home-stories/mini/story-2.png",
+      "image": "/bancadigital/assets/img/bm/home-stories/story-2.png",
+      "itemList": [
+        "<strong>No compartas tu contraseña.</strong>",
+        "No ingreses a links sospechosos enviados por correo o SMS.",
+        "Consulta con frecuencia los movimientos y estado de tu producto.",
+        "Descarga las aplicaciones directamente desde la tienda de tu celular."
+      ],
+      "description": "",
+      "buttonText": "CONOCER MÁS",
+      "buttonAction": "",
+      "enable": true,
+      "typeProduct": 0,
+      "productFilter": -1,
+      "redirectUrl": "",
+      "redirectExternalUrl": "https://www.avvillas.com.co/blog/#ciberseguridad",
+      "redirectUrlWithProducts": "",
+      "redirectUrlWithoutProducts": ""
+    },
+    {
+      "id": 3,
+      "previewTitle": "Tarjeta Débito Digital",
+      "title": "Tarjeta Débito Digital",
+      "subtitle": "la libertad de comprar por internet",
+      "previewImg": "/bancadigital/assets/img/bm/home-stories/mini/story-3.png",
+      "image": "/bancadigital/assets/img/bm/home-stories/story-3.png",
+      "itemList": [
+        "<strong>No tiene costo ni cobro de Cuota de Manejo.</strong>",
+        "Exclusiva en Canales Digitales.",
+        "Ideal para compras por internet.",
+        "Puedes asignarle un tope para realizar tus compras."
+      ],
+      "description": "",
+      "buttonText": "CONOCER MÁS",
+      "buttonAction": "",
+      "enable": true,
+      "typeProduct": 0,
+      "productFilter": 14,
+      "redirectUrl": "/products",
+      "redirectExternalUrl": "",
+      "redirectUrlWithProducts": "",
+      "redirectUrlWithoutProducts": ""
+    },
+    {
+      "id": 4,
+      "previewTitle": "Unifica tus deudas",
+      "title": "Unifica tus deudas con tu Tarjeta de Crédito",
+      "subtitle": "",
+      "previewImg": "/bancadigital/assets/img/bm/home-stories/mini/story-4.png",
+      "image": "/bancadigital/assets/img/bm/home-stories/story-4.png",
+      "itemList": [
+        "<strong>Haz compra de cartera de tarjetas Visa o Mastercard sin importar el titular.</strong>",
+        "Plazo máximo hasta 60 meses.",
+        "Realízalo desde AV Villas app o Banca Virtual."
+      ],
+      "description": "",
+      "buttonText": "ENTENDIDO",
+      "buttonAction": "",
+      "enable": true,
+      "typeProduct": 2,
+      "productFilter": -1,
+      "redirectUrl": "",
+      "redirectExternalUrl": "",
+      "redirectUrlWithProducts": "",
+      "redirectUrlWithoutProducts": "/"
+    }
+  ]
+}

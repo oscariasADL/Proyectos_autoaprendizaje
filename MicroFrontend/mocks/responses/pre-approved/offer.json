@@ -1,0 +1,17 @@
+{
+  "currentCreditInfo": {
+    "type": "3",
+    "portfolioNum": "1234589329",
+    "curAmt": 14129348
+  },
+  "suggestedCurAmt": 14129348,
+  "numberOfInstallments": 60,
+  "installmentsAmt": 448817,
+  "insuredAmt": 10564,
+  "totalAmt": 459381,
+  "monthlyRate": 0.02,
+  "rateEA": 0.28,
+  "disbursementAcount": "",
+  "disbursementAmt": 1070652,
+  "remainingDate": 43
+}

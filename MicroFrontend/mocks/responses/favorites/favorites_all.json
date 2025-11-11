@@ -1,0 +1,166 @@
+[
+  {
+    "keyFavorite": "CC1019100208ABCD323",
+    "nameFavoriteTransaction": "Mensualidad madre",
+    "identificationFavoriteType": "TRANSFER",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "3"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "323333333"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 2,
+      "from": "3",
+      "valueLabel": "Valor",
+      "target": "323333333",
+      "targetLabel": "Hacia",
+      "descriptionTargetLabel": "AV Villas",
+      "typeTarget": "ACCOUNT",
+      "actionLabel": "Transferir",
+      "transactionCostId": 200022,
+      "note": "Lo del almuerzo",
+      "referenceId": "Pago semanal"
+    }
+  },
+  {
+    "keyFavorite": "CC1019100208OJKL7584",
+    "nameFavoriteTransaction": "Recarga emergencia",
+    "identificationFavoriteType": "RECHARGE",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "2"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "CEL",
+      "idAcctTransaction": "3154213123"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 0,
+      "from": "2",
+      "valueLabel": "Valor",
+      "target": "3154213123",
+      "targetLabel": "Hacia",
+      "descriptionTargetLabel": "VIRGIN",
+      "mobileOperator": "VIRGIN",
+      "typeTarget": "CELLPHONE",
+      "numberProduct": "8942703",
+      "typeName": "Cuenta de Ahorros",
+      "actionLabel": "Recargar",
+      "transactionCostId": 0
+    }
+  },
+  {
+    "keyFavorite": "CC1019100208OFGH875",
+    "nameFavoriteTransaction": "Giro Italia",
+    "identificationFavoriteType": "MONEY_ORDER",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "4"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "MONEY_ORDER",
+      "idAcctTransaction": "556555"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 4,
+      "from": "3",
+      "valueLabel": "Valor a girar",
+      "target": "556555",
+      "targetLabel": "No. de documento",
+      "descriptionTargetLabel": "Cajeros Red Aval",
+      "where": "Dónde",
+      "typeTarget": "DOCUMENT",
+      "channel": "ATM",
+      "cashoutType": "MONEY_ORDER",
+      "actionLabel": "Girar",
+      "transactionCostId": 200411
+    }
+  },
+  {
+    "keyFavorite": "CC1019100208OPQ945",
+    "nameFavoriteTransaction": "Jardin",
+    "identificationFavoriteType": "TRANSFER",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "3"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "CEL",
+      "idAcctTransaction": "3005271921"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 3,
+      "from": "3",
+      "valueLabel": "Valor",
+      "target": "3005271921",
+      "targetLabel": "A quién",
+      "descriptionTargetLabel": "A celulares transfiya",
+      "typeTarget": "CELLPHONE",
+      "actionLabel": "Transferir",
+      "transactionCostId": 200916,
+      "note": "Vaca cena",
+      "referenceId": "Datafono"
+    }
+  },
+  {
+    "keyFavorite": "CC1019100208YETTI945",
+    "nameFavoriteTransaction": "Energia",
+    "amountTransaction": "45000",
+    "identificationFavoriteType": "PAYMENTS",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "3"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "SERVICE",
+      "idAcctTransaction": "3480069115"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 7,
+      "from": "3",
+      "target": "3480069115",
+      "descriptionTargetLabel": "CODENSA - Ref de pago:",
+      "typeTarget": "SERVICE",
+      "actionLabel": "Pagar servicio",
+      "transactionCostId": 200069,
+      "referenceId": "8400460",
+      "agreementType": 1,
+      "amountType": "Valor_facturador_principal",
+      "biller": true,
+      "maxPaymentDateComplete": "2020-12-30T00:00:00-05:00",
+      "organizationId": "00000043"
+    }
+  },
+  {
+    "keyFavorite": "CC1019100208626ALBUS",
+    "nameFavoriteTransaction": "Perro",
+    "identificationFavoriteType": "TRANSFER",
+    "sourceAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "3"
+    },
+    "targetAccountTransaction": {
+      "typeAcctTransaction": "SDA",
+      "idAcctTransaction": "1000002"
+    },
+    "additionalDataTransaction": {
+      "subtypeOperation": 6,
+      "from": "3",
+      "target": "1000002",
+      "descriptionTargetLabel": "A celulares AVAL",
+      "typeTarget": "CELLPHONE",
+      "actionLabel": "Transferir",
+      "transactionCostId": 200916,
+      "note": "Por vivir",
+      "referenceId": "Robert",
+      "sourceBank": "0052",
+      "txType": "cel2cel",
+      "txTarget": "3119999999",
+      "targetBank": "0002",
+      "additionalTargetInfo": "Mar***** Ang**** Alv**** - Banco Popular"
+    }
+  }
+]

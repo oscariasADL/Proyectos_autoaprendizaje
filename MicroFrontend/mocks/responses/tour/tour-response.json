@@ -1,0 +1,12 @@
+{
+  "modules": [
+    "informed_consent",
+    "help_module",
+    "dashboard_tour",
+    "traveler_customer_welcome",
+    "security_config_welcome",
+    "notifications_welcome",
+    "covered_credit_card",
+    "informed_consent"
+  ]
+}

@@ -1,0 +1,315 @@
+[
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c30317bb5b72",
+    "parentType": "SDA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d723a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****1697",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c30317bb5b72",
+    "parentType": "SDA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d723a27fb57e9",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****1697",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "D",
+    "type": "D",
+    "id": "bd7e332a01ea20a5be2c4699913bedf55dfb1cab8d14c87b6849329192c8fd0e",
+    "parentType": "SDA",
+    "parentId": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+    "status": "BLOQUEO_PREVENTIVO",
+    "cardId": "****1697"
+  },
+  {
+    "activationType": "M",
+    "type": "D",
+    "id": "2323e7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b71",
+    "parentType": "SDA",
+    "parentId": "034f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "BLOQUEO_TEMPORAL",
+    "cardId": "****4247"
+  },
+  {
+    "activationType": "V",
+    "type": "C",
+    "id": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b72",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "BLOQUEADA",
+    "cardFranchise": "VISA",
+    "cardId": "****4647",
+    "cardType": "Platinum"
+  },
+  {
+    "activationType": "D",
+    "type": "D",
+    "id": "52729a4c2d4116480e0eb8665c5880d52460fb4c831e54f50131c5402b6e8df53",
+    "parentType": "SDA",
+    "parentId": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+    "status": "POR ACTIVAR",
+    "cardId": "****2158"
+  },
+  {
+    "activationType": "D",
+    "type": "D",
+    "id": "52729a4c2d4116480e0eb8665c5880d52460fb4c831e54f50131c5402b6e8df54",
+    "parentType": "SDA",
+    "parentId": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+    "status": "ACTIVA",
+    "cardId": "****2158"
+  },
+  {
+    "activationType": "D",
+    "type": "D",
+    "id": "52729a4c2d4116480e0eb8665c5880d523460fb4c831e54f50131c5402b6e8df54",
+    "parentType": "SDA",
+    "parentId": "4fc82b26aecb47d2868c4efbe35381732a3e7cbcc6c2efb32062c08170a05eeb8",
+    "status": "BLOQUEADA",
+    "cardId": "****2159"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "1f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f4435",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "BLOQUEO_PREVENTIVO",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0010",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "2f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f4436",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "BLOQUEO_PERDIDA_O_ROBO",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0011",
+    "cardType": "Classic",
+    "status": "ACTIVA"
+  },
+  {
+    "activationType": "M",
+    "type": "D",
+    "id": "bab9352e68f2ab6d865871133007267396594b807df73c92e0d7fecfb10832437",
+    "parentType": "SDA",
+    "parentId": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "status": "ACTIVA",
+    "cardId": "****1342"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "3f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f4438",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0013",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "4f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f4439",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "UNKNOWN",
+    "cardId": "****0021",
+    "cardType": "Desconocida"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "5f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44310",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0012",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "6f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44311",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0014",
+    "cardType": "Platinum"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "7f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44312",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0015",
+    "cardType": "Gold"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "8f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44313",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0016",
+    "cardType": "Facilísima"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "9f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44314",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "MASTERCARD",
+    "cardId": "****0017",
+    "cardType": "Black"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "10f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44315",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "VISA",
+    "cardId": "****0018",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "11f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44316",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "VISA",
+    "cardId": "****0019",
+    "cardType": "Gold"
+  },
+  {
+    "activationType": "T",
+    "type": "C",
+    "id": "12f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f44317",
+    "parentType": "CCA",
+    "parentId": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "status": "POR ACTIVAR",
+    "cardFranchise": "VISA",
+    "cardId": "****0020",
+    "cardType": "Platinum"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "2345678o987654321",
+    "parentType": "SDA",
+    "parentId": "1",
+    "status": "ACTIVA",
+    "cardId": "****9456"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "565756",
+    "parentType": "SDA",
+    "parentId": "2",
+    "status": "ACTIVA",
+    "cardId": "****8752"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "897654",
+    "parentType": "SDA",
+    "parentId": "12",
+    "status": "ACTIVA",
+    "cardId": "****1344"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d723a27fb57e9",
+    "parentType": "SDA",
+    "parentId": "1",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****1111",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d723a27fb57e9",
+    "parentType": "SDA",
+    "parentId": "2",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****2222",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f38d953786c6d696c79c3dbc339dd4e91b46739d733a37fb57e9",
+    "parentType": "SDA",
+    "parentId": "3",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****3333",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f38d953786c6d696c79c3dbc339dd4e91b46739d733a37fb57e9",
+    "parentType": "SDA",
+    "parentId": "3",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****0303",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f48d954786c6d696c79c4dbc449dd4e91b46749d744a47fb57e9",
+    "parentType": "SDA",
+    "parentId": "4",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****4444",
+    "cardType": "Classic"
+  },
+  {
+    "activationType": "R",
+    "type": "D",
+    "id": "5feceb66ffc86f138d9513786c6d696c79c13dbc13139dd13e91b1367139d71313a137fb57e9",
+    "parentType": "SDA",
+    "parentId": "13",
+    "status": "ACTIVA",
+    "cardFranchise": "MASTERDEBIT",
+    "cardId": "****1313",
+    "cardType": "Classic"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "alertTypes": [
+    {
+      "group": 2,
+      "description1": "Servicios y Convenios",
+      "groupItems": [
+        {
+          "description2": "Configuración de notificaciones",
+          "alertGroupItems": [
+            {
+              "key": 3,
+              "name": "Factura disponible",
+              "order": 1
+            },
+            {
+              "key": 4,
+              "name": "Pago automático valor",
+              "order": 2
+            },
+            {
+              "key": 5,
+              "name": "Resultado pago automático",
+              "order": 3
+            },
+            {
+              "key": 6,
+              "name": "Resultado pago automático no exitoso",
+              "order": 4
+            },
+            {
+              "key": 14,
+              "name": "Fecha límite de vencimiento",
+              "order": 5
+            },
+            {
+              "key": 109,
+              "name": "Pago superior a un tope",
+              "order": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

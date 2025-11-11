@@ -1,0 +1,9 @@
+{
+	"invoiceNumber": "180409030",
+	"amount": "600560",
+	"currency": "COP",
+	"maxPaymentDate": "2020-05-01T00:00:00-05:00",
+	"organizationId": "00000165",
+	"referenceId": "10020059001900000019",
+	"amountType": "REF1"
+}

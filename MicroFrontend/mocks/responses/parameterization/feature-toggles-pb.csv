@@ -1,0 +1,107 @@
+featureName,enableDev,enableStage,enableProd,url,dateRange,enableDateRange
+Withdraw,true,true,true,/giros-retiros/sin-tarjeta/desde,null,null
+Draft,true,true,true,/giros-retiros/terceros/desde,null,null
+CreditCardAdvance,true,true,true,/avance/hacia,null,null
+DebtPurchaseCreditCard,true,true,true,/compra-cartera/tarjeta-de-credito,null,null
+DebtPurchaseRotatingCredit,true,true,true,/compra-cartera/credito-rotativo,null,null
+UseQuota,true,true,true,/uso-cupo,null,null
+TransferWithoutRegister,true,true,true,/transferencias/sin-inscribir,null,null
+DigitalDebitCardShowDetails,true,true,true,null,null,null
+TwoWayEncryption,true,true,true,null,null,null
+CancelAccount,true,true,true,null,null,null
+CoveredCreditCard,true,true,true,/tarjeta-credito-amparada/solicitar,null,null
+SecurityApp,true,true,false,/seguridad/app-seguridad,null,null
+CapsLimit,true,true,true,/seguridad/topes,null,null
+AlertsAndNotifications,true,true,true,/seguridad/notificaciones,null,null
+ContactCreation,true,true,true,/mis-contactos/crear /transferencias/inscripcion/contacto,null,null
+AddProductsToContacts,true,true,true,null,null,null
+DonationsTransfers,true,true,true,/transferencias/donaciones/desde,null,null
+AfcTransfer,true,true,true,/transferencia-a-cuenta/valor,null,null
+TaxPayment,true,true,true,/pagos/impuestos/desde,null,null
+SocialSecurityPayment,true,true,true,/pagos/pila/inicio,null,null
+PaymentHistory,true,true,true,/pagos/pagos-realizados/inicio,null,null
+TransferHistory,true,true,true,/transferencias/lista,null,null
+Extracts,true,true,true,/documentos/extractos,null,null
+ProductCertificate,true,true,true,/documentos/certificaciones,null,null
+TaxCertificate,true,true,true,/documentos/certificaciones-tributarias,null,null
+AnnualCostRecord,true,true,true,/documentos/costos-anuales,null,null
+UnregisteredServicePayment,true,true,true,/pagos/servicios/no-inscrito/desde,null,null
+EnrollServicePayment,true,true,true,/pagos/servicios/registrar-servicio,null,null
+SecurityPopup,true,false,false,null,null,null
+TransferToCellphone,true,true,true,/transferencias/a-celular, null, null
+MathildeAds,true,true,true,null, null, null
+CreditCardCaps,true,true,false,null, null, null
+Dale,true,true,true,/productos-aval/dale/0097, null, null
+HelpModule,true,true,true,/ayuda/inicio, null, null
+HelpModuleHowToUse,true,true,true,/ayuda/como-utilizar-nuestros-servicios, null, null
+HelpModuleAttentionLines,true,true,true,/ayuda/lineas-de-atencion, null, null
+PaymentRecharge,true,true,true,/pagos/recargas, null, null
+PreApproved,false,true,true,/preaprobado/oferta, null, null
+PsePrivateZone,true,true,true,/pagos/creditos-tarjetas/pago/datos-pse, null, null
+DirectedPayments,true,true,true,/pagos-dirigidos, null, null
+TuPlus,true,true,true,/tuplus/inicio, null, null
+AdvertisingSpace,true,true,true,/comprobante?exito=true, null, null
+PaymentMultipleServices,true,true,true,/pagos-multiples/seleccionar, null, null
+PfmBudget,true,true,true,/presupuesto, null, null
+AdviserAval,true,true,true,/adviser-aval, null, null
+Tokenization,true,true,true,null, null, null
+TokenizationManager,true,true,true,/seguridad/gestor-de-tarjetas, null, null
+TransfersImmediate,true,true,true,/transferencias/a-tag-aval, null, null
+TransferCel2celSend,false,true,true,/transferencias/a-celular, null, null
+SpiKey,true,true,true,null, null, null
+RedirectToMfFreeInvestment,true,true,true,/libre-inversion,null,null
+DigitalHousing,true,true,true,/vivienda-digital, null, null
+CdtRedirect,false,false,false,/abrir-cdt-digital,null,null
+QrRedirectToAppMobile,false,false,false,null,null,null
+PseRecurrentPayment,true,true,false,null,null,null
+DigitalCreditCard,true,true,false,null,null,null
+NewBrandDesign,true,true,true,null,null,null
+DepositElectronic,true,true,false,null, null, null
+CreditCardRedirect,true,true,false,/tarjeta-credito, null, null
+CustomizeTagAval,false,true,true,null, null, null
+GmfExemption,true,false,false,/gravamen-movimientos-financieros/desde, null, null
+QrReadingEnabled,true,true,true,null, null, null
+pocketWithProfiability,false,true,true,null,null,null
+PilotRbmSpi,true,true,true,null,null,null
+InformedConsent,true,false,false,null, null, null
+PseNewFields,true,true,false,null, null, null
+PseErrorDownloadTicket,true,true,false,null, null, null
+EnableForgotPassEnrollmentNew,false,false,false,null, null, null
+NewEndPoints,false,false,false,null, null, null
+ChangeMethodsToPost,true,false,false,null, null, null
+ShowOnboardingSpi,false,true,true,null, null, null
+SpiKeysButton,true,false,false,/spi,null,null,
+BreBTransfers,true,false,false,/a-breb,null,null
+KeyBreB,true,false,false,/a-breb,null,null
+EnabledAppSyncCognito,true,false,false,null,null,null
+RedirectToMfSavingAccount,true,false,false,null, null, null
+ShowBankNameRbmByService,false,false,false,null, null, null
+ForeignDeposit,true,false,false,null, null, null
+TransferToContacts,false,true,true,/transferencias/a-contactos/desde,null,null
+PaymentCredits,true,true,true,null,null,null
+PaymentServices,true,true,true,null,null,null
+Products,true,true,true,null,null,null
+Pays,true,true,true,null,null,null
+Transfers,true,true,true,null,null,null
+Marketplace,true,true,true,null,null,null
+Contacts,true,true,true,null,null,null
+Security,true,true,true,null,null,null
+Pockets,true,true,true,null,null,null
+SecurityConfig,true,true,true,null,null,null
+SecurityChangePassword,true,true,true,null,null,null
+SecurityTravelerCustomer,true,true,true,null,null,null
+SecurityTokenizationManager,true,true,true,null,null,null
+CardBlock,true,true,true,null,null,null
+LockAccount,true,true,true,null,null,null
+CardConfig,true,true,true,null,null,null
+Documents,true,true,true,null,null,null
+CheckBooks,true,true,true,null,null,null
+MortgagePayment,true,true,true,null,null,null
+CreditCardBlock,true,true,true,null,null,null
+CreditCardConfig,true,true,true,null,null,null
+UpdateInstallments,true,true,true,null,null,null
+QuotaDistribution,true,true,true,null,null,null
+DigitalDebitCardEdit,true,true,true,null,null,null
+EnableTagBreb,true,true,true,null,null,null
+EnabledInformedConsentCloseModal,true,true,true,null,null,null
+

@@ -1,0 +1,136 @@
+{
+    "agreements": [
+        {
+            "orgIdType": "64",
+            "orgIdNum": "00002282",
+            "orgName": "ENEL MNR MM",
+            "industNum": "860063875",
+            "active": "true",
+            "category": "Prueba facilpass",
+            "noBillerMainReference": "00002282||Referencia para Pagos Electronicos|00002282|Referencia para Pagos Electronicos||0|0|999||18||1|||||",
+            "isInvGen": "false",
+            "urlImagen": "",
+            "city": "Bogota D.C."
+        },
+        {
+            "orgIdType": "64",
+            "orgIdNum": "00000878",
+            "orgName": "ENERGIA DE ARAUCA - ENELAR",
+            "industNum": "8920994993",
+            "active": "true",
+            "category": "Prueba facilpass",
+            "noBillerMainReference": "00000878||Digite su nÃºmero de Factura|00000878|Digite su nÃºmero de Factura||0|0|999||8||1|||||",
+            "isInvGen": "true",
+            "urlImagen": "https://qa.avvillas.com.co/imagesebpp/fact_emp_arauca.jpg",
+            "city": "Arauca"
+        },
+        {
+            "orgIdType": "199",
+            "orgIdNum": "00000043",
+            "orgName": "ENEL",
+            "industNum": "8600638758",
+            "active": "true",
+            "category": "Servicios publicos",
+            "noBillerMainReference": "00000043||Digite No de Cliente Incluido el No Despues del Guion No Incluir Ceros a la Izquierda|00000043|Digite No de Cliente Incluido el No Despues del Guion No Incluir Ceros a la Izquierda||0|0|999||8||1|||||",
+            "isInvGen": "true",
+            "urlImagen": "https://qa.avvillas.com.co/imagesebpp/00000043.jpg",
+            "city": "Bogota D.C."
+        },
+        {
+            "orgIdType": "155",
+            "orgIdNum": "00000923",
+            "orgName": "ASO COPROPIETARIOS PAR CERRITO",
+            "industNum": "8300843916",
+            "active": "true",
+            "category": "FONDO DE EMPLEADOS",
+            "noBillerMainReference": "00000923||NUMERO DE CASA|00000923|NUMERO DE CASA||0|1|999||18||1|1|0|0|0|",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Manizales"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00000959",
+            "orgName": "ASOC DE COPROP DEL EDIFICIO EX",
+            "industNum": "8050135860",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00000959||NUMERO APTO|00000959|NUMERO APTO||0|1|999||18||1|1|0|0|0|",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Bogotá"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00000954",
+            "orgName": "COPROPIEDAD EDIFICIO PORTOFINO",
+            "industNum": "8001557259",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00000954||Número de Apartamento |00000954|Número de Apartamento ||0|1|999||5||1|||||",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Bogotá"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00003167",
+            "orgName": "COPROPIEDAD EDIFICIO SAN MARTI",
+            "industNum": "8904019219",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00003167||NUMERO APARTAMENTO|00003167|NUMERO APARTAMENTO||0|1|999||18||1|1|0|0|0|",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Cali"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00003212",
+            "orgName": "D P COPROPIEDADES SAS",
+            "industNum": "9004183005",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00003212||TORRE Y APTO|00003212|TORRE Y APTO||0|1|999||18||1|1|0|0|0|",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Cali"
+        },
+        {
+            "orgIdType": "64",
+            "orgIdNum": "00000254",
+            "orgName": "GAS NTRAL EFIGAS NATURAL",
+            "industNum": "8002023953",
+            "active": "true",
+            "category": "Prueba facilpass",
+            "noBillerMainReference": "00000254||referencia factura|00000254|referencia factura||0|0|999||10||1|||||",
+            "isInvGen": "true",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Barranquilla"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00011917",
+            "orgName": "FC UIS Recargas Cafeterias",
+            "industNum": "8902035399",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00011917||CODIGO ALUMNO|00011917|CODIGO ALUMNO||0|0|999||18||1|||||",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Barranquilla"
+        },
+        {
+            "orgIdType": "196",
+            "orgIdNum": "00015890",
+            "orgName": "COLEGIO HUITAKA FUSAGASUGA",
+            "industNum": "79468528",
+            "active": "true",
+            "category": "Otros Servicios",
+            "noBillerMainReference": "00015890||IDENTIFICACION|00015890|IDENTIFICACION||0|0|999||18||1|||||",
+            "isInvGen": "false",
+            "urlImagen": "https://avvillas.com.co/imagesebpp/00000090.jpg",
+            "city": "Bogotá"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "userId": "1019100206",
+  "userIdType": "CC",
+  "traceabilityCode": "1794085",
+  "transactionDate": "2019-12-31T17:59:59.206",
+  "transactionCost": "1025.78",
+  "checkNumber": "23789452",
+  "serviceCode": "1234",
+  "organizationIdNumber": "812345678",
+  "paymentDescription": "Comercio Pruebas WSE 3.0 - Test Custom Facts",
+  "amount": "1000000",
+  "taxesAmount": "50.75",
+  "additionalReferences": ["ref1", "ref2","ref3"],
+  "typeIntegration": "false",
+  "payerId": "12345",
+  "beneficiaryId": "12345",
+  "fraudResponseCode": null,
+  "transactionStatus": "PENDING",
+  "redirectionUrl": "https://desarrollo.pse.com.co/SamplePPE3/GetTransactionInformation.aspx?ticketID=23789452"
+}

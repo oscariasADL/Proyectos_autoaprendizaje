@@ -1,0 +1,9 @@
+{
+  "txId": "1d201a32-5e76-4de2-8775-deffe196a790",
+  "challenge": "PUSH_ENHANCED",
+  "digitNumber": 8,
+  "prefixUrl": "/auth/v1/two-factor",
+  "retries": "0",
+  "deviceTokenCookie": "80d2f35e-f85f-475d-bffg-a016ghc6aedd",
+  "qrCode": "iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQMAAACZOPi8AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABDUlEQVRoge2VUZLDIAxDff9LqzuxJAxp9wLCaRliHj8aS6m6devfQtff5tkXH3XzCK/PeW/qPEsiqBO0m91cYkcuwSmqHqNkgiuMz24ewWw9ni+ZnEGoZCgL9aoMgidtpP6TRCRRK0kweZksjeCrQ3fl7PRcGOHztbOQYUT3hmAWsYBEomrFC6TVLlkYQZE2gEwggZKjipTkmo4KImgii4Ri1lqxLMKrTAXlTSKxwoXMmKBEQkNj7XRrd1QMIXm09iXAeBhhEooZ++mgMgh/i/VjwmB5LovgyqyFkkXTlEeo3WpZxfN2GEGRNDjqxRIt2PMud701jSDEaevpeXkugnDiojbNZK8w4tatn/UBTx5TZNr0E9gAAAAASUVORK5CYII="
+}

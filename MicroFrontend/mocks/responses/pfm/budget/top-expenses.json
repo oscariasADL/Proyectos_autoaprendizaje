@@ -1,0 +1,24 @@
+{
+  "endDate": "2024-01-30",
+  "startDate": "2024-01-01",
+  "topExpenses": [
+    {
+      "categoryId": "810001",
+      "categoryName": "Salarios",
+      "color": "#5bc7e1",
+      "total": 426778.18
+    },
+    {
+      "categoryId": "190001",
+      "categoryName": "Tecnología",
+      "color": "#0014a2",
+      "total": 246600.02
+    },
+    {
+      "categoryId": "200001",
+      "categoryName": "Transporte",
+      "color": "#5c2c73",
+      "total": 242860.04
+    }
+  ]
+}

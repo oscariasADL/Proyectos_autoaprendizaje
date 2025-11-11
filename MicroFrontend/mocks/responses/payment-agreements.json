@@ -1,0 +1,86 @@
+{
+	"agreements": [
+		{
+			"code": "00000109",
+			"name": "IMPUESTO VEHICULOS BOGOTA",
+			"additionalInfo": [],
+			"expectedReferenceDescription": "No. de Referencia del Recaudo",
+			"cityInfo": {
+				"code": "11001",
+				"name": "Bogota DC"
+			}
+		},
+		{
+			"name": "IDU Valorización",
+			"code": "5001",
+			"expectedReferenceDescription": "Valorizacion",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto Vehicular",
+			"code": "11001",
+			"expectedReferenceDescription": "Vehicular",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto Predial",
+			"code": "13001",
+			"expectedReferenceDescription": "Predial",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto de Renta",
+			"code": "76001",
+			"expectedReferenceDescription": "Renta",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto a la Riqueza",
+			"code": "50001",
+			"expectedReferenceDescription": "Riqueza",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "IDU Valorización Comercial",
+			"code": "8001",
+			"expectedReferenceDescription": "Comercial",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto Consumo",
+			"code": "68001",
+			"expectedReferenceDescription": "Consumo",
+			"additionalInfo": [
+				"",
+				""
+			]
+		},
+		{
+			"name": "Impuesto Patrimonio",
+			"code": "47001",
+			"expectedReferenceDescription": "Patrimonio",
+			"additionalInfo": [
+				"",
+				""
+			]
+		}
+	]
+}

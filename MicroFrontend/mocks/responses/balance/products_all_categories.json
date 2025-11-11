@@ -1,0 +1,287 @@
+{
+  "data": [
+    {
+      "typeProduct": 5,
+      "name": "Mis CDT",
+      "description": "Saldo total",
+      "balanceTotal": 16644.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "CDA",
+          "typeName": "CDT",
+          "numberProduct": "8191001002",
+          "id": 14,
+          "interest": 16644.00,
+          "effectiveRate": "0.03",
+          "expirationDate": "01-01-2020",
+          "startupValue": 7500500.00,
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 4,
+      "name": "Mis créditos",
+      "description": "Saldo por pagar",
+      "balanceTotal": 12748046.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "DLA",
+          "typeName": "Crédito",
+          "numberProduct": "12345872622",
+          "id": 5,
+          "forPayment": 12748046.00,
+          "nextPayment": 195904.00,
+          "expirationDate": "18-11-2019",
+          "bankCode": "0052",
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 2,
+      "name": "Mis Tarjetas de Crédito",
+      "description": "Cupo disponible",
+      "balanceTotal": 87097626.00,
+      "quantity": 3,
+      "products": [
+        {
+          "availableAdvanceBalance": 14844400,
+          "availableBarPercentage": 98.96,
+          "availablePurchasesBalance": 14844400,
+          "bankCode": "0052",
+          "cardType": "Platinum",
+          "creditLimit": 15000000,
+          "dueDate": "17-12-2019",
+          "expense": 155600,
+          "franchise": "VISA",
+          "id": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "minimumPayment": 155600,
+          "minimumPaymentReduced": 155600,
+          "notEmpty": true,
+          "numberProduct": "****6534",
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito"
+        },
+        {
+          "availableAdvanceBalance": 4156002,
+          "availableBarPercentage": 81.55,
+          "availablePurchasesBalance": 4893013,
+          "bankCode": "0052",
+          "cardType": "Gold",
+          "creditLimit": 6000000,
+          "dueDate": "30-04-2020",
+          "expense": 1106987,
+          "franchise": "MASTERCARD",
+          "id": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+          "minimumPayment": 1345458,
+          "minimumPaymentReduced": 1106987,
+          "notEmpty": true,
+          "numberProduct": "****0995",
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito"
+        },
+        {
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito",
+          "numberProduct": "****4650",
+          "id": 18,
+          "availablePurchasesBalance": 1000000.00,
+          "availableAdvanceBalance": 0.00,
+          "expense": 0.00,
+          "creditLimit": 0.00,
+          "dueDate": "18-06-2019",
+          "minimumPayment": 0.00,
+          "franchise": "VISA",
+          "cardType": "Platinum",
+          "notEmpty": true,
+          "availableBarPercentage": 0.00
+        }
+      ]
+    },
+    {
+      "typeProduct": 3,
+      "name": "Mis Créditos Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 81700000.00,
+      "quantity": 2,
+      "products": [
+        {
+          "type": "LOC",
+          "typeName": "Crédito Rotativo",
+          "numberProduct": "2115013000002593",
+          "id": 6,
+          "availableBalance": 81700000.00,
+          "expense": 100000.00,
+          "creditLimit": 81800000.00,
+          "dueDate": "04-09-2019",
+          "minimumPayment": 0.00,
+          "notEmpty": true,
+          "availableBarPercentage": 99.88
+        },
+        {
+          "type": "LOC",
+          "typeName": "Crédito Rotativo",
+          "numberProduct": "2115013000002573",
+          "id": 20,
+          "availableBalance": 0.00,
+          "expense": 50000000.00,
+          "creditLimit": 50000000.00,
+          "dueDate": "04-09-2019",
+          "minimumPayment": 0.00,
+          "notEmpty": true,
+          "availableBarPercentage": 99.88
+        }
+      ]
+    },
+    {
+      "typeProduct": 1,
+      "name": "Mis Cuentas",
+      "description": "Saldo total",
+      "balanceTotal": 155594830.76,
+      "quantity": 10,
+      "products": [
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939626",
+          "id": 3,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939592",
+          "id": 2,
+          "accountType": 1,
+          "balance": 12531529.97,
+          "others": 0.00,
+          "availableBalance": 12531529.97,
+          "inPockets": 0.00,
+          "balanceForOrdering": 12531529.97,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939550",
+          "id": 1,
+          "accountType": 1,
+          "balance": 741620.39,
+          "others": 0.00,
+          "availableBalance": 463370.39,
+          "inPockets": 278250.00,
+          "balanceForOrdering": 463370.39,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "008939634",
+          "id": 4,
+          "accountType": 1,
+          "balance": 9766984.79,
+          "others": 9766985.00,
+          "availableBalance": 0.00,
+          "inPockets": 0.00,
+          "balanceForOrdering": 0.00,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008437048",
+          "id": 12,
+          "accountType": 2,
+          "balance": 24582361.48,
+          "others": 0.00,
+          "availableBalance": 24582361.48,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 24582361.48,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008437063",
+          "id": 13,
+          "accountType": 2,
+          "balance": 2473570.71,
+          "others": 0.00,
+          "availableBalance": 2473570.71,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 2473570.71,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008437022",
+          "id": 11,
+          "accountType": 2,
+          "balance": 1250000.00,
+          "others": 1250000.00,
+          "availableBalance": 0.00,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 0.00,
+          "notEmpty": true
+        },
+        {
+          "type": "AFC",
+          "typeName": "Cuenta AFC",
+          "numberProduct": "008190405017",
+          "id": 10,
+          "accountType": 3,
+          "balance": 4250000.00,
+          "others": 0.00,
+          "availableHomePurchase": 4241289.37,
+          "freeDestinationBalance": 4239518.64,
+          "balanceForOrdering": 4241289.37,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "4208939626",
+          "id": 21,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "typeName": "Cuenta de Ahorros",
+          "numberProduct": "4708939626",
+          "id": 22,
+          "accountType": 1,
+          "balance": 33416921.14,
+          "others": 0.00,
+          "availableBalance": 33290921.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 6,
+      "name": "Puntos tuplús",
+      "description": "Total de puntos",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    }
+  ]
+}

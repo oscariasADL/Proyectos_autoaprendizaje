@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "typeProduct": 1,
+      "name": "Mis Cuentas",
+      "description": "Saldo total",
+      "balanceTotal": 89012988.48,
+      "quantity": 3,
+      "products": [
+        {
+          "type": "SDA",
+          "typeName": "Cambio el nickname!",
+          "numberProduct": "008939626",
+          "id": 3,
+          "accountType": 1,
+          "balance": 90000000.14,
+          "others": 0.00,
+          "availableBalance": 88000000.14,
+          "inPockets": 126000.00,
+          "balanceForOrdering": 33290921.14,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "typeName": "Cuenta Corriente",
+          "numberProduct": "008437048",
+          "id": 12,
+          "accountType": 2,
+          "balance": 90000000.48,
+          "others": 0.00,
+          "availableBalance": 88000000.48,
+          "overdraftApprovedQuota": 0.00,
+          "balanceForOrdering": 24582361.48,
+          "notEmpty": true
+        },
+        {
+          "type": "AFC",
+          "typeName": "Cuenta AFC",
+          "numberProduct": "008190405017",
+          "id": 10,
+          "accountType": 3,
+          "balance": 4250000.00,
+          "others": 0.00,
+          "availableHomePurchase": 4241289.37,
+          "freeDestinationBalance": 4239518.64,
+          "balanceForOrdering": 4241289.37,
+          "notEmpty": true
+        }
+      ]
+    }
+  ]
+}

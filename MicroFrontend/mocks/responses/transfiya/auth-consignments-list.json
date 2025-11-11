@@ -1,0 +1,16 @@
+{
+    "authorizations": [
+        {
+            "transactionId": "Pt5zoCTt8v9uwntAy22",
+            "amount": 120000,
+            "targetNumber": "313 8633455",
+            "note": "Lo del almuerzo"
+        },
+        {
+            "transactionId": "Pt5zoCTt8v9uwntAy67",
+            "amount": 70000,
+            "targetNumber": "313 8633455",
+            "note": "MIs lukas!"
+        }
+    ]
+}

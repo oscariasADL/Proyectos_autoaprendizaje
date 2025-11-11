@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "typeProduct": 2,
+      "name": "Mis Tarjetas de Crédito",
+      "description": "Cupo disponible",
+      "balanceTotal": 87097626.00,
+      "quantity": 3,
+      "products": [
+        {
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito",
+          "numberProduct": "****6691",
+          "id": 8,
+          "availablePurchasesBalance": 43247626.00,
+          "availableAdvanceBalance": 43247626.00,
+          "expense": 602374.00,
+          "creditLimit": 43850000.00,
+          "dueDate": "20-08-2019",
+          "minimumPayment": 0.00,
+          "franchise": "VISA",
+          "cardType": "Platinum",
+          "notEmpty": true,
+          "availableBarPercentage": 98.63
+        },
+        {
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito",
+          "numberProduct": "****3317",
+          "id": 9,
+          "availablePurchasesBalance": 43850000.00,
+          "availableAdvanceBalance": 43850000.00,
+          "expense": 0.00,
+          "creditLimit": 43850000.00,
+          "dueDate": "03-09-2019",
+          "minimumPayment": 0.00,
+          "franchise": "MASTERCARD",
+          "cardType": "Black",
+          "notEmpty": true,
+          "availableBarPercentage": 100.00
+        },
+        {
+          "type": "CCA",
+          "typeName": "Tarjeta de Crédito",
+          "numberProduct": "****4647",
+          "id": 7,
+          "availablePurchasesBalance": 0.00,
+          "availableAdvanceBalance": 0.00,
+          "expense": 0.00,
+          "creditLimit": 0.00,
+          "dueDate": "18-06-2019",
+          "minimumPayment": 0.00,
+          "franchise": "VISA",
+          "cardType": "Platinum",
+          "notEmpty": true,
+          "availableBarPercentage": 0.00
+        }
+      ]
+    }
+  ]
+}

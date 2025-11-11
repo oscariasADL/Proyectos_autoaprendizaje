@@ -1,0 +1,33 @@
+{
+  "code": "MVS-200",
+  "message": "OK",
+  "data": {
+    "type": "D",
+    "movements": [
+      {
+        "id": "510001_1",
+        "date": 1565758800000,
+        "description": "510001 - Transferencias de contactos 1",
+        "value": 1300000.00
+      },
+      {
+        "id": "510001_2",
+        "date": 1565931600000,
+        "description": "510001 - Transferencias de contactos 2",
+        "value": 6.0
+      },
+      {
+        "id": "510001_3",
+        "date": 1564722000000,
+        "description": "510001 - Transferencias de contactos 3",
+        "value": 3.0
+      },
+      {
+        "id": "510001_4",
+        "date": 1564722000000,
+        "description": "510001 - Transferencias de contactos 4",
+        "value": 4.0
+      }
+    ]
+  }
+}

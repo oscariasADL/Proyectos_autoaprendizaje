@@ -1,0 +1,287 @@
+{
+  "data": [
+    {
+      "typeProduct": 1,
+      "name": "Cuentas",
+      "description": "Saldo total",
+      "balanceTotal": 363036077.20,
+      "quantity": 7,
+      "products": [
+        {
+          "type": "SDA",
+          "id": "3",
+          "idUM": "3",
+          "numberProduct": "8942786",
+          "availableBalance": 185481776.40,
+          "currency": "COP",
+          "typeName": "Cuenta de Ahorros",
+          "accountType": 1,
+          "productTypeDetailKey": "BAJ",
+          "productTypeDetailValue": "BAJO-MONTO",
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "id": "2",
+          "idUM": "2",
+          "numberProduct": "8942703",
+          "availableBalance": 99123987.78,
+          "currency": "COP",
+          "typeName": "Cuenta de Ahorros",
+          "accountType": 1,
+          "productTypeDetailKey": "PRM",
+          "productTypeDetailValue": "PREMIUM",
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "id": "1",
+          "idUM": "1",
+          "numberProduct": "8942828",
+          "availableBalance": 3741620.39,
+          "currency": "COP",
+          "typeName": "Cuenta de Ahorros",
+          "accountType": 1,
+          "productTypeDetailKey": "DGT",
+          "productTypeDetailValue": "DIGITAL",
+          "notEmpty": true
+        },
+        {
+          "type": "SDA",
+          "id": "4",
+          "idUM": "4",
+          "numberProduct": "8962651",
+          "availableBalance": 0.00,
+          "currency": "COP",
+          "typeName": "Cuenta de Ahorros",
+          "accountType": 1,
+          "productTypeDetailKey": "DPT",
+          "productTypeDetailValue": "DEP DIGITAL",
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "id": "12",
+          "idUM": "12",
+          "numberProduct": "008438871",
+          "availableBalance": 71684104.16,
+          "availableBalanceWithOverdraft": 1200000.54,
+          "currency": "COP",
+          "typeName": "Cuenta Corriente",
+          "accountType": 2,
+          "notEmpty": true
+        },
+        {
+          "type": "DDA",
+          "id": "13",
+          "idUM": "13",
+          "numberProduct": "008437063",
+          "availableBalance": 2473570.71,
+          "availableBalanceWithOverdraft": 1300124,
+          "currency": "COP",
+          "typeName": "Cuenta Corriente",
+          "accountType": 2,
+          "notEmpty": true
+        },
+        {
+          "type": "AFC",
+          "id": "26",
+          "idUM": "26",
+          "numberProduct": "8190912010",
+          "balance": 6746208.87,
+          "availableBalance": 6746208.87,
+          "availableHomePurchase": 6746208.87,
+          "currency": "COP",
+          "typeName": "Cuenta AFC",
+          "accountType": 3,
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 5,
+      "name": "Inversiones",
+      "description": "Inversión inicial",
+      "balanceTotal": 50827172.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "CDA",
+          "id": "14",
+          "idUM": "14",
+          "numberProduct": "640200930008",
+          "availableBalance": 46758772.00,
+          "currency": "COP",
+          "typeName": "CDT",
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 9,
+      "name": "Mis Cesantías",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 2,
+      "name": "Tarjetas",
+      "description": "Cupo disponible",
+      "balanceTotal": 54999021.00,
+      "quantity": 4,
+      "products": [
+        {
+          "type": "CCA",
+          "id": "8",
+          "idUM": "8",
+          "numberProduct": "****9436",
+          "availablePurchasesBalance": -20000.00,
+          "currency": "COP",
+          "franchise": "VISA",
+          "cardType": "Platinum",
+          "typeName": "Tarjeta de Crédito",
+          "notEmpty": true
+        },
+        {
+          "type": "CCA",
+          "id": "9",
+          "idUM": "9",
+          "numberProduct": "****2166",
+          "availablePurchasesBalance": 43850000.00,
+          "currency": "COP",
+          "franchise": "MASTERCARD",
+          "cardType": "Black",
+          "typeName": "Tarjeta de Crédito",
+          "notEmpty": true
+        },
+        {
+          "type": "CCA",
+          "id": "19",
+          "idUM": "19",
+          "numberProduct": "****3318",
+          "availablePurchasesBalance": 43850000.00,
+          "currency": "COP",
+          "franchise": "MASTERCARD",
+          "cardType": "Black",
+          "typeName": "Tarjeta de Crédito",
+          "notEmpty": true
+        },
+        {
+          "type": "CCA",
+          "id": "23",
+          "idUM": "23",
+          "numberProduct": "****4651",
+          "availablePurchasesBalance": 6000000,
+          "currency": "COP",
+          "franchise": "MASTERCARD",
+          "cardType": "Black",
+          "typeName": "Tarjeta de Crédito",
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 4,
+      "name": "Créditos",
+      "description": "Saldo por pagar",
+      "balanceTotal": 918119.00,
+      "quantity": 1,
+      "products": [
+        {
+          "type": "DLA",
+          "id": "5",
+          "idUM": "5",
+          "numberProduct": "12345874742",
+          "availableBalance": 918119.00,
+          "currency": "COP",
+          "typeName": "Crédito",
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 10,
+      "name": "Facil Pass",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 7,
+      "name": "Mi Pension Obligatoria",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 3,
+      "name": "Rotativos",
+      "description": "Cupo disponible",
+      "balanceTotal": 1000000,
+      "quantity": 2,
+      "products": [
+        {
+          "type": "LOC",
+          "id": "17",
+          "idUM": "17",
+          "numberProduct": "2115013000000811",
+          "availableBalance": 1000000,
+          "currency": "COP",
+          "typeName": "Crédito Rotativo",
+          "notEmpty": true
+        },
+        {
+          "type": "LOC",
+          "id": "25",
+          "idUM": "25",
+          "numberProduct": "2115013000002594",
+          "availableBalance": 1001000,
+          "currency": "COP",
+          "typeName": "Crédito Rotativo",
+          "notEmpty": true
+        }
+      ]
+    },
+    {
+      "typeProduct": 8,
+      "name": "Mis Pensiones Voluntarias",
+      "description": "",
+      "balanceTotal": 0.00,
+      "quantity": 0,
+      "products": []
+    },
+    {
+      "typeProduct": 12,
+      "name": "Fiduciarias",
+      "description": "ABCD",
+      "balanceTotal": 3400000.00,
+      "quantity": 2,
+      "products": [
+        {
+          "type": "FID",
+          "id": "30",
+          "idUM": "30",
+          "numberProduct": "253000000069",
+          "availableBalance": 1200000.00,
+          "currency": "COP",
+          "typeName": "Fondo de inversión 1",
+          "notEmpty": true
+        },
+        {
+          "type": "FID",
+          "id": "31",
+          "idUM": "31",
+          "numberProduct": "353000000069",
+          "availableBalance": 2200000.00,
+          "currency": "COP",
+          "typeName": "Fondo de inversión 2",
+          "notEmpty": true
+        }
+      ]
+    }
+  ]
+}

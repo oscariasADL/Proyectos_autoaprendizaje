@@ -1,0 +1,12 @@
+{
+  "amount": "67350.01",
+  "amountType": "Valor_facturador_principal",
+  "serviceType": "CLARO HOGAR",
+  "invoiceNum": "80836703",
+  "nie": "80836703",
+  "biller": true,
+  "orgId": {
+    "orgIdNum": "84",
+    "optOrgIdNum": "0"
+  }
+}

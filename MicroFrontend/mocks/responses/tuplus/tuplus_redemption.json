@@ -1,0 +1,6 @@
+{
+    "txId": "ffkjskjlskjslks",
+    "prefixUrl": "/tuplus-service/v1/two-factor-auth/transaction-tuplus",
+    "challenge": "VIRTUAL",
+    "digitNumber": 8
+}
