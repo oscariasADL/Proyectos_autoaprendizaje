@@ -14,6 +14,9 @@
  * Learn more in https://angular.io/guide/browser-support
  */
 
+// Polyfill for querystring module (required for webpack-dev-server)
+(window as any).global = window;
+
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
