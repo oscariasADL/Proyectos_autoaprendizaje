@@ -1,0 +1,2410 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Designio Demo</title>
+    <link rel="stylesheet" href="/build/designio.css" />
+    <script type="module" src="/build/designio.esm.js"></script>
+    <script nomodule src="/build/designio.js"></script>
+    <script
+      type="module"
+      src="/build/bavv-designio/bavv-designio.esm.js"></script>
+    <script
+      type="module"
+      src="/build/bocc-designio/bocc-designio.esm.js"></script>
+    <script
+      type="module"
+      src="/build/bpop-designio/bpop-designio.esm.js"></script>
+    <script
+      type="module"
+      src="/build/sherpa/bbog-dig-dt-sherpa-lib.esm.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f8fa;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        display: grid;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .button-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .test-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+      .test-btn:hover {
+        background: #0056b3;
+      }
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0.5rem 0;
+        border-left: 3px solid #eee;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo de Designio Components</h1>
+    <!-- ✅ SECCIÓN DE FOOTER DESIGNIO -->
+    <div class="container">
+      <div class="card">
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BAVV - DEFAULT sin texto adicional</h2>
+              <br />
+              <br />
+              <designio-footer type="bavv" variant="default"> </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BAVV - DEFAULT con texto adicional</h2>
+              <br />
+              <br />
+              <designio-footer
+                type="bavv"
+                variant="default"
+                show-additional-text="true"
+                additional-text="Este es un texto adicional para el footer de AV Villas.">
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BAVV - LANDING con texto adicional y Fogafín</h2>
+              <br />
+              <br />
+              <designio-footer
+                type="bavv"
+                variant="landing"
+                show-additional-text="true"
+                additional-text="Tus depósitos están protegidos por Fogafín."
+                show-fogafin-logo="true">
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BAVV - LANDING sin texto adicional, con Fogafín</h2>
+              <br />
+              <br />
+              <designio-footer
+                type="bavv"
+                variant="landing"
+                show-fogafin-logo="true">
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BPOP - VOID</h2>
+              <designio-footer type="bpop"> </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BBOG - VOID</h2>
+              <designio-footer type="bbog"> </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BOCC – Footer sin íconos</h2>
+              <br />
+              <br />
+
+              <designio-footer type="bocc" element-id="bdo-footer-company">
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BOCC – icon-right</h2>
+              <br />
+              <br />
+
+              <designio-footer type="bocc" element-id="footer-bocc-1">
+                <img
+                  slot="icon-right"
+                  src="./assets/icon-right.svg"
+                  alt="Icono derecho" />
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BOCC – icon-left</h2>
+              <br />
+              <br />
+
+              <designio-footer type="bocc" element-id="footer-bocc-2">
+                <img
+                  slot="icon-left"
+                  src="./assets/icon-left.svg"
+                  alt="Icono izquierdo" />
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="demo-card">
+              <h2>BOCC – left-right</h2>
+              <br />
+              <br />
+
+              <designio-footer type="bocc" element-id="footer-bocc-3">
+                <img
+                  slot="icon-left"
+                  src="./assets/icon-left.svg"
+                  alt="Icono izquierdo" />
+                <img
+                  slot="icon-right"
+                  src="./assets/icon-right.svg"
+                  alt="Icono derecho" />
+              </designio-footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ SECCIÓN DE MODALES DESIGNIO -->
+    <div class="container">
+      <!-- Card: Botones para abrir modales BBOG -->
+      <div class="card">
+        <strong>Abrir Modales BBOG</strong>
+        <div class="button-row">
+          <button id="btn-modal-bbog" class="test-btn">Abrir Modal BBOG</button>
+          <button id="btn-modal-bbog-lg" class="test-btn">
+            Abrir Modal BBOG Large
+          </button>
+          <button id="btn-modal-bbog-noclose" class="test-btn">
+            Abrir Modal BBOG sin cerrar
+          </button>
+          <button id="btn-modal-bbog-custom" class="test-btn">
+            Abrir Modal BBOG Custom
+          </button>
+          <button id="btn-modal-bbog-id" class="test-btn">
+            Abrir Modal BBOG con ID
+          </button>
+        </div>
+        <!-- Modales BBOG -->
+        <designio-modal
+          id="modal-bbog"
+          type="bbog"
+          modal-title="Modal Genérico BBOG"
+          subtitle="Este es un modal genérico para Bogotá"
+          show-close-button="true">
+          <div slot="content">
+            <p>
+              🏛️ ¡Hola! Este es el contenido del modal genérico de BBOG usando
+              Sherpa.
+            </p>
+            <div
+              style="
+                background: #f0f8ff;
+                padding: 12px;
+                border-radius: 4px;
+                margin: 16px 0;
+              ">
+              <h4 style="margin: 0 0 8px 0">
+                🔧 Características del Modal BBOG
+              </h4>
+              <ul style="margin: 8px 0">
+                <li>
+                  Usa el componente <code>sp-ml-modal-normal</code> de Sherpa
+                </li>
+                <li>Slot interno <code>body-modal</code></li>
+                <li>Cierre automático en backdrop</li>
+                <li>Tamaños configurables: lg, md, sm</li>
+              </ul>
+            </div>
+            <p>
+              <strong
+                >✅ Integración exitosa con designio-modal adapter!</strong
+              >
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bbog-lg"
+          type="bbog"
+          modal-title="Modal BBOG Large"
+          subtitle="Este es un modal BBOG tamaño grande"
+          size="lg"
+          show-close-button="true">
+          <div slot="body-modal">
+            <p>Este modal tiene el tamaño <b>large</b> (size="lg").</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bbog-noclose"
+          type="bbog"
+          modal-title="Modal BBOG sin cerrar"
+          subtitle="No tiene botón de cerrar"
+          show-close-button="false">
+          <div slot="body-modal">
+            <p>
+              Este modal no muestra el botón de cerrar
+              (show-close-button="false").
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bbog-custom"
+          type="bbog"
+          modal-title="Modal BBOG Custom"
+          subtitle="Contenido HTML personalizado"
+          show-close-button="true">
+          <div slot="body-modal">
+            <h3 style="color: #007bff">¡Título personalizado!</h3>
+            <ul>
+              <li>Elemento 1</li>
+              <li>Elemento 2</li>
+              <li>Elemento 3</li>
+            </ul>
+            <p>Este modal tiene contenido HTML personalizado.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bbog-id"
+          type="bbog"
+          modal-title="Modal BBOG con ID"
+          subtitle="ID personalizado"
+          bbog-id-modal="modalBbogPersonalizado"
+          show-close-button="true">
+          <div slot="body-modal">
+            <p>
+              Este modal tiene el atributo
+              <b>bbog-id-modal="modalBbogPersonalizado"</b>.
+            </p>
+          </div>
+        </designio-modal>
+      </div>
+
+      <!-- Card: Botones para abrir modales BOCC -->
+      <div class="card">
+        <strong>Abrir Modales BOCC</strong>
+        <div class="button-row">
+          <button id="btn-modal-bocc" class="test-btn">Abrir Modal BOCC</button>
+          <button id="btn-modal-bocc-lg" class="test-btn">
+            Abrir Modal BOCC Large
+          </button>
+          <button id="btn-modal-bocc-noclose" class="test-btn">
+            Abrir Modal BOCC sin cerrar
+          </button>
+          <button id="btn-modal-bocc-actions" class="test-btn">
+            Abrir Modal BOCC con acciones
+          </button>
+          <button id="btn-modal-bocc-icon" class="test-btn">
+            Abrir Modal BOCC con ícono
+          </button>
+        </div>
+        <!-- Modales BOCC -->
+        <designio-modal
+          id="modal-bocc"
+          type="bocc"
+          modal-title="Modal Genérico BOCC"
+          subtitle="Este es un modal genérico para Occidente"
+          show-close="true">
+          <div slot="content">
+            <p>¡Hola! Este es el contenido del modal genérico de BOCC.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bocc-lg"
+          type="bocc"
+          modal-title="Modal BOCC Large"
+          subtitle="Este es un modal BOCC tamaño grande"
+          size="lg"
+          show-close="true">
+          <div slot="content">
+            <p>Este modal tiene el tamaño <b>large</b> (size="lg").</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bocc-noclose"
+          type="bocc"
+          modal-title="Modal BOCC sin cerrar"
+          subtitle="No tiene botón de cerrar"
+          show-close="false">
+          <div slot="content">
+            <p>
+              Este modal no muestra el botón de cerrar (show-close="false").
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bocc-actions"
+          type="bocc"
+          modal-title="Modal BOCC con acciones"
+          subtitle="Incluye botones primario y secundario"
+          show-close="true"
+          show-primary-button="true"
+          show-secondary-button="true">
+          <div slot="content">
+            <p>Este modal tiene botones de acción personalizados.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bocc-icon"
+          type="bocc"
+          modal-title="Modal BOCC con ícono"
+          subtitle="Incluye un ícono"
+          icon="information-info-1"
+          show-close="true">
+          <div slot="content">
+            <p>Este modal muestra un ícono en el encabezado.</p>
+          </div>
+        </designio-modal>
+      </div>
+
+      <!-- Card: Botones para abrir modales BAVV -->
+      <div class="card">
+        <strong>Abrir Modales BAVV</strong>
+        <div class="button-row">
+          <button id="btn-modal-bavv" class="test-btn">Abrir Modal BAVV</button>
+          <button id="btn-modal-bavv-lg" class="test-btn">
+            Abrir Modal BAVV Large
+          </button>
+          <button id="btn-modal-bavv-noclose" class="test-btn">
+            Abrir Modal BAVV sin cerrar
+          </button>
+          <button id="btn-modal-bavv-actions" class="test-btn">
+            Abrir Modal BAVV con acciones
+          </button>
+          <button id="btn-modal-bavv-icon" class="test-btn">
+            Abrir Modal BAVV con ícono
+          </button>
+          <button id="btn-modal-bavv-success" class="test-btn">
+            BAVV Success
+          </button>
+          <button id="btn-modal-bavv-warning" class="test-btn">
+            BAVV Warning
+          </button>
+          <button id="btn-modal-bavv-info" class="test-btn">BAVV Info</button>
+          <button id="btn-modal-bavv-left-title" class="test-btn">
+            Título Izquierda
+          </button>
+        </div>
+        <!-- Modales BAVV -->
+        <designio-modal
+          id="modal-bavv"
+          type="bavv"
+          modal-title="Modal Genérico BAVV"
+          subtitle="Este es un modal genérico para Villas"
+          show-close-button="true">
+          <div slot="content">
+            <p>¡Hola! Este es el contenido del modal genérico de BAVV.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-lg"
+          type="bavv"
+          modal-title="Modal BAVV Large"
+          subtitle="Este es un modal BAVV tamaño grande"
+          size="large"
+          show-close-button="true">
+          <div slot="content">
+            <p>Este modal tiene el tamaño <b>large</b> (size="large").</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-noclose"
+          type="bavv"
+          modal-title="Modal BAVV sin cerrar"
+          subtitle="No tiene botón de cerrar"
+          show-close-button="false">
+          <div slot="content">
+            <p>
+              Este modal no muestra el botón de cerrar
+              (show-close-button="false").
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-actions"
+          type="bavv"
+          modal-title="Modal BAVV con acciones"
+          subtitle="Incluye botones primario y secundario"
+          show-close-button="true"
+          show-primary-button="true"
+          show-secondary-button="true">
+          <div slot="content">
+            <p>Este modal tiene botones de acción personalizados.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-icon"
+          type="bavv"
+          modal-title="Modal BAVV con ícono"
+          subtitle="Incluye un ícono ilustrado"
+          illustrated-icon="ahorro"
+          show-close-button="true">
+          <div slot="content">
+            <p>Este modal muestra un ícono ilustrado en el encabezado.</p>
+          </div>
+        </designio-modal>
+        <!-- Modales BAVV adicionales de las stories -->
+        <designio-modal
+          id="modal-bavv-success"
+          type="bavv"
+          modal-title="¡Éxito en la Operación!"
+          subtitle="Proceso completado"
+          type="success"
+          illustrated-icon="ahorro"
+          show-close-button="false"
+          show-primary-button="true"
+          text-confirm-button="Continuar">
+          <div slot="content">
+            <p>Tu operación de ahorro se ha procesado correctamente.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-warning"
+          type="bavv"
+          modal-title="Advertencia Importante"
+          subtitle="Revisa la información"
+          type="warning"
+          illustrated-icon="advertencia"
+          show-close-button="true"
+          show-primary-button="true"
+          show-secondary-button="true"
+          text-confirm-button="Continuar"
+          text-cancel-button="Cancelar">
+          <div slot="content">
+            <p>
+              Hay algunos puntos importantes que debes revisar antes de
+              continuar.
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-info"
+          type="bavv"
+          modal-title="Información Importante"
+          subtitle="Datos relevantes"
+          type="info"
+          illustrated-icon="info"
+          align-title="left"
+          show-close-button="true">
+          <div slot="content">
+            <p>
+              Este modal muestra información relevante con el título alineado a
+              la izquierda.
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bavv-left-title"
+          type="bavv"
+          modal-title="Título a la Izquierda"
+          subtitle="Alineación modificada"
+          align-title="left"
+          show-close-button="true"
+          text-close-button="Salir">
+          <div slot="content">
+            <p>
+              Este modal tiene el título alineado a la izquierda usando
+              align-title="left".
+            </p>
+          </div>
+        </designio-modal>
+      </div>
+      <!--Card: Botones para abrir modales BPOP-->
+      <div class="card">
+        <strong>Abrir Modales BPOP</strong>
+        <div class="button-row">
+          <button id="btn-modal-bpop" class="test-btn">Abrir Modal BPOP</button>
+          <button id="btn-modal-bpop-lg" class="test-btn">
+            Abrir Modal BPOP Large
+          </button>
+          <button id="btn-modal-bpop-noclose" class="test-btn">
+            Abrir Modal BPOP sin cerrar
+          </button>
+          <button id="btn-modal-bpop-actions" class="test-btn">
+            Abrir Modal BPOP con acciones
+          </button>
+          <button id="btn-modal-bpop-icon" class="test-btn">
+            Abrir Modal BPOP con ícono
+          </button>
+          <button id="btn-modal-bpop-success" class="test-btn">
+            BPOP Success
+          </button>
+          <button id="btn-modal-bpop-error" class="test-btn">BPOP Error</button>
+          <button id="btn-modal-bpop-vertical" class="test-btn">
+            Botones Verticales
+          </button>
+          <button id="btn-modal-bpop-left-title" class="test-btn">
+            Título Izquierda
+          </button>
+        </div>
+        <!-- Modales BPOP -->
+        <designio-modal
+          id="modal-bpop"
+          type="bpop"
+          modal-title="Modal Genérico BPOP"
+          subtitle="Este es un modal genérico para Popular"
+          show-close-button="true">
+          <div slot="content">
+            <p>¡Hola! Este es el contenido del modal genérico de BPOP.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-lg"
+          type="bpop"
+          modal-title="Modal BPOP Large"
+          subtitle="Este es un modal BPOP tamaño grande"
+          size="large"
+          show-close-button="true">
+          <div slot="content">
+            <p>Este modal tiene el tamaño <b>large</b> (size="large").</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-noclose"
+          type="bpop"
+          modal-title="Modal BPOP sin cerrar"
+          subtitle="No tiene botón de cerrar"
+          show-close-button="false">
+          <div slot="content">
+            <p>
+              Este modal no muestra el botón de cerrar
+              (show-close-button="false").
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-actions"
+          type="bpop"
+          modal-title="Modal BPOP con acciones"
+          subtitle="Incluye botones primario y secundario"
+          show-close-button="true"
+          show-primary-button="true"
+          show-secondary-button="true">
+          <div slot="content">
+            <p>Este modal tiene botones de acción personalizados.</p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-icon"
+          type="bpop"
+          modal-title="Modal BPOP con ícono"
+          subtitle="Incluye un ícono ilustrado"
+          icon="vel-idea"
+          show-close-button="true">
+          <div slot="content">
+            <p>Este modal muestra un ícono ilustrado en el encabezado.</p>
+          </div>
+        </designio-modal>
+        <!-- Modales BPOP adicionales de las stories -->
+        <designio-modal
+          id="modal-bpop-success"
+          type="bpop"
+          modal-title="¡Operación Exitosa!"
+          subtitle="Todo se completó correctamente"
+          type="success"
+          icon="vel-success-hand"
+          show-close-button="false"
+          show-primary-button="true"
+          text-confirm-button="Continuar">
+          <div slot="content">
+            <p>
+              La operación se ha completado exitosamente. Puedes continuar con
+              el siguiente paso.
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-error"
+          type="bpop"
+          modal-title="Error en la Operación"
+          subtitle="Ha ocurrido un problema"
+          type="error"
+          icon="vel-error"
+          show-close-button="true"
+          show-primary-button="true"
+          show-secondary-button="true"
+          text-confirm-button="Reintentar"
+          text-cancel-button="Cancelar">
+          <div slot="content">
+            <p>
+              Se ha producido un error durante la operación. ¿Deseas reintentar
+              o cancelar?
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-vertical"
+          type="bpop"
+          modal-title="Botones Verticales"
+          subtitle="Dirección de botones cambiada"
+          direction-button="vertical"
+          show-primary-button="true"
+          show-secondary-button="true"
+          text-confirm-button="Confirmar"
+          text-cancel-button="Cancelar"
+          show-close-button="true">
+          <div slot="content">
+            <p>
+              Este modal tiene los botones organizados verticalmente usando
+              direction-button="vertical".
+            </p>
+          </div>
+        </designio-modal>
+        <designio-modal
+          id="modal-bpop-left-title"
+          type="bpop"
+          modal-title="Título a la Izquierda"
+          subtitle="Alineación modificada"
+          align-title="left"
+          show-close-button="true"
+          show-primary-button="true"
+          text-confirm-button="Aceptar"
+          text-close-button="Cerrar Ventana">
+          <div slot="content">
+            <p>
+              Este modal tiene el título alineado a la izquierda usando
+              align-title="left".
+            </p>
+          </div>
+        </designio-modal>
+      </div>
+    </div>
+
+    <!-- Botones DesignioButton -->
+    <div class="container">
+      <div class="card">
+        <strong style="font-size: 1.2rem"
+          >Muestra Estática de Botones (DesignioButton)</strong
+        >
+        <p>Cada fila muestra las variantes clave por entidad.</p>
+        <div>
+          <h4>BPOP (Popular) - Todas las Variantes y Propiedades</h4>
+          <h5>Todas las variantes disponibles:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Primary"
+              type="bpop"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Secondary"
+              type="bpop"
+              variant="secondary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Text Primary"
+              type="bpop"
+              variant="text-primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Text Secondary"
+              type="bpop"
+              variant="text-secondary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Text Hyperlink"
+              type="bpop"
+              variant="text-hiperlink"
+              size="regular"></designio-button>
+          </div>
+          <h5>Todos los tamaños disponibles:</h5>
+          <div class="button-row">
+            <designio-button
+              label="X-Small"
+              type="bpop"
+              variant="primary"
+              size="x-small"></designio-button>
+            <designio-button
+              label="Small"
+              type="bpop"
+              variant="primary"
+              size="small"></designio-button>
+            <designio-button
+              label="Regular"
+              type="bpop"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Large"
+              type="bpop"
+              variant="primary"
+              size="large"></designio-button>
+          </div>
+          <h5>Modos de ancho:</h5>
+          <div
+            class="button-row"
+            style="flex-direction: column; align-items: stretch; gap: 10px">
+            <designio-button
+              label="Default Width"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              width-mode="default"></designio-button>
+            <designio-button
+              label="Full Width"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              width-mode="full"></designio-button>
+          </div>
+          <h5>Con iconos:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Prefix Icon"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              prefix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Suffix Icon"
+              type="bpop"
+              variant="secondary"
+              size="regular"
+              suffix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Both Icons"
+              type="bpop"
+              variant="text-primary"
+              size="regular"
+              prefix-icon="vel-money"
+              suffix-icon="vel-money"></designio-button>
+          </div>
+          <h5>Estados de carga (loading):</h5>
+          <div class="button-row">
+            <designio-button
+              label="Primary Loading"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              is-loading="true"></designio-button>
+            <designio-button
+              label="Secondary Loading"
+              type="bpop"
+              variant="secondary"
+              size="regular"
+              is-loading="true"></designio-button>
+            <designio-button
+              label="Text Primary NO Loading"
+              type="bpop"
+              variant="text-primary"
+              size="regular"
+              is-loading="true"></designio-button>
+          </div>
+          <h5>Tipos de botón HTML:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Button Type"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              button-type="button"></designio-button>
+            <designio-button
+              label="Submit Type"
+              type="bpop"
+              variant="secondary"
+              size="regular"
+              button-type="submit"></designio-button>
+            <designio-button
+              label="Reset Type"
+              type="bpop"
+              variant="text-primary"
+              size="regular"
+              button-type="reset"></designio-button>
+          </div>
+          <h5>Estados especiales:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Normal"
+              type="bpop"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Disabled"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              is-disabled="true"></designio-button>
+            <designio-button
+              label="Con Name"
+              type="bpop"
+              variant="secondary"
+              size="regular"
+              name="bpop-submit-btn"></designio-button>
+            <designio-button
+              label="Custom ID"
+              type="bpop"
+              variant="text-primary"
+              size="regular"
+              id-button="bpop-custom-id"></designio-button>
+          </div>
+          <h5>Combinaciones de tamaños y variantes:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Large Primary"
+              type="bpop"
+              variant="primary"
+              size="large"
+              prefix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Small Secondary"
+              type="bpop"
+              variant="secondary"
+              size="small"
+              suffix-icon="vel-money"></designio-button>
+            <designio-button
+              label="X-Small Text"
+              type="bpop"
+              variant="text-primary"
+              size="x-small"></designio-button>
+          </div>
+          <h5>Combinaciones avanzadas:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Large Primary Full Width Loading"
+              type="bpop"
+              variant="primary"
+              size="large"
+              width-mode="full"
+              prefix-icon="vel-money"
+              suffix-icon="vel-money"
+              is-loading="true"
+              button-type="submit"
+              name="bpop-submit"
+              html-index="1"></designio-button>
+          </div>
+          <div class="button-row">
+            <designio-button
+              label="Small Text Hyperlink"
+              type="bpop"
+              variant="text-hiperlink"
+              size="small"
+              prefix-icon="vel-money"
+              button-type="button"
+              html-index="2"></designio-button>
+            <designio-button
+              label="Regular Secondary Full"
+              type="bpop"
+              variant="secondary"
+              size="regular"
+              width-mode="full"
+              suffix-icon="vel-money"
+              name="bpop-secondary-btn"></designio-button>
+          </div>
+          <h5>Todos los tamaños con iconos:</h5>
+          <div class="button-row">
+            <designio-button
+              label="X-Small + Icon"
+              type="bpop"
+              variant="primary"
+              size="x-small"
+              prefix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Small + Icon"
+              type="bpop"
+              variant="primary"
+              size="small"
+              prefix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Regular + Icon"
+              type="bpop"
+              variant="primary"
+              size="regular"
+              prefix-icon="vel-money"></designio-button>
+            <designio-button
+              label="Large + Icon"
+              type="bpop"
+              variant="primary"
+              size="large"
+              prefix-icon="vel-money"></designio-button>
+          </div>
+          <h5>Variantes de texto con diferentes tamaños:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Text Primary Large"
+              type="bpop"
+              variant="text-primary"
+              size="large"></designio-button>
+            <designio-button
+              label="Text Secondary Regular"
+              type="bpop"
+              variant="text-secondary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Text Hyperlink Small"
+              type="bpop"
+              variant="text-hiperlink"
+              size="small"></designio-button>
+          </div>
+        </div>
+        <div>
+          <h4>BAVV (Villas) - Todas las Variantes y Propiedades</h4>
+          <h5>Variantes principales:</h5>
+          <div class="button-row">
+            <designio-button
+              label="BAVV Primary"
+              type="bavv"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="BAVV Secondary"
+              type="bavv"
+              variant="secondary"
+              size="regular"></designio-button>
+            <designio-button
+              label="BAVV Tertiary"
+              type="bavv"
+              variant="tertiary"
+              size="regular"></designio-button>
+            <designio-button
+              label="BAVV Borderless"
+              type="bavv"
+              variant="borderless"
+              size="regular"></designio-button>
+          </div>
+          <h5>Diferentes tamaños:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Small"
+              type="bavv"
+              variant="primary"
+              size="small"></designio-button>
+            <designio-button
+              label="Regular"
+              type="bavv"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Large"
+              type="bavv"
+              variant="primary"
+              size="large"></designio-button>
+            <designio-button
+              label="X-Large"
+              type="bavv"
+              variant="primary"
+              size="x-large"></designio-button>
+          </div>
+          <h5>Modos de ancho:</h5>
+          <div
+            class="button-row"
+            style="flex-direction: column; align-items: stretch; gap: 10px">
+            <designio-button
+              label="Default Width"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              width-mode="default"></designio-button>
+            <designio-button
+              label="Modal Width"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              width-mode="modal"></designio-button>
+            <designio-button
+              label="Full Width"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              width-mode="full"></designio-button>
+          </div>
+          <h5>Con iconos:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Prefix Icon"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              prefix-icon="Attachment_03icon"></designio-button>
+            <designio-button
+              label="Suffix Icon"
+              type="bavv"
+              variant="secondary"
+              size="regular"
+              suffix-icon="Alert_02icon"></designio-button>
+            <designio-button
+              label="Both Icons"
+              type="bavv"
+              variant="tertiary"
+              size="regular"
+              prefix-icon="Attachment_03icon"
+              suffix-icon="Alert_02icon"></designio-button>
+          </div>
+          <h5>Tipos de botón HTML:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Button Type"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              button-type="button"></designio-button>
+            <designio-button
+              label="Submit Type"
+              type="bavv"
+              variant="secondary"
+              size="regular"
+              button-type="submit"></designio-button>
+            <designio-button
+              label="Reset Type"
+              type="bavv"
+              variant="terciary"
+              size="regular"
+              button-type="reset"></designio-button>
+          </div>
+          <h5>Estados especiales:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Normal"
+              type="bavv"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Disabled"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              is-disabled="true"></designio-button>
+            <designio-button
+              label="Con Name"
+              type="bavv"
+              variant="secondary"
+              size="regular"
+              name="bavv-submit-btn"></designio-button>
+            <designio-button
+              label="Custom ID"
+              type="bavv"
+              variant="terciary"
+              size="regular"
+              id-button="bavv-custom-id"></designio-button>
+          </div>
+          <h5>Combinaciones avanzadas:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Regular Primary Full"
+              type="bavv"
+              variant="primary"
+              size="regular"
+              width-mode="full"
+              prefix-icon="Attachment_03icon"
+              button-type="submit"
+              name="bavv-submit"
+              html-index="1"></designio-button>
+          </div>
+          <div class="button-row">
+            <designio-button
+              label="Small Borderless"
+              type="bavv"
+              variant="borderless"
+              size="small"
+              suffix-icon="Alert_02icon"
+              button-type="button"
+              html-index="2"></designio-button>
+            <designio-button
+              label="Auto Secondary"
+              type="bavv"
+              variant="secondary"
+              size="regular"
+              width-mode="auto"
+              prefix-icon="Attachment_03icon"
+              suffix-icon="Alert_02icon"
+              name="bavv-auto-btn"></designio-button>
+          </div>
+        </div>
+        <div>
+          <h4>BOCC (Occidente) - Todas las Variantes y Propiedades</h4>
+          <h5>Variantes primarias:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Primary"
+              type="bocc"
+              variant="primary"
+              size="M"></designio-button>
+            <designio-button
+              label="Primary White"
+              type="bocc"
+              variant="primaryWhite"
+              size="M"></designio-button>
+            <designio-button
+              label="Primary Danger"
+              type="bocc"
+              variant="primaryDanger"
+              size="M"></designio-button>
+          </div>
+          <h5>Variantes secundarias:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Secondary"
+              type="bocc"
+              variant="secondary"
+              size="M"></designio-button>
+            <designio-button
+              label="Secondary White"
+              type="bocc"
+              variant="secondaryWhite"
+              size="M"></designio-button>
+            <designio-button
+              label="Secondary Danger"
+              type="bocc"
+              variant="secondaryDanger"
+              size="M"></designio-button>
+          </div>
+          <h5>Variantes terciarias:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Tertiary"
+              type="bocc"
+              variant="tertiary"
+              size="M"></designio-button>
+            <designio-button
+              label="Tertiary White"
+              type="bocc"
+              variant="terciaryWhithe"
+              size="M"></designio-button>
+            <designio-button
+              label="Tertiary Variable"
+              type="bocc"
+              variant="tertiaryVariable"
+              size="M"></designio-button>
+            <designio-button
+              label="Tertiary Danger"
+              type="bocc"
+              variant="tertiaryDanger"
+              size="M"></designio-button>
+            <designio-button
+              label="Tertiary Danger Variable"
+              type="bocc"
+              variant="tertiaryDangerVariable"
+              size="M"></designio-button>
+          </div>
+          <h5>Variantes especiales:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Link"
+              type="bocc"
+              variant="link"
+              size="M"></designio-button>
+            <designio-button
+              label="Raised"
+              type="bocc"
+              variant="raised"
+              size="M"></designio-button>
+            <designio-button
+              label="Flat"
+              type="bocc"
+              variant="flat"
+              size="M"></designio-button>
+            <designio-button
+              label="Outline"
+              type="bocc"
+              variant="outline"
+              size="M"></designio-button>
+          </div>
+          <h5>Diferentes tamaños:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Small (S)"
+              type="bocc"
+              variant="primary"
+              size="S"></designio-button>
+            <designio-button
+              label="Medium (M)"
+              type="bocc"
+              variant="primary"
+              size="M"></designio-button>
+            <designio-button
+              label="Large (L)"
+              type="bocc"
+              variant="primary"
+              size="L"></designio-button>
+          </div>
+          <h5>Con iconos:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Prefix Icon"
+              type="bocc"
+              variant="primary"
+              size="M"
+              prefix-icon="warning-2"></designio-button>
+            <designio-button
+              label="Suffix Icon"
+              type="bocc"
+              variant="secondary"
+              size="M"
+              suffix-icon="warning-2"></designio-button>
+            <designio-button
+              label="Both Icons"
+              type="bocc"
+              variant="tertiary"
+              size="M"
+              prefix-icon="warning-2"
+              suffix-icon="warning-2"></designio-button>
+          </div>
+          <h5>Con divisor entre texto e icono:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Con Divisor"
+              type="bocc"
+              variant="primary"
+              size="L"
+              suffix-icon="warning-2"
+              divided="true"></designio-button>
+            <designio-button
+              label="Sin Divisor"
+              type="bocc"
+              variant="primary"
+              size="L"
+              suffix-icon="warning-2"
+              divided="false"></designio-button>
+          </div>
+          <h5>Estados especiales:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Normal"
+              type="bocc"
+              variant="primary"
+              size="regular"></designio-button>
+            <designio-button
+              label="Disabled"
+              type="bocc"
+              variant="primary"
+              size="regular"
+              is-disabled="true"></designio-button>
+            <designio-button
+              label="Con Name"
+              type="bocc"
+              variant="secondary"
+              size="regular"
+              name="bocc-submit-btn"></designio-button>
+            <designio-button
+              label="Custom ID"
+              type="bocc"
+              variant="terciary"
+              size="regular"
+              id-button="bocc-custom-id"></designio-button>
+          </div>
+          <h5>Combinaciones avanzadas:</h5>
+          <div class="button-row">
+            <designio-button
+              label="Large Primary Danger Full"
+              type="bocc"
+              variant="primaryDanger"
+              size="L"
+              prefix-icon="warning-2"
+              suffix-icon="warning-2"
+              divided="true"
+              button-type="submit"
+              name="bocc-danger-submit"
+              html-index="1"></designio-button>
+          </div>
+          <div class="button-row">
+            <designio-button
+              label="Small Tertiary Variable"
+              type="bocc"
+              variant="tertiaryVariable"
+              size="S"
+              suffix-icon="warning-2"
+              button-type="button"
+              html-index="2"></designio-button>
+            <designio-button
+              label="Medium Link Style"
+              type="bocc"
+              variant="link"
+              size="M"
+              prefix-icon="warning-2"
+              name="bocc-link-btn"></designio-button>
+          </div>
+          <h5>Variantes de peligro (Danger):</h5>
+          <div class="button-row">
+            <designio-button
+              label="Primary Danger"
+              type="bocc"
+              variant="primaryDanger"
+              size="M"
+              prefix-icon="warning-2"></designio-button>
+            <designio-button
+              label="Secondary Danger"
+              type="bocc"
+              variant="secondaryDanger"
+              size="M"
+              prefix-icon="warning-2"></designio-button>
+            <designio-button
+              label="Tertiary Danger"
+              type="bocc"
+              variant="tertiaryDanger"
+              size="M"
+              prefix-icon="warning-2"></designio-button>
+            <designio-button
+              label="Tertiary Danger Variable"
+              type="bocc"
+              variant="tertiaryDangerVariable"
+              size="M"
+              prefix-icon="warning-2"></designio-button>
+          </div>
+        </div>
+        <div>
+          <h4>BBOG (Bogotá) - Ejemplos Básicos</h4>
+          <div class="button-row">
+            <designio-button
+              label="BBOG Simple"
+              type="bbog"
+              variant="primary"
+              size="large"></designio-button>
+            <designio-button
+              label="BBOG Disabled"
+              type="bbog"
+              variant="primary"
+              size="large"
+              is-disabled="true"></designio-button>
+            <designio-button
+              label="BBOG Submit"
+              type="bbog"
+              variant="primary"
+              size="large"
+              button-type="submit"
+              name="bbog-submit"></designio-button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Inputs de Villas (BAVV):</strong>
+        <h4>Input con ícono a la izquierda:</h4>
+        <designio-input
+          entity="bavv"
+          label="Nombre completo"
+          placeholder="Ingresa tu nombre completo"
+          bavv-icon-name="Alert_02icon"
+          bavv-icon-position="left"
+          bavv-helper="Tu nombre completo"
+          bavv-name="fullname"
+          value="María"
+          id-prop="bavv-fullname"></designio-input>
+        <h4>Input con ícono a la derecha:</h4>
+        <designio-input
+          entity="bavv"
+          label="Número de teléfono"
+          placeholder="Ingresa tu número de teléfono"
+          bavv-icon-name="Alert_02icon"
+          bavv-icon-position="right"
+          bavv-helper="Tu número de celular o casa"
+          bavv-name="phone"
+          value="123456"
+          bavv-input-mode-prop="numeric"
+          bavv-max-length="10"
+          bavv-min-length="1"
+          id-prop="bavv-phone"></designio-input>
+        <h4>Input con botón:</h4>
+        <designio-input
+          entity="bavv"
+          label="Correo electrónico"
+          placeholder="Ingresa tu correo electrónico"
+          bavv-helper="Tu correo electrónico"
+          bavv-name="email"
+          value="prueba@prueba.com"
+          bavv-button-text="Guardar"
+          id-prop="bavv-email"></designio-input>
+      </div>
+
+      <div class="card">
+        <strong>Input de Occidente (BOCC):</strong>
+        <designio-input
+          entity="bocc"
+          label="Número de teléfono"
+          value="001122"
+          id-prop="bocc-phone"
+          bocc-field-status='{ "icon": "warning-2", "typeStatus": "error", "message": "Campo duplicado"}'
+          bocc-maximum-decimals-allowed="2"
+          bocc-prefix-text="+57"></designio-input>
+      </div>
+
+      <div class="card">
+        <strong>Inputs de Popular (BPOP):</strong>
+        <h4>Input con ícono a la izquierda:</h4>
+        <designio-input
+          entity="bpop"
+          label="Nombre completo"
+          placeholder="Ingresa tu nombre completo"
+          bpop-icon-name="vel-money"
+          bpop-icon-position="left"
+          bpop-helper="Tu nombre completo"
+          bpop-name="fullname"
+          id-prop="bpop-fullname"></designio-input>
+        <h4>Input con ícono a la derecha:</h4>
+        <designio-input
+          entity="bpop"
+          label="Número de teléfono"
+          placeholder="Ingresa tu número de teléfono"
+          bpop-icon-name="vel-money"
+          bpop-icon-position="right"
+          bpop-helper="Tu número de celular o casa"
+          bpop-name="phone"
+          value="123456"
+          bpop-input-mode-prop="numeric"
+          bpop-max-length="10"
+          bpop-min-length="1"
+          id-prop="bpop-phone"></designio-input>
+        <h4>Input con botón:</h4>
+        <designio-input
+          entity="bpop"
+          label="Correo electrónico"
+          bpop-helper="Tu correo electrónico"
+          bpop-name="email"
+          value="prueba@prueba.com"
+          bpop-button-text="Guardar"
+          id-prop="bpop-email"></designio-input>
+      </div>
+
+      <div class="card">
+        <strong>Input de Bogotá (BBOG):</strong>
+        <designio-input
+          entity="bbog"
+          type="text"
+          label="Nombre completo"
+          placeholder="Ingresa el nombre completo"
+          id-prop="bbog-fullname"></designio-input>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <strong>Loader BOCC</strong>
+        <bdo-button
+          id="btnOpenLoading"
+          type-button="raised"
+          text-button="Mostrar loader bocc"></bdo-button>
+        <br />
+        <bdo-button
+          id="btnOpenLoadingWithMessage"
+          type-button="raised"
+          text-button="Mostrar loader bocc con mensaje"></bdo-button>
+        <designio-loader id="openLoading" type="bocc"> </designio-loader>
+      </div>
+      <div class="card">
+        <strong>Loader BAVV</strong>
+        <bavv-designio-button variant="primary" id="btnOpenBavvLoader"
+          >Mostrar loader bavv</bavv-designio-button
+        >
+        <designio-loader id="idLoaderVillas" type="bavv"> </designio-loader>
+      </div>
+      <div class="card">
+        <strong>Loader BBOG</strong>
+        <bavv-designio-button variant="primary" id="bbog-btn"
+          >Mostrar loader bbog</bavv-designio-button
+        >
+        <designio-loader
+          id="idLoaderBbog"
+          type="bbog"
+          autoPlay="true"
+          idEl="bbog-loader-demo"
+          loop="true">
+        </designio-loader>
+      </div>
+      <div class="card">
+        <strong>Loader BPOP</strong>
+        <designio-loader
+          id="idLoaderBpop"
+          type="bpop"
+          isopen="true"
+          mainText="Estamos procesando tu solicitud"
+          size="large">
+        </designio-loader>
+      </div>
+
+      <div class="card">
+        <strong>Badges:</strong>
+        <h4>Badges de los bancos:</h4>
+        <div>
+          <designio-badge
+            type="bpop"
+            label="banco popular"
+            idBadge="bpop-badge"
+            variant="success"
+            prefix-icon="vel-subtract-circle"></designio-badge>
+          <designio-badge
+            type="bavv"
+            label="banco villas"
+            idBadge="bavv-badge"
+            variant="info"></designio-badge>
+          <designio-badge
+            type="bocc"
+            label="Banco Occidente"
+            id-badge="bocc-badge"
+            variant="orange"
+            prefix-icon="accessibility-2"
+            is-visible="true"></designio-badge>
+          <designio-badge
+            type="bbog"
+            label="banco bogotá"
+            idBadge="bbog-badge"
+            variant="info"
+            isSolid="false"></designio-badge>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <strong>Test Dropdown</strong>
+        <!-- :BPOP -->
+        <div class="section">
+          <strong>Banco Popular — <code>type="bpop"</code></strong>
+          <div class="grid">
+            <div class="demo-card">
+              <h3>Normal</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Popular"
+                placeholder="Seleccione"
+                options='[
+                  {"label":"Opción A","value":"A"},
+                  {"label":"Opción B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Helper Text (info)</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Con Ayuda"
+                helper-text="Seleccione una opción"
+                options='[
+                  {"label":"Uno","value":"1"},
+                  {"label":"Dos","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Error</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Campo con error"
+                helper-text="Dato inválido"
+                state="error"
+                options='[
+                  {"label":"Opción X","value":"x"},
+                  {"label":"Opción Y","value":"y"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Warning</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Advertencia"
+                helper-text="Revise la selección"
+                state="warning"
+                options='[
+                  {"label":"A","value":"A"},
+                  {"label":"B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Disabled</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Deshabilitado"
+                is-disabled="true"
+                options='[
+                  {"label":"No disponible","value":"none"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Size Large</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Grande"
+                size="large"
+                options='[
+                  {"label":"L1","value":"1"},
+                  {"label":"L2","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Popup Mode (Mobile)</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Popup Dropdown"
+                is-pop-up="true"
+                options='[
+                  {"label":"Pop1","value":"1"},
+                  {"label":"Pop2","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Con Valor Preseleccionado</h3>
+              <designio-dropdown
+                type="bpop"
+                label="Valor Inicial"
+                value="B"
+                options='[
+                  {"label":"A","value":"A"},
+                  {"label":"B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="section">
+              <h3>Evento</h3>
+              <designio-dropdown
+                id="bpopTest"
+                type="bpop"
+                label="Banco Popular"
+                helper-text="Selecciona un color"
+                placeholder="Selecciona"
+                options='[
+                  {"label":"Rojo","name":"Rojo","value":"R"},
+                  {"label":"Amarillo","value":"A"},
+                  {"label":"Verde","value":"V"}
+                ]'>
+              </designio-dropdown>
+              <p>
+                <strong>Valor seleccionado:</strong>
+                <span id="bpopResult">N/A</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- :BOCC -->
+        <div class="section">
+          <strong>Banco Occidente — <code>type="bocc"</code></strong>
+          <div class="grid">
+            <div class="demo-card">
+              <h3>Normal</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Occidente"
+                placeholder="Seleccione"
+                options='[
+                  {"label":"Opción A","value":"A"},
+                  {"label":"Opción B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Helper Text</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Con Ayuda"
+                helper-text="Seleccione una opción"
+                options='[
+                  {"label":"Uno","value":"1"},
+                  {"label":"Dos","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Error</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Campo con error"
+                helper-text="Dato inválido"
+                state="error"
+                options='[
+                  {"label":"Opción X","value":"x"},
+                  {"label":"Opción Y","value":"y"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Disabled</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Bloqueado"
+                is-disabled="true"
+                options='[
+                  {"label":"Inactivo","value":"none"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Con Valor Preseleccionado</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Valor Inicial"
+                value="A"
+                options='[
+                  {"label":"A","value":"A"},
+                  {"label":"B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Texto Largo</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Dirección completa"
+                options='[
+                  {
+                    "label":"Avenida siempre viva 742 Springfield Departamento Zona Oeste",
+                    "value":"1"
+                  },
+                  {
+                    "label":"Carrera 9 con calle 45 sector chapinero alto",
+                    "value":"2"
+                  }
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Sin Opciones</h3>
+              <designio-dropdown
+                type="bocc"
+                label="Vacío"
+                placeholder="No hay datos"
+                options="[]">
+              </designio-dropdown>
+            </div>
+
+            <div class="section">
+              <h3>Evento</h3>
+              <designio-dropdown
+                id="boccTest"
+                type="bocc"
+                label="Banco de Occidente"
+                helper-text="Selecciona una opción"
+                placeholder="Selecciona"
+                options='[
+                  {"label":"Verde","value":"V"},
+                  {"label":"Rojo","value":"R"},
+                  {"label":"Azul","value":"A"}
+                ]'>
+              </designio-dropdown>
+              <p>
+                <strong>Valor seleccionado:</strong>
+                <span id="boccResult">N/A</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- :BAVV -->
+        <div class="section">
+          <strong>Banco AV Villas — <code>type="bavv"</code></strong>
+          <div class="grid">
+            <div class="demo-card">
+              <h3>Normal</h3>
+              <designio-dropdown
+                type="bavv"
+                label="AV Villas"
+                placeholder="Seleccione"
+                options='[
+                  {"label":"Opción A","value":"A"},
+                  {"label":"Opción B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+            <br />
+            <br />
+
+            <div class="demo-card">
+              <h3>Requerido</h3>
+              <designio-dropdown
+                type="bavv"
+                label="AV Villas"
+                placeholder="Seleccione"
+                helper-text="Dato inválido"
+                state="error"
+                is-required="true"
+                options='[
+                  {"label":"Opción A","value":"A"},
+                  {"label":"Opción B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+            <br />
+            <br />
+
+            <div class="demo-card">
+              <h3>Helper Text</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Con Ayuda"
+                helper-text="Seleccione un valor"
+                options='[
+                  {"label":"Uno","value":"1"},
+                  {"label":"Dos","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+            <br />
+            <br />
+
+            <div class="demo-card">
+              <h3>Error</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Error"
+                helper-text="Dato inválido"
+                state="error"
+                options='[
+                  {"label":"X","value":"x"},
+                  {"label":"Y","value":"y"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <br />
+            <br />
+            <div class="demo-card">
+              <h3>Disabled</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Deshabilitado"
+                is-disabled="true"
+                options='[
+                  {"label":"No disponible","value":"none"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Con Valor Preseleccionado</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Valor Inicial"
+                value="B"
+                options='[
+                  {"label":"A","value":"A"},
+                  {"label":"B","value":"B"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Texto Largo</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Dirección larga"
+                options='[
+                  {
+                    "label":"Avenida Siempre Viva 742, Springfield, Sector Oeste",
+                    "value":"1"
+                  },
+                  {
+                    "label":"Carrera 9 con calle 45 Chapinero Alto Bogotá",
+                    "value":"2"
+                  }
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Sin opciones</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Vacío"
+                placeholder="No hay datos"
+                options="[]">
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Popup Mode</h3>
+              <designio-dropdown
+                type="bavv"
+                label="Modo Popup"
+                is-pop-up="true"
+                options='[
+                  {"label":"Popup 1","value":"1"},
+                  {"label":"Popup 2","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="section">
+              <h3>Evento</h3>
+              <designio-dropdown
+                id="bavvTest"
+                type="bavv"
+                label="Banco AV Villas"
+                helper-text="Seleccione una opción"
+                placeholder="Selecciona"
+                options='[
+                  {"label":"Opción A","value":"A"},
+                  {"label":"Opción B","value":"B"},
+                  {"label":"Opción C","value":"C"}
+                ]'>
+              </designio-dropdown>
+              <br />
+              <br />
+              <p>
+                <strong>Valor seleccionado:</strong>
+                <span id="bavvResult">N/A</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- :BBOG -->
+        <div class="section">
+          <strong>Test Dropdown Bogotá (sp-at-dropdown)</strong>
+
+          <div class="grid">
+            <div class="demo-card">
+              <h3>Normal</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Label Normal"
+                placeholder="Selecciona"
+                options='[
+                  {"label":"Opción 1","value":"1000"},
+                  {"label":"Opción 2","value":"1001"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Help State</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Con ayuda"
+                placeholder="Selecciona"
+                is-help="true"
+                helper-text="Mensaje de ayuda"
+                options='[
+                  {"label":"A","value":"1"},
+                  {"label":"B","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Error</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Error"
+                state="error"
+                helper-text="Dato inválido"
+                options='[
+                  {"label":"A","value":"1"},
+                  {"label":"B","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Warning</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Advertencia"
+                state="warning"
+                helper-text="Verifica tu selección"
+                options='[
+                  {"label":"A","value":"1"},
+                  {"label":"B","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Disabled</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Inactivo"
+                is-disabled="true"
+                options='[
+                  {"label":"No disponible","value":"0"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="demo-card">
+              <h3>Tooltip</h3>
+              <designio-dropdown
+                type="bbog"
+                label="Con tooltip"
+                tooltip="true"
+                tooltip-header="Título"
+                tooltip-message="Subtítulo del tooltip"
+                options='[
+                  {"label":"Uno","value":"1"},
+                  {"label":"Dos","value":"2"}
+                ]'>
+              </designio-dropdown>
+            </div>
+
+            <div class="section">
+              <h3>Evento</h3>
+              <designio-dropdown
+                id="bbogTest"
+                type="bbog"
+                label="Banco de Bogotá"
+                helper-text="Selecciona una opción"
+                placeholder="Selecciona"
+                options='[
+                  {"label":"Opción 1","value":"1000"},
+                  {"label":"Opción 2","value":"1001"},
+                  {"label":"Opción 3","value":"1002"}
+                ]'>
+              </designio-dropdown>
+              <p>
+                <strong>Valor seleccionado:</strong>
+                <span id="bbogResult">N/A</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <strong>Card BOCC</strong>
+        <designio-card
+          type="bocc"
+          id-card="bocc-card-1"
+          id-header="bocc-card-header"
+          id-footer="bocc-card-footer"
+          display-header="true"
+          display-footer="true"
+          border-type="info"
+          body-text="Texto de ejemplo para la card bocc"
+          header-text="Encabezado de la card bocc"
+          footer-text="Pie de página de la card bocc">
+        </designio-card>
+      </div>
+      <div class="card">
+        <strong>Card BOCC</strong>
+        <designio-card
+          type="bocc"
+          id-card="bocc-card-1"
+          id-header="bocc-card-header"
+          id-footer="bocc-card-footer"
+          display-header="true"
+          display-footer="true"
+          border-type="info"
+          header-text="Encabezado por defecto"
+          body-text="Texto por defecto en el cuerpo"
+          footer-text="Footer por defecto">
+          <div slot="header-card">
+            <h2>Header de la card</h2>
+          </div>
+          <div slot="body-card">
+            <p>Este es el cuerpo BOCC con contenido dinámico.</p>
+            <designio-button
+              label="boton secundario"
+              type="bocc"
+              variant-bocc="secondary"
+              size-bocc="M"></designio-button>
+          </div>
+          <div slot="footer-card">
+            <designio-button
+              label="footer"
+              type="bocc"
+              variant-bocc="primary"
+              size-bocc="M"></designio-button>
+          </div>
+        </designio-card>
+      </div>
+      <div class="card">
+        <strong>Card BAVV</strong>
+        <designio-card
+          type="bavv"
+          card-padding="12"
+          card-have-border="true"
+          body-text="Texto de ejemplo para la card bavv">
+        </designio-card>
+      </div>
+      <div class="card">
+        <strong>Card BBOG tipo acceso</strong>
+        <designio-card
+          type="bbog"
+          card-type="access"
+          has-buttons="true"
+          button-text="Boton"
+          is-tag-solid="false"
+          title-card="Título de la card bbog a multiples lineas segun el tamaño"
+          title-has-one-line="false"
+          tag-label="Tag"
+          body-text="Texto de ejemplo para la card bbog">
+        </designio-card>
+        <strong>Card BBOG tipo notificación</strong>
+        <designio-card
+          type="bbog"
+          card-type="notification"
+          id-card="id-card-1"
+          secondary-text="Hace 1 hora"
+          button-text="Boton"
+          button-text-secondary="Boton Secundario"
+          has-buttons="true"
+          user-options='[{"icon":"ico-transfer","label":"Valor 1","value":"opt1"}]'
+          title-card="Título de la card bbog"
+          body-text="Texto de ejemplo para la card bbog de tipo notificación">
+        </designio-card>
+      </div>
+    </div>
+
+    <script>
+      // ✅ SCRIPT PARA LOS MODALES DESIGNIO - SIN SETTIMEOUT
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('🔄 DOM cargado, configurando modales inmediatamente...');
+
+        // Modal BOCC
+        const btnModalBocc = document.getElementById('btn-modal-bocc');
+        const modalBocc = document.getElementById('modal-bocc');
+
+        console.log('🔍 Modal BOCC elementos:', {
+          button: !!btnModalBocc,
+          modal: !!modalBocc
+        });
+
+        if (btnModalBocc && modalBocc) {
+          btnModalBocc.addEventListener('click', async () => {
+            console.log('🔘 Abriendo modal BOCC...');
+            try {
+              await modalBocc.openModal();
+              console.log('✅ Modal BOCC abierto');
+            } catch (error) {
+              console.error('❌ Error modal BOCC:', error);
+            }
+          });
+        }
+
+        // Modal BAVV
+        const btnModalBavv = document.getElementById('btn-modal-bavv');
+        const modalBavv = document.getElementById('modal-bavv');
+
+        console.log('🔍 Modal BAVV elementos:', {
+          button: !!btnModalBavv,
+          modal: !!modalBavv
+        });
+
+        if (btnModalBavv && modalBavv) {
+          btnModalBavv.addEventListener('click', async () => {
+            try {
+              await modalBavv.openModal();
+              console.log('✅ Modal BAVV abierto');
+            } catch (error) {
+              console.error('❌ Error modal BAVV:', error);
+            }
+          });
+        }
+
+        // Modal BPOP
+        const btnModalBpop = document.getElementById('btn-modal-bpop');
+        const modalBpop = document.getElementById('modal-bpop');
+
+        console.log('🔍 Modal BPOP elementos:', {
+          button: !!btnModalBpop,
+          modal: !!modalBpop
+        });
+
+        if (btnModalBpop && modalBpop) {
+          btnModalBpop.addEventListener('click', async () => {
+            console.log('🔘 Abriendo modal BPOP...');
+            try {
+              await modalBpop.openModal();
+              console.log('✅ Modal BPOP abierto');
+            } catch (error) {
+              console.error('❌ Error modal BPOP:', error);
+            }
+          });
+        }
+
+        // Modal BBOG
+        const btnModalBbog = document.getElementById('btn-modal-bbog');
+        const modalBbog = document.getElementById('modal-bbog');
+
+        console.log('🔍 Modal BBOG elementos:', {
+          button: !!btnModalBbog,
+          modal: !!modalBbog
+        });
+
+        if (btnModalBbog && modalBbog) {
+          btnModalBbog.addEventListener('click', async () => {
+            try {
+              await modalBbog.openModal();
+              console.log('✅ Modal BBOG abierto');
+            } catch (error) {
+              console.error('❌ Error modal BBOG:', error);
+            }
+          });
+        }
+
+        // ✅ VERIFICAR CUSTOM ELEMENTS INMEDIATAMENTE
+        console.log('🔍 === VERIFICACIÓN INMEDIATA DE CUSTOM ELEMENTS ===');
+        console.log(
+          'designio-modal definido:',
+          !!customElements.get('designio-modal')
+        );
+        console.log('bdo-modal definido:', !!customElements.get('bdo-modal'));
+        console.log('bavv-modal definido:', !!customElements.get('bavv-modal'));
+        console.log('bpop-modal definido:', !!customElements.get('bpop-modal'));
+        console.log(
+          'sherpa-modal definido:',
+          !!customElements.get('sherpa-modal')
+        );
+      });
+
+      // ✅ SCRIPTS EXISTENTES PARA RADIO BUTTONS
+      const radio = document.getElementById('demo-radio');
+      const controls = [
+        'type',
+        'label',
+        'value',
+        'name',
+        'isChecked',
+        'isDisabled',
+        'hasLabel',
+        'hasContainer',
+        'visualState',
+        'sizeRadio',
+        'invert'
+      ];
+
+      // Función para actualizar el componente a partir del input
+      const updateRadio = () => {
+        controls.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) {
+            const value = el.type === 'checkbox' ? el.checked : el.value;
+            radio[id] = value;
+          }
+        });
+      };
+
+      // Escuchar eventos de input
+      controls.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', updateRadio);
+        }
+      });
+
+      // Inicializar valores
+      updateRadio();
+
+      // ✅ SCRIPTS EXISTENTES PARA LOADERS
+      const btnOpenLoadingWithMessage = document.querySelector(
+        '#btnOpenLoadingWithMessage'
+      );
+      const btnOpenLoading = document.querySelector('#btnOpenLoading');
+      const openLoading = document.querySelector('#openLoading');
+      btnOpenLoading.addEventListener('click', function () {
+        openLoading.isopen = true;
+        openLoading.displayMessage = false;
+      });
+      btnOpenLoadingWithMessage.addEventListener('click', () => {
+        openLoading.isopen = true;
+        openLoading.displayMessage = true;
+        openLoading.mainText = 'Espera un momento';
+        openLoading.secondaryText = 'Estamos procesando tu solicitud';
+      });
+
+      const btnOpenLoadingBavv = document.querySelector('#btnOpenBavvLoader');
+      const openLoadingBavv = document.querySelector('#idLoaderVillas');
+      btnOpenLoadingBavv.addEventListener('click', function () {
+        console.log(openLoadingBavv);
+        openLoadingBavv.isopen = true;
+        openLoadingBavv.isMainSpinner = true;
+        openLoadingBavv.mainText = 'Espera un momento';
+        openLoadingBavv.secondaryText = 'Estamos procesando tu solicitud';
+      });
+
+      const btnOpenLoadingBbog = document.querySelector('#bbog-btn');
+      const openLoadingBbog = document.querySelector('#idLoaderBbog');
+      btnOpenLoadingBbog.addEventListener('click', function () {
+        console.log(openLoadingBbog);
+        openLoadingBbog.mainText = 'Estamos procesando tu solicitud';
+        openLoadingBbog.loaderType = 'shortTime';
+        openLoadingBbog.isopen = 'true';
+      });
+
+      // script para eventos dropdown
+      function bindDropdownEvent(id, resultId, label) {
+        const el = document.getElementById(id);
+        const res = document.getElementById(resultId);
+        el.addEventListener('designioSelectionChange', (e) => {
+          res.textContent = JSON.stringify(e.detail);
+          console.log(`📤 ${label} ->`, e.detail);
+        });
+      }
+
+      bindDropdownEvent('bpopTest', 'bpopResult', 'Banco Popular');
+      bindDropdownEvent('bavvTest', 'bavvResult', 'Banco AV Villas');
+      bindDropdownEvent('boccTest', 'boccResult', 'Banco de Occidente');
+      bindDropdownEvent('bbogTest', 'bbogResult', 'Banco de Bogotá');
+    </script>
+  </body>
+</html>

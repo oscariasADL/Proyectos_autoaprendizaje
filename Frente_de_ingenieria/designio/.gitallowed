@@ -1,0 +1,16 @@
+compass-map-2d
+compass-map-circled
+compass-mapd
+enter-passwordd
+input-password-protectiond
+lock-passwordd
+key-passwordd
+lock-password-checkmark-done-okd
+lock-password-logind
+lock-password-wrongd
+lock-password1d
+user-password-logind
+compassd
+plane-boarding-pass-1d
+plane-boarding-pass-2d
+.*type:password.*

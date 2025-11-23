@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  .designio-input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

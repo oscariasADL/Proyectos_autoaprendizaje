@@ -1,0 +1,12 @@
+src/components.d.ts
+src/components/mocks/svg/*
+src/components/*/*/*.md
+dist/
+www/
+.stencil/
+coverage/
+
+src/assets/lottie/*
+src/components/molecules/bdo-loading/assets/lottie/*
+src/styles/assets/lottie/*
+dist-custom-elements/assets/lottie/*

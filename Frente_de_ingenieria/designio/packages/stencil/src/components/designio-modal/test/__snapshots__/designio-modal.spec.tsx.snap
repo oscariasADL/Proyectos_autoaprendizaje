@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`designio-modal does not render any modal if type is invalid 1`] = `
+<designio-modal type="invalido">
+  <template shadowrootmode="open">
+    <div></div>
+  </template>
+</designio-modal>
+`;
+
+exports[`designio-modal renders BAVV modal 1`] = `
+<designio-modal modal-title="Test" show-close="true" subtitle="Sub" type="bavv">
+  <template shadowrootmode="open">
+    <div>
+      <bavv-designio-modal aligntitle="center" id="modal-4fzzzxjyl" showclosebutton="" textcancelbutton="Cancelar" textconfirmbutton="Confirmar" titlemodal="Test">
+        <p>
+          Sub
+        </p>
+        <slot name="content"></slot>
+      </bavv-designio-modal>
+    </div>
+  </template>
+</designio-modal>
+`;
+
+exports[`designio-modal renders BOCC modal 1`] = `
+<designio-modal modal-title="Test" show-close="true" subtitle="Sub" type="bocc">
+  <template shadowrootmode="open">
+    <div>
+      <bdo-modal buttoncloseshow="" elementid="modal-4fzzzxjyl" id="modal-4fzzzxjyl">
+        <h3 class="title">
+          Test
+        </h3>
+        <p class="text">
+          Sub
+        </p>
+        <slot name="content"></slot>
+      </bdo-modal>
+    </div>
+  </template>
+</designio-modal>
+`;
+
+exports[`designio-modal renders BPOP modal 1`] = `
+<designio-modal modal-title="Test" show-close="true" subtitle="Sub" type="bpop">
+  <template shadowrootmode="open">
+    <div>
+      <bpop-designio-modal aligntitle="center" directionbutton="vertical" id="modal-4fzzzxjyl" showclosebutton="" textcancelbutton="Cancelar" textconfirmbutton="Confirmar" titlemodal="Test">
+        <p>
+          Sub
+        </p>
+        <slot name="content"></slot>
+      </bpop-designio-modal>
+    </div>
+  </template>
+</designio-modal>
+`;

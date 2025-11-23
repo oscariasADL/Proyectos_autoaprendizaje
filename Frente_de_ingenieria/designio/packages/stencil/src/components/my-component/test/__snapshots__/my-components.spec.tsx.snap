@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my-component coincide con el snapshot 1`] = `
+<my-component name="Snapshot">
+  <template shadowrootmode="open">
+    <div>
+      Hello, Snapshot!
+    </div>
+  </template>
+</my-component>
+`;

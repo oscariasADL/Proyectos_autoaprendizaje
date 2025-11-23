@@ -1,0 +1,55 @@
+$url-font-intro: "./";
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("#{$url-font-intro}IntroRegular.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro Regular";
+  src:
+    url("#{$url-font-intro}IntroRegularItalic.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroRegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("#{$url-font-intro}IntroBold.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("#{$url-font-intro}IntroBoldItalic.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("#{$url-font-intro}IntroSemiBold.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroSemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("#{$url-font-intro}IntroSemiBoldItalic.woff2") format("woff2"),
+    url("#{$url-font-intro}IntroSemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}

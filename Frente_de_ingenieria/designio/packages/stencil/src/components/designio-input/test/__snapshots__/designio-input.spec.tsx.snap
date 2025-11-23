@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`designio-input correctly renders the bavv component 1`] = `
+<designio-input bavvbuttontext="Click me" entity="bavv" label="Nombre" value="Juan">
+  <template shadowrootmode="open">
+    <div class="designio-input-wrapper">
+      <bavv-designio-input autocomplete="off" buttontext="" iconname="" iconposition="" idprop="" labelprop="Nombre" placeholder="" type="text" value="Juan"></bavv-designio-input>
+    </div>
+  </template>
+</designio-input>
+`;
+
+exports[`designio-input correctly renders the bbog component 1`] = `
+<designio-input entity="bbog" label="Contraseña" value="1234">
+  <template shadowrootmode="open">
+    <div class="designio-input-wrapper">
+      <sp-at-input icon="" idel="" label="Contraseña" placeholder="" status="ENABLED" tooltipposition="right" type="TEXT" value="1234"></sp-at-input>
+    </div>
+  </template>
+</designio-input>
+`;
+
+exports[`designio-input correctly renders the bocc component 1`] = `
+<designio-input entity="bocc" label="Correo" value="test@example.com">
+  <template shadowrootmode="open">
+    <div class="designio-input-wrapper">
+      <bdo-input-field label="Correo" maximumdecimalsallowed="0" prefixtext=""></bdo-input-field>
+    </div>
+  </template>
+</designio-input>
+`;
+
+exports[`designio-input correctly renders the bocc component with min and max as strings 1`] = `
+<designio-input entity="bocc" max="12" min="8">
+  <template shadowrootmode="open">
+    <div class="designio-input-wrapper">
+      <bdo-input-field label="" maximumdecimalsallowed="0" prefixtext=""></bdo-input-field>
+    </div>
+  </template>
+</designio-input>
+`;
+
+exports[`designio-input correctly renders the bpop component 1`] = `
+<designio-input entity="bpop" label="Edad" value="30">
+  <template shadowrootmode="open">
+    <div class="designio-input-wrapper">
+      <bpop-designio-input ariadescribedby="" arialabelprop="" autocapitalizeprop="" autocomplete="off" buttontext="" iconname="" iconposition="" idprop="" labelprop="Edad" placeholder="" titleprop="" type="text" value="30"></bpop-designio-input>
+    </div>
+  </template>
+</designio-input>
+`;

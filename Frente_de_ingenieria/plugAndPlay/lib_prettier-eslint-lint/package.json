@@ -1,0 +1,135 @@
+{
+  "name": "adl-prettier-linter",
+  "version": "1.0.0",
+  "description": "Conjunto de configuraciones reutilizables para ESLint, Prettier y Stylelint en proyectos JavaScript/TypeScript de ADL.",
+  "author": "Sebastian Mateus <sebastian.mateus@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/adl-prettier-linter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/adl-prettier-linter/issues"
+  },
+  "homepage": "https://github.com/your-org/adl-prettier-linter#readme",
+  "keywords": [
+    "eslint-config",
+    "prettier-config",
+    "stylelint-config",
+    "eslint",
+    "prettier",
+    "stylelint",
+    "adl",
+    "config"
+  ],
+  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js",
+    "./eslint": "./eslint/index.js",
+    "./eslint/base": "./eslint/base.js",
+    "./eslint/react": "./eslint/react.js",
+    "./eslint/angular": "./eslint/angular.js",
+    "./eslint/node": "./eslint/node.js",
+    "./eslint/typescript": "./eslint/typescript.js",
+    "./prettier": "./prettier/index.js",
+    "./stylelint": "./stylelint/index.js",
+    "./stylelint/base": "./stylelint/base.js",
+    "./stylelint/css": "./stylelint/css.js",
+    "./stylelint/scss": "./stylelint/scss.js"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "eslint": ">=8",
+    "prettier": ">=3",
+    "stylelint": ">=16.1.0",
+    "stylelint-config-standard": ">=36.0.0",
+    "stylelint-config-standard-scss": ">=12.0.0",
+    "stylelint-scss": ">=6.0.0",
+    "eslint-plugin-import": ">=2.29.0",
+    "eslint-plugin-react": ">=7.33.0",
+    "eslint-plugin-react-hooks": ">=4.6.0",
+    "eslint-plugin-jsx-a11y": ">=6.7.0",
+    "eslint-plugin-node": ">=11.1.0",
+    "@typescript-eslint/parser": ">=7.0.0",
+    "@typescript-eslint/eslint-plugin": ">=7.0.0",
+    "@angular-eslint/eslint-plugin": ">=17.0.0",
+    "@angular-eslint/eslint-plugin-template": ">=17.0.0",
+    "@angular-eslint/template-parser": ">=17.0.0",
+    "eslint-config-prettier": ">=9.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-node": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
+      "optional": true
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@angular-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@angular-eslint/eslint-plugin-template": {
+      "optional": true
+    },
+    "@angular-eslint/template-parser": {
+      "optional": true
+    },
+    "stylelint-config-standard-scss": {
+      "optional": true
+    },
+    "stylelint-scss": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.0",
+    "eslint-plugin-node": "^11.1.0",
+    "@angular-eslint/eslint-plugin": "^17.0.0",
+    "@angular-eslint/eslint-plugin-template": "^17.0.0",
+    "@angular-eslint/template-parser": "^17.0.0",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-scss": "^6.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.5.0"
+  },
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "lint:eslint": "eslint . --ext .js,.ts,.tsx,.jsx",
+    "lint:style": "stylelint '**/*.{css,scss}'",
+    "format": "prettier --write .",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "npm@10.0.0"
+}

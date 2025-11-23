@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:@stencil-community/recommended"],
+  "ignorePatterns": [".eslintignore"],
+  "rules": {
+    "@stencil-community/strict-boolean-conditions": "off",
+    "@stencil-community/own-methods-must-be-private": "error",
+    "@stencil-community/required-jsdoc": "error",
+    "@stencil-community/own-props-must-be-private": "off",
+    "react/jsx-no-bind": "error",
+    "@stencil-community/strict-mutable": "error",
+    "@stencil-community/decorators-style": "off",
+    "@stencil-community/element-type": "error",
+    "@stencil-community/ban-exported-const-enums": "off",
+    "selector-pseudo-element-colon-notation": "off"
+  }
+}
