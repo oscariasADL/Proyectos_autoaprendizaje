@@ -1,6 +1,15 @@
-# adl-prettier-linter
+# adl-prettier-linter v2.0
 
-Librería de configuración centralizada para proyectos JavaScript/TypeScript en ADL: agrupa reglas y ajustes de **ESLint**, **Prettier** y **Stylelint** para acelerar la puesta en marcha y mantener consistencia entre repositorios.
+Librería moderna de configuración centralizada para proyectos JavaScript/TypeScript en ADL. Completamente reescrita en **TypeScript** con API fluida, presets inteligentes y soporte para **ESLint**, **Prettier** y **Stylelint**.
+
+## 🚀 Características v2.0
+
+- **100% TypeScript** con tipado completo
+- **API Fluida** con builders y presets
+- **Compatibilidad ESM/CJS** dual
+- **Configuración Inteligente** por framework
+- **Validación Automática** de configuraciones
+- **Soporte Moderno** para las últimas versiones
 
 ## Objetivos
 
@@ -44,31 +53,117 @@ npm install --save-dev \
   stylelint-config-standard-scss stylelint-scss
 ```
 
-## Uso
+## 🎯 Uso Rápido con Presets
 
-### ESLint (configuración)
-
-En tu `.eslintrc.cjs` o `eslint.config.js`:
+### React + TypeScript
 
 ```js
-module.exports = {
-  extends: [
-    "adl-prettier-linter/eslint/base",
-    // Opcionales:
-    // 'adl-prettier-linter/eslint/react',
-    // 'adl-prettier-linter/eslint/typescript',
-    // 'adl-prettier-linter/eslint/angular',
-    // 'adl-prettier-linter/eslint/node'
-  ],
-};
+// eslint.config.js
+import { createReactPreset } from 'adl-prettier-linter/presets';
+
+const { eslint, prettier, stylelint } = createReactPreset({
+  typescript: true,
+  scss: true,
+  strict: false
+});
+
+export default eslint;
 ```
 
-### Prettier (formato)
+```js
+// prettier.config.js
+import { createReactPreset } from 'adl-prettier-linter/presets';
+const { prettier } = createReactPreset();
+export default prettier;
+```
 
-En tu `prettier.config.cjs` o `prettier.config.js`:
+### Angular + TypeScript
 
 ```js
-module.exports = require("adl-prettier-linter/prettier");
+// eslint.config.js
+import { createAngularPreset } from 'adl-prettier-linter/presets';
+
+const { eslint } = createAngularPreset({
+  scss: true,
+  strict: true
+});
+
+export default eslint;
+```
+
+### Node.js + TypeScript
+
+```js
+// eslint.config.js
+import { createNodePreset } from 'adl-prettier-linter/presets';
+
+const { eslint, prettier } = createNodePreset({
+  typescript: true,
+  strict: false
+});
+
+export default eslint;
+```
+
+## 🔧 Uso Avanzado con Builders
+
+### Configuración Personalizada ESLint
+
+```js
+import { ESLintConfigBuilder } from 'adl-prettier-linter/utils';
+
+const config = new ESLintConfigBuilder()
+  .withFramework('react')
+  .withTypeScript(true)
+  .withCustomRules({
+    'no-console': 'error',
+    'react/jsx-no-leaked-render': 'error'
+  })
+  .withEnvironment({ jest: true })
+  .build();
+
+export default config;
+```
+
+### Configuración Personalizada Prettier
+
+```js
+import { PrettierConfigBuilder } from 'adl-prettier-linter/utils';
+
+const config = new PrettierConfigBuilder()
+  .withPrintWidth(120)
+  .withSingleQuote(false)
+  .withTrailingComma('es5')
+  .withOverrides([
+    {
+      files: '*.md',
+      options: { printWidth: 80 }
+    }
+  ])
+  .build();
+
+export default config;
+```
+
+## 🗂️ Uso Granular (Compatibilidad v1)
+
+### ESLint
+
+```js
+// eslint.config.js
+import baseConfig from 'adl-prettier-linter/configs/eslint/base';
+import reactConfig from 'adl-prettier-linter/configs/eslint/react';
+import typeScriptConfig from 'adl-prettier-linter/configs/eslint/typescript';
+
+export default [baseConfig, reactConfig, typeScriptConfig];
+```
+
+### Prettier
+
+```js
+// prettier.config.js
+import prettierConfig from 'adl-prettier-linter/configs/prettier';
+export default prettierConfig;
 ```
 
 Configuración incluida (resumen):
