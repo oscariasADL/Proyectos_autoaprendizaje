@@ -20,6 +20,7 @@ export const INITIALIZATION_OPTIONS: InitializationOptions = {
 
 export const BARCODE_SCANNER_CONFIGURATION: BarcodeScannerViewConfiguration = {
   containerId: 'scanner-container',
+  camera: 'BACK',
   onError: (e: Error) => {
     console.error(e.name + ': ' + e.message);
   },
