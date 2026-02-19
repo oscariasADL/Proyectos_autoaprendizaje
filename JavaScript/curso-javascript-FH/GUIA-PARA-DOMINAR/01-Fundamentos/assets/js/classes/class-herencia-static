@@ -1,0 +1,54 @@
+//Ejemplo de clase
+class Coche {
+
+    marca='';
+    modelo= '';
+    anio=0;
+
+    constructor(marca, modelo, anio){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+    }
+
+    mostrarInfo(){
+        console.log(`El coche es de la marca ${ this.marca }, modelo ${ this.modelo }, año ${ this.anio }`);
+    }
+
+}
+
+// const coche1= new Coche("Toyota", "Corolla", 2020);
+// console.log( coche1.mostrarInfo() );
+
+class Electrico extends Coche {
+    constructor(marca, modelo, anio, autonomia){
+        super(marca, modelo, anio);
+        this.autonomia = autonomia;
+    }
+
+    mostrarInfo(){
+        console.log(`El coche eléctrico es de la marca ${ this.marca }, modelo ${ this.modelo }, año ${ this.anio } y tiene una autonomía de ${ this.autonomia } km.`);
+    }
+
+    /*Otra forma de llamar al método mostrarInfo de la clase padre
+    mostrarInfo() {
+        return `${super.mostrarInfo()} Además, tiene una autonomía de ${this.autonomia} km.`;
+    }
+    */
+
+    static compararAutonomia(coche1, coche2) {
+        if(coche1.autonomia > coche2.autonomia) {
+            return `${coche1.marca} ${coche1.modelo} tiene mayor autonomía (${coche1.autonomia} km) que ${coche2.marca} ${coche2.modelo} (${coche2.autonomia} km).`;
+        } else if(coche1.autonomia < coche2.autonomia) {
+            return `${coche2.marca} ${coche2.modelo} tiene mayor autonomía (${coche2.autonomia} km) que ${coche1.marca} ${coche1.modelo} (${coche1.autonomia} km).`;
+        } else {
+            return `Ambos coches tienen la misma autonomía de ${coche1.autonomia} km.`;
+        }
+    }
+
+}
+
+const tesla = new Electrico("Tesla", "Model S", 2022, 600);
+const nissan = new Electrico("Nissan", "Leaf", 2020, 400);
+console.log( tesla.mostrarInfo() );
+console.log( Electrico.compararAutonomia(tesla, nissan) );

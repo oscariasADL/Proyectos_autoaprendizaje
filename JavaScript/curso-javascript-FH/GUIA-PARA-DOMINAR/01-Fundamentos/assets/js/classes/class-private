@@ -1,0 +1,32 @@
+
+class Persona {
+    #nombre; // Propiedad privada
+
+    constructor(nombre) {
+        this.#nombre = nombre;
+    }
+
+    getNombre() {
+        return this.#nombre;
+    }
+
+    setNombre(nuevoNombre) {
+        if (nuevoNombre.length < 3) {
+            console.log("El nombre es demasiado corto.");
+            return;
+        }
+        this.#nombre = nuevoNombre;
+    }
+}
+
+const persona = new Persona("Oscar");
+console.log(persona.getNombre()); // Oscar
+persona.setNombre("Ed");          // El nombre es demasiado corto.
+persona.setNombre("Eduardo");
+console.log(persona.getNombre()); // Eduardo
+
+
+// Observa:
+
+// #nombre es inaccesible fuera de la clase (persona.#nombre → ❌ Error).
+// Solo se puede manipular mediante métodos internos.

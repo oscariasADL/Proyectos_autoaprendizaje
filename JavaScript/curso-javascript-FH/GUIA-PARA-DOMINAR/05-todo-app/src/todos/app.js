@@ -1,6 +1,7 @@
-import baseHTML from './app.html?raw';
-import todoStore, { Filters }  from '../store/todo.store';
-import {renderTodos, renderPending}  from '../use-cases';
+import html from './app.html?raw';
+import todoStore, { Filters } from '../store/todo.store.js';
+import { renderTodos, renderPending } from '../use-cases/index.js';
+
 
 const ElementIDs = {
     ClearCompletedButton: '.clear-completed',
@@ -10,9 +11,13 @@ const ElementIDs = {
     PendingCountLabel: '#pending-count',
 }
 
-export const App = ( elementID ) => {
+/**
+ * 
+ * @param {String} elementId 
+ */
+export const App = ( elementId ) => {
 
-     const displayTodos = () => {
+    const displayTodos = () => {
         const todos = todoStore.getTodos( todoStore.getCurrentFilter() );
         renderTodos( ElementIDs.TodoList, todos );
         updatePendingCount();
@@ -22,17 +27,14 @@ export const App = ( elementID ) => {
         renderPending(ElementIDs.PendingCountLabel);
     }
 
-
-    // Primero insertamos el HTML en el DOM
-    ( () => {
+    // Cuando la función App() se llama
+    (()=> {
         const app = document.createElement('div');
-        app.innerHTML = `${baseHTML}`;
-        document.querySelector(elementID).append( app );
-
-        // Después renderizamos los todos (ahora los elementos ya existen)
+        app.innerHTML = html;
+        document.querySelector(elementId).append( app );
         displayTodos();
-
     })();
+
 
     // Referencias HTML
     const newDescriptionInput = document.querySelector( ElementIDs.NewTodoInput );
@@ -42,23 +44,18 @@ export const App = ( elementID ) => {
 
     // Listeners
     newDescriptionInput.addEventListener('keyup', ( event ) => {
-
         if ( event.keyCode !== 13 ) return;
         if ( event.target.value.trim().length === 0 ) return;
 
-        
         todoStore.addTodo( event.target.value );
         displayTodos();
         event.target.value = '';
-
     });
 
-    todoListUL.addEventListener('click', ( event ) => {
+    todoListUL.addEventListener('click', (event) => {
         const element = event.target.closest('[data-id]');
-        console.log( element.getAttribute('data-id') );
         todoStore.toggleTodo( element.getAttribute('data-id') );
         displayTodos();
-
     });
 
     todoListUL.addEventListener('click', (event) => {
@@ -99,5 +96,6 @@ export const App = ( elementID ) => {
 
 
     });
+
 
 }

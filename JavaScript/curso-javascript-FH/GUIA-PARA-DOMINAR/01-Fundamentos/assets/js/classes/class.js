@@ -63,3 +63,7 @@ console.log("*".repeat(20));
 console.log("Conteo statico: ", PersonaNatural._conteo );
 console.log( PersonaNatural.conteoDesdeGet );
 PersonaNatural.mensaje();
+
+
+
+

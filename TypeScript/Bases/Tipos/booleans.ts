@@ -1,0 +1,5 @@
+(() => {
+    
+    let isSuperman: boolean = true;
+
+})();

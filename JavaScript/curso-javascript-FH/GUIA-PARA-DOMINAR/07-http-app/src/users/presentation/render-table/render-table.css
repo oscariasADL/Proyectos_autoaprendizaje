@@ -1,0 +1,15 @@
+
+table {
+    background-color: rgba(0, 0, 0, 0.348);
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+}
+
+td, th, tr {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+}
